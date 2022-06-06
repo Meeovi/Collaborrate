@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateUpload_fileArgs } from "./args/AggregateUpload_fileArgs";
+import { CreateManyUpload_fileArgs } from "./args/CreateManyUpload_fileArgs";
+import { CreateUpload_fileArgs } from "./args/CreateUpload_fileArgs";
+import { DeleteManyUpload_fileArgs } from "./args/DeleteManyUpload_fileArgs";
+import { DeleteUpload_fileArgs } from "./args/DeleteUpload_fileArgs";
+import { FindFirstUpload_fileArgs } from "./args/FindFirstUpload_fileArgs";
+import { FindManyUpload_fileArgs } from "./args/FindManyUpload_fileArgs";
+import { FindUniqueUpload_fileArgs } from "./args/FindUniqueUpload_fileArgs";
+import { GroupByUpload_fileArgs } from "./args/GroupByUpload_fileArgs";
+import { UpdateManyUpload_fileArgs } from "./args/UpdateManyUpload_fileArgs";
+import { UpdateUpload_fileArgs } from "./args/UpdateUpload_fileArgs";
+import { UpsertUpload_fileArgs } from "./args/UpsertUpload_fileArgs";
+import { Upload_file } from "../../../models/Upload_file";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateUpload_file } from "../../outputs/AggregateUpload_file";
+import { Upload_fileGroupBy } from "../../outputs/Upload_fileGroupBy";
+export declare class Upload_fileCrudResolver {
+    upload_file(ctx: any, info: GraphQLResolveInfo, args: FindUniqueUpload_fileArgs): Promise<Upload_file | null>;
+    findFirstUpload_file(ctx: any, info: GraphQLResolveInfo, args: FindFirstUpload_fileArgs): Promise<Upload_file | null>;
+    upload_files(ctx: any, info: GraphQLResolveInfo, args: FindManyUpload_fileArgs): Promise<Upload_file[]>;
+    createUpload_file(ctx: any, info: GraphQLResolveInfo, args: CreateUpload_fileArgs): Promise<Upload_file>;
+    createManyUpload_file(ctx: any, info: GraphQLResolveInfo, args: CreateManyUpload_fileArgs): Promise<AffectedRowsOutput>;
+    deleteUpload_file(ctx: any, info: GraphQLResolveInfo, args: DeleteUpload_fileArgs): Promise<Upload_file | null>;
+    updateUpload_file(ctx: any, info: GraphQLResolveInfo, args: UpdateUpload_fileArgs): Promise<Upload_file | null>;
+    deleteManyUpload_file(ctx: any, info: GraphQLResolveInfo, args: DeleteManyUpload_fileArgs): Promise<AffectedRowsOutput>;
+    updateManyUpload_file(ctx: any, info: GraphQLResolveInfo, args: UpdateManyUpload_fileArgs): Promise<AffectedRowsOutput>;
+    upsertUpload_file(ctx: any, info: GraphQLResolveInfo, args: UpsertUpload_fileArgs): Promise<Upload_file>;
+    aggregateUpload_file(ctx: any, info: GraphQLResolveInfo, args: AggregateUpload_fileArgs): Promise<AggregateUpload_file>;
+    groupByUpload_file(ctx: any, info: GraphQLResolveInfo, args: GroupByUpload_fileArgs): Promise<Upload_fileGroupBy[]>;
+}

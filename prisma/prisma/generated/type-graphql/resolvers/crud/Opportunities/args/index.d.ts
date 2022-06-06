@@ -1,0 +1,12 @@
+export { AggregateOpportunitiesArgs } from "./AggregateOpportunitiesArgs";
+export { CreateManyOpportunitiesArgs } from "./CreateManyOpportunitiesArgs";
+export { CreateOpportunitiesArgs } from "./CreateOpportunitiesArgs";
+export { DeleteManyOpportunitiesArgs } from "./DeleteManyOpportunitiesArgs";
+export { DeleteOpportunitiesArgs } from "./DeleteOpportunitiesArgs";
+export { FindFirstOpportunitiesArgs } from "./FindFirstOpportunitiesArgs";
+export { FindManyOpportunitiesArgs } from "./FindManyOpportunitiesArgs";
+export { FindUniqueOpportunitiesArgs } from "./FindUniqueOpportunitiesArgs";
+export { GroupByOpportunitiesArgs } from "./GroupByOpportunitiesArgs";
+export { UpdateManyOpportunitiesArgs } from "./UpdateManyOpportunitiesArgs";
+export { UpdateOpportunitiesArgs } from "./UpdateOpportunitiesArgs";
+export { UpsertOpportunitiesArgs } from "./UpsertOpportunitiesArgs";

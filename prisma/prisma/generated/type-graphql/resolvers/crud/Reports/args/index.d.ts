@@ -1,0 +1,12 @@
+export { AggregateReportsArgs } from "./AggregateReportsArgs";
+export { CreateManyReportsArgs } from "./CreateManyReportsArgs";
+export { CreateReportsArgs } from "./CreateReportsArgs";
+export { DeleteManyReportsArgs } from "./DeleteManyReportsArgs";
+export { DeleteReportsArgs } from "./DeleteReportsArgs";
+export { FindFirstReportsArgs } from "./FindFirstReportsArgs";
+export { FindManyReportsArgs } from "./FindManyReportsArgs";
+export { FindUniqueReportsArgs } from "./FindUniqueReportsArgs";
+export { GroupByReportsArgs } from "./GroupByReportsArgs";
+export { UpdateManyReportsArgs } from "./UpdateManyReportsArgs";
+export { UpdateReportsArgs } from "./UpdateReportsArgs";
+export { UpsertReportsArgs } from "./UpsertReportsArgs";

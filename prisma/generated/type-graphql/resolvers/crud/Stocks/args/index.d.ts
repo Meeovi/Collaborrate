@@ -1,0 +1,12 @@
+export { AggregateStocksArgs } from "./AggregateStocksArgs";
+export { CreateManyStocksArgs } from "./CreateManyStocksArgs";
+export { CreateStocksArgs } from "./CreateStocksArgs";
+export { DeleteManyStocksArgs } from "./DeleteManyStocksArgs";
+export { DeleteStocksArgs } from "./DeleteStocksArgs";
+export { FindFirstStocksArgs } from "./FindFirstStocksArgs";
+export { FindManyStocksArgs } from "./FindManyStocksArgs";
+export { FindUniqueStocksArgs } from "./FindUniqueStocksArgs";
+export { GroupByStocksArgs } from "./GroupByStocksArgs";
+export { UpdateManyStocksArgs } from "./UpdateManyStocksArgs";
+export { UpdateStocksArgs } from "./UpdateStocksArgs";
+export { UpsertStocksArgs } from "./UpsertStocksArgs";

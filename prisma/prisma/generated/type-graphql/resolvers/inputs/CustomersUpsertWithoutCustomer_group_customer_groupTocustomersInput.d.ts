@@ -1,0 +1,6 @@
+import { CustomersCreateWithoutCustomer_group_customer_groupTocustomersInput } from "../inputs/CustomersCreateWithoutCustomer_group_customer_groupTocustomersInput";
+import { CustomersUpdateWithoutCustomer_group_customer_groupTocustomersInput } from "../inputs/CustomersUpdateWithoutCustomer_group_customer_groupTocustomersInput";
+export declare class CustomersUpsertWithoutCustomer_group_customer_groupTocustomersInput {
+    update: CustomersUpdateWithoutCustomer_group_customer_groupTocustomersInput;
+    create: CustomersCreateWithoutCustomer_group_customer_groupTocustomersInput;
+}

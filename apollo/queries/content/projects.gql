@@ -1,0 +1,14 @@
+query MyQuery {
+  projects {
+    id
+    name
+    end_date
+    created_at
+    considerworkingdays
+    project_manager
+    project_template
+    resource
+    start_date
+    status
+  }
+}

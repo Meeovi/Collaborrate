@@ -1,0 +1,9 @@
+query MyQuery {
+  returns {
+    id
+    name
+    return_prefix
+    validity
+    created_at
+  }
+}

@@ -1,0 +1,12 @@
+export { AggregateSpecial_discountsArgs } from "./AggregateSpecial_discountsArgs";
+export { CreateManySpecial_discountsArgs } from "./CreateManySpecial_discountsArgs";
+export { CreateSpecial_discountsArgs } from "./CreateSpecial_discountsArgs";
+export { DeleteManySpecial_discountsArgs } from "./DeleteManySpecial_discountsArgs";
+export { DeleteSpecial_discountsArgs } from "./DeleteSpecial_discountsArgs";
+export { FindFirstSpecial_discountsArgs } from "./FindFirstSpecial_discountsArgs";
+export { FindManySpecial_discountsArgs } from "./FindManySpecial_discountsArgs";
+export { FindUniqueSpecial_discountsArgs } from "./FindUniqueSpecial_discountsArgs";
+export { GroupBySpecial_discountsArgs } from "./GroupBySpecial_discountsArgs";
+export { UpdateManySpecial_discountsArgs } from "./UpdateManySpecial_discountsArgs";
+export { UpdateSpecial_discountsArgs } from "./UpdateSpecial_discountsArgs";
+export { UpsertSpecial_discountsArgs } from "./UpsertSpecial_discountsArgs";

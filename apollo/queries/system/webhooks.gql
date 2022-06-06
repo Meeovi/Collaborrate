@@ -1,0 +1,15 @@
+query MyQuery {
+  webhooks {
+    id
+    headers
+    delete
+    created_at
+    create
+    name
+    publish
+    retrieve
+    unpublish
+    update
+    url
+  }
+}

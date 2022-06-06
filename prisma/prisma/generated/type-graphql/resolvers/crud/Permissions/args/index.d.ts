@@ -1,0 +1,12 @@
+export { AggregatePermissionsArgs } from "./AggregatePermissionsArgs";
+export { CreateManyPermissionsArgs } from "./CreateManyPermissionsArgs";
+export { CreatePermissionsArgs } from "./CreatePermissionsArgs";
+export { DeleteManyPermissionsArgs } from "./DeleteManyPermissionsArgs";
+export { DeletePermissionsArgs } from "./DeletePermissionsArgs";
+export { FindFirstPermissionsArgs } from "./FindFirstPermissionsArgs";
+export { FindManyPermissionsArgs } from "./FindManyPermissionsArgs";
+export { FindUniquePermissionsArgs } from "./FindUniquePermissionsArgs";
+export { GroupByPermissionsArgs } from "./GroupByPermissionsArgs";
+export { UpdateManyPermissionsArgs } from "./UpdateManyPermissionsArgs";
+export { UpdatePermissionsArgs } from "./UpdatePermissionsArgs";
+export { UpsertPermissionsArgs } from "./UpsertPermissionsArgs";

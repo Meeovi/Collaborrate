@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateAccountsArgs } from "./args/AggregateAccountsArgs";
+import { CreateAccountsArgs } from "./args/CreateAccountsArgs";
+import { CreateManyAccountsArgs } from "./args/CreateManyAccountsArgs";
+import { DeleteAccountsArgs } from "./args/DeleteAccountsArgs";
+import { DeleteManyAccountsArgs } from "./args/DeleteManyAccountsArgs";
+import { FindFirstAccountsArgs } from "./args/FindFirstAccountsArgs";
+import { FindManyAccountsArgs } from "./args/FindManyAccountsArgs";
+import { FindUniqueAccountsArgs } from "./args/FindUniqueAccountsArgs";
+import { GroupByAccountsArgs } from "./args/GroupByAccountsArgs";
+import { UpdateAccountsArgs } from "./args/UpdateAccountsArgs";
+import { UpdateManyAccountsArgs } from "./args/UpdateManyAccountsArgs";
+import { UpsertAccountsArgs } from "./args/UpsertAccountsArgs";
+import { Accounts } from "../../../models/Accounts";
+import { AccountsGroupBy } from "../../outputs/AccountsGroupBy";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateAccounts } from "../../outputs/AggregateAccounts";
+export declare class AccountsCrudResolver {
+    findUniqueAccounts(ctx: any, info: GraphQLResolveInfo, args: FindUniqueAccountsArgs): Promise<Accounts | null>;
+    findFirstAccounts(ctx: any, info: GraphQLResolveInfo, args: FindFirstAccountsArgs): Promise<Accounts | null>;
+    findManyAccounts(ctx: any, info: GraphQLResolveInfo, args: FindManyAccountsArgs): Promise<Accounts[]>;
+    createAccounts(ctx: any, info: GraphQLResolveInfo, args: CreateAccountsArgs): Promise<Accounts>;
+    createManyAccounts(ctx: any, info: GraphQLResolveInfo, args: CreateManyAccountsArgs): Promise<AffectedRowsOutput>;
+    deleteAccounts(ctx: any, info: GraphQLResolveInfo, args: DeleteAccountsArgs): Promise<Accounts | null>;
+    updateAccounts(ctx: any, info: GraphQLResolveInfo, args: UpdateAccountsArgs): Promise<Accounts | null>;
+    deleteManyAccounts(ctx: any, info: GraphQLResolveInfo, args: DeleteManyAccountsArgs): Promise<AffectedRowsOutput>;
+    updateManyAccounts(ctx: any, info: GraphQLResolveInfo, args: UpdateManyAccountsArgs): Promise<AffectedRowsOutput>;
+    upsertAccounts(ctx: any, info: GraphQLResolveInfo, args: UpsertAccountsArgs): Promise<Accounts>;
+    aggregateAccounts(ctx: any, info: GraphQLResolveInfo, args: AggregateAccountsArgs): Promise<AggregateAccounts>;
+    groupByAccounts(ctx: any, info: GraphQLResolveInfo, args: GroupByAccountsArgs): Promise<AccountsGroupBy[]>;
+}

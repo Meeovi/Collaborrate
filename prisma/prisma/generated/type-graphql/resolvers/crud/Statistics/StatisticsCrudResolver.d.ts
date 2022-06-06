@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateStatisticsArgs } from "./args/AggregateStatisticsArgs";
+import { CreateManyStatisticsArgs } from "./args/CreateManyStatisticsArgs";
+import { CreateStatisticsArgs } from "./args/CreateStatisticsArgs";
+import { DeleteManyStatisticsArgs } from "./args/DeleteManyStatisticsArgs";
+import { DeleteStatisticsArgs } from "./args/DeleteStatisticsArgs";
+import { FindFirstStatisticsArgs } from "./args/FindFirstStatisticsArgs";
+import { FindManyStatisticsArgs } from "./args/FindManyStatisticsArgs";
+import { FindUniqueStatisticsArgs } from "./args/FindUniqueStatisticsArgs";
+import { GroupByStatisticsArgs } from "./args/GroupByStatisticsArgs";
+import { UpdateManyStatisticsArgs } from "./args/UpdateManyStatisticsArgs";
+import { UpdateStatisticsArgs } from "./args/UpdateStatisticsArgs";
+import { UpsertStatisticsArgs } from "./args/UpsertStatisticsArgs";
+import { Statistics } from "../../../models/Statistics";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateStatistics } from "../../outputs/AggregateStatistics";
+import { StatisticsGroupBy } from "../../outputs/StatisticsGroupBy";
+export declare class StatisticsCrudResolver {
+    findUniqueStatistics(ctx: any, info: GraphQLResolveInfo, args: FindUniqueStatisticsArgs): Promise<Statistics | null>;
+    findFirstStatistics(ctx: any, info: GraphQLResolveInfo, args: FindFirstStatisticsArgs): Promise<Statistics | null>;
+    findManyStatistics(ctx: any, info: GraphQLResolveInfo, args: FindManyStatisticsArgs): Promise<Statistics[]>;
+    createStatistics(ctx: any, info: GraphQLResolveInfo, args: CreateStatisticsArgs): Promise<Statistics>;
+    createManyStatistics(ctx: any, info: GraphQLResolveInfo, args: CreateManyStatisticsArgs): Promise<AffectedRowsOutput>;
+    deleteStatistics(ctx: any, info: GraphQLResolveInfo, args: DeleteStatisticsArgs): Promise<Statistics | null>;
+    updateStatistics(ctx: any, info: GraphQLResolveInfo, args: UpdateStatisticsArgs): Promise<Statistics | null>;
+    deleteManyStatistics(ctx: any, info: GraphQLResolveInfo, args: DeleteManyStatisticsArgs): Promise<AffectedRowsOutput>;
+    updateManyStatistics(ctx: any, info: GraphQLResolveInfo, args: UpdateManyStatisticsArgs): Promise<AffectedRowsOutput>;
+    upsertStatistics(ctx: any, info: GraphQLResolveInfo, args: UpsertStatisticsArgs): Promise<Statistics>;
+    aggregateStatistics(ctx: any, info: GraphQLResolveInfo, args: AggregateStatisticsArgs): Promise<AggregateStatistics>;
+    groupByStatistics(ctx: any, info: GraphQLResolveInfo, args: GroupByStatisticsArgs): Promise<StatisticsGroupBy[]>;
+}

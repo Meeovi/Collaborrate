@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateCasesArgs } from "./args/AggregateCasesArgs";
+import { CreateCasesArgs } from "./args/CreateCasesArgs";
+import { CreateManyCasesArgs } from "./args/CreateManyCasesArgs";
+import { DeleteCasesArgs } from "./args/DeleteCasesArgs";
+import { DeleteManyCasesArgs } from "./args/DeleteManyCasesArgs";
+import { FindFirstCasesArgs } from "./args/FindFirstCasesArgs";
+import { FindManyCasesArgs } from "./args/FindManyCasesArgs";
+import { FindUniqueCasesArgs } from "./args/FindUniqueCasesArgs";
+import { GroupByCasesArgs } from "./args/GroupByCasesArgs";
+import { UpdateCasesArgs } from "./args/UpdateCasesArgs";
+import { UpdateManyCasesArgs } from "./args/UpdateManyCasesArgs";
+import { UpsertCasesArgs } from "./args/UpsertCasesArgs";
+import { Cases } from "../../../models/Cases";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateCases } from "../../outputs/AggregateCases";
+import { CasesGroupBy } from "../../outputs/CasesGroupBy";
+export declare class CasesCrudResolver {
+    findUniqueCases(ctx: any, info: GraphQLResolveInfo, args: FindUniqueCasesArgs): Promise<Cases | null>;
+    findFirstCases(ctx: any, info: GraphQLResolveInfo, args: FindFirstCasesArgs): Promise<Cases | null>;
+    findManyCases(ctx: any, info: GraphQLResolveInfo, args: FindManyCasesArgs): Promise<Cases[]>;
+    createCases(ctx: any, info: GraphQLResolveInfo, args: CreateCasesArgs): Promise<Cases>;
+    createManyCases(ctx: any, info: GraphQLResolveInfo, args: CreateManyCasesArgs): Promise<AffectedRowsOutput>;
+    deleteCases(ctx: any, info: GraphQLResolveInfo, args: DeleteCasesArgs): Promise<Cases | null>;
+    updateCases(ctx: any, info: GraphQLResolveInfo, args: UpdateCasesArgs): Promise<Cases | null>;
+    deleteManyCases(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCasesArgs): Promise<AffectedRowsOutput>;
+    updateManyCases(ctx: any, info: GraphQLResolveInfo, args: UpdateManyCasesArgs): Promise<AffectedRowsOutput>;
+    upsertCases(ctx: any, info: GraphQLResolveInfo, args: UpsertCasesArgs): Promise<Cases>;
+    aggregateCases(ctx: any, info: GraphQLResolveInfo, args: AggregateCasesArgs): Promise<AggregateCases>;
+    groupByCases(ctx: any, info: GraphQLResolveInfo, args: GroupByCasesArgs): Promise<CasesGroupBy[]>;
+}

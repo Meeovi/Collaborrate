@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateUpload_file_morphArgs } from "./args/AggregateUpload_file_morphArgs";
+import { CreateManyUpload_file_morphArgs } from "./args/CreateManyUpload_file_morphArgs";
+import { CreateUpload_file_morphArgs } from "./args/CreateUpload_file_morphArgs";
+import { DeleteManyUpload_file_morphArgs } from "./args/DeleteManyUpload_file_morphArgs";
+import { DeleteUpload_file_morphArgs } from "./args/DeleteUpload_file_morphArgs";
+import { FindFirstUpload_file_morphArgs } from "./args/FindFirstUpload_file_morphArgs";
+import { FindManyUpload_file_morphArgs } from "./args/FindManyUpload_file_morphArgs";
+import { FindUniqueUpload_file_morphArgs } from "./args/FindUniqueUpload_file_morphArgs";
+import { GroupByUpload_file_morphArgs } from "./args/GroupByUpload_file_morphArgs";
+import { UpdateManyUpload_file_morphArgs } from "./args/UpdateManyUpload_file_morphArgs";
+import { UpdateUpload_file_morphArgs } from "./args/UpdateUpload_file_morphArgs";
+import { UpsertUpload_file_morphArgs } from "./args/UpsertUpload_file_morphArgs";
+import { Upload_file_morph } from "../../../models/Upload_file_morph";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateUpload_file_morph } from "../../outputs/AggregateUpload_file_morph";
+import { Upload_file_morphGroupBy } from "../../outputs/Upload_file_morphGroupBy";
+export declare class Upload_file_morphCrudResolver {
+    upload_file_morph(ctx: any, info: GraphQLResolveInfo, args: FindUniqueUpload_file_morphArgs): Promise<Upload_file_morph | null>;
+    findFirstUpload_file_morph(ctx: any, info: GraphQLResolveInfo, args: FindFirstUpload_file_morphArgs): Promise<Upload_file_morph | null>;
+    upload_file_morphs(ctx: any, info: GraphQLResolveInfo, args: FindManyUpload_file_morphArgs): Promise<Upload_file_morph[]>;
+    createUpload_file_morph(ctx: any, info: GraphQLResolveInfo, args: CreateUpload_file_morphArgs): Promise<Upload_file_morph>;
+    createManyUpload_file_morph(ctx: any, info: GraphQLResolveInfo, args: CreateManyUpload_file_morphArgs): Promise<AffectedRowsOutput>;
+    deleteUpload_file_morph(ctx: any, info: GraphQLResolveInfo, args: DeleteUpload_file_morphArgs): Promise<Upload_file_morph | null>;
+    updateUpload_file_morph(ctx: any, info: GraphQLResolveInfo, args: UpdateUpload_file_morphArgs): Promise<Upload_file_morph | null>;
+    deleteManyUpload_file_morph(ctx: any, info: GraphQLResolveInfo, args: DeleteManyUpload_file_morphArgs): Promise<AffectedRowsOutput>;
+    updateManyUpload_file_morph(ctx: any, info: GraphQLResolveInfo, args: UpdateManyUpload_file_morphArgs): Promise<AffectedRowsOutput>;
+    upsertUpload_file_morph(ctx: any, info: GraphQLResolveInfo, args: UpsertUpload_file_morphArgs): Promise<Upload_file_morph>;
+    aggregateUpload_file_morph(ctx: any, info: GraphQLResolveInfo, args: AggregateUpload_file_morphArgs): Promise<AggregateUpload_file_morph>;
+    groupByUpload_file_morph(ctx: any, info: GraphQLResolveInfo, args: GroupByUpload_file_morphArgs): Promise<Upload_file_morphGroupBy[]>;
+}

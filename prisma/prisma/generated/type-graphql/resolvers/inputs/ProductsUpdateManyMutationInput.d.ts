@@ -1,0 +1,38 @@
+import { BigIntFieldUpdateOperationsInput } from "../inputs/BigIntFieldUpdateOperationsInput";
+import { NullableBoolFieldUpdateOperationsInput } from "../inputs/NullableBoolFieldUpdateOperationsInput";
+import { NullableDateTimeFieldUpdateOperationsInput } from "../inputs/NullableDateTimeFieldUpdateOperationsInput";
+import { NullableStringFieldUpdateOperationsInput } from "../inputs/NullableStringFieldUpdateOperationsInput";
+import { StringFieldUpdateOperationsInput } from "../inputs/StringFieldUpdateOperationsInput";
+export declare class ProductsUpdateManyMutationInput {
+    id?: BigIntFieldUpdateOperationsInput | undefined;
+    sku?: BigIntFieldUpdateOperationsInput | undefined;
+    thumbnail?: NullableStringFieldUpdateOperationsInput | undefined;
+    name?: StringFieldUpdateOperationsInput | undefined;
+    type?: NullableStringFieldUpdateOperationsInput | undefined;
+    attribute_set?: NullableStringFieldUpdateOperationsInput | undefined;
+    price?: NullableStringFieldUpdateOperationsInput | undefined;
+    quantity_per_source?: NullableStringFieldUpdateOperationsInput | undefined;
+    salable_quantity?: NullableStringFieldUpdateOperationsInput | undefined;
+    visibility?: NullableStringFieldUpdateOperationsInput | undefined;
+    status?: NullableBoolFieldUpdateOperationsInput | undefined;
+    websites?: NullableStringFieldUpdateOperationsInput | undefined;
+    product?: NullableStringFieldUpdateOperationsInput | undefined;
+    tax_class?: NullableStringFieldUpdateOperationsInput | undefined;
+    stock_status?: NullableStringFieldUpdateOperationsInput | undefined;
+    weight?: NullableStringFieldUpdateOperationsInput | undefined;
+    categories?: NullableStringFieldUpdateOperationsInput | undefined;
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | undefined;
+    country?: NullableStringFieldUpdateOperationsInput | undefined;
+    size?: NullableStringFieldUpdateOperationsInput | undefined;
+    format?: NullableStringFieldUpdateOperationsInput | undefined;
+    height?: NullableStringFieldUpdateOperationsInput | undefined;
+    content?: NullableStringFieldUpdateOperationsInput | undefined;
+    short_description?: NullableStringFieldUpdateOperationsInput | undefined;
+    image?: NullableStringFieldUpdateOperationsInput | undefined;
+    meta_title?: NullableStringFieldUpdateOperationsInput | undefined;
+    meta_keywords?: NullableStringFieldUpdateOperationsInput | undefined;
+    meta_description?: NullableStringFieldUpdateOperationsInput | undefined;
+    meta_url?: NullableStringFieldUpdateOperationsInput | undefined;
+    file?: NullableStringFieldUpdateOperationsInput | undefined;
+    manufacture?: NullableStringFieldUpdateOperationsInput | undefined;
+}

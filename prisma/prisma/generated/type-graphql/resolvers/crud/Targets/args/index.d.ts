@@ -1,0 +1,12 @@
+export { AggregateTargetsArgs } from "./AggregateTargetsArgs";
+export { CreateManyTargetsArgs } from "./CreateManyTargetsArgs";
+export { CreateTargetsArgs } from "./CreateTargetsArgs";
+export { DeleteManyTargetsArgs } from "./DeleteManyTargetsArgs";
+export { DeleteTargetsArgs } from "./DeleteTargetsArgs";
+export { FindFirstTargetsArgs } from "./FindFirstTargetsArgs";
+export { FindManyTargetsArgs } from "./FindManyTargetsArgs";
+export { FindUniqueTargetsArgs } from "./FindUniqueTargetsArgs";
+export { GroupByTargetsArgs } from "./GroupByTargetsArgs";
+export { UpdateManyTargetsArgs } from "./UpdateManyTargetsArgs";
+export { UpdateTargetsArgs } from "./UpdateTargetsArgs";
+export { UpsertTargetsArgs } from "./UpsertTargetsArgs";

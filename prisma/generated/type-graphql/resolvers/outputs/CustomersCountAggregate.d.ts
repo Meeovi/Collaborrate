@@ -1,0 +1,31 @@
+export declare class CustomersCountAggregate {
+    id: number;
+    thumbnail: number;
+    name_prefix: number;
+    first_name: number;
+    middle_name: number;
+    last_name: number;
+    email: number;
+    customer_group: number;
+    phone: number;
+    zipcode: number;
+    name_suffix: number;
+    websites: number;
+    product: number;
+    country: number;
+    state: number;
+    customer_since: number;
+    confirmed_email: number;
+    date_of_birth: number;
+    tax_vat_number: number;
+    gender: number;
+    description: number;
+    short_description: number;
+    image: number;
+    Address: number;
+    address_two: number;
+    payment_type: number;
+    username: number;
+    password: number;
+    _all: number;
+}

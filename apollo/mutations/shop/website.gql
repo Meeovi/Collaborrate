@@ -1,0 +1,10 @@
+query MyQuery ($id: Int){
+  websites (where: {id: {_eq: $id}}){
+    id
+    name
+    shop
+    store
+    url
+    created_at
+  }
+}

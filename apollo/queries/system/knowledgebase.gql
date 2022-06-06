@@ -1,0 +1,14 @@
+query MyQuery {
+  knowledgebase {
+    id
+    date_modified
+    created_at
+    content
+    author
+    approver
+    name
+    resolution
+    revision
+    status
+  }
+}

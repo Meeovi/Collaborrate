@@ -1,0 +1,12 @@
+export { AggregatePollsArgs } from "./AggregatePollsArgs";
+export { CreateManyPollsArgs } from "./CreateManyPollsArgs";
+export { CreatePollsArgs } from "./CreatePollsArgs";
+export { DeleteManyPollsArgs } from "./DeleteManyPollsArgs";
+export { DeletePollsArgs } from "./DeletePollsArgs";
+export { FindFirstPollsArgs } from "./FindFirstPollsArgs";
+export { FindManyPollsArgs } from "./FindManyPollsArgs";
+export { FindUniquePollsArgs } from "./FindUniquePollsArgs";
+export { GroupByPollsArgs } from "./GroupByPollsArgs";
+export { UpdateManyPollsArgs } from "./UpdateManyPollsArgs";
+export { UpdatePollsArgs } from "./UpdatePollsArgs";
+export { UpsertPollsArgs } from "./UpsertPollsArgs";

@@ -1,0 +1,9 @@
+query MyQuery ($id: Int){
+  states (where: {id: {_eq: $id}}){
+    id
+    name
+    description
+    image
+    country
+  }
+}

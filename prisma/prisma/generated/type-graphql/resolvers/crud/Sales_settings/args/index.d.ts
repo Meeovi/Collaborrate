@@ -1,0 +1,12 @@
+export { AggregateSales_settingsArgs } from "./AggregateSales_settingsArgs";
+export { CreateManySales_settingsArgs } from "./CreateManySales_settingsArgs";
+export { CreateSales_settingsArgs } from "./CreateSales_settingsArgs";
+export { DeleteManySales_settingsArgs } from "./DeleteManySales_settingsArgs";
+export { DeleteSales_settingsArgs } from "./DeleteSales_settingsArgs";
+export { FindFirstSales_settingsArgs } from "./FindFirstSales_settingsArgs";
+export { FindManySales_settingsArgs } from "./FindManySales_settingsArgs";
+export { FindUniqueSales_settingsArgs } from "./FindUniqueSales_settingsArgs";
+export { GroupBySales_settingsArgs } from "./GroupBySales_settingsArgs";
+export { UpdateManySales_settingsArgs } from "./UpdateManySales_settingsArgs";
+export { UpdateSales_settingsArgs } from "./UpdateSales_settingsArgs";
+export { UpsertSales_settingsArgs } from "./UpsertSales_settingsArgs";

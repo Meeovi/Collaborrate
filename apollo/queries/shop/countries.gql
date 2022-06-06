@@ -1,0 +1,9 @@
+query MyQuery {
+  countries {
+    id
+    name
+    description
+    image
+    region
+  }
+}

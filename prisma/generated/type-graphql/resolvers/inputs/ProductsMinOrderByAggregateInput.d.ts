@@ -1,0 +1,33 @@
+export declare class ProductsMinOrderByAggregateInput {
+    id?: "asc" | "desc" | undefined;
+    sku?: "asc" | "desc" | undefined;
+    thumbnail?: "asc" | "desc" | undefined;
+    name?: "asc" | "desc" | undefined;
+    type?: "asc" | "desc" | undefined;
+    attribute_set?: "asc" | "desc" | undefined;
+    price?: "asc" | "desc" | undefined;
+    quantity_per_source?: "asc" | "desc" | undefined;
+    salable_quantity?: "asc" | "desc" | undefined;
+    visibility?: "asc" | "desc" | undefined;
+    status?: "asc" | "desc" | undefined;
+    websites?: "asc" | "desc" | undefined;
+    product?: "asc" | "desc" | undefined;
+    tax_class?: "asc" | "desc" | undefined;
+    stock_status?: "asc" | "desc" | undefined;
+    weight?: "asc" | "desc" | undefined;
+    categories?: "asc" | "desc" | undefined;
+    created_at?: "asc" | "desc" | undefined;
+    country?: "asc" | "desc" | undefined;
+    size?: "asc" | "desc" | undefined;
+    format?: "asc" | "desc" | undefined;
+    height?: "asc" | "desc" | undefined;
+    content?: "asc" | "desc" | undefined;
+    short_description?: "asc" | "desc" | undefined;
+    image?: "asc" | "desc" | undefined;
+    meta_title?: "asc" | "desc" | undefined;
+    meta_keywords?: "asc" | "desc" | undefined;
+    meta_description?: "asc" | "desc" | undefined;
+    meta_url?: "asc" | "desc" | undefined;
+    file?: "asc" | "desc" | undefined;
+    manufacture?: "asc" | "desc" | undefined;
+}

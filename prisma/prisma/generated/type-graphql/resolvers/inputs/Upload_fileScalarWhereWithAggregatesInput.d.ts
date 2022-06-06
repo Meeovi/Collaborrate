@@ -1,0 +1,31 @@
+import { DateTimeNullableWithAggregatesFilter } from "../inputs/DateTimeNullableWithAggregatesFilter";
+import { DecimalWithAggregatesFilter } from "../inputs/DecimalWithAggregatesFilter";
+import { IntNullableWithAggregatesFilter } from "../inputs/IntNullableWithAggregatesFilter";
+import { IntWithAggregatesFilter } from "../inputs/IntWithAggregatesFilter";
+import { JsonNullableWithAggregatesFilter } from "../inputs/JsonNullableWithAggregatesFilter";
+import { StringNullableWithAggregatesFilter } from "../inputs/StringNullableWithAggregatesFilter";
+import { StringWithAggregatesFilter } from "../inputs/StringWithAggregatesFilter";
+export declare class Upload_fileScalarWhereWithAggregatesInput {
+    AND?: Upload_fileScalarWhereWithAggregatesInput[] | undefined;
+    OR?: Upload_fileScalarWhereWithAggregatesInput[] | undefined;
+    NOT?: Upload_fileScalarWhereWithAggregatesInput[] | undefined;
+    id?: IntWithAggregatesFilter | undefined;
+    name?: StringWithAggregatesFilter | undefined;
+    alternativeText?: StringNullableWithAggregatesFilter | undefined;
+    caption?: StringNullableWithAggregatesFilter | undefined;
+    width?: IntNullableWithAggregatesFilter | undefined;
+    height?: IntNullableWithAggregatesFilter | undefined;
+    formats?: JsonNullableWithAggregatesFilter | undefined;
+    hash?: StringWithAggregatesFilter | undefined;
+    ext?: StringNullableWithAggregatesFilter | undefined;
+    mime?: StringWithAggregatesFilter | undefined;
+    size?: DecimalWithAggregatesFilter | undefined;
+    url?: StringWithAggregatesFilter | undefined;
+    previewUrl?: StringNullableWithAggregatesFilter | undefined;
+    provider?: StringWithAggregatesFilter | undefined;
+    provider_metadata?: JsonNullableWithAggregatesFilter | undefined;
+    created_by?: IntNullableWithAggregatesFilter | undefined;
+    updated_by?: IntNullableWithAggregatesFilter | undefined;
+    created_at?: DateTimeNullableWithAggregatesFilter | undefined;
+    updated_at?: DateTimeNullableWithAggregatesFilter | undefined;
+}

@@ -1,0 +1,34 @@
+import { Product_attributeAvgOrderByAggregateInput } from "../inputs/Product_attributeAvgOrderByAggregateInput";
+import { Product_attributeCountOrderByAggregateInput } from "../inputs/Product_attributeCountOrderByAggregateInput";
+import { Product_attributeMaxOrderByAggregateInput } from "../inputs/Product_attributeMaxOrderByAggregateInput";
+import { Product_attributeMinOrderByAggregateInput } from "../inputs/Product_attributeMinOrderByAggregateInput";
+import { Product_attributeSumOrderByAggregateInput } from "../inputs/Product_attributeSumOrderByAggregateInput";
+export declare class Product_attributeOrderByWithAggregationInput {
+    id?: "asc" | "desc" | undefined;
+    default_label?: "asc" | "desc" | undefined;
+    catalog_input_type_store_owner?: "asc" | "desc" | undefined;
+    values_required?: "asc" | "desc" | undefined;
+    attribute_code?: "asc" | "desc" | undefined;
+    scope?: "asc" | "desc" | undefined;
+    default_value?: "asc" | "desc" | undefined;
+    unique_value?: "asc" | "desc" | undefined;
+    input_validation_store_owner?: "asc" | "desc" | undefined;
+    add_column_options?: "asc" | "desc" | undefined;
+    filter_options?: "asc" | "desc" | undefined;
+    use_search?: "asc" | "desc" | undefined;
+    comparable_storefront?: "asc" | "desc" | undefined;
+    layered_navigation?: "asc" | "desc" | undefined;
+    search_results_layered_navigation?: "asc" | "desc" | undefined;
+    position?: "asc" | "desc" | undefined;
+    promo_rule_conditions?: "asc" | "desc" | undefined;
+    allow_html_tags_storefront?: "asc" | "desc" | undefined;
+    visible_catalog_pages_storefront?: "asc" | "desc" | undefined;
+    used_product_listing?: "asc" | "desc" | undefined;
+    used_sorting_product_listing?: "asc" | "desc" | undefined;
+    prod_id?: "asc" | "desc" | undefined;
+    _count?: Product_attributeCountOrderByAggregateInput | undefined;
+    _avg?: Product_attributeAvgOrderByAggregateInput | undefined;
+    _max?: Product_attributeMaxOrderByAggregateInput | undefined;
+    _min?: Product_attributeMinOrderByAggregateInput | undefined;
+    _sum?: Product_attributeSumOrderByAggregateInput | undefined;
+}

@@ -1,0 +1,34 @@
+export declare class Leads {
+    id: bigint;
+    created_at?: Date | null;
+    Prefix?: string | null;
+    first_name?: string | null;
+    last_name?: string | null;
+    department?: string | null;
+    account_name?: string | null;
+    address?: string | null;
+    postalcode?: string | null;
+    city?: string | null;
+    state?: string | null;
+    country?: string | null;
+    email?: string | null;
+    description?: string | null;
+    fax?: string | null;
+    website?: string | null;
+    mobile?: string | null;
+    job_title?: string | null;
+    alt_address?: string | null;
+    alt_postalcode?: string | null;
+    alt_city?: string | null;
+    alt_state?: string | null;
+    alt_country?: string | null;
+    office_phone?: string | null;
+    status?: string | null;
+    status_description?: string | null;
+    opportunity_amount?: string | null;
+    campaign?: string | null;
+    lead_source?: string | null;
+    lead_source_description?: string | null;
+    referred_by?: string | null;
+    customer_name?: string | null;
+}

@@ -1,0 +1,12 @@
+export { AggregateQuotesArgs } from "./AggregateQuotesArgs";
+export { CreateManyQuotesArgs } from "./CreateManyQuotesArgs";
+export { CreateQuotesArgs } from "./CreateQuotesArgs";
+export { DeleteManyQuotesArgs } from "./DeleteManyQuotesArgs";
+export { DeleteQuotesArgs } from "./DeleteQuotesArgs";
+export { FindFirstQuotesArgs } from "./FindFirstQuotesArgs";
+export { FindManyQuotesArgs } from "./FindManyQuotesArgs";
+export { FindUniqueQuotesArgs } from "./FindUniqueQuotesArgs";
+export { GroupByQuotesArgs } from "./GroupByQuotesArgs";
+export { UpdateManyQuotesArgs } from "./UpdateManyQuotesArgs";
+export { UpdateQuotesArgs } from "./UpdateQuotesArgs";
+export { UpsertQuotesArgs } from "./UpsertQuotesArgs";

@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateSpecial_discountsArgs } from "./args/AggregateSpecial_discountsArgs";
+import { CreateManySpecial_discountsArgs } from "./args/CreateManySpecial_discountsArgs";
+import { CreateSpecial_discountsArgs } from "./args/CreateSpecial_discountsArgs";
+import { DeleteManySpecial_discountsArgs } from "./args/DeleteManySpecial_discountsArgs";
+import { DeleteSpecial_discountsArgs } from "./args/DeleteSpecial_discountsArgs";
+import { FindFirstSpecial_discountsArgs } from "./args/FindFirstSpecial_discountsArgs";
+import { FindManySpecial_discountsArgs } from "./args/FindManySpecial_discountsArgs";
+import { FindUniqueSpecial_discountsArgs } from "./args/FindUniqueSpecial_discountsArgs";
+import { GroupBySpecial_discountsArgs } from "./args/GroupBySpecial_discountsArgs";
+import { UpdateManySpecial_discountsArgs } from "./args/UpdateManySpecial_discountsArgs";
+import { UpdateSpecial_discountsArgs } from "./args/UpdateSpecial_discountsArgs";
+import { UpsertSpecial_discountsArgs } from "./args/UpsertSpecial_discountsArgs";
+import { Special_discounts } from "../../../models/Special_discounts";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateSpecial_discounts } from "../../outputs/AggregateSpecial_discounts";
+import { Special_discountsGroupBy } from "../../outputs/Special_discountsGroupBy";
+export declare class Special_discountsCrudResolver {
+    findUniqueSpecial_discounts(ctx: any, info: GraphQLResolveInfo, args: FindUniqueSpecial_discountsArgs): Promise<Special_discounts | null>;
+    findFirstSpecial_discounts(ctx: any, info: GraphQLResolveInfo, args: FindFirstSpecial_discountsArgs): Promise<Special_discounts | null>;
+    findManySpecial_discounts(ctx: any, info: GraphQLResolveInfo, args: FindManySpecial_discountsArgs): Promise<Special_discounts[]>;
+    createSpecial_discounts(ctx: any, info: GraphQLResolveInfo, args: CreateSpecial_discountsArgs): Promise<Special_discounts>;
+    createManySpecial_discounts(ctx: any, info: GraphQLResolveInfo, args: CreateManySpecial_discountsArgs): Promise<AffectedRowsOutput>;
+    deleteSpecial_discounts(ctx: any, info: GraphQLResolveInfo, args: DeleteSpecial_discountsArgs): Promise<Special_discounts | null>;
+    updateSpecial_discounts(ctx: any, info: GraphQLResolveInfo, args: UpdateSpecial_discountsArgs): Promise<Special_discounts | null>;
+    deleteManySpecial_discounts(ctx: any, info: GraphQLResolveInfo, args: DeleteManySpecial_discountsArgs): Promise<AffectedRowsOutput>;
+    updateManySpecial_discounts(ctx: any, info: GraphQLResolveInfo, args: UpdateManySpecial_discountsArgs): Promise<AffectedRowsOutput>;
+    upsertSpecial_discounts(ctx: any, info: GraphQLResolveInfo, args: UpsertSpecial_discountsArgs): Promise<Special_discounts>;
+    aggregateSpecial_discounts(ctx: any, info: GraphQLResolveInfo, args: AggregateSpecial_discountsArgs): Promise<AggregateSpecial_discounts>;
+    groupBySpecial_discounts(ctx: any, info: GraphQLResolveInfo, args: GroupBySpecial_discountsArgs): Promise<Special_discountsGroupBy[]>;
+}

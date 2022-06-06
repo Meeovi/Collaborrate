@@ -1,0 +1,12 @@
+export { AggregateTax_ruleArgs } from "./AggregateTax_ruleArgs";
+export { CreateManyTax_ruleArgs } from "./CreateManyTax_ruleArgs";
+export { CreateTax_ruleArgs } from "./CreateTax_ruleArgs";
+export { DeleteManyTax_ruleArgs } from "./DeleteManyTax_ruleArgs";
+export { DeleteTax_ruleArgs } from "./DeleteTax_ruleArgs";
+export { FindFirstTax_ruleArgs } from "./FindFirstTax_ruleArgs";
+export { FindManyTax_ruleArgs } from "./FindManyTax_ruleArgs";
+export { FindUniqueTax_ruleArgs } from "./FindUniqueTax_ruleArgs";
+export { GroupByTax_ruleArgs } from "./GroupByTax_ruleArgs";
+export { UpdateManyTax_ruleArgs } from "./UpdateManyTax_ruleArgs";
+export { UpdateTax_ruleArgs } from "./UpdateTax_ruleArgs";
+export { UpsertTax_ruleArgs } from "./UpsertTax_ruleArgs";

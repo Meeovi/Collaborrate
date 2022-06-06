@@ -1,0 +1,12 @@
+export { AggregateEmail_templatesArgs } from "./AggregateEmail_templatesArgs";
+export { CreateEmail_templatesArgs } from "./CreateEmail_templatesArgs";
+export { CreateManyEmail_templatesArgs } from "./CreateManyEmail_templatesArgs";
+export { DeleteEmail_templatesArgs } from "./DeleteEmail_templatesArgs";
+export { DeleteManyEmail_templatesArgs } from "./DeleteManyEmail_templatesArgs";
+export { FindFirstEmail_templatesArgs } from "./FindFirstEmail_templatesArgs";
+export { FindManyEmail_templatesArgs } from "./FindManyEmail_templatesArgs";
+export { FindUniqueEmail_templatesArgs } from "./FindUniqueEmail_templatesArgs";
+export { GroupByEmail_templatesArgs } from "./GroupByEmail_templatesArgs";
+export { UpdateEmail_templatesArgs } from "./UpdateEmail_templatesArgs";
+export { UpdateManyEmail_templatesArgs } from "./UpdateManyEmail_templatesArgs";
+export { UpsertEmail_templatesArgs } from "./UpsertEmail_templatesArgs";

@@ -1,0 +1,29 @@
+query MyQuery ($id: Int){
+  contracts (where: {id: {_eq: $id}}){
+    id
+    account
+    company_signed_date
+    contact
+    contract_manager
+    contract_title
+    contract_type
+    contract_value
+    created_at
+    currency
+    customer_signed_date
+    description
+    discount
+    end_date
+    grand_total
+    line_items
+    opportunity
+    renewal_reminder
+    shipping
+    shipping_tax
+    start_date
+    status
+    total
+    tax
+    subtotal
+  }
+}

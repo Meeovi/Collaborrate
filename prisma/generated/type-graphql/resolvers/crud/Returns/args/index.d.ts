@@ -1,0 +1,12 @@
+export { AggregateReturnsArgs } from "./AggregateReturnsArgs";
+export { CreateManyReturnsArgs } from "./CreateManyReturnsArgs";
+export { CreateReturnsArgs } from "./CreateReturnsArgs";
+export { DeleteManyReturnsArgs } from "./DeleteManyReturnsArgs";
+export { DeleteReturnsArgs } from "./DeleteReturnsArgs";
+export { FindFirstReturnsArgs } from "./FindFirstReturnsArgs";
+export { FindManyReturnsArgs } from "./FindManyReturnsArgs";
+export { FindUniqueReturnsArgs } from "./FindUniqueReturnsArgs";
+export { GroupByReturnsArgs } from "./GroupByReturnsArgs";
+export { UpdateManyReturnsArgs } from "./UpdateManyReturnsArgs";
+export { UpdateReturnsArgs } from "./UpdateReturnsArgs";
+export { UpsertReturnsArgs } from "./UpsertReturnsArgs";

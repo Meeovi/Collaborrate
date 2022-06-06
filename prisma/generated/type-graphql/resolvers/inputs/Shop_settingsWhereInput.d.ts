@@ -1,0 +1,30 @@
+import { BigIntFilter } from "../inputs/BigIntFilter";
+import { DateTimeNullableFilter } from "../inputs/DateTimeNullableFilter";
+import { StringNullableFilter } from "../inputs/StringNullableFilter";
+export declare class Shop_settingsWhereInput {
+    AND?: Shop_settingsWhereInput[] | undefined;
+    OR?: Shop_settingsWhereInput[] | undefined;
+    NOT?: Shop_settingsWhereInput[] | undefined;
+    id?: BigIntFilter | undefined;
+    created_at?: DateTimeNullableFilter | undefined;
+    store_name?: StringNullableFilter | undefined;
+    store_phone?: StringNullableFilter | undefined;
+    store_hours?: StringNullableFilter | undefined;
+    country?: StringNullableFilter | undefined;
+    region?: StringNullableFilter | undefined;
+    zipcode?: StringNullableFilter | undefined;
+    city?: StringNullableFilter | undefined;
+    address?: StringNullableFilter | undefined;
+    address_two?: StringNullableFilter | undefined;
+    vat_number?: StringNullableFilter | undefined;
+    allow_state?: StringNullableFilter | undefined;
+    state_required_for?: StringNullableFilter | undefined;
+    allow_countries?: StringNullableFilter | undefined;
+    default_country?: StringNullableFilter | undefined;
+    optional_zip?: StringNullableFilter | undefined;
+    european_union_countries?: StringNullableFilter | undefined;
+    top_destinations?: StringNullableFilter | undefined;
+    base_currency?: StringNullableFilter | undefined;
+    default_currency?: StringNullableFilter | undefined;
+    allowed_currency?: StringNullableFilter | undefined;
+}

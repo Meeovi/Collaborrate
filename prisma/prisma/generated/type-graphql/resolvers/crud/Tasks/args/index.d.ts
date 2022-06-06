@@ -1,0 +1,12 @@
+export { AggregateTasksArgs } from "./AggregateTasksArgs";
+export { CreateManyTasksArgs } from "./CreateManyTasksArgs";
+export { CreateTasksArgs } from "./CreateTasksArgs";
+export { DeleteManyTasksArgs } from "./DeleteManyTasksArgs";
+export { DeleteTasksArgs } from "./DeleteTasksArgs";
+export { FindFirstTasksArgs } from "./FindFirstTasksArgs";
+export { FindManyTasksArgs } from "./FindManyTasksArgs";
+export { FindUniqueTasksArgs } from "./FindUniqueTasksArgs";
+export { GroupByTasksArgs } from "./GroupByTasksArgs";
+export { UpdateManyTasksArgs } from "./UpdateManyTasksArgs";
+export { UpdateTasksArgs } from "./UpdateTasksArgs";
+export { UpsertTasksArgs } from "./UpsertTasksArgs";

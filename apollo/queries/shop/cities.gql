@@ -1,0 +1,11 @@
+query MyQuery {
+  cities {
+    id
+    name
+    state
+    description
+    country
+    postalCode
+    image
+  }
+}

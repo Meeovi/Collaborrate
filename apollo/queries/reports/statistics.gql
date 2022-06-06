@@ -1,0 +1,20 @@
+query MyQuery {
+  statistics {
+    id
+    expiration
+    excerpt
+    description
+    coupons
+    customers
+    categories
+    articles
+    image
+    name
+    products
+    published
+    reports
+    rewards
+    special_offers
+    users
+  }
+}

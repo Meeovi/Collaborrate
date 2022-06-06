@@ -1,0 +1,12 @@
+export { AggregateGift_certificatesArgs } from "./AggregateGift_certificatesArgs";
+export { CreateGift_certificatesArgs } from "./CreateGift_certificatesArgs";
+export { CreateManyGift_certificatesArgs } from "./CreateManyGift_certificatesArgs";
+export { DeleteGift_certificatesArgs } from "./DeleteGift_certificatesArgs";
+export { DeleteManyGift_certificatesArgs } from "./DeleteManyGift_certificatesArgs";
+export { FindFirstGift_certificatesArgs } from "./FindFirstGift_certificatesArgs";
+export { FindManyGift_certificatesArgs } from "./FindManyGift_certificatesArgs";
+export { FindUniqueGift_certificatesArgs } from "./FindUniqueGift_certificatesArgs";
+export { GroupByGift_certificatesArgs } from "./GroupByGift_certificatesArgs";
+export { UpdateGift_certificatesArgs } from "./UpdateGift_certificatesArgs";
+export { UpdateManyGift_certificatesArgs } from "./UpdateManyGift_certificatesArgs";
+export { UpsertGift_certificatesArgs } from "./UpsertGift_certificatesArgs";

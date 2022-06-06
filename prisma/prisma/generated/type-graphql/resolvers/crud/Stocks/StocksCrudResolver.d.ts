@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateStocksArgs } from "./args/AggregateStocksArgs";
+import { CreateManyStocksArgs } from "./args/CreateManyStocksArgs";
+import { CreateStocksArgs } from "./args/CreateStocksArgs";
+import { DeleteManyStocksArgs } from "./args/DeleteManyStocksArgs";
+import { DeleteStocksArgs } from "./args/DeleteStocksArgs";
+import { FindFirstStocksArgs } from "./args/FindFirstStocksArgs";
+import { FindManyStocksArgs } from "./args/FindManyStocksArgs";
+import { FindUniqueStocksArgs } from "./args/FindUniqueStocksArgs";
+import { GroupByStocksArgs } from "./args/GroupByStocksArgs";
+import { UpdateManyStocksArgs } from "./args/UpdateManyStocksArgs";
+import { UpdateStocksArgs } from "./args/UpdateStocksArgs";
+import { UpsertStocksArgs } from "./args/UpsertStocksArgs";
+import { Stocks } from "../../../models/Stocks";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateStocks } from "../../outputs/AggregateStocks";
+import { StocksGroupBy } from "../../outputs/StocksGroupBy";
+export declare class StocksCrudResolver {
+    findUniqueStocks(ctx: any, info: GraphQLResolveInfo, args: FindUniqueStocksArgs): Promise<Stocks | null>;
+    findFirstStocks(ctx: any, info: GraphQLResolveInfo, args: FindFirstStocksArgs): Promise<Stocks | null>;
+    findManyStocks(ctx: any, info: GraphQLResolveInfo, args: FindManyStocksArgs): Promise<Stocks[]>;
+    createStocks(ctx: any, info: GraphQLResolveInfo, args: CreateStocksArgs): Promise<Stocks>;
+    createManyStocks(ctx: any, info: GraphQLResolveInfo, args: CreateManyStocksArgs): Promise<AffectedRowsOutput>;
+    deleteStocks(ctx: any, info: GraphQLResolveInfo, args: DeleteStocksArgs): Promise<Stocks | null>;
+    updateStocks(ctx: any, info: GraphQLResolveInfo, args: UpdateStocksArgs): Promise<Stocks | null>;
+    deleteManyStocks(ctx: any, info: GraphQLResolveInfo, args: DeleteManyStocksArgs): Promise<AffectedRowsOutput>;
+    updateManyStocks(ctx: any, info: GraphQLResolveInfo, args: UpdateManyStocksArgs): Promise<AffectedRowsOutput>;
+    upsertStocks(ctx: any, info: GraphQLResolveInfo, args: UpsertStocksArgs): Promise<Stocks>;
+    aggregateStocks(ctx: any, info: GraphQLResolveInfo, args: AggregateStocksArgs): Promise<AggregateStocks>;
+    groupByStocks(ctx: any, info: GraphQLResolveInfo, args: GroupByStocksArgs): Promise<StocksGroupBy[]>;
+}

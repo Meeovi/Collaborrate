@@ -1,0 +1,10 @@
+query MyQuery {
+  credit_memos {
+    bill_to_name
+    created
+    credit_memo
+    order_number
+    refunded
+    status
+  }
+}

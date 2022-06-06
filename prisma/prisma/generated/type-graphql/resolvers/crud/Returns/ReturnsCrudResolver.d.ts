@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateReturnsArgs } from "./args/AggregateReturnsArgs";
+import { CreateManyReturnsArgs } from "./args/CreateManyReturnsArgs";
+import { CreateReturnsArgs } from "./args/CreateReturnsArgs";
+import { DeleteManyReturnsArgs } from "./args/DeleteManyReturnsArgs";
+import { DeleteReturnsArgs } from "./args/DeleteReturnsArgs";
+import { FindFirstReturnsArgs } from "./args/FindFirstReturnsArgs";
+import { FindManyReturnsArgs } from "./args/FindManyReturnsArgs";
+import { FindUniqueReturnsArgs } from "./args/FindUniqueReturnsArgs";
+import { GroupByReturnsArgs } from "./args/GroupByReturnsArgs";
+import { UpdateManyReturnsArgs } from "./args/UpdateManyReturnsArgs";
+import { UpdateReturnsArgs } from "./args/UpdateReturnsArgs";
+import { UpsertReturnsArgs } from "./args/UpsertReturnsArgs";
+import { Returns } from "../../../models/Returns";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateReturns } from "../../outputs/AggregateReturns";
+import { ReturnsGroupBy } from "../../outputs/ReturnsGroupBy";
+export declare class ReturnsCrudResolver {
+    findUniqueReturns(ctx: any, info: GraphQLResolveInfo, args: FindUniqueReturnsArgs): Promise<Returns | null>;
+    findFirstReturns(ctx: any, info: GraphQLResolveInfo, args: FindFirstReturnsArgs): Promise<Returns | null>;
+    findManyReturns(ctx: any, info: GraphQLResolveInfo, args: FindManyReturnsArgs): Promise<Returns[]>;
+    createReturns(ctx: any, info: GraphQLResolveInfo, args: CreateReturnsArgs): Promise<Returns>;
+    createManyReturns(ctx: any, info: GraphQLResolveInfo, args: CreateManyReturnsArgs): Promise<AffectedRowsOutput>;
+    deleteReturns(ctx: any, info: GraphQLResolveInfo, args: DeleteReturnsArgs): Promise<Returns | null>;
+    updateReturns(ctx: any, info: GraphQLResolveInfo, args: UpdateReturnsArgs): Promise<Returns | null>;
+    deleteManyReturns(ctx: any, info: GraphQLResolveInfo, args: DeleteManyReturnsArgs): Promise<AffectedRowsOutput>;
+    updateManyReturns(ctx: any, info: GraphQLResolveInfo, args: UpdateManyReturnsArgs): Promise<AffectedRowsOutput>;
+    upsertReturns(ctx: any, info: GraphQLResolveInfo, args: UpsertReturnsArgs): Promise<Returns>;
+    aggregateReturns(ctx: any, info: GraphQLResolveInfo, args: AggregateReturnsArgs): Promise<AggregateReturns>;
+    groupByReturns(ctx: any, info: GraphQLResolveInfo, args: GroupByReturnsArgs): Promise<ReturnsGroupBy[]>;
+}

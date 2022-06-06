@@ -1,0 +1,13 @@
+query MyQuery {
+  collections {
+    id
+    image
+    meta_description
+    meta_keywords
+    meta_title
+    name
+    product
+    description
+    created_at
+  }
+}

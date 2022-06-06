@@ -1,0 +1,12 @@
+export { AggregateProduct_attributeArgs } from "./AggregateProduct_attributeArgs";
+export { CreateManyProduct_attributeArgs } from "./CreateManyProduct_attributeArgs";
+export { CreateProduct_attributeArgs } from "./CreateProduct_attributeArgs";
+export { DeleteManyProduct_attributeArgs } from "./DeleteManyProduct_attributeArgs";
+export { DeleteProduct_attributeArgs } from "./DeleteProduct_attributeArgs";
+export { FindFirstProduct_attributeArgs } from "./FindFirstProduct_attributeArgs";
+export { FindManyProduct_attributeArgs } from "./FindManyProduct_attributeArgs";
+export { FindUniqueProduct_attributeArgs } from "./FindUniqueProduct_attributeArgs";
+export { GroupByProduct_attributeArgs } from "./GroupByProduct_attributeArgs";
+export { UpdateManyProduct_attributeArgs } from "./UpdateManyProduct_attributeArgs";
+export { UpdateProduct_attributeArgs } from "./UpdateProduct_attributeArgs";
+export { UpsertProduct_attributeArgs } from "./UpsertProduct_attributeArgs";

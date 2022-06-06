@@ -1,0 +1,12 @@
+export { AggregateApitokenArgs } from "./AggregateApitokenArgs";
+export { CreateApitokenArgs } from "./CreateApitokenArgs";
+export { CreateManyApitokenArgs } from "./CreateManyApitokenArgs";
+export { DeleteApitokenArgs } from "./DeleteApitokenArgs";
+export { DeleteManyApitokenArgs } from "./DeleteManyApitokenArgs";
+export { FindFirstApitokenArgs } from "./FindFirstApitokenArgs";
+export { FindManyApitokenArgs } from "./FindManyApitokenArgs";
+export { FindUniqueApitokenArgs } from "./FindUniqueApitokenArgs";
+export { GroupByApitokenArgs } from "./GroupByApitokenArgs";
+export { UpdateApitokenArgs } from "./UpdateApitokenArgs";
+export { UpdateManyApitokenArgs } from "./UpdateManyApitokenArgs";
+export { UpsertApitokenArgs } from "./UpsertApitokenArgs";

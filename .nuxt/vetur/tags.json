@@ -1,0 +1,116 @@
+{
+  "IoSocketStatus": {
+    "description": "Auto imported from node_modules/nuxt-socket-io/lib/components/SocketStatus.js"
+  },
+  "Breadcrumbs": {
+    "description": "Auto imported from components/Breadcrumbs.vue"
+  },
+  "Colormode": {
+    "description": "Auto imported from components/colormode.vue"
+  },
+  "Customerslimit": {
+    "description": "Auto imported from components/customerslimit.vue"
+  },
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/Header.vue"
+  },
+  "Newcustomers": {
+    "description": "Auto imported from components/newcustomers.vue"
+  },
+  "Notification": {
+    "description": "Auto imported from components/Notification.vue"
+  },
+  "Ottotracker": {
+    "description": "Auto imported from components/ottotracker.vue"
+  },
+  "Reviewslimit": {
+    "description": "Auto imported from components/reviewslimit.vue"
+  },
+  "Visitsdisplay": {
+    "description": "Auto imported from components/visitsdisplay.vue"
+  },
+  "DashboardCharts": {
+    "description": "Auto imported from components/dashboard/charts.vue"
+  },
+  "ImportProducts": {
+    "description": "Auto imported from components/import/import-products.vue"
+  },
+  "ImportId": {
+    "description": "Auto imported from components/import/_id.vue"
+  },
+  "IntegrationsContent": {
+    "description": "Auto imported from components/integrations/content.vue"
+  },
+  "IntegrationsCustomers": {
+    "description": "Auto imported from components/integrations/customers.vue"
+  },
+  "IntegrationsMarketing": {
+    "description": "Auto imported from components/integrations/marketing.vue"
+  },
+  "IntegrationsReports": {
+    "description": "Auto imported from components/integrations/reports.vue"
+  },
+  "IntegrationsSales": {
+    "description": "Auto imported from components/integrations/sales.vue"
+  },
+  "IntegrationsSettings": {
+    "description": "Auto imported from components/integrations/settings.vue"
+  },
+  "IntegrationsShop": {
+    "description": "Auto imported from components/integrations/shop.vue"
+  },
+  "IntegrationsToppicks": {
+    "description": "Auto imported from components/integrations/toppicks.vue"
+  },
+  "SettingsApitokensettings": {
+    "description": "Auto imported from components/settings/apitokensettings.vue"
+  },
+  "SettingsCustomersettings": {
+    "description": "Auto imported from components/settings/customersettings.vue"
+  },
+  "SettingsGeneralsettings": {
+    "description": "Auto imported from components/settings/generalsettings.vue"
+  },
+  "SettingsMarketingsettings": {
+    "description": "Auto imported from components/settings/marketingsettings.vue"
+  },
+  "SettingsPaymentsettings": {
+    "description": "Auto imported from components/settings/paymentsettings.vue"
+  },
+  "SettingsProvidersettings": {
+    "description": "Auto imported from components/settings/providersettings.vue"
+  },
+  "SettingsReportsettings": {
+    "description": "Auto imported from components/settings/reportsettings.vue"
+  },
+  "SettingsSalesettings": {
+    "description": "Auto imported from components/settings/salesettings.vue"
+  },
+  "SettingsShopsettings": {
+    "description": "Auto imported from components/settings/shopsettings.vue"
+  },
+  "SettingsTicketdisplay": {
+    "description": "Auto imported from components/settings/ticketdisplay.vue"
+  },
+  "SettingsWebhooks": {
+    "description": "Auto imported from components/settings/webhooks.vue"
+  },
+  "DashboardBestsellers": {
+    "description": "Auto imported from components/dashboard/bestsellers/bestsellers.vue"
+  },
+  "DashboardMostviewed": {
+    "description": "Auto imported from components/dashboard/mostviewed/mostviewed.vue"
+  },
+  "DashboardOrders": {
+    "description": "Auto imported from components/dashboard/orders/orders.vue"
+  },
+  "DashboardSales": {
+    "description": "Auto imported from components/dashboard/sales/sales.vue"
+  },
+  "DashboardSearchterms": {
+    "description": "Auto imported from components/dashboard/searchterms/searchterms.vue"
+  }
+}

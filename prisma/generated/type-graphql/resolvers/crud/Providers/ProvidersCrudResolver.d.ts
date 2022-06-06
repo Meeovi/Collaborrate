@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateProvidersArgs } from "./args/AggregateProvidersArgs";
+import { CreateManyProvidersArgs } from "./args/CreateManyProvidersArgs";
+import { CreateProvidersArgs } from "./args/CreateProvidersArgs";
+import { DeleteManyProvidersArgs } from "./args/DeleteManyProvidersArgs";
+import { DeleteProvidersArgs } from "./args/DeleteProvidersArgs";
+import { FindFirstProvidersArgs } from "./args/FindFirstProvidersArgs";
+import { FindManyProvidersArgs } from "./args/FindManyProvidersArgs";
+import { FindUniqueProvidersArgs } from "./args/FindUniqueProvidersArgs";
+import { GroupByProvidersArgs } from "./args/GroupByProvidersArgs";
+import { UpdateManyProvidersArgs } from "./args/UpdateManyProvidersArgs";
+import { UpdateProvidersArgs } from "./args/UpdateProvidersArgs";
+import { UpsertProvidersArgs } from "./args/UpsertProvidersArgs";
+import { Providers } from "../../../models/Providers";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateProviders } from "../../outputs/AggregateProviders";
+import { ProvidersGroupBy } from "../../outputs/ProvidersGroupBy";
+export declare class ProvidersCrudResolver {
+    findUniqueProviders(ctx: any, info: GraphQLResolveInfo, args: FindUniqueProvidersArgs): Promise<Providers | null>;
+    findFirstProviders(ctx: any, info: GraphQLResolveInfo, args: FindFirstProvidersArgs): Promise<Providers | null>;
+    findManyProviders(ctx: any, info: GraphQLResolveInfo, args: FindManyProvidersArgs): Promise<Providers[]>;
+    createProviders(ctx: any, info: GraphQLResolveInfo, args: CreateProvidersArgs): Promise<Providers>;
+    createManyProviders(ctx: any, info: GraphQLResolveInfo, args: CreateManyProvidersArgs): Promise<AffectedRowsOutput>;
+    deleteProviders(ctx: any, info: GraphQLResolveInfo, args: DeleteProvidersArgs): Promise<Providers | null>;
+    updateProviders(ctx: any, info: GraphQLResolveInfo, args: UpdateProvidersArgs): Promise<Providers | null>;
+    deleteManyProviders(ctx: any, info: GraphQLResolveInfo, args: DeleteManyProvidersArgs): Promise<AffectedRowsOutput>;
+    updateManyProviders(ctx: any, info: GraphQLResolveInfo, args: UpdateManyProvidersArgs): Promise<AffectedRowsOutput>;
+    upsertProviders(ctx: any, info: GraphQLResolveInfo, args: UpsertProvidersArgs): Promise<Providers>;
+    aggregateProviders(ctx: any, info: GraphQLResolveInfo, args: AggregateProvidersArgs): Promise<AggregateProviders>;
+    groupByProviders(ctx: any, info: GraphQLResolveInfo, args: GroupByProvidersArgs): Promise<ProvidersGroupBy[]>;
+}

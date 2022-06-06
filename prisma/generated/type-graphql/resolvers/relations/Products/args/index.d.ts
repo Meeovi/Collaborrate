@@ -1,0 +1,9 @@
+export { ProductsCouponsArgs } from "./ProductsCouponsArgs";
+export { ProductsCredit_memosArgs } from "./ProductsCredit_memosArgs";
+export { ProductsOrdersArgs } from "./ProductsOrdersArgs";
+export { ProductsProduct_attributeArgs } from "./ProductsProduct_attributeArgs";
+export { ProductsQuotesArgs } from "./ProductsQuotesArgs";
+export { ProductsRatingArgs } from "./ProductsRatingArgs";
+export { ProductsReturnsArgs } from "./ProductsReturnsArgs";
+export { ProductsTax_rateArgs } from "./ProductsTax_rateArgs";
+export { ProductsTax_ruleArgs } from "./ProductsTax_ruleArgs";

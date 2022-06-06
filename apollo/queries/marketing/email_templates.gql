@@ -1,0 +1,18 @@
+query MyQuery {
+  email_templates {
+    id
+    height
+    header
+    footer
+    created_at
+    content
+    assigned_to
+    active
+    insert_variable
+    media
+    name
+    subject
+    type
+    width
+  }
+}

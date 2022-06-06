@@ -1,0 +1,33 @@
+export declare class ProductsCreateManyInput {
+    id?: bigint | undefined;
+    sku?: bigint | undefined;
+    thumbnail?: string | undefined;
+    name: string;
+    type?: string | undefined;
+    attribute_set?: string | undefined;
+    price?: string | undefined;
+    quantity_per_source?: string | undefined;
+    salable_quantity?: string | undefined;
+    visibility?: string | undefined;
+    status?: boolean | undefined;
+    websites?: string | undefined;
+    product?: string | undefined;
+    tax_class?: string | undefined;
+    stock_status?: string | undefined;
+    weight?: string | undefined;
+    categories?: string | undefined;
+    created_at?: Date | undefined;
+    country?: string | undefined;
+    size?: string | undefined;
+    format?: string | undefined;
+    height?: string | undefined;
+    content?: string | undefined;
+    short_description?: string | undefined;
+    image?: string | undefined;
+    meta_title?: string | undefined;
+    meta_keywords?: string | undefined;
+    meta_description?: string | undefined;
+    meta_url?: string | undefined;
+    file?: string | undefined;
+    manufacture?: string | undefined;
+}

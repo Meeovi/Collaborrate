@@ -1,0 +1,17 @@
+query MyQuery ($id: Int){
+  warehouse (where: {id: {_eq: $id}}){
+    id
+    description
+    created_at
+    country
+    city
+    category
+    image
+    name
+    postal
+    products
+    isPublic
+    state
+    status
+  }
+}

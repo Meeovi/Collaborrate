@@ -1,0 +1,12 @@
+export { AggregateTax_rateArgs } from "./AggregateTax_rateArgs";
+export { CreateManyTax_rateArgs } from "./CreateManyTax_rateArgs";
+export { CreateTax_rateArgs } from "./CreateTax_rateArgs";
+export { DeleteManyTax_rateArgs } from "./DeleteManyTax_rateArgs";
+export { DeleteTax_rateArgs } from "./DeleteTax_rateArgs";
+export { FindFirstTax_rateArgs } from "./FindFirstTax_rateArgs";
+export { FindManyTax_rateArgs } from "./FindManyTax_rateArgs";
+export { FindUniqueTax_rateArgs } from "./FindUniqueTax_rateArgs";
+export { GroupByTax_rateArgs } from "./GroupByTax_rateArgs";
+export { UpdateManyTax_rateArgs } from "./UpdateManyTax_rateArgs";
+export { UpdateTax_rateArgs } from "./UpdateTax_rateArgs";
+export { UpsertTax_rateArgs } from "./UpsertTax_rateArgs";

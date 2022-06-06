@@ -1,0 +1,30 @@
+import { BigIntWithAggregatesFilter } from "../inputs/BigIntWithAggregatesFilter";
+import { DateTimeNullableWithAggregatesFilter } from "../inputs/DateTimeNullableWithAggregatesFilter";
+import { StringNullableWithAggregatesFilter } from "../inputs/StringNullableWithAggregatesFilter";
+export declare class Shop_settingsScalarWhereWithAggregatesInput {
+    AND?: Shop_settingsScalarWhereWithAggregatesInput[] | undefined;
+    OR?: Shop_settingsScalarWhereWithAggregatesInput[] | undefined;
+    NOT?: Shop_settingsScalarWhereWithAggregatesInput[] | undefined;
+    id?: BigIntWithAggregatesFilter | undefined;
+    created_at?: DateTimeNullableWithAggregatesFilter | undefined;
+    store_name?: StringNullableWithAggregatesFilter | undefined;
+    store_phone?: StringNullableWithAggregatesFilter | undefined;
+    store_hours?: StringNullableWithAggregatesFilter | undefined;
+    country?: StringNullableWithAggregatesFilter | undefined;
+    region?: StringNullableWithAggregatesFilter | undefined;
+    zipcode?: StringNullableWithAggregatesFilter | undefined;
+    city?: StringNullableWithAggregatesFilter | undefined;
+    address?: StringNullableWithAggregatesFilter | undefined;
+    address_two?: StringNullableWithAggregatesFilter | undefined;
+    vat_number?: StringNullableWithAggregatesFilter | undefined;
+    allow_state?: StringNullableWithAggregatesFilter | undefined;
+    state_required_for?: StringNullableWithAggregatesFilter | undefined;
+    allow_countries?: StringNullableWithAggregatesFilter | undefined;
+    default_country?: StringNullableWithAggregatesFilter | undefined;
+    optional_zip?: StringNullableWithAggregatesFilter | undefined;
+    european_union_countries?: StringNullableWithAggregatesFilter | undefined;
+    top_destinations?: StringNullableWithAggregatesFilter | undefined;
+    base_currency?: StringNullableWithAggregatesFilter | undefined;
+    default_currency?: StringNullableWithAggregatesFilter | undefined;
+    allowed_currency?: StringNullableWithAggregatesFilter | undefined;
+}

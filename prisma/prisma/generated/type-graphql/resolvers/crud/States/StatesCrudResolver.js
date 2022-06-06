@@ -1,0 +1,244 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatesCrudResolver = void 0;
+const tslib_1 = require("tslib");
+const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
+const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
+const AggregateStatesArgs_1 = require("./args/AggregateStatesArgs");
+const CreateManyStatesArgs_1 = require("./args/CreateManyStatesArgs");
+const CreateStatesArgs_1 = require("./args/CreateStatesArgs");
+const DeleteManyStatesArgs_1 = require("./args/DeleteManyStatesArgs");
+const DeleteStatesArgs_1 = require("./args/DeleteStatesArgs");
+const FindFirstStatesArgs_1 = require("./args/FindFirstStatesArgs");
+const FindManyStatesArgs_1 = require("./args/FindManyStatesArgs");
+const FindUniqueStatesArgs_1 = require("./args/FindUniqueStatesArgs");
+const GroupByStatesArgs_1 = require("./args/GroupByStatesArgs");
+const UpdateManyStatesArgs_1 = require("./args/UpdateManyStatesArgs");
+const UpdateStatesArgs_1 = require("./args/UpdateStatesArgs");
+const UpsertStatesArgs_1 = require("./args/UpsertStatesArgs");
+const helpers_1 = require("../../../helpers");
+const States_1 = require("../../../models/States");
+const AffectedRowsOutput_1 = require("../../outputs/AffectedRowsOutput");
+const AggregateStates_1 = require("../../outputs/AggregateStates");
+const StatesGroupBy_1 = require("../../outputs/StatesGroupBy");
+let StatesCrudResolver = class StatesCrudResolver {
+    async findUniqueStates(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).states.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findFirstStates(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).states.findFirst({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findManyStates(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).states.findMany({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async createStates(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).states.create({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async createManyStates(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).states.createMany({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async deleteStates(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).states.delete({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async updateStates(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).states.update({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async deleteManyStates(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).states.deleteMany({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async updateManyStates(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).states.updateMany({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async upsertStates(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).states.upsert({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async aggregateStates(ctx, info, args) {
+        return (0, helpers_1.getPrismaFromContext)(ctx).states.aggregate({
+            ...args,
+            ...(0, helpers_1.transformFields)((0, graphql_fields_1.default)(info)),
+        });
+    }
+    async groupByStates(ctx, info, args) {
+        const { _count, _avg, _sum, _min, _max } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).states.groupBy({
+            ...args,
+            ...Object.fromEntries(Object.entries({ _count, _avg, _sum, _min, _max }).filter(([_, v]) => v != null)),
+        });
+    }
+};
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => States_1.States, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueStatesArgs_1.FindUniqueStatesArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], StatesCrudResolver.prototype, "findUniqueStates", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => States_1.States, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstStatesArgs_1.FindFirstStatesArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], StatesCrudResolver.prototype, "findFirstStates", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => [States_1.States], {
+        nullable: false
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindManyStatesArgs_1.FindManyStatesArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], StatesCrudResolver.prototype, "findManyStates", null);
+tslib_1.__decorate([
+    TypeGraphQL.Mutation(_returns => States_1.States, {
+        nullable: false
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateStatesArgs_1.CreateStatesArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], StatesCrudResolver.prototype, "createStates", null);
+tslib_1.__decorate([
+    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
+        nullable: false
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyStatesArgs_1.CreateManyStatesArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], StatesCrudResolver.prototype, "createManyStates", null);
+tslib_1.__decorate([
+    TypeGraphQL.Mutation(_returns => States_1.States, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, DeleteStatesArgs_1.DeleteStatesArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], StatesCrudResolver.prototype, "deleteStates", null);
+tslib_1.__decorate([
+    TypeGraphQL.Mutation(_returns => States_1.States, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, UpdateStatesArgs_1.UpdateStatesArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], StatesCrudResolver.prototype, "updateStates", null);
+tslib_1.__decorate([
+    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
+        nullable: false
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, DeleteManyStatesArgs_1.DeleteManyStatesArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], StatesCrudResolver.prototype, "deleteManyStates", null);
+tslib_1.__decorate([
+    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
+        nullable: false
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, UpdateManyStatesArgs_1.UpdateManyStatesArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], StatesCrudResolver.prototype, "updateManyStates", null);
+tslib_1.__decorate([
+    TypeGraphQL.Mutation(_returns => States_1.States, {
+        nullable: false
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, UpsertStatesArgs_1.UpsertStatesArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], StatesCrudResolver.prototype, "upsertStates", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => AggregateStates_1.AggregateStates, {
+        nullable: false
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateStatesArgs_1.AggregateStatesArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], StatesCrudResolver.prototype, "aggregateStates", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => [StatesGroupBy_1.StatesGroupBy], {
+        nullable: false
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, GroupByStatesArgs_1.GroupByStatesArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], StatesCrudResolver.prototype, "groupByStates", null);
+StatesCrudResolver = tslib_1.__decorate([
+    TypeGraphQL.Resolver(_of => States_1.States)
+], StatesCrudResolver);
+exports.StatesCrudResolver = StatesCrudResolver;

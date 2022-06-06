@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateIntegrationsArgs } from "./args/AggregateIntegrationsArgs";
+import { CreateIntegrationsArgs } from "./args/CreateIntegrationsArgs";
+import { CreateManyIntegrationsArgs } from "./args/CreateManyIntegrationsArgs";
+import { DeleteIntegrationsArgs } from "./args/DeleteIntegrationsArgs";
+import { DeleteManyIntegrationsArgs } from "./args/DeleteManyIntegrationsArgs";
+import { FindFirstIntegrationsArgs } from "./args/FindFirstIntegrationsArgs";
+import { FindManyIntegrationsArgs } from "./args/FindManyIntegrationsArgs";
+import { FindUniqueIntegrationsArgs } from "./args/FindUniqueIntegrationsArgs";
+import { GroupByIntegrationsArgs } from "./args/GroupByIntegrationsArgs";
+import { UpdateIntegrationsArgs } from "./args/UpdateIntegrationsArgs";
+import { UpdateManyIntegrationsArgs } from "./args/UpdateManyIntegrationsArgs";
+import { UpsertIntegrationsArgs } from "./args/UpsertIntegrationsArgs";
+import { Integrations } from "../../../models/Integrations";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateIntegrations } from "../../outputs/AggregateIntegrations";
+import { IntegrationsGroupBy } from "../../outputs/IntegrationsGroupBy";
+export declare class IntegrationsCrudResolver {
+    findUniqueIntegrations(ctx: any, info: GraphQLResolveInfo, args: FindUniqueIntegrationsArgs): Promise<Integrations | null>;
+    findFirstIntegrations(ctx: any, info: GraphQLResolveInfo, args: FindFirstIntegrationsArgs): Promise<Integrations | null>;
+    findManyIntegrations(ctx: any, info: GraphQLResolveInfo, args: FindManyIntegrationsArgs): Promise<Integrations[]>;
+    createIntegrations(ctx: any, info: GraphQLResolveInfo, args: CreateIntegrationsArgs): Promise<Integrations>;
+    createManyIntegrations(ctx: any, info: GraphQLResolveInfo, args: CreateManyIntegrationsArgs): Promise<AffectedRowsOutput>;
+    deleteIntegrations(ctx: any, info: GraphQLResolveInfo, args: DeleteIntegrationsArgs): Promise<Integrations | null>;
+    updateIntegrations(ctx: any, info: GraphQLResolveInfo, args: UpdateIntegrationsArgs): Promise<Integrations | null>;
+    deleteManyIntegrations(ctx: any, info: GraphQLResolveInfo, args: DeleteManyIntegrationsArgs): Promise<AffectedRowsOutput>;
+    updateManyIntegrations(ctx: any, info: GraphQLResolveInfo, args: UpdateManyIntegrationsArgs): Promise<AffectedRowsOutput>;
+    upsertIntegrations(ctx: any, info: GraphQLResolveInfo, args: UpsertIntegrationsArgs): Promise<Integrations>;
+    aggregateIntegrations(ctx: any, info: GraphQLResolveInfo, args: AggregateIntegrationsArgs): Promise<AggregateIntegrations>;
+    groupByIntegrations(ctx: any, info: GraphQLResolveInfo, args: GroupByIntegrationsArgs): Promise<IntegrationsGroupBy[]>;
+}

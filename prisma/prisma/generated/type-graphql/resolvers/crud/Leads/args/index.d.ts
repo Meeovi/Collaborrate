@@ -1,0 +1,12 @@
+export { AggregateLeadsArgs } from "./AggregateLeadsArgs";
+export { CreateLeadsArgs } from "./CreateLeadsArgs";
+export { CreateManyLeadsArgs } from "./CreateManyLeadsArgs";
+export { DeleteLeadsArgs } from "./DeleteLeadsArgs";
+export { DeleteManyLeadsArgs } from "./DeleteManyLeadsArgs";
+export { FindFirstLeadsArgs } from "./FindFirstLeadsArgs";
+export { FindManyLeadsArgs } from "./FindManyLeadsArgs";
+export { FindUniqueLeadsArgs } from "./FindUniqueLeadsArgs";
+export { GroupByLeadsArgs } from "./GroupByLeadsArgs";
+export { UpdateLeadsArgs } from "./UpdateLeadsArgs";
+export { UpdateManyLeadsArgs } from "./UpdateManyLeadsArgs";
+export { UpsertLeadsArgs } from "./UpsertLeadsArgs";

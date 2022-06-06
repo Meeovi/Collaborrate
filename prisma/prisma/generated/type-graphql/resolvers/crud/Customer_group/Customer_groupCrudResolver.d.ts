@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateCustomer_groupArgs } from "./args/AggregateCustomer_groupArgs";
+import { CreateCustomer_groupArgs } from "./args/CreateCustomer_groupArgs";
+import { CreateManyCustomer_groupArgs } from "./args/CreateManyCustomer_groupArgs";
+import { DeleteCustomer_groupArgs } from "./args/DeleteCustomer_groupArgs";
+import { DeleteManyCustomer_groupArgs } from "./args/DeleteManyCustomer_groupArgs";
+import { FindFirstCustomer_groupArgs } from "./args/FindFirstCustomer_groupArgs";
+import { FindManyCustomer_groupArgs } from "./args/FindManyCustomer_groupArgs";
+import { FindUniqueCustomer_groupArgs } from "./args/FindUniqueCustomer_groupArgs";
+import { GroupByCustomer_groupArgs } from "./args/GroupByCustomer_groupArgs";
+import { UpdateCustomer_groupArgs } from "./args/UpdateCustomer_groupArgs";
+import { UpdateManyCustomer_groupArgs } from "./args/UpdateManyCustomer_groupArgs";
+import { UpsertCustomer_groupArgs } from "./args/UpsertCustomer_groupArgs";
+import { Customer_group } from "../../../models/Customer_group";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateCustomer_group } from "../../outputs/AggregateCustomer_group";
+import { Customer_groupGroupBy } from "../../outputs/Customer_groupGroupBy";
+export declare class Customer_groupCrudResolver {
+    customer_group(ctx: any, info: GraphQLResolveInfo, args: FindUniqueCustomer_groupArgs): Promise<Customer_group | null>;
+    findFirstCustomer_group(ctx: any, info: GraphQLResolveInfo, args: FindFirstCustomer_groupArgs): Promise<Customer_group | null>;
+    customer_groups(ctx: any, info: GraphQLResolveInfo, args: FindManyCustomer_groupArgs): Promise<Customer_group[]>;
+    createCustomer_group(ctx: any, info: GraphQLResolveInfo, args: CreateCustomer_groupArgs): Promise<Customer_group>;
+    createManyCustomer_group(ctx: any, info: GraphQLResolveInfo, args: CreateManyCustomer_groupArgs): Promise<AffectedRowsOutput>;
+    deleteCustomer_group(ctx: any, info: GraphQLResolveInfo, args: DeleteCustomer_groupArgs): Promise<Customer_group | null>;
+    updateCustomer_group(ctx: any, info: GraphQLResolveInfo, args: UpdateCustomer_groupArgs): Promise<Customer_group | null>;
+    deleteManyCustomer_group(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCustomer_groupArgs): Promise<AffectedRowsOutput>;
+    updateManyCustomer_group(ctx: any, info: GraphQLResolveInfo, args: UpdateManyCustomer_groupArgs): Promise<AffectedRowsOutput>;
+    upsertCustomer_group(ctx: any, info: GraphQLResolveInfo, args: UpsertCustomer_groupArgs): Promise<Customer_group>;
+    aggregateCustomer_group(ctx: any, info: GraphQLResolveInfo, args: AggregateCustomer_groupArgs): Promise<AggregateCustomer_group>;
+    groupByCustomer_group(ctx: any, info: GraphQLResolveInfo, args: GroupByCustomer_groupArgs): Promise<Customer_groupGroupBy[]>;
+}

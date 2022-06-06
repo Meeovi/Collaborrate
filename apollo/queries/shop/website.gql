@@ -1,0 +1,10 @@
+query MyQuery {
+  websites {
+    id
+    name
+    shop
+    store
+    url
+    created_at
+  }
+}

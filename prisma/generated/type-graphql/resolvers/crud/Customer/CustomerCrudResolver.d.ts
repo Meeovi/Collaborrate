@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateCustomerArgs } from "./args/AggregateCustomerArgs";
+import { CreateCustomerArgs } from "./args/CreateCustomerArgs";
+import { CreateManyCustomerArgs } from "./args/CreateManyCustomerArgs";
+import { DeleteCustomerArgs } from "./args/DeleteCustomerArgs";
+import { DeleteManyCustomerArgs } from "./args/DeleteManyCustomerArgs";
+import { FindFirstCustomerArgs } from "./args/FindFirstCustomerArgs";
+import { FindManyCustomerArgs } from "./args/FindManyCustomerArgs";
+import { FindUniqueCustomerArgs } from "./args/FindUniqueCustomerArgs";
+import { GroupByCustomerArgs } from "./args/GroupByCustomerArgs";
+import { UpdateCustomerArgs } from "./args/UpdateCustomerArgs";
+import { UpdateManyCustomerArgs } from "./args/UpdateManyCustomerArgs";
+import { UpsertCustomerArgs } from "./args/UpsertCustomerArgs";
+import { Customer } from "../../../models/Customer";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateCustomer } from "../../outputs/AggregateCustomer";
+import { CustomerGroupBy } from "../../outputs/CustomerGroupBy";
+export declare class CustomerCrudResolver {
+    customer(ctx: any, info: GraphQLResolveInfo, args: FindUniqueCustomerArgs): Promise<Customer | null>;
+    findFirstCustomer(ctx: any, info: GraphQLResolveInfo, args: FindFirstCustomerArgs): Promise<Customer | null>;
+    customers(ctx: any, info: GraphQLResolveInfo, args: FindManyCustomerArgs): Promise<Customer[]>;
+    createCustomer(ctx: any, info: GraphQLResolveInfo, args: CreateCustomerArgs): Promise<Customer>;
+    createManyCustomer(ctx: any, info: GraphQLResolveInfo, args: CreateManyCustomerArgs): Promise<AffectedRowsOutput>;
+    deleteCustomer(ctx: any, info: GraphQLResolveInfo, args: DeleteCustomerArgs): Promise<Customer | null>;
+    updateCustomer(ctx: any, info: GraphQLResolveInfo, args: UpdateCustomerArgs): Promise<Customer | null>;
+    deleteManyCustomer(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCustomerArgs): Promise<AffectedRowsOutput>;
+    updateManyCustomer(ctx: any, info: GraphQLResolveInfo, args: UpdateManyCustomerArgs): Promise<AffectedRowsOutput>;
+    upsertCustomer(ctx: any, info: GraphQLResolveInfo, args: UpsertCustomerArgs): Promise<Customer>;
+    aggregateCustomer(ctx: any, info: GraphQLResolveInfo, args: AggregateCustomerArgs): Promise<AggregateCustomer>;
+    groupByCustomer(ctx: any, info: GraphQLResolveInfo, args: GroupByCustomerArgs): Promise<CustomerGroupBy[]>;
+}

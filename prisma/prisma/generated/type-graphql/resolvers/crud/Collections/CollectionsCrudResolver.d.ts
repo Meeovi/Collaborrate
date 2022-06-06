@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateCollectionsArgs } from "./args/AggregateCollectionsArgs";
+import { CreateCollectionsArgs } from "./args/CreateCollectionsArgs";
+import { CreateManyCollectionsArgs } from "./args/CreateManyCollectionsArgs";
+import { DeleteCollectionsArgs } from "./args/DeleteCollectionsArgs";
+import { DeleteManyCollectionsArgs } from "./args/DeleteManyCollectionsArgs";
+import { FindFirstCollectionsArgs } from "./args/FindFirstCollectionsArgs";
+import { FindManyCollectionsArgs } from "./args/FindManyCollectionsArgs";
+import { FindUniqueCollectionsArgs } from "./args/FindUniqueCollectionsArgs";
+import { GroupByCollectionsArgs } from "./args/GroupByCollectionsArgs";
+import { UpdateCollectionsArgs } from "./args/UpdateCollectionsArgs";
+import { UpdateManyCollectionsArgs } from "./args/UpdateManyCollectionsArgs";
+import { UpsertCollectionsArgs } from "./args/UpsertCollectionsArgs";
+import { Collections } from "../../../models/Collections";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateCollections } from "../../outputs/AggregateCollections";
+import { CollectionsGroupBy } from "../../outputs/CollectionsGroupBy";
+export declare class CollectionsCrudResolver {
+    findUniqueCollections(ctx: any, info: GraphQLResolveInfo, args: FindUniqueCollectionsArgs): Promise<Collections | null>;
+    findFirstCollections(ctx: any, info: GraphQLResolveInfo, args: FindFirstCollectionsArgs): Promise<Collections | null>;
+    findManyCollections(ctx: any, info: GraphQLResolveInfo, args: FindManyCollectionsArgs): Promise<Collections[]>;
+    createCollections(ctx: any, info: GraphQLResolveInfo, args: CreateCollectionsArgs): Promise<Collections>;
+    createManyCollections(ctx: any, info: GraphQLResolveInfo, args: CreateManyCollectionsArgs): Promise<AffectedRowsOutput>;
+    deleteCollections(ctx: any, info: GraphQLResolveInfo, args: DeleteCollectionsArgs): Promise<Collections | null>;
+    updateCollections(ctx: any, info: GraphQLResolveInfo, args: UpdateCollectionsArgs): Promise<Collections | null>;
+    deleteManyCollections(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCollectionsArgs): Promise<AffectedRowsOutput>;
+    updateManyCollections(ctx: any, info: GraphQLResolveInfo, args: UpdateManyCollectionsArgs): Promise<AffectedRowsOutput>;
+    upsertCollections(ctx: any, info: GraphQLResolveInfo, args: UpsertCollectionsArgs): Promise<Collections>;
+    aggregateCollections(ctx: any, info: GraphQLResolveInfo, args: AggregateCollectionsArgs): Promise<AggregateCollections>;
+    groupByCollections(ctx: any, info: GraphQLResolveInfo, args: GroupByCollectionsArgs): Promise<CollectionsGroupBy[]>;
+}

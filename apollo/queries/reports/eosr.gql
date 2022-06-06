@@ -1,0 +1,13 @@
+query MyQuery {
+  endofshift {
+    id
+    created_at
+    content
+    login
+    mcms
+    next_shift
+    projects
+    tickets
+    whid
+  }
+}

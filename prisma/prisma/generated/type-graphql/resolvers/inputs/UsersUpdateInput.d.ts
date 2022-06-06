@@ -1,0 +1,14 @@
+import { NullableDateTimeFieldUpdateOperationsInput } from "../inputs/NullableDateTimeFieldUpdateOperationsInput";
+import { NullableStringFieldUpdateOperationsInput } from "../inputs/NullableStringFieldUpdateOperationsInput";
+import { StringFieldUpdateOperationsInput } from "../inputs/StringFieldUpdateOperationsInput";
+export declare class UsersUpdateInput {
+    username?: StringFieldUpdateOperationsInput | undefined;
+    first_name?: StringFieldUpdateOperationsInput | undefined;
+    last_name?: NullableStringFieldUpdateOperationsInput | undefined;
+    email?: StringFieldUpdateOperationsInput | undefined;
+    password?: StringFieldUpdateOperationsInput | undefined;
+    interface_locale?: NullableStringFieldUpdateOperationsInput | undefined;
+    value?: NullableStringFieldUpdateOperationsInput | undefined;
+    permissions?: NullableStringFieldUpdateOperationsInput | undefined;
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | undefined;
+}

@@ -1,0 +1,12 @@
+query MyQuery {
+  deepdive {
+    id
+    end_date
+    content
+    created_at
+    attendees
+    login
+    start_date
+    whid
+  }
+}

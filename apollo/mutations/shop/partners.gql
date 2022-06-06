@@ -1,0 +1,13 @@
+query MyQuery ($id: Int){
+  partners (where: {id: {_eq: $id}}){
+    id
+    created_at
+    country
+    city
+    business_type
+    address
+    isPublic
+    name
+    state
+  }
+}

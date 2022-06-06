@@ -1,0 +1,12 @@
+export { AggregateInvoicesArgs } from "./AggregateInvoicesArgs";
+export { CreateInvoicesArgs } from "./CreateInvoicesArgs";
+export { CreateManyInvoicesArgs } from "./CreateManyInvoicesArgs";
+export { DeleteInvoicesArgs } from "./DeleteInvoicesArgs";
+export { DeleteManyInvoicesArgs } from "./DeleteManyInvoicesArgs";
+export { FindFirstInvoicesArgs } from "./FindFirstInvoicesArgs";
+export { FindManyInvoicesArgs } from "./FindManyInvoicesArgs";
+export { FindUniqueInvoicesArgs } from "./FindUniqueInvoicesArgs";
+export { GroupByInvoicesArgs } from "./GroupByInvoicesArgs";
+export { UpdateInvoicesArgs } from "./UpdateInvoicesArgs";
+export { UpdateManyInvoicesArgs } from "./UpdateManyInvoicesArgs";
+export { UpsertInvoicesArgs } from "./UpsertInvoicesArgs";

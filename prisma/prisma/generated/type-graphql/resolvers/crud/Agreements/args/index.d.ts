@@ -1,0 +1,12 @@
+export { AggregateAgreementsArgs } from "./AggregateAgreementsArgs";
+export { CreateAgreementsArgs } from "./CreateAgreementsArgs";
+export { CreateManyAgreementsArgs } from "./CreateManyAgreementsArgs";
+export { DeleteAgreementsArgs } from "./DeleteAgreementsArgs";
+export { DeleteManyAgreementsArgs } from "./DeleteManyAgreementsArgs";
+export { FindFirstAgreementsArgs } from "./FindFirstAgreementsArgs";
+export { FindManyAgreementsArgs } from "./FindManyAgreementsArgs";
+export { FindUniqueAgreementsArgs } from "./FindUniqueAgreementsArgs";
+export { GroupByAgreementsArgs } from "./GroupByAgreementsArgs";
+export { UpdateAgreementsArgs } from "./UpdateAgreementsArgs";
+export { UpdateManyAgreementsArgs } from "./UpdateManyAgreementsArgs";
+export { UpsertAgreementsArgs } from "./UpsertAgreementsArgs";

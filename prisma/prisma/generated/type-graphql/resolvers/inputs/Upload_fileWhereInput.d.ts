@@ -1,0 +1,31 @@
+import { DateTimeNullableFilter } from "../inputs/DateTimeNullableFilter";
+import { DecimalFilter } from "../inputs/DecimalFilter";
+import { IntFilter } from "../inputs/IntFilter";
+import { IntNullableFilter } from "../inputs/IntNullableFilter";
+import { JsonNullableFilter } from "../inputs/JsonNullableFilter";
+import { StringFilter } from "../inputs/StringFilter";
+import { StringNullableFilter } from "../inputs/StringNullableFilter";
+export declare class Upload_fileWhereInput {
+    AND?: Upload_fileWhereInput[] | undefined;
+    OR?: Upload_fileWhereInput[] | undefined;
+    NOT?: Upload_fileWhereInput[] | undefined;
+    id?: IntFilter | undefined;
+    name?: StringFilter | undefined;
+    alternativeText?: StringNullableFilter | undefined;
+    caption?: StringNullableFilter | undefined;
+    width?: IntNullableFilter | undefined;
+    height?: IntNullableFilter | undefined;
+    formats?: JsonNullableFilter | undefined;
+    hash?: StringFilter | undefined;
+    ext?: StringNullableFilter | undefined;
+    mime?: StringFilter | undefined;
+    size?: DecimalFilter | undefined;
+    url?: StringFilter | undefined;
+    previewUrl?: StringNullableFilter | undefined;
+    provider?: StringFilter | undefined;
+    provider_metadata?: JsonNullableFilter | undefined;
+    created_by?: IntNullableFilter | undefined;
+    updated_by?: IntNullableFilter | undefined;
+    created_at?: DateTimeNullableFilter | undefined;
+    updated_at?: DateTimeNullableFilter | undefined;
+}

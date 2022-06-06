@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregatePagesArgs } from "./args/AggregatePagesArgs";
+import { CreateManyPagesArgs } from "./args/CreateManyPagesArgs";
+import { CreatePagesArgs } from "./args/CreatePagesArgs";
+import { DeleteManyPagesArgs } from "./args/DeleteManyPagesArgs";
+import { DeletePagesArgs } from "./args/DeletePagesArgs";
+import { FindFirstPagesArgs } from "./args/FindFirstPagesArgs";
+import { FindManyPagesArgs } from "./args/FindManyPagesArgs";
+import { FindUniquePagesArgs } from "./args/FindUniquePagesArgs";
+import { GroupByPagesArgs } from "./args/GroupByPagesArgs";
+import { UpdateManyPagesArgs } from "./args/UpdateManyPagesArgs";
+import { UpdatePagesArgs } from "./args/UpdatePagesArgs";
+import { UpsertPagesArgs } from "./args/UpsertPagesArgs";
+import { Pages } from "../../../models/Pages";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregatePages } from "../../outputs/AggregatePages";
+import { PagesGroupBy } from "../../outputs/PagesGroupBy";
+export declare class PagesCrudResolver {
+    findUniquePages(ctx: any, info: GraphQLResolveInfo, args: FindUniquePagesArgs): Promise<Pages | null>;
+    findFirstPages(ctx: any, info: GraphQLResolveInfo, args: FindFirstPagesArgs): Promise<Pages | null>;
+    findManyPages(ctx: any, info: GraphQLResolveInfo, args: FindManyPagesArgs): Promise<Pages[]>;
+    createPages(ctx: any, info: GraphQLResolveInfo, args: CreatePagesArgs): Promise<Pages>;
+    createManyPages(ctx: any, info: GraphQLResolveInfo, args: CreateManyPagesArgs): Promise<AffectedRowsOutput>;
+    deletePages(ctx: any, info: GraphQLResolveInfo, args: DeletePagesArgs): Promise<Pages | null>;
+    updatePages(ctx: any, info: GraphQLResolveInfo, args: UpdatePagesArgs): Promise<Pages | null>;
+    deleteManyPages(ctx: any, info: GraphQLResolveInfo, args: DeleteManyPagesArgs): Promise<AffectedRowsOutput>;
+    updateManyPages(ctx: any, info: GraphQLResolveInfo, args: UpdateManyPagesArgs): Promise<AffectedRowsOutput>;
+    upsertPages(ctx: any, info: GraphQLResolveInfo, args: UpsertPagesArgs): Promise<Pages>;
+    aggregatePages(ctx: any, info: GraphQLResolveInfo, args: AggregatePagesArgs): Promise<AggregatePages>;
+    groupByPages(ctx: any, info: GraphQLResolveInfo, args: GroupByPagesArgs): Promise<PagesGroupBy[]>;
+}

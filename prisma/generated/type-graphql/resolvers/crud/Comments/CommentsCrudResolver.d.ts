@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateCommentsArgs } from "./args/AggregateCommentsArgs";
+import { CreateCommentsArgs } from "./args/CreateCommentsArgs";
+import { CreateManyCommentsArgs } from "./args/CreateManyCommentsArgs";
+import { DeleteCommentsArgs } from "./args/DeleteCommentsArgs";
+import { DeleteManyCommentsArgs } from "./args/DeleteManyCommentsArgs";
+import { FindFirstCommentsArgs } from "./args/FindFirstCommentsArgs";
+import { FindManyCommentsArgs } from "./args/FindManyCommentsArgs";
+import { FindUniqueCommentsArgs } from "./args/FindUniqueCommentsArgs";
+import { GroupByCommentsArgs } from "./args/GroupByCommentsArgs";
+import { UpdateCommentsArgs } from "./args/UpdateCommentsArgs";
+import { UpdateManyCommentsArgs } from "./args/UpdateManyCommentsArgs";
+import { UpsertCommentsArgs } from "./args/UpsertCommentsArgs";
+import { Comments } from "../../../models/Comments";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateComments } from "../../outputs/AggregateComments";
+import { CommentsGroupBy } from "../../outputs/CommentsGroupBy";
+export declare class CommentsCrudResolver {
+    findUniqueComments(ctx: any, info: GraphQLResolveInfo, args: FindUniqueCommentsArgs): Promise<Comments | null>;
+    findFirstComments(ctx: any, info: GraphQLResolveInfo, args: FindFirstCommentsArgs): Promise<Comments | null>;
+    findManyComments(ctx: any, info: GraphQLResolveInfo, args: FindManyCommentsArgs): Promise<Comments[]>;
+    createComments(ctx: any, info: GraphQLResolveInfo, args: CreateCommentsArgs): Promise<Comments>;
+    createManyComments(ctx: any, info: GraphQLResolveInfo, args: CreateManyCommentsArgs): Promise<AffectedRowsOutput>;
+    deleteComments(ctx: any, info: GraphQLResolveInfo, args: DeleteCommentsArgs): Promise<Comments | null>;
+    updateComments(ctx: any, info: GraphQLResolveInfo, args: UpdateCommentsArgs): Promise<Comments | null>;
+    deleteManyComments(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCommentsArgs): Promise<AffectedRowsOutput>;
+    updateManyComments(ctx: any, info: GraphQLResolveInfo, args: UpdateManyCommentsArgs): Promise<AffectedRowsOutput>;
+    upsertComments(ctx: any, info: GraphQLResolveInfo, args: UpsertCommentsArgs): Promise<Comments>;
+    aggregateComments(ctx: any, info: GraphQLResolveInfo, args: AggregateCommentsArgs): Promise<AggregateComments>;
+    groupByComments(ctx: any, info: GraphQLResolveInfo, args: GroupByCommentsArgs): Promise<CommentsGroupBy[]>;
+}

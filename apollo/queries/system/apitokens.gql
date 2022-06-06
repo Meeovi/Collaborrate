@@ -1,0 +1,10 @@
+query MyQuery {
+  apitoken {
+    id
+    name
+    token
+    token_type
+    description
+    created_at
+  }
+}

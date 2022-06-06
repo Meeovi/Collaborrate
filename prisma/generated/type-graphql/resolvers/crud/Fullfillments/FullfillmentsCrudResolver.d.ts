@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateFullfillmentsArgs } from "./args/AggregateFullfillmentsArgs";
+import { CreateFullfillmentsArgs } from "./args/CreateFullfillmentsArgs";
+import { CreateManyFullfillmentsArgs } from "./args/CreateManyFullfillmentsArgs";
+import { DeleteFullfillmentsArgs } from "./args/DeleteFullfillmentsArgs";
+import { DeleteManyFullfillmentsArgs } from "./args/DeleteManyFullfillmentsArgs";
+import { FindFirstFullfillmentsArgs } from "./args/FindFirstFullfillmentsArgs";
+import { FindManyFullfillmentsArgs } from "./args/FindManyFullfillmentsArgs";
+import { FindUniqueFullfillmentsArgs } from "./args/FindUniqueFullfillmentsArgs";
+import { GroupByFullfillmentsArgs } from "./args/GroupByFullfillmentsArgs";
+import { UpdateFullfillmentsArgs } from "./args/UpdateFullfillmentsArgs";
+import { UpdateManyFullfillmentsArgs } from "./args/UpdateManyFullfillmentsArgs";
+import { UpsertFullfillmentsArgs } from "./args/UpsertFullfillmentsArgs";
+import { Fullfillments } from "../../../models/Fullfillments";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateFullfillments } from "../../outputs/AggregateFullfillments";
+import { FullfillmentsGroupBy } from "../../outputs/FullfillmentsGroupBy";
+export declare class FullfillmentsCrudResolver {
+    findUniqueFullfillments(ctx: any, info: GraphQLResolveInfo, args: FindUniqueFullfillmentsArgs): Promise<Fullfillments | null>;
+    findFirstFullfillments(ctx: any, info: GraphQLResolveInfo, args: FindFirstFullfillmentsArgs): Promise<Fullfillments | null>;
+    findManyFullfillments(ctx: any, info: GraphQLResolveInfo, args: FindManyFullfillmentsArgs): Promise<Fullfillments[]>;
+    createFullfillments(ctx: any, info: GraphQLResolveInfo, args: CreateFullfillmentsArgs): Promise<Fullfillments>;
+    createManyFullfillments(ctx: any, info: GraphQLResolveInfo, args: CreateManyFullfillmentsArgs): Promise<AffectedRowsOutput>;
+    deleteFullfillments(ctx: any, info: GraphQLResolveInfo, args: DeleteFullfillmentsArgs): Promise<Fullfillments | null>;
+    updateFullfillments(ctx: any, info: GraphQLResolveInfo, args: UpdateFullfillmentsArgs): Promise<Fullfillments | null>;
+    deleteManyFullfillments(ctx: any, info: GraphQLResolveInfo, args: DeleteManyFullfillmentsArgs): Promise<AffectedRowsOutput>;
+    updateManyFullfillments(ctx: any, info: GraphQLResolveInfo, args: UpdateManyFullfillmentsArgs): Promise<AffectedRowsOutput>;
+    upsertFullfillments(ctx: any, info: GraphQLResolveInfo, args: UpsertFullfillmentsArgs): Promise<Fullfillments>;
+    aggregateFullfillments(ctx: any, info: GraphQLResolveInfo, args: AggregateFullfillmentsArgs): Promise<AggregateFullfillments>;
+    groupByFullfillments(ctx: any, info: GraphQLResolveInfo, args: GroupByFullfillmentsArgs): Promise<FullfillmentsGroupBy[]>;
+}

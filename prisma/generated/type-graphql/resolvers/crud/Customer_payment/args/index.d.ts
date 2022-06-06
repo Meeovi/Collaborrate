@@ -1,0 +1,12 @@
+export { AggregateCustomer_paymentArgs } from "./AggregateCustomer_paymentArgs";
+export { CreateCustomer_paymentArgs } from "./CreateCustomer_paymentArgs";
+export { CreateManyCustomer_paymentArgs } from "./CreateManyCustomer_paymentArgs";
+export { DeleteCustomer_paymentArgs } from "./DeleteCustomer_paymentArgs";
+export { DeleteManyCustomer_paymentArgs } from "./DeleteManyCustomer_paymentArgs";
+export { FindFirstCustomer_paymentArgs } from "./FindFirstCustomer_paymentArgs";
+export { FindManyCustomer_paymentArgs } from "./FindManyCustomer_paymentArgs";
+export { FindUniqueCustomer_paymentArgs } from "./FindUniqueCustomer_paymentArgs";
+export { GroupByCustomer_paymentArgs } from "./GroupByCustomer_paymentArgs";
+export { UpdateCustomer_paymentArgs } from "./UpdateCustomer_paymentArgs";
+export { UpdateManyCustomer_paymentArgs } from "./UpdateManyCustomer_paymentArgs";
+export { UpsertCustomer_paymentArgs } from "./UpsertCustomer_paymentArgs";

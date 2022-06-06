@@ -1,0 +1,20 @@
+query MyQuery {
+  gift_certificates {
+    id
+    image
+    name
+    products
+    published
+    rewards
+    special_offers
+    expiration
+    excerpt
+    discount
+    customers
+    coupons
+    categories
+    articles
+    users
+    type
+  }
+}

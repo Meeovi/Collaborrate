@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateProduct_attributeArgs } from "./args/AggregateProduct_attributeArgs";
+import { CreateManyProduct_attributeArgs } from "./args/CreateManyProduct_attributeArgs";
+import { CreateProduct_attributeArgs } from "./args/CreateProduct_attributeArgs";
+import { DeleteManyProduct_attributeArgs } from "./args/DeleteManyProduct_attributeArgs";
+import { DeleteProduct_attributeArgs } from "./args/DeleteProduct_attributeArgs";
+import { FindFirstProduct_attributeArgs } from "./args/FindFirstProduct_attributeArgs";
+import { FindManyProduct_attributeArgs } from "./args/FindManyProduct_attributeArgs";
+import { FindUniqueProduct_attributeArgs } from "./args/FindUniqueProduct_attributeArgs";
+import { GroupByProduct_attributeArgs } from "./args/GroupByProduct_attributeArgs";
+import { UpdateManyProduct_attributeArgs } from "./args/UpdateManyProduct_attributeArgs";
+import { UpdateProduct_attributeArgs } from "./args/UpdateProduct_attributeArgs";
+import { UpsertProduct_attributeArgs } from "./args/UpsertProduct_attributeArgs";
+import { Product_attribute } from "../../../models/Product_attribute";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateProduct_attribute } from "../../outputs/AggregateProduct_attribute";
+import { Product_attributeGroupBy } from "../../outputs/Product_attributeGroupBy";
+export declare class Product_attributeCrudResolver {
+    product_attribute(ctx: any, info: GraphQLResolveInfo, args: FindUniqueProduct_attributeArgs): Promise<Product_attribute | null>;
+    findFirstProduct_attribute(ctx: any, info: GraphQLResolveInfo, args: FindFirstProduct_attributeArgs): Promise<Product_attribute | null>;
+    product_attributes(ctx: any, info: GraphQLResolveInfo, args: FindManyProduct_attributeArgs): Promise<Product_attribute[]>;
+    createProduct_attribute(ctx: any, info: GraphQLResolveInfo, args: CreateProduct_attributeArgs): Promise<Product_attribute>;
+    createManyProduct_attribute(ctx: any, info: GraphQLResolveInfo, args: CreateManyProduct_attributeArgs): Promise<AffectedRowsOutput>;
+    deleteProduct_attribute(ctx: any, info: GraphQLResolveInfo, args: DeleteProduct_attributeArgs): Promise<Product_attribute | null>;
+    updateProduct_attribute(ctx: any, info: GraphQLResolveInfo, args: UpdateProduct_attributeArgs): Promise<Product_attribute | null>;
+    deleteManyProduct_attribute(ctx: any, info: GraphQLResolveInfo, args: DeleteManyProduct_attributeArgs): Promise<AffectedRowsOutput>;
+    updateManyProduct_attribute(ctx: any, info: GraphQLResolveInfo, args: UpdateManyProduct_attributeArgs): Promise<AffectedRowsOutput>;
+    upsertProduct_attribute(ctx: any, info: GraphQLResolveInfo, args: UpsertProduct_attributeArgs): Promise<Product_attribute>;
+    aggregateProduct_attribute(ctx: any, info: GraphQLResolveInfo, args: AggregateProduct_attributeArgs): Promise<AggregateProduct_attribute>;
+    groupByProduct_attribute(ctx: any, info: GraphQLResolveInfo, args: GroupByProduct_attributeArgs): Promise<Product_attributeGroupBy[]>;
+}

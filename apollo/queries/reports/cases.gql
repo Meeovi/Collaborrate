@@ -1,0 +1,17 @@
+query MyQuery {
+  cases {
+    id
+    priority
+    resolution
+    state
+    status
+    subject
+    description
+    created_at
+    date_modified
+    case_number
+    assigned_to
+    account_name
+    type
+  }
+}

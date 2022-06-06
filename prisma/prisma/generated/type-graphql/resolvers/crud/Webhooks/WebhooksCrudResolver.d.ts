@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateWebhooksArgs } from "./args/AggregateWebhooksArgs";
+import { CreateManyWebhooksArgs } from "./args/CreateManyWebhooksArgs";
+import { CreateWebhooksArgs } from "./args/CreateWebhooksArgs";
+import { DeleteManyWebhooksArgs } from "./args/DeleteManyWebhooksArgs";
+import { DeleteWebhooksArgs } from "./args/DeleteWebhooksArgs";
+import { FindFirstWebhooksArgs } from "./args/FindFirstWebhooksArgs";
+import { FindManyWebhooksArgs } from "./args/FindManyWebhooksArgs";
+import { FindUniqueWebhooksArgs } from "./args/FindUniqueWebhooksArgs";
+import { GroupByWebhooksArgs } from "./args/GroupByWebhooksArgs";
+import { UpdateManyWebhooksArgs } from "./args/UpdateManyWebhooksArgs";
+import { UpdateWebhooksArgs } from "./args/UpdateWebhooksArgs";
+import { UpsertWebhooksArgs } from "./args/UpsertWebhooksArgs";
+import { Webhooks } from "../../../models/Webhooks";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateWebhooks } from "../../outputs/AggregateWebhooks";
+import { WebhooksGroupBy } from "../../outputs/WebhooksGroupBy";
+export declare class WebhooksCrudResolver {
+    findUniqueWebhooks(ctx: any, info: GraphQLResolveInfo, args: FindUniqueWebhooksArgs): Promise<Webhooks | null>;
+    findFirstWebhooks(ctx: any, info: GraphQLResolveInfo, args: FindFirstWebhooksArgs): Promise<Webhooks | null>;
+    findManyWebhooks(ctx: any, info: GraphQLResolveInfo, args: FindManyWebhooksArgs): Promise<Webhooks[]>;
+    createWebhooks(ctx: any, info: GraphQLResolveInfo, args: CreateWebhooksArgs): Promise<Webhooks>;
+    createManyWebhooks(ctx: any, info: GraphQLResolveInfo, args: CreateManyWebhooksArgs): Promise<AffectedRowsOutput>;
+    deleteWebhooks(ctx: any, info: GraphQLResolveInfo, args: DeleteWebhooksArgs): Promise<Webhooks | null>;
+    updateWebhooks(ctx: any, info: GraphQLResolveInfo, args: UpdateWebhooksArgs): Promise<Webhooks | null>;
+    deleteManyWebhooks(ctx: any, info: GraphQLResolveInfo, args: DeleteManyWebhooksArgs): Promise<AffectedRowsOutput>;
+    updateManyWebhooks(ctx: any, info: GraphQLResolveInfo, args: UpdateManyWebhooksArgs): Promise<AffectedRowsOutput>;
+    upsertWebhooks(ctx: any, info: GraphQLResolveInfo, args: UpsertWebhooksArgs): Promise<Webhooks>;
+    aggregateWebhooks(ctx: any, info: GraphQLResolveInfo, args: AggregateWebhooksArgs): Promise<AggregateWebhooks>;
+    groupByWebhooks(ctx: any, info: GraphQLResolveInfo, args: GroupByWebhooksArgs): Promise<WebhooksGroupBy[]>;
+}

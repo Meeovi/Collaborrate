@@ -1,0 +1,31 @@
+import { BigIntWithAggregatesFilter } from "../inputs/BigIntWithAggregatesFilter";
+import { BoolNullableWithAggregatesFilter } from "../inputs/BoolNullableWithAggregatesFilter";
+import { IntWithAggregatesFilter } from "../inputs/IntWithAggregatesFilter";
+import { StringNullableWithAggregatesFilter } from "../inputs/StringNullableWithAggregatesFilter";
+export declare class Product_attributeScalarWhereWithAggregatesInput {
+    AND?: Product_attributeScalarWhereWithAggregatesInput[] | undefined;
+    OR?: Product_attributeScalarWhereWithAggregatesInput[] | undefined;
+    NOT?: Product_attributeScalarWhereWithAggregatesInput[] | undefined;
+    id?: IntWithAggregatesFilter | undefined;
+    default_label?: StringNullableWithAggregatesFilter | undefined;
+    catalog_input_type_store_owner?: StringNullableWithAggregatesFilter | undefined;
+    values_required?: BoolNullableWithAggregatesFilter | undefined;
+    attribute_code?: StringNullableWithAggregatesFilter | undefined;
+    scope?: StringNullableWithAggregatesFilter | undefined;
+    default_value?: StringNullableWithAggregatesFilter | undefined;
+    unique_value?: BoolNullableWithAggregatesFilter | undefined;
+    input_validation_store_owner?: StringNullableWithAggregatesFilter | undefined;
+    add_column_options?: BoolNullableWithAggregatesFilter | undefined;
+    filter_options?: BoolNullableWithAggregatesFilter | undefined;
+    use_search?: BoolNullableWithAggregatesFilter | undefined;
+    comparable_storefront?: BoolNullableWithAggregatesFilter | undefined;
+    layered_navigation?: BoolNullableWithAggregatesFilter | undefined;
+    search_results_layered_navigation?: BoolNullableWithAggregatesFilter | undefined;
+    position?: StringNullableWithAggregatesFilter | undefined;
+    promo_rule_conditions?: BoolNullableWithAggregatesFilter | undefined;
+    allow_html_tags_storefront?: BoolNullableWithAggregatesFilter | undefined;
+    visible_catalog_pages_storefront?: BoolNullableWithAggregatesFilter | undefined;
+    used_product_listing?: BoolNullableWithAggregatesFilter | undefined;
+    used_sorting_product_listing?: BoolNullableWithAggregatesFilter | undefined;
+    prod_id?: BigIntWithAggregatesFilter | undefined;
+}

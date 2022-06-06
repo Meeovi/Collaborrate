@@ -1,0 +1,12 @@
+export { AggregateShopsArgs } from "./AggregateShopsArgs";
+export { CreateManyShopsArgs } from "./CreateManyShopsArgs";
+export { CreateShopsArgs } from "./CreateShopsArgs";
+export { DeleteManyShopsArgs } from "./DeleteManyShopsArgs";
+export { DeleteShopsArgs } from "./DeleteShopsArgs";
+export { FindFirstShopsArgs } from "./FindFirstShopsArgs";
+export { FindManyShopsArgs } from "./FindManyShopsArgs";
+export { FindUniqueShopsArgs } from "./FindUniqueShopsArgs";
+export { GroupByShopsArgs } from "./GroupByShopsArgs";
+export { UpdateManyShopsArgs } from "./UpdateManyShopsArgs";
+export { UpdateShopsArgs } from "./UpdateShopsArgs";
+export { UpsertShopsArgs } from "./UpsertShopsArgs";

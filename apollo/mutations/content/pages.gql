@@ -1,0 +1,13 @@
+query MyQuery ($id: Int){
+  pages (where: {id: {_eq: $id}}){
+    id
+    title
+    enable_page
+    content_title
+    content
+    meta_description
+    meta_keywords
+    meta_title
+    url_key
+  }
+}

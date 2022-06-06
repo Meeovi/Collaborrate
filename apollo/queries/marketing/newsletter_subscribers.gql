@@ -1,0 +1,12 @@
+query MyQuery {
+  newsletter_subscribers {
+    id
+    email
+    customer_last_name
+    customer_first_name
+    status
+    store
+    websites
+    created_at
+  }
+}

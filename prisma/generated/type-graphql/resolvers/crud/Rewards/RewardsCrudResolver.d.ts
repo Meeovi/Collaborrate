@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateRewardsArgs } from "./args/AggregateRewardsArgs";
+import { CreateManyRewardsArgs } from "./args/CreateManyRewardsArgs";
+import { CreateRewardsArgs } from "./args/CreateRewardsArgs";
+import { DeleteManyRewardsArgs } from "./args/DeleteManyRewardsArgs";
+import { DeleteRewardsArgs } from "./args/DeleteRewardsArgs";
+import { FindFirstRewardsArgs } from "./args/FindFirstRewardsArgs";
+import { FindManyRewardsArgs } from "./args/FindManyRewardsArgs";
+import { FindUniqueRewardsArgs } from "./args/FindUniqueRewardsArgs";
+import { GroupByRewardsArgs } from "./args/GroupByRewardsArgs";
+import { UpdateManyRewardsArgs } from "./args/UpdateManyRewardsArgs";
+import { UpdateRewardsArgs } from "./args/UpdateRewardsArgs";
+import { UpsertRewardsArgs } from "./args/UpsertRewardsArgs";
+import { Rewards } from "../../../models/Rewards";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateRewards } from "../../outputs/AggregateRewards";
+import { RewardsGroupBy } from "../../outputs/RewardsGroupBy";
+export declare class RewardsCrudResolver {
+    findUniqueRewards(ctx: any, info: GraphQLResolveInfo, args: FindUniqueRewardsArgs): Promise<Rewards | null>;
+    findFirstRewards(ctx: any, info: GraphQLResolveInfo, args: FindFirstRewardsArgs): Promise<Rewards | null>;
+    findManyRewards(ctx: any, info: GraphQLResolveInfo, args: FindManyRewardsArgs): Promise<Rewards[]>;
+    createRewards(ctx: any, info: GraphQLResolveInfo, args: CreateRewardsArgs): Promise<Rewards>;
+    createManyRewards(ctx: any, info: GraphQLResolveInfo, args: CreateManyRewardsArgs): Promise<AffectedRowsOutput>;
+    deleteRewards(ctx: any, info: GraphQLResolveInfo, args: DeleteRewardsArgs): Promise<Rewards | null>;
+    updateRewards(ctx: any, info: GraphQLResolveInfo, args: UpdateRewardsArgs): Promise<Rewards | null>;
+    deleteManyRewards(ctx: any, info: GraphQLResolveInfo, args: DeleteManyRewardsArgs): Promise<AffectedRowsOutput>;
+    updateManyRewards(ctx: any, info: GraphQLResolveInfo, args: UpdateManyRewardsArgs): Promise<AffectedRowsOutput>;
+    upsertRewards(ctx: any, info: GraphQLResolveInfo, args: UpsertRewardsArgs): Promise<Rewards>;
+    aggregateRewards(ctx: any, info: GraphQLResolveInfo, args: AggregateRewardsArgs): Promise<AggregateRewards>;
+    groupByRewards(ctx: any, info: GraphQLResolveInfo, args: GroupByRewardsArgs): Promise<RewardsGroupBy[]>;
+}

@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateCore_storeArgs } from "./args/AggregateCore_storeArgs";
+import { CreateCore_storeArgs } from "./args/CreateCore_storeArgs";
+import { CreateManyCore_storeArgs } from "./args/CreateManyCore_storeArgs";
+import { DeleteCore_storeArgs } from "./args/DeleteCore_storeArgs";
+import { DeleteManyCore_storeArgs } from "./args/DeleteManyCore_storeArgs";
+import { FindFirstCore_storeArgs } from "./args/FindFirstCore_storeArgs";
+import { FindManyCore_storeArgs } from "./args/FindManyCore_storeArgs";
+import { FindUniqueCore_storeArgs } from "./args/FindUniqueCore_storeArgs";
+import { GroupByCore_storeArgs } from "./args/GroupByCore_storeArgs";
+import { UpdateCore_storeArgs } from "./args/UpdateCore_storeArgs";
+import { UpdateManyCore_storeArgs } from "./args/UpdateManyCore_storeArgs";
+import { UpsertCore_storeArgs } from "./args/UpsertCore_storeArgs";
+import { Core_store } from "../../../models/Core_store";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateCore_store } from "../../outputs/AggregateCore_store";
+import { Core_storeGroupBy } from "../../outputs/Core_storeGroupBy";
+export declare class Core_storeCrudResolver {
+    core_store(ctx: any, info: GraphQLResolveInfo, args: FindUniqueCore_storeArgs): Promise<Core_store | null>;
+    findFirstCore_store(ctx: any, info: GraphQLResolveInfo, args: FindFirstCore_storeArgs): Promise<Core_store | null>;
+    core_stores(ctx: any, info: GraphQLResolveInfo, args: FindManyCore_storeArgs): Promise<Core_store[]>;
+    createCore_store(ctx: any, info: GraphQLResolveInfo, args: CreateCore_storeArgs): Promise<Core_store>;
+    createManyCore_store(ctx: any, info: GraphQLResolveInfo, args: CreateManyCore_storeArgs): Promise<AffectedRowsOutput>;
+    deleteCore_store(ctx: any, info: GraphQLResolveInfo, args: DeleteCore_storeArgs): Promise<Core_store | null>;
+    updateCore_store(ctx: any, info: GraphQLResolveInfo, args: UpdateCore_storeArgs): Promise<Core_store | null>;
+    deleteManyCore_store(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCore_storeArgs): Promise<AffectedRowsOutput>;
+    updateManyCore_store(ctx: any, info: GraphQLResolveInfo, args: UpdateManyCore_storeArgs): Promise<AffectedRowsOutput>;
+    upsertCore_store(ctx: any, info: GraphQLResolveInfo, args: UpsertCore_storeArgs): Promise<Core_store>;
+    aggregateCore_store(ctx: any, info: GraphQLResolveInfo, args: AggregateCore_storeArgs): Promise<AggregateCore_store>;
+    groupByCore_store(ctx: any, info: GraphQLResolveInfo, args: GroupByCore_storeArgs): Promise<Core_storeGroupBy[]>;
+}

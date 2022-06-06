@@ -1,0 +1,10 @@
+query MyQuery {
+  reviews {
+    id
+    first_name
+    last_name
+    content
+    websites
+    created_at
+  }
+}

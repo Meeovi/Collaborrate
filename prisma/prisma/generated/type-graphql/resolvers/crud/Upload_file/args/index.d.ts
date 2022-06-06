@@ -1,0 +1,12 @@
+export { AggregateUpload_fileArgs } from "./AggregateUpload_fileArgs";
+export { CreateManyUpload_fileArgs } from "./CreateManyUpload_fileArgs";
+export { CreateUpload_fileArgs } from "./CreateUpload_fileArgs";
+export { DeleteManyUpload_fileArgs } from "./DeleteManyUpload_fileArgs";
+export { DeleteUpload_fileArgs } from "./DeleteUpload_fileArgs";
+export { FindFirstUpload_fileArgs } from "./FindFirstUpload_fileArgs";
+export { FindManyUpload_fileArgs } from "./FindManyUpload_fileArgs";
+export { FindUniqueUpload_fileArgs } from "./FindUniqueUpload_fileArgs";
+export { GroupByUpload_fileArgs } from "./GroupByUpload_fileArgs";
+export { UpdateManyUpload_fileArgs } from "./UpdateManyUpload_fileArgs";
+export { UpdateUpload_fileArgs } from "./UpdateUpload_fileArgs";
+export { UpsertUpload_fileArgs } from "./UpsertUpload_fileArgs";

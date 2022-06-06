@@ -1,0 +1,12 @@
+query MyQuery {
+  tags {
+    id
+    name
+    excerpt
+    categories
+    articles
+    customers
+    products
+    users
+  }
+}

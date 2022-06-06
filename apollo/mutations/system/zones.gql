@@ -1,0 +1,12 @@
+query zones ($id: Int) {
+  zones (where: {id: {_eq: $id}}) {
+    id
+    created_at
+    name
+    updated_at
+    type
+    scope
+    country
+    code
+  }
+}

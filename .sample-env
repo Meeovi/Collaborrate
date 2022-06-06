@@ -1,0 +1,82 @@
+# These credentials will appear across AlternateCMS
+
+# ReCaptcha Credentials
+
+RECAPTCHA_SITE_KEY=
+
+# Supbase.io Database Information
+
+YOUR_SUPABASE_KEY=
+YOUR_SUPABASE_URL=
+
+# Postgres Database Credentials
+
+POSTGRES_NAME=
+POSTGRES_HOST=
+POSTGRES_USER=
+POSTGRES_PASS=
+POSTGRES_PORT=
+
+# Oracle SQL Server
+
+ORACLE_DB_TYPE=oracle
+ORACLE_DB_HOST=my.oracle.host
+ORACLE_DB_NAME=my_oracle_database
+ORACLE_DB_USER=oracle_user
+ORACLE_DB_PASS=**********
+ORACLE_DB_PORT=
+
+# Mysql Database Credentials
+
+env.MYSQL_HOST = 
+env.MYSQL_PORT = 3306
+env.MYSQL_USER = 
+env.MYSQL_PASSWORD = 
+env.MYSQL_DATABASE =
+
+# OData / Microsoft Graph Credentials
+
+ODATA_URL = 
+
+# Apache Thrift Credentials
+
+APACHE_IDL = 
+APACHE_HOSTNAME = 
+APACHE_PORT = 8080
+APACHE_PATH =
+APACHE_SERVICENAME = 
+
+# SQLITE Credentials
+
+# Example: path/to/database.sqlite
+
+SQLITE = 
+
+# Soap Graphql Credentials
+
+# Example: #http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL
+
+WSDL_URL = 
+
+# GRPC Credentials
+
+# Example: endpoint: localhost:50051 protoFilePath: grpc/proto/Example.proto
+# https://www.graphql-mesh.com/docs/handlers/grpc
+
+GRPC_ENDPOINT = 
+GRPC_PROTO_FILE_PATH = 
+
+# Graphql Credentials
+
+GRAPHQL_ENDPOINT = 
+
+# Mongoose Credentials
+
+# Example: mongodb://localhost:27017/test
+
+# Example: MODELS_NAME = User
+# Example: MODELS_PATH = ./src/models#User
+
+MONGODB_URL = 
+MODELS_NAME = 
+MODELS_PATH = 

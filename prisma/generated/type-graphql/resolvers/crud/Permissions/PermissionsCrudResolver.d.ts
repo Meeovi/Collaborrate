@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregatePermissionsArgs } from "./args/AggregatePermissionsArgs";
+import { CreateManyPermissionsArgs } from "./args/CreateManyPermissionsArgs";
+import { CreatePermissionsArgs } from "./args/CreatePermissionsArgs";
+import { DeleteManyPermissionsArgs } from "./args/DeleteManyPermissionsArgs";
+import { DeletePermissionsArgs } from "./args/DeletePermissionsArgs";
+import { FindFirstPermissionsArgs } from "./args/FindFirstPermissionsArgs";
+import { FindManyPermissionsArgs } from "./args/FindManyPermissionsArgs";
+import { FindUniquePermissionsArgs } from "./args/FindUniquePermissionsArgs";
+import { GroupByPermissionsArgs } from "./args/GroupByPermissionsArgs";
+import { UpdateManyPermissionsArgs } from "./args/UpdateManyPermissionsArgs";
+import { UpdatePermissionsArgs } from "./args/UpdatePermissionsArgs";
+import { UpsertPermissionsArgs } from "./args/UpsertPermissionsArgs";
+import { Permissions } from "../../../models/Permissions";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregatePermissions } from "../../outputs/AggregatePermissions";
+import { PermissionsGroupBy } from "../../outputs/PermissionsGroupBy";
+export declare class PermissionsCrudResolver {
+    findUniquePermissions(ctx: any, info: GraphQLResolveInfo, args: FindUniquePermissionsArgs): Promise<Permissions | null>;
+    findFirstPermissions(ctx: any, info: GraphQLResolveInfo, args: FindFirstPermissionsArgs): Promise<Permissions | null>;
+    findManyPermissions(ctx: any, info: GraphQLResolveInfo, args: FindManyPermissionsArgs): Promise<Permissions[]>;
+    createPermissions(ctx: any, info: GraphQLResolveInfo, args: CreatePermissionsArgs): Promise<Permissions>;
+    createManyPermissions(ctx: any, info: GraphQLResolveInfo, args: CreateManyPermissionsArgs): Promise<AffectedRowsOutput>;
+    deletePermissions(ctx: any, info: GraphQLResolveInfo, args: DeletePermissionsArgs): Promise<Permissions | null>;
+    updatePermissions(ctx: any, info: GraphQLResolveInfo, args: UpdatePermissionsArgs): Promise<Permissions | null>;
+    deleteManyPermissions(ctx: any, info: GraphQLResolveInfo, args: DeleteManyPermissionsArgs): Promise<AffectedRowsOutput>;
+    updateManyPermissions(ctx: any, info: GraphQLResolveInfo, args: UpdateManyPermissionsArgs): Promise<AffectedRowsOutput>;
+    upsertPermissions(ctx: any, info: GraphQLResolveInfo, args: UpsertPermissionsArgs): Promise<Permissions>;
+    aggregatePermissions(ctx: any, info: GraphQLResolveInfo, args: AggregatePermissionsArgs): Promise<AggregatePermissions>;
+    groupByPermissions(ctx: any, info: GraphQLResolveInfo, args: GroupByPermissionsArgs): Promise<PermissionsGroupBy[]>;
+}

@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateThemesArgs } from "./args/AggregateThemesArgs";
+import { CreateManyThemesArgs } from "./args/CreateManyThemesArgs";
+import { CreateThemesArgs } from "./args/CreateThemesArgs";
+import { DeleteManyThemesArgs } from "./args/DeleteManyThemesArgs";
+import { DeleteThemesArgs } from "./args/DeleteThemesArgs";
+import { FindFirstThemesArgs } from "./args/FindFirstThemesArgs";
+import { FindManyThemesArgs } from "./args/FindManyThemesArgs";
+import { FindUniqueThemesArgs } from "./args/FindUniqueThemesArgs";
+import { GroupByThemesArgs } from "./args/GroupByThemesArgs";
+import { UpdateManyThemesArgs } from "./args/UpdateManyThemesArgs";
+import { UpdateThemesArgs } from "./args/UpdateThemesArgs";
+import { UpsertThemesArgs } from "./args/UpsertThemesArgs";
+import { Themes } from "../../../models/Themes";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateThemes } from "../../outputs/AggregateThemes";
+import { ThemesGroupBy } from "../../outputs/ThemesGroupBy";
+export declare class ThemesCrudResolver {
+    findUniqueThemes(ctx: any, info: GraphQLResolveInfo, args: FindUniqueThemesArgs): Promise<Themes | null>;
+    findFirstThemes(ctx: any, info: GraphQLResolveInfo, args: FindFirstThemesArgs): Promise<Themes | null>;
+    findManyThemes(ctx: any, info: GraphQLResolveInfo, args: FindManyThemesArgs): Promise<Themes[]>;
+    createThemes(ctx: any, info: GraphQLResolveInfo, args: CreateThemesArgs): Promise<Themes>;
+    createManyThemes(ctx: any, info: GraphQLResolveInfo, args: CreateManyThemesArgs): Promise<AffectedRowsOutput>;
+    deleteThemes(ctx: any, info: GraphQLResolveInfo, args: DeleteThemesArgs): Promise<Themes | null>;
+    updateThemes(ctx: any, info: GraphQLResolveInfo, args: UpdateThemesArgs): Promise<Themes | null>;
+    deleteManyThemes(ctx: any, info: GraphQLResolveInfo, args: DeleteManyThemesArgs): Promise<AffectedRowsOutput>;
+    updateManyThemes(ctx: any, info: GraphQLResolveInfo, args: UpdateManyThemesArgs): Promise<AffectedRowsOutput>;
+    upsertThemes(ctx: any, info: GraphQLResolveInfo, args: UpsertThemesArgs): Promise<Themes>;
+    aggregateThemes(ctx: any, info: GraphQLResolveInfo, args: AggregateThemesArgs): Promise<AggregateThemes>;
+    groupByThemes(ctx: any, info: GraphQLResolveInfo, args: GroupByThemesArgs): Promise<ThemesGroupBy[]>;
+}

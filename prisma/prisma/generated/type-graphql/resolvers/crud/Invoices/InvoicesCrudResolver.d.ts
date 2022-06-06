@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateInvoicesArgs } from "./args/AggregateInvoicesArgs";
+import { CreateInvoicesArgs } from "./args/CreateInvoicesArgs";
+import { CreateManyInvoicesArgs } from "./args/CreateManyInvoicesArgs";
+import { DeleteInvoicesArgs } from "./args/DeleteInvoicesArgs";
+import { DeleteManyInvoicesArgs } from "./args/DeleteManyInvoicesArgs";
+import { FindFirstInvoicesArgs } from "./args/FindFirstInvoicesArgs";
+import { FindManyInvoicesArgs } from "./args/FindManyInvoicesArgs";
+import { FindUniqueInvoicesArgs } from "./args/FindUniqueInvoicesArgs";
+import { GroupByInvoicesArgs } from "./args/GroupByInvoicesArgs";
+import { UpdateInvoicesArgs } from "./args/UpdateInvoicesArgs";
+import { UpdateManyInvoicesArgs } from "./args/UpdateManyInvoicesArgs";
+import { UpsertInvoicesArgs } from "./args/UpsertInvoicesArgs";
+import { Invoices } from "../../../models/Invoices";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateInvoices } from "../../outputs/AggregateInvoices";
+import { InvoicesGroupBy } from "../../outputs/InvoicesGroupBy";
+export declare class InvoicesCrudResolver {
+    findUniqueInvoices(ctx: any, info: GraphQLResolveInfo, args: FindUniqueInvoicesArgs): Promise<Invoices | null>;
+    findFirstInvoices(ctx: any, info: GraphQLResolveInfo, args: FindFirstInvoicesArgs): Promise<Invoices | null>;
+    findManyInvoices(ctx: any, info: GraphQLResolveInfo, args: FindManyInvoicesArgs): Promise<Invoices[]>;
+    createInvoices(ctx: any, info: GraphQLResolveInfo, args: CreateInvoicesArgs): Promise<Invoices>;
+    createManyInvoices(ctx: any, info: GraphQLResolveInfo, args: CreateManyInvoicesArgs): Promise<AffectedRowsOutput>;
+    deleteInvoices(ctx: any, info: GraphQLResolveInfo, args: DeleteInvoicesArgs): Promise<Invoices | null>;
+    updateInvoices(ctx: any, info: GraphQLResolveInfo, args: UpdateInvoicesArgs): Promise<Invoices | null>;
+    deleteManyInvoices(ctx: any, info: GraphQLResolveInfo, args: DeleteManyInvoicesArgs): Promise<AffectedRowsOutput>;
+    updateManyInvoices(ctx: any, info: GraphQLResolveInfo, args: UpdateManyInvoicesArgs): Promise<AffectedRowsOutput>;
+    upsertInvoices(ctx: any, info: GraphQLResolveInfo, args: UpsertInvoicesArgs): Promise<Invoices>;
+    aggregateInvoices(ctx: any, info: GraphQLResolveInfo, args: AggregateInvoicesArgs): Promise<AggregateInvoices>;
+    groupByInvoices(ctx: any, info: GraphQLResolveInfo, args: GroupByInvoicesArgs): Promise<InvoicesGroupBy[]>;
+}

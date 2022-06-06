@@ -1,0 +1,14 @@
+query settingshop ($id: Int) {
+  settingshop (where: {id: {_eq: $id}}) {
+    vendor_transaction_id
+    seller_payouts
+    product_videos
+    id
+    multishipping
+    enable_review_system
+    enable_vendor_product_attribute
+    enable_product_assignment
+    customer_rate_vendor
+    admin_approval
+  }
+}

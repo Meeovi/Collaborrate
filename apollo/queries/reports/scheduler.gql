@@ -1,0 +1,12 @@
+query MyQuery {
+  scheduler {
+    id
+    end_date
+    created_at
+    level
+    login
+    notes
+    start_date
+    whid
+  }
+}

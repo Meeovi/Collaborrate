@@ -1,0 +1,13 @@
+query MyQuery {
+  partners {
+    id
+    created_at
+    country
+    city
+    business_type
+    address
+    isPublic
+    name
+    state
+  }
+}

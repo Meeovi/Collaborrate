@@ -1,0 +1,9 @@
+query MyQuery {
+  glossary {
+    id
+    name
+    image
+    content
+    published
+  }
+}

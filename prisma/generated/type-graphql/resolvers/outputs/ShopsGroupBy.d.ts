@@ -1,0 +1,36 @@
+import { ShopsAvgAggregate } from "../outputs/ShopsAvgAggregate";
+import { ShopsCountAggregate } from "../outputs/ShopsCountAggregate";
+import { ShopsMaxAggregate } from "../outputs/ShopsMaxAggregate";
+import { ShopsMinAggregate } from "../outputs/ShopsMinAggregate";
+import { ShopsSumAggregate } from "../outputs/ShopsSumAggregate";
+export declare class ShopsGroupBy {
+    id: number;
+    name: string;
+    description: string | null;
+    image: string | null;
+    website: string | null;
+    products: string | null;
+    articles: string | null;
+    customers: string | null;
+    comments: string | null;
+    coupons: string | null;
+    categories: string | null;
+    polls: string | null;
+    quotes: string | null;
+    reviews: string | null;
+    gift_certificates: string | null;
+    rating: string | null;
+    tags: string | null;
+    users: string | null;
+    invoices: string | null;
+    reports: string | null;
+    reward_points: string | null;
+    special_discounts: string | null;
+    statistics: string | null;
+    stocks: string | null;
+    _count: ShopsCountAggregate | null;
+    _avg: ShopsAvgAggregate | null;
+    _sum: ShopsSumAggregate | null;
+    _min: ShopsMinAggregate | null;
+    _max: ShopsMaxAggregate | null;
+}

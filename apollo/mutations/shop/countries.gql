@@ -1,0 +1,9 @@
+query MyQuery ($id: Int){
+  countries (where: {id: {_eq: $id}}){
+    id
+    name
+    description
+    image
+    region
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "description": "Check payment",
+    "loginId": "loginId",
+    "transactionKey": "transactionKey",
+    "clientKey": "clientKey",
+    "mode": "test"
+}

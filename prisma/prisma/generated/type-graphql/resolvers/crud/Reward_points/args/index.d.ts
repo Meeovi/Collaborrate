@@ -1,0 +1,12 @@
+export { AggregateReward_pointsArgs } from "./AggregateReward_pointsArgs";
+export { CreateManyReward_pointsArgs } from "./CreateManyReward_pointsArgs";
+export { CreateReward_pointsArgs } from "./CreateReward_pointsArgs";
+export { DeleteManyReward_pointsArgs } from "./DeleteManyReward_pointsArgs";
+export { DeleteReward_pointsArgs } from "./DeleteReward_pointsArgs";
+export { FindFirstReward_pointsArgs } from "./FindFirstReward_pointsArgs";
+export { FindManyReward_pointsArgs } from "./FindManyReward_pointsArgs";
+export { FindUniqueReward_pointsArgs } from "./FindUniqueReward_pointsArgs";
+export { GroupByReward_pointsArgs } from "./GroupByReward_pointsArgs";
+export { UpdateManyReward_pointsArgs } from "./UpdateManyReward_pointsArgs";
+export { UpdateReward_pointsArgs } from "./UpdateReward_pointsArgs";
+export { UpsertReward_pointsArgs } from "./UpsertReward_pointsArgs";

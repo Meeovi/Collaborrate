@@ -1,0 +1,12 @@
+export { AggregateSegmentsArgs } from "./AggregateSegmentsArgs";
+export { CreateManySegmentsArgs } from "./CreateManySegmentsArgs";
+export { CreateSegmentsArgs } from "./CreateSegmentsArgs";
+export { DeleteManySegmentsArgs } from "./DeleteManySegmentsArgs";
+export { DeleteSegmentsArgs } from "./DeleteSegmentsArgs";
+export { FindFirstSegmentsArgs } from "./FindFirstSegmentsArgs";
+export { FindManySegmentsArgs } from "./FindManySegmentsArgs";
+export { FindUniqueSegmentsArgs } from "./FindUniqueSegmentsArgs";
+export { GroupBySegmentsArgs } from "./GroupBySegmentsArgs";
+export { UpdateManySegmentsArgs } from "./UpdateManySegmentsArgs";
+export { UpdateSegmentsArgs } from "./UpdateSegmentsArgs";
+export { UpsertSegmentsArgs } from "./UpsertSegmentsArgs";

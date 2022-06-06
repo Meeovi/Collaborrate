@@ -1,0 +1,8 @@
+query MyQuery {
+  permissions {
+    id
+    name
+    created_at
+    content
+  }
+}

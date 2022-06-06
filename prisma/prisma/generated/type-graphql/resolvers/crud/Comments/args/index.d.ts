@@ -1,0 +1,12 @@
+export { AggregateCommentsArgs } from "./AggregateCommentsArgs";
+export { CreateCommentsArgs } from "./CreateCommentsArgs";
+export { CreateManyCommentsArgs } from "./CreateManyCommentsArgs";
+export { DeleteCommentsArgs } from "./DeleteCommentsArgs";
+export { DeleteManyCommentsArgs } from "./DeleteManyCommentsArgs";
+export { FindFirstCommentsArgs } from "./FindFirstCommentsArgs";
+export { FindManyCommentsArgs } from "./FindManyCommentsArgs";
+export { FindUniqueCommentsArgs } from "./FindUniqueCommentsArgs";
+export { GroupByCommentsArgs } from "./GroupByCommentsArgs";
+export { UpdateCommentsArgs } from "./UpdateCommentsArgs";
+export { UpdateManyCommentsArgs } from "./UpdateManyCommentsArgs";
+export { UpsertCommentsArgs } from "./UpsertCommentsArgs";

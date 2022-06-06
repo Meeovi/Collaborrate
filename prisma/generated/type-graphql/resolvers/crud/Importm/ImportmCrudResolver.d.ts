@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateImportmArgs } from "./args/AggregateImportmArgs";
+import { CreateImportmArgs } from "./args/CreateImportmArgs";
+import { CreateManyImportmArgs } from "./args/CreateManyImportmArgs";
+import { DeleteImportmArgs } from "./args/DeleteImportmArgs";
+import { DeleteManyImportmArgs } from "./args/DeleteManyImportmArgs";
+import { FindFirstImportmArgs } from "./args/FindFirstImportmArgs";
+import { FindManyImportmArgs } from "./args/FindManyImportmArgs";
+import { FindUniqueImportmArgs } from "./args/FindUniqueImportmArgs";
+import { GroupByImportmArgs } from "./args/GroupByImportmArgs";
+import { UpdateImportmArgs } from "./args/UpdateImportmArgs";
+import { UpdateManyImportmArgs } from "./args/UpdateManyImportmArgs";
+import { UpsertImportmArgs } from "./args/UpsertImportmArgs";
+import { Importm } from "../../../models/Importm";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateImportm } from "../../outputs/AggregateImportm";
+import { ImportmGroupBy } from "../../outputs/ImportmGroupBy";
+export declare class ImportmCrudResolver {
+    importm(ctx: any, info: GraphQLResolveInfo, args: FindUniqueImportmArgs): Promise<Importm | null>;
+    findFirstImportm(ctx: any, info: GraphQLResolveInfo, args: FindFirstImportmArgs): Promise<Importm | null>;
+    importms(ctx: any, info: GraphQLResolveInfo, args: FindManyImportmArgs): Promise<Importm[]>;
+    createImportm(ctx: any, info: GraphQLResolveInfo, args: CreateImportmArgs): Promise<Importm>;
+    createManyImportm(ctx: any, info: GraphQLResolveInfo, args: CreateManyImportmArgs): Promise<AffectedRowsOutput>;
+    deleteImportm(ctx: any, info: GraphQLResolveInfo, args: DeleteImportmArgs): Promise<Importm | null>;
+    updateImportm(ctx: any, info: GraphQLResolveInfo, args: UpdateImportmArgs): Promise<Importm | null>;
+    deleteManyImportm(ctx: any, info: GraphQLResolveInfo, args: DeleteManyImportmArgs): Promise<AffectedRowsOutput>;
+    updateManyImportm(ctx: any, info: GraphQLResolveInfo, args: UpdateManyImportmArgs): Promise<AffectedRowsOutput>;
+    upsertImportm(ctx: any, info: GraphQLResolveInfo, args: UpsertImportmArgs): Promise<Importm>;
+    aggregateImportm(ctx: any, info: GraphQLResolveInfo, args: AggregateImportmArgs): Promise<AggregateImportm>;
+    groupByImportm(ctx: any, info: GraphQLResolveInfo, args: GroupByImportmArgs): Promise<ImportmGroupBy[]>;
+}

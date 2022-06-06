@@ -1,0 +1,12 @@
+export { AggregateProvidersArgs } from "./AggregateProvidersArgs";
+export { CreateManyProvidersArgs } from "./CreateManyProvidersArgs";
+export { CreateProvidersArgs } from "./CreateProvidersArgs";
+export { DeleteManyProvidersArgs } from "./DeleteManyProvidersArgs";
+export { DeleteProvidersArgs } from "./DeleteProvidersArgs";
+export { FindFirstProvidersArgs } from "./FindFirstProvidersArgs";
+export { FindManyProvidersArgs } from "./FindManyProvidersArgs";
+export { FindUniqueProvidersArgs } from "./FindUniqueProvidersArgs";
+export { GroupByProvidersArgs } from "./GroupByProvidersArgs";
+export { UpdateManyProvidersArgs } from "./UpdateManyProvidersArgs";
+export { UpdateProvidersArgs } from "./UpdateProvidersArgs";
+export { UpsertProvidersArgs } from "./UpsertProvidersArgs";

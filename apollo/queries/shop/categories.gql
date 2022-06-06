@@ -1,0 +1,12 @@
+query MyQuery {
+  categories {
+    id
+    name
+    content
+    image
+    meta_description
+    meta_keywords
+    meta_url
+    meta_title
+  }
+}

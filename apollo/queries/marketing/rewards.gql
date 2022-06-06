@@ -1,0 +1,16 @@
+query MyQuery {
+  rewards {
+    id
+    expiration
+    customers
+    created_at
+    coupons
+    categories
+    articles
+    level
+    name
+    slug
+    products
+    users
+  }
+}

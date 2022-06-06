@@ -1,0 +1,12 @@
+export { AggregateGlossaryArgs } from "./AggregateGlossaryArgs";
+export { CreateGlossaryArgs } from "./CreateGlossaryArgs";
+export { CreateManyGlossaryArgs } from "./CreateManyGlossaryArgs";
+export { DeleteGlossaryArgs } from "./DeleteGlossaryArgs";
+export { DeleteManyGlossaryArgs } from "./DeleteManyGlossaryArgs";
+export { FindFirstGlossaryArgs } from "./FindFirstGlossaryArgs";
+export { FindManyGlossaryArgs } from "./FindManyGlossaryArgs";
+export { FindUniqueGlossaryArgs } from "./FindUniqueGlossaryArgs";
+export { GroupByGlossaryArgs } from "./GroupByGlossaryArgs";
+export { UpdateGlossaryArgs } from "./UpdateGlossaryArgs";
+export { UpdateManyGlossaryArgs } from "./UpdateManyGlossaryArgs";
+export { UpsertGlossaryArgs } from "./UpsertGlossaryArgs";

@@ -1,0 +1,11 @@
+query MyQuery {
+  settingscustomers {
+    created_at
+    customer_data_lifetime
+    email_after_registration
+    id
+    login_as_customer
+    online_minutes_interval
+    share_customer_accounts
+  }
+}

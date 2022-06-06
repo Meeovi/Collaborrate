@@ -1,0 +1,12 @@
+export { AggregateCurrency_ratesArgs } from "./AggregateCurrency_ratesArgs";
+export { CreateCurrency_ratesArgs } from "./CreateCurrency_ratesArgs";
+export { CreateManyCurrency_ratesArgs } from "./CreateManyCurrency_ratesArgs";
+export { DeleteCurrency_ratesArgs } from "./DeleteCurrency_ratesArgs";
+export { DeleteManyCurrency_ratesArgs } from "./DeleteManyCurrency_ratesArgs";
+export { FindFirstCurrency_ratesArgs } from "./FindFirstCurrency_ratesArgs";
+export { FindManyCurrency_ratesArgs } from "./FindManyCurrency_ratesArgs";
+export { FindUniqueCurrency_ratesArgs } from "./FindUniqueCurrency_ratesArgs";
+export { GroupByCurrency_ratesArgs } from "./GroupByCurrency_ratesArgs";
+export { UpdateCurrency_ratesArgs } from "./UpdateCurrency_ratesArgs";
+export { UpdateManyCurrency_ratesArgs } from "./UpdateManyCurrency_ratesArgs";
+export { UpsertCurrency_ratesArgs } from "./UpsertCurrency_ratesArgs";

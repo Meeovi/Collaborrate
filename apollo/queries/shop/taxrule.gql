@@ -1,0 +1,7 @@
+query MyQuery {
+  tax_rule {
+    id
+    name
+    tax_rate
+  }
+}

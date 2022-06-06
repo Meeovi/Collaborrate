@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateOotoArgs } from "./args/AggregateOotoArgs";
+import { CreateManyOotoArgs } from "./args/CreateManyOotoArgs";
+import { CreateOotoArgs } from "./args/CreateOotoArgs";
+import { DeleteManyOotoArgs } from "./args/DeleteManyOotoArgs";
+import { DeleteOotoArgs } from "./args/DeleteOotoArgs";
+import { FindFirstOotoArgs } from "./args/FindFirstOotoArgs";
+import { FindManyOotoArgs } from "./args/FindManyOotoArgs";
+import { FindUniqueOotoArgs } from "./args/FindUniqueOotoArgs";
+import { GroupByOotoArgs } from "./args/GroupByOotoArgs";
+import { UpdateManyOotoArgs } from "./args/UpdateManyOotoArgs";
+import { UpdateOotoArgs } from "./args/UpdateOotoArgs";
+import { UpsertOotoArgs } from "./args/UpsertOotoArgs";
+import { Ooto } from "../../../models/Ooto";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateOoto } from "../../outputs/AggregateOoto";
+import { OotoGroupBy } from "../../outputs/OotoGroupBy";
+export declare class OotoCrudResolver {
+    ooto(ctx: any, info: GraphQLResolveInfo, args: FindUniqueOotoArgs): Promise<Ooto | null>;
+    findFirstOoto(ctx: any, info: GraphQLResolveInfo, args: FindFirstOotoArgs): Promise<Ooto | null>;
+    ootos(ctx: any, info: GraphQLResolveInfo, args: FindManyOotoArgs): Promise<Ooto[]>;
+    createOoto(ctx: any, info: GraphQLResolveInfo, args: CreateOotoArgs): Promise<Ooto>;
+    createManyOoto(ctx: any, info: GraphQLResolveInfo, args: CreateManyOotoArgs): Promise<AffectedRowsOutput>;
+    deleteOoto(ctx: any, info: GraphQLResolveInfo, args: DeleteOotoArgs): Promise<Ooto | null>;
+    updateOoto(ctx: any, info: GraphQLResolveInfo, args: UpdateOotoArgs): Promise<Ooto | null>;
+    deleteManyOoto(ctx: any, info: GraphQLResolveInfo, args: DeleteManyOotoArgs): Promise<AffectedRowsOutput>;
+    updateManyOoto(ctx: any, info: GraphQLResolveInfo, args: UpdateManyOotoArgs): Promise<AffectedRowsOutput>;
+    upsertOoto(ctx: any, info: GraphQLResolveInfo, args: UpsertOotoArgs): Promise<Ooto>;
+    aggregateOoto(ctx: any, info: GraphQLResolveInfo, args: AggregateOotoArgs): Promise<AggregateOoto>;
+    groupByOoto(ctx: any, info: GraphQLResolveInfo, args: GroupByOotoArgs): Promise<OotoGroupBy[]>;
+}

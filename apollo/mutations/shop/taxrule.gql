@@ -1,0 +1,7 @@
+query MyQuery ($id: Int){
+  tax_rule (where: {id: {_eq: $id}}){
+    id
+    name
+    tax_rate
+  }
+}

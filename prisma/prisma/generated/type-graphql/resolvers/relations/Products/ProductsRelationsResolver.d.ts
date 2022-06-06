@@ -1,0 +1,30 @@
+import { Coupons } from "../../../models/Coupons";
+import { Credit_memos } from "../../../models/Credit_memos";
+import { Orders } from "../../../models/Orders";
+import { Product_attribute } from "../../../models/Product_attribute";
+import { Products } from "../../../models/Products";
+import { Quotes } from "../../../models/Quotes";
+import { Rating } from "../../../models/Rating";
+import { Returns } from "../../../models/Returns";
+import { Tax_rate } from "../../../models/Tax_rate";
+import { Tax_rule } from "../../../models/Tax_rule";
+import { ProductsCouponsArgs } from "./args/ProductsCouponsArgs";
+import { ProductsCredit_memosArgs } from "./args/ProductsCredit_memosArgs";
+import { ProductsOrdersArgs } from "./args/ProductsOrdersArgs";
+import { ProductsProduct_attributeArgs } from "./args/ProductsProduct_attributeArgs";
+import { ProductsQuotesArgs } from "./args/ProductsQuotesArgs";
+import { ProductsRatingArgs } from "./args/ProductsRatingArgs";
+import { ProductsReturnsArgs } from "./args/ProductsReturnsArgs";
+import { ProductsTax_rateArgs } from "./args/ProductsTax_rateArgs";
+import { ProductsTax_ruleArgs } from "./args/ProductsTax_ruleArgs";
+export declare class ProductsRelationsResolver {
+    coupons(products: Products, ctx: any, args: ProductsCouponsArgs): Promise<Coupons[]>;
+    credit_memos(products: Products, ctx: any, args: ProductsCredit_memosArgs): Promise<Credit_memos[]>;
+    orders(products: Products, ctx: any, args: ProductsOrdersArgs): Promise<Orders[]>;
+    product_attribute(products: Products, ctx: any, args: ProductsProduct_attributeArgs): Promise<Product_attribute[]>;
+    quotes(products: Products, ctx: any, args: ProductsQuotesArgs): Promise<Quotes[]>;
+    rating(products: Products, ctx: any, args: ProductsRatingArgs): Promise<Rating[]>;
+    returns(products: Products, ctx: any, args: ProductsReturnsArgs): Promise<Returns[]>;
+    tax_rate(products: Products, ctx: any, args: ProductsTax_rateArgs): Promise<Tax_rate[]>;
+    tax_rule(products: Products, ctx: any, args: ProductsTax_ruleArgs): Promise<Tax_rule[]>;
+}

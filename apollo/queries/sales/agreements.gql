@@ -1,0 +1,13 @@
+query allAgreements {
+  agreements {
+    id
+    name
+    image
+    created
+    excerpt
+    content
+    reference_id
+    type
+    updated
+  }
+}

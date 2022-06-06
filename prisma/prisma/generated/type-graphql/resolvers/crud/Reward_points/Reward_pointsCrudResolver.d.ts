@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateReward_pointsArgs } from "./args/AggregateReward_pointsArgs";
+import { CreateManyReward_pointsArgs } from "./args/CreateManyReward_pointsArgs";
+import { CreateReward_pointsArgs } from "./args/CreateReward_pointsArgs";
+import { DeleteManyReward_pointsArgs } from "./args/DeleteManyReward_pointsArgs";
+import { DeleteReward_pointsArgs } from "./args/DeleteReward_pointsArgs";
+import { FindFirstReward_pointsArgs } from "./args/FindFirstReward_pointsArgs";
+import { FindManyReward_pointsArgs } from "./args/FindManyReward_pointsArgs";
+import { FindUniqueReward_pointsArgs } from "./args/FindUniqueReward_pointsArgs";
+import { GroupByReward_pointsArgs } from "./args/GroupByReward_pointsArgs";
+import { UpdateManyReward_pointsArgs } from "./args/UpdateManyReward_pointsArgs";
+import { UpdateReward_pointsArgs } from "./args/UpdateReward_pointsArgs";
+import { UpsertReward_pointsArgs } from "./args/UpsertReward_pointsArgs";
+import { Reward_points } from "../../../models/Reward_points";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateReward_points } from "../../outputs/AggregateReward_points";
+import { Reward_pointsGroupBy } from "../../outputs/Reward_pointsGroupBy";
+export declare class Reward_pointsCrudResolver {
+    findUniqueReward_points(ctx: any, info: GraphQLResolveInfo, args: FindUniqueReward_pointsArgs): Promise<Reward_points | null>;
+    findFirstReward_points(ctx: any, info: GraphQLResolveInfo, args: FindFirstReward_pointsArgs): Promise<Reward_points | null>;
+    findManyReward_points(ctx: any, info: GraphQLResolveInfo, args: FindManyReward_pointsArgs): Promise<Reward_points[]>;
+    createReward_points(ctx: any, info: GraphQLResolveInfo, args: CreateReward_pointsArgs): Promise<Reward_points>;
+    createManyReward_points(ctx: any, info: GraphQLResolveInfo, args: CreateManyReward_pointsArgs): Promise<AffectedRowsOutput>;
+    deleteReward_points(ctx: any, info: GraphQLResolveInfo, args: DeleteReward_pointsArgs): Promise<Reward_points | null>;
+    updateReward_points(ctx: any, info: GraphQLResolveInfo, args: UpdateReward_pointsArgs): Promise<Reward_points | null>;
+    deleteManyReward_points(ctx: any, info: GraphQLResolveInfo, args: DeleteManyReward_pointsArgs): Promise<AffectedRowsOutput>;
+    updateManyReward_points(ctx: any, info: GraphQLResolveInfo, args: UpdateManyReward_pointsArgs): Promise<AffectedRowsOutput>;
+    upsertReward_points(ctx: any, info: GraphQLResolveInfo, args: UpsertReward_pointsArgs): Promise<Reward_points>;
+    aggregateReward_points(ctx: any, info: GraphQLResolveInfo, args: AggregateReward_pointsArgs): Promise<AggregateReward_points>;
+    groupByReward_points(ctx: any, info: GraphQLResolveInfo, args: GroupByReward_pointsArgs): Promise<Reward_pointsGroupBy[]>;
+}

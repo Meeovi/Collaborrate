@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateSegmentsArgs } from "./args/AggregateSegmentsArgs";
+import { CreateManySegmentsArgs } from "./args/CreateManySegmentsArgs";
+import { CreateSegmentsArgs } from "./args/CreateSegmentsArgs";
+import { DeleteManySegmentsArgs } from "./args/DeleteManySegmentsArgs";
+import { DeleteSegmentsArgs } from "./args/DeleteSegmentsArgs";
+import { FindFirstSegmentsArgs } from "./args/FindFirstSegmentsArgs";
+import { FindManySegmentsArgs } from "./args/FindManySegmentsArgs";
+import { FindUniqueSegmentsArgs } from "./args/FindUniqueSegmentsArgs";
+import { GroupBySegmentsArgs } from "./args/GroupBySegmentsArgs";
+import { UpdateManySegmentsArgs } from "./args/UpdateManySegmentsArgs";
+import { UpdateSegmentsArgs } from "./args/UpdateSegmentsArgs";
+import { UpsertSegmentsArgs } from "./args/UpsertSegmentsArgs";
+import { Segments } from "../../../models/Segments";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateSegments } from "../../outputs/AggregateSegments";
+import { SegmentsGroupBy } from "../../outputs/SegmentsGroupBy";
+export declare class SegmentsCrudResolver {
+    findUniqueSegments(ctx: any, info: GraphQLResolveInfo, args: FindUniqueSegmentsArgs): Promise<Segments | null>;
+    findFirstSegments(ctx: any, info: GraphQLResolveInfo, args: FindFirstSegmentsArgs): Promise<Segments | null>;
+    findManySegments(ctx: any, info: GraphQLResolveInfo, args: FindManySegmentsArgs): Promise<Segments[]>;
+    createSegments(ctx: any, info: GraphQLResolveInfo, args: CreateSegmentsArgs): Promise<Segments>;
+    createManySegments(ctx: any, info: GraphQLResolveInfo, args: CreateManySegmentsArgs): Promise<AffectedRowsOutput>;
+    deleteSegments(ctx: any, info: GraphQLResolveInfo, args: DeleteSegmentsArgs): Promise<Segments | null>;
+    updateSegments(ctx: any, info: GraphQLResolveInfo, args: UpdateSegmentsArgs): Promise<Segments | null>;
+    deleteManySegments(ctx: any, info: GraphQLResolveInfo, args: DeleteManySegmentsArgs): Promise<AffectedRowsOutput>;
+    updateManySegments(ctx: any, info: GraphQLResolveInfo, args: UpdateManySegmentsArgs): Promise<AffectedRowsOutput>;
+    upsertSegments(ctx: any, info: GraphQLResolveInfo, args: UpsertSegmentsArgs): Promise<Segments>;
+    aggregateSegments(ctx: any, info: GraphQLResolveInfo, args: AggregateSegmentsArgs): Promise<AggregateSegments>;
+    groupBySegments(ctx: any, info: GraphQLResolveInfo, args: GroupBySegmentsArgs): Promise<SegmentsGroupBy[]>;
+}

@@ -1,0 +1,12 @@
+export { AggregateCredit_memosArgs } from "./AggregateCredit_memosArgs";
+export { CreateCredit_memosArgs } from "./CreateCredit_memosArgs";
+export { CreateManyCredit_memosArgs } from "./CreateManyCredit_memosArgs";
+export { DeleteCredit_memosArgs } from "./DeleteCredit_memosArgs";
+export { DeleteManyCredit_memosArgs } from "./DeleteManyCredit_memosArgs";
+export { FindFirstCredit_memosArgs } from "./FindFirstCredit_memosArgs";
+export { FindManyCredit_memosArgs } from "./FindManyCredit_memosArgs";
+export { FindUniqueCredit_memosArgs } from "./FindUniqueCredit_memosArgs";
+export { GroupByCredit_memosArgs } from "./GroupByCredit_memosArgs";
+export { UpdateCredit_memosArgs } from "./UpdateCredit_memosArgs";
+export { UpdateManyCredit_memosArgs } from "./UpdateManyCredit_memosArgs";
+export { UpsertCredit_memosArgs } from "./UpsertCredit_memosArgs";

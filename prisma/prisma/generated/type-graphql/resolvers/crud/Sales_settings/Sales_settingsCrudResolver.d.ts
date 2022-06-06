@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateSales_settingsArgs } from "./args/AggregateSales_settingsArgs";
+import { CreateManySales_settingsArgs } from "./args/CreateManySales_settingsArgs";
+import { CreateSales_settingsArgs } from "./args/CreateSales_settingsArgs";
+import { DeleteManySales_settingsArgs } from "./args/DeleteManySales_settingsArgs";
+import { DeleteSales_settingsArgs } from "./args/DeleteSales_settingsArgs";
+import { FindFirstSales_settingsArgs } from "./args/FindFirstSales_settingsArgs";
+import { FindManySales_settingsArgs } from "./args/FindManySales_settingsArgs";
+import { FindUniqueSales_settingsArgs } from "./args/FindUniqueSales_settingsArgs";
+import { GroupBySales_settingsArgs } from "./args/GroupBySales_settingsArgs";
+import { UpdateManySales_settingsArgs } from "./args/UpdateManySales_settingsArgs";
+import { UpdateSales_settingsArgs } from "./args/UpdateSales_settingsArgs";
+import { UpsertSales_settingsArgs } from "./args/UpsertSales_settingsArgs";
+import { Sales_settings } from "../../../models/Sales_settings";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateSales_settings } from "../../outputs/AggregateSales_settings";
+import { Sales_settingsGroupBy } from "../../outputs/Sales_settingsGroupBy";
+export declare class Sales_settingsCrudResolver {
+    findUniqueSales_settings(ctx: any, info: GraphQLResolveInfo, args: FindUniqueSales_settingsArgs): Promise<Sales_settings | null>;
+    findFirstSales_settings(ctx: any, info: GraphQLResolveInfo, args: FindFirstSales_settingsArgs): Promise<Sales_settings | null>;
+    findManySales_settings(ctx: any, info: GraphQLResolveInfo, args: FindManySales_settingsArgs): Promise<Sales_settings[]>;
+    createSales_settings(ctx: any, info: GraphQLResolveInfo, args: CreateSales_settingsArgs): Promise<Sales_settings>;
+    createManySales_settings(ctx: any, info: GraphQLResolveInfo, args: CreateManySales_settingsArgs): Promise<AffectedRowsOutput>;
+    deleteSales_settings(ctx: any, info: GraphQLResolveInfo, args: DeleteSales_settingsArgs): Promise<Sales_settings | null>;
+    updateSales_settings(ctx: any, info: GraphQLResolveInfo, args: UpdateSales_settingsArgs): Promise<Sales_settings | null>;
+    deleteManySales_settings(ctx: any, info: GraphQLResolveInfo, args: DeleteManySales_settingsArgs): Promise<AffectedRowsOutput>;
+    updateManySales_settings(ctx: any, info: GraphQLResolveInfo, args: UpdateManySales_settingsArgs): Promise<AffectedRowsOutput>;
+    upsertSales_settings(ctx: any, info: GraphQLResolveInfo, args: UpsertSales_settingsArgs): Promise<Sales_settings>;
+    aggregateSales_settings(ctx: any, info: GraphQLResolveInfo, args: AggregateSales_settingsArgs): Promise<AggregateSales_settings>;
+    groupBySales_settings(ctx: any, info: GraphQLResolveInfo, args: GroupBySales_settingsArgs): Promise<Sales_settingsGroupBy[]>;
+}

@@ -1,0 +1,16 @@
+query MyQuery {
+  coupons {
+    id
+    image
+    name
+    products
+    published
+    users
+    expiration
+    excerpt
+    discount
+    customers
+    categories
+    articles
+  }
+}

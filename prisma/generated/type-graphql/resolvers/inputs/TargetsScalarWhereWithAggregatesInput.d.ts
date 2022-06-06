@@ -1,0 +1,35 @@
+import { BigIntWithAggregatesFilter } from "../inputs/BigIntWithAggregatesFilter";
+import { DateTimeNullableWithAggregatesFilter } from "../inputs/DateTimeNullableWithAggregatesFilter";
+import { StringNullableWithAggregatesFilter } from "../inputs/StringNullableWithAggregatesFilter";
+export declare class TargetsScalarWhereWithAggregatesInput {
+    AND?: TargetsScalarWhereWithAggregatesInput[] | undefined;
+    OR?: TargetsScalarWhereWithAggregatesInput[] | undefined;
+    NOT?: TargetsScalarWhereWithAggregatesInput[] | undefined;
+    id?: BigIntWithAggregatesFilter | undefined;
+    created_at?: DateTimeNullableWithAggregatesFilter | undefined;
+    Prefix?: StringNullableWithAggregatesFilter | undefined;
+    first_name?: StringNullableWithAggregatesFilter | undefined;
+    last_name?: StringNullableWithAggregatesFilter | undefined;
+    department?: StringNullableWithAggregatesFilter | undefined;
+    account_name?: StringNullableWithAggregatesFilter | undefined;
+    address?: StringNullableWithAggregatesFilter | undefined;
+    postalcode?: StringNullableWithAggregatesFilter | undefined;
+    city?: StringNullableWithAggregatesFilter | undefined;
+    state?: StringNullableWithAggregatesFilter | undefined;
+    country?: StringNullableWithAggregatesFilter | undefined;
+    email?: StringNullableWithAggregatesFilter | undefined;
+    description?: StringNullableWithAggregatesFilter | undefined;
+    fax?: StringNullableWithAggregatesFilter | undefined;
+    website?: StringNullableWithAggregatesFilter | undefined;
+    mobile?: StringNullableWithAggregatesFilter | undefined;
+    job_title?: StringNullableWithAggregatesFilter | undefined;
+    alt_address?: StringNullableWithAggregatesFilter | undefined;
+    alt_postalcode?: StringNullableWithAggregatesFilter | undefined;
+    alt_city?: StringNullableWithAggregatesFilter | undefined;
+    alt_state?: StringNullableWithAggregatesFilter | undefined;
+    alt_country?: StringNullableWithAggregatesFilter | undefined;
+    office_phone?: StringNullableWithAggregatesFilter | undefined;
+    customer_name?: StringNullableWithAggregatesFilter | undefined;
+    email_opt_out?: StringNullableWithAggregatesFilter | undefined;
+    donotcall?: StringNullableWithAggregatesFilter | undefined;
+}

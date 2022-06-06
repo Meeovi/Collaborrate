@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateMeetingArgs } from "./args/AggregateMeetingArgs";
+import { CreateManyMeetingArgs } from "./args/CreateManyMeetingArgs";
+import { CreateMeetingArgs } from "./args/CreateMeetingArgs";
+import { DeleteManyMeetingArgs } from "./args/DeleteManyMeetingArgs";
+import { DeleteMeetingArgs } from "./args/DeleteMeetingArgs";
+import { FindFirstMeetingArgs } from "./args/FindFirstMeetingArgs";
+import { FindManyMeetingArgs } from "./args/FindManyMeetingArgs";
+import { FindUniqueMeetingArgs } from "./args/FindUniqueMeetingArgs";
+import { GroupByMeetingArgs } from "./args/GroupByMeetingArgs";
+import { UpdateManyMeetingArgs } from "./args/UpdateManyMeetingArgs";
+import { UpdateMeetingArgs } from "./args/UpdateMeetingArgs";
+import { UpsertMeetingArgs } from "./args/UpsertMeetingArgs";
+import { Meeting } from "../../../models/Meeting";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateMeeting } from "../../outputs/AggregateMeeting";
+import { MeetingGroupBy } from "../../outputs/MeetingGroupBy";
+export declare class MeetingCrudResolver {
+    meeting(ctx: any, info: GraphQLResolveInfo, args: FindUniqueMeetingArgs): Promise<Meeting | null>;
+    findFirstMeeting(ctx: any, info: GraphQLResolveInfo, args: FindFirstMeetingArgs): Promise<Meeting | null>;
+    meetings(ctx: any, info: GraphQLResolveInfo, args: FindManyMeetingArgs): Promise<Meeting[]>;
+    createMeeting(ctx: any, info: GraphQLResolveInfo, args: CreateMeetingArgs): Promise<Meeting>;
+    createManyMeeting(ctx: any, info: GraphQLResolveInfo, args: CreateManyMeetingArgs): Promise<AffectedRowsOutput>;
+    deleteMeeting(ctx: any, info: GraphQLResolveInfo, args: DeleteMeetingArgs): Promise<Meeting | null>;
+    updateMeeting(ctx: any, info: GraphQLResolveInfo, args: UpdateMeetingArgs): Promise<Meeting | null>;
+    deleteManyMeeting(ctx: any, info: GraphQLResolveInfo, args: DeleteManyMeetingArgs): Promise<AffectedRowsOutput>;
+    updateManyMeeting(ctx: any, info: GraphQLResolveInfo, args: UpdateManyMeetingArgs): Promise<AffectedRowsOutput>;
+    upsertMeeting(ctx: any, info: GraphQLResolveInfo, args: UpsertMeetingArgs): Promise<Meeting>;
+    aggregateMeeting(ctx: any, info: GraphQLResolveInfo, args: AggregateMeetingArgs): Promise<AggregateMeeting>;
+    groupByMeeting(ctx: any, info: GraphQLResolveInfo, args: GroupByMeetingArgs): Promise<MeetingGroupBy[]>;
+}

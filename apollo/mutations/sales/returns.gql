@@ -1,0 +1,9 @@
+query MyQuery ($id: Int){
+  returns (where: {id: {_eq: $id}}){
+    id
+    name
+    return_prefix
+    validity
+    created_at
+  }
+}

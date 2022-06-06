@@ -1,0 +1,19 @@
+query MyQuery {
+  opportunities {
+    id
+    expected_close_date
+    description
+    currency
+    created_at
+    campaign
+    assigned_to
+    amount
+    account_name
+    lead_source
+    name
+    next_step
+    probability
+    sales_stage
+    type
+  }
+}

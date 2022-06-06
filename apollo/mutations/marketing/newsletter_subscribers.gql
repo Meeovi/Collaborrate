@@ -1,0 +1,12 @@
+query MyQuery ($id: Int){
+  newsletter_subscribers (where: {id: {_eq: $id}}){
+    id
+    email
+    customer_last_name
+    customer_first_name
+    status
+    store
+    websites
+    created_at
+  }
+}

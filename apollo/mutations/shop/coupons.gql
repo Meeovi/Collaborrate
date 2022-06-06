@@ -1,0 +1,16 @@
+query MyQuery ($id: Int){
+  coupons (where: {id: {_eq: $id}}){
+    id
+    image
+    name
+    products
+    published
+    users
+    expiration
+    excerpt
+    discount
+    customers
+    categories
+    articles
+  }
+}

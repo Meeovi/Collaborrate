@@ -1,0 +1,9 @@
+query MyQuery {
+  states {
+    id
+    name
+    description
+    image
+    country
+  }
+}

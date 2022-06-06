@@ -1,0 +1,12 @@
+export { AggregateFullfillmentsArgs } from "./AggregateFullfillmentsArgs";
+export { CreateFullfillmentsArgs } from "./CreateFullfillmentsArgs";
+export { CreateManyFullfillmentsArgs } from "./CreateManyFullfillmentsArgs";
+export { DeleteFullfillmentsArgs } from "./DeleteFullfillmentsArgs";
+export { DeleteManyFullfillmentsArgs } from "./DeleteManyFullfillmentsArgs";
+export { FindFirstFullfillmentsArgs } from "./FindFirstFullfillmentsArgs";
+export { FindManyFullfillmentsArgs } from "./FindManyFullfillmentsArgs";
+export { FindUniqueFullfillmentsArgs } from "./FindUniqueFullfillmentsArgs";
+export { GroupByFullfillmentsArgs } from "./GroupByFullfillmentsArgs";
+export { UpdateFullfillmentsArgs } from "./UpdateFullfillmentsArgs";
+export { UpdateManyFullfillmentsArgs } from "./UpdateManyFullfillmentsArgs";
+export { UpsertFullfillmentsArgs } from "./UpsertFullfillmentsArgs";

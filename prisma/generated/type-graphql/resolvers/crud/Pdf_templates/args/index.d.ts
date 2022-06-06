@@ -1,0 +1,12 @@
+export { AggregatePdf_templatesArgs } from "./AggregatePdf_templatesArgs";
+export { CreateManyPdf_templatesArgs } from "./CreateManyPdf_templatesArgs";
+export { CreatePdf_templatesArgs } from "./CreatePdf_templatesArgs";
+export { DeleteManyPdf_templatesArgs } from "./DeleteManyPdf_templatesArgs";
+export { DeletePdf_templatesArgs } from "./DeletePdf_templatesArgs";
+export { FindFirstPdf_templatesArgs } from "./FindFirstPdf_templatesArgs";
+export { FindManyPdf_templatesArgs } from "./FindManyPdf_templatesArgs";
+export { FindUniquePdf_templatesArgs } from "./FindUniquePdf_templatesArgs";
+export { GroupByPdf_templatesArgs } from "./GroupByPdf_templatesArgs";
+export { UpdateManyPdf_templatesArgs } from "./UpdateManyPdf_templatesArgs";
+export { UpdatePdf_templatesArgs } from "./UpdatePdf_templatesArgs";
+export { UpsertPdf_templatesArgs } from "./UpsertPdf_templatesArgs";

@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateShop_settingsArgs } from "./args/AggregateShop_settingsArgs";
+import { CreateManyShop_settingsArgs } from "./args/CreateManyShop_settingsArgs";
+import { CreateShop_settingsArgs } from "./args/CreateShop_settingsArgs";
+import { DeleteManyShop_settingsArgs } from "./args/DeleteManyShop_settingsArgs";
+import { DeleteShop_settingsArgs } from "./args/DeleteShop_settingsArgs";
+import { FindFirstShop_settingsArgs } from "./args/FindFirstShop_settingsArgs";
+import { FindManyShop_settingsArgs } from "./args/FindManyShop_settingsArgs";
+import { FindUniqueShop_settingsArgs } from "./args/FindUniqueShop_settingsArgs";
+import { GroupByShop_settingsArgs } from "./args/GroupByShop_settingsArgs";
+import { UpdateManyShop_settingsArgs } from "./args/UpdateManyShop_settingsArgs";
+import { UpdateShop_settingsArgs } from "./args/UpdateShop_settingsArgs";
+import { UpsertShop_settingsArgs } from "./args/UpsertShop_settingsArgs";
+import { Shop_settings } from "../../../models/Shop_settings";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateShop_settings } from "../../outputs/AggregateShop_settings";
+import { Shop_settingsGroupBy } from "../../outputs/Shop_settingsGroupBy";
+export declare class Shop_settingsCrudResolver {
+    findUniqueShop_settings(ctx: any, info: GraphQLResolveInfo, args: FindUniqueShop_settingsArgs): Promise<Shop_settings | null>;
+    findFirstShop_settings(ctx: any, info: GraphQLResolveInfo, args: FindFirstShop_settingsArgs): Promise<Shop_settings | null>;
+    findManyShop_settings(ctx: any, info: GraphQLResolveInfo, args: FindManyShop_settingsArgs): Promise<Shop_settings[]>;
+    createShop_settings(ctx: any, info: GraphQLResolveInfo, args: CreateShop_settingsArgs): Promise<Shop_settings>;
+    createManyShop_settings(ctx: any, info: GraphQLResolveInfo, args: CreateManyShop_settingsArgs): Promise<AffectedRowsOutput>;
+    deleteShop_settings(ctx: any, info: GraphQLResolveInfo, args: DeleteShop_settingsArgs): Promise<Shop_settings | null>;
+    updateShop_settings(ctx: any, info: GraphQLResolveInfo, args: UpdateShop_settingsArgs): Promise<Shop_settings | null>;
+    deleteManyShop_settings(ctx: any, info: GraphQLResolveInfo, args: DeleteManyShop_settingsArgs): Promise<AffectedRowsOutput>;
+    updateManyShop_settings(ctx: any, info: GraphQLResolveInfo, args: UpdateManyShop_settingsArgs): Promise<AffectedRowsOutput>;
+    upsertShop_settings(ctx: any, info: GraphQLResolveInfo, args: UpsertShop_settingsArgs): Promise<Shop_settings>;
+    aggregateShop_settings(ctx: any, info: GraphQLResolveInfo, args: AggregateShop_settingsArgs): Promise<AggregateShop_settings>;
+    groupByShop_settings(ctx: any, info: GraphQLResolveInfo, args: GroupByShop_settingsArgs): Promise<Shop_settingsGroupBy[]>;
+}

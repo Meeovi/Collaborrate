@@ -1,0 +1,12 @@
+export { AggregateEmailsArgs } from "./AggregateEmailsArgs";
+export { CreateEmailsArgs } from "./CreateEmailsArgs";
+export { CreateManyEmailsArgs } from "./CreateManyEmailsArgs";
+export { DeleteEmailsArgs } from "./DeleteEmailsArgs";
+export { DeleteManyEmailsArgs } from "./DeleteManyEmailsArgs";
+export { FindFirstEmailsArgs } from "./FindFirstEmailsArgs";
+export { FindManyEmailsArgs } from "./FindManyEmailsArgs";
+export { FindUniqueEmailsArgs } from "./FindUniqueEmailsArgs";
+export { GroupByEmailsArgs } from "./GroupByEmailsArgs";
+export { UpdateEmailsArgs } from "./UpdateEmailsArgs";
+export { UpdateManyEmailsArgs } from "./UpdateManyEmailsArgs";
+export { UpsertEmailsArgs } from "./UpsertEmailsArgs";

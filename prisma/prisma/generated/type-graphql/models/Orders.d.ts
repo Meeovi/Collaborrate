@@ -1,0 +1,25 @@
+import { Customers } from "../models/Customers";
+import { Products } from "../models/Products";
+import { Quotes } from "../models/Quotes";
+import { Transactions } from "../models/Transactions";
+import { OrdersCount } from "../resolvers/outputs/OrdersCount";
+export declare class Orders {
+    id: number;
+    purchase_point?: number | null;
+    purchase_date?: Date | null;
+    bill_to_name: string;
+    ship_to_name?: string | null;
+    grand_total_base?: number | null;
+    grand_total_purchased?: number | null;
+    status?: boolean | null;
+    action?: boolean | null;
+    allocated_sources?: string | null;
+    braintree_transaction_source?: string | null;
+    cust_id: number;
+    prod_id: bigint;
+    customers?: Customers;
+    products?: Products;
+    quotes?: Quotes[];
+    transactions?: Transactions[];
+    _count?: OrdersCount | null;
+}

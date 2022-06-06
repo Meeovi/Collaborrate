@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateTax_ruleArgs } from "./args/AggregateTax_ruleArgs";
+import { CreateManyTax_ruleArgs } from "./args/CreateManyTax_ruleArgs";
+import { CreateTax_ruleArgs } from "./args/CreateTax_ruleArgs";
+import { DeleteManyTax_ruleArgs } from "./args/DeleteManyTax_ruleArgs";
+import { DeleteTax_ruleArgs } from "./args/DeleteTax_ruleArgs";
+import { FindFirstTax_ruleArgs } from "./args/FindFirstTax_ruleArgs";
+import { FindManyTax_ruleArgs } from "./args/FindManyTax_ruleArgs";
+import { FindUniqueTax_ruleArgs } from "./args/FindUniqueTax_ruleArgs";
+import { GroupByTax_ruleArgs } from "./args/GroupByTax_ruleArgs";
+import { UpdateManyTax_ruleArgs } from "./args/UpdateManyTax_ruleArgs";
+import { UpdateTax_ruleArgs } from "./args/UpdateTax_ruleArgs";
+import { UpsertTax_ruleArgs } from "./args/UpsertTax_ruleArgs";
+import { Tax_rule } from "../../../models/Tax_rule";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateTax_rule } from "../../outputs/AggregateTax_rule";
+import { Tax_ruleGroupBy } from "../../outputs/Tax_ruleGroupBy";
+export declare class Tax_ruleCrudResolver {
+    tax_rule(ctx: any, info: GraphQLResolveInfo, args: FindUniqueTax_ruleArgs): Promise<Tax_rule | null>;
+    findFirstTax_rule(ctx: any, info: GraphQLResolveInfo, args: FindFirstTax_ruleArgs): Promise<Tax_rule | null>;
+    tax_rules(ctx: any, info: GraphQLResolveInfo, args: FindManyTax_ruleArgs): Promise<Tax_rule[]>;
+    createTax_rule(ctx: any, info: GraphQLResolveInfo, args: CreateTax_ruleArgs): Promise<Tax_rule>;
+    createManyTax_rule(ctx: any, info: GraphQLResolveInfo, args: CreateManyTax_ruleArgs): Promise<AffectedRowsOutput>;
+    deleteTax_rule(ctx: any, info: GraphQLResolveInfo, args: DeleteTax_ruleArgs): Promise<Tax_rule | null>;
+    updateTax_rule(ctx: any, info: GraphQLResolveInfo, args: UpdateTax_ruleArgs): Promise<Tax_rule | null>;
+    deleteManyTax_rule(ctx: any, info: GraphQLResolveInfo, args: DeleteManyTax_ruleArgs): Promise<AffectedRowsOutput>;
+    updateManyTax_rule(ctx: any, info: GraphQLResolveInfo, args: UpdateManyTax_ruleArgs): Promise<AffectedRowsOutput>;
+    upsertTax_rule(ctx: any, info: GraphQLResolveInfo, args: UpsertTax_ruleArgs): Promise<Tax_rule>;
+    aggregateTax_rule(ctx: any, info: GraphQLResolveInfo, args: AggregateTax_ruleArgs): Promise<AggregateTax_rule>;
+    groupByTax_rule(ctx: any, info: GraphQLResolveInfo, args: GroupByTax_ruleArgs): Promise<Tax_ruleGroupBy[]>;
+}

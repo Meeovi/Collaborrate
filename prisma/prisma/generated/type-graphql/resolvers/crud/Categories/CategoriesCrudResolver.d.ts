@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateCategoriesArgs } from "./args/AggregateCategoriesArgs";
+import { CreateCategoriesArgs } from "./args/CreateCategoriesArgs";
+import { CreateManyCategoriesArgs } from "./args/CreateManyCategoriesArgs";
+import { DeleteCategoriesArgs } from "./args/DeleteCategoriesArgs";
+import { DeleteManyCategoriesArgs } from "./args/DeleteManyCategoriesArgs";
+import { FindFirstCategoriesArgs } from "./args/FindFirstCategoriesArgs";
+import { FindManyCategoriesArgs } from "./args/FindManyCategoriesArgs";
+import { FindUniqueCategoriesArgs } from "./args/FindUniqueCategoriesArgs";
+import { GroupByCategoriesArgs } from "./args/GroupByCategoriesArgs";
+import { UpdateCategoriesArgs } from "./args/UpdateCategoriesArgs";
+import { UpdateManyCategoriesArgs } from "./args/UpdateManyCategoriesArgs";
+import { UpsertCategoriesArgs } from "./args/UpsertCategoriesArgs";
+import { Categories } from "../../../models/Categories";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateCategories } from "../../outputs/AggregateCategories";
+import { CategoriesGroupBy } from "../../outputs/CategoriesGroupBy";
+export declare class CategoriesCrudResolver {
+    findUniqueCategories(ctx: any, info: GraphQLResolveInfo, args: FindUniqueCategoriesArgs): Promise<Categories | null>;
+    findFirstCategories(ctx: any, info: GraphQLResolveInfo, args: FindFirstCategoriesArgs): Promise<Categories | null>;
+    findManyCategories(ctx: any, info: GraphQLResolveInfo, args: FindManyCategoriesArgs): Promise<Categories[]>;
+    createCategories(ctx: any, info: GraphQLResolveInfo, args: CreateCategoriesArgs): Promise<Categories>;
+    createManyCategories(ctx: any, info: GraphQLResolveInfo, args: CreateManyCategoriesArgs): Promise<AffectedRowsOutput>;
+    deleteCategories(ctx: any, info: GraphQLResolveInfo, args: DeleteCategoriesArgs): Promise<Categories | null>;
+    updateCategories(ctx: any, info: GraphQLResolveInfo, args: UpdateCategoriesArgs): Promise<Categories | null>;
+    deleteManyCategories(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCategoriesArgs): Promise<AffectedRowsOutput>;
+    updateManyCategories(ctx: any, info: GraphQLResolveInfo, args: UpdateManyCategoriesArgs): Promise<AffectedRowsOutput>;
+    upsertCategories(ctx: any, info: GraphQLResolveInfo, args: UpsertCategoriesArgs): Promise<Categories>;
+    aggregateCategories(ctx: any, info: GraphQLResolveInfo, args: AggregateCategoriesArgs): Promise<AggregateCategories>;
+    groupByCategories(ctx: any, info: GraphQLResolveInfo, args: GroupByCategoriesArgs): Promise<CategoriesGroupBy[]>;
+}

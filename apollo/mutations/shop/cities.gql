@@ -1,0 +1,11 @@
+query MyQuery ($id: Int){
+  cities (where: {id: {_eq: $id}}){
+    id
+    name
+    state
+    description
+    country
+    postalCode
+    image
+  }
+}

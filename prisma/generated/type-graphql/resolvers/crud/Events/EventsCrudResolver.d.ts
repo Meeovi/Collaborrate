@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateEventsArgs } from "./args/AggregateEventsArgs";
+import { CreateEventsArgs } from "./args/CreateEventsArgs";
+import { CreateManyEventsArgs } from "./args/CreateManyEventsArgs";
+import { DeleteEventsArgs } from "./args/DeleteEventsArgs";
+import { DeleteManyEventsArgs } from "./args/DeleteManyEventsArgs";
+import { FindFirstEventsArgs } from "./args/FindFirstEventsArgs";
+import { FindManyEventsArgs } from "./args/FindManyEventsArgs";
+import { FindUniqueEventsArgs } from "./args/FindUniqueEventsArgs";
+import { GroupByEventsArgs } from "./args/GroupByEventsArgs";
+import { UpdateEventsArgs } from "./args/UpdateEventsArgs";
+import { UpdateManyEventsArgs } from "./args/UpdateManyEventsArgs";
+import { UpsertEventsArgs } from "./args/UpsertEventsArgs";
+import { Events } from "../../../models/Events";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateEvents } from "../../outputs/AggregateEvents";
+import { EventsGroupBy } from "../../outputs/EventsGroupBy";
+export declare class EventsCrudResolver {
+    findUniqueEvents(ctx: any, info: GraphQLResolveInfo, args: FindUniqueEventsArgs): Promise<Events | null>;
+    findFirstEvents(ctx: any, info: GraphQLResolveInfo, args: FindFirstEventsArgs): Promise<Events | null>;
+    findManyEvents(ctx: any, info: GraphQLResolveInfo, args: FindManyEventsArgs): Promise<Events[]>;
+    createEvents(ctx: any, info: GraphQLResolveInfo, args: CreateEventsArgs): Promise<Events>;
+    createManyEvents(ctx: any, info: GraphQLResolveInfo, args: CreateManyEventsArgs): Promise<AffectedRowsOutput>;
+    deleteEvents(ctx: any, info: GraphQLResolveInfo, args: DeleteEventsArgs): Promise<Events | null>;
+    updateEvents(ctx: any, info: GraphQLResolveInfo, args: UpdateEventsArgs): Promise<Events | null>;
+    deleteManyEvents(ctx: any, info: GraphQLResolveInfo, args: DeleteManyEventsArgs): Promise<AffectedRowsOutput>;
+    updateManyEvents(ctx: any, info: GraphQLResolveInfo, args: UpdateManyEventsArgs): Promise<AffectedRowsOutput>;
+    upsertEvents(ctx: any, info: GraphQLResolveInfo, args: UpsertEventsArgs): Promise<Events>;
+    aggregateEvents(ctx: any, info: GraphQLResolveInfo, args: AggregateEventsArgs): Promise<AggregateEvents>;
+    groupByEvents(ctx: any, info: GraphQLResolveInfo, args: GroupByEventsArgs): Promise<EventsGroupBy[]>;
+}

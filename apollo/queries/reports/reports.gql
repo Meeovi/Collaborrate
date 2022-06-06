@@ -1,0 +1,14 @@
+query MyQuery {
+  reports {
+    id
+    ip_address
+    products
+    quantity
+    subtotal
+    updated
+    email
+    customer
+    created
+    applied_coupon
+  }
+}

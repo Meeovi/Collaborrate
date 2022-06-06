@@ -1,0 +1,9 @@
+query MyQuery ($id: Int){
+  glossaries (where: {id: {_eq: $id}}){
+    id
+    name
+    image
+    content
+    published
+  }
+}

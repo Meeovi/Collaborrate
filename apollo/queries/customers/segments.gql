@@ -1,0 +1,12 @@
+query MyQuery {
+  segments {
+    id
+    name
+    status
+    website
+    customers
+    description
+    created_at
+    apply_to
+  }
+}

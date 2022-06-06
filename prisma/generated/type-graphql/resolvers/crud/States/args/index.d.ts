@@ -1,0 +1,12 @@
+export { AggregateStatesArgs } from "./AggregateStatesArgs";
+export { CreateManyStatesArgs } from "./CreateManyStatesArgs";
+export { CreateStatesArgs } from "./CreateStatesArgs";
+export { DeleteManyStatesArgs } from "./DeleteManyStatesArgs";
+export { DeleteStatesArgs } from "./DeleteStatesArgs";
+export { FindFirstStatesArgs } from "./FindFirstStatesArgs";
+export { FindManyStatesArgs } from "./FindManyStatesArgs";
+export { FindUniqueStatesArgs } from "./FindUniqueStatesArgs";
+export { GroupByStatesArgs } from "./GroupByStatesArgs";
+export { UpdateManyStatesArgs } from "./UpdateManyStatesArgs";
+export { UpdateStatesArgs } from "./UpdateStatesArgs";
+export { UpsertStatesArgs } from "./UpsertStatesArgs";

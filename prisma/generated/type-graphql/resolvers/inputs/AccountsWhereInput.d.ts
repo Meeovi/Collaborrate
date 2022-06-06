@@ -1,0 +1,32 @@
+import { BigIntFilter } from "../inputs/BigIntFilter";
+import { DateTimeNullableFilter } from "../inputs/DateTimeNullableFilter";
+import { StringNullableFilter } from "../inputs/StringNullableFilter";
+export declare class AccountsWhereInput {
+    AND?: AccountsWhereInput[] | undefined;
+    OR?: AccountsWhereInput[] | undefined;
+    NOT?: AccountsWhereInput[] | undefined;
+    id?: BigIntFilter | undefined;
+    created_at?: DateTimeNullableFilter | undefined;
+    name?: StringNullableFilter | undefined;
+    website?: StringNullableFilter | undefined;
+    office_phone?: StringNullableFilter | undefined;
+    fax?: StringNullableFilter | undefined;
+    email?: StringNullableFilter | undefined;
+    address?: StringNullableFilter | undefined;
+    postalcode?: StringNullableFilter | undefined;
+    city?: StringNullableFilter | undefined;
+    state?: StringNullableFilter | undefined;
+    country?: StringNullableFilter | undefined;
+    assigned_to?: StringNullableFilter | undefined;
+    alt_address?: StringNullableFilter | undefined;
+    alt_postalcode?: StringNullableFilter | undefined;
+    alt_city?: StringNullableFilter | undefined;
+    alt_state?: StringNullableFilter | undefined;
+    alt_country?: StringNullableFilter | undefined;
+    type?: StringNullableFilter | undefined;
+    industry?: StringNullableFilter | undefined;
+    employees?: StringNullableFilter | undefined;
+    annual_revenue?: StringNullableFilter | undefined;
+    member_of?: StringNullableFilter | undefined;
+    campaign?: StringNullableFilter | undefined;
+}

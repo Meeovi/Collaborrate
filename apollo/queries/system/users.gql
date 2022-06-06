@@ -1,0 +1,14 @@
+query MyQuery {
+  users {
+    id
+    first_name
+    email
+    created_at
+    last_name
+    interface_locale
+    password
+    permissions
+    username
+    value
+  }
+}

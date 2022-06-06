@@ -1,0 +1,37 @@
+import { ContractsAvgAggregate } from "../outputs/ContractsAvgAggregate";
+import { ContractsCountAggregate } from "../outputs/ContractsCountAggregate";
+import { ContractsMaxAggregate } from "../outputs/ContractsMaxAggregate";
+import { ContractsMinAggregate } from "../outputs/ContractsMinAggregate";
+import { ContractsSumAggregate } from "../outputs/ContractsSumAggregate";
+export declare class ContractsGroupBy {
+    id: bigint;
+    contract_title: string | null;
+    contract_value: string | null;
+    start_date: string | null;
+    end_date: string | null;
+    renewal_reminder: string | null;
+    customer_signed_date: string | null;
+    company_signed_date: string | null;
+    status: string | null;
+    contract_manager: string | null;
+    account: string | null;
+    contact: string | null;
+    description: string | null;
+    opportunity: string | null;
+    contract_type: string | null;
+    currency: string | null;
+    line_items: string | null;
+    total: string | null;
+    discount: string | null;
+    subtotal: string | null;
+    shipping: string | null;
+    shipping_tax: string | null;
+    tax: string | null;
+    grand_total: string | null;
+    created_at: Date | null;
+    _count: ContractsCountAggregate | null;
+    _avg: ContractsAvgAggregate | null;
+    _sum: ContractsSumAggregate | null;
+    _min: ContractsMinAggregate | null;
+    _max: ContractsMaxAggregate | null;
+}

@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateGeneral_settingsArgs } from "./args/AggregateGeneral_settingsArgs";
+import { CreateGeneral_settingsArgs } from "./args/CreateGeneral_settingsArgs";
+import { CreateManyGeneral_settingsArgs } from "./args/CreateManyGeneral_settingsArgs";
+import { DeleteGeneral_settingsArgs } from "./args/DeleteGeneral_settingsArgs";
+import { DeleteManyGeneral_settingsArgs } from "./args/DeleteManyGeneral_settingsArgs";
+import { FindFirstGeneral_settingsArgs } from "./args/FindFirstGeneral_settingsArgs";
+import { FindManyGeneral_settingsArgs } from "./args/FindManyGeneral_settingsArgs";
+import { FindUniqueGeneral_settingsArgs } from "./args/FindUniqueGeneral_settingsArgs";
+import { GroupByGeneral_settingsArgs } from "./args/GroupByGeneral_settingsArgs";
+import { UpdateGeneral_settingsArgs } from "./args/UpdateGeneral_settingsArgs";
+import { UpdateManyGeneral_settingsArgs } from "./args/UpdateManyGeneral_settingsArgs";
+import { UpsertGeneral_settingsArgs } from "./args/UpsertGeneral_settingsArgs";
+import { General_settings } from "../../../models/General_settings";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateGeneral_settings } from "../../outputs/AggregateGeneral_settings";
+import { General_settingsGroupBy } from "../../outputs/General_settingsGroupBy";
+export declare class General_settingsCrudResolver {
+    findUniqueGeneral_settings(ctx: any, info: GraphQLResolveInfo, args: FindUniqueGeneral_settingsArgs): Promise<General_settings | null>;
+    findFirstGeneral_settings(ctx: any, info: GraphQLResolveInfo, args: FindFirstGeneral_settingsArgs): Promise<General_settings | null>;
+    findManyGeneral_settings(ctx: any, info: GraphQLResolveInfo, args: FindManyGeneral_settingsArgs): Promise<General_settings[]>;
+    createGeneral_settings(ctx: any, info: GraphQLResolveInfo, args: CreateGeneral_settingsArgs): Promise<General_settings>;
+    createManyGeneral_settings(ctx: any, info: GraphQLResolveInfo, args: CreateManyGeneral_settingsArgs): Promise<AffectedRowsOutput>;
+    deleteGeneral_settings(ctx: any, info: GraphQLResolveInfo, args: DeleteGeneral_settingsArgs): Promise<General_settings | null>;
+    updateGeneral_settings(ctx: any, info: GraphQLResolveInfo, args: UpdateGeneral_settingsArgs): Promise<General_settings | null>;
+    deleteManyGeneral_settings(ctx: any, info: GraphQLResolveInfo, args: DeleteManyGeneral_settingsArgs): Promise<AffectedRowsOutput>;
+    updateManyGeneral_settings(ctx: any, info: GraphQLResolveInfo, args: UpdateManyGeneral_settingsArgs): Promise<AffectedRowsOutput>;
+    upsertGeneral_settings(ctx: any, info: GraphQLResolveInfo, args: UpsertGeneral_settingsArgs): Promise<General_settings>;
+    aggregateGeneral_settings(ctx: any, info: GraphQLResolveInfo, args: AggregateGeneral_settingsArgs): Promise<AggregateGeneral_settings>;
+    groupByGeneral_settings(ctx: any, info: GraphQLResolveInfo, args: GroupByGeneral_settingsArgs): Promise<General_settingsGroupBy[]>;
+}

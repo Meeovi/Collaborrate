@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateKnowledgebaseArgs } from "./args/AggregateKnowledgebaseArgs";
+import { CreateKnowledgebaseArgs } from "./args/CreateKnowledgebaseArgs";
+import { CreateManyKnowledgebaseArgs } from "./args/CreateManyKnowledgebaseArgs";
+import { DeleteKnowledgebaseArgs } from "./args/DeleteKnowledgebaseArgs";
+import { DeleteManyKnowledgebaseArgs } from "./args/DeleteManyKnowledgebaseArgs";
+import { FindFirstKnowledgebaseArgs } from "./args/FindFirstKnowledgebaseArgs";
+import { FindManyKnowledgebaseArgs } from "./args/FindManyKnowledgebaseArgs";
+import { FindUniqueKnowledgebaseArgs } from "./args/FindUniqueKnowledgebaseArgs";
+import { GroupByKnowledgebaseArgs } from "./args/GroupByKnowledgebaseArgs";
+import { UpdateKnowledgebaseArgs } from "./args/UpdateKnowledgebaseArgs";
+import { UpdateManyKnowledgebaseArgs } from "./args/UpdateManyKnowledgebaseArgs";
+import { UpsertKnowledgebaseArgs } from "./args/UpsertKnowledgebaseArgs";
+import { Knowledgebase } from "../../../models/Knowledgebase";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateKnowledgebase } from "../../outputs/AggregateKnowledgebase";
+import { KnowledgebaseGroupBy } from "../../outputs/KnowledgebaseGroupBy";
+export declare class KnowledgebaseCrudResolver {
+    knowledgebase(ctx: any, info: GraphQLResolveInfo, args: FindUniqueKnowledgebaseArgs): Promise<Knowledgebase | null>;
+    findFirstKnowledgebase(ctx: any, info: GraphQLResolveInfo, args: FindFirstKnowledgebaseArgs): Promise<Knowledgebase | null>;
+    knowledgebases(ctx: any, info: GraphQLResolveInfo, args: FindManyKnowledgebaseArgs): Promise<Knowledgebase[]>;
+    createKnowledgebase(ctx: any, info: GraphQLResolveInfo, args: CreateKnowledgebaseArgs): Promise<Knowledgebase>;
+    createManyKnowledgebase(ctx: any, info: GraphQLResolveInfo, args: CreateManyKnowledgebaseArgs): Promise<AffectedRowsOutput>;
+    deleteKnowledgebase(ctx: any, info: GraphQLResolveInfo, args: DeleteKnowledgebaseArgs): Promise<Knowledgebase | null>;
+    updateKnowledgebase(ctx: any, info: GraphQLResolveInfo, args: UpdateKnowledgebaseArgs): Promise<Knowledgebase | null>;
+    deleteManyKnowledgebase(ctx: any, info: GraphQLResolveInfo, args: DeleteManyKnowledgebaseArgs): Promise<AffectedRowsOutput>;
+    updateManyKnowledgebase(ctx: any, info: GraphQLResolveInfo, args: UpdateManyKnowledgebaseArgs): Promise<AffectedRowsOutput>;
+    upsertKnowledgebase(ctx: any, info: GraphQLResolveInfo, args: UpsertKnowledgebaseArgs): Promise<Knowledgebase>;
+    aggregateKnowledgebase(ctx: any, info: GraphQLResolveInfo, args: AggregateKnowledgebaseArgs): Promise<AggregateKnowledgebase>;
+    groupByKnowledgebase(ctx: any, info: GraphQLResolveInfo, args: GroupByKnowledgebaseArgs): Promise<KnowledgebaseGroupBy[]>;
+}

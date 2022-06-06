@@ -1,0 +1,16 @@
+query MyQuery {
+  surveys {
+    id
+    name
+    neither_text
+    question
+    satisfied_text
+    status
+    submit_text
+    dissatisfied_text
+    description
+    created_at
+    assigned_to
+    answer
+  }
+}

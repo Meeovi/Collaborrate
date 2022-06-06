@@ -1,0 +1,34 @@
+export declare class ProductsCountAggregate {
+    id: number;
+    sku: number;
+    thumbnail: number;
+    name: number;
+    type: number;
+    attribute_set: number;
+    price: number;
+    quantity_per_source: number;
+    salable_quantity: number;
+    visibility: number;
+    status: number;
+    websites: number;
+    product: number;
+    tax_class: number;
+    stock_status: number;
+    weight: number;
+    categories: number;
+    created_at: number;
+    country: number;
+    size: number;
+    format: number;
+    height: number;
+    content: number;
+    short_description: number;
+    image: number;
+    meta_title: number;
+    meta_keywords: number;
+    meta_description: number;
+    meta_url: number;
+    file: number;
+    manufacture: number;
+    _all: number;
+}

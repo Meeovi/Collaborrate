@@ -1,0 +1,11 @@
+query MyQuery {
+  internalization {
+    id
+    name
+    region
+    website
+    description
+    default
+    created_at
+  }
+}

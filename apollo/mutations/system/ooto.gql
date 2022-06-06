@@ -1,0 +1,11 @@
+query agreements($id: Int) {
+  ooto(where: {id: {_eq: $id}}) {
+    id
+    end_date
+    note
+    created_at
+    login
+    start_date
+    location
+  }
+}

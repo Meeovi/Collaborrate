@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateTax_rateArgs } from "./args/AggregateTax_rateArgs";
+import { CreateManyTax_rateArgs } from "./args/CreateManyTax_rateArgs";
+import { CreateTax_rateArgs } from "./args/CreateTax_rateArgs";
+import { DeleteManyTax_rateArgs } from "./args/DeleteManyTax_rateArgs";
+import { DeleteTax_rateArgs } from "./args/DeleteTax_rateArgs";
+import { FindFirstTax_rateArgs } from "./args/FindFirstTax_rateArgs";
+import { FindManyTax_rateArgs } from "./args/FindManyTax_rateArgs";
+import { FindUniqueTax_rateArgs } from "./args/FindUniqueTax_rateArgs";
+import { GroupByTax_rateArgs } from "./args/GroupByTax_rateArgs";
+import { UpdateManyTax_rateArgs } from "./args/UpdateManyTax_rateArgs";
+import { UpdateTax_rateArgs } from "./args/UpdateTax_rateArgs";
+import { UpsertTax_rateArgs } from "./args/UpsertTax_rateArgs";
+import { Tax_rate } from "../../../models/Tax_rate";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateTax_rate } from "../../outputs/AggregateTax_rate";
+import { Tax_rateGroupBy } from "../../outputs/Tax_rateGroupBy";
+export declare class Tax_rateCrudResolver {
+    tax_rate(ctx: any, info: GraphQLResolveInfo, args: FindUniqueTax_rateArgs): Promise<Tax_rate | null>;
+    findFirstTax_rate(ctx: any, info: GraphQLResolveInfo, args: FindFirstTax_rateArgs): Promise<Tax_rate | null>;
+    tax_rates(ctx: any, info: GraphQLResolveInfo, args: FindManyTax_rateArgs): Promise<Tax_rate[]>;
+    createTax_rate(ctx: any, info: GraphQLResolveInfo, args: CreateTax_rateArgs): Promise<Tax_rate>;
+    createManyTax_rate(ctx: any, info: GraphQLResolveInfo, args: CreateManyTax_rateArgs): Promise<AffectedRowsOutput>;
+    deleteTax_rate(ctx: any, info: GraphQLResolveInfo, args: DeleteTax_rateArgs): Promise<Tax_rate | null>;
+    updateTax_rate(ctx: any, info: GraphQLResolveInfo, args: UpdateTax_rateArgs): Promise<Tax_rate | null>;
+    deleteManyTax_rate(ctx: any, info: GraphQLResolveInfo, args: DeleteManyTax_rateArgs): Promise<AffectedRowsOutput>;
+    updateManyTax_rate(ctx: any, info: GraphQLResolveInfo, args: UpdateManyTax_rateArgs): Promise<AffectedRowsOutput>;
+    upsertTax_rate(ctx: any, info: GraphQLResolveInfo, args: UpsertTax_rateArgs): Promise<Tax_rate>;
+    aggregateTax_rate(ctx: any, info: GraphQLResolveInfo, args: AggregateTax_rateArgs): Promise<AggregateTax_rate>;
+    groupByTax_rate(ctx: any, info: GraphQLResolveInfo, args: GroupByTax_rateArgs): Promise<Tax_rateGroupBy[]>;
+}

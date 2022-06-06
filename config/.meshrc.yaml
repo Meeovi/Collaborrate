@@ -1,0 +1,99 @@
+## Postgresql Database Graphql
+
+sources:
+  - name: Postgresql
+    handler:
+      postgraphile:
+        connectionString: DATABASE_URL
+        appendPlugins:
+          - "@graphile-contrib/pg-many-to-many"
+          - '@graphile/federation'
+
+# You can also use environment variables like below
+# connectionString: postgres://{env.POSTGRES_USER}:{env.POSTGRES_PASSWORD}@localhost/postgres
+
+## MySQL Database Graphql
+
+  - name: Mysql
+    handler:
+      mysql:
+        host: env.MYSQL_HOST
+        port: 3306
+        user: env.MYSQL_USER
+        password: env.MYSQL_PASSWORD
+        database: env.MYSQL_DATABASE
+
+## OData / Microsoft Graph Graphql
+
+  - name: Odata
+    handler:
+        odata:
+          baseUrl: ODATA_URL
+
+## Apache Thrift Graphql
+
+  - name: ApacheThrift
+    handler:
+      thrift:
+        idl: APACHE_IDL
+        hostName: APACHE_HOSTNAME
+        port: 8080
+        path: APACHE_PATH
+        serviceName: APACHE_SERVICENAME
+
+# Sqlite Database Graphql
+
+#  - name: Sqlite
+#    handler:
+#      tuql:
+#        db: DB_URL
+
+# Soap Graphql
+
+  - name: Soap
+    handler:
+        soap:
+          wsdl: WSDL_URL 
+
+# GRPC / Protobuf
+
+  - name: Grpc
+    handler:
+      grpc:
+        endpoint: GRPC_ENDPOINT
+        protoFilePath: GRPC_PROTO_FILE_PATH
+
+# Graphql
+
+  - name: Graphql
+    handler:
+      graphql:
+        endpoint: GRAPHQL_ENDPOINT
+
+# Mongoose / Mongodb
+
+  - name: Mongoose
+    handler:
+      mongoose:
+        connectionString: MONGODB_URL
+        models:
+          - name: MODELS_NAME
+            path: MODELS_PATH
+
+additionalTypeDefs: |
+  extend type File {image(width: Int, height: Int): String!, file(width: Int, height: Int): String!}
+additionalResolvers:
+  - targetTypeName: File
+    targetFieldName: image
+    requiredSelectionSet: '{ base64 }'
+    sourceName: ResizeImages
+    sourceTypeName: Query
+    sourceFieldName: resizeImage
+    sourceArgs:
+      image: '{root.base64}'
+      width: '{args.width}'
+      height: '{args.height}'
+
+serve:
+  cors:
+    origin: '*'

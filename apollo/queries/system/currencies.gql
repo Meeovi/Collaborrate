@@ -1,0 +1,9 @@
+query MyQuery {
+  currencies {
+    id
+    name
+    region
+    created_at
+    code
+  }
+}

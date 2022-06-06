@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregatePdf_templatesArgs } from "./args/AggregatePdf_templatesArgs";
+import { CreateManyPdf_templatesArgs } from "./args/CreateManyPdf_templatesArgs";
+import { CreatePdf_templatesArgs } from "./args/CreatePdf_templatesArgs";
+import { DeleteManyPdf_templatesArgs } from "./args/DeleteManyPdf_templatesArgs";
+import { DeletePdf_templatesArgs } from "./args/DeletePdf_templatesArgs";
+import { FindFirstPdf_templatesArgs } from "./args/FindFirstPdf_templatesArgs";
+import { FindManyPdf_templatesArgs } from "./args/FindManyPdf_templatesArgs";
+import { FindUniquePdf_templatesArgs } from "./args/FindUniquePdf_templatesArgs";
+import { GroupByPdf_templatesArgs } from "./args/GroupByPdf_templatesArgs";
+import { UpdateManyPdf_templatesArgs } from "./args/UpdateManyPdf_templatesArgs";
+import { UpdatePdf_templatesArgs } from "./args/UpdatePdf_templatesArgs";
+import { UpsertPdf_templatesArgs } from "./args/UpsertPdf_templatesArgs";
+import { Pdf_templates } from "../../../models/Pdf_templates";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregatePdf_templates } from "../../outputs/AggregatePdf_templates";
+import { Pdf_templatesGroupBy } from "../../outputs/Pdf_templatesGroupBy";
+export declare class Pdf_templatesCrudResolver {
+    findUniquePdf_templates(ctx: any, info: GraphQLResolveInfo, args: FindUniquePdf_templatesArgs): Promise<Pdf_templates | null>;
+    findFirstPdf_templates(ctx: any, info: GraphQLResolveInfo, args: FindFirstPdf_templatesArgs): Promise<Pdf_templates | null>;
+    findManyPdf_templates(ctx: any, info: GraphQLResolveInfo, args: FindManyPdf_templatesArgs): Promise<Pdf_templates[]>;
+    createPdf_templates(ctx: any, info: GraphQLResolveInfo, args: CreatePdf_templatesArgs): Promise<Pdf_templates>;
+    createManyPdf_templates(ctx: any, info: GraphQLResolveInfo, args: CreateManyPdf_templatesArgs): Promise<AffectedRowsOutput>;
+    deletePdf_templates(ctx: any, info: GraphQLResolveInfo, args: DeletePdf_templatesArgs): Promise<Pdf_templates | null>;
+    updatePdf_templates(ctx: any, info: GraphQLResolveInfo, args: UpdatePdf_templatesArgs): Promise<Pdf_templates | null>;
+    deleteManyPdf_templates(ctx: any, info: GraphQLResolveInfo, args: DeleteManyPdf_templatesArgs): Promise<AffectedRowsOutput>;
+    updateManyPdf_templates(ctx: any, info: GraphQLResolveInfo, args: UpdateManyPdf_templatesArgs): Promise<AffectedRowsOutput>;
+    upsertPdf_templates(ctx: any, info: GraphQLResolveInfo, args: UpsertPdf_templatesArgs): Promise<Pdf_templates>;
+    aggregatePdf_templates(ctx: any, info: GraphQLResolveInfo, args: AggregatePdf_templatesArgs): Promise<AggregatePdf_templates>;
+    groupByPdf_templates(ctx: any, info: GraphQLResolveInfo, args: GroupByPdf_templatesArgs): Promise<Pdf_templatesGroupBy[]>;
+}

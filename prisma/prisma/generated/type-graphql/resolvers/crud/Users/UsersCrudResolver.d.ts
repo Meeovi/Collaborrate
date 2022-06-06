@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateUsersArgs } from "./args/AggregateUsersArgs";
+import { CreateManyUsersArgs } from "./args/CreateManyUsersArgs";
+import { CreateUsersArgs } from "./args/CreateUsersArgs";
+import { DeleteManyUsersArgs } from "./args/DeleteManyUsersArgs";
+import { DeleteUsersArgs } from "./args/DeleteUsersArgs";
+import { FindFirstUsersArgs } from "./args/FindFirstUsersArgs";
+import { FindManyUsersArgs } from "./args/FindManyUsersArgs";
+import { FindUniqueUsersArgs } from "./args/FindUniqueUsersArgs";
+import { GroupByUsersArgs } from "./args/GroupByUsersArgs";
+import { UpdateManyUsersArgs } from "./args/UpdateManyUsersArgs";
+import { UpdateUsersArgs } from "./args/UpdateUsersArgs";
+import { UpsertUsersArgs } from "./args/UpsertUsersArgs";
+import { Users } from "../../../models/Users";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateUsers } from "../../outputs/AggregateUsers";
+import { UsersGroupBy } from "../../outputs/UsersGroupBy";
+export declare class UsersCrudResolver {
+    findUniqueUsers(ctx: any, info: GraphQLResolveInfo, args: FindUniqueUsersArgs): Promise<Users | null>;
+    findFirstUsers(ctx: any, info: GraphQLResolveInfo, args: FindFirstUsersArgs): Promise<Users | null>;
+    findManyUsers(ctx: any, info: GraphQLResolveInfo, args: FindManyUsersArgs): Promise<Users[]>;
+    createUsers(ctx: any, info: GraphQLResolveInfo, args: CreateUsersArgs): Promise<Users>;
+    createManyUsers(ctx: any, info: GraphQLResolveInfo, args: CreateManyUsersArgs): Promise<AffectedRowsOutput>;
+    deleteUsers(ctx: any, info: GraphQLResolveInfo, args: DeleteUsersArgs): Promise<Users | null>;
+    updateUsers(ctx: any, info: GraphQLResolveInfo, args: UpdateUsersArgs): Promise<Users | null>;
+    deleteManyUsers(ctx: any, info: GraphQLResolveInfo, args: DeleteManyUsersArgs): Promise<AffectedRowsOutput>;
+    updateManyUsers(ctx: any, info: GraphQLResolveInfo, args: UpdateManyUsersArgs): Promise<AffectedRowsOutput>;
+    upsertUsers(ctx: any, info: GraphQLResolveInfo, args: UpsertUsersArgs): Promise<Users>;
+    aggregateUsers(ctx: any, info: GraphQLResolveInfo, args: AggregateUsersArgs): Promise<AggregateUsers>;
+    groupByUsers(ctx: any, info: GraphQLResolveInfo, args: GroupByUsersArgs): Promise<UsersGroupBy[]>;
+}

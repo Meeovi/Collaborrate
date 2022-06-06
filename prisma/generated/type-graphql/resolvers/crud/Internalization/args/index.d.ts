@@ -1,0 +1,12 @@
+export { AggregateInternalizationArgs } from "./AggregateInternalizationArgs";
+export { CreateInternalizationArgs } from "./CreateInternalizationArgs";
+export { CreateManyInternalizationArgs } from "./CreateManyInternalizationArgs";
+export { DeleteInternalizationArgs } from "./DeleteInternalizationArgs";
+export { DeleteManyInternalizationArgs } from "./DeleteManyInternalizationArgs";
+export { FindFirstInternalizationArgs } from "./FindFirstInternalizationArgs";
+export { FindManyInternalizationArgs } from "./FindManyInternalizationArgs";
+export { FindUniqueInternalizationArgs } from "./FindUniqueInternalizationArgs";
+export { GroupByInternalizationArgs } from "./GroupByInternalizationArgs";
+export { UpdateInternalizationArgs } from "./UpdateInternalizationArgs";
+export { UpdateManyInternalizationArgs } from "./UpdateManyInternalizationArgs";
+export { UpsertInternalizationArgs } from "./UpsertInternalizationArgs";

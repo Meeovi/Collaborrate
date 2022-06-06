@@ -1,0 +1,19 @@
+query MyQuery {
+  fullfillments {
+    id
+    name
+    phone
+    pickup
+    shipping_zones
+    state
+    stock
+    zipcode
+    created_at
+    country_area
+    country
+    company
+    city
+    address_two
+    address
+  }
+}

@@ -1,0 +1,33 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteShop_settingsResolver = void 0;
+const tslib_1 = require("tslib");
+const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
+const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
+const DeleteShop_settingsArgs_1 = require("./args/DeleteShop_settingsArgs");
+const Shop_settings_1 = require("../../../models/Shop_settings");
+const helpers_1 = require("../../../helpers");
+let DeleteShop_settingsResolver = class DeleteShop_settingsResolver {
+    async deleteShop_settings(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).shop_settings.delete({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+};
+tslib_1.__decorate([
+    TypeGraphQL.Mutation(_returns => Shop_settings_1.Shop_settings, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, DeleteShop_settingsArgs_1.DeleteShop_settingsArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], DeleteShop_settingsResolver.prototype, "deleteShop_settings", null);
+DeleteShop_settingsResolver = tslib_1.__decorate([
+    TypeGraphQL.Resolver(_of => Shop_settings_1.Shop_settings)
+], DeleteShop_settingsResolver);
+exports.DeleteShop_settingsResolver = DeleteShop_settingsResolver;

@@ -1,0 +1,35 @@
+import { BigIntFilter } from "../inputs/BigIntFilter";
+import { BoolNullableFilter } from "../inputs/BoolNullableFilter";
+import { IntFilter } from "../inputs/IntFilter";
+import { Product_attribute_setListRelationFilter } from "../inputs/Product_attribute_setListRelationFilter";
+import { ProductsRelationFilter } from "../inputs/ProductsRelationFilter";
+import { StringNullableFilter } from "../inputs/StringNullableFilter";
+export declare class Product_attributeWhereInput {
+    AND?: Product_attributeWhereInput[] | undefined;
+    OR?: Product_attributeWhereInput[] | undefined;
+    NOT?: Product_attributeWhereInput[] | undefined;
+    id?: IntFilter | undefined;
+    default_label?: StringNullableFilter | undefined;
+    catalog_input_type_store_owner?: StringNullableFilter | undefined;
+    values_required?: BoolNullableFilter | undefined;
+    attribute_code?: StringNullableFilter | undefined;
+    scope?: StringNullableFilter | undefined;
+    default_value?: StringNullableFilter | undefined;
+    unique_value?: BoolNullableFilter | undefined;
+    input_validation_store_owner?: StringNullableFilter | undefined;
+    add_column_options?: BoolNullableFilter | undefined;
+    filter_options?: BoolNullableFilter | undefined;
+    use_search?: BoolNullableFilter | undefined;
+    comparable_storefront?: BoolNullableFilter | undefined;
+    layered_navigation?: BoolNullableFilter | undefined;
+    search_results_layered_navigation?: BoolNullableFilter | undefined;
+    position?: StringNullableFilter | undefined;
+    promo_rule_conditions?: BoolNullableFilter | undefined;
+    allow_html_tags_storefront?: BoolNullableFilter | undefined;
+    visible_catalog_pages_storefront?: BoolNullableFilter | undefined;
+    used_product_listing?: BoolNullableFilter | undefined;
+    used_sorting_product_listing?: BoolNullableFilter | undefined;
+    prod_id?: BigIntFilter | undefined;
+    products?: ProductsRelationFilter | undefined;
+    product_attribute_set?: Product_attribute_setListRelationFilter | undefined;
+}

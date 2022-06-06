@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateArticlesArgs } from "./args/AggregateArticlesArgs";
+import { CreateArticlesArgs } from "./args/CreateArticlesArgs";
+import { CreateManyArticlesArgs } from "./args/CreateManyArticlesArgs";
+import { DeleteArticlesArgs } from "./args/DeleteArticlesArgs";
+import { DeleteManyArticlesArgs } from "./args/DeleteManyArticlesArgs";
+import { FindFirstArticlesArgs } from "./args/FindFirstArticlesArgs";
+import { FindManyArticlesArgs } from "./args/FindManyArticlesArgs";
+import { FindUniqueArticlesArgs } from "./args/FindUniqueArticlesArgs";
+import { GroupByArticlesArgs } from "./args/GroupByArticlesArgs";
+import { UpdateArticlesArgs } from "./args/UpdateArticlesArgs";
+import { UpdateManyArticlesArgs } from "./args/UpdateManyArticlesArgs";
+import { UpsertArticlesArgs } from "./args/UpsertArticlesArgs";
+import { Articles } from "../../../models/Articles";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateArticles } from "../../outputs/AggregateArticles";
+import { ArticlesGroupBy } from "../../outputs/ArticlesGroupBy";
+export declare class ArticlesCrudResolver {
+    findUniqueArticles(ctx: any, info: GraphQLResolveInfo, args: FindUniqueArticlesArgs): Promise<Articles | null>;
+    findFirstArticles(ctx: any, info: GraphQLResolveInfo, args: FindFirstArticlesArgs): Promise<Articles | null>;
+    findManyArticles(ctx: any, info: GraphQLResolveInfo, args: FindManyArticlesArgs): Promise<Articles[]>;
+    createArticles(ctx: any, info: GraphQLResolveInfo, args: CreateArticlesArgs): Promise<Articles>;
+    createManyArticles(ctx: any, info: GraphQLResolveInfo, args: CreateManyArticlesArgs): Promise<AffectedRowsOutput>;
+    deleteArticles(ctx: any, info: GraphQLResolveInfo, args: DeleteArticlesArgs): Promise<Articles | null>;
+    updateArticles(ctx: any, info: GraphQLResolveInfo, args: UpdateArticlesArgs): Promise<Articles | null>;
+    deleteManyArticles(ctx: any, info: GraphQLResolveInfo, args: DeleteManyArticlesArgs): Promise<AffectedRowsOutput>;
+    updateManyArticles(ctx: any, info: GraphQLResolveInfo, args: UpdateManyArticlesArgs): Promise<AffectedRowsOutput>;
+    upsertArticles(ctx: any, info: GraphQLResolveInfo, args: UpsertArticlesArgs): Promise<Articles>;
+    aggregateArticles(ctx: any, info: GraphQLResolveInfo, args: AggregateArticlesArgs): Promise<AggregateArticles>;
+    groupByArticles(ctx: any, info: GraphQLResolveInfo, args: GroupByArticlesArgs): Promise<ArticlesGroupBy[]>;
+}
