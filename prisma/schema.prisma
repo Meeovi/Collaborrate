@@ -198,6 +198,7 @@ model customers {
   messages                                 messages[]
   newsletter_subscribers                   newsletter_subscribers[]
   orders                                   orders[]
+  projects                                 projects[]
   quotes                                   quotes[]
   returns                                  returns[]
 }
@@ -701,6 +702,7 @@ model users {
   created_at       DateTime?  @default(now()) @db.Timestamptz(6)
   emails           emails[]
   messages         messages[]
+  projects         projects[]
 }
 
 model agreements {
@@ -1015,16 +1017,36 @@ model opportunities {
 }
 
 model projects {
-  id                  BigInt    @id @default(autoincrement())
-  name                String?
-  project_manager     String?
-  start_date          String?
-  end_date            String?
-  resource            String?
-  considerworkingdays String?
-  project_template    String?
-  status              String?
-  created_at          DateTime? @default(now()) @db.Timestamptz(6)
+  id                   BigInt     @id @default(autoincrement())
+  name                 String?
+  project_manager      String?
+  start_date           String?
+  end_date             String?
+  resource             String?
+  considerworkingdays  String?
+  project_template     String?
+  status               String?
+  created_at           DateTime?  @default(now()) @db.Timestamptz(6)
+  priority             String?
+  assignee             String?
+  doing                String?
+  done                 String?
+  section_rule         String?
+  goal_name            String?
+  goal_timeperiod      String?
+  goal_privacy         String?
+  goal_collaborators   String?
+  goal_updatemethod    String?
+  goal_progress_source String?
+  goal_measurement     String?
+  cust_id              Int?
+  staff_id             Int?
+  task_id              BigInt?
+  ticket_id            BigInt?
+  customers            customers? @relation(fields: [cust_id], references: [id])
+  users                users?     @relation(fields: [staff_id], references: [id])
+  tasks                tasks?     @relation(fields: [task_id], references: [id])
+  ticketing            ticketing? @relation(fields: [ticket_id], references: [id])
 }
 
 model providers {
@@ -1086,8 +1108,8 @@ model targets {
 }
 
 model tasks {
-  id            BigInt    @id @default(autoincrement())
-  created_at    DateTime? @default(now()) @db.Timestamptz(6)
+  id            BigInt     @id @default(autoincrement())
+  created_at    DateTime?  @default(now()) @db.Timestamptz(6)
   subject       String?
   start_date    String?
   due_date      String?
@@ -1097,7 +1119,8 @@ model tasks {
   related_to    String?
   contact       String?
   assigned_to   String?
-  date_modified DateTime? @default(now()) @db.Timestamptz(6)
+  date_modified DateTime?  @default(now()) @db.Timestamptz(6)
+  projects      projects[]
 }
 
 model webhooks {
@@ -1342,29 +1365,30 @@ model product_types {
 }
 
 model ticketing {
-  id              BigInt    @id @default(autoincrement())
-  created_at      DateTime? @default(now()) @db.Timestamptz(6)
-  name            String?
-  location        String?
-  date            String?
-  severity        String?
-  team            String?
-  requester       String?
-  requester_email String?
-  content         String?
-  department      String?
-  media           String?
-  projects        String?
-  ticket_type     String?
-  comment         String?
-  products        String?
-  priority        String?
-  status          String?
-  resolution      String?
-  assigned_to     String?
-  date_modified   DateTime? @default(now()) @db.Timestamptz(6)
-  account_name    String?
-  level           String?
+  id                           BigInt     @id @default(autoincrement())
+  created_at                   DateTime?  @default(now()) @db.Timestamptz(6)
+  name                         String?
+  location                     String?
+  date                         String?
+  severity                     String?
+  team                         String?
+  requester                    String?
+  requester_email              String?
+  content                      String?
+  department                   String?
+  media                        String?
+  projects                     String?
+  ticket_type                  String?
+  comment                      String?
+  products                     String?
+  priority                     String?
+  status                       String?
+  resolution                   String?
+  assigned_to                  String?
+  date_modified                DateTime?  @default(now()) @db.Timestamptz(6)
+  account_name                 String?
+  level                        String?
+  projects_projectsToticketing projects[]
 }
 
 model visits {
@@ -1518,4 +1542,49 @@ model zones {
   type       String?
   country    String?
   code       String?
+}
+
+model analytics {
+  id               BigInt    @id @default(autoincrement())
+  created_at       DateTime? @default(now()) @db.Timestamptz(6)
+  name             String?
+  country          String?
+  share_data       String?
+  website_name     String?
+  client_id        String?
+  client_secret    String?
+  tracking_id      String?
+  property_name    String?
+  url              String?
+  default_view     String?
+  category         String?
+  property_hit     String?
+  tracking_code    String?
+  data_collection  Boolean?
+  data_retention   Boolean?
+  search_analytics String?
+}
+
+model dashboards {
+  id            BigInt    @id @default(autoincrement())
+  created_at    DateTime? @default(now()) @db.Timestamptz(6)
+  name          String?
+  client_id     String?
+  client_secret String?
+  privacy       String?
+  category      String?
+  url           String?
+  media         String?
+  task          String?
+  reports       String?
+  tasks         String?
+  projects      String?
+  tickets       String?
+  customers     String?
+  checklists    String?
+  visits        String?
+  users         String?
+  products      String?
+  articles      String?
+  sales         String?
 }
