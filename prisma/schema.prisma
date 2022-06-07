@@ -62,21 +62,22 @@ model catalog_price_rule {
 }
 
 model categories {
-  id               Int      @id @default(autoincrement())
+  id               Int          @id @default(autoincrement())
   thumbnail        String?
-  name             String   @db.VarChar(255)
+  name             String       @db.VarChar(255)
   visibility       String?
   status           Boolean?
   websites         String?
   product          String?
   country          String?
-  description      String?  @db.VarChar
-  content          String?  @db.VarChar(255)
+  description      String?      @db.VarChar
+  content          String?      @db.VarChar(255)
   image            String?
   meta_title       String?
   meta_keywords    String?
   meta_description String?
   meta_url         String?
+  workspaces       workspaces[]
 }
 
 model cities {
@@ -90,14 +91,15 @@ model cities {
 }
 
 model comments {
-  id            Int       @id @default(autoincrement())
-  customer_name String    @db.VarChar(255)
-  description   String?   @db.VarChar(255)
+  id            Int            @id @default(autoincrement())
+  customer_name String         @db.VarChar(255)
+  description   String?        @db.VarChar(255)
   image         String?
   response      String?
-  published     DateTime? @db.Timestamp(6)
-  cust_id       Int       @default(autoincrement())
-  customers     customers @relation(fields: [cust_id], references: [id])
+  published     DateTime?      @db.Timestamp(6)
+  cust_id       Int            @default(autoincrement())
+  customers     customers      @relation(fields: [cust_id], references: [id])
+  mediamanager  mediamanager[]
 }
 
 model core_store {
@@ -195,12 +197,14 @@ model customers {
   customer_group_customer_groupTocustomers customer_group[]
   customer_payment                         customer_payment?
   emails                                   emails[]
+  mediamanager                             mediamanager[]
   messages                                 messages[]
   newsletter_subscribers                   newsletter_subscribers[]
   orders                                   orders[]
   projects                                 projects[]
   quotes                                   quotes[]
   returns                                  returns[]
+  workspaces                               workspaces[]
 }
 
 model gift_certificates {
@@ -347,47 +351,66 @@ model product_attribute_set {
 }
 
 model products {
-  id                  BigInt              @id @default(autoincrement())
-  sku                 BigInt              @unique @default(autoincrement())
-  thumbnail           String?
-  name                String
-  type                String?
-  attribute_set       String?
-  price               String?
-  quantity_per_source String?
-  salable_quantity    String?
-  visibility          String?
-  status              Boolean?
-  websites            String?
-  product             String?
-  tax_class           String?
-  stock_status        String?
-  weight              String?
-  categories          String?
-  created_at          DateTime?           @default(now()) @db.Timestamptz(6)
-  country             String?
-  size                String?
-  format              String?
-  height              String?
-  content             String?
-  short_description   String?
-  image               String?
-  meta_title          String?
-  meta_keywords       String?
-  meta_description    String?
-  meta_url            String?
-  file                String?
-  manufacture         String?
-  coupons             coupons[]
-  credit_memos        credit_memos[]
-  orders              orders[]
-  product_attribute   product_attribute[]
-  product_types       product_types[]
-  quotes              quotes[]
-  rating              rating[]
-  returns             returns[]
-  tax_rate            tax_rate[]
-  tax_rule            tax_rule[]
+  id                              BigInt              @id @default(autoincrement())
+  sku                             BigInt              @unique @default(autoincrement())
+  thumbnail                       String?
+  name                            String
+  types                           String?
+  attributes                      String?
+  price                           String?
+  quantity_per_source             String?
+  salable_quantity                String?
+  visibility                      String?
+  status                          Boolean?
+  websites                        String?
+  product                         String?
+  tax_class                       String?
+  stock_status                    String?
+  weight                          String?
+  categories                      String?
+  created_at                      DateTime?           @default(now()) @db.Timestamptz(6)
+  country                         String?
+  size                            String?
+  format                          String?
+  height                          String?
+  content                         String?
+  short_description               String?
+  image                           String?
+  meta_title                      String?
+  meta_keywords                   String?
+  meta_description                String?
+  meta_url                        String?
+  file                            String?
+  manufacture                     String?
+  part_number                     String?
+  contract                        String?
+  cost_string                     String?
+  manufacturer_part_number        String?
+  related_product                 BigInt?
+  tags                            String?
+  brand                           String?
+  occassions                      String?
+  customer_type                   String?
+  family                          String?
+  zone                            String?
+  variants                        String?
+  products                        products?           @relation("productsToproducts_related_product", fields: [related_product], references: [id])
+  brands                          brands[]
+  coupons                         coupons[]
+  credit_memos                    credit_memos[]
+  manufacturer                    manufacturer[]
+  mediamanager                    mediamanager[]
+  occassions_occassionsToproducts occassions[]
+  orders                          orders[]
+  product_attribute               product_attribute[]
+  product_types                   product_types[]
+  other_products                  products[]          @relation("productsToproducts_related_product")
+  quotes                          quotes[]
+  rating                          rating[]
+  returns                         returns[]
+  tax_rate                        tax_rate[]
+  tax_rule                        tax_rule[]
+  workspaces                      workspaces[]
 }
 
 model quotes {
@@ -493,7 +516,7 @@ model shipments {
 }
 
 model shops {
-  id                Int     @id @default(autoincrement())
+  id                Int          @id @default(autoincrement())
   name              String
   description       String?
   image             String?
@@ -520,6 +543,7 @@ model shops {
   country           String?
   physical_store    String?
   type              String?
+  workspaces        workspaces[]
 }
 
 model source {
@@ -690,7 +714,7 @@ model url_rewrites {
 }
 
 model users {
-  id               Int        @id @default(autoincrement())
+  id               Int            @id @default(autoincrement())
   username         String
   first_name       String
   last_name        String?
@@ -699,24 +723,27 @@ model users {
   interface_locale String?
   value            String?
   permissions      String?
-  created_at       DateTime?  @default(now()) @db.Timestamptz(6)
+  created_at       DateTime?      @default(now()) @db.Timestamptz(6)
   emails           emails[]
+  mediamanager     mediamanager[]
   messages         messages[]
   projects         projects[]
+  workspaces       workspaces[]
 }
 
 model agreements {
-  id           Int       @id @default(autoincrement())
-  reference_id Int       @default(autoincrement())
-  created      DateTime? @default(now()) @db.Timestamp(6)
-  updated      DateTime? @default(now()) @db.Timestamp(6)
+  id           Int            @id @default(autoincrement())
+  reference_id Int            @default(autoincrement())
+  created      DateTime?      @default(now()) @db.Timestamp(6)
+  updated      DateTime?      @default(now()) @db.Timestamp(6)
   content      String?
   name         String?
   image        String?
   excerpt      String?
   type         String?
-  user_id      Int       @default(autoincrement())
-  shop_id      Int       @default(autoincrement())
+  user_id      Int            @default(autoincrement())
+  shop_id      Int            @default(autoincrement())
+  mediamanager mediamanager[]
 }
 
 model collections {
@@ -1017,7 +1044,7 @@ model opportunities {
 }
 
 model projects {
-  id                   BigInt     @id @default(autoincrement())
+  id                   BigInt       @id @default(autoincrement())
   name                 String?
   project_manager      String?
   start_date           String?
@@ -1026,7 +1053,7 @@ model projects {
   considerworkingdays  String?
   project_template     String?
   status               String?
-  created_at           DateTime?  @default(now()) @db.Timestamptz(6)
+  created_at           DateTime?    @default(now()) @db.Timestamptz(6)
   priority             String?
   assignee             String?
   doing                String?
@@ -1043,10 +1070,11 @@ model projects {
   staff_id             Int?
   task_id              BigInt?
   ticket_id            BigInt?
-  customers            customers? @relation(fields: [cust_id], references: [id])
-  users                users?     @relation(fields: [staff_id], references: [id])
-  tasks                tasks?     @relation(fields: [task_id], references: [id])
-  ticketing            ticketing? @relation(fields: [ticket_id], references: [id])
+  customers            customers?   @relation(fields: [cust_id], references: [id])
+  users                users?       @relation(fields: [staff_id], references: [id])
+  tasks                tasks?       @relation(fields: [task_id], references: [id])
+  ticketing            ticketing?   @relation(fields: [ticket_id], references: [id])
+  workspaces           workspaces[]
 }
 
 model providers {
@@ -1108,8 +1136,8 @@ model targets {
 }
 
 model tasks {
-  id            BigInt     @id @default(autoincrement())
-  created_at    DateTime?  @default(now()) @db.Timestamptz(6)
+  id            BigInt         @id @default(autoincrement())
+  created_at    DateTime?      @default(now()) @db.Timestamptz(6)
   subject       String?
   start_date    String?
   due_date      String?
@@ -1119,8 +1147,10 @@ model tasks {
   related_to    String?
   contact       String?
   assigned_to   String?
-  date_modified DateTime?  @default(now()) @db.Timestamptz(6)
+  date_modified DateTime?      @default(now()) @db.Timestamptz(6)
+  mediamanager  mediamanager[]
   projects      projects[]
+  workspaces    workspaces[]
 }
 
 model webhooks {
@@ -1524,13 +1554,14 @@ model tax_category {
 }
 
 model wishlists {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
+  id         BigInt       @id @default(autoincrement())
+  created_at DateTime?    @default(now()) @db.Timestamptz(6)
   name       String?
   customers  String?
   visibility String?
   products   String?
   quantity   String?
+  occassions occassions[]
 }
 
 model zones {
@@ -1587,4 +1618,114 @@ model dashboards {
   products      String?
   articles      String?
   sales         String?
+}
+
+model brands {
+  id           BigInt         @id @default(autoincrement())
+  created_at   DateTime?      @default(now()) @db.Timestamptz(6)
+  code         String?
+  name         String?
+  country      String?
+  state        String?
+  isPublic     String?
+  city         String?
+  product      BigInt?
+  description  String?
+  media        String?
+  products     products?      @relation(fields: [product], references: [id])
+  mediamanager mediamanager[]
+  workspaces   workspaces[]
+}
+
+model manufacturer {
+  id          BigInt    @id @default(autoincrement())
+  created_at  DateTime? @default(now()) @db.Timestamptz(6)
+  code        String?
+  name        String?
+  country     String?
+  state       String?
+  isPublic    String?
+  city        String?
+  product     BigInt?
+  description String?
+  media       String?
+  products    products? @relation(fields: [product], references: [id])
+}
+
+model mediamanager {
+  id                                  BigInt      @id @default(autoincrement())
+  created_at                          DateTime?   @default(now()) @db.Timestamptz(6)
+  name                                String?
+  description                         String?
+  media                               String?
+  keywords                            String?
+  tags                                String?
+  brands                              BigInt?
+  status                              String?
+  expiration_date                     String?
+  copyright                           String?
+  dimensions                          String?
+  author                              Int?
+  content_type                        String?
+  versions                            String?
+  watermark_name                      String?
+  watermark_description               String?
+  watermark_media                     String?
+  agreements                          Int?
+  albums                              String?
+  comment                             Int?
+  workspace                           String?
+  task_name                           BigInt?
+  task_description                    String?
+  task_type                           String?
+  members                             Int?
+  products                            BigInt?
+  agreements_agreementsTomediamanager agreements? @relation(fields: [agreements], references: [id])
+  customers                           customers?  @relation(fields: [author], references: [id])
+  brands_brandsTomediamanager         brands?     @relation(fields: [brands], references: [id])
+  comments                            comments?   @relation(fields: [comment], references: [id])
+  users                               users?      @relation(fields: [members], references: [id])
+  products_mediamanagerToproducts     products?   @relation(fields: [products], references: [id])
+  tasks                               tasks?      @relation(fields: [task_name], references: [id])
+}
+
+model occassions {
+  id                              BigInt     @id @default(autoincrement())
+  created_at                      DateTime?  @default(now()) @db.Timestamptz(6)
+  code                            String?
+  name                            String?
+  category                        String?
+  tags                            String?
+  description                     String?
+  products                        BigInt?
+  wishlists                       BigInt?
+  products_occassionsToproducts   products?  @relation(fields: [products], references: [id])
+  wishlists_occassionsTowishlists wishlists? @relation(fields: [wishlists], references: [id])
+}
+
+model workspaces {
+  id                              BigInt      @id @default(autoincrement())
+  created_at                      DateTime?   @default(now()) @db.Timestamptz(6)
+  code                            String?
+  name                            String?
+  description                     String?
+  customers                       Int?
+  users                           Int?
+  products                        BigInt?
+  tasks                           BigInt?
+  brands                          BigInt?
+  shops                           Int?
+  category                        Int?
+  isPublic                        Boolean?
+  projects                        BigInt?
+  author                          String?
+  media                           String?
+  brands_brandsToworkspaces       brands?     @relation(fields: [brands], references: [id])
+  categories                      categories? @relation(fields: [category], references: [id])
+  customers_customersToworkspaces customers?  @relation(fields: [customers], references: [id])
+  products_productsToworkspaces   products?   @relation(fields: [products], references: [id])
+  projects_projectsToworkspaces   projects?   @relation(fields: [projects], references: [id])
+  shops_shopsToworkspaces         shops?      @relation(fields: [shops], references: [id])
+  tasks_tasksToworkspaces         tasks?      @relation(fields: [tasks], references: [id])
+  users_usersToworkspaces         users?      @relation(fields: [users], references: [id])
 }
