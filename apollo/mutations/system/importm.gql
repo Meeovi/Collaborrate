@@ -1,4 +1,4 @@
-query agreements($id: Int) {
+query importm($id: Int) {
   importm(where: {id: {_eq: $id}}) {
     id
     file

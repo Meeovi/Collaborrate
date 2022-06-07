@@ -25,6 +25,8 @@
             aria-controls="v-tabs-security" aria-selected="false">Customers</a>
             <a id="v-tabs-customers-tab" class="nav-link" data-mdb-toggle="tab" href="#v-tabs-customers" role="tab"
             aria-controls="v-tabs-customers" aria-selected="false">Marketing</a>
+            <!--<a id="v-tabs-customizations-tab" class="nav-link" data-mdb-toggle="tab" href="#v-tabs-customizations" role="tab"
+            aria-controls="v-tabs-customizations" aria-selected="false">Customizations</a>-->
             <a id="v-tabs-sales-tab" class="nav-link" data-mdb-toggle="tab" href="#v-tabs-sales" role="tab"
             aria-controls="v-tabs-sales" aria-selected="false">Reports</a>
             <a id="v-tabs-payments-tab" class="nav-link" data-mdb-toggle="tab" href="#v-tabs-payments" role="tab"
@@ -43,6 +45,9 @@
           <div id="v-tabs-security" class="tab-pane fade" role="tabpanel" aria-labelledby="v-tabs-security-tab">
             <Customersettings />
           </div>
+          <!--<div id="v-tabs-customizations" class="tab-pane fade" role="tabpanel" aria-labelledby="v-tabs-customizations-tab">
+            <Customizations />
+          </div>-->
           <div id="v-tabs-customers" class="tab-pane fade" role="tabpanel" aria-labelledby="v-tabs-customers-tab">
             <Marketingsettings />
           </div>
@@ -63,6 +68,7 @@
 import Generalsettings from '~/components/settings/generalsettings'
 import Salesettings from '~/components/settings/salesettings'
 import Marketingsettings from '~/components/settings/marketingsettings'
+// import Customizations from '~/components/settings/customizations'
 import Customersettings from '~/components/settings/customersettings'
 import Reportsettings from '~/components/settings/reportsettings'
 import Shopsettings from '~/components/settings/shopsettings'
@@ -73,6 +79,7 @@ import Shopsettings from '~/components/settings/shopsettings'
         Generalsettings,
         Salesettings,
         Marketingsettings,
+        // Customizations,
         Customersettings,
         Reportsettings,
         Shopsettings,

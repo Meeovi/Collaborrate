@@ -35,6 +35,12 @@
   "DashboardCharts": {
     "description": "Auto imported from components/dashboard/charts.vue"
   },
+  "ImportProducts": {
+    "description": "Auto imported from components/import/import-products.vue"
+  },
+  "ImportId": {
+    "description": "Auto imported from components/import/_id.vue"
+  },
   "IntegrationsContent": {
     "description": "Auto imported from components/integrations/content.vue"
   },
@@ -59,17 +65,14 @@
   "IntegrationsToppicks": {
     "description": "Auto imported from components/integrations/toppicks.vue"
   },
-  "ImportProducts": {
-    "description": "Auto imported from components/import/import-products.vue"
-  },
-  "ImportId": {
-    "description": "Auto imported from components/import/_id.vue"
-  },
   "SettingsApitokensettings": {
     "description": "Auto imported from components/settings/apitokensettings.vue"
   },
   "SettingsCustomersettings": {
     "description": "Auto imported from components/settings/customersettings.vue"
+  },
+  "SettingsCustomizations": {
+    "description": "Auto imported from components/settings/customizations.vue"
   },
   "SettingsGeneralsettings": {
     "description": "Auto imported from components/settings/generalsettings.vue"

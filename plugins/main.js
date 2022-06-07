@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+const $ = require( "jquery" );
 
 // AlternateCMS Time Functionality
 
@@ -33,3 +34,9 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// Repeatable Fields - Please don't Remove
+
+$(function() {
+  $("form .repeatable-container").repeatable;
+});

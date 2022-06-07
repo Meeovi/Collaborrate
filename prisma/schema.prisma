@@ -1729,3 +1729,17 @@ model workspaces {
   tasks_tasksToworkspaces         tasks?      @relation(fields: [tasks], references: [id])
   users_usersToworkspaces         users?      @relation(fields: [users], references: [id])
 }
+
+model customizations {
+  id           Int       @id @default(autoincrement())
+  created_at   DateTime? @default(now()) @db.Timestamptz(6)
+  site_name    String?
+  nav_link     String?
+  notification String?
+  banner       String?
+  footer_link  String?
+  announcement String?
+  email        String?
+  site_url     String?
+  allow_signup String?
+}

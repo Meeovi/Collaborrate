@@ -91,15 +91,19 @@
                 <table class="table">
                   <thead>
                     <tr>
+                      <th>Currency ID</th>
                       <th>Code</th>
                       <th>Name</th>
+                      <th>Region</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr v-for="currencies in currencies" :key="currencies">
-                      <th>{{ currencies.created_at }}</th>
-                      <td>{{ currencies.login }}</td>
+                      <td>{{ currencies.id }}</td>
+                      <th>{{ currencies.code }}</th>
+                      <td>{{ currencies.name }}</td>
+                      <td>{{ currencies.region }}</td>
                       <td><a :href="`/admin/edit/currency/${currencies.id}`">Edit</a></td>
                     </tr>
                   </tbody>
@@ -588,6 +592,14 @@
     generalSettings
   } from "~/apollo/queries/system/settingsgeneral";
   import paymentsettings from '~/components/settings/paymentsettings';
+  import currencies from '~/apollo/queries/system/currencies.gql'
+  import cities from '~/apollo/queries/shop/cities.gql'
+  import states from '~/apollo/queries/shop/states.gql'
+  import countries from '~/apollo/queries/shop/countries.gql'
+  import channels from '~/apollo/queries/system/channels.gql'
+  import zones from '~/apollo/queries/system/zones.gql'
+  import tax_rate from '~/apollo/queries/shop/taxrate.gql'
+  import tax_rule from '~/apollo/queries/shop/taxrule.gql'
 
   const ADD_GENERAL_SETTINGS = gql `
     mutation ($siteTitle:String!,$tagline:String,$siteUrl:String,$siteAdminEmail:String,$value:String){
@@ -609,6 +621,14 @@
     },
     data() {
       return {
+        cities: [],
+        states: [],
+        countries: [],
+        zones: [],
+        currencies: [],
+        channels: [],
+        tax_rate: [],
+        tax_rule: [],
         siteUrl: [],
         siteTitle: " ",
         tagline: " ",
@@ -662,6 +682,40 @@
       },
 
     },
+    apollo: {
+      cities: {
+        prefetch: true,
+        query: cities
+      },
+      states: {
+        prefetch: true,
+        query: states
+      },
+      countries: {
+        prefetch: true,
+        query: countries
+      },
+      zones: {
+        prefetch: true,
+        query: zones
+      },
+      currencies: {
+        prefetch: true,
+        query: currencies
+      },
+      channels: {
+        prefetch: true,
+        query: channels
+      },
+      tax_rate: {
+        prefetch: true,
+        query: tax_rate
+      },
+      tax_rule: {
+        prefetch: true,
+        query: tax_rule
+      },
+    }, 
     // eslint-disable-next-line vue/order-in-components
     head: {
       title: 'General Settings'

@@ -20,12 +20,12 @@
                     <th>Action</th>
                   </tr>
                 </thead>
-                <tbody v-for="apitokens in apitokens" :key="apitokens.id">
+                <tbody v-for="apitoken in apitoken" :key="apitoken.id">
                   <tr>
-                    <td>{{ apitokens.name }}</td>
-                    <td>{{ apitokens.description }}</td>
-                    <td>{{ apitokens.token_type }}</td>
-                    <td>{{ apitokens.created_at }}</td>
+                    <td>{{ apitoken.name }}</td>
+                    <td>{{ apitoken.description }}</td>
+                    <td>{{ apitoken.token_type }}</td>
+                    <td>{{ apitoken.created_at }}</td>
                     <td><button type="button" class="btn btn-primary" data-mdb-toggle="modal"
                         data-mdb-target="#exampleModal">Edit</button></td>
                     <div id="exampleModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -55,18 +55,18 @@
 </template>
 
 <script>
-import apitokens from '~/apollo/queries/system/apitokens'
+import apitoken from '~/apollo/queries/system/apitokens'
 
 export default {
   data() {
     return {
-      apitokens: [],
+      apitoken: [],
     }
   },
   apollo: {
-    apitokens: {
+    apitoken: {
       prefetch: true,
-      query: apitokens
+      query: apitoken
     }
   }, 
 }

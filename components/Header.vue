@@ -152,6 +152,9 @@
                             <li>
                                 <a class="dropdown-item" href="/admin/content/projects">Projects</a>
                             </li>
+                            <li>
+                                <a class="dropdown-item" href="/admin/content/workspaces">Workspaces</a>
+                            </li>
                         </ul>
                     </li>
                     <!--Reports Dropdown-->
@@ -210,13 +213,13 @@
                                 <a class="dropdown-item" href="/admin/shop/collections">Collections</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="/admin/shop/cities">Cities</a>
+                                <a class="dropdown-item" href="/admin/shop/occassions">Occassions</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="/admin/shop/countries">Countries</a>
+                                <a class="dropdown-item" href="/admin/shop/brands">Brands</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="/admin/shop/states">States</a>
+                                <a class="dropdown-item" href="/admin/shop/manufacturers">Manufacturers</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="/admin/shop/attributes">Attributes</a>
@@ -234,10 +237,7 @@
                                 <a class="dropdown-item" href="/admin/shop/warehouses">Warehouses</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="/admin/shop/tax-rule">Tax Rule</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/admin/shop/tax-rate">Tax Rate</a>
+                                <a class="dropdown-item" href="/admin/shop/wishlists">Wishlists</a>
                             </li>
                         </ul>
                     </li>
