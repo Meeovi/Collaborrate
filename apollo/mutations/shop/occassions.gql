@@ -1,0 +1,23 @@
+query MyQuery ($id: Int){
+  occassions (where: {id: {_eq: $id}}){
+    id
+    description
+    name
+    products
+    tags
+    wishlists
+    category
+    code
+    created_at
+    product {
+      name
+      price
+      id
+    }
+    wishlist {
+      id
+      name
+      products
+    }
+  }
+}

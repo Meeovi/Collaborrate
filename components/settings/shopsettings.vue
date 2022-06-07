@@ -41,7 +41,8 @@
                   <tr>
                     <td style="text-align: right;">Track inventory by default</td>
                     <td>
-                      <FormulateInput v-model="siteUrl" type="checkbox" label="If checked, then inventory is being tracked">
+                      <FormulateInput v-model="siteUrl" type="checkbox"
+                        label="If checked, then inventory is being tracked">
                       </FormulateInput>
                     </td>
                   </tr>
@@ -336,6 +337,246 @@
         </div>
       </div>
       <paymentsettings />
+      <div class="accordion-item">
+        <h2 id="flush-headingSeven" class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+            Cities
+          </button>
+        </h2>
+        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven"
+          data-mdb-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <div>
+              <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/admin/add-new/add-new-city">
+                    <FormulateInput type="button">Add New City</FormulateInput>
+                  </a>
+
+                </div>
+              </nav>
+              <br>
+              <div class="table table-responsive">
+                <table id="table" data-toggle="table" class="table">
+                  <thead class="table table-dark">
+                    <tr>
+                      <th>City ID</th>
+                      <th>City Title</th>
+                      <th>State</th>
+                      <th>Country</th>
+                      <th>Postal Code</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody v-for="cities in cities" :key="cities.id">
+                    <tr>
+                      <td>{{ cities.id }}</td>
+                      <td>{{ cities.name }}</td>
+                      <td>{{ cities.state }}</td>
+                      <td>{{ cities.country }}</td>
+                      <td>{{ cities.postalCode }}</td>
+                      <td><a :href="`/admin/edit/city/${cities.id}`">View</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 id="flush-headingEight" class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+            States
+          </button>
+        </h2>
+        <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight"
+          data-mdb-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <div>
+              <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/admin/add-new/add-new-state">
+                    <FormulateInput type="button">Add New State</FormulateInput>
+                  </a>
+
+                </div>
+              </nav>
+              <br>
+              <div class="table table-responsive">
+                <table id="table" data-toggle="table" class="table">
+                  <thead class="table table-dark">
+                    <tr>
+                      <th>State ID</th>
+                      <th>State Title</th>
+                      <th>Description</th>
+                      <th>Country</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody v-for="states in states" :key="states.id">
+                    <tr>
+                      <td>{{ states.id }}</td>
+                      <td>{{ states.name }}</td>
+                      <td>{{ states.description }}</td>
+                      <td>{{ states.country }}</td>
+                      <td><a :href="`/admin/edit/states/${states.id}`">View</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 id="flush-headingNine" class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+            Countries
+          </button>
+        </h2>
+        <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine"
+          data-mdb-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <div>
+              <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/admin/add-new/add-new-country">
+                    <FormulateInput type="button">Add New Country</FormulateInput>
+                  </a>
+
+                </div>
+              </nav>
+              <br>
+              <div class="table table-responsive">
+                <table id="table" data-toggle="table" class="table">
+                  <thead class="table table-dark">
+                    <tr>
+                      <th>Country ID</th>
+                      <th>Country Title</th>
+                      <th>Country Description</th>
+                      <th>Country Image</th>
+                      <th>Region</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody v-for="countries in countries" :key="countries.id">
+                    <tr>
+                      <td>{{ countries.id }}</td>
+                      <td>{{ countries.name }}</td>
+                      <td>{{ countries.description }}</td>
+                      <td>{{ countries.image }}</td>
+                      <td>{{ countries.region }}</td>
+                      <td><a :href="`/admin/edit/country/${countriess.id}`">View</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 id="flush-headingTen" class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+            Tax Rules
+          </button>
+        </h2>
+        <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen"
+          data-mdb-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <div>
+              <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/admin/add-new/add-new-taxrule">
+                    <FormulateInput type="button">Add New Tax Rule</FormulateInput>
+                  </a>
+
+                </div>
+              </nav>
+              <br>
+              <div class="table table-responsive">
+                <table id="table" data-toggle="table" class="table">
+                  <thead class="table table-dark">
+                    <tr>
+                      <th>Tax ID</th>
+                      <th>Tax Name</th>
+                      <th>Rate</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody v-for="tax_rule in tax_rule" :key="tax_rule.id">
+                    <tr>
+                      <td>{{ tax_rule.id }}</td>
+                      <td>{{ tax_rule.name }}</td>
+                      <td>{{ tax_rule.tax_rate }}</td>
+                      <td><a :href="`/admin/edit/taxrule/${tax_rule.id}`">View</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 id="flush-headingEleven" class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+            Tax Rates
+          </button>
+        </h2>
+        <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven"
+          data-mdb-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <div>
+              <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/admin/add-new/add-new-taxrate">
+                    <FormulateInput type="button">Add New Tax Rate</FormulateInput>
+                  </a>
+
+                </div>
+              </nav>
+              <br>
+              <div class="table table-responsive">
+                <table id="table" data-toggle="table" class="table">
+                  <thead class="table table-dark">
+                    <tr>
+                      <th>Tax Identifier</th>
+                      <th>Country</th>
+                      <th>State/Region</th>
+                      <th>Zip/Post Code</th>
+                      <th>Rate</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody v-for="tax_rate in tax_rate" :key="tax_rate.id">
+                    <tr>
+                      <td>{{ tax_rate.tax_identifier }}</td>
+                      <td>{{ tax_rate.country }}</td>
+                      <td>{{ tax_rate.state }}</td>
+                      <td>{{ tax_rate.postcode }}</td>
+                      <td>{{ tax_rate.rate_percent }}</td>
+                      <td><a :href="`/admin/edit/taxrate/${tax_rate.id}`">View</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End of Settings Tabs-->
     </div>
   </div>
 </template>

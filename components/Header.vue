@@ -270,7 +270,7 @@
             <div class="d-flex align-items-center">
                 <!-- Search -->
                 <form class="d-flex input-group w-auto">
-                    <input id="search" v-model="query" type="search" class="form-control rounded" label="Search" aria-label="Search" aria-describedby="search-addon" autocomplete="on" @input="search" />
+                    <input id="search" type="search" class="form-control rounded" label="Search" aria-label="Search" aria-describedby="search-addon" autocomplete="on" @input="search" />
                     <span id="search-addon" class="input-group-text border-0">
                         <i class="fas fa-search"></i>
                     </span>

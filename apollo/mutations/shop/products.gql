@@ -1,6 +1,6 @@
 query MyQuery ($id: Int){
   products (where: {id: {_eq: $id}}){
-    attribute_set
+    attributes
     categories
     content
     country
@@ -17,7 +17,7 @@ query MyQuery ($id: Int){
     name
     price
     visibility
-    type
+    types
     thumbnail
     tax_class
     stock_status

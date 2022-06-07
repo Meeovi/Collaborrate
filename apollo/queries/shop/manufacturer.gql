@@ -1,0 +1,14 @@
+query MyQuery {
+  manufacturer {
+    product
+    name
+    media
+    isPublic
+    id
+    description
+    created_at
+    country
+    code
+    city
+  }
+}

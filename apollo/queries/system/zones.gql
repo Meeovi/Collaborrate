@@ -1,4 +1,4 @@
-query MyQuery {
+query zones {
   zones {
     id
     created_at

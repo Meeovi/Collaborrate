@@ -1,0 +1,11 @@
+query MyQuery {
+  wishlists {
+    created_at
+    customers
+    id
+    name
+    products
+    quantity
+    visibility
+  }
+}

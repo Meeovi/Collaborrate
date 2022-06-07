@@ -78,6 +78,7 @@ const _52b993c8 = () => interopDefault(import('..\\pages\\Admin\\Content\\media-
 const _77a0f0c8 = () => interopDefault(import('..\\pages\\Admin\\Content\\pages.vue' /* webpackChunkName: "pages/Admin/Content/pages" */))
 const _033b73b4 = () => interopDefault(import('..\\pages\\Admin\\Content\\projects.vue' /* webpackChunkName: "pages/Admin/Content/projects" */))
 const _a76cb776 = () => interopDefault(import('..\\pages\\Admin\\Content\\tags.vue' /* webpackChunkName: "pages/Admin/Content/tags" */))
+const _395e7d2a = () => interopDefault(import('..\\pages\\Admin\\Content\\workspaces.vue' /* webpackChunkName: "pages/Admin/Content/workspaces" */))
 const _721d0311 = () => interopDefault(import('..\\pages\\Admin\\Customers\\all-customers.vue' /* webpackChunkName: "pages/Admin/Customers/all-customers" */))
 const _47c4b57f = () => interopDefault(import('..\\pages\\Admin\\Customers\\leads.vue' /* webpackChunkName: "pages/Admin/Customers/leads" */))
 const _1b5b8f40 = () => interopDefault(import('..\\pages\\Admin\\Customers\\meetings.vue' /* webpackChunkName: "pages/Admin/Customers/meetings" */))
@@ -117,20 +118,18 @@ const _52dec754 = () => interopDefault(import('..\\pages\\Admin\\Sales\\returns.
 const _59ef2a2c = () => interopDefault(import('..\\pages\\Admin\\Sales\\shipments.vue' /* webpackChunkName: "pages/Admin/Sales/shipments" */))
 const _45ffb814 = () => interopDefault(import('..\\pages\\Admin\\Sales\\transactions.vue' /* webpackChunkName: "pages/Admin/Sales/transactions" */))
 const _78bafbaa = () => interopDefault(import('..\\pages\\Admin\\Shop\\attributes.vue' /* webpackChunkName: "pages/Admin/Shop/attributes" */))
+const _43000b1f = () => interopDefault(import('..\\pages\\Admin\\Shop\\brands.vue' /* webpackChunkName: "pages/Admin/Shop/brands" */))
 const _1a7eadef = () => interopDefault(import('..\\pages\\Admin\\Shop\\categories.vue' /* webpackChunkName: "pages/Admin/Shop/categories" */))
-const _a064cbc8 = () => interopDefault(import('..\\pages\\Admin\\Shop\\cities.vue' /* webpackChunkName: "pages/Admin/Shop/cities" */))
 const _2ea96c5c = () => interopDefault(import('..\\pages\\Admin\\Shop\\collections.vue' /* webpackChunkName: "pages/Admin/Shop/collections" */))
-const _4b99dcb1 = () => interopDefault(import('..\\pages\\Admin\\Shop\\countries.vue' /* webpackChunkName: "pages/Admin/Shop/countries" */))
 const _7b2cafca = () => interopDefault(import('..\\pages\\Admin\\Shop\\coupons.vue' /* webpackChunkName: "pages/Admin/Shop/coupons" */))
 const _f94a714e = () => interopDefault(import('..\\pages\\Admin\\Shop\\inventory.vue' /* webpackChunkName: "pages/Admin/Shop/inventory" */))
+const _038aa73f = () => interopDefault(import('..\\pages\\Admin\\Shop\\manufacturers.vue' /* webpackChunkName: "pages/Admin/Shop/manufacturers" */))
 const _5c1fd7be = () => interopDefault(import('..\\pages\\Admin\\Shop\\partners.vue' /* webpackChunkName: "pages/Admin/Shop/partners" */))
 const _2e56f3d0 = () => interopDefault(import('..\\pages\\Admin\\Shop\\product-types.vue' /* webpackChunkName: "pages/Admin/Shop/product-types" */))
 const _e21c3012 = () => interopDefault(import('..\\pages\\Admin\\Shop\\products.vue' /* webpackChunkName: "pages/Admin/Shop/products" */))
 const _6a4c543a = () => interopDefault(import('..\\pages\\Admin\\Shop\\shops.vue' /* webpackChunkName: "pages/Admin/Shop/shops" */))
-const _38f8af56 = () => interopDefault(import('..\\pages\\Admin\\Shop\\states.vue' /* webpackChunkName: "pages/Admin/Shop/states" */))
-const _37970d56 = () => interopDefault(import('..\\pages\\Admin\\Shop\\tax-rate.vue' /* webpackChunkName: "pages/Admin/Shop/tax-rate" */))
-const _0eeb551e = () => interopDefault(import('..\\pages\\Admin\\Shop\\tax-rule.vue' /* webpackChunkName: "pages/Admin/Shop/tax-rule" */))
 const _254b283a = () => interopDefault(import('..\\pages\\Admin\\Shop\\warehouses.vue' /* webpackChunkName: "pages/Admin/Shop/warehouses" */))
+const _84992f6a = () => interopDefault(import('..\\pages\\Admin\\Shop\\wishlists.vue' /* webpackChunkName: "pages/Admin/Shop/wishlists" */))
 const _7ee73ee0 = () => interopDefault(import('..\\pages\\Admin\\System\\export-management.vue' /* webpackChunkName: "pages/Admin/System/export-management" */))
 const _81ef6398 = () => interopDefault(import('..\\pages\\Admin\\System\\general-settings.vue' /* webpackChunkName: "pages/Admin/System/general-settings" */))
 const _35767b8d = () => interopDefault(import('..\\pages\\Admin\\System\\help.vue' /* webpackChunkName: "pages/Admin/System/help" */))
@@ -525,6 +524,10 @@ export const routerOptions = {
     component: _a76cb776,
     name: "Admin-Content-tags___en"
   }, {
+    path: "/Admin/Content/workspaces",
+    component: _395e7d2a,
+    name: "Admin-Content-workspaces___en"
+  }, {
     path: "/Admin/Customers/all-customers",
     component: _721d0311,
     name: "Admin-Customers-all-customers___en"
@@ -681,21 +684,17 @@ export const routerOptions = {
     component: _78bafbaa,
     name: "Admin-Shop-attributes___en"
   }, {
+    path: "/Admin/Shop/brands",
+    component: _43000b1f,
+    name: "Admin-Shop-brands___en"
+  }, {
     path: "/Admin/Shop/categories",
     component: _1a7eadef,
     name: "Admin-Shop-categories___en"
   }, {
-    path: "/Admin/Shop/cities",
-    component: _a064cbc8,
-    name: "Admin-Shop-cities___en"
-  }, {
     path: "/Admin/Shop/collections",
     component: _2ea96c5c,
     name: "Admin-Shop-collections___en"
-  }, {
-    path: "/Admin/Shop/countries",
-    component: _4b99dcb1,
-    name: "Admin-Shop-countries___en"
   }, {
     path: "/Admin/Shop/coupons",
     component: _7b2cafca,
@@ -704,6 +703,10 @@ export const routerOptions = {
     path: "/Admin/Shop/inventory",
     component: _f94a714e,
     name: "Admin-Shop-inventory___en"
+  }, {
+    path: "/Admin/Shop/manufacturers",
+    component: _038aa73f,
+    name: "Admin-Shop-manufacturers___en"
   }, {
     path: "/Admin/Shop/partners",
     component: _5c1fd7be,
@@ -721,21 +724,13 @@ export const routerOptions = {
     component: _6a4c543a,
     name: "Admin-Shop-shops___en"
   }, {
-    path: "/Admin/Shop/states",
-    component: _38f8af56,
-    name: "Admin-Shop-states___en"
-  }, {
-    path: "/Admin/Shop/tax-rate",
-    component: _37970d56,
-    name: "Admin-Shop-tax-rate___en"
-  }, {
-    path: "/Admin/Shop/tax-rule",
-    component: _0eeb551e,
-    name: "Admin-Shop-tax-rule___en"
-  }, {
     path: "/Admin/Shop/warehouses",
     component: _254b283a,
     name: "Admin-Shop-warehouses___en"
+  }, {
+    path: "/Admin/Shop/wishlists",
+    component: _84992f6a,
+    name: "Admin-Shop-wishlists___en"
   }, {
     path: "/Admin/System/export-management",
     component: _7ee73ee0,
@@ -1085,6 +1080,10 @@ export const routerOptions = {
     component: _a76cb776,
     name: "Admin-Content-tags___es"
   }, {
+    path: "/es/Admin/Content/workspaces",
+    component: _395e7d2a,
+    name: "Admin-Content-workspaces___es"
+  }, {
     path: "/es/Admin/Customers/all-customers",
     component: _721d0311,
     name: "Admin-Customers-all-customers___es"
@@ -1241,21 +1240,17 @@ export const routerOptions = {
     component: _78bafbaa,
     name: "Admin-Shop-attributes___es"
   }, {
+    path: "/es/Admin/Shop/brands",
+    component: _43000b1f,
+    name: "Admin-Shop-brands___es"
+  }, {
     path: "/es/Admin/Shop/categories",
     component: _1a7eadef,
     name: "Admin-Shop-categories___es"
   }, {
-    path: "/es/Admin/Shop/cities",
-    component: _a064cbc8,
-    name: "Admin-Shop-cities___es"
-  }, {
     path: "/es/Admin/Shop/collections",
     component: _2ea96c5c,
     name: "Admin-Shop-collections___es"
-  }, {
-    path: "/es/Admin/Shop/countries",
-    component: _4b99dcb1,
-    name: "Admin-Shop-countries___es"
   }, {
     path: "/es/Admin/Shop/coupons",
     component: _7b2cafca,
@@ -1264,6 +1259,10 @@ export const routerOptions = {
     path: "/es/Admin/Shop/inventory",
     component: _f94a714e,
     name: "Admin-Shop-inventory___es"
+  }, {
+    path: "/es/Admin/Shop/manufacturers",
+    component: _038aa73f,
+    name: "Admin-Shop-manufacturers___es"
   }, {
     path: "/es/Admin/Shop/partners",
     component: _5c1fd7be,
@@ -1281,21 +1280,13 @@ export const routerOptions = {
     component: _6a4c543a,
     name: "Admin-Shop-shops___es"
   }, {
-    path: "/es/Admin/Shop/states",
-    component: _38f8af56,
-    name: "Admin-Shop-states___es"
-  }, {
-    path: "/es/Admin/Shop/tax-rate",
-    component: _37970d56,
-    name: "Admin-Shop-tax-rate___es"
-  }, {
-    path: "/es/Admin/Shop/tax-rule",
-    component: _0eeb551e,
-    name: "Admin-Shop-tax-rule___es"
-  }, {
     path: "/es/Admin/Shop/warehouses",
     component: _254b283a,
     name: "Admin-Shop-warehouses___es"
+  }, {
+    path: "/es/Admin/Shop/wishlists",
+    component: _84992f6a,
+    name: "Admin-Shop-wishlists___es"
   }, {
     path: "/es/Admin/System/export-management",
     component: _7ee73ee0,
@@ -1593,6 +1584,10 @@ export const routerOptions = {
     component: _a76cb776,
     name: "Admin-Content-tags___fr"
   }, {
+    path: "/fr/Admin/Content/workspaces",
+    component: _395e7d2a,
+    name: "Admin-Content-workspaces___fr"
+  }, {
     path: "/fr/Admin/Customers/all-customers",
     component: _721d0311,
     name: "Admin-Customers-all-customers___fr"
@@ -1749,21 +1744,17 @@ export const routerOptions = {
     component: _78bafbaa,
     name: "Admin-Shop-attributes___fr"
   }, {
+    path: "/fr/Admin/Shop/brands",
+    component: _43000b1f,
+    name: "Admin-Shop-brands___fr"
+  }, {
     path: "/fr/Admin/Shop/categories",
     component: _1a7eadef,
     name: "Admin-Shop-categories___fr"
   }, {
-    path: "/fr/Admin/Shop/cities",
-    component: _a064cbc8,
-    name: "Admin-Shop-cities___fr"
-  }, {
     path: "/fr/Admin/Shop/collections",
     component: _2ea96c5c,
     name: "Admin-Shop-collections___fr"
-  }, {
-    path: "/fr/Admin/Shop/countries",
-    component: _4b99dcb1,
-    name: "Admin-Shop-countries___fr"
   }, {
     path: "/fr/Admin/Shop/coupons",
     component: _7b2cafca,
@@ -1772,6 +1763,10 @@ export const routerOptions = {
     path: "/fr/Admin/Shop/inventory",
     component: _f94a714e,
     name: "Admin-Shop-inventory___fr"
+  }, {
+    path: "/fr/Admin/Shop/manufacturers",
+    component: _038aa73f,
+    name: "Admin-Shop-manufacturers___fr"
   }, {
     path: "/fr/Admin/Shop/partners",
     component: _5c1fd7be,
@@ -1789,21 +1784,13 @@ export const routerOptions = {
     component: _6a4c543a,
     name: "Admin-Shop-shops___fr"
   }, {
-    path: "/fr/Admin/Shop/states",
-    component: _38f8af56,
-    name: "Admin-Shop-states___fr"
-  }, {
-    path: "/fr/Admin/Shop/tax-rate",
-    component: _37970d56,
-    name: "Admin-Shop-tax-rate___fr"
-  }, {
-    path: "/fr/Admin/Shop/tax-rule",
-    component: _0eeb551e,
-    name: "Admin-Shop-tax-rule___fr"
-  }, {
     path: "/fr/Admin/Shop/warehouses",
     component: _254b283a,
     name: "Admin-Shop-warehouses___fr"
+  }, {
+    path: "/fr/Admin/Shop/wishlists",
+    component: _84992f6a,
+    name: "Admin-Shop-wishlists___fr"
   }, {
     path: "/fr/Admin/System/export-management",
     component: _7ee73ee0,

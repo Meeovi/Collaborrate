@@ -1,34 +1,47 @@
 query MyQuery {
   products {
-    attribute_set
+    attributes
+    brand
     categories
     content
+    contract
+    cost_string
     country
+    created_at
+    customer_type
+    family
     file
     format
     height
     id
     image
     manufacture
-    meta_description
-    meta_keywords
-    meta_title
-    meta_url
+    manufacturer_part_number
+    occassions
     name
+    meta_url
+    meta_title
+    meta_keywords
+    meta_description
+    part_number
     price
-    visibility
-    type
-    thumbnail
-    tax_class
-    stock_status
-    status
+    product
+    quantity_per_source
+    related_product
+    salable_quantity
+    short_description
     size
     sku
-    short_description
-    salable_quantity
-    quantity_per_source
-    product
+    status
+    stock_status
+    tags
+    tax_class
+    thumbnail
+    types
+    variants
+    visibility
     websites
     weight
+    zone
   }
 }

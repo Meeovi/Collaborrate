@@ -1,0 +1,19 @@
+query MyQuery{
+  brands{
+    city
+    code
+    country
+    created_at
+    description
+    id
+    isPublic
+    media
+    name
+    product
+    state
+    productByProduct {
+      id
+      name
+    }
+  }
+}
