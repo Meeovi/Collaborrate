@@ -50,7 +50,7 @@
     "@graphql-mesh/cli": "^0.71.1",
     "@graphql-mesh/graphql": "^0.26.2",
     "@graphql-mesh/grpc": "^0.24.2",
-    "@graphql-mesh/json-schema": "^0.28.13",
+    "@graphql-mesh/json-schema": "^0.28.14",
     "@graphql-mesh/mongoose": "^0.10.61",
     "@graphql-mesh/mysql": "^0.16.0",
     "@graphql-mesh/neo4j": "^0.17.10",
