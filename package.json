@@ -108,7 +108,7 @@
     "popper.js": "^1.16.1",
     "rand-token": "^0.4.0",
     "reflect-metadata": "^0.1.13",
-    "sass": "^1.32.13",
+    "sass": "^1.52.2",
     "sass-loader": "^10.1.1",
     "strip-bom": "^3.0.0",
     "stripe": "^8.184.0",
