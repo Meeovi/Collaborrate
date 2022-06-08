@@ -59,8 +59,8 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
-import newsletters from "~/apollo/queries/marketing/newsletter_subscribers"
+import  gql from "graphql-tag";
+import  newsletters from "~/apollo/queries/marketing/newsletter_subscribers"
 
 const ADD_NEWSLETTERS = gql`
     mutation ($customer_first_name:String!,$customer_last_name:String!$email:String!,$websites:String!,$store:String){

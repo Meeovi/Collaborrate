@@ -241,9 +241,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import quotes from '~/apollo/mutations/sales/quotes'
-import allQuotes from '~/apollo/queries/sales/quotes'
+import  gql from 'graphql-tag'
+import  quotes from '~/apollo/mutations/sales/quotes'
+import  allQuotes from '~/apollo/queries/sales/quotes'
 
 const DELETE_QUOTE = gql `
   mutation delete_quotes($id: Int!){

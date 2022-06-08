@@ -59,8 +59,8 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
-import { returns } from "~/apollo/queries/sales/returns";
+import  gql from "graphql-tag";
+import returns from "~/apollo/queries/sales/returns";
 
 const ADD_RETURNS = gql`
     mutation ($name:String!,$validity:String!,$return_prefix:String){

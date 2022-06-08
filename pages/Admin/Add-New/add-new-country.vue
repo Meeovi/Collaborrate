@@ -77,8 +77,8 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
-import { countries } from "~/apollo/queries/shop/countries";
+import  gql from "graphql-tag";
+import countries from "~/apollo/queries/shop/countries";
 
 const ADD_COUNTRIES = gql`
     mutation ($name:String!,$description:String,$image:String,$region:String){

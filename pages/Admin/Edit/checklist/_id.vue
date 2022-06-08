@@ -93,9 +93,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import checklists from '~/apollo/mutations/marketing/checklists'
-import allChecklists from '~/apollo/queries/marketing/checklists'
+import  gql from 'graphql-tag'
+import  checklists from '~/apollo/mutations/marketing/checklists'
+import  allChecklists from '~/apollo/queries/marketing/checklists'
 
 const DELETE_CHECKLIST = gql `
   mutation delete_checklists($id: Int!){

@@ -60,10 +60,10 @@
 
 <script>
 /* eslint-disable camelcase */
-import gql from 'graphql-tag'
-import channels from '~/apollo/mutations/system/channels'
-import allChannels from '~/apollo/queries/system/channels'
-import currencies from "~/apollo/queries/system/currencies"
+import  gql from 'graphql-tag'
+import  channels from '~/apollo/mutations/system/channels'
+import  allChannels from '~/apollo/queries/system/channels'
+import  currencies from "~/apollo/queries/system/currencies"
 
 const DELETE_CHANNEL = gql `
   mutation delete_zones($id: Int!){

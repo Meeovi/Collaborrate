@@ -46,9 +46,9 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 // eslint-disable-next-line camelcase
-import { tax_rule } from "~/apollo/queries/shop/taxrule";
+import tax_rule from "~/apollo/queries/shop/taxrule";
 
 const ADD_TAX_RULE = gql`
     mutation ($name:String!,$tax_rate:String){

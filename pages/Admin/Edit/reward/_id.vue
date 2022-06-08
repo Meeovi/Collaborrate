@@ -78,9 +78,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import rewards from '~/apollo/mutations/marketing/rewards'
-import allRewards from '~/apollo/queries/marketing/rewards'
+import  gql from 'graphql-tag'
+import  rewards from '~/apollo/mutations/marketing/rewards'
+import  allRewards from '~/apollo/queries/marketing/rewards'
 
 const DELETE_REWARD = gql `
   mutation delete_rewards($id: Int!){

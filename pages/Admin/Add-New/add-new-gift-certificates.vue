@@ -60,9 +60,9 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 // eslint-disable-next-line camelcase
-import gift_certificate from "~/apollo/queries/sales/gift_certificates"
+import  gift_certificate from "~/apollo/queries/sales/gift_certificates"
 
 const ADD_GIFT_CERTIFICATE = gql`
     mutation ($name:String!,$discount:String!$expiration:String!,$excerpt:String!,$type:String){

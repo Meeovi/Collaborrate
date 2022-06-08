@@ -34,7 +34,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import product_attribute from '~/apollo/queries/shop/attributes.gql'
+ import  product_attribute from '~/apollo/queries/shop/attributes.gql'
 
 export default {
   data() {

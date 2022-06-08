@@ -12,11 +12,7 @@ import '..\\node_modules\\simplemde\\dist\\simplemde.min.css'
 
 import '..\\static\\styles\\snow.min.css'
 
-import '..\\static\\extensions\\DataTables\\datatables.min.css'
-
 import '..\\node_modules\\leaflet\\dist\\leaflet.css'
-
-import '..\\node_modules\\vuetify\\dist\\vuetify.css'
 
 import _5fa3735e from '..\\layouts\\dashboard.vue'
 import _6f6c098b from '..\\layouts\\default.vue'

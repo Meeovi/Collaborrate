@@ -39,7 +39,7 @@
 </template>
 
 <script>
- import quotes from '~/apollo/queries/sales/quotes'
+ import  quotes from '~/apollo/queries/sales/quotes'
 
 export default {
   data() {

@@ -72,11 +72,11 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
 
-  import {
+  import 
     deepdive
-  } from "~/apollo/queries/reports/deepdive";
+  from "~/apollo/queries/reports/deepdive";
 
   const ADD_DEEPDIVE = gql `
     mutation ($login:String!,$whid:String!,$start_date:String!,$content:String!,$end_date:String!,$attendees:String){

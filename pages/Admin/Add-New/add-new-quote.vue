@@ -255,12 +255,12 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
 
-  import {
+  import 
     quotes
-  } from "~/apollo/queries/sales/quotes";
-  import categories from '~/apollo/queries/shop/categories'
+  from "~/apollo/queries/sales/quotes";
+  import  categories from '~/apollo/queries/shop/categories'
 /* eslint-disable camelcase */
 
   const ADD_QUOTES = gql `

@@ -2,27 +2,42 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-role"><FormulateInput type="button">Create New Role</FormulateInput></a>
-        
-</div>
-</nav>
-<br>
+        <a class="navbar-brand" href="/admin/add-new/add-new-permission">
+          <FormulateInput type="button">Create New Permission</FormulateInput>
+        </a>
+
+      </div>
+    </nav>
+    <br>
     <div class="table table-responsive">
-        <table id="table" data-toggle="table" class="table">
+      <table id="table" data-toggle="table" class="table">
         <thead class="table table-dark">
           <tr>
-            <th>Name</th>
-            <th>Description</th>
             <th>Users</th>
+            <th>Permissions Name</th>
+            <th>Create</th>
+            <th>Read</th>
+            <th>Update</th>
+            <th>Delete</th>
+            <th>Role</th>
             <th>Edit</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr v-for="permissions in permissions" :key="permissions.id">
+            <td>{{ permissions.users }}</td>
             <td>{{ permissions.name }}</td>
-            <td>{{ permissions.content }}</td>
+            <td>
+              <FormulateInput type="checkbox" disabled />{{ permissions.create }}</td>
+            <td>
+              <FormulateInput type="checkbox" disabled />{{ permissions.read }}</td>
+            <td>
+              <FormulateInput type="checkbox" disabled />{{ permissions.update }}</td>
+            <td>
+              <FormulateInput type="checkbox" disabled />{{ permissions.delete }}</td>
+            <td>{{ permissions.role }}</td>
             <td>{{ permissions.created_at }}</td>
-            <td><a :href="`/admin/edit/permissions/${permissions.id}`"><span class="fas fa-pencil"></span></a></td>
+            <td><a :href="`/admin/edit/permission/${permissions.id}`"><span class="fas fa-pencil"></span></a></td>
           </tr>
         </tbody>
       </table>
@@ -32,20 +47,20 @@
 </template>
 
 <script>
- import permissions from '~/apollo/queries/system/permissions.gql'
+  import  permissions from '~/apollo/queries/system/permissions.gql'
 
-export default {
-  data() {
-    return {
-      permissions: [],
-    }
-  },
-  apollo: {
-    permissions: {
-      prefetch: true,
-      query: permissions
-    }
-  }, 
+  export default {
+    data() {
+      return {
+        permissions: [],
+      }
+    },
+    apollo: {
+      permissions: {
+        prefetch: true,
+        query: permissions
+      }
+    },
     head: {
       title: 'Role Manager'
     }

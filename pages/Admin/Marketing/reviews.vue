@@ -33,7 +33,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import reviews from '~/apollo/queries/marketing/reviews'
+ import  reviews from '~/apollo/queries/marketing/reviews'
 
 export default {
   data() {

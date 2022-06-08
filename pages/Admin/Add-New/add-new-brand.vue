@@ -104,13 +104,13 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
 
-  import brands from "~/apollo/queries/shop/brands";
-  import countries from "~/apollo/queries/shop/countries"
-  import products from "~/apollo/queries/shop/products"
-  import cities from "~/apollo/queries/shop/cities"
-  import states from "~/apollo/queries/shop/states"
+  import  brands from "~/apollo/queries/shop/brands";
+  import  countries from "~/apollo/queries/shop/countries"
+  import  products from "~/apollo/queries/shop/products"
+  import  cities from "~/apollo/queries/shop/cities"
+  import  states from "~/apollo/queries/shop/states"
 
   const ADD_BRANDS = gql `
     mutation ($name: String!,$code: String!,$description: String!,$isPublic: String!,$created_at: String!,$product: String!,$state: String!,$media: String!,$country: String!,$city: String!){

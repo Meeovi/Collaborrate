@@ -91,13 +91,13 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
 
-  import occassions from "~/apollo/queries/shop/occassions";
-  import categories from "~/apollo/queries/shop/categories"
-  import products from "~/apollo/queries/shop/products"
-  import wishlists from "~/apollo/queries/shop/wishlists"
-  import tags from "~/apollo/queries/content/tags"
+  import  occassions from "~/apollo/queries/shop/occassions";
+  import  categories from "~/apollo/queries/shop/categories"
+  import  products from "~/apollo/queries/shop/products"
+  import  wishlists from "~/apollo/queries/shop/wishlists"
+  import  tags from "~/apollo/queries/content/tags"
 
   const ADD_OCCASSIONS = gql `
     mutation ($name: String!,$code: String!,$tags: String!,$description: String!,$products: String!,$created_at: String!,$shipping_zones: String!,$address_two: String!,$state: String!,$wishlists: String!,$category: String!,$pickup: String!,$city: String!,$pickup: String!){

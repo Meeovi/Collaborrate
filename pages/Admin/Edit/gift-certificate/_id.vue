@@ -59,11 +59,11 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
+import  gql from 'graphql-tag'
 // eslint-disable-next-line camelcase
-import gift_certificates from '~/apollo/mutations/sales/gift_certificates'
+import  gift_certificates from '~/apollo/mutations/sales/gift_certificates'
 // eslint-disable-next-line camelcase
-import allGift_certificates from '~/apollo/queries/sales/gift_certificates'
+import  allGift_certificates from '~/apollo/queries/sales/gift_certificates'
 
 const DELETE_GIFT_CERTIFICATE = gql `
   mutation delete_gift_certificates($id: Int!){

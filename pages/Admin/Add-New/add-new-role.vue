@@ -27,12 +27,12 @@
                 <table class="table">
                 <tbody>
                     <tr>
-                        <td style="text-align: right;">Group Name</td>
-                        <td><FormulateInput v-model="name" type="text" required /></td>
+                        <td style="text-align: right;">Role Name</td>
+                        <td><FormulateInput v-model="role_name" type="text" required /></td>
                     </tr>
                     <tr>
-                        <td style="text-align: right;">Tax Class</td>
-                        <td><FormulateInput type="text" v-model="tax_class" name="tax" /></td>
+                        <td style="text-align: right;">Description</td>
+                        <td><FormulateInput type="textarea" v-model="content" /></td>
                     </tr>
                 </tbody>
             </table>
@@ -47,17 +47,16 @@
 
 <script>
 /* eslint-disable camelcase */
-import gql from "graphql-tag";
-import { customer_group } from "~/apollo/queries/customers/customerGroups";
-// import tax from '~/apollo/queries/shop/tax'
+import  gql from "graphql-tag";
+import roles from "~/apollo/queries/system/roles";
 
-const ADD_GROUPS = gql`
-    mutation ($name:String!,$tax_class:String){
-    insert_customer_group(objects: {name: $name, tax_class: $tax_class}) {
+const ADD_ROLES = gql`
+    mutation ($role_name:String!,$content:String){
+    insert_role(objects: {role_name: $role_name, content: $content}) {
         affected_rows
         returning {
-            name
-            tax_class
+            role_name
+            content
     }
   }
 }`;
@@ -65,27 +64,27 @@ const ADD_GROUPS = gql`
 export default {
     data() {
     return {
-        tax_class: [],
-        name: " ",
+        content: [],
+        role_name: " ",
       }
   },
   methods: {
-      async addGroup() {
-            const name = this.name;
-            const tax_class = this.tax_class;
+      async addRole() {
+            const role_name = this.role_name;
+            const content = this.content;
             await this.$apollo.mutate({
-                mutation: ADD_GROUPS,
+                mutation: ADD_ROLES,
                 variables: {
-                    name,
-                    tax_class,
+                    role_name,
+                    content,
                 },
-        update: (cache, { data: { insertTax }}) => {
+        update: (cache, { data: { insertRole }}) => {
                         // Read data from cache for this query
                         try {
-                            const insertedTax = insertTax.returning;
-                            console.log(insertedTax)
+                            const insertedRole = insertRole.returning;
+                            console.log(insertedRole)
                             cache.writeQuery({
-                                query: customer_group
+                                query: roles
                             })
                         }
                         catch (err) {
@@ -93,10 +92,10 @@ export default {
                         }
                     }
                 }).then(() => {
-                    this.$router.push({path: '../customers/customer-groups'})
+                    this.$router.push({path: '../system/roles'})
                 }).catch(err => console.log(err));
-                this.name = ' ';
-                this.tax_class = ' ';
+                this.role_name = ' ';
+                this.content = ' ';
             },
         },
     /* apollo: {
@@ -107,7 +106,7 @@ export default {
     }, */
     // eslint-disable-next-line vue/order-in-components
     head: {
-        title: 'Add New Permissions'
+        title: 'Add New Role'
     }
 }
 </script>

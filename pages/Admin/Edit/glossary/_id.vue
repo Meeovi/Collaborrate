@@ -71,9 +71,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import glossaries from '~/apollo/mutations/content/glossaries'
-import allGlossaries from '~/apollo/queries/content/glossaries'
+import  gql from 'graphql-tag'
+import  glossaries from '~/apollo/mutations/content/glossaries'
+import  allGlossaries from '~/apollo/queries/content/glossaries'
 
 const DELETE_GLOSSARY = gql `
   mutation delete_glossaries($id: Int!){

@@ -32,7 +32,7 @@
 </template>
 
 <script>
- import tags from '~/apollo/queries/content/tags'
+ import  tags from '~/apollo/queries/content/tags'
 
 export default {
   data() {

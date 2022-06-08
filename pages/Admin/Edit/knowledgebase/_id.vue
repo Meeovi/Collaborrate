@@ -66,9 +66,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import knowledgebases from '~/apollo/mutations/system/knowledgebase'
-import allKnowledgebases from '~/apollo/queries/system/knowledgebase'
+import  gql from 'graphql-tag'
+import  knowledgebases from '~/apollo/mutations/system/knowledgebase'
+import  allKnowledgebases from '~/apollo/queries/system/knowledgebase'
 
 const DELETE_KNOWLEDGEBASE = gql `
   mutation delete_knowledgebases($id: Int!){

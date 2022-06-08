@@ -87,10 +87,10 @@
 
 <script>
   /* eslint-disable camelcase */
-  import gql from "graphql-tag";
-  import partners from "~/apollo/queries/shop/partners";
-  import states from '~/apollo/queries/shop/states'
-  import countries from '~/apollo/queries/shop/countries'
+  import  gql from "graphql-tag";
+  import  partners from "~/apollo/queries/shop/partners";
+  import  states from '~/apollo/queries/shop/states'
+  import  countries from '~/apollo/queries/shop/countries'
 
   const ADD_PARTNER = gql `
     mutation ($name:String!,$city:String!,$isPublic:String!,$state:String!,$country:String!,$business_type:String!,$address:String!){

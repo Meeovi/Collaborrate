@@ -49,7 +49,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import ticketing from '~/apollo/queries/marketing/ticketing'
+ import  ticketing from '~/apollo/queries/marketing/ticketing'
 
 export default {
   data() {

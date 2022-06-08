@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import manufacturer from '~/apollo/queries/shop/manufacturer'
+import  manufacturer from '~/apollo/queries/shop/manufacturer'
 
 export default {
   data() {

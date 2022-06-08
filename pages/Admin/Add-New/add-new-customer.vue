@@ -91,9 +91,9 @@
 
 <script>
 /* eslint-disable camelcase */
-import gql from "graphql-tag";
-import { user } from "~/apollo/queries/system/users";
-// import tax from '~/apollo/queries/shop/tax'
+import  gql from "graphql-tag";
+import user from "~/apollo/queries/system/users";
+// import  tax from '~/apollo/queries/shop/tax'
 
 const ADD_USER = gql`
     mutation ($first_name:String!,$last_name:String!,$value:String!,$staff_email:String){

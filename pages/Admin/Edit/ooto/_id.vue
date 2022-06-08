@@ -42,9 +42,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import ooto from '~/apollo/mutations/system/ooto'
-import allOoto from '~/apollo/queries/system/ooto'
+import  gql from 'graphql-tag'
+import  ooto from '~/apollo/mutations/system/ooto'
+import  allOoto from '~/apollo/queries/system/ooto'
 
 const DELETE_OOTO = gql `
   mutation delete_ooto($id: Int!){

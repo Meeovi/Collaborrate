@@ -85,9 +85,9 @@
 
 <script>
 /* eslint-disable camelcase */
-import gql from 'graphql-tag'
-import product_types from '~/apollo/mutations/shop/product-type'
-import allProduct_Types from '~/apollo/queries/shop/product-type'
+import  gql from 'graphql-tag'
+import  product_types from '~/apollo/mutations/shop/product-type'
+import  allProduct_Types from '~/apollo/queries/shop/product-type'
 
 const DELETE_PRODUCT_TYPE = gql `
   mutation delete_product_types($id: Int!){

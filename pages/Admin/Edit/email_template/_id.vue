@@ -91,9 +91,9 @@
 
 <script>
 /* eslint-disable camelcase */
-import gql from 'graphql-tag'
-import email_templates from '~/apollo/mutations/marketing/email_templates'
-import allEmail_templates from '~/apollo/queries/marketing/email_templates'
+import  gql from 'graphql-tag'
+import  email_templates from '~/apollo/mutations/marketing/email_templates'
+import  allEmail_templates from '~/apollo/queries/marketing/email_templates'
 
 const DELETE_EMAIL_TEMPLATE = gql `
   mutation delete_email_templates($id: Int!){

@@ -40,7 +40,7 @@
 </template>
 
 <script>
- import deepdive from '~/apollo/queries/reports/deepdive'
+ import  deepdive from '~/apollo/queries/reports/deepdive'
 
 export default {
   data() {

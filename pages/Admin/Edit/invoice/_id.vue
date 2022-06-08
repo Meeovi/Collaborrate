@@ -66,9 +66,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import invoices from '~/apollo/mutations/sales/invoices'
-import allInvoices from '~/apollo/queries/sales/invoices'
+import  gql from 'graphql-tag'
+import  invoices from '~/apollo/mutations/sales/invoices'
+import  allInvoices from '~/apollo/queries/sales/invoices'
 
 const DELETE_INVOICE = gql `
   mutation delete_invoices($id: Int!){

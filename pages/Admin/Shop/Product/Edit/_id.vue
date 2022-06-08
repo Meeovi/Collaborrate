@@ -183,11 +183,11 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
-import { products } from "~/apollo/queries/shop/products";
-// import categories from "~/apollo/queries/shop/categories"
-// import countries from "~/apollo/queries/shop/countries"
-// import attributes from "~/apollo/queries/shop/attributes"
+import  gql from "graphql-tag";
+import products from "~/apollo/queries/shop/products";
+// import  categories from "~/apollo/queries/shop/categories"
+// import  countries from "~/apollo/queries/shop/countries"
+// import  attributes from "~/apollo/queries/shop/attributes"
 
 const ADD_PRODUCTS = gql`
     mutation ($thumbnail: String!,$name: String!,$attribute_set: String!,$price: String!,$quantity_per_source: String!,$salable_quantity: String!,$visibility: String!,$websites: String!,$product: String!,$tax_class: String!,$stock_status: String!,$weight: String!,$manufacture: String!,$categories: String!,$country: String!,$size: String!,$format: String!,$height: String!,$content: String!,$short_description: String!,$image: Upload!,$meta_title: String!,$meta_keywords: String!,$meta_description: String!,$meta_url: String!,$file: Upload!,$type: String){

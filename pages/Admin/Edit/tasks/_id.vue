@@ -58,9 +58,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import tasks from '~/apollo/mutations/customers/tasks'
-import allTasks from '~/apollo/queries/customers/tasks'
+import  gql from 'graphql-tag'
+import  tasks from '~/apollo/mutations/customers/tasks'
+import  allTasks from '~/apollo/queries/customers/tasks'
 
 const DELETE_TASK = gql `
   mutation delete_tasks($id: Int!){

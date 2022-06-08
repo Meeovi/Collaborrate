@@ -49,9 +49,9 @@
 </template>
 
 <script>
-import gql from 'graphql-tag'
-import partners from '~/apollo/mutations/shop/partners'
-import allPartners from '~/apollo/queries/shop/partners'
+import  gql from 'graphql-tag'
+import  partners from '~/apollo/mutations/shop/partners'
+import  allPartners from '~/apollo/queries/shop/partners'
 
 const DELETE_PARTNER = gql `
   mutation delete_partners($id: Int!){

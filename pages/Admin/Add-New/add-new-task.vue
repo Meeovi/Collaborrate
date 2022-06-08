@@ -74,9 +74,9 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 
-import { tasks } from "~/apollo/queries/customers/tasks";
+import tasks from "~/apollo/queries/customers/tasks";
 /* eslint-disable camelcase */
 
 const ADD_TASKS = gql`

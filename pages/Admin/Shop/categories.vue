@@ -36,7 +36,7 @@
 </template>
 
 <script>
- import categories from '~/apollo/queries/shop/categories'
+ import  categories from '~/apollo/queries/shop/categories'
 
 export default {
   data() {

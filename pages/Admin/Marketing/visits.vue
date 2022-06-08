@@ -42,7 +42,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import visits from '~/apollo/queries/marketing/visits'
+ import  visits from '~/apollo/queries/marketing/visits'
 
 export default {
   data() {

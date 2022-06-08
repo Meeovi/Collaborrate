@@ -193,11 +193,11 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
 
-  import {
+  import 
     contracts
-  } from "~/apollo/queries/marketing/contracts";
+  from "~/apollo/queries/marketing/contracts";
 /* eslint-disable camelcase */
   const ADD_CONTRACTS = gql `
     mutation ($account: String!, $company_signed_date: String!, $contact: String!, $contract_manager: String!, $contract_title: String!, $contract_type: String!, $contract_value: String!, $currency: String!, $customer_signed_date: String!, $description: String!, $discount: String!, $end_date: String!, $grand_total: String!, $line_items: String!, $opportunity: String!, $renewal_reminder: String!, $shipping: String!, $shipping_tax: String!, $start_date: String!, $status: String!, $total: String!, $tax: String!, $subtotal: String){

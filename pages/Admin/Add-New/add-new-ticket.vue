@@ -125,9 +125,9 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 /* eslint-disable camelcase */
-import {ticketing} from "~/apollo/queries/marketing/ticketing";
+import ticketing from "~/apollo/queries/marketing/ticketing";
 
   const ADD_TICKETING = gql `
     mutation ($name: String!,$department: String!,$comment: String!,$location: String!,$content: String!,$level: String!,$media: String!,$requester: String!,$requester_email: String!,$assigned_to: String!,$account_name: String!,$severity: String!,$team: String!,$resolution: String!,$status: String!,$ticket_type: String!,$priority: String!,$date: String!){

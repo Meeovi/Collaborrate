@@ -115,10 +115,10 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
+import  gql from 'graphql-tag'
 // eslint-disable-next-line camelcase
-import newsletter_subscribers from '~/apollo/mutations/marketing/newsletter_subscribers'
-import allGlossaries from '~/apollo/queries/marketing/newsletter_subscribers'
+import  newsletter_subscribers from '~/apollo/mutations/marketing/newsletter_subscribers'
+import  allGlossaries from '~/apollo/queries/marketing/newsletter_subscribers'
 
 const DELETE_GLOSSARY = gql `
   mutation delete_newsletter_subscribers($id: Int!){

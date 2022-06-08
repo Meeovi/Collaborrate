@@ -105,9 +105,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import collections from '~/apollo/mutations/shop/collections'
-import allCollections from '~/apollo/queries/shop/collections'
+import  gql from 'graphql-tag'
+import  collections from '~/apollo/mutations/shop/collections'
+import  allCollections from '~/apollo/queries/shop/collections'
 
 const DELETE_COLLECTION = gql `
   mutation delete_collections($id: Int!){

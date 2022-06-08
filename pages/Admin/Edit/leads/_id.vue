@@ -231,9 +231,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import leads from '~/apollo/mutations/customers/leads'
-import allLeads from '~/apollo/queries/customers/leads'
+import  gql from 'graphql-tag'
+import  leads from '~/apollo/mutations/customers/leads'
+import  allLeads from '~/apollo/queries/customers/leads'
 
 const DELETE_LEAD = gql `
   mutation delete_leads($id: Int!){

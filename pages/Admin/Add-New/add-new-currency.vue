@@ -48,8 +48,8 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
-import currencies from "~/apollo/queries/system/currencies"
+import  gql from "graphql-tag";
+import  currencies from "~/apollo/queries/system/currencies"
 
 const ADD_CURRENCIES = gql`
     mutation ($code:String!,$name:String!$region:String!){

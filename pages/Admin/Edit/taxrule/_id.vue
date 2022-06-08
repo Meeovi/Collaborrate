@@ -30,9 +30,9 @@
 
 <script>
 /* eslint-disable camelcase */
-import gql from 'graphql-tag'
-import tax_rules from '~/apollo/mutations/shop/taxrule'
-import allTax_rules from '~/apollo/queries/shop/taxrule'
+import  gql from 'graphql-tag'
+import  tax_rules from '~/apollo/mutations/shop/taxrule'
+import  allTax_rules from '~/apollo/queries/shop/taxrule'
 
 const DELETE_TAX_RULE = gql `
   mutation delete_tax_rules($id: Int!){

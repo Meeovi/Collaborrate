@@ -13,7 +13,7 @@
           <!-- Tab navs -->
           <div id="v-tabs-tab" class="nav flex-column nav-tabs text-center" role="tablist" aria-orientation="vertical">
             <a id="v-tabs-home-tab" class="nav-link active" data-mdb-toggle="tab" href="#v-tabs-home" role="tab"
-              aria-controls="v-tabs-home" aria-selected="true">Create A New Review</a>
+              aria-controls="v-tabs-home" aria-selected="true">Edit Review</a>
           </div>
           <!-- Tab navs -->
         </div>
@@ -27,20 +27,20 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">First Name</td>
-                      <td><FormulateInput type="text" />{{ review.first_name }}</td>
+                      <td><FormulateInput v-model="first_name" type="text" />{{ review.first_name }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Last Name</td>
-                      <td><FormulateInput type="text" />{{ review.last_name }}</td>
+                      <td><FormulateInput v-model="last_name" type="text" />{{ review.last_name }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Website</td>
-                      <td><FormulateInput id="websites" name="websites" type="url" />{{ review.websites }}
+                      <td><FormulateInput v-model="website" id="websites" name="websites" type="url" />{{ review.websites }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Review Content</td>
-                      <td><vue-simplemde id="reviewDescription" />{{ review.content }}
+                      <td><vue-simplemde id="reviewDescription" v-model="content" />{{ review.content }}
                       </td>
                     </tr>
                   </tbody>
@@ -57,9 +57,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import reviews from '~/apollo/mutations/marketing/reviews'
-import allReviews from '~/apollo/queries/marketing/reviews'
+import  gql from 'graphql-tag'
+import  reviews from '~/apollo/mutations/marketing/reviews'
+import  allReviews from '~/apollo/queries/marketing/reviews'
 
 const DELETE_REVIEW = gql `
   mutation delete_reviews($id: Int!){

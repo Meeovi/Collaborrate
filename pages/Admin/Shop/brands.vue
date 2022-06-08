@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import brands from '~/apollo/queries/shop/brands'
+import  brands from '~/apollo/queries/shop/brands'
 
 export default {
   data() {

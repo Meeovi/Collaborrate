@@ -45,6 +45,7 @@ export default {
       { src: 'https://polyfill.io/v3/polyfill.min.js?features=es2015', ssr: false },
       // { src: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.js', ssr: false },
       { src: 'https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js', ssr: false },
+      { src: 'https://cdn.jsdelivr.net/gh/Rakhmadi/RdataTB@master/dist/index.js', ssr: false },
       { src: '/assets/popper/popper.min.js', ssr: false },
       { src: '/assets/tether/tether.min.js', ssr: false },
       { src: '/assets/smoothscroll/smooth-scroll.js', ssr: false },
@@ -60,25 +61,20 @@ export default {
     '~/static/styles/styles.css',
     'simplemde/dist/simplemde.min.css',
     '~/static/styles/snow.min.css',
-    '~/static/extensions/DataTables/datatables.min.css',
   ],
 
-  script: [
-    '~/static/extensions/DataTables/datatables.min.js',
-  ],
+  script: [],
 
   plugins: [
     { src: '~/plugins/extensions/simplemde.js', ssr: false },
     { src: '~/plugins/main.js', ssr: false },
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
-    { src: '~/plugins/ecommerce/paypal.js', ssr: false },
     { src: '~/plugins/ecommerce/pa-dss.js', ssr: false },
     { src: '~/plugins/client.js', ssr: false },
-    { src: '~/plugins/extensions/datatables.js', ssr: false },
+    // { src: '~/plugins/extensions/media-library.js', ssr: false },
     { src: '~/plugins/axios'},
     // { src: '~/plugins/extensions/email.js', ssr: false },
     { src: '~/plugins/upload.js', ssr: false },
-    { src: '~/plugins/extensions/charts.js', ssr: false },
   ],
 
   components: true,
@@ -95,18 +91,14 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/sentry',
     '@nuxtjs/apollo',
-    // '@nuxtjs/auth-next',
+    '@nuxt/http',
     'nuxt-leaflet',
     '@nuxtjs/i18n',
-    '@nuxtjs/gtm',
     'nuxt-socket-io',
     '@nuxtjs/universal-storage',
     // '@nuxtjs/recaptcha',
-    '@nuxtjs/google-analytics',
     '@nuxtjs/robots',
-    '@nuxtjs/google-adsense',
     '@nuxtjs/sitemap',
-    '@nuxtjs/vuetify',
     'nuxt-helmet',
     '@nuxt/image',
     'nuxt-client-init-module',
@@ -119,47 +111,14 @@ export default {
     middleware: []
   },
 
-  /* auth: {
-    // Options
-    strategies: {
-      local: {
-        token: {
-          property: 'jwt',
-        },
-        user: {
-          property: false,
-        },
-        endpoints: {
-          login: {
-            url: 'auth/local',
-            method: 'post',
-          },
-          user: {
-            url: 'user/my-account',
-            method: 'get',
-          },
-          logout: false,
-        },
-      },
-    },
-  }, */
-
   image: {
     // Options
   },
 
   helmet: {},
-  
-    'google-adsense': {
-        id: 'ca-pub-#########'
-    },
 
   sitemap: {
     hostname: 'http://localhost'
-  },
-
-  googleAnalytics: {
-    id: 'UA-XXX-X'
   },
 
   storage: {
@@ -186,10 +145,6 @@ export default {
         default: true,
       },
     ]
-  },
-
-  gtm: {
-    id: 'GTM-XXXXXXX'
   },
 
   i18n: {

@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import glossary from '~/apollo/queries/content/glossaries.gql'
+import  glossary from '~/apollo/queries/content/glossaries.gql'
 
 export default {
   data() {

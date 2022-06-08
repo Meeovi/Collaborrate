@@ -209,11 +209,11 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
 
-  import {
+  import 
     targets
-  } from "~/apollo/queries/customers/targets";
+  from "~/apollo/queries/customers/targets";
 /* eslint-disable camelcase */
   const ADD_TARGETS = gql `
     mutation ($prefix: String!, $account_name: String!, $address: String!, $address: String!, $city: String!, $country: String!, $postalcode: String!, $department: String!, $customer_name: String!, $description: String!, $email: String!, $fax: String!, $first_name: String!, $last_name: String!, $job_title: String!, $email_opt_out: String!, $donotcall: String!, $mobile: String!, $office_phone: String!, $state: String!, $website: String){

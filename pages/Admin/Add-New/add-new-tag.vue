@@ -73,8 +73,8 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
-import { tags } from "~/apollo/queries/content/tags";
+import  gql from "graphql-tag";
+import tags from "~/apollo/queries/content/tags";
 
 const ADD_TAGS = gql`
     mutation ($name:String!,$excerpt:String){

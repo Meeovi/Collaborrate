@@ -92,9 +92,9 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 
-import {rewards} from "~/apollo/queries/marketing/rewards";
+import rewards from "~/apollo/queries/marketing/rewards";
 
   const ADD_REWARDS = gql `
     mutation ($name: String!,$expiration: String!,$customers: String!,$coupons: String!,$categories: String!,$slug: String!,$products: String!,$users: String!,$articles: String!,$level: String!){

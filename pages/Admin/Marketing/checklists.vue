@@ -42,7 +42,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import checklist from '~/apollo/queries/marketing/checklists'
+ import  checklist from '~/apollo/queries/marketing/checklists'
 
 export default {
   data() {

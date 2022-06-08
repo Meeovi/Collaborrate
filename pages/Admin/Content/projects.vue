@@ -36,7 +36,7 @@
 </template>
 
 <script>
- import articles from '~/apollo/queries/content/articles'
+ import  articles from '~/apollo/queries/content/articles'
 
 export default {
   data() {

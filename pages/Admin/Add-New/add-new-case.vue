@@ -74,9 +74,9 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 /* eslint-disable camelcase */
-import { cases } from "~/apollo/queries/reports/cases";
+import cases from "~/apollo/queries/reports/cases";
 
 const ADD_CASES = gql`
     mutation ($status:String!,$state:String,$assigned_to:String,$description:String,$resolution:String!,$subject:String!,$type:String!,$priority:String!,$account_name:String){

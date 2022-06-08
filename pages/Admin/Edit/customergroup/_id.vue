@@ -30,11 +30,11 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
+import  gql from 'graphql-tag'
 // eslint-disable-next-line camelcase
-import customer_groups from '~/apollo/mutations/customers/customerGroups'
+import  customer_groups from '~/apollo/mutations/customers/customerGroups'
 // eslint-disable-next-line camelcase
-import allCustomer_group from '~/apollo/queries/customers/customerGroups'
+import  allCustomer_group from '~/apollo/queries/customers/customerGroups'
 
 const DELETE_CUSTOMER_GROUP = gql `
   mutation delete_customer_groups($id: Int!){

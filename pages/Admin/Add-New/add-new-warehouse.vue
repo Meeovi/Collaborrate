@@ -112,13 +112,13 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
 
-  import {
+  import 
     warehouses
-  } from "~/apollo/queries/shop/warehouses";
-  import states from '~/apollo/queries/shop/states'
-  import countries from '~/apollo/queries/shop/countries'
+  from "~/apollo/queries/shop/warehouses";
+  import  states from '~/apollo/queries/shop/states'
+  import  countries from '~/apollo/queries/shop/countries'
 
   const ADD_WAREHOUSES = gql `
     mutation ($name: String!,$description: String!,$image: String!,$products: String!,$status: String!,$state: String!,$postal: String!,$country: String!,$isPublic: String!,$city: String){

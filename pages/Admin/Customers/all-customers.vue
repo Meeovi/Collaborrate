@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import customers from '~/apollo/queries/customers/customers'
+import  customers from '~/apollo/queries/customers/customers'
 
 export default {
   data() {

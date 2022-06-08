@@ -34,7 +34,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import product_types from '~/apollo/queries/shop/product-type.gql'
+ import  product_types from '~/apollo/queries/shop/product-type.gql'
 
 export default {
   data() {

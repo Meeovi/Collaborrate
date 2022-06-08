@@ -35,9 +35,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import attributes from '~/apollo/mutations/shop/attributes'
-import allAttributes from '~/apollo/queries/shop/attributes'
+import  gql from 'graphql-tag'
+import  attributes from '~/apollo/mutations/shop/attributes'
+import  allAttributes from '~/apollo/queries/shop/attributes'
 
 const DELETE_ATTRIBUTE = gql `
   mutation delete_attributes($id: Int!){

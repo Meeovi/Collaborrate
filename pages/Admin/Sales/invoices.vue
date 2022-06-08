@@ -46,7 +46,7 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import invoices from '~/apollo/queries/sales/invoices'
+import  invoices from '~/apollo/queries/sales/invoices'
 
 export default {
   data() {

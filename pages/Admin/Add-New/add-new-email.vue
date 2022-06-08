@@ -76,11 +76,11 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
 
-  import {
+  import 
     emails
-  } from "~/apollo/queries/marketing/emails";
+  from "~/apollo/queries/marketing/emails";
 
   const ADD_EMAILS = gql `
     mutation ($from:String!,$subject:String!,$bcc:String!,$content:String!,$media:String!,$bcc:String!,$cc:String!){

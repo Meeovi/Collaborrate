@@ -101,11 +101,11 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
 
-  import {
+  import 
     visits
-  } from "~/apollo/queries/marketing/visits";
+  from "~/apollo/queries/marketing/visits";
   /* eslint-disable camelcase */
 
   const ADD_VISITS = gql `

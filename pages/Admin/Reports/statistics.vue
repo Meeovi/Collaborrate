@@ -43,7 +43,7 @@
 </template>
 
 <script>
- import statistics from '~/apollo/queries/reports/statistics'
+ import  statistics from '~/apollo/queries/reports/statistics'
 
 export default {
   data() {

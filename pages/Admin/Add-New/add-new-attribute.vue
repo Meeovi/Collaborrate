@@ -111,10 +111,10 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
-  import {
+  import  gql from "graphql-tag";
+  import 
     attributes
-  } from "~/apollo/queries/shop/attributes";
+  from "~/apollo/queries/shop/attributes";
 
   const ADD_ATTRIBUTES = gql `
     mutation ($default_label:String!,$allow_html_tags_storefront:String!, $attribute_class:String!, $attribute_code:String!, $attribute_value:String!, $column_options:String!, $faceted_navigation:String!, $filter_options:String!, $id:String!, $isPublic:String!, $layered_navigation:String!, $meta_description:String!, $meta_name:String!, $meta_url:String!, $position:String!, $prod_id:String!,){

@@ -245,11 +245,11 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
 
-  import {
+  import 
     leads
-  } from "~/apollo/queries/customers/leads";
+  from "~/apollo/queries/customers/leads";
 /* eslint-disable camelcase */
   const ADD_LEADS = gql `
     mutation ($prefix: String!, $account_name: String!, $address: String!, $address: String!, $city: String!, $country: String!, $postalcode: String!, $campaign: String!, $customer_name: String!, $description: String!, $department: String!, $email: String!, $fax: String!, $first_name: String!, $last_name: String!, $job_title: String!, $lead_source: String!, $lead_source_description: String!, $mobile: String!, $status: String!, $status_description: String!, $office_phone: String!, $opportunity_amount: String!, $state: String!, $website: String!, $assigned_to: String){

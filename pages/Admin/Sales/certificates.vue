@@ -38,7 +38,7 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gift_certificates from '~/apollo/queries/sales/gift_certificates'
+import  gift_certificates from '~/apollo/queries/sales/gift_certificates'
 
 export default {
   data() {

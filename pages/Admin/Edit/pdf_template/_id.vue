@@ -115,9 +115,9 @@
 
 <script>
 /* eslint-disable camelcase */
-import gql from 'graphql-tag'
-import pdf_templates from '~/apollo/mutations/marketing/pdf_templates'
-import allPdf_templates from '~/apollo/queries/marketing/pdf_templates'
+import  gql from 'graphql-tag'
+import  pdf_templates from '~/apollo/mutations/marketing/pdf_templates'
+import  allPdf_templates from '~/apollo/queries/marketing/pdf_templates'
 
 const DELETE_PDF_TEMPLATE = gql `
   mutation delete_pdf_templates($id: Int!){

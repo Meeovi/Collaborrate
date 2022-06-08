@@ -72,10 +72,10 @@
 
 <script>
 /* eslint-disable camelcase */
-import gql from 'graphql-tag'
-import zones from '~/apollo/mutations/system/zones'
-import allZones from '~/apollo/queries/system/zones'
-import country from "~/apollo/queries/shop/countries"
+import  gql from 'graphql-tag'
+import  zones from '~/apollo/mutations/system/zones'
+import  allZones from '~/apollo/queries/system/zones'
+import  country from "~/apollo/queries/shop/countries"
 
 const DELETE_ZONE = gql `
   mutation delete_zones($id: Int!){

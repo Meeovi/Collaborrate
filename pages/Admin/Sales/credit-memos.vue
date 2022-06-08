@@ -38,7 +38,7 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import credit_memos from '~/apollo/queries/sales/credit_memos'
+import  credit_memos from '~/apollo/queries/sales/credit_memos'
 
 export default {
   data() {

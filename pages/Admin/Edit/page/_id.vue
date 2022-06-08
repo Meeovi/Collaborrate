@@ -96,9 +96,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import pages from '~/apollo/mutations/content/pages'
-import allPages from '~/apollo/queries/content/pages'
+import  gql from 'graphql-tag'
+import  pages from '~/apollo/mutations/content/pages'
+import  allPages from '~/apollo/queries/content/pages'
 
 const DELETE_PAGE = gql `
   mutation delete_pages($id: Int!){

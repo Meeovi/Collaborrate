@@ -85,8 +85,8 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
-import { city } from "~/apollo/queries/shop/cities";
+import  gql from "graphql-tag";
+import city from "~/apollo/queries/shop/cities";
 
 const ADD_CITIES = gql`
     mutation ($name:String!,$state:String,$country:String,$postalCode:String,$description:String){

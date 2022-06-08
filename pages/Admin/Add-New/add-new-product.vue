@@ -316,19 +316,19 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
 
-  import products from "~/apollo/queries/shop/products";
-  import categories from "~/apollo/queries/shop/categories"
-  import countries from "~/apollo/queries/shop/countries"
-  import product_attribute from "~/apollo/queries/shop/attributes"
-  import product_types from "~/apollo/queries/shop/product-type"
-  import brands from "~/apollo/queries/shop/brands"
-  import contracts from "~/apollo/queries/marketing/contracts"
-  import occassions from "~/apollo/queries/shop/occassions"
-  import manufacturer from "~/apollo/queries/shop/manufacturer"
-  import tags from "~/apollo/queries/content/tags"
-  import zones from "~/apollo/queries/system/zones"
+  import  products from "~/apollo/queries/shop/products";
+  import  categories from "~/apollo/queries/shop/categories"
+  import  countries from "~/apollo/queries/shop/countries"
+  import  product_attribute from "~/apollo/queries/shop/attributes"
+  import  product_types from "~/apollo/queries/shop/product-type"
+  import  brands from "~/apollo/queries/shop/brands"
+  import  contracts from "~/apollo/queries/marketing/contracts"
+  import  occassions from "~/apollo/queries/shop/occassions"
+  import  manufacturer from "~/apollo/queries/shop/manufacturer"
+  import  tags from "~/apollo/queries/content/tags"
+  import  zones from "~/apollo/queries/system/zones"
 
   const ADD_PRODUCTS = gql `
     mutation ($attributes: String!, $brand: String!, $categories: String!, $content: String!, $contract: String!, $cost_string: String!, $country: String!, $created_at: String!, $customer_type: String!, $family: String!, $file: String!, $format: String!, $height: String!, $id: String!, $image: String!, $manufacture: String!, $manufacturer_part_number: String!, $occassions: String!, $name: String!, $meta_url: String!, $meta_title: String!, $meta_keywords: String!, $meta_description: String!, $part_number: String!, $price: String!, $product: String!, $quantity_per_source: String!, $related_product: String!, $salable_quantity: String!, $short_description: String!, $size: String!, $sku: String!, $status: String!, $stock_status: String!, $tags: String!, $tax_class: String!, $thumbnail: String!, $types: String!, $variants: String!, $visibility: String!, $websites: String!, $weight: String!, $zone: String!){

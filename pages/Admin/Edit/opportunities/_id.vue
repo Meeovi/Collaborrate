@@ -65,9 +65,9 @@
 </template>
 
 <script>
-import gql from 'graphql-tag'
-import opportunities from '~/apollo/mutations/customers/opportunities'
-import allOpportunities from '~/apollo/queries/customers/opportunities'
+import  gql from 'graphql-tag'
+import  opportunities from '~/apollo/mutations/customers/opportunities'
+import  allOpportunities from '~/apollo/queries/customers/opportunities'
 
 const DELETE_OPPORTUNITY = gql `
   mutation delete_opportunities($id: Int!){

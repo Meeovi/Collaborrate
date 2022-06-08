@@ -82,11 +82,11 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 /* eslint-disable camelcase */
 
-import { opportunities } from "~/apollo/queries/customers/opportunities";
-import categories from '~/apollo/queries/shop/categories'
+import opportunities from "~/apollo/queries/customers/opportunities";
+import  categories from '~/apollo/queries/shop/categories'
 
 const ADD_OPPORTUNITIES = gql `
     mutation ($name: String!, $next_step: String!, $name: String!, $grand_total: String!, $categories: String!, $quote_stage: String!, $valid_until: String!, $lead_source: String!, $expected_close_date: String!, $assigned_to: String!, $description: String!, $currency: String!, $campaign: String!, $amount: String!, $account_name: String!, $next_step: String!, $created_at: String!, $probability: String!, $sales_stage: String!, $type: String!){

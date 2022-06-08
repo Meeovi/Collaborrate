@@ -57,9 +57,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import tags from '~/apollo/mutations/content/tags'
-import allTags from '~/apollo/queries/content/tags'
+import  gql from 'graphql-tag'
+import  tags from '~/apollo/mutations/content/tags'
+import  allTags from '~/apollo/queries/content/tags'
 
 const DELETE_TAG = gql `
   mutation delete_tags($id: Int!){

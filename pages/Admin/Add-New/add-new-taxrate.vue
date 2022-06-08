@@ -62,8 +62,8 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
-import { taxRate } from "~/apollo/queries/shop/taxrate";
+import  gql from "graphql-tag";
+import taxRate from "~/apollo/queries/shop/taxrate";
 
 const ADD_TAX_RATE = gql`
     mutation ($country:String! $default_store_view:String! $zip_post_is_range:Boolean! $tax_identifier:String! $state:String! $rate_percent:String! $postcode:String){

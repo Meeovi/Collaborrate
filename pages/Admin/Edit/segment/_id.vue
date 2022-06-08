@@ -36,9 +36,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import segments from '~/apollo/mutations/customers/segments'
-import allSegments from '~/apollo/queries/customers/segments'
+import  gql from 'graphql-tag'
+import  segments from '~/apollo/mutations/customers/segments'
+import  allSegments from '~/apollo/queries/customers/segments'
 
 const DELETE_SEGMENT = gql `
   mutation delete_segments($id: Int!){

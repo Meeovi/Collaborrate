@@ -58,9 +58,9 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 
-import { ooto } from "~/apollo/queries/system/ooto";
+import ooto from "~/apollo/queries/system/ooto";
 
 const ADD_OOTO = gql`
     mutation ($login:String!,$description:String!,$whid:String!,$start_date:String!,$end_date:String){

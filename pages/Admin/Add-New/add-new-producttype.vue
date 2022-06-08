@@ -85,10 +85,10 @@
 
 <script>
 /* eslint-disable camelcase */
-  import gql from "graphql-tag";
-  import {
+  import  gql from "graphql-tag";
+  import 
     product_types
-  } from "~/apollo/queries/shop/product-type";
+  from "~/apollo/queries/shop/product-type";
 
   const ADD_PRODUCT_TYPES = gql `
     mutation ($type_name:String!,$taxes:String!, $filter_options:String!, $id:String!, $isShippable:String!, $meta_description:String!, $meta_name:String!, $meta_url:String!, $position:String!, $prod_id:String!,){

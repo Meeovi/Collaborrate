@@ -38,7 +38,7 @@
 </template>
 
 <script>
- import products from '~/apollo/queries/shop/products'
+ import  products from '~/apollo/queries/shop/products'
 
 export default {
   data() {

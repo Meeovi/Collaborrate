@@ -46,9 +46,9 @@
 
 <script>
 /* eslint-disable camelcase */
-import gql from 'graphql-tag'
-import tax_rates from '~/apollo/mutations/shop/taxrate'
-import allTax_rates from '~/apollo/queries/shop/taxrate'
+import  gql from 'graphql-tag'
+import  tax_rates from '~/apollo/mutations/shop/taxrate'
+import  allTax_rates from '~/apollo/queries/shop/taxrate'
 
 const DELETE_TAX_RATE = gql `
   mutation delete_tax_rates($id: Int!){

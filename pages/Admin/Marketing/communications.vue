@@ -35,7 +35,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import emails from '~/apollo/queries/marketing/emails'
+ import  emails from '~/apollo/queries/marketing/emails'
 
 export default {
   data() {

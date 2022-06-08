@@ -34,6 +34,18 @@ body {
     height: 30px;
 }
 
+nav a, nav .fas, nav li {
+    color: white !important;
+}
+
+nav a:hover, nav .fas:hover, nav li:hover {
+    color: white !important;
+}
+
+nav .dropdown-item {
+    color: black !important;
+}
+
 /******************* Dashboard CSS *********/
 
 .dashboard {
@@ -151,3 +163,13 @@ input, select, option {
     padding: 5px;
     text-align: center;
 }
+
+.modal-dialog {
+    max-width: 80% !important;
+    background-color: white !important;
+}
+
+.modal-dialog, .modal-content {
+    height: auto !important;
+}
+

@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import agreements from '~/apollo/queries/sales/agreements'
+import  agreements from '~/apollo/queries/sales/agreements'
 
 export default {
   data() {

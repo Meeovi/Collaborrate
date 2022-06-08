@@ -58,9 +58,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import deepdive from '~/apollo/mutations/reports/deepdive'
-import allDeepdive from '~/apollo/queries/reports/deepdive'
+import  gql from 'graphql-tag'
+import  deepdive from '~/apollo/mutations/reports/deepdive'
+import  allDeepdive from '~/apollo/queries/reports/deepdive'
 
 const DELETE_DEEPDIVE = gql `
   mutation delete_deepdive($id: Int!){

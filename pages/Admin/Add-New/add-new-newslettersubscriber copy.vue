@@ -119,9 +119,9 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 
-import customers from "~/apollo/queries/customers/customers"
+import  customers from "~/apollo/queries/customers/customers"
 
 const ADD_CUSTOMERS = gql`
     mutation ($first_name:String!,$middle_name:String!,$last_name:String!,$gender:String!,$email:String!,$description:String!,$date_of_birth:String!,$websites:String!,$customer_group:String!,$phone:String!,$zipcode:String!,$name_prefix:String!,$name_suffix:String!,$product:String!,$state:String!,$country:String!,$tax_vat_number: String!,$Address:String!,$address_two:String!,$short_description:String!,$image: String){

@@ -52,16 +52,16 @@
 </template>
 
 <script>
-// import products from '~/apollo/queries/shop/products'
-// import charts from '~/components/dashboard/charts'
-import Customerslimit from '~/components/customerslimit'
-import Newcustomers from '~/components/newcustomers'
-import Reviewslimit from '~/components/reviewslimit'
-import searchterms from '~/components/dashboard/searchterms/searchterms'
-import sales from '~/components/dashboard/sales/sales'
-import orders from '~/components/dashboard/orders/orders'
-import mostviewed from '~/components/dashboard/mostviewed/mostviewed'
-import bestsellers from '~/components/dashboard/bestsellers/bestsellers'
+// import  products from '~/apollo/queries/shop/products'
+// import  charts from '~/components/dashboard/charts'
+import  Customerslimit from '~/components/customerslimit'
+import  Newcustomers from '~/components/newcustomers'
+import  Reviewslimit from '~/components/reviewslimit'
+import  searchterms from '~/components/dashboard/searchterms/searchterms'
+import  sales from '~/components/dashboard/sales/sales'
+import  orders from '~/components/dashboard/orders/orders'
+import  mostviewed from '~/components/dashboard/mostviewed/mostviewed'
+import  bestsellers from '~/components/dashboard/bestsellers/bestsellers'
 
 export default {
   components: { 

@@ -1,0 +1,8 @@
+query MyQuery {
+  roles {
+    id
+    created_at
+    content
+    role_name
+  }
+}

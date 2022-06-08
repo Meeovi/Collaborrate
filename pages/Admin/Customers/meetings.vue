@@ -43,7 +43,7 @@
 </template>
 
 <script>
- import meetings from '~/apollo/queries/customers/meetings'
+ import  meetings from '~/apollo/queries/customers/meetings'
 
 export default {
    data() {

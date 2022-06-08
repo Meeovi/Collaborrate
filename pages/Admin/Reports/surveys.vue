@@ -37,7 +37,7 @@
 </template>
 
 <script>
- import surveys from '~/apollo/queries/reports/surveys'
+ import  surveys from '~/apollo/queries/reports/surveys'
 
 export default {
   data() {

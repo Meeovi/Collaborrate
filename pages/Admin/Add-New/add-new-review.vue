@@ -56,8 +56,8 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
-import reviews from "~/apollo/queries/marketing/reviews"
+import  gql from "graphql-tag";
+import  reviews from "~/apollo/queries/marketing/reviews"
 
 const ADD_REVIEWS = gql`
     mutation ($first_name:String!,$last_name:String!$websites:String!,$content:String){

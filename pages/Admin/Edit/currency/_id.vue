@@ -49,9 +49,9 @@
 
 <script>
 /* eslint-disable camelcase */
-import gql from 'graphql-tag'
-import currencies from '~/apollo/mutations/system/currencies'
-import allCurrencies from '~/apollo/queries/system/currencies'
+import  gql from 'graphql-tag'
+import  currencies from '~/apollo/mutations/system/currencies'
+import  allCurrencies from '~/apollo/queries/system/currencies'
 
 const DELETE_CURRENCY = gql `
   mutation delete_currencies($id: Int!){

@@ -37,7 +37,7 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import wishlists from '~/apollo/queries/shop/wishlists'
+import  wishlists from '~/apollo/queries/shop/wishlists'
 
 export default {
   data() {

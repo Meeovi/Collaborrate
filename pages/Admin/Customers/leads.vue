@@ -41,7 +41,7 @@
 </template>
 
 <script>
- import leads from '~/apollo/queries/customers/leads'
+ import  leads from '~/apollo/queries/customers/leads'
 
 export default {
    data() {

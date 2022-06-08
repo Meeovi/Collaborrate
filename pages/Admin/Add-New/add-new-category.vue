@@ -121,9 +121,9 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 
-import { categories } from "~/apollo/queries/shop/categories";
+import categories from "~/apollo/queries/shop/categories";
 
 const ADD_CATEGORIES = gql`
     mutation ($name:String!,$product:String,$content:String,$image:String,$meta_title:String,$meta_keywords:String,$meta_description:String){

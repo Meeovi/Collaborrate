@@ -31,7 +31,7 @@
 </template>
 
 <script>
- import warehouse from '~/apollo/queries/shop/warehouses.gql'
+ import  warehouse from '~/apollo/queries/shop/warehouses.gql'
 
 export default {
   data() {

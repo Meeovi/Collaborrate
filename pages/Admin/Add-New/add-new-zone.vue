@@ -71,9 +71,9 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
-  import zones from "~/apollo/queries/system/zones"
-  import country from "~/apollo/queries/shop/countries"
+  import  gql from "graphql-tag";
+  import  zones from "~/apollo/queries/system/zones"
+  import  country from "~/apollo/queries/shop/countries"
 
   const ADD_ZONES = gql `
     mutation ($code:String!,$name:String!$type:String!,$scope:String!,$country:String!){

@@ -112,10 +112,10 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 /* eslint-disable camelcase */
-import ticketing from '~/apollo/mutations/marketing/ticketing'
-import allTicketing from '~/apollo/queries/marketing/ticketing'
+import  ticketing from '~/apollo/mutations/marketing/ticketing'
+import  allTicketing from '~/apollo/queries/marketing/ticketing'
 
 const DELETE_TICKETING = gql `
   mutation delete_ticketing($id: Int!){

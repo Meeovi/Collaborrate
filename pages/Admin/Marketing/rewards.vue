@@ -38,7 +38,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import rewards from '~/apollo/queries/marketing/rewards'
+ import  rewards from '~/apollo/queries/marketing/rewards'
 
 export default {
   data() {

@@ -90,14 +90,14 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 /* eslint-disable camelcase */
-import {
+import 
     shops
-  } from "~/apollo/queries/shop/shops";
-  import categories from "~/apollo/queries/shop/categories"
-  import countries from "~/apollo/queries/shop/countries"
-  // import products from "~/apollo/queries/shop/products"
+  from "~/apollo/queries/shop/shops";
+  import  categories from "~/apollo/queries/shop/categories"
+  import  countries from "~/apollo/queries/shop/countries"
+  // import  products from "~/apollo/queries/shop/products"
 
   const ADD_SHOPS = gql `
     mutation ($thumbnail: String!,$name: String!,$product: String!,$statistics: String!,$special_discounts: String!,$reward_points: String!,$gift_certificates: String!,$website: String!,$invoices: String!,$customers: String!,$coupons: String!,$articles: String!,$polls: String!,$categories: String!,$country: String!,$quotes: String!,$rating: String!,$reports: String!,$description: String!,$reviews: String!,$image: Upload!,$stocks: String!,$tags: String!,$users: String!,$physical_store: String!,$type: String){

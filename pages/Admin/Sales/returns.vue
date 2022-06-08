@@ -36,7 +36,7 @@
 </template>
 
 <script>
- import returns from '~/apollo/queries/sales/returns'
+ import  returns from '~/apollo/queries/sales/returns'
 
 export default {
   data() {

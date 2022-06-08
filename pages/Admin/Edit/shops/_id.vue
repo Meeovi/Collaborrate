@@ -225,9 +225,9 @@
 </template>
 
 <script>
-import gql from 'graphql-tag'
-import shops from '~/apollo/mutations/shop/shops'
-import allShops from '~/apollo/queries/shop/shops'
+import  gql from 'graphql-tag'
+import  shops from '~/apollo/mutations/shop/shops'
+import  allShops from '~/apollo/queries/shop/shops'
 
 const DELETE_SHOP = gql `
   mutation delete_shops($id: Int!){

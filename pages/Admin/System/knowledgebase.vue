@@ -38,7 +38,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import knowledgebase from '~/apollo/queries/system/knowledgebase'
+ import  knowledgebase from '~/apollo/queries/system/knowledgebase'
 
 export default {
   data() {

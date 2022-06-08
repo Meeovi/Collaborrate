@@ -118,12 +118,12 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 
-import { events } from "~/apollo/queries/marketing/events";
-// import category from "~/apollo/queries/shop/category"
-// import countries from "~/apollo/queries/shop/countries"
-// import attributes from "~/apollo/queries/shop/attributes"
+import events from "~/apollo/queries/marketing/events";
+// import  category from "~/apollo/queries/shop/category"
+// import  countries from "~/apollo/queries/shop/countries"
+// import  attributes from "~/apollo/queries/shop/attributes"
 
 const ADD_EVENTS = gql`
     mutation ($image: Upload!,$name: String!,$postalcode: String!,$start: String!,$end: String!,$tickets: String!,$content: String!,$country: String!,$city: String!,$state: String!,$category: String){

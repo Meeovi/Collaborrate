@@ -1,128 +1,49 @@
 <template>
-  <section class="form4 cid-t58K4mPmcD mbr-fullscreen" id="form4-g">
+  <section class="form7 cid-t854WVJEj7" id="form7-u">
+    
+    <div class="mbr-overlay"></div>
     <div class="container-fluid">
-      <div class="row content-wrapper justify-content-center">
-        <div class="col-lg-3 offset-lg-1 mbr-form" data-form-type="formoid">
-          <b-container>
-            <h2 class="title has-text-centered" style="color:white;">Welcome back!</h2>
-
-            <Notification :message="error" v-if="error" />
-            <b-row>
-              <b-col md="4" offset-md="4" class="mt-5">
-                <FormulateForm method="post" @submit.prevent="userLogin">
-                  <div v-if="err" class=" p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
-                    {{ err }}
-                  </div>
-                    <div class="form-group">
-                      <label for="email" style="color:white;">Email address</label>
-                      <FormulateInput id="email" v-model="email" type="email" class="form-control"
-                        aria-describedby="emailHelp" required autofocus />
-                    </div>
-                    <div class="form-group">
-                      <label for="password" style="color:white;">Password</label>
-                      <FormulateInput id="password" v-model="password" type="password" class="form-control" required />
-                    </div>
-                    <FormulateInput type="submit">Login</FormulateInput>
-                </FormulateForm>
-                <div class="has-text-centered" style="margin-top: 20px">
-                  <p style="color:white;text-align: center;">
-                    Don't have an account? <nuxt-link to="/auth/register" style="color:lightblue;">Register</nuxt-link>
-                  </p>
-                </div>
-              </b-col>
-            </b-row>
-          </b-container>
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>Login</strong></h3>
+            
         </div>
-        <div class="col-lg-7 offset-lg-1 col-12">
-          <div class="image-wrapper">
-            <img class="w-100" src="/assets/images/mbr-1266x633.jpg" alt="AlternateCMS">
-          </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="kb38BQLDbbIP2NDjcV6hbmZx+j1arqQFcJu7EAWpftdIOG2AfkOeCuxVAsOa/rmxsh/Cuymr8XhLBoXgUA43SzcuN5ckyqyJn+2ZtsqQ1I/uJXpV71/v58HIuzxo1yx0">
+                    <p class="mbr-text mbr-fonts-style align-center mb-4 display-7">
+                        Don't have an account? <a href="/auth/register" class="text-primary">Create One</a></p>
+                    <div class="">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling
+                            out the form!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some
+                            problem!</div>
+                    </div>
+                    <div class="dragArea row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="name">
+                            <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-form7-u">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="email">
+                            <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control" value="" id="email-form7-u">
+                        </div>
+                        <div data-for="phone" class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            <input type="tel" name="phone" placeholder="Phone" data-form-field="phone" class="form-control" value="" id="phone-form7-u">
+                        </div>
+                        <div class="col-auto mbr-section-btn align-center"><button type="submit" class="btn btn-primary display-4">Login</button></div>
+                    </div>
+                </form>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 </template>
 
 <script>
-import gql from "graphql-tag";
 
-import { articles } from "~/apollo/queries/content/articles";
-import categories from '~/apollo/queries/shop/categories'
-
-const ADD_ARTICLES = gql`
-    mutation ($name:String!,$excerpt:String,$categories:String,$content:String,$image:String){
-    insert_articles(objects: {name: $name, excerpt: $excerpt, categories: $categories, content: $content, image: $image}) {
-        affected_rows
-        returning {
-            name
-            excerpt
-            categories
-            content
-            image
-    }
-  }
-}`;
-
-export default {
-    data() {
-    return {
-        categories: [],
-        name: " ",
-        excerpt: " ",
-        content: " ",
-        image: " ",
-        
-      }
-  },
-  methods: {
-      async addArticle() {
-            const name = this.name;
-            const content = this.content;
-            const excerpt = this.excerpt;
-            const categories = this.categories;
-            const image = this.image;
-            await this.$apollo.mutate({
-                mutation: ADD_ARTICLES,
-                variables: {
-                    name,
-                    excerpt,
-                    categories,
-                    content,
-                    image,
-                },
-        update: (cache, { data: { insertCategories }}) => {
-                        // Read data from cache for this query
-                        try {
-                            const insertedCategory = insertCategories.returning;
-                            console.log(insertedCategory)
-                            cache.writeQuery({
-                                query: articles
-                            })
-                        }
-                        catch (err) {
-                            console.error(err)
-                        }
-                    }
-                }).then(() => {
-                    this.$router.push({path: '../content/blog'})
-                }).catch(err => console.log(err));
-                this.name = ' ';
-                this.excerpt = ' ';
-                this.categories = ' ';
-                this.content = ' ';
-                this.image = ' ';
-            },
-            
-        },
-    apollo: {
-        categories: {
-        prefetch: true,
-        query: categories
-        }
-    }, 
-    // eslint-disable-next-line vue/order-in-components
+  export default {
+    layout: 'nologin',
     head: {
-        title: 'Welcome Back'
+      title: 'Welcome Back!'
     }
-}
+    }
 </script>

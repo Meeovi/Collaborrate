@@ -41,7 +41,7 @@
 </template>
 
 <script>
- import contracts from '~/apollo/queries/marketing/contracts'
+ import  contracts from '~/apollo/queries/marketing/contracts'
 
 export default {
    data() {

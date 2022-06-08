@@ -105,11 +105,11 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import {
+  import 
     email_templates
-  } from "~/apollo/queries/marketing/email_templates";
+  from "~/apollo/queries/marketing/email_templates";
 
   const ADD_EMAIL_TEMPLATES = gql `
     mutation ($name: String!,$height: String!,$header: String!,$footer: String!,$content: String!,$email_template: String!,$media: String!,$subject: String!,$type: String!,$assigned_to: String!,$active: String!,$value: String!,$width: String){

@@ -35,7 +35,7 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import customer_group from '~/apollo/queries/customers/customerGroups'
+import  customer_group from '~/apollo/queries/customers/customerGroups'
 
 export default {
   data() {

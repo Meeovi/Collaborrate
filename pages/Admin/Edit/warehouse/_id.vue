@@ -91,9 +91,9 @@
 
 <script>
 /* eslint-disable camelcase */
-import gql from 'graphql-tag'
-import warehouses from '~/apollo/mutations/shop/warehouses'
-import allWarehouses from '~/apollo/queries/shop/warehouses'
+import  gql from 'graphql-tag'
+import  warehouses from '~/apollo/mutations/shop/warehouses'
+import  allWarehouses from '~/apollo/queries/shop/warehouses'
 
 const DELETE_WAREHOUSE = gql `
   mutation delete_warehouses($id: Int!){

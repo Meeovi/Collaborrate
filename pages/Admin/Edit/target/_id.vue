@@ -195,9 +195,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import targets from '~/apollo/mutations/customers/targets'
-import allTargets from '~/apollo/queries/customers/targets'
+import  gql from 'graphql-tag'
+import  targets from '~/apollo/mutations/customers/targets'
+import  allTargets from '~/apollo/queries/customers/targets'
 
 const DELETE_TARGET = gql `
   mutation delete_targets($id: Int!){

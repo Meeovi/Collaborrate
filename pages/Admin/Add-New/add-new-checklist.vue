@@ -107,11 +107,11 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
 
-  import {
+  import 
     checklists
-  } from "~/apollo/queries/marketing/checklists";
+  from "~/apollo/queries/marketing/checklists";
   /* eslint-disable camelcase */
 
   const ADD_CHECKLISTS = gql `

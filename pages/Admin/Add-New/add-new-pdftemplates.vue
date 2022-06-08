@@ -105,11 +105,11 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import {
+  import 
     pdf_templates
-  } from "~/apollo/queries/marketing/pdf_templates";
+  from "~/apollo/queries/marketing/pdf_templates";
 
   const ADD_PDF_TEMPLATES = gql `
     mutation ($name: String!,$margin_header: String!,$margin_bottom: String!,$margin_footer: String!,$content: String!,$margin_left: String!,$margin_right: String!,$orientation: String!,$type: String!,$assigned_to: String!,$active: String!,$margin_top: String!,$page_size: String){

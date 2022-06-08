@@ -56,9 +56,9 @@
 
 <script>
 /* eslint-disable camelcase */
-import gql from "graphql-tag";
-import { customer_group } from "~/apollo/queries/customers/customerGroups";
-// import tax from '~/apollo/queries/shop/tax'
+import  gql from "graphql-tag";
+import customer_group from "~/apollo/queries/customers/customerGroups";
+// import  tax from '~/apollo/queries/shop/tax'
 
 const ADD_GROUPS = gql`
     mutation ($name:String!,$tax_class:String){

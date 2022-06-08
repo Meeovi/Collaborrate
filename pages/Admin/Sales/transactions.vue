@@ -37,7 +37,7 @@
 </template>
 
 <script>
- import transactions from '~/apollo/queries/sales/transactions'
+ import  transactions from '~/apollo/queries/sales/transactions'
 
 export default {
   data() {

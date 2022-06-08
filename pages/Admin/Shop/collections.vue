@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import collections from '~/apollo/queries/shop/collections'
+import  collections from '~/apollo/queries/shop/collections'
 
 export default {
   data() {

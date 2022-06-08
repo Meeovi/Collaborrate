@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import importm from '~/apollo/queries/system/importm'
+import  importm from '~/apollo/queries/system/importm'
 
 export default {
   data() {

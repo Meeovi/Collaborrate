@@ -39,7 +39,7 @@
 </template>
 
 <script>
- import cases from '~/apollo/queries/reports/cases'
+ import  cases from '~/apollo/queries/reports/cases'
 
 export default {
   data() {

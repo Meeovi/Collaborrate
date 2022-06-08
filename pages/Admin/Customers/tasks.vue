@@ -40,7 +40,7 @@
 </template>
 
 <script>
- import tasks from '~/apollo/queries/customers/tasks'
+ import  tasks from '~/apollo/queries/customers/tasks'
 
 export default {
    data() {

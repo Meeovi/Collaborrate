@@ -87,9 +87,9 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 
-import { glossaries } from "~/apollo/queries/content/glossaries.gql";
+import glossaries from "~/apollo/queries/content/glossaries.gql";
 
 const ADD_GLOSSARIES = gql`
     mutation ($name:String!,$product:String,$content:String,$image:String,$published:timestamp){

@@ -58,8 +58,8 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
-import { shipments } from "~/apollo/queries/sales/shipments";
+import  gql from "graphql-tag";
+import shipments from "~/apollo/queries/sales/shipments";
 
 const ADD_SHIPMENTS = gql`
     mutation ($carrier_name:String!,$transit_time:String!,$image:String!,$tracking_url:String!,$speed_grade:String!,$product:String!){

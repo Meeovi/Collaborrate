@@ -185,14 +185,12 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import {
-    articles
-  } from "~/apollo/queries/content/articles";
-  import categories from '~/apollo/queries/shop/categories';
-  import tags from '~/apollo/queries/content/tags';
-  import customers from '~/apollo/queries/customers/customers';
+  import articles from "~/apollo/queries/content/articles";
+  import  categories from '~/apollo/queries/shop/categories';
+  import  tags from '~/apollo/queries/content/tags';
+  import  customers from '~/apollo/queries/customers/customers';
 
   const ADD_ARTICLES = gql `
     mutation ($categories:String!, $content:String!, $cust_id:String!, $customers:String!, $excerpt:String!, $id:String!, $image:String!, $isPublic:String!, $meta_description:String!, $meta_name:String!, $meta_url:String!, $name:String!, $published:String!, $tags:String!, $users:String!,){

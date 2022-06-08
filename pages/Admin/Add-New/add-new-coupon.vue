@@ -55,8 +55,8 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
-import coupons from "~/apollo/queries/shop/coupons"
+import  gql from "graphql-tag";
+import  coupons from "~/apollo/queries/shop/coupons"
 
 const ADD_COUPONS = gql`
     mutation ($name:String!,$discount:String!$expiration:String!,$excerpt:String){

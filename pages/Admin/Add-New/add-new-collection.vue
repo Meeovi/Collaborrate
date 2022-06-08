@@ -97,9 +97,9 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 
-import { collections } from "~/apollo/queries/shop/collections";
+import collections from "~/apollo/queries/shop/collections";
 
 const ADD_COLLECTIONS = gql`
     mutation ($name:String!,$description:String!,$image:String!,$meta_description:String!,$meta_keywords:String!,$meta_title:String!){

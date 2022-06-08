@@ -44,9 +44,9 @@
 </template>
 
 <script>
- import segments from '~/apollo/queries/customers/segments'
- import website from '~/apollo/queries/shop/website'
- import categories from '~/apollo/queries/shop/categories'
+ import  segments from '~/apollo/queries/customers/segments'
+ import  website from '~/apollo/queries/shop/website'
+ import  categories from '~/apollo/queries/shop/categories'
 
 export default {
    data() {

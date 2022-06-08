@@ -86,9 +86,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import agreements from '~/apollo/mutations/sales/agreement'
-import allAgreements from '~/apollo/queries/sales/agreements'
+import  gql from 'graphql-tag'
+import  agreements from '~/apollo/mutations/sales/agreement'
+import  allAgreements from '~/apollo/queries/sales/agreements'
 
 const DELETE_AGREEMENT = gql `
   mutation delete_agreements($id: Int!){

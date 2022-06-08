@@ -69,12 +69,12 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import {
+  import 
     surveys
-  } from "~/apollo/queries/reports/surveys";
-  import categories from '~/apollo/queries/shop/categories'
+  from "~/apollo/queries/reports/surveys";
+  import  categories from '~/apollo/queries/shop/categories'
 
   const ADD_SURVEYS = gql `
     mutation ($answer:String! $assigned_to:String! $created_at:String! $description:String! $dissatisfied_text:String! $name:String! $neither_text:String! $question:String! $satisfied_text:String! $status:String! $submit_text:String!){

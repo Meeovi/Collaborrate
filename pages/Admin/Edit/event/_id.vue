@@ -102,9 +102,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import events from '~/apollo/mutations/marketing/events'
-import allEvents from '~/apollo/queries/marketing/events'
+import  gql from 'graphql-tag'
+import  events from '~/apollo/mutations/marketing/events'
+import  allEvents from '~/apollo/queries/marketing/events'
 
 const DELETE_EVENT = gql `
   mutation delete_events($id: Int!){

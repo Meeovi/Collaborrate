@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import events from '~/apollo/queries/marketing/events'
+import  events from '~/apollo/queries/marketing/events'
 
 export default {
   data() {

@@ -31,12 +31,11 @@
         </tbody>
       </table>
     </div>
-
   </div>
 </template>
 
 <script>
-import pages from '~/apollo/queries/content/pages.gql'
+import  pages from '~/apollo/queries/content/pages.gql'
 
 export default {
   data() {

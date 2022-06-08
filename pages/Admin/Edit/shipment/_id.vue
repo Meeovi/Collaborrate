@@ -43,9 +43,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import shipments from '~/apollo/mutations/sales/shipments'
-import allShipments from '~/apollo/queries/sales/shipments'
+import  gql from 'graphql-tag'
+import  shipments from '~/apollo/mutations/sales/shipments'
+import  allShipments from '~/apollo/queries/sales/shipments'
 
 const DELETE_SHIPMENT = gql `
   mutation delete_shipments($id: Int!){

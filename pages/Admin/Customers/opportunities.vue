@@ -40,7 +40,7 @@
 </template>
 
 <script>
- import opportunities from '~/apollo/queries/customers/opportunities'
+ import  opportunities from '~/apollo/queries/customers/opportunities'
 
 export default {
    data() {

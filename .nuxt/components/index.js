@@ -1,6 +1,7 @@
 export { default as IoSocketStatus } from '../..\\node_modules\\nuxt-socket-io\\lib\\components\\SocketStatus.js'
 export { default as Breadcrumbs } from '../..\\components\\Breadcrumbs.vue'
 export { default as Colormode } from '../..\\components\\colormode.vue'
+export { default as Contenttypes } from '../..\\components\\contenttypes.vue'
 export { default as Customerslimit } from '../..\\components\\customerslimit.vue'
 export { default as Footer } from '../..\\components\\Footer.vue'
 export { default as Header } from '../..\\components\\Header.vue'
@@ -33,10 +34,17 @@ export { default as SettingsShopsettings } from '../..\\components\\settings\\sh
 export { default as SettingsTicketdisplay } from '../..\\components\\settings\\ticketdisplay.vue'
 export { default as SettingsWebhooks } from '../..\\components\\settings\\webhooks.vue'
 export { default as DashboardBestsellers } from '../..\\components\\dashboard\\bestsellers\\bestsellers.vue'
+export { default as DashboardMediaMediadetails } from '../..\\components\\dashboard\\media\\mediadetails.vue'
+export { default as DashboardMediaMediaedit } from '../..\\components\\dashboard\\media\\mediaedit.vue'
+export { default as DashboardMediaMediasettings } from '../..\\components\\dashboard\\media\\mediasettings.vue'
 export { default as DashboardMostviewed } from '../..\\components\\dashboard\\mostviewed\\mostviewed.vue'
 export { default as DashboardOrders } from '../..\\components\\dashboard\\orders\\orders.vue'
 export { default as DashboardSales } from '../..\\components\\dashboard\\sales\\sales.vue'
 export { default as DashboardSearchterms } from '../..\\components\\dashboard\\searchterms\\searchterms.vue'
+export { default as IntegrationsSectionsExtensions } from '../..\\components\\integrations\\sections\\extensions.vue'
+export { default as IntegrationsSectionsHome } from '../..\\components\\integrations\\sections\\home.vue'
+export { default as Integrations } from '../..\\components\\integrations\\sections\\integrations.vue'
+export { default as IntegrationsSectionsThemes } from '../..\\components\\integrations\\sections\\themes.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

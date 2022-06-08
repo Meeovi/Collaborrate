@@ -103,9 +103,9 @@
 </template>
 
 <script>
-import gql from 'graphql-tag'
-import fullfillments from '~/apollo/mutations/shop/fullfillments'
-import allFullfillments from '~/apollo/queries/shop/fullfillments'
+import  gql from 'graphql-tag'
+import  fullfillments from '~/apollo/mutations/shop/fullfillments'
+import  allFullfillments from '~/apollo/queries/shop/fullfillments'
 
 const DELETE_FULLFILLMENT = gql `
   mutation delete_fullfillments($id: Int!){

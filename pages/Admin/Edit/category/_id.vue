@@ -105,9 +105,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import categories from '~/apollo/mutations/shop/categories'
-import allCategories from '~/apollo/queries/shop/categories'
+import  gql from 'graphql-tag'
+import  categories from '~/apollo/mutations/shop/categories'
+import  allCategories from '~/apollo/queries/shop/categories'
 
 const DELETE_CATEGORY = gql `
   mutation delete_categories($id: Int!){

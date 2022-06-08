@@ -317,9 +317,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import products from '~/apollo/mutations/shop/products'
-import allProducts from '~/apollo/queries/shop/products'
+import  gql from 'graphql-tag'
+import  products from '~/apollo/mutations/shop/products'
+import  allProducts from '~/apollo/queries/shop/products'
 
 const DELETE_PRODUCT = gql `
   mutation delete_products($id: Int!){

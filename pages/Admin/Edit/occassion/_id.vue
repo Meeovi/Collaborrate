@@ -91,9 +91,9 @@
 </template>
 
 <script>
-  import gql from "graphql-tag";
+  import  gql from "graphql-tag";
 
-  import occassions from "~/apollo/mutations/shop/occassions";
+  import  occassions from "~/apollo/mutations/shop/occassions";
 
 // eslint-disable-next-line camelcase
 

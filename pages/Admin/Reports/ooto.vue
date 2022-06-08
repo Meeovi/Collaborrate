@@ -38,7 +38,7 @@
 </template>
 
 <script>
-  import ooto from '~/apollo/queries/system/ooto'
+  import  ooto from '~/apollo/queries/system/ooto'
 
   export default {
     data() {

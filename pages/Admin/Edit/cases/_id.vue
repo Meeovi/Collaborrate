@@ -58,9 +58,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import cases from '~/apollo/mutations/reports/cases'
-import allCases from '~/apollo/queries/reports/cases'
+import  gql from 'graphql-tag'
+import  cases from '~/apollo/mutations/reports/cases'
+import  allCases from '~/apollo/queries/reports/cases'
 
 const DELETE_CASE = gql `
   mutation delete_cases($id: Int!){

@@ -36,7 +36,7 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import coupons from '~/apollo/queries/shop/coupons'
+import  coupons from '~/apollo/queries/shop/coupons'
 
 export default {
   data() {

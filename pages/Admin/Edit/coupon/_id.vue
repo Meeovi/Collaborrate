@@ -56,9 +56,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import coupons from '~/apollo/mutations/shop/coupons'
-import allCoupons from '~/apollo/queries/shop/coupons'
+import  gql from 'graphql-tag'
+import  coupons from '~/apollo/mutations/shop/coupons'
+import  allCoupons from '~/apollo/queries/shop/coupons'
 
 const DELETE_COUPON = gql `
   mutation delete_coupons($id: Int!){

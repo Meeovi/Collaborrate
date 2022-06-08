@@ -74,9 +74,9 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import  gql from "graphql-tag";
 /* eslint-disable camelcase */
-import { channels } from "~/apollo/queries/system/channels";
+import channels from "~/apollo/queries/system/channels";
 
 const ADD_CHANNELS = gql`
     mutation ($client_id:String!,$client_secret:String,$default_shipping:String,$default_zone:String,$code:String!,$include_tax:String!,$name:String!,$currency:String!,$default_lang:String){

@@ -32,7 +32,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import newsletter_subscribers from '~/apollo/queries/marketing/newsletter_subscribers'
+ import  newsletter_subscribers from '~/apollo/queries/marketing/newsletter_subscribers'
 
 export default {
   data() {

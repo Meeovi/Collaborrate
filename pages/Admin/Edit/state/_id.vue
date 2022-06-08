@@ -61,9 +61,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import states from '~/apollo/mutations/shop/states'
-import allStates from '~/apollo/queries/shop/states'
+import  gql from 'graphql-tag'
+import  states from '~/apollo/mutations/shop/states'
+import  allStates from '~/apollo/queries/shop/states'
 
 const DELETE_STATE = gql `
   mutation delete_states($id: Int!){

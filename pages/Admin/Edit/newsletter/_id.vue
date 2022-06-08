@@ -60,9 +60,9 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import newsletters from '~/apollo/mutations/marketing/newsletter_subscribers'
-import allNewsletters from '~/apollo/queries/marketing/newsletter_subscribers'
+import  gql from 'graphql-tag'
+import  newsletters from '~/apollo/mutations/marketing/newsletter_subscribers'
+import  allNewsletters from '~/apollo/queries/marketing/newsletter_subscribers'
 
 const DELETE_NEWSLETTER = gql `
   mutation delete_newsletters($id: Int!){

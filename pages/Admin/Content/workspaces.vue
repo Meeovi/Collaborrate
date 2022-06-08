@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import workspaces from '~/apollo/queries/content/workspaces'
+import  workspaces from '~/apollo/queries/content/workspaces'
 
 export default {
   data() {

@@ -1,8 +1,14 @@
 query MyQuery {
   permissions {
     id
-    name
     created_at
     content
+    name
+    create
+    delete
+    read
+    role
+    update
+    users
   }
 }
