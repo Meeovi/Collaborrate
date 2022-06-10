@@ -1,97 +1,70 @@
 <template>
-  <v-card
-    flat
-    tile
-  >
-    <v-toolbar
-      color="cyan"
-      dark
-    >
-      <v-toolbar-title>Sales</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-    </v-toolbar>
-
-    <v-container
-      v-for="type in types"
-      :key="type"
-      class="grey lighten-4"
-      fluid
-    >
-      <v-subheader>{{ type }}</v-subheader>
-
-      <v-row>
-        <v-spacer></v-spacer>
-        <v-col
-          v-for="card in cards"
-          :key="card"
-          cols="12"
-          sm="6"
-          md="4"
-        >
-          <v-card>
-            <v-img
-              :src="`https://picsum.photos/200/300?image=${getImage()}`"
-              height="300px"
-            >
-              <span
-                class="text-h5 white--text pl-4 pt-4 d-inline-block"
-                v-text="card"
-              ></span>
-            </v-img>
-
-            <v-card-actions class="white justify-center">
-              <v-btn
-                v-for="(social, i) in socials"
-                :key="i"
-                :color="social.color"
-                class="white--text"
-                fab
-                icon
-                small
-              >
-                <v-icon>{{ social.icon }}</v-icon>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-card>
+  <div>
+    <section class="features3 cid-t8dqOo35IE" id="features3-10">
+    
+    
+    <div class="container">
+        
+        <div class="row mt-4">
+            <div class="item features-image сol-12 col-md-6 col-lg-4">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <img src="/assets/images/features1.jpg">
+                    </div>
+                    <div class="item-content">
+                        <h5 class="item-title mbr-fonts-style display-7"><strong>No Coding</strong></h5>
+                        <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">
+                            <em>Card Subtitle</em>
+                        </h6>
+                        <p class="mbr-text mbr-fonts-style mt-3 display-7">Mobirise is an easy website builder. Just
+                            drop site elements to your page, add content and style it to look the way you like.</p>
+                    </div>
+                    <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn btn-primary item-btn display-7" target="_blank">Learn More
+                            &gt;</a></div>
+                </div>
+            </div>
+            <div class="item features-image сol-12 col-md-6 col-lg-4">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <img src="/assets/images/features2.jpg">
+                    </div>
+                    <div class="item-content">
+                        <h5 class="item-title mbr-fonts-style display-7"><strong>Mobile Friendly</strong></h5>
+                        <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">
+                            <em>Card Subtitle</em>
+                        </h6>
+                        <p class="mbr-text mbr-fonts-style mt-3 display-7">You don't have to code to create your own
+                            site. Select one of available themes in the Mobirise Site Maker.</p>
+                    </div>
+                    <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn btn-primary item-btn display-7" target="_blank">Learn More
+                            &gt;</a></div>
+                </div>
+            </div>
+            <div class="item features-image сol-12 col-md-6 col-lg-4">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <img src="/assets/images/features3.jpg">
+                    </div>
+                    <div class="item-content">
+                        <h5 class="item-title mbr-fonts-style display-7"><strong>Unique Styles</strong></h5>
+                        <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">
+                            <em>Card Subtitle</em>
+                        </h6>
+                        <p class="mbr-text mbr-fonts-style mt-3 display-7">Select the theme that suits you. Each theme
+                            in the Mobirise Website Software contains a set of unique blocks.<br></p>
+                    </div>
+                    <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn btn-primary item-btn display-7" target="_blank">Learn More
+                            &gt;</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  </div>
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      types: ['Places to Be', 'Places to See'],
-      cards: ['Good', 'Best', 'Finest'],
-      socials: [
-        {
-          icon: 'mdi-facebook',
-          color: 'indigo',
-        },
-        {
-          icon: 'mdi-linkedin',
-          color: 'cyan darken-1',
-        },
-        {
-          icon: 'mdi-instagram',
-          color: 'red lighten-3',
-        },
-      ],
-    }),
-
-    methods: {
-      getImage () {
-        const min = 550
-        const max = 560
-
-        return Math.floor(Math.random() * (max - min + 1)) + min
-      },
-    },
-  }
+export default {
+    
+}
 </script>

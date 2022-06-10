@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data"  @submit.prevent>
+    <FormulateForm method="POST" enctype="multipart/form-data" @submit="addCurrency">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand"><FormulateInput type="reset" class="btn btn-warning" label="Reset" /></a>
@@ -89,10 +89,10 @@ export default {
                     name,
                     region,
                  },
-        update: (cache, { data: { insertCurrencys }}) => {
+        update: (cache, { data: { insertCurrencies }}) => {
                         // Read data from cache for this query
                         try {
-                            const insertedCurrency = insertCurrencys.returning;
+                            const insertedCurrency = insertCurrencies.returning;
                             console.log(insertedCurrency)
                             cache.writeQuery({
                                 query: currencies
@@ -103,7 +103,7 @@ export default {
                         }
                     }
                 }).then(() => {
-                    this.$router.push({path: '../system/currencies'})
+                    this.$router.push({path: '../system/general-settings'})
                 }).catch(err => console.log(err));
                     this.code = ' ';
                     this.name = ' ';

@@ -10,7 +10,7 @@
       </div>
       <div class="row justify-content-center mt-4">
         <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-          <form method="POST" class="mbr-form form-with-styler mx-auto" enctype="multipart/form-data" @submit.prevent
+          <form method="POST" class="mbr-form form-with-styler mx-auto" enctype="multipart/form-data" @submit="addStaff"
             data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true"
               value="W5lBG14rRjTLHtdtr8q1Ax5lVPhEsE8JlIMrBMLaQuhtmNlbKhMJ1zBU/dksb4PJKhuf5nS96Ze5Oli3366snzK3pXpUivYX7dydc451tOyrunCW2WX6kF53RnCi495B">
             <div class="">
@@ -21,12 +21,12 @@
             </div>
             <div class="dragArea row">
               <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="name">
-                <input type="text" name="firstname" placeholder="First Name" data-form-field="name" class="form-control" value=""
-                  id="name-form6-t" v-model="first_name">
+                <input type="text" name="firstname" placeholder="First Name" data-form-field="name" class="form-control"
+                  value="" id="name-form6-t" v-model="first_name">
               </div>
               <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="name">
-                <input type="text" name="lastname" placeholder="Last Name" data-form-field="name" class="form-control" value=""
-                  id="name-form6-t" v-model="last_name">
+                <input type="text" name="lastname" placeholder="Last Name" data-form-field="name" class="form-control"
+                  value="" id="name-form6-t" v-model="last_name">
               </div>
               <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="email">
                 <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control"
@@ -47,26 +47,6 @@
 </template>
 
 <script>
-  /* eslint-disable camelcase */
-  import  gql from "graphql-tag";
-  import 
-    user
-  from "~/apollo/queries/system/users";
-  // import  tax from '~/apollo/queries/shop/tax'
-
-  const ADD_USER = gql `
-    mutation ($first_name:String!,$last_name:String!,$password:String!,$staff_email:String!){
-    insert_user(objects: {first_name: $first_name, last_name: $last_name, staff_email: $staff_email, password: $password}) {
-        affected_rows
-        returning {
-            first_name
-            last_name
-            staff_email
-            password
-    }
-  }
-}`;
-
   export default {
     data() {
       return {
@@ -77,44 +57,30 @@
       }
     },
     methods: {
-      async addStaff() {
-        const first_name = this.first_name;
-        const last_name = this.last_name;
-        const staff_email = this.staff_email;
-        const password = this.password;
-        await this.$apollo.mutate({
-          mutation: ADD_USER,
-          variables: {
-            first_name,
-            last_name,
-            staff_email,
-            password,
-          },
-          update: (cache, {
-            data: {
-              insertStaffMember
-            }
-          }) => {
-            // Read data from cache for this query
-            try {
-              const insertedStaffMember = insertStaffMember.returning;
-              console.log(insertedStaffMember)
-              cache.writeQuery({
-                query: user
-              })
-            } catch (err) {
-              console.error(err)
-            }
+      addStaff: async function (e) {
+        e.preventDefault()
+        try {
+          const body = {
+            first_name: this.first_name,
+            last_name: this.last_name,
+            staff_email: this.staff_email,
+            password: this.password,
           }
-        }).then(() => {
+
+          const res = await fetch(`http://localhost:8000/api/user`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body),
+          })
+          const data = await res.json()
           this.$router.push({
             path: '/auth/login'
           })
-        }).catch(err => console.log(err));
-        this.first_name = ' ';
-        this.last_name = ' ';
-        this.staff_email = ' ';
-        this.password = ' ';
+        } catch (error) {
+          console.error(error)
+        }
       },
     },
     layout: 'nologin',

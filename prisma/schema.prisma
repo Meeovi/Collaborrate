@@ -2,6 +2,15 @@ generator gen {
   provider = "prisma-client-js"
 }
 
+generator docs {
+  provider = "node node_modules/prisma-docs-generator"
+}
+
+generator json_server {
+  provider       = "prisma-json-server-generator"
+  outputFileName = "graphql.json"
+}
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")

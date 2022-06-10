@@ -7,7 +7,6 @@ A powerful, consistent, and flexible headless content management framework. Buil
 
 Since AlternateCMS is powered by Nuxtjs it support all of Nuxtjs and Vuejs features and hundreds of modules.
 
-- A powerful graphql server that can connect to almost anything.
 - AlternateCMS supports Mysql, PostgreSQL, MongoDB, SQLite, CockroachDB, and SQL Server
 - Blog Functionality with tags
 - Theme and Extensions support
@@ -18,18 +17,19 @@ Since AlternateCMS is powered by Nuxtjs it support all of Nuxtjs and Vuejs featu
 - Powerful Search capabilities
 - User authentication and authorization 
 - Graphql support & Rest Apis
-- Google Tag management
-- Reporting tools including Google Analytics, Sentry integration
-- Integrated with Google Adsense
+- Integration with Supabase and Hasura
+- Integrated reporting tools and Sentry integration
+- Integrated with Netlify
 - Enhanced Security with monthly updates
 - Integrated with Bootstrap and Fontawesome
 - Multi-lingual support
 - Sales features including creation of agreements, invoices, transactions, returns, Sales reports, and more
 - Charts on main dashboard
+- Built in Rest API documentation
 - Customer management features including creating, deleting customers, users, staff members
 - Manage cities, countries, states, tax rates, and tax rules
 - Media Upload & Graphql Media Upload
-- Filterable DATA
+- Filterable datatables with export functionality
 - PWA Support
 - Easy integrate with Supabase & Hasura
 - Mobile and Desktop support
@@ -41,7 +41,7 @@ Since AlternateCMS is powered by Nuxtjs it support all of Nuxtjs and Vuejs featu
 
 and much more. Take a look at www.alternatecms.com 
 
-Steps to install:
+## Prerequisites:
 
 You will need:
 
@@ -51,8 +51,34 @@ Nodejs = https://nodejs.org/en/
 
 We recommend postgres as the database 
 
+rename .sample.env file to .env 
+
+Add your database type to DATABASE_PROVIDER, example is DATABASE_PROVIDER="postgresql" (" " are required)
+
+Add your database credentials to DATABASE_URL, example is DATABASE_URL=postgresql://databaseusername:databasepassword@databasehost:5432/databasename
+
+## Steps to Install - 10 Minute Install
+
 1. git clone https://github.com/bastianhilton/alternatecms
 2. cd alternatecms
-3. npm install 
-4. prisma migrate deploy
-5. npm run dev
+3. npm install
+4. prisma migrate dev
+5. npm run all
+
+AlternateCMS will be at: http://localhost:8000
+
+AlternateCMS API Documentation is located at: http://localhost:5858
+
+## If you have an existing database
+
+1. git clone https://github.com/bastianhilton/alternatecms
+2. cd alternatecms
+3. npm install
+4. prisma db pull
+5. npm run all
+
+AlternateCMS will be at: http://localhost:8000
+
+AlternateCMS API Documentation is located at: http://localhost:5858
+
+More installation and deployment details are located at https://docs.alternatecms.com

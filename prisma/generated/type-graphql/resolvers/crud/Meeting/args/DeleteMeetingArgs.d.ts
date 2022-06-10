@@ -1,4 +1,0 @@
-import { MeetingWhereUniqueInput } from "../../../inputs/MeetingWhereUniqueInput";
-export declare class DeleteMeetingArgs {
-    where: MeetingWhereUniqueInput;
-}
