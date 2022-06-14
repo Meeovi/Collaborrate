@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 <template>
-    <div id="editor">
+    <div>
         <FormulateForm v-for="category in categories" :key="category.id"   method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >

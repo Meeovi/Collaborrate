@@ -1,0 +1,12 @@
+export { AggregateDashboardsArgs } from "./AggregateDashboardsArgs";
+export { CreateDashboardsArgs } from "./CreateDashboardsArgs";
+export { CreateManyDashboardsArgs } from "./CreateManyDashboardsArgs";
+export { DeleteDashboardsArgs } from "./DeleteDashboardsArgs";
+export { DeleteManyDashboardsArgs } from "./DeleteManyDashboardsArgs";
+export { FindFirstDashboardsArgs } from "./FindFirstDashboardsArgs";
+export { FindManyDashboardsArgs } from "./FindManyDashboardsArgs";
+export { FindUniqueDashboardsArgs } from "./FindUniqueDashboardsArgs";
+export { GroupByDashboardsArgs } from "./GroupByDashboardsArgs";
+export { UpdateDashboardsArgs } from "./UpdateDashboardsArgs";
+export { UpdateManyDashboardsArgs } from "./UpdateManyDashboardsArgs";
+export { UpsertDashboardsArgs } from "./UpsertDashboardsArgs";

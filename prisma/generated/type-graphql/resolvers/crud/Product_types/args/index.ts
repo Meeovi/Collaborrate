@@ -1,0 +1,12 @@
+export { AggregateProduct_typesArgs } from "./AggregateProduct_typesArgs";
+export { CreateManyProduct_typesArgs } from "./CreateManyProduct_typesArgs";
+export { CreateProduct_typesArgs } from "./CreateProduct_typesArgs";
+export { DeleteManyProduct_typesArgs } from "./DeleteManyProduct_typesArgs";
+export { DeleteProduct_typesArgs } from "./DeleteProduct_typesArgs";
+export { FindFirstProduct_typesArgs } from "./FindFirstProduct_typesArgs";
+export { FindManyProduct_typesArgs } from "./FindManyProduct_typesArgs";
+export { FindUniqueProduct_typesArgs } from "./FindUniqueProduct_typesArgs";
+export { GroupByProduct_typesArgs } from "./GroupByProduct_typesArgs";
+export { UpdateManyProduct_typesArgs } from "./UpdateManyProduct_typesArgs";
+export { UpdateProduct_typesArgs } from "./UpdateProduct_typesArgs";
+export { UpsertProduct_typesArgs } from "./UpsertProduct_typesArgs";

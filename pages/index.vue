@@ -1,6 +1,9 @@
 <template>
   <div>
-    <!--<charts />-->
+    <div class="row">
+      <!--<chat />-->
+      <charts />  
+    </div>
     <div class="row">
         <sales />
         <orders />
@@ -52,8 +55,8 @@
 </template>
 
 <script>
-// import  products from '~/apollo/queries/shop/products'
-// import  charts from '~/components/dashboard/charts'
+// import  chat from '~/components/chat'
+import  charts from '~/components/dashboard/charts/charts'
 import  Customerslimit from '~/components/customerslimit'
 import  Newcustomers from '~/components/newcustomers'
 import  Reviewslimit from '~/components/reviewslimit'
@@ -73,7 +76,8 @@ export default {
       orders, 
       mostviewed, 
       bestsellers,
-    // charts
+      charts,
+      // chat
   },
 
   layout: 'dashboard',

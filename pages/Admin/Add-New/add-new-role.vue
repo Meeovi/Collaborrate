@@ -32,7 +32,7 @@
                     </tr>
                     <tr>
                         <td style="text-align: right;">Description</td>
-                        <td><FormulateInput type="textarea" v-model="content" /></td>
+                        <td><vue-simplemde type="textarea" v-model="content" /></td>
                     </tr>
                 </tbody>
             </table>

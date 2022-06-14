@@ -1,0 +1,12 @@
+export { AggregateVisitsArgs } from "./AggregateVisitsArgs";
+export { CreateManyVisitsArgs } from "./CreateManyVisitsArgs";
+export { CreateVisitsArgs } from "./CreateVisitsArgs";
+export { DeleteManyVisitsArgs } from "./DeleteManyVisitsArgs";
+export { DeleteVisitsArgs } from "./DeleteVisitsArgs";
+export { FindFirstVisitsArgs } from "./FindFirstVisitsArgs";
+export { FindManyVisitsArgs } from "./FindManyVisitsArgs";
+export { FindUniqueVisitsArgs } from "./FindUniqueVisitsArgs";
+export { GroupByVisitsArgs } from "./GroupByVisitsArgs";
+export { UpdateManyVisitsArgs } from "./UpdateManyVisitsArgs";
+export { UpdateVisitsArgs } from "./UpdateVisitsArgs";
+export { UpsertVisitsArgs } from "./UpsertVisitsArgs";

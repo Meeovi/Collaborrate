@@ -1,0 +1,12 @@
+export { AggregateMessagesArgs } from "./AggregateMessagesArgs";
+export { CreateManyMessagesArgs } from "./CreateManyMessagesArgs";
+export { CreateMessagesArgs } from "./CreateMessagesArgs";
+export { DeleteManyMessagesArgs } from "./DeleteManyMessagesArgs";
+export { DeleteMessagesArgs } from "./DeleteMessagesArgs";
+export { FindFirstMessagesArgs } from "./FindFirstMessagesArgs";
+export { FindManyMessagesArgs } from "./FindManyMessagesArgs";
+export { FindUniqueMessagesArgs } from "./FindUniqueMessagesArgs";
+export { GroupByMessagesArgs } from "./GroupByMessagesArgs";
+export { UpdateManyMessagesArgs } from "./UpdateManyMessagesArgs";
+export { UpdateMessagesArgs } from "./UpdateMessagesArgs";
+export { UpsertMessagesArgs } from "./UpsertMessagesArgs";

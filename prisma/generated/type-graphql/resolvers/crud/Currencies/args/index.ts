@@ -1,0 +1,12 @@
+export { AggregateCurrenciesArgs } from "./AggregateCurrenciesArgs";
+export { CreateCurrenciesArgs } from "./CreateCurrenciesArgs";
+export { CreateManyCurrenciesArgs } from "./CreateManyCurrenciesArgs";
+export { DeleteCurrenciesArgs } from "./DeleteCurrenciesArgs";
+export { DeleteManyCurrenciesArgs } from "./DeleteManyCurrenciesArgs";
+export { FindFirstCurrenciesArgs } from "./FindFirstCurrenciesArgs";
+export { FindManyCurrenciesArgs } from "./FindManyCurrenciesArgs";
+export { FindUniqueCurrenciesArgs } from "./FindUniqueCurrenciesArgs";
+export { GroupByCurrenciesArgs } from "./GroupByCurrenciesArgs";
+export { UpdateCurrenciesArgs } from "./UpdateCurrenciesArgs";
+export { UpdateManyCurrenciesArgs } from "./UpdateManyCurrenciesArgs";
+export { UpsertCurrenciesArgs } from "./UpsertCurrenciesArgs";

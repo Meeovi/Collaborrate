@@ -1,0 +1,12 @@
+export { AggregateManufacturerArgs } from "./AggregateManufacturerArgs";
+export { CreateManufacturerArgs } from "./CreateManufacturerArgs";
+export { CreateManyManufacturerArgs } from "./CreateManyManufacturerArgs";
+export { DeleteManufacturerArgs } from "./DeleteManufacturerArgs";
+export { DeleteManyManufacturerArgs } from "./DeleteManyManufacturerArgs";
+export { FindFirstManufacturerArgs } from "./FindFirstManufacturerArgs";
+export { FindManyManufacturerArgs } from "./FindManyManufacturerArgs";
+export { FindUniqueManufacturerArgs } from "./FindUniqueManufacturerArgs";
+export { GroupByManufacturerArgs } from "./GroupByManufacturerArgs";
+export { UpdateManufacturerArgs } from "./UpdateManufacturerArgs";
+export { UpdateManyManufacturerArgs } from "./UpdateManyManufacturerArgs";
+export { UpsertManufacturerArgs } from "./UpsertManufacturerArgs";

@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 <template>
-    <div id="editor">
+    <div>
         <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">

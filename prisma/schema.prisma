@@ -1,4 +1,4 @@
-generator gen {
+generator client {
   provider = "prisma-client-js"
 }
 
@@ -6,9 +6,14 @@ generator docs {
   provider = "node node_modules/prisma-docs-generator"
 }
 
-generator json_server {
-  provider       = "prisma-json-server-generator"
-  outputFileName = "graphql.json"
+generator graphql {
+  provider = "graphql-schema-generator"
+  createCRUD = "true"
+}
+
+generator typegraphql {
+  provider = "typegraphql-prisma"
+  output   = "../prisma/generated/type-graphql"
 }
 
 datasource db {

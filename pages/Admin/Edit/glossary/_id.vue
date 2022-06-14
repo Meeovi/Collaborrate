@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 <template>
-    <div id="editor">
+    <div>
         <FormulateForm v-for="glossary in glossaries" :key="glossary.id"  method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >

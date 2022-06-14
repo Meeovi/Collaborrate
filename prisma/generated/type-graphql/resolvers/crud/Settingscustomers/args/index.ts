@@ -1,0 +1,12 @@
+export { AggregateSettingscustomersArgs } from "./AggregateSettingscustomersArgs";
+export { CreateManySettingscustomersArgs } from "./CreateManySettingscustomersArgs";
+export { CreateSettingscustomersArgs } from "./CreateSettingscustomersArgs";
+export { DeleteManySettingscustomersArgs } from "./DeleteManySettingscustomersArgs";
+export { DeleteSettingscustomersArgs } from "./DeleteSettingscustomersArgs";
+export { FindFirstSettingscustomersArgs } from "./FindFirstSettingscustomersArgs";
+export { FindManySettingscustomersArgs } from "./FindManySettingscustomersArgs";
+export { FindUniqueSettingscustomersArgs } from "./FindUniqueSettingscustomersArgs";
+export { GroupBySettingscustomersArgs } from "./GroupBySettingscustomersArgs";
+export { UpdateManySettingscustomersArgs } from "./UpdateManySettingscustomersArgs";
+export { UpdateSettingscustomersArgs } from "./UpdateSettingscustomersArgs";
+export { UpsertSettingscustomersArgs } from "./UpsertSettingscustomersArgs";

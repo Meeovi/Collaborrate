@@ -106,7 +106,7 @@
                               <td>
                                 <div class="form-check form-switch">
                                   <client-only>
-                                    <vue-simplemde id="articleDescription" v-model="content" />
+                                    <vue-simplemde v-model="content" />
                                   </client-only>
                                 </div>
                               </td>

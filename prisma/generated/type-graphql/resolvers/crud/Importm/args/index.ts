@@ -1,0 +1,12 @@
+export { AggregateImportmArgs } from "./AggregateImportmArgs";
+export { CreateImportmArgs } from "./CreateImportmArgs";
+export { CreateManyImportmArgs } from "./CreateManyImportmArgs";
+export { DeleteImportmArgs } from "./DeleteImportmArgs";
+export { DeleteManyImportmArgs } from "./DeleteManyImportmArgs";
+export { FindFirstImportmArgs } from "./FindFirstImportmArgs";
+export { FindManyImportmArgs } from "./FindManyImportmArgs";
+export { FindUniqueImportmArgs } from "./FindUniqueImportmArgs";
+export { GroupByImportmArgs } from "./GroupByImportmArgs";
+export { UpdateImportmArgs } from "./UpdateImportmArgs";
+export { UpdateManyImportmArgs } from "./UpdateManyImportmArgs";
+export { UpsertImportmArgs } from "./UpsertImportmArgs";

@@ -5,6 +5,9 @@
   "Breadcrumbs": {
     "description": "Auto imported from components/Breadcrumbs.vue"
   },
+  "Chat": {
+    "description": "Auto imported from components/chat.vue"
+  },
   "Colormode": {
     "description": "Auto imported from components/colormode.vue"
   },
@@ -34,9 +37,6 @@
   },
   "Visitsdisplay": {
     "description": "Auto imported from components/visitsdisplay.vue"
-  },
-  "DashboardCharts": {
-    "description": "Auto imported from components/dashboard/charts.vue"
   },
   "ImportProducts": {
     "description": "Auto imported from components/import/import-products.vue"
@@ -106,6 +106,9 @@
   },
   "DashboardBestsellers": {
     "description": "Auto imported from components/dashboard/bestsellers/bestsellers.vue"
+  },
+  "DashboardCharts": {
+    "description": "Auto imported from components/dashboard/charts/charts.vue"
   },
   "DashboardMediaMediadetails": {
     "description": "Auto imported from components/dashboard/media/mediadetails.vue"

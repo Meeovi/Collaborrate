@@ -1,0 +1,12 @@
+export { AggregateWorkspacesArgs } from "./AggregateWorkspacesArgs";
+export { CreateManyWorkspacesArgs } from "./CreateManyWorkspacesArgs";
+export { CreateWorkspacesArgs } from "./CreateWorkspacesArgs";
+export { DeleteManyWorkspacesArgs } from "./DeleteManyWorkspacesArgs";
+export { DeleteWorkspacesArgs } from "./DeleteWorkspacesArgs";
+export { FindFirstWorkspacesArgs } from "./FindFirstWorkspacesArgs";
+export { FindManyWorkspacesArgs } from "./FindManyWorkspacesArgs";
+export { FindUniqueWorkspacesArgs } from "./FindUniqueWorkspacesArgs";
+export { GroupByWorkspacesArgs } from "./GroupByWorkspacesArgs";
+export { UpdateManyWorkspacesArgs } from "./UpdateManyWorkspacesArgs";
+export { UpdateWorkspacesArgs } from "./UpdateWorkspacesArgs";
+export { UpsertWorkspacesArgs } from "./UpsertWorkspacesArgs";

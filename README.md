@@ -7,7 +7,7 @@ A powerful, consistent, and flexible headless content management framework. Buil
 
 Since AlternateCMS is powered by Nuxtjs it support all of Nuxtjs and Vuejs features and hundreds of modules.
 
-- AlternateCMS supports Mysql, PostgreSQL, MongoDB, SQLite, CockroachDB, and SQL Server
+- AlternateCMS supports Mysql, PostgreSQL, MongoDB, SQLite, CockroachDB, and Microsoft SQL Server
 - Blog Functionality with tags
 - Theme and Extensions support
 - Unlimited Products with product attributes and product types
@@ -37,7 +37,7 @@ Since AlternateCMS is powered by Nuxtjs it support all of Nuxtjs and Vuejs featu
 - Integrated PM2 support
 - Built in CRM (Customer Relationship Management) including Cases, Opportunities, Tasks, Accounts, Meetings, Contracts, Leads, Campaigns, Quotes, and more.
 - Built in ERP (Enterprise Resource Planning) includes Project Management, Checklist, Error Reporting, Visits, Team Scheduler, Deep Dives, Dashboard Creations
-- Built on top of Nuxtjs
+- Built on top of Nuxtjs, Vuejs, and Prisma
 
 and much more. Take a look at www.alternatecms.com 
 
@@ -59,11 +59,10 @@ Add your database credentials to DATABASE_URL, example is DATABASE_URL=postgresq
 
 ## Steps to Install - 10 Minute Install
 
-1. git clone https://github.com/bastianhilton/alternatecms
+1. git clone https://github.com/meeovi/alternatecms
 2. cd alternatecms
 3. npm install
-4. prisma migrate dev
-5. npm run all
+4. npm run all
 
 AlternateCMS will be at: http://localhost:8000
 
@@ -71,7 +70,7 @@ AlternateCMS API Documentation is located at: http://localhost:5858
 
 ## If you have an existing database
 
-1. git clone https://github.com/bastianhilton/alternatecms
+1. git clone https://github.com/meeovi/alternatecms
 2. cd alternatecms
 3. npm install
 4. prisma db pull

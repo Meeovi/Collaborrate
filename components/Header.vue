@@ -305,6 +305,12 @@
                         <a class="dropdown-item" href="/admin/">Customer View</a>
                     </li>
                     <li>
+                        <a class="dropdown-item" href="http://localhost:5000/graphiql">Graphql Playground</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="http://localhost:5858/">Rest API Documentation</a>
+                    </li>
+                    <li>
                         <a class="dropdown-item" aria-current="page" href="/logout">Logout</a>
                     </li>
                 </ul>
@@ -315,17 +321,7 @@
 </template>
 
 <script>
-/* import { mapGetters } from 'vuex'
-    export default {
-      computed: {
-        ...mapGetters(['isAuthenticated']),
-      },
-      methods: {
-        async userLogout() {
-          await this.$auth.logout()
-        },
-      },
-    } */
+
 </script>
 <style>
 

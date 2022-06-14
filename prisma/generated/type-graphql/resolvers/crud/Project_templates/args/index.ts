@@ -1,0 +1,12 @@
+export { AggregateProject_templatesArgs } from "./AggregateProject_templatesArgs";
+export { CreateManyProject_templatesArgs } from "./CreateManyProject_templatesArgs";
+export { CreateProject_templatesArgs } from "./CreateProject_templatesArgs";
+export { DeleteManyProject_templatesArgs } from "./DeleteManyProject_templatesArgs";
+export { DeleteProject_templatesArgs } from "./DeleteProject_templatesArgs";
+export { FindFirstProject_templatesArgs } from "./FindFirstProject_templatesArgs";
+export { FindManyProject_templatesArgs } from "./FindManyProject_templatesArgs";
+export { FindUniqueProject_templatesArgs } from "./FindUniqueProject_templatesArgs";
+export { GroupByProject_templatesArgs } from "./GroupByProject_templatesArgs";
+export { UpdateManyProject_templatesArgs } from "./UpdateManyProject_templatesArgs";
+export { UpdateProject_templatesArgs } from "./UpdateProject_templatesArgs";
+export { UpsertProject_templatesArgs } from "./UpsertProject_templatesArgs";

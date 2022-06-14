@@ -8,6 +8,7 @@ You can directly use them in pages and other components without the need to impo
 
 - `<IoSocketStatus>` | `<io-socket-status>` (node_modules/nuxt-socket-io/lib/components/SocketStatus.js)
 - `<Breadcrumbs>` | `<breadcrumbs>` (components/Breadcrumbs.vue)
+- `<Chat>` | `<chat>` (components/chat.vue)
 - `<Colormode>` | `<colormode>` (components/colormode.vue)
 - `<Contenttypes>` | `<contenttypes>` (components/contenttypes.vue)
 - `<Customerslimit>` | `<customerslimit>` (components/customerslimit.vue)
@@ -18,7 +19,6 @@ You can directly use them in pages and other components without the need to impo
 - `<Ottotracker>` | `<ottotracker>` (components/ottotracker.vue)
 - `<Reviewslimit>` | `<reviewslimit>` (components/reviewslimit.vue)
 - `<Visitsdisplay>` | `<visitsdisplay>` (components/visitsdisplay.vue)
-- `<DashboardCharts>` | `<dashboard-charts>` (components/dashboard/charts.vue)
 - `<ImportProducts>` | `<import-products>` (components/import/import-products.vue)
 - `<ImportId>` | `<import-id>` (components/import/_id.vue)
 - `<IntegrationsContent>` | `<integrations-content>` (components/integrations/content.vue)
@@ -42,6 +42,7 @@ You can directly use them in pages and other components without the need to impo
 - `<SettingsTicketdisplay>` | `<settings-ticketdisplay>` (components/settings/ticketdisplay.vue)
 - `<SettingsWebhooks>` | `<settings-webhooks>` (components/settings/webhooks.vue)
 - `<DashboardBestsellers>` | `<dashboard-bestsellers>` (components/dashboard/bestsellers/bestsellers.vue)
+- `<DashboardCharts>` | `<dashboard-charts>` (components/dashboard/charts/charts.vue)
 - `<DashboardMediaMediadetails>` | `<dashboard-media-mediadetails>` (components/dashboard/media/mediadetails.vue)
 - `<DashboardMediaMediaedit>` | `<dashboard-media-mediaedit>` (components/dashboard/media/mediaedit.vue)
 - `<DashboardMediaMediasettings>` | `<dashboard-media-mediasettings>` (components/dashboard/media/mediasettings.vue)

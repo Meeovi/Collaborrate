@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 <template>
-  <div id="editor">
+  <div>
     <FormulateForm v-for="permission in permissions" :key="permission.id" method="POST" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">

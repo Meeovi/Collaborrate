@@ -1,5 +1,4 @@
 
-import "reflect-metadata";
 
 export default {
   target: 'static',
@@ -84,6 +83,7 @@ export default {
     '@nuxtjs/moment',
     '@braid/vue-formulate/nuxt',
     'nuxt-webpack-optimisations',
+    '@nuxtjs/composition-api/module',
   ],
 
   modules: [
@@ -175,6 +175,10 @@ export default {
       expires: 7, 
     },
     includeNodeModules: true, 
+    browserHttpEndpoint: '/graphql',
+    httpLinkOptions: {
+      credentials: 'same-origin'
+    },
     authenticationType: 'Bearer', 
     errorHandler: '~/plugins/apollo-error-handler.js',
     clientConfigs: {
@@ -211,5 +215,6 @@ export default {
   
   build: {
     extend(config, ctx) {},
+    transpile: [/echarts/, /zrender/]
   },
 }

@@ -38,7 +38,19 @@ nav a, nav .fas, nav li {
     color: white !important;
 }
 
-nav a:hover, nav .fas:hover, nav li:hover {
+nav .fas:hover, nav li:hover {
+    color: white !important;
+}
+
+nav a:hover {
+    color: blue !important;
+}
+
+#navbarDropdownMenuLink {
+    color: white !important;
+}
+
+.nav-item:hover {
     color: white !important;
 }
 

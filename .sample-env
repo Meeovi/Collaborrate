@@ -1,79 +1,26 @@
-# These credentials will appear across AlternateCMS
+# Information here will appear across AlternateCMS
 
-# ReCaptcha Credentials
+# Postgresql and Mongodb Database URL
 
-RECAPTCHA_SITE_KEY=
+DATABASE_URL=" "
 
-# Supbase.io Database Information
+# Supabase URL and Credentials
 
-YOUR_SUPABASE_KEY=
-YOUR_SUPABASE_URL=
+YOUR_SUPABASE_URL=" "
+YOUR_SUPABASE_KEY=" "
 
-# Postgres Database Credentials
+# Mysql Database URL
 
-DATABASE_PROVIDER="postgresql"
-DATABASE_URL=
+MYSQL_HOST=" "
+MYSQL_PORT=
+MYSQL_USER=" "
+MYSQL_PASSWORD=" "
+MYSQL_DATABASE=" "
 
-# Oracle SQL Server
+# RECAPTCHA Credentials
 
-ORACLE_DB_TYPE=oracle
-ORACLE_DB_HOST=my.oracle.host
-ORACLE_DB_NAME=my_oracle_database
-ORACLE_DB_USER=oracle_user
-ORACLE_DB_PASS=**********
-ORACLE_DB_PORT=
+RECAPTCHA_SITE_KEY=" "
 
-# Mysql Database Credentials
+# GRAPHQL Endpoint
 
-env.MYSQL_HOST = 
-env.MYSQL_PORT = 3306
-env.MYSQL_USER = 
-env.MYSQL_PASSWORD = 
-env.MYSQL_DATABASE =
-
-# OData / Microsoft Graph Credentials
-
-ODATA_URL = 
-
-# Apache Thrift Credentials
-
-APACHE_IDL = 
-APACHE_HOSTNAME = 
-APACHE_PORT = 8080
-APACHE_PATH =
-APACHE_SERVICENAME = 
-
-# SQLITE Credentials
-
-# Example: path/to/database.sqlite
-
-SQLITE = 
-
-# Soap Graphql Credentials
-
-# Example: #http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL
-
-WSDL_URL = 
-
-# GRPC Credentials
-
-# Example: endpoint: localhost:50051 protoFilePath: grpc/proto/Example.proto
-# https://www.graphql-mesh.com/docs/handlers/grpc
-
-GRPC_ENDPOINT = 
-GRPC_PROTO_FILE_PATH = 
-
-# Graphql Credentials
-
-GRAPHQL_ENDPOINT = 
-
-# Mongoose Credentials
-
-# Example: mongodb://localhost:27017/test
-
-# Example: MODELS_NAME = User
-# Example: MODELS_PATH = ./src/models#User
-
-MONGODB_URL = 
-MODELS_NAME = 
-MODELS_PATH = 
+GRAPHQL_ENDPOINT=" "

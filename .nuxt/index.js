@@ -16,6 +16,7 @@ import { createStore } from './store.js'
 import nuxt_plugin_plugin_3e3b230d from 'nuxt_plugin_plugin_3e3b230d' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_sentryserver_73891274 from 'nuxt_plugin_sentryserver_73891274' // Source: .\\sentry.server.js (mode: 'server')
 import nuxt_plugin_sentryclient_0dcfa0ec from 'nuxt_plugin_sentryclient_0dcfa0ec' // Source: .\\sentry.client.js (mode: 'client')
+import nuxt_plugin_plugin_b3281f64 from 'nuxt_plugin_plugin_b3281f64' // Source: .\\composition-api\\plugin.mjs (mode: 'all')
 import nuxt_plugin_nuxtjsdarkmodejsmodule_d77de8ae from 'nuxt_plugin_nuxtjsdarkmodejsmodule_d77de8ae' // Source: .\\nuxtjs-darkmode-js-module.js (mode: 'all')
 import nuxt_plugin_image_7133ffab from 'nuxt_plugin_image_7133ffab' // Source: .\\image.js (mode: 'all')
 import nuxt_plugin_storage_7d71d2cb from 'nuxt_plugin_storage_7d71d2cb' // Source: .\\storage.js (mode: 'all')
@@ -41,6 +42,7 @@ import nuxt_plugin_client_035ad0d4 from 'nuxt_plugin_client_035ad0d4' // Source:
 import nuxt_plugin_axios_3566aa80 from 'nuxt_plugin_axios_3566aa80' // Source: ..\\plugins\\axios (mode: 'all')
 import nuxt_plugin_upload_8ca86cc0 from 'nuxt_plugin_upload_8ca86cc0' // Source: ..\\plugins\\upload.js (mode: 'client')
 import nuxt_plugin_libnuxtclientinitpluginclient1189b8a7_3491f618 from 'nuxt_plugin_libnuxtclientinitpluginclient1189b8a7_3491f618' // Source: .\\lib.nuxt-client-init.plugin.client.1189b8a7.js (mode: 'client')
+import nuxt_plugin_meta_578f86e0 from 'nuxt_plugin_meta_578f86e0' // Source: .\\composition-api\\meta.mjs (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -249,6 +251,10 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_sentryclient_0dcfa0ec(app.context, inject)
   }
 
+  if (typeof nuxt_plugin_plugin_b3281f64 === 'function') {
+    await nuxt_plugin_plugin_b3281f64(app.context, inject)
+  }
+
   if (typeof nuxt_plugin_nuxtjsdarkmodejsmodule_d77de8ae === 'function') {
     await nuxt_plugin_nuxtjsdarkmodejsmodule_d77de8ae(app.context, inject)
   }
@@ -347,6 +353,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_libnuxtclientinitpluginclient1189b8a7_3491f618 === 'function') {
     await nuxt_plugin_libnuxtclientinitpluginclient1189b8a7_3491f618(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_meta_578f86e0 === 'function') {
+    await nuxt_plugin_meta_578f86e0(app.context, inject)
   }
 
   // Lock enablePreview in context
