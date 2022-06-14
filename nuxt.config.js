@@ -92,7 +92,6 @@ export default {
     '@nuxtjs/sentry',
     '@nuxtjs/apollo',
     '@nuxt/http',
-    'nuxt-leaflet',
     '@nuxtjs/i18n',
     'nuxt-socket-io',
     '@nuxtjs/universal-storage',
