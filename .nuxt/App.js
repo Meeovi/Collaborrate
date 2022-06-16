@@ -12,8 +12,6 @@ import '..\\node_modules\\simplemde\\dist\\simplemde.min.css'
 
 import '..\\static\\styles\\snow.min.css'
 
-import '..\\node_modules\\leaflet\\dist\\leaflet.css'
-
 import _5fa3735e from '..\\layouts\\dashboard.vue'
 import _6f6c098b from '..\\layouts\\default.vue'
 import _dc54f4dc from '..\\layouts\\nologin.vue'

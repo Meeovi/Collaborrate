@@ -24,7 +24,6 @@ import nuxt_plugin_nuxtsocketio_fd362a9c from 'nuxt_plugin_nuxtsocketio_fd362a9c
 import nuxt_plugin_pluginutils_1bed21be from 'nuxt_plugin_pluginutils_1bed21be' // Source: .\\nuxt-i18n\\plugin.utils.js (mode: 'all')
 import nuxt_plugin_pluginrouting_e9a790ee from 'nuxt_plugin_pluginrouting_e9a790ee' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
 import nuxt_plugin_pluginmain_2213eef4 from 'nuxt_plugin_pluginmain_2213eef4' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
-import nuxt_plugin_nuxtleaflet_3225afd6 from 'nuxt_plugin_nuxtleaflet_3225afd6' // Source: .\\nuxt-leaflet.js (mode: 'client')
 import nuxt_plugin_httpserver_ad9d18c6 from 'nuxt_plugin_httpserver_ad9d18c6' // Source: .\\http.server.js (mode: 'server')
 import nuxt_plugin_http_0d4df9a0 from 'nuxt_plugin_http_0d4df9a0' // Source: .\\http.js (mode: 'all')
 import nuxt_plugin_apollomodule_c54bc308 from 'nuxt_plugin_apollomodule_c54bc308' // Source: .\\apollo-module.js (mode: 'all')
@@ -281,10 +280,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_pluginmain_2213eef4 === 'function') {
     await nuxt_plugin_pluginmain_2213eef4(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_nuxtleaflet_3225afd6 === 'function') {
-    await nuxt_plugin_nuxtleaflet_3225afd6(app.context, inject)
   }
 
   if (process.server && typeof nuxt_plugin_httpserver_ad9d18c6 === 'function') {
