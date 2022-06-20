@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { TagsOrderByWithRelationInput } from "../../../inputs/TagsOrderByWithRelationInput";
+import { TagsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/TagsOrderByWithRelationAndSearchRelevanceInput";
 import { TagsWhereInput } from "../../../inputs/TagsWhereInput";
 import { TagsWhereUniqueInput } from "../../../inputs/TagsWhereUniqueInput";
 import { TagsScalarFieldEnum } from "../../../../enums/TagsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstTagsArgs {
   })
   where?: TagsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [TagsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [TagsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: TagsOrderByWithRelationInput[] | undefined;
+  orderBy?: TagsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => TagsWhereUniqueInput, {
     nullable: true

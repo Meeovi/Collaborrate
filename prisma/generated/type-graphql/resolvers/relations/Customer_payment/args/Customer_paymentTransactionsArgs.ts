@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { TransactionsOrderByWithRelationInput } from "../../../inputs/TransactionsOrderByWithRelationInput";
+import { TransactionsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/TransactionsOrderByWithRelationAndSearchRelevanceInput";
 import { TransactionsWhereInput } from "../../../inputs/TransactionsWhereInput";
 import { TransactionsWhereUniqueInput } from "../../../inputs/TransactionsWhereUniqueInput";
 import { TransactionsScalarFieldEnum } from "../../../../enums/TransactionsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class Customer_paymentTransactionsArgs {
   })
   where?: TransactionsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [TransactionsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [TransactionsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: TransactionsOrderByWithRelationInput[] | undefined;
+  orderBy?: TransactionsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => TransactionsWhereUniqueInput, {
     nullable: true

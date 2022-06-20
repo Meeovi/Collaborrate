@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { ReviewsOrderByWithRelationInput } from "../../../inputs/ReviewsOrderByWithRelationInput";
+import { ReviewsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ReviewsOrderByWithRelationAndSearchRelevanceInput";
 import { ReviewsWhereInput } from "../../../inputs/ReviewsWhereInput";
 import { ReviewsWhereUniqueInput } from "../../../inputs/ReviewsWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateReviewsArgs {
   })
   where?: ReviewsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [ReviewsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [ReviewsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: ReviewsOrderByWithRelationInput[] | undefined;
+  orderBy?: ReviewsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => ReviewsWhereUniqueInput, {
     nullable: true

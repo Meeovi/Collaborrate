@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { StatisticsOrderByWithRelationInput } from "../../../inputs/StatisticsOrderByWithRelationInput";
+import { StatisticsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/StatisticsOrderByWithRelationAndSearchRelevanceInput";
 import { StatisticsWhereInput } from "../../../inputs/StatisticsWhereInput";
 import { StatisticsWhereUniqueInput } from "../../../inputs/StatisticsWhereUniqueInput";
 import { StatisticsScalarFieldEnum } from "../../../../enums/StatisticsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstStatisticsArgs {
   })
   where?: StatisticsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [StatisticsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [StatisticsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: StatisticsOrderByWithRelationInput[] | undefined;
+  orderBy?: StatisticsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => StatisticsWhereUniqueInput, {
     nullable: true

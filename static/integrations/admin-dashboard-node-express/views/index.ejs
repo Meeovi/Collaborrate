@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="mdb/img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="mdb/css/mdb.min.css" />
+    <!-- Custom styles -->
+    <style>
+      body {
+        background-color: #fbfbfb;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <div class="container">
+      <!--Main layout-->
+      <main style="margin-top: 58px">
+        <div class="container pt-5">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body p-4">
+                  <!-- Pills navs -->
+                  <ul
+                    class="nav nav-pills nav-justified mb-3"
+                    id="ex1"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="tab-login"
+                        data-mdb-toggle="pill"
+                        href="#pills-login"
+                        role="tab"
+                        aria-controls="pills-login"
+                        aria-selected="true"
+                        >Login</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="tab-register"
+                        data-mdb-toggle="pill"
+                        href="#pills-register"
+                        role="tab"
+                        aria-controls="pills-register"
+                        aria-selected="false"
+                        >Register</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Pills navs -->
+
+                  <!-- Pills content -->
+                  <div class="tab-content">
+                    <div
+                      class="tab-pane fade show active"
+                      id="pills-login"
+                      role="tabpanel"
+                      aria-labelledby="tab-login"
+                    >
+                      <form action="/users/auth/login" method="POST">
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                          <input
+                            type="email"
+                            name="email"
+                            id="loginName"
+                            class="form-control"
+                            value="admin@mdbootstrap.com"
+                          />
+                          <label class="form-label" for="loginName"
+                            >Email</label
+                          >
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                          <input
+                            type="password"
+                            name="password"
+                            id="loginPassword"
+                            class="form-control"
+                            value="mdbootstrap"
+                          />
+                          <label class="form-label" for="loginPassword"
+                            >Password</label
+                          >
+                        </div>
+
+                        <!-- Submit button -->
+                        <button
+                          type="submit"
+                          class="btn btn-primary btn-block mb-4"
+                        >
+                          Sign in
+                        </button>
+                      </form>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="pills-register"
+                      role="tabpanel"
+                      aria-labelledby="tab-register"
+                    >
+                      <form id="registerForm" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                          <div class="col-12">
+                            <!-- Username input -->
+                            <div class="form-outline">
+                              <input
+                                type="text"
+                                name="username"
+                                id="registerUsername"
+                                class="form-control"
+                                required
+                              />
+                              <label class="form-label" for="registerUsername"
+                                >Username</label
+                              >
+                              <div class="invalid-feedback">
+                                Invalid username
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-12">
+                            <!-- Email input -->
+                            <div class="form-outline">
+                              <input
+                                type="email"
+                                name="email"
+                                id="registerEmail"
+                                class="form-control"
+                                required
+                              />
+                              <label class="form-label" for="registerEmail"
+                                >Email</label
+                              >
+                              <div class="invalid-feedback">
+                                Invalid email
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-12">
+                            <!-- Avatar input -->
+                            <div class="form-outline">
+                              <input
+                                type="text"
+                                name="avatar"
+                                id="registerAvatar"
+                                class="form-control"
+                              />
+                              <label class="form-label" for="registerAvatar"
+                                >Avatar</label
+                              >
+                            </div>
+                          </div>
+
+                          <div class="col-12">
+                            <!-- Password input -->
+                            <div class="form-outline">
+                              <input
+                                type="password"
+                                name="password"
+                                id="registerPassword"
+                                class="form-control"
+                                required
+                              />
+                              <label class="form-label" for="registerPassword"
+                                >Password</label
+                              >
+                              <div class="invalid-feedback">
+                                Invalid password
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-12">
+                            <!-- Repeat Password input -->
+                            <div class="form-outline">
+                              <input
+                                type="password"
+                                name="repeatPassword"
+                                id="registerRepeatPassword"
+                                class="form-control"
+                                required
+                              />
+                              <label class="form-label" for="registerRepeatPassword"
+                                >Repeat password</label
+                              >
+                              <div class="invalid-feedback">
+                                Invalid password
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-12">
+                            <!-- Checkbox -->
+                            <div
+                              class="form-check d-flex justify-content-center my-4"
+                            >
+                              <input
+                                class="form-check-input me-2"
+                                type="checkbox"
+                                value=""
+                                id="registerCheck"
+                                name="registerCheck"
+                                required
+                                aria-describedby="registerCheckHelpText"
+                              />
+                              <label class="form-check-label" for="registerCheck">
+                                I have read and agree to the terms
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button
+                          type="submit"
+                          class="btn btn-primary btn-block mb-3"
+                        >
+                          Sign in
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- Pills content -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!--Main layout-->
+    </div>
+
+    <% if (alert) { %>
+      <div
+        class="alert fade show"
+        role="alert"
+        data-mdb-color="<%= alert.color %>"
+        data-mdb-position="top-center"
+        data-mdb-stacking="true"
+        data-mdb-append-to-body="true"
+        data-mdb-autohide="true"
+        data-mdb-delay="3000"
+      >
+        <%= alert.message %>
+      </div>
+    <% } %>
+
+    <div
+      class="alert fade"
+      id="registerAlert"
+      role="alert"
+      data-mdb-color="danger"
+      data-mdb-position="top-center"
+      data-mdb-stacking="true"
+      data-mdb-append-to-body="true"
+      data-mdb-autohide="true"
+      data-mdb-delay="3000"
+    >
+    </div>
+    <!-- End your project here-->
+  </body>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="mdb/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript">
+  const registerForm = document.getElementById('registerForm');
+  registerForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    registerForm.classList.add('was-walidated');
+    const data = new FormData(e.target);
+    const usernameInput = document.getElementById('registerUsername');
+    const emailInput = document.getElementById('registerEmail');
+    const registerPasswordInput = document.getElementById('registerPassword');
+    const registerRepeatPasswordInput = document.getElementById('registerRepeatPassword');
+    const registerCheckInput = document.getElementById('registerCheck');
+    let isDataValid = true;
+
+    if (data.get('username') === '') {
+      usernameInput.classList.add('is-invalid');
+      isDataValid = false;
+    } else {
+      usernameInput.classList.remove('is-invalid');
+    }
+
+    if (data.get('email') === '') {
+      emailInput.classList.add('is-invalid');
+      isDataValid = false;
+    } else {
+      emailInput.classList.remove('is-invalid');
+    }
+
+    if (data.get('password') !== data.get('repeatPassword') || data.get('password').length < 4) {
+      registerPasswordInput.classList.add('is-invalid');
+      registerRepeatPasswordInput.classList.add('is-invalid');
+      isDataValid = false;
+    } else {
+      registerPasswordInput.classList.remove('is-invalid');
+      registerRepeatPasswordInput.classList.remove('is-invalid');
+    }
+
+    if (data.get('registerCheck') === null) {
+      registerCheckInput.classList.add('is-invalid');
+      isDataValid = false;
+    } else {
+      registerCheckInput.classList.remove('is-invalid');
+    }
+
+    if (isDataValid) {
+      fetch('/users/auth/register', {
+        method: 'POST',
+        redirect: 'follow',
+        body: data
+      })
+      .then((response) => {
+        if (response.redirected) {
+          window.location.href = "/dashboard";
+        } else {
+          return response.text();
+        }
+      })
+      .then((msg) => {
+        if (msg !== undefined) {
+          const registerAlert = document.getElementById('registerAlert');
+          registerAlert.innerHTML = msg;
+          const registerAlertInstance = mdb.Alert.getInstance(registerAlert);
+          registerAlertInstance.show();
+        }
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+    }
+  });
+
+  </script>
+</html>

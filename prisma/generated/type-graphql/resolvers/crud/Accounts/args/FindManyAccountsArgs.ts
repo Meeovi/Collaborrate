@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { AccountsOrderByWithRelationInput } from "../../../inputs/AccountsOrderByWithRelationInput";
+import { AccountsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/AccountsOrderByWithRelationAndSearchRelevanceInput";
 import { AccountsWhereInput } from "../../../inputs/AccountsWhereInput";
 import { AccountsWhereUniqueInput } from "../../../inputs/AccountsWhereUniqueInput";
 import { AccountsScalarFieldEnum } from "../../../../enums/AccountsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyAccountsArgs {
   })
   where?: AccountsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [AccountsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [AccountsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: AccountsOrderByWithRelationInput[] | undefined;
+  orderBy?: AccountsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => AccountsWhereUniqueInput, {
     nullable: true

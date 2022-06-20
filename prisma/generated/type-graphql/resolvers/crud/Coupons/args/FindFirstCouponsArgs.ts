@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { CouponsOrderByWithRelationInput } from "../../../inputs/CouponsOrderByWithRelationInput";
+import { CouponsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/CouponsOrderByWithRelationAndSearchRelevanceInput";
 import { CouponsWhereInput } from "../../../inputs/CouponsWhereInput";
 import { CouponsWhereUniqueInput } from "../../../inputs/CouponsWhereUniqueInput";
 import { CouponsScalarFieldEnum } from "../../../../enums/CouponsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstCouponsArgs {
   })
   where?: CouponsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [CouponsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [CouponsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: CouponsOrderByWithRelationInput[] | undefined;
+  orderBy?: CouponsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => CouponsWhereUniqueInput, {
     nullable: true

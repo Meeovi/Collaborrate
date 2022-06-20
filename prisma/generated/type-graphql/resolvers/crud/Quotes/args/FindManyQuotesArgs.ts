@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { QuotesOrderByWithRelationInput } from "../../../inputs/QuotesOrderByWithRelationInput";
+import { QuotesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/QuotesOrderByWithRelationAndSearchRelevanceInput";
 import { QuotesWhereInput } from "../../../inputs/QuotesWhereInput";
 import { QuotesWhereUniqueInput } from "../../../inputs/QuotesWhereUniqueInput";
 import { QuotesScalarFieldEnum } from "../../../../enums/QuotesScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyQuotesArgs {
   })
   where?: QuotesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [QuotesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [QuotesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: QuotesOrderByWithRelationInput[] | undefined;
+  orderBy?: QuotesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => QuotesWhereUniqueInput, {
     nullable: true

@@ -1,89 +1,160 @@
 <template>
-  <div class="col">
-    <v-chart class="chart" :option="option" />
+  <div>
+    <section class="text-center">
+        <div class="row">
+          <div class="col-xl-4 mb-4">
+            <div class="card">
+              <div class="card-header bg-light border-0 py-3">
+                <p class="mb-0"><strong>Users & Sessions</strong></p>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-around">
+                  <div>
+                    <p class="mb-2">Users</p>
+                    <h5>38.6K</h5>
+                    <p class="text-success small">
+                      <i class="fas fa-caret-up me-1"></i><span>72.0%</span>
+                    </p>
+                  </div>
+                  <div>
+                    <p class="mb-2">Sessions</p>
+                    <h5>50.9K</h5>
+                    <p class="text-success small">
+                      <i class="fas fa-caret-up me-1"></i><span>82.0%</span>
+                    </p>
+                  </div>
+                  <div>
+                    <p class="mb-2">New Users</p>
+                    <h5>34.0K</h5>
+                    <p class="text-danger small">
+                      <i class="fas fa-caret-down me-1"></i><span>12.0%</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div id="chart-users-sessions"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 mb-4">
+            <div class="card">
+              <div class="card-header bg-light border-0 py-3">
+                <p class="mb-0"><strong>Revenue & Conversion Rate</strong></p>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-around">
+                  <div>
+                    <p class="mb-2">Product Revenue</p>
+                    <h5>$5.35KK</h5>
+                    <p class="text-success small">
+                      <i class="fas fa-caret-up me-1"></i><span>-21.6%</span>
+                    </p>
+                  </div>
+                  <div>
+                    <p class="mb-2">Transactions</p>
+                    <h5>88</h5>
+                    <p class="text-danger small">
+                      <i class="fas fa-caret-down me-1"></i><span>-22.8%</span>
+                    </p>
+                  </div>
+                  <div>
+                    <p class="mb-2">Conversion Rate</p>
+                    <h5>0.2%</h5>
+                    <p class="text-danger small">
+                      <i class="fas fa-caret-down me-1"></i><span>-1.7%</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div id="chart-revenue-conversion"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 mb-4">
+            <div class="card">
+              <div class="card-header bg-light border-0 py-3">
+                <p class="mb-0"><strong>Site Health</strong></p>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-around">
+                  <div>
+                    <p class="mb-2">Bounce Rate</p>
+                    <h5>41.4%</h5>
+                    <p class="text-success small">
+                      <i class="fas fa-caret-down me-1"></i><span>-3.3%</span>
+                    </p>
+                  </div>
+                  <div>
+                    <p class="mb-2">Avg. Session Duration</p>
+                    <h5>03:20</h5>
+                    <p class="text-success small">
+                      <i class="fas fa-caret-up me-1"></i><span>3.6%</span>
+                    </p>
+                  </div>
+                  <div>
+                    <p class="mb-2">Avg. Page Load Time</p>
+                    <h5>3.9s</h5>
+                    <p class="text-danger small">
+                      <i class="fas fa-caret-up me-1"></i><span>12.0%</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div id="chart-site-health"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
+
+      <!--Section: Content-->
+      <section class="text-center">
+        <div class="row">
+          <div class="col-xl-4 mb-4">
+            <div class="card">
+              <div class="card-header bg-light border-0 py-3">
+                <p class="mb-0"><strong>Device Performance</strong></p>
+              </div>
+              <div class="card-body">
+                <div id="chart-device-performance"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 mb-4">
+            <div class="card">
+              <div class="card-header bg-light border-0 py-3">
+                <p class="mb-0"><strong>Transactions</strong></p>
+              </div>
+              <div class="card-body">
+                <div id="chart-transactions"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 mb-4">
+            <div class="card">
+              <div class="card-header bg-light border-0 py-3">
+                <p class="mb-0"><strong>Sessions</strong></p>
+              </div>
+              <div class="card-body">
+                <div id="chart-sessions"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
   </div>
 </template>
 
 <script>
-  import {use} from "echarts/core";
-  import {CanvasRenderer} from "echarts/renderers";
-  import {PieChart} from "echarts/charts";
-  import {TitleComponent, TooltipComponent, LegendComponent} from "echarts/components";
-  import VChart, {THEME_KEY} from "vue-echarts";
-
-  use([CanvasRenderer, PieChart, TitleComponent, TooltipComponent, LegendComponent]);
-
-  export default {
-    components: {VChart},
-    provide: {
-      [THEME_KEY]: "dark"
-    },
-    data() {
-      return {
-        option: {
-          title: {
-            text: "Traffic Sources",
-            left: "center"
-          },
-          tooltip: {
-            trigger: "item",
-            formatter: "{a} <br/>{b} : {c} ({d}%)"
-          },
-          legend: {
-            orient: "vertical",
-            left: "left",
-            data: [
-              "Direct",
-              "Email",
-              "Ad Networks",
-              "Video Ads",
-              "Search Engines"
-            ]
-          },
-          series: [{
-            name: "Traffic Sources",
-            type: "pie",
-            radius: "55%",
-            center: ["50%", "60%"],
-            data: [{
-                value: 335,
-                name: "Direct"
-              },
-              {
-                value: 310,
-                name: "Email"
-              },
-              {
-                value: 234,
-                name: "Ad Networks"
-              },
-              {
-                value: 135,
-                name: "Video Ads"
-              },
-              {
-                value: 1548,
-                name: "Search Engines"
-              }
-            ],
-            emphasis: {
-              itemStyle: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: "rgba(0, 0, 0, 0.5)"
-              }
-            }
-          }]
-        }
-      };
-    }
-  };
 
 </script>
 
 <style scoped>
-  .chart {
-    height: 400px;
-  }
 
 </style>

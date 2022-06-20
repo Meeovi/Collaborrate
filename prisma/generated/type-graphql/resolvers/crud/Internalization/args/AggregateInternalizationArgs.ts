@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { InternalizationOrderByWithRelationInput } from "../../../inputs/InternalizationOrderByWithRelationInput";
+import { InternalizationOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/InternalizationOrderByWithRelationAndSearchRelevanceInput";
 import { InternalizationWhereInput } from "../../../inputs/InternalizationWhereInput";
 import { InternalizationWhereUniqueInput } from "../../../inputs/InternalizationWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateInternalizationArgs {
   })
   where?: InternalizationWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [InternalizationOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [InternalizationOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: InternalizationOrderByWithRelationInput[] | undefined;
+  orderBy?: InternalizationOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => InternalizationWhereUniqueInput, {
     nullable: true

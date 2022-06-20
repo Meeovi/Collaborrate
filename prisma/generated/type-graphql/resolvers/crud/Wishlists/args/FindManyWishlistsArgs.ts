@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { WishlistsOrderByWithRelationInput } from "../../../inputs/WishlistsOrderByWithRelationInput";
+import { WishlistsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/WishlistsOrderByWithRelationAndSearchRelevanceInput";
 import { WishlistsWhereInput } from "../../../inputs/WishlistsWhereInput";
 import { WishlistsWhereUniqueInput } from "../../../inputs/WishlistsWhereUniqueInput";
 import { WishlistsScalarFieldEnum } from "../../../../enums/WishlistsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyWishlistsArgs {
   })
   where?: WishlistsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [WishlistsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [WishlistsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: WishlistsOrderByWithRelationInput[] | undefined;
+  orderBy?: WishlistsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => WishlistsWhereUniqueInput, {
     nullable: true

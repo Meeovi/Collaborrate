@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { SegmentsOrderByWithRelationInput } from "../../../inputs/SegmentsOrderByWithRelationInput";
+import { SegmentsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/SegmentsOrderByWithRelationAndSearchRelevanceInput";
 import { SegmentsWhereInput } from "../../../inputs/SegmentsWhereInput";
 import { SegmentsWhereUniqueInput } from "../../../inputs/SegmentsWhereUniqueInput";
 import { SegmentsScalarFieldEnum } from "../../../../enums/SegmentsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstSegmentsArgs {
   })
   where?: SegmentsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [SegmentsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [SegmentsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: SegmentsOrderByWithRelationInput[] | undefined;
+  orderBy?: SegmentsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => SegmentsWhereUniqueInput, {
     nullable: true

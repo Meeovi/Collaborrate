@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { TargetsOrderByWithRelationInput } from "../../../inputs/TargetsOrderByWithRelationInput";
+import { TargetsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/TargetsOrderByWithRelationAndSearchRelevanceInput";
 import { TargetsWhereInput } from "../../../inputs/TargetsWhereInput";
 import { TargetsWhereUniqueInput } from "../../../inputs/TargetsWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateTargetsArgs {
   })
   where?: TargetsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [TargetsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [TargetsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: TargetsOrderByWithRelationInput[] | undefined;
+  orderBy?: TargetsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => TargetsWhereUniqueInput, {
     nullable: true

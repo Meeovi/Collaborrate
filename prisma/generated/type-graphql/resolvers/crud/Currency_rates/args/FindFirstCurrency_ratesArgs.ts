@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { Currency_ratesOrderByWithRelationInput } from "../../../inputs/Currency_ratesOrderByWithRelationInput";
+import { Currency_ratesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Currency_ratesOrderByWithRelationAndSearchRelevanceInput";
 import { Currency_ratesWhereInput } from "../../../inputs/Currency_ratesWhereInput";
 import { Currency_ratesWhereUniqueInput } from "../../../inputs/Currency_ratesWhereUniqueInput";
 import { Currency_ratesScalarFieldEnum } from "../../../../enums/Currency_ratesScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstCurrency_ratesArgs {
   })
   where?: Currency_ratesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [Currency_ratesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [Currency_ratesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: Currency_ratesOrderByWithRelationInput[] | undefined;
+  orderBy?: Currency_ratesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => Currency_ratesWhereUniqueInput, {
     nullable: true

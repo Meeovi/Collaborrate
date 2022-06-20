@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { ArticlesOrderByWithRelationInput } from "../../../inputs/ArticlesOrderByWithRelationInput";
+import { ArticlesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ArticlesOrderByWithRelationAndSearchRelevanceInput";
 import { ArticlesWhereInput } from "../../../inputs/ArticlesWhereInput";
 import { ArticlesWhereUniqueInput } from "../../../inputs/ArticlesWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateArticlesArgs {
   })
   where?: ArticlesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [ArticlesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [ArticlesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: ArticlesOrderByWithRelationInput[] | undefined;
+  orderBy?: ArticlesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => ArticlesWhereUniqueInput, {
     nullable: true

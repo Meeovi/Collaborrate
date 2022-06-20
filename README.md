@@ -7,7 +7,7 @@ A powerful, consistent, and flexible headless content management framework. Buil
 
 Since AlternateCMS is powered by Nuxtjs it support all of Nuxtjs and Vuejs features and hundreds of modules.
 
-- AlternateCMS supports Mysql, PostgreSQL, MongoDB, SQLite, CockroachDB, and Microsoft SQL Server
+- AlternateCMS supports PostgresSQL and Postgraphile
 - Blog Functionality with tags
 - Theme and Extensions support
 - Unlimited Products with product attributes and product types
@@ -17,8 +17,10 @@ Since AlternateCMS is powered by Nuxtjs it support all of Nuxtjs and Vuejs featu
 - Powerful Search capabilities
 - User authentication and authorization 
 - Graphql support & Rest Apis
-- Integration with Supabase and Hasura
+- Integration with Supabase, Firebase, and Hasura
 - Integrated reporting tools and Sentry integration
+- Paypal & Stripe payment methods
+- TWA (Trusted Web App) that uses built in PWA manifest, Android Files generated, build APK & AAB, handling artifacts signing if keys are provided, and generates & emits asset links file in dist folder
 - Integrated with Netlify
 - Enhanced Security with monthly updates
 - Integrated with Bootstrap and Fontawesome
@@ -37,7 +39,7 @@ Since AlternateCMS is powered by Nuxtjs it support all of Nuxtjs and Vuejs featu
 - Integrated PM2 support
 - Built in CRM (Customer Relationship Management) including Cases, Opportunities, Tasks, Accounts, Meetings, Contracts, Leads, Campaigns, Quotes, and more.
 - Built in ERP (Enterprise Resource Planning) includes Project Management, Checklist, Error Reporting, Visits, Team Scheduler, Deep Dives, Dashboard Creations
-- Built on top of Nuxtjs, Vuejs, and Prisma
+- Built on top of Nuxtjs & VueJS
 
 and much more. Take a look at www.alternatecms.com 
 
@@ -77,6 +79,8 @@ AlternateCMS API Documentation is located at: http://localhost:5858
 5. npm run all
 
 AlternateCMS will be at: http://localhost:8000
+
+AlternateCMS Graphiql Playground will be at: http://localhost:5000/graphiql
 
 AlternateCMS API Documentation is located at: http://localhost:5858
 

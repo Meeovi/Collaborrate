@@ -1,7 +1,4 @@
 /******************* Main CSS ***************/
-body {
-    margin: 0;
-}
 
 .topnav li {
     display: grid;
@@ -34,29 +31,29 @@ body {
     height: 30px;
 }
 
-nav a, nav .fas, nav li {
+nav a, .input-group-text {
     color: white !important;
 }
 
-nav .fas:hover, nav li:hover {
-    color: white !important;
+.sidenav-link:hover {
+    color: indianred !important;
 }
 
-nav a:hover {
-    color: blue !important;
-}
-
-#navbarDropdownMenuLink {
-    color: white !important;
-}
-
-.nav-item:hover {
-    color: white !important;
-}
-
-nav .dropdown-item {
+.dropdown-item {
     color: black !important;
 }
+
+@media (min-width: 1400px) {
+    main,
+    header,
+    #main-navbar {
+      padding-left: 240px;
+    }
+  }
+
+  body {
+    margin: 0;
+  }
 
 /******************* Dashboard CSS *********/
 

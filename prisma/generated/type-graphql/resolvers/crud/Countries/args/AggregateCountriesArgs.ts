@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { CountriesOrderByWithRelationInput } from "../../../inputs/CountriesOrderByWithRelationInput";
+import { CountriesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/CountriesOrderByWithRelationAndSearchRelevanceInput";
 import { CountriesWhereInput } from "../../../inputs/CountriesWhereInput";
 import { CountriesWhereUniqueInput } from "../../../inputs/CountriesWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateCountriesArgs {
   })
   where?: CountriesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [CountriesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [CountriesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: CountriesOrderByWithRelationInput[] | undefined;
+  orderBy?: CountriesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => CountriesWhereUniqueInput, {
     nullable: true

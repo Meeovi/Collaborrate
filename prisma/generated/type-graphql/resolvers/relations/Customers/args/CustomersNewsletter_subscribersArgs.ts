@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { Newsletter_subscribersOrderByWithRelationInput } from "../../../inputs/Newsletter_subscribersOrderByWithRelationInput";
+import { Newsletter_subscribersOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Newsletter_subscribersOrderByWithRelationAndSearchRelevanceInput";
 import { Newsletter_subscribersWhereInput } from "../../../inputs/Newsletter_subscribersWhereInput";
 import { Newsletter_subscribersWhereUniqueInput } from "../../../inputs/Newsletter_subscribersWhereUniqueInput";
 import { Newsletter_subscribersScalarFieldEnum } from "../../../../enums/Newsletter_subscribersScalarFieldEnum";
@@ -12,10 +12,10 @@ export class CustomersNewsletter_subscribersArgs {
   })
   where?: Newsletter_subscribersWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [Newsletter_subscribersOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [Newsletter_subscribersOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: Newsletter_subscribersOrderByWithRelationInput[] | undefined;
+  orderBy?: Newsletter_subscribersOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => Newsletter_subscribersWhereUniqueInput, {
     nullable: true

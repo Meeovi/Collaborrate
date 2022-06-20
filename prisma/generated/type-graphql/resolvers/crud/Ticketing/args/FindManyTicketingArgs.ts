@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { TicketingOrderByWithRelationInput } from "../../../inputs/TicketingOrderByWithRelationInput";
+import { TicketingOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/TicketingOrderByWithRelationAndSearchRelevanceInput";
 import { TicketingWhereInput } from "../../../inputs/TicketingWhereInput";
 import { TicketingWhereUniqueInput } from "../../../inputs/TicketingWhereUniqueInput";
 import { TicketingScalarFieldEnum } from "../../../../enums/TicketingScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyTicketingArgs {
   })
   where?: TicketingWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [TicketingOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [TicketingOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: TicketingOrderByWithRelationInput[] | undefined;
+  orderBy?: TicketingOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => TicketingWhereUniqueInput, {
     nullable: true

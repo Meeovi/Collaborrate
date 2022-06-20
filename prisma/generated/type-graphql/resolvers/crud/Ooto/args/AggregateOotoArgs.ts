@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { OotoOrderByWithRelationInput } from "../../../inputs/OotoOrderByWithRelationInput";
+import { OotoOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/OotoOrderByWithRelationAndSearchRelevanceInput";
 import { OotoWhereInput } from "../../../inputs/OotoWhereInput";
 import { OotoWhereUniqueInput } from "../../../inputs/OotoWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateOotoArgs {
   })
   where?: OotoWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [OotoOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [OotoOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: OotoOrderByWithRelationInput[] | undefined;
+  orderBy?: OotoOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => OotoWhereUniqueInput, {
     nullable: true

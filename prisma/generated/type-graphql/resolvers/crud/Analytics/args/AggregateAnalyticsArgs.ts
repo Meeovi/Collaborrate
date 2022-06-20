@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { AnalyticsOrderByWithRelationInput } from "../../../inputs/AnalyticsOrderByWithRelationInput";
+import { AnalyticsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/AnalyticsOrderByWithRelationAndSearchRelevanceInput";
 import { AnalyticsWhereInput } from "../../../inputs/AnalyticsWhereInput";
 import { AnalyticsWhereUniqueInput } from "../../../inputs/AnalyticsWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateAnalyticsArgs {
   })
   where?: AnalyticsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [AnalyticsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [AnalyticsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: AnalyticsOrderByWithRelationInput[] | undefined;
+  orderBy?: AnalyticsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => AnalyticsWhereUniqueInput, {
     nullable: true

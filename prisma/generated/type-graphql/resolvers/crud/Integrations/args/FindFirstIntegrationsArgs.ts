@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { IntegrationsOrderByWithRelationInput } from "../../../inputs/IntegrationsOrderByWithRelationInput";
+import { IntegrationsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/IntegrationsOrderByWithRelationAndSearchRelevanceInput";
 import { IntegrationsWhereInput } from "../../../inputs/IntegrationsWhereInput";
 import { IntegrationsWhereUniqueInput } from "../../../inputs/IntegrationsWhereUniqueInput";
 import { IntegrationsScalarFieldEnum } from "../../../../enums/IntegrationsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstIntegrationsArgs {
   })
   where?: IntegrationsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [IntegrationsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [IntegrationsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: IntegrationsOrderByWithRelationInput[] | undefined;
+  orderBy?: IntegrationsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => IntegrationsWhereUniqueInput, {
     nullable: true

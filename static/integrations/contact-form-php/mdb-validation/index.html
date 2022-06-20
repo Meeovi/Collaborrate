@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>MDB5 - Contact Form</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="container-md border p-4 d-flex justify-content-center my-4">
+    <form action="mail.php" method="POST" class="needs-validation" novalidate>
+      <h2>Contact us</h2>
+
+      <!-- Name input -->
+      <div class="form-outline mb-4">
+        <input type="text" id="name" name="name" class="form-control" />
+        <label class="form-label" for="name">Name</label>
+        <div class="invalid-feedback">
+          Please provide your name.
+        </div>
+      </div>
+
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <input type="email" id="email" name="email" class="form-control" />
+        <label class="form-label" for="email">Email address</label>
+        <div class="invalid-feedback">
+          Please provide your email.
+        </div>
+      </div>
+
+      <!-- Subject input -->
+      <div class="form-outline mb-4">
+        <input type="text" id="subject" name="subject" class="form-control" />
+        <label class="form-label" for="subject">Subject</label>
+        <div class="invalid-feedback">
+          Please provide mail subject.
+        </div>
+      </div>
+
+      <!-- Message input -->
+      <div class="form-outline mb-4">
+        <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+        <label class="form-label" for="message">Message</label>
+        <div class="invalid-feedback">
+          Please provide a message text.
+        </div>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4">
+        Send
+      </button>
+    </form>
+  </div>
+
+</body>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript">
+  (() => {
+    'use strict';
+
+    const forms = document.querySelectorAll('.needs-validation');
+
+    Array.prototype.slice.call(forms).forEach((form) => {
+      form.addEventListener('submit', (event) => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  })();
+</script>
+
+</html>

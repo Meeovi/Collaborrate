@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { KnowledgebaseOrderByWithRelationInput } from "../../../inputs/KnowledgebaseOrderByWithRelationInput";
+import { KnowledgebaseOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/KnowledgebaseOrderByWithRelationAndSearchRelevanceInput";
 import { KnowledgebaseWhereInput } from "../../../inputs/KnowledgebaseWhereInput";
 import { KnowledgebaseWhereUniqueInput } from "../../../inputs/KnowledgebaseWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateKnowledgebaseArgs {
   })
   where?: KnowledgebaseWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [KnowledgebaseOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [KnowledgebaseOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: KnowledgebaseOrderByWithRelationInput[] | undefined;
+  orderBy?: KnowledgebaseOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => KnowledgebaseWhereUniqueInput, {
     nullable: true

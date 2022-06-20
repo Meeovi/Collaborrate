@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { Product_typesOrderByWithRelationInput } from "../../../inputs/Product_typesOrderByWithRelationInput";
+import { Product_typesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Product_typesOrderByWithRelationAndSearchRelevanceInput";
 import { Product_typesWhereInput } from "../../../inputs/Product_typesWhereInput";
 import { Product_typesWhereUniqueInput } from "../../../inputs/Product_typesWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateProduct_typesArgs {
   })
   where?: Product_typesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [Product_typesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [Product_typesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: Product_typesOrderByWithRelationInput[] | undefined;
+  orderBy?: Product_typesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => Product_typesWhereUniqueInput, {
     nullable: true

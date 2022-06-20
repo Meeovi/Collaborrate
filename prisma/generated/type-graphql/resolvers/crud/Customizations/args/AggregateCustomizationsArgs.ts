@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { CustomizationsOrderByWithRelationInput } from "../../../inputs/CustomizationsOrderByWithRelationInput";
+import { CustomizationsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/CustomizationsOrderByWithRelationAndSearchRelevanceInput";
 import { CustomizationsWhereInput } from "../../../inputs/CustomizationsWhereInput";
 import { CustomizationsWhereUniqueInput } from "../../../inputs/CustomizationsWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateCustomizationsArgs {
   })
   where?: CustomizationsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [CustomizationsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [CustomizationsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: CustomizationsOrderByWithRelationInput[] | undefined;
+  orderBy?: CustomizationsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => CustomizationsWhereUniqueInput, {
     nullable: true

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="mdb/img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="mdb/css/mdb.min.css" />
+    <!-- Table Editor -->
+    <link rel="stylesheet" href="table-editor/css/table-editor.min.css" />
+    <!-- Custom styles -->
+    <style>
+      body {
+        background-color: #fbfbfb;
+      }
+
+      @media (min-width: 1400px) {
+        main,
+        header,
+        #navbar {
+          padding-left: 240px;
+        }
+      }
+
+      main {
+        min-height: 80vh;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Main Navigation-->
+    <header>
+      <%- include('layouts/sidenav') -%>
+      <%- include('layouts/navbar') -%>
+    </header>
+    <!--Main layout-->
+    <main>
+      <div class="container px-lg-5" style="margin-top: 150px">
+        <%- include('layouts/' + content) -%>
+      </div>
+    </main>
+    <!--Main layout-->
+    <footer class="mt-5 text-center">
+      <%- include('layouts/footer') -%>
+    </footer>
+    
+    <% if (alert) { %>
+      <div
+        class="alert fade show"
+        role="alert"
+        data-mdb-color="<%= alert.color %>"
+        data-mdb-position="top-center"
+        data-mdb-stacking="true"
+        data-mdb-append-to-body="true"
+        data-mdb-autohide="true"
+        data-mdb-delay="3000"
+      >
+        <%= alert.message %>
+      </div>
+    <% } %>
+    <!-- End your project here-->
+  </body>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="mdb/js/mdb.min.js"></script>
+  <!-- Table Editor -->
+  <script type="text/javascript" src="table-editor/js/table-editor.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript">
+    const sidenav = document.getElementById("sidenav");
+    const sidenavInstance = mdb.Sidenav.getInstance(sidenav);
+
+    let innerWidth = null;
+
+    const setMode = (e) => {
+      // Check necessary for Android devices
+      if (window.innerWidth === innerWidth) {
+        return;
+      }
+
+      innerWidth = window.innerWidth;
+
+      if (window.innerWidth < 1400) {
+        sidenavInstance.changeMode("over");
+        sidenavInstance.hide();
+      } else {
+        sidenavInstance.changeMode("side");
+        sidenavInstance.show();
+      }
+    };
+
+    setMode();
+
+    // Event listeners
+    window.addEventListener("resize", setMode);
+  </script>
+
+  <% if (content == 'seo-dashboard') { %>
+  <script type="text/javascript">
+    const chartDevicesOptions = {
+      dataLabelsPlugin: true,
+      options: {
+        legend: {
+          position: "right",
+          labels: {
+            boxWidth: 10,
+          },
+        },
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx) => {
+              let sum = 0;
+              let dataArr = dataChartDevices1.data.datasets[0].data;
+              dataArr.map((data) => {
+                sum += data;
+              });
+              let percentage = ((value * 100) / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: "white",
+            labels: {
+              title: {
+                font: {
+                  size: "9",
+                },
+              },
+            },
+          },
+        },
+      },
+    };
+
+    // Chart devices 1
+    const dataChartDevices1 = {
+      type: "doughnut",
+      data: {
+        labels: ["Desktop", "Mobile", "Tablet"],
+        datasets: [
+          {
+            label: "Traffic",
+            data: [2112, 2343, 2545],
+            backgroundColor: [
+              "rgba(63, 81, 181, 0.5)",
+              "rgba(77, 182, 172, 0.5)",
+              "rgba(66, 133, 244, 0.5)",
+            ],
+          },
+        ],
+      },
+    };
+
+    new mdb.Chart(
+      document.getElementById("chart-devices-1"),
+      dataChartDevices1,
+      chartDevicesOptions
+    );
+
+    // Chart devices 2
+    const dataChartDevices2 = {
+      type: "doughnut",
+      data: {
+        labels: ["Desktop", "Mobile", "Tablet"],
+        datasets: [
+          {
+            label: "Traffic",
+            data: [2112, 2943, 1545],
+            backgroundColor: [
+              "rgba(63, 81, 181, 0.5)",
+              "rgba(77, 182, 172, 0.5)",
+              "rgba(66, 133, 244, 0.5)",
+            ],
+          },
+        ],
+      },
+    };
+
+    new mdb.Chart(
+      document.getElementById("chart-devices-2"),
+      dataChartDevices2,
+      chartDevicesOptions
+    );
+
+    const optionsChartPagesAndQueries = {
+      options: {
+        maintainAspectRatio: false,
+        scales: {
+          yAxes: [
+            {
+              stacked: false,
+            },
+          ],
+        },
+      },
+    };
+
+    const dataChartPagesAndQueries = {
+      type: "line",
+      data: {
+        labels: [
+          "06.08.2020",
+          "07.08.2020",
+          "08.08.2020",
+          "09.08.2020",
+          "10.08.2020",
+          "11.08.2020",
+          "12.08.2020",
+        ],
+        datasets: [
+          {
+            label: "Unique pages",
+            data: [25, 49, 40, 21, 56, 75, 30],
+          },
+          {
+            label: "Unique queries",
+            data: [58, 18, 30, 59, 46, 77, 90],
+            backgroundColor: "rgba(66, 133, 244, 0.0)",
+            borderColor: "#33b5e5",
+            pointBorderColor: "#33b5e5",
+            pointBackgroundColor: "#33b5e5",
+          },
+        ],
+      },
+    };
+
+    new mdb.Chart(
+      document.getElementById("chart-pages-and-queries"),
+      dataChartPagesAndQueries,
+      optionsChartPagesAndQueries
+    );
+
+    const optionsChartImpressionsAndClicks = {
+      options: {
+        maintainAspectRatio: false,
+        scales: {
+          yAxes: [
+            {
+              stacked: false,
+            },
+          ],
+        },
+      },
+    };
+
+    const dataChartImpressionsAndClicks = {
+      type: "line",
+      data: {
+        labels: [],
+        datasets: [
+          {
+            label: "Impressions",
+            data: [],
+          },
+          {
+            label: "Clicks",
+            data: [],
+            backgroundColor: "rgba(66, 133, 244, 0.0)",
+            borderColor: "#33b5e5",
+            pointBorderColor: "#33b5e5",
+            pointBackgroundColor: "#33b5e5",
+          },
+        ],
+      },
+    };
+
+    const addChartImpressionsAndClicksData = (data) => {
+      dataChartImpressionsAndClicks.data.labels.push(data.created_at);
+      dataChartImpressionsAndClicks.data.datasets[0].data.push(data.impressions);
+      dataChartImpressionsAndClicks.data.datasets[1].data.push(data.clicks);
+    }
+
+    const tableRowTemplate = (row) => {
+      return `
+        <th scope="row">${row.created_at}</th>
+        <td>${row.impressions}</td>
+        <td>${row.clicks}</td>
+        <td>${(row.clicks / row.impressions * 100).toFixed(2)}%</td>
+        <td>${row.position}</td>
+      `;
+    }
+
+    fetch('/performance/traffic')
+    .then(response => response.json())
+    .then(rows => {
+      const table = document.getElementById('table-impressions-and-clicks');
+      rows.forEach((row) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = tableRowTemplate(row);
+        table.appendChild(tr);
+
+        addChartImpressionsAndClicksData(row);
+      });
+
+      new mdb.Chart(
+        document.getElementById("chart-impressions-and-clicks"),
+        dataChartImpressionsAndClicks,
+        optionsChartImpressionsAndClicks
+      );
+    })
+    .catch((err) => {
+      console.log(err.message);
+    });
+
+  </script>
+  <% } %>
+
+  <% if (content == 'user-management') { %>
+    <script type="text/javascript">
+    const rows = [];
+    const roles = [];
+
+    const columns = [
+      {
+        width: 250,
+        label: "Username",
+        field: "name",
+        sort: true
+      },
+      {
+        width: 250,
+        label: "Email",
+        field: "email",
+        sort: true
+      },
+      {
+        width: 250,
+        defaultValue: "User",
+        options: roles || [],
+        inputType: "select",
+        label: "Role",
+        field: "role",
+        editable: true,
+        sort: true
+      }
+    ];
+
+    const tableModal = new TableEditor(
+      document.getElementById("table_modal"),
+      {
+        columns,
+        rows,
+      },
+      { mode: "modal", entries: 5, entriesOptions: [5, 10, 15], confirm: true }
+    );
+
+    const getRoles = (() => {
+      fetch('/roles')
+      .then(response => response.json())
+      .then(data => {
+        data.forEach((role) => {
+          roles.push(
+            role.name
+          );
+        });
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+    })();
+
+    const getUsers = (() => {
+      fetch('/users')
+      .then(response => response.json())
+      .then(data => {
+        data.forEach((user) => {
+          rows.push({
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            role: user.role.name,
+          });
+        });
+
+        tableModal.update({
+          columns,
+          rows,
+        });
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+    })();
+
+    window.addEventListener('updateEntry.mdb.tableEditor', (event) => {
+      if (Object.keys(event.row).length >= 1) {
+        const newRoleId = roles.indexOf(event.row.role) + 1;
+        fetch(`/users/${event.row.id}`, {
+          method: 'PUT',
+          body: JSON.stringify({
+            userRoleId: newRoleId,
+            userEmail: event.row.email
+          }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+          }
+        })
+        .catch((err) => {
+          console.log(err.message);
+        });
+      }
+    });
+
+    window.addEventListener('delete.mdb.tableEditor', (event) => {
+      if (Object.keys(event.row).length >= 1) {
+        fetch(`/users/${event.row.id}`, {
+          method: 'DELETE',
+          body: JSON.stringify({
+            userEmail: event.row.email
+          }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+          }
+        })
+        .catch((err) => {
+          console.log(err.message);
+        });
+      }
+    });
+
+  </script>
+  <% } %>
+</html>

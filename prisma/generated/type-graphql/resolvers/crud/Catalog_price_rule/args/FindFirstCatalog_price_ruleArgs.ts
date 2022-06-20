@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { Catalog_price_ruleOrderByWithRelationInput } from "../../../inputs/Catalog_price_ruleOrderByWithRelationInput";
+import { Catalog_price_ruleOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Catalog_price_ruleOrderByWithRelationAndSearchRelevanceInput";
 import { Catalog_price_ruleWhereInput } from "../../../inputs/Catalog_price_ruleWhereInput";
 import { Catalog_price_ruleWhereUniqueInput } from "../../../inputs/Catalog_price_ruleWhereUniqueInput";
 import { Catalog_price_ruleScalarFieldEnum } from "../../../../enums/Catalog_price_ruleScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstCatalog_price_ruleArgs {
   })
   where?: Catalog_price_ruleWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [Catalog_price_ruleOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [Catalog_price_ruleOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: Catalog_price_ruleOrderByWithRelationInput[] | undefined;
+  orderBy?: Catalog_price_ruleOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => Catalog_price_ruleWhereUniqueInput, {
     nullable: true

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>MDB5 - Contact Form</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="container-md border p-4 d-flex justify-content-center my-4">
+    <form id="form" action="mail.php" method="POST" style="width: 100%; max-width: 400px">
+      <h2>Contact us</h2>
+
+      <!-- Name input -->
+      <div class="form-outline mb-4">
+        <input type="text" id="name" name="name" class="form-control" />
+        <label class="form-label" for="name">Name</label>
+      </div>
+
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <input type="email" id="email" name="email" class="form-control" />
+        <label class="form-label" for="email">Email address</label>
+      </div>
+
+      <!-- Subject input -->
+      <div class="form-outline mb-4">
+        <input type="text" id="subject" name="subject" class="form-control" />
+        <label class="form-label" for="subject">Subject</label>
+      </div>
+
+      <!-- Message input -->
+      <div class="form-outline mb-4">
+        <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+        <label class="form-label" for="message">Message</label>
+      </div>
+
+      <!-- Submit button -->
+      <button id="custom-validation-button" type="submit" class="btn btn-primary btn-block mb-4">
+        Send
+      </button>
+
+      <!-- Status message -->
+      <div id="status"></div>
+    </form>
+  </div>
+
+</body>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript">
+  const button = document.getElementById('custom-validation-button');
+  const form = document.querySelector('form');
+
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    const {isDataValid, statusMessage} = validateForm();
+
+    if (!isDataValid) {
+      document.getElementById('status').innerHTML = statusMessage;
+      return;
+    }
+
+    document.getElementById('status').innerHTML = `<p class="note note-success">Sending...</p>`;
+    document.getElementById('form').submit();
+  });
+
+  function validateForm() {
+    let isDataValid = true;
+    let statusMessage = '';
+
+    const name = document.getElementById('name').value;
+    if (name === "") {
+      statusMessage += `<p class="note note-danger"><strong>Name</strong> cannot be empty</p>`;
+      isDataValid = false;
+    };
+
+    const email = document.getElementById('email').value;
+    if (email === "") {
+      statusMessage += `<p class="note note-danger"><strong>Email</strong> cannot be empty</p>`;
+      isDataValid = false;
+    } else {
+      const re =
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<p>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+      if (!re.test(email)) {
+        statusMessage += `<p class="note note-danger"><strong>Email</strong> is invalid</p>`;
+        isDataValid = false;
+      }
+    }
+
+    const subject = document.getElementById('subject').value;
+    if (subject === "") {
+      statusMessage += `<p class="note note-danger"><strong>Subject</strong> cannot be empty</p>`;
+      isDataValid = false;
+    }
+    const message = document.getElementById('message').value;
+    if (message === "") {
+      statusMessage += `<p class="note note-danger"><strong>Subject</strong> cannot be empty</p>`;
+      isDataValid = false;
+    }
+
+    return {
+      isDataValid,
+      statusMessage
+    };
+  }
+</script>
+
+</html>

@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { ContractsOrderByWithRelationInput } from "../../../inputs/ContractsOrderByWithRelationInput";
+import { ContractsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ContractsOrderByWithRelationAndSearchRelevanceInput";
 import { ContractsWhereInput } from "../../../inputs/ContractsWhereInput";
 import { ContractsWhereUniqueInput } from "../../../inputs/ContractsWhereUniqueInput";
 import { ContractsScalarFieldEnum } from "../../../../enums/ContractsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyContractsArgs {
   })
   where?: ContractsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [ContractsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [ContractsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: ContractsOrderByWithRelationInput[] | undefined;
+  orderBy?: ContractsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => ContractsWhereUniqueInput, {
     nullable: true

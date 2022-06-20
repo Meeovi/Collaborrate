@@ -36,13 +36,11 @@ export default {
       {rel: 'stylesheet', href: '/assets/dropdown/css/style.css' },
       {rel: 'stylesheet', href: '/assets/socicon/css/styles.css' },
       {rel: 'stylesheet', href: '/assets/theme/css/style.css' },
-      {rel: 'stylesheet', href: '/assets/mobirise/css/mbr-additional.css' },
+      // {rel: 'stylesheet', href: '/css/mdb.dark.min.css' },
       {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css'},
     ],
     script: [
-      { src: 'https://cdn.jsdelivr.net/npm/chart.js', ssr: false },
       { src: 'https://polyfill.io/v3/polyfill.min.js?features=es2015', ssr: false },
-      // { src: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.js', ssr: false },
       { src: 'https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js', ssr: false },
       { src: 'https://cdn.jsdelivr.net/gh/Rakhmadi/RdataTB@master/dist/index.js', ssr: false },
       { src: '/assets/popper/popper.min.js', ssr: false },
@@ -57,12 +55,17 @@ export default {
   },
 
   css: [
+    '~/static/css/mdb.min.css',
     '~/static/styles/styles.css',
     'simplemde/dist/simplemde.min.css',
     '~/static/styles/snow.min.css',
   ],
 
-  script: [],
+  script: [
+    { src: '~/static/js/mdb.min.js', mode: 'client' },
+    { src: '~/static/src/mdb/js/mdb.pro.js', ssr: false },
+    { src: '~/plugins/extensions/mdb.client.js', ssr: false },
+  ],
 
   plugins: [
     { src: '~/plugins/extensions/simplemde.js', ssr: false },
@@ -70,8 +73,8 @@ export default {
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
     { src: '~/plugins/ecommerce/pa-dss.js', ssr: false },
     { src: '~/plugins/client.js', ssr: false },
-    // { src: '~/plugins/extensions/media-library.js', ssr: false },
-    { src: '~/plugins/axios'},
+    { src: '~/plugins/extensions/mdb.client.js', ssr: false },
+    { src: '~/plugins/extensions/calendar.js', ssr: false },
     // { src: '~/plugins/extensions/email.js', ssr: false },
     { src: '~/plugins/upload.js', ssr: false },
   ],
@@ -84,6 +87,7 @@ export default {
     '@braid/vue-formulate/nuxt',
     'nuxt-webpack-optimisations',
     '@nuxtjs/composition-api/module',
+    '@aceforth/nuxt-netlify',
   ],
 
   modules: [
@@ -102,9 +106,52 @@ export default {
     '@nuxt/image',
     'nuxt-client-init-module',
     'nuxtjs-darkmode-js-module',
+    '@nuxtjs/firebase',
+    'nuxt-stripe-module',
+    'nuxt-twa',
+    '@nuxtjs/lunr-module',
   ],
 
 // Modules Options -----------------------------------------------------------------------------------------------
+
+stripe: {
+  publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+},
+
+firebase: {
+  config: {
+    apiKey: '<apiKey>',
+    authDomain: '<authDomain>',
+    projectId: '<projectId>',
+    storageBucket: '<storageBucket>',
+    messagingSenderId: '<messagingSenderId>',
+    appId: '<appId>',
+    measurementId: '<measurementId>'
+  },
+  services: {
+    auth: true,
+    firestore: true,
+    functions: true,
+    storage: true,
+    database: true,
+    messaging: true,
+    performance: true,
+    analytics: true,
+    remoteConfig: true
+  }
+},
+
+netlify: { 
+  headers: {
+    '/*': [
+      'Access-Control-Allow-Origin: *'
+    ],
+}
+},
+
+twa: {
+  host: '/'
+},
 
   router: {
     middleware: []
@@ -137,8 +184,8 @@ export default {
   },
 
   io: {
-    sockets: [ // Required
-      { // At least one entry is required
+    sockets: [
+      {
         name: 'home',
         url: 'http://localhost:8000',
         default: true,

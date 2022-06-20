@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { StatesOrderByWithRelationInput } from "../../../inputs/StatesOrderByWithRelationInput";
+import { StatesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/StatesOrderByWithRelationAndSearchRelevanceInput";
 import { StatesWhereInput } from "../../../inputs/StatesWhereInput";
 import { StatesWhereUniqueInput } from "../../../inputs/StatesWhereUniqueInput";
 import { StatesScalarFieldEnum } from "../../../../enums/StatesScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyStatesArgs {
   })
   where?: StatesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [StatesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [StatesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: StatesOrderByWithRelationInput[] | undefined;
+  orderBy?: StatesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => StatesWhereUniqueInput, {
     nullable: true

@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { VisitsOrderByWithRelationInput } from "../../../inputs/VisitsOrderByWithRelationInput";
+import { VisitsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/VisitsOrderByWithRelationAndSearchRelevanceInput";
 import { VisitsWhereInput } from "../../../inputs/VisitsWhereInput";
 import { VisitsWhereUniqueInput } from "../../../inputs/VisitsWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateVisitsArgs {
   })
   where?: VisitsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [VisitsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [VisitsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: VisitsOrderByWithRelationInput[] | undefined;
+  orderBy?: VisitsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => VisitsWhereUniqueInput, {
     nullable: true

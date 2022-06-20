@@ -1,0 +1,372 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor;
+@{
+    var avatar = Context.User.Claims.First(c => c.Type == "Avatar").Value;
+    var avatarPreview = avatar == "" ? "/assets/avatar.png" : avatar;
+    var role = Context.User.Claims.First(c => c.Type == "UserRole").Value;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="~/mdb/css/mdb.min.css" />
+    <link rel="stylesheet" href="~/mdb/plugins/table-editor.min.css" />
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="~/layout.css" />
+</head>
+<body>
+  <header>
+    <!-- Sidenav -->
+    <div
+      id="sidenav-1"
+      class="sidenav"
+      role="navigation"
+      data-mdb-mode="side"
+      data-mdb-hidden="false"
+      data-mdb-accordion="true"
+    >
+      <a
+        class="ripple d-flex justify-content-center py-4"
+        asp-action="Dashboard"
+        data-mdb-ripple-color="primary"
+      >
+        <img
+          id="MDB-logo"
+          src="https://mdbootstrap.com/wp-content/uploads/2018/06/logo-mdb-jquery-small.png"
+          alt="MDB Logo"
+          draggable="false"
+        />
+      </a>
+      <hr class="m-0" />
+      <ul class="sidenav-menu">
+        <li class="sidenav-item">
+          <a class="sidenav-link" asp-action="Dashboard">
+            <i class="fas fa-home fa-fw me-3"></i
+            ><span>Dashboard</span></a>
+        </li>
+      </ul>
+      <ul class="sidenav-menu">
+        <li class="sidenav-item">
+          <a class="sidenav-link" asp-action="UserProfile">
+            <i class="fas fa-user fa-fw me-3"></i
+            ><span>User Profile</span></a>
+        </li>
+        @if( role == "Admin") 
+        {
+        <li class="sidenav-item">
+          <a class="sidenav-link" asp-action="UserManagement">
+            <i class="fas fa-users fa-fw me-3"></i><span>User Management</span></a>
+        </li>
+        }
+      </ul>
+      <hr class="m-0" />
+      <ul class="sidenav-menu">
+        <li class="sidenav-item text-muted">
+          <a class="sidenav-link">
+            <i class="fas fa-chart-line fa-fw me-3"></i
+            ><span>Analytics</span></a>
+        </li>
+        <li class="sidenav-item text-muted">
+          <a class="sidenav-link">
+            <i class="fas fa-chart-bar fa-fw me-3"></i
+            ><span>Orders</span></a>
+        </li>
+        <li class="sidenav-item text-muted">
+          <a class="sidenav-link">
+            <i class="fas fa-chart-area fa-fw me-3"></i
+            ><span>Webiste traffic</span></a>
+        </li>
+        <li class="sidenav-item text-muted">
+          <a class="sidenav-link">
+            <i class="fas fa-globe fa-fw me-3"></i
+            ><span>International</span></a>
+        </li>
+        <li class="sidenav-item text-muted">
+          <a class="sidenav-link">
+            <i class="fas fa-building fa-fw me-3"></i
+            ><span>Partners</span></a>
+        </li>
+        <li class="sidenav-item text-muted">
+          <a class="sidenav-link">
+            <i class="fas fa-calendar fa-fw me-3"></i
+            ><span>Calendar</span></a>
+        </li>
+        <li class="sidenav-item text-muted">
+          <a class="sidenav-link">
+            <i class="fas fa-users fa-fw me-3"></i
+            ><span>Users</span></a>
+        </li>
+        <li class="sidenav-item text-muted">
+          <a class="sidenav-link">
+            <i class="fas fa-money-bill fa-fw me-3"></i
+            ><span>Sales</span></a>
+        </li>
+      </ul>
+    </div>
+    <!-- Sidenav -->
+
+    <!-- Navbar -->
+    <nav
+      id="main-navbar"
+      class="navbar navbar-expand-lg navbar-light bg-white fixed-top"
+    >
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggler -->
+        <button
+          data-mdb-toggle="sidenav"
+          data-mdb-target="#sidenav-1"
+          class="btn shadow-0 p-0 me-3 d-block d-xxl-none"
+          aria-controls="#sidenav-1"
+          aria-haspopup="true"
+        >
+          <i class="fas fa-bars fa-lg"></i>
+        </button>
+
+        <!-- Search form -->
+        <form class="d-none d-md-flex input-group w-auto my-auto">
+          <input
+            autocomplete="off"
+            type="search"
+            class="form-control rounded"
+            placeholder='Search (ctrl + "/" to focus)'
+            style="min-width: 225px"
+          />
+          <span class="input-group-text border-0"
+            ><i class="fas fa-search"></i
+          ></span>
+        </form>
+
+        <!-- Right links -->
+        <ul class="navbar-nav ms-auto d-flex flex-row">
+          <!-- Notification dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fas fa-bell"></i>
+              <span class="badge rounded-pill badge-notification bg-danger"
+                >1</span
+              >
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li><a class="dropdown-item" href="#">Some news</a></li>
+              <li><a class="dropdown-item" href="#">Another news</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Icon -->
+          <li class="nav-item">
+            <a class="nav-link me-3 me-lg-0" href="#">
+              <i class="fas fa-fill-drip"></i>
+            </a>
+          </li>
+          <!-- Icon -->
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+
+          <!-- Icon dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="united kingdom flag m-0"></i>
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdown"
+            >
+              <li>
+                <a class="dropdown-item"
+                  ><i class="united kingdom flag"></i>English
+                  <i class="fa fa-check text-success ms-2"></i
+                ></a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item"
+                  ><i class="poland flag"></i>Polski</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item"
+                  ><i class="china flag"></i>中文</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item"
+                  ><i class="japan flag"></i>日本語</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item"
+                  ><i class="germany flag"></i>Deutsch</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item"
+                  ><i class="france flag"></i>Français</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item"
+                  ><i class="spain flag"></i>Español</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item"
+                  ><i class="russia flag"></i>Русский</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item"
+                  ><i class="portugal flag"></i>Português</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- Avatar -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="@avatarPreview"
+                class="rounded-circle"
+                height="22"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li><a class="dropdown-item" asp-action="UserProfile">My Profile</a></li>
+              <li><a class="dropdown-item" asp-controller="Auth" asp-action="Logout">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main style="margin-top: 58px">
+    <div class="container">
+      <h1 class="h3 text-center py-5 mb-0">@ViewData["Title"]</h1>
+      @RenderBody()
+    </div>
+
+    <!--Alerts-->
+    <div
+      class="alert fade"
+      id="alert-success"
+      role="alert"
+      data-mdb-color="success"
+      data-mdb-position="top-right"
+      data-mdb-stacking="true"
+      data-mdb-width="535px"
+      data-mdb-append-to-body="true"
+      data-mdb-hidden="true"
+      data-mdb-autohide="true"
+    >
+    </div>
+    <div
+      class="alert fade"
+      id="alert-error"
+      role="alert"
+      data-mdb-color="danger"
+      data-mdb-position="top-right"
+      data-mdb-stacking="true"
+      data-mdb-width="535px"
+      data-mdb-append-to-body="true"
+      data-mdb-hidden="true"
+      data-mdb-autohide="true"
+    >
+      <strong>Error</strong> - Something went wrong!
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="mt-5"></footer>
+  <!--Footer-->
+
+  <script type="text/javascript" src="~/mdb/js/mdb.min.js"></script>
+  <script type="text/javascript" src="~/mdb/plugins/table-editor.min.js"></script>
+  <script type="text/javascript" src="~/js/main.js"></script>
+  <script type="text/javascript">
+      (function() {
+          const sidenav = document.getElementById("sidenav-1");
+          const instance = mdb.Sidenav.getInstance(sidenav);
+
+          let innerWidth = null;
+
+          const setMode = (e) => {
+          // Check necessary for Android devices
+          if (window.innerWidth === innerWidth) {
+              return;
+          }
+
+          innerWidth = window.innerWidth;
+
+          if (window.innerWidth < 1400) {
+              instance.changeMode("over");
+              instance.hide();
+          } else {
+              instance.changeMode("side");
+              instance.show();
+          }
+          };
+
+          setMode();
+
+          // Event listeners
+          window.addEventListener("resize", setMode);
+      })();
+  </script>
+
+
+  @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { RewardsOrderByWithRelationInput } from "../../../inputs/RewardsOrderByWithRelationInput";
+import { RewardsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/RewardsOrderByWithRelationAndSearchRelevanceInput";
 import { RewardsWhereInput } from "../../../inputs/RewardsWhereInput";
 import { RewardsWhereUniqueInput } from "../../../inputs/RewardsWhereUniqueInput";
 import { RewardsScalarFieldEnum } from "../../../../enums/RewardsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstRewardsArgs {
   })
   where?: RewardsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [RewardsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [RewardsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: RewardsOrderByWithRelationInput[] | undefined;
+  orderBy?: RewardsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => RewardsWhereUniqueInput, {
     nullable: true

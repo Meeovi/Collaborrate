@@ -1,0 +1,145 @@
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor;
+@{
+    var avatar = Context.User.Claims.First(c => c.Type == "Avatar").Value;
+    var email = Context.User.Identity.Name;
+    var username = Context.User.Claims.First(c => c.Type == "Username").Value;
+    var role = Context.User.Claims.First(c => c.Type == "UserRole").Value;
+
+    var avatarPreview = avatar == "" ? "/assets/avatar.png" : avatar;
+}
+
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<section>
+  <div class="row">
+    <div class="col-md-8 mb-4 mb-md-0">
+      <div class="card mb-4">
+        <div class="card-header py-3">
+          <strong>Edit profile</strong>
+        </div>
+        <div class="card-body text-center">
+          <div class="mb-3">
+            <strong>Profile photo</strong>
+          </div>
+
+          <form>
+            <img id="avatarPreview" class="rounded-circle shadow-1 mb-3" src="@avatarPreview" alt="avatar" style="width: 100px;">
+
+            <div class="form-outline mb-4">
+              <input
+                type="text"
+                id="formAvatar"
+                class="form-control"
+                value="@avatar"
+                required
+              />
+              <label class="form-label" for="formAvatar">Avatar</label>
+            </div>
+          </form>
+
+          <form id="userInfoForm" class="needs-validation">
+            <div class="form-outline mb-4">
+              <input
+                type="text"
+                id="formName"
+                class="form-control"
+                value="@username"
+                required
+              />
+              <label class="form-label" for="formName">Name</label>
+            </div>
+            
+            <div class="form-outline mb-4">
+              <input
+                type="email"
+                id="formEmail"
+                disabled
+                class="form-control"
+                value="@email"
+              />
+              <label class="form-label" for="formEmail">Email</label>
+            </div>
+
+            <div class="form-outline mb-4">
+              <input
+                type="text"
+                id="formPosition"
+                class="form-control"
+                value="@role"
+                disabled
+              />
+              <label class="form-label" for="formPosition">Position</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-2">
+              Update profile
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header py-3"><strong>Change password</strong></div>
+        <div class="card-body text-center pt-4">
+
+          <form id="passwordForm">
+            <div class="form-outline mb-4">
+              <input
+                type="password"
+                id="currentPassword"
+                class="form-control"
+              />
+              <label class="form-label" for="currentPassword"
+                >Current password</label
+              >
+            </div>
+            <div class="form-outline mb-4">
+              <input
+                type="password"
+                id="newPassword"
+                class="form-control"
+              />
+              <label class="form-label" for="newPassword"
+                >New password</label
+              >
+            </div>
+
+            <div class="form-outline mb-4">
+              <input
+                type="password"
+                id="confirmPassword"
+                class="form-control"
+              />
+              <label class="form-label" for="confirmPassword"
+                >Confirm password</label
+              >
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-2">Apply</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4 mb-md-0">
+      <div class="card">
+        <div class="card-body text-center">
+
+          <img class="rounded-circle shadow-1 mb-3" src="@avatarPreview" alt="avatar" style="width: 150px;">
+
+          <p class="mb-1"><strong>@username</strong></p>
+          <p class="mb-2"><small>@role</small></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+@section Scripts 
+{
+  <script type="text/javascript" src="~/js/userProfile.js"></script>
+}

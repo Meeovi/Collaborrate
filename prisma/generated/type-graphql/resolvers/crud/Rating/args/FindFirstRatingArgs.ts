@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { RatingOrderByWithRelationInput } from "../../../inputs/RatingOrderByWithRelationInput";
+import { RatingOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/RatingOrderByWithRelationAndSearchRelevanceInput";
 import { RatingWhereInput } from "../../../inputs/RatingWhereInput";
 import { RatingWhereUniqueInput } from "../../../inputs/RatingWhereUniqueInput";
 import { RatingScalarFieldEnum } from "../../../../enums/RatingScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstRatingArgs {
   })
   where?: RatingWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [RatingOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [RatingOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: RatingOrderByWithRelationInput[] | undefined;
+  orderBy?: RatingOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => RatingWhereUniqueInput, {
     nullable: true

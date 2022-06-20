@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { Core_storeOrderByWithRelationInput } from "../../../inputs/Core_storeOrderByWithRelationInput";
+import { Core_storeOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Core_storeOrderByWithRelationAndSearchRelevanceInput";
 import { Core_storeWhereInput } from "../../../inputs/Core_storeWhereInput";
 import { Core_storeWhereUniqueInput } from "../../../inputs/Core_storeWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateCore_storeArgs {
   })
   where?: Core_storeWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [Core_storeOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [Core_storeOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: Core_storeOrderByWithRelationInput[] | undefined;
+  orderBy?: Core_storeOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => Core_storeWhereUniqueInput, {
     nullable: true

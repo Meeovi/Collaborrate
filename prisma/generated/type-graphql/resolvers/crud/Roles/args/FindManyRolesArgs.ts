@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { RolesOrderByWithRelationInput } from "../../../inputs/RolesOrderByWithRelationInput";
+import { RolesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/RolesOrderByWithRelationAndSearchRelevanceInput";
 import { RolesWhereInput } from "../../../inputs/RolesWhereInput";
 import { RolesWhereUniqueInput } from "../../../inputs/RolesWhereUniqueInput";
 import { RolesScalarFieldEnum } from "../../../../enums/RolesScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyRolesArgs {
   })
   where?: RolesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [RolesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [RolesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: RolesOrderByWithRelationInput[] | undefined;
+  orderBy?: RolesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => RolesWhereUniqueInput, {
     nullable: true

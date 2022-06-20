@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { CollectionsOrderByWithRelationInput } from "../../../inputs/CollectionsOrderByWithRelationInput";
+import { CollectionsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/CollectionsOrderByWithRelationAndSearchRelevanceInput";
 import { CollectionsWhereInput } from "../../../inputs/CollectionsWhereInput";
 import { CollectionsWhereUniqueInput } from "../../../inputs/CollectionsWhereUniqueInput";
 import { CollectionsScalarFieldEnum } from "../../../../enums/CollectionsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstCollectionsArgs {
   })
   where?: CollectionsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [CollectionsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [CollectionsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: CollectionsOrderByWithRelationInput[] | undefined;
+  orderBy?: CollectionsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => CollectionsWhereUniqueInput, {
     nullable: true

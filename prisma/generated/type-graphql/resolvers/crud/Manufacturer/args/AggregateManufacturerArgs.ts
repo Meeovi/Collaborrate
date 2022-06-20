@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { ManufacturerOrderByWithRelationInput } from "../../../inputs/ManufacturerOrderByWithRelationInput";
+import { ManufacturerOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ManufacturerOrderByWithRelationAndSearchRelevanceInput";
 import { ManufacturerWhereInput } from "../../../inputs/ManufacturerWhereInput";
 import { ManufacturerWhereUniqueInput } from "../../../inputs/ManufacturerWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateManufacturerArgs {
   })
   where?: ManufacturerWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [ManufacturerOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [ManufacturerOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: ManufacturerOrderByWithRelationInput[] | undefined;
+  orderBy?: ManufacturerOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => ManufacturerWhereUniqueInput, {
     nullable: true

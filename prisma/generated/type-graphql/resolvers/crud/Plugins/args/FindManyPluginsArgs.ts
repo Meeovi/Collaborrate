@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { PluginsOrderByWithRelationInput } from "../../../inputs/PluginsOrderByWithRelationInput";
+import { PluginsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/PluginsOrderByWithRelationAndSearchRelevanceInput";
 import { PluginsWhereInput } from "../../../inputs/PluginsWhereInput";
 import { PluginsWhereUniqueInput } from "../../../inputs/PluginsWhereUniqueInput";
 import { PluginsScalarFieldEnum } from "../../../../enums/PluginsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyPluginsArgs {
   })
   where?: PluginsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [PluginsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [PluginsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: PluginsOrderByWithRelationInput[] | undefined;
+  orderBy?: PluginsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => PluginsWhereUniqueInput, {
     nullable: true

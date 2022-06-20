@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { LeadsOrderByWithRelationInput } from "../../../inputs/LeadsOrderByWithRelationInput";
+import { LeadsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/LeadsOrderByWithRelationAndSearchRelevanceInput";
 import { LeadsWhereInput } from "../../../inputs/LeadsWhereInput";
 import { LeadsWhereUniqueInput } from "../../../inputs/LeadsWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateLeadsArgs {
   })
   where?: LeadsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [LeadsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [LeadsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: LeadsOrderByWithRelationInput[] | undefined;
+  orderBy?: LeadsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => LeadsWhereUniqueInput, {
     nullable: true

@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { ProvidersOrderByWithRelationInput } from "../../../inputs/ProvidersOrderByWithRelationInput";
+import { ProvidersOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ProvidersOrderByWithRelationAndSearchRelevanceInput";
 import { ProvidersWhereInput } from "../../../inputs/ProvidersWhereInput";
 import { ProvidersWhereUniqueInput } from "../../../inputs/ProvidersWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateProvidersArgs {
   })
   where?: ProvidersWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [ProvidersOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [ProvidersOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: ProvidersOrderByWithRelationInput[] | undefined;
+  orderBy?: ProvidersOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => ProvidersWhereUniqueInput, {
     nullable: true

@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { EmailsOrderByWithRelationInput } from "../../../inputs/EmailsOrderByWithRelationInput";
+import { EmailsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/EmailsOrderByWithRelationAndSearchRelevanceInput";
 import { EmailsWhereInput } from "../../../inputs/EmailsWhereInput";
 import { EmailsWhereUniqueInput } from "../../../inputs/EmailsWhereUniqueInput";
 import { EmailsScalarFieldEnum } from "../../../../enums/EmailsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class CustomersEmailsArgs {
   })
   where?: EmailsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [EmailsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [EmailsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: EmailsOrderByWithRelationInput[] | undefined;
+  orderBy?: EmailsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => EmailsWhereUniqueInput, {
     nullable: true

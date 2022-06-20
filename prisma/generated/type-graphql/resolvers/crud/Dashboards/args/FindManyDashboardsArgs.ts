@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { DashboardsOrderByWithRelationInput } from "../../../inputs/DashboardsOrderByWithRelationInput";
+import { DashboardsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/DashboardsOrderByWithRelationAndSearchRelevanceInput";
 import { DashboardsWhereInput } from "../../../inputs/DashboardsWhereInput";
 import { DashboardsWhereUniqueInput } from "../../../inputs/DashboardsWhereUniqueInput";
 import { DashboardsScalarFieldEnum } from "../../../../enums/DashboardsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyDashboardsArgs {
   })
   where?: DashboardsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [DashboardsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [DashboardsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: DashboardsOrderByWithRelationInput[] | undefined;
+  orderBy?: DashboardsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => DashboardsWhereUniqueInput, {
     nullable: true

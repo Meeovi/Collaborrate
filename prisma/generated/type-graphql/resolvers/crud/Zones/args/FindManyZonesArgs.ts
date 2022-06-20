@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { ZonesOrderByWithRelationInput } from "../../../inputs/ZonesOrderByWithRelationInput";
+import { ZonesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ZonesOrderByWithRelationAndSearchRelevanceInput";
 import { ZonesWhereInput } from "../../../inputs/ZonesWhereInput";
 import { ZonesWhereUniqueInput } from "../../../inputs/ZonesWhereUniqueInput";
 import { ZonesScalarFieldEnum } from "../../../../enums/ZonesScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyZonesArgs {
   })
   where?: ZonesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [ZonesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [ZonesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: ZonesOrderByWithRelationInput[] | undefined;
+  orderBy?: ZonesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => ZonesWhereUniqueInput, {
     nullable: true

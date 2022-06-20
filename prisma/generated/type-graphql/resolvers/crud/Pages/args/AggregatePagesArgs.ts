@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { PagesOrderByWithRelationInput } from "../../../inputs/PagesOrderByWithRelationInput";
+import { PagesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/PagesOrderByWithRelationAndSearchRelevanceInput";
 import { PagesWhereInput } from "../../../inputs/PagesWhereInput";
 import { PagesWhereUniqueInput } from "../../../inputs/PagesWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregatePagesArgs {
   })
   where?: PagesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [PagesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [PagesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: PagesOrderByWithRelationInput[] | undefined;
+  orderBy?: PagesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => PagesWhereUniqueInput, {
     nullable: true

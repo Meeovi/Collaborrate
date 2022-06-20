@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { Pdf_templatesOrderByWithRelationInput } from "../../../inputs/Pdf_templatesOrderByWithRelationInput";
+import { Pdf_templatesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Pdf_templatesOrderByWithRelationAndSearchRelevanceInput";
 import { Pdf_templatesWhereInput } from "../../../inputs/Pdf_templatesWhereInput";
 import { Pdf_templatesWhereUniqueInput } from "../../../inputs/Pdf_templatesWhereUniqueInput";
 import { Pdf_templatesScalarFieldEnum } from "../../../../enums/Pdf_templatesScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyPdf_templatesArgs {
   })
   where?: Pdf_templatesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [Pdf_templatesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [Pdf_templatesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: Pdf_templatesOrderByWithRelationInput[] | undefined;
+  orderBy?: Pdf_templatesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => Pdf_templatesWhereUniqueInput, {
     nullable: true

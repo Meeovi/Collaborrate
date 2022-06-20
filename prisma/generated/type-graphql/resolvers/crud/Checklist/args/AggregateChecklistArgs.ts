@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { ChecklistOrderByWithRelationInput } from "../../../inputs/ChecklistOrderByWithRelationInput";
+import { ChecklistOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ChecklistOrderByWithRelationAndSearchRelevanceInput";
 import { ChecklistWhereInput } from "../../../inputs/ChecklistWhereInput";
 import { ChecklistWhereUniqueInput } from "../../../inputs/ChecklistWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateChecklistArgs {
   })
   where?: ChecklistWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [ChecklistOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [ChecklistOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: ChecklistOrderByWithRelationInput[] | undefined;
+  orderBy?: ChecklistOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => ChecklistWhereUniqueInput, {
     nullable: true

@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { WebhooksOrderByWithRelationInput } from "../../../inputs/WebhooksOrderByWithRelationInput";
+import { WebhooksOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/WebhooksOrderByWithRelationAndSearchRelevanceInput";
 import { WebhooksWhereInput } from "../../../inputs/WebhooksWhereInput";
 import { WebhooksWhereUniqueInput } from "../../../inputs/WebhooksWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateWebhooksArgs {
   })
   where?: WebhooksWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [WebhooksOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [WebhooksOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: WebhooksOrderByWithRelationInput[] | undefined;
+  orderBy?: WebhooksOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => WebhooksWhereUniqueInput, {
     nullable: true

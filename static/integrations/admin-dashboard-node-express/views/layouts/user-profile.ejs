@@ -1,0 +1,106 @@
+<!--Section: Content-->
+<section>
+  <div class="row">
+    <div class="col-md-8 mb-4 mb-md-0">
+      <div class="card mb-4">
+        <div class="card-header py-3">
+          <strong>Edit profile</strong>
+        </div>
+        <div class="card-body text-center">
+          <form action="/users" method="post">
+            <div class="form-outline mb-4">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                value="<%= user.name %>"
+              />
+              <label class="form-label" for="name">Name</label>
+            </div>
+
+            <div class="form-outline mb-4">
+              <input
+                type="text"
+                id="avatar"
+                name="avatar"
+                class="form-control"
+                value="<%= user.avatar %>"
+              />
+              <label class="form-label" for="avatar">Avatar</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-2">
+              Update profile
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header py-3"><strong>Change password</strong></div>
+        <div class="card-body text-center pt-4">
+
+          <form action="/users/password" method="post">
+            <div class="form-outline mb-4">
+              <input
+                type="password"
+                id="existingPassword"
+                name="existingPassword"
+                class="form-control"
+              />
+              <label class="form-label" for="existingPassword"
+                >Existing password</label
+              >
+            </div>
+
+            <div class="form-outline mb-4">
+              <input
+                type="password"
+                id="newPassword"
+                name="newPassword"
+                class="form-control"
+              />
+              <label class="form-label" for="newPassword"
+                >New password</label
+              >
+            </div>
+
+            <div class="form-outline mb-4">
+              <input
+                type="password"
+                id="confirmNewPassword"
+                name="confirmNewPassword"
+                class="form-control"
+              />
+              <label class="form-label" for="confirmNewPassword"
+                >Confirm password</label
+              >
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-2">Apply</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4 mb-md-0">
+      <div class="card">
+        <div class="card-body text-center">
+
+          <% if (user.avatar == "" || user.avatar == null) { %>
+          <img class="rounded-circle shadow-1 mb-3" src="https://mdbootstrap.com/img/new/avatars/1.jpg" alt="avatar" style="width: 150px;">
+          <% } else { %> 
+          <img class="rounded-circle shadow-1 mb-3" src="<%= user.avatar %>" alt="avatar" style="width: 150px;">
+          <% } %>
+
+          <p class="mb-1"><strong><%= user.name %></strong></p>
+          <p class="mb-2"><small>Founder</small></p>
+          <p class="mb-2 text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia deserunt pariatur voluptatem consequuntur! Aliquid, placeat nobis odit delectus ad est, nemo repudiandae possimus repellendus voluptas debitis, numquam modi asperiores beatae?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Section: Content-->

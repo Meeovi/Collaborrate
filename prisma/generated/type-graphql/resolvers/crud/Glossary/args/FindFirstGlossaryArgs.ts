@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { GlossaryOrderByWithRelationInput } from "../../../inputs/GlossaryOrderByWithRelationInput";
+import { GlossaryOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/GlossaryOrderByWithRelationAndSearchRelevanceInput";
 import { GlossaryWhereInput } from "../../../inputs/GlossaryWhereInput";
 import { GlossaryWhereUniqueInput } from "../../../inputs/GlossaryWhereUniqueInput";
 import { GlossaryScalarFieldEnum } from "../../../../enums/GlossaryScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstGlossaryArgs {
   })
   where?: GlossaryWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [GlossaryOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [GlossaryOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: GlossaryOrderByWithRelationInput[] | undefined;
+  orderBy?: GlossaryOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => GlossaryWhereUniqueInput, {
     nullable: true

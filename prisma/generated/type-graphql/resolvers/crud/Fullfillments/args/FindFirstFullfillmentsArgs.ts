@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { FullfillmentsOrderByWithRelationInput } from "../../../inputs/FullfillmentsOrderByWithRelationInput";
+import { FullfillmentsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/FullfillmentsOrderByWithRelationAndSearchRelevanceInput";
 import { FullfillmentsWhereInput } from "../../../inputs/FullfillmentsWhereInput";
 import { FullfillmentsWhereUniqueInput } from "../../../inputs/FullfillmentsWhereUniqueInput";
 import { FullfillmentsScalarFieldEnum } from "../../../../enums/FullfillmentsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstFullfillmentsArgs {
   })
   where?: FullfillmentsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [FullfillmentsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [FullfillmentsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: FullfillmentsOrderByWithRelationInput[] | undefined;
+  orderBy?: FullfillmentsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => FullfillmentsWhereUniqueInput, {
     nullable: true

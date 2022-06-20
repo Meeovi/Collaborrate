@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { SettingshopOrderByWithRelationInput } from "../../../inputs/SettingshopOrderByWithRelationInput";
+import { SettingshopOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/SettingshopOrderByWithRelationAndSearchRelevanceInput";
 import { SettingshopWhereInput } from "../../../inputs/SettingshopWhereInput";
 import { SettingshopWhereUniqueInput } from "../../../inputs/SettingshopWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateSettingshopArgs {
   })
   where?: SettingshopWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [SettingshopOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [SettingshopOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: SettingshopOrderByWithRelationInput[] | undefined;
+  orderBy?: SettingshopOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => SettingshopWhereUniqueInput, {
     nullable: true

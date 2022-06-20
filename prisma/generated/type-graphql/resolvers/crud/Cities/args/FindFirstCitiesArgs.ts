@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { CitiesOrderByWithRelationInput } from "../../../inputs/CitiesOrderByWithRelationInput";
+import { CitiesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/CitiesOrderByWithRelationAndSearchRelevanceInput";
 import { CitiesWhereInput } from "../../../inputs/CitiesWhereInput";
 import { CitiesWhereUniqueInput } from "../../../inputs/CitiesWhereUniqueInput";
 import { CitiesScalarFieldEnum } from "../../../../enums/CitiesScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstCitiesArgs {
   })
   where?: CitiesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [CitiesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [CitiesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: CitiesOrderByWithRelationInput[] | undefined;
+  orderBy?: CitiesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => CitiesWhereUniqueInput, {
     nullable: true

@@ -1,0 +1,35 @@
+<nav class="navbar fixed-top navbar-light bg-light" id="navbar">
+  <div class="container-fluid">
+    <button
+      data-mdb-toggle="sidenav"
+      data-mdb-target="#sidenav"
+      class="btn shadow-0 p-0 me-3 d-block d-xxl-none"
+      aria-controls="#sidenav"
+      aria-haspopup="true"
+    >
+      <i class="fas fa-bars fa-lg"></i>
+    </button>
+    <a class="navbar-brand" href="#"><%= title %></a>
+    <ul class="navbar-nav ms-auto d-flex flex-row">
+      <!-- My account -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle ms-2" href="#" data-mdb-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <% if (user.avatar == "" || user.avatar == null) { %>
+            <img alt="user avatar" src="https://mdbootstrap.com/img/new/avatars/1.jpg" class="avatar avatar-24 photo rounded-circle z-depth-0" height="24" width="24" />
+          <% } else { %>
+            <img alt="user avatar" src="<%= user.avatar %>" class="avatar avatar-24 photo rounded-circle z-depth-0" height="24" width="24" />
+          <% } %> 
+        </a>
+        <div class="dropdown-menu dropdown-menu-end dropdown-info" aria-labelledby="userDropdown"
+          data-mdb-dropdown-in="fadeIn" data-mdb-dropdown-out="fadeOut">
+          <a class="dropdown-item" href="/user-profile">My profile</a>
+          <hr class="my-0">
+          <form action="/users/auth/logout" method="post">
+            <button class="dropdown-item">Log Out</button>
+          </form>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

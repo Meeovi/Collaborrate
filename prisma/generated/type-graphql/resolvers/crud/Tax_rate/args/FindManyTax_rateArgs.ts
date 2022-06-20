@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { Tax_rateOrderByWithRelationInput } from "../../../inputs/Tax_rateOrderByWithRelationInput";
+import { Tax_rateOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Tax_rateOrderByWithRelationAndSearchRelevanceInput";
 import { Tax_rateWhereInput } from "../../../inputs/Tax_rateWhereInput";
 import { Tax_rateWhereUniqueInput } from "../../../inputs/Tax_rateWhereUniqueInput";
 import { Tax_rateScalarFieldEnum } from "../../../../enums/Tax_rateScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyTax_rateArgs {
   })
   where?: Tax_rateWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [Tax_rateOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [Tax_rateOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: Tax_rateOrderByWithRelationInput[] | undefined;
+  orderBy?: Tax_rateOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => Tax_rateWhereUniqueInput, {
     nullable: true

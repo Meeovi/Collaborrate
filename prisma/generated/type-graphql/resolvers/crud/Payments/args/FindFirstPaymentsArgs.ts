@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { PaymentsOrderByWithRelationInput } from "../../../inputs/PaymentsOrderByWithRelationInput";
+import { PaymentsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/PaymentsOrderByWithRelationAndSearchRelevanceInput";
 import { PaymentsWhereInput } from "../../../inputs/PaymentsWhereInput";
 import { PaymentsWhereUniqueInput } from "../../../inputs/PaymentsWhereUniqueInput";
 import { PaymentsScalarFieldEnum } from "../../../../enums/PaymentsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstPaymentsArgs {
   })
   where?: PaymentsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [PaymentsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [PaymentsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: PaymentsOrderByWithRelationInput[] | undefined;
+  orderBy?: PaymentsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => PaymentsWhereUniqueInput, {
     nullable: true

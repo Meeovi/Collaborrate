@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { EventsOrderByWithRelationInput } from "../../../inputs/EventsOrderByWithRelationInput";
+import { EventsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/EventsOrderByWithRelationAndSearchRelevanceInput";
 import { EventsWhereInput } from "../../../inputs/EventsWhereInput";
 import { EventsWhereUniqueInput } from "../../../inputs/EventsWhereUniqueInput";
 import { EventsScalarFieldEnum } from "../../../../enums/EventsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyEventsArgs {
   })
   where?: EventsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [EventsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [EventsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: EventsOrderByWithRelationInput[] | undefined;
+  orderBy?: EventsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => EventsWhereUniqueInput, {
     nullable: true

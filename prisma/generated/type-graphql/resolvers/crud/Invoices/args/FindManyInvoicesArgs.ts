@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { InvoicesOrderByWithRelationInput } from "../../../inputs/InvoicesOrderByWithRelationInput";
+import { InvoicesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/InvoicesOrderByWithRelationAndSearchRelevanceInput";
 import { InvoicesWhereInput } from "../../../inputs/InvoicesWhereInput";
 import { InvoicesWhereUniqueInput } from "../../../inputs/InvoicesWhereUniqueInput";
 import { InvoicesScalarFieldEnum } from "../../../../enums/InvoicesScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyInvoicesArgs {
   })
   where?: InvoicesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [InvoicesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [InvoicesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: InvoicesOrderByWithRelationInput[] | undefined;
+  orderBy?: InvoicesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => InvoicesWhereUniqueInput, {
     nullable: true

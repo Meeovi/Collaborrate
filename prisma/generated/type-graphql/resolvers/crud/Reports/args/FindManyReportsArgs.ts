@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { ReportsOrderByWithRelationInput } from "../../../inputs/ReportsOrderByWithRelationInput";
+import { ReportsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ReportsOrderByWithRelationAndSearchRelevanceInput";
 import { ReportsWhereInput } from "../../../inputs/ReportsWhereInput";
 import { ReportsWhereUniqueInput } from "../../../inputs/ReportsWhereUniqueInput";
 import { ReportsScalarFieldEnum } from "../../../../enums/ReportsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyReportsArgs {
   })
   where?: ReportsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [ReportsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [ReportsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: ReportsOrderByWithRelationInput[] | undefined;
+  orderBy?: ReportsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => ReportsWhereUniqueInput, {
     nullable: true

@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { Customer_paymentOrderByWithRelationInput } from "../../../inputs/Customer_paymentOrderByWithRelationInput";
+import { Customer_paymentOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Customer_paymentOrderByWithRelationAndSearchRelevanceInput";
 import { Customer_paymentWhereInput } from "../../../inputs/Customer_paymentWhereInput";
 import { Customer_paymentWhereUniqueInput } from "../../../inputs/Customer_paymentWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateCustomer_paymentArgs {
   })
   where?: Customer_paymentWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [Customer_paymentOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [Customer_paymentOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: Customer_paymentOrderByWithRelationInput[] | undefined;
+  orderBy?: Customer_paymentOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => Customer_paymentWhereUniqueInput, {
     nullable: true

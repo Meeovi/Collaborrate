@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { OccassionsOrderByWithRelationInput } from "../../../inputs/OccassionsOrderByWithRelationInput";
+import { OccassionsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/OccassionsOrderByWithRelationAndSearchRelevanceInput";
 import { OccassionsWhereInput } from "../../../inputs/OccassionsWhereInput";
 import { OccassionsWhereUniqueInput } from "../../../inputs/OccassionsWhereUniqueInput";
 import { OccassionsScalarFieldEnum } from "../../../../enums/OccassionsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstOccassionsArgs {
   })
   where?: OccassionsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [OccassionsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [OccassionsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: OccassionsOrderByWithRelationInput[] | undefined;
+  orderBy?: OccassionsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => OccassionsWhereUniqueInput, {
     nullable: true

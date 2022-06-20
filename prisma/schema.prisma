@@ -1,19 +1,10 @@
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex", "filterJson"]
 }
 
 generator docs {
   provider = "node node_modules/prisma-docs-generator"
-}
-
-generator graphql {
-  provider = "graphql-schema-generator"
-  createCRUD = "true"
-}
-
-generator typegraphql {
-  provider = "typegraphql-prisma"
-  output   = "../prisma/generated/type-graphql"
 }
 
 datasource db {

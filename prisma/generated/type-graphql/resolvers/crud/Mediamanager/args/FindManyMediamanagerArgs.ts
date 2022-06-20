@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { MediamanagerOrderByWithRelationInput } from "../../../inputs/MediamanagerOrderByWithRelationInput";
+import { MediamanagerOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/MediamanagerOrderByWithRelationAndSearchRelevanceInput";
 import { MediamanagerWhereInput } from "../../../inputs/MediamanagerWhereInput";
 import { MediamanagerWhereUniqueInput } from "../../../inputs/MediamanagerWhereUniqueInput";
 import { MediamanagerScalarFieldEnum } from "../../../../enums/MediamanagerScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyMediamanagerArgs {
   })
   where?: MediamanagerWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [MediamanagerOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [MediamanagerOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: MediamanagerOrderByWithRelationInput[] | undefined;
+  orderBy?: MediamanagerOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => MediamanagerWhereUniqueInput, {
     nullable: true

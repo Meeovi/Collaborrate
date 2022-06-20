@@ -1,0 +1,65 @@
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="~/mdb/css/mdb.min.css" />
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="~/layout.css" />
+</head>
+<body>
+  <!--Main layout-->
+  <main style="margin-top: 58px">
+    <div class="container">
+      @RenderBody()
+    </div>
+    
+    <!--Alerts-->
+    <div
+      class="alert fade"
+      id="alert-success"
+      role="alert"
+      data-mdb-color="success"
+      data-mdb-position="top-right"
+      data-mdb-stacking="true"
+      data-mdb-width="535px"
+      data-mdb-append-to-body="true"
+      data-mdb-hidden="true"
+      data-mdb-autohide="true"
+    >
+    </div>
+    <div
+      class="alert fade"
+      id="alert-error"
+      role="alert"
+      data-mdb-color="danger"
+      data-mdb-position="top-right"
+      data-mdb-stacking="true"
+      data-mdb-width="535px"
+      data-mdb-append-to-body="true"
+      data-mdb-hidden="true"
+      data-mdb-autohide="true"
+    >
+      <strong>Error</strong> - Something went wrong!
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <script type="text/javascript" src="~/mdb/js/mdb.min.js"></script>
+  <script type="text/javascript" src="~/js/main.js"></script>
+
+  @RenderSection("Scripts", required: false)
+</body>
+</html>

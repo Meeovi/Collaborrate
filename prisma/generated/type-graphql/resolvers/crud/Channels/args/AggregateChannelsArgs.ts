@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { ChannelsOrderByWithRelationInput } from "../../../inputs/ChannelsOrderByWithRelationInput";
+import { ChannelsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ChannelsOrderByWithRelationAndSearchRelevanceInput";
 import { ChannelsWhereInput } from "../../../inputs/ChannelsWhereInput";
 import { ChannelsWhereUniqueInput } from "../../../inputs/ChannelsWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateChannelsArgs {
   })
   where?: ChannelsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [ChannelsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [ChannelsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: ChannelsOrderByWithRelationInput[] | undefined;
+  orderBy?: ChannelsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => ChannelsWhereUniqueInput, {
     nullable: true

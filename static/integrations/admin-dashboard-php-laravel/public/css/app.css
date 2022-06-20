@@ -1,0 +1,12 @@
+body {
+  background-color: #fbfbfb;
+}
+
+.avatar {
+  cursor: pointer;
+}
+
+.avatar .dropdown-toggle:after {
+  display: none;
+}
+

@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { SurveysOrderByWithRelationInput } from "../../../inputs/SurveysOrderByWithRelationInput";
+import { SurveysOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/SurveysOrderByWithRelationAndSearchRelevanceInput";
 import { SurveysWhereInput } from "../../../inputs/SurveysWhereInput";
 import { SurveysWhereUniqueInput } from "../../../inputs/SurveysWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateSurveysArgs {
   })
   where?: SurveysWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [SurveysOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [SurveysOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: SurveysOrderByWithRelationInput[] | undefined;
+  orderBy?: SurveysOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => SurveysWhereUniqueInput, {
     nullable: true

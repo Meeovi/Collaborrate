@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { OpportunitiesOrderByWithRelationInput } from "../../../inputs/OpportunitiesOrderByWithRelationInput";
+import { OpportunitiesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/OpportunitiesOrderByWithRelationAndSearchRelevanceInput";
 import { OpportunitiesWhereInput } from "../../../inputs/OpportunitiesWhereInput";
 import { OpportunitiesWhereUniqueInput } from "../../../inputs/OpportunitiesWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateOpportunitiesArgs {
   })
   where?: OpportunitiesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [OpportunitiesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [OpportunitiesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: OpportunitiesOrderByWithRelationInput[] | undefined;
+  orderBy?: OpportunitiesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => OpportunitiesWhereUniqueInput, {
     nullable: true

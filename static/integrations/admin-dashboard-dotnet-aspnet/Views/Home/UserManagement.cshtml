@@ -1,0 +1,133 @@
+@{
+    ViewData["Title"] = "User Management";
+}
+@{
+    var email = Context.User.Identity.Name;
+}
+
+<section>
+  <div class="card">
+    <div class="card-body">
+      <div class="d-flex justify-content-end mb-4">
+        <div class="form-outline">
+          <input
+            data-mdb-search
+            data-mdb-target="#datatable"
+            type="text"
+            id="search_input"
+            class="form-control"
+          />
+          <label class="form-label" for="search_input">Search</label>
+        </div>
+      </div>
+      <hr />
+      <div id="datatable"></div>
+    </div>
+  </div>
+</section>
+
+@section Scripts 
+{
+  <script>
+    (function() {
+      const table = document.getElementById("datatable");
+      let roles = [];
+      let columns = [
+      {
+        label: "Username",
+        field: "name",
+        editable: false
+      },
+      {
+        label: "Email",
+        field: "email",
+        editable: false
+      },
+      {
+        label: "Role",
+        field: "role",
+        editable: true
+      },
+      {
+        label: "Registered",
+        field: "registered",
+        editable: false
+      },
+      ];
+      let rows = [];
+
+      const tableEditorInstace = new TableEditor(
+        table,
+        {
+          columns,
+          rows,
+        },
+        { entries: 5, entriesOptions: [5, 10, 15], loading: true }
+      );
+
+      table.addEventListener('updateEntry.mdb.tableEditor', e => {
+        const { role, id, name } = e.row;
+
+        const userRoleId = roles.find(userRole => userRole.name === role).id;
+
+        fetch(`/users/${id}`, {
+          method: 'put',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            RoleId: userRoleId,
+          })
+        })
+        .then(response => handleHttpResponse(response, { 
+          200: `User: <strong>${name}</strong> (ID: ${id}) updated`,
+          400: "Incorrect role",
+          404: "User not found", 
+          401: "Access denied"
+        }))
+      })
+
+      table.addEventListener('delete.mdb.tableEditor', e => {
+        const { id, name } = e.row;
+
+        fetch(`/users/${id}`, {
+          method: 'delete',
+        })
+        .then(response => handleHttpResponse(response, {
+          200: `User: <strong>${name}</strong> (ID: ${id}) deleted`,
+          400: "Invalid request", 
+          404: "User not found",
+          401: "Access denied"
+        }))
+      })
+
+      fetch('/roles')
+        .then(response => response.json())
+        .then(data => {
+          roles = data;
+          
+          columns = columns.map(column => {
+            if (column.field === 'role') {
+              return {
+                label: "Role",
+                field: "role",
+                editable: true,
+                inputType: 'select',
+                options: roles.map(role => role.name)
+              }
+            }
+            return column;
+          })
+
+          tableEditorInstace.update({ columns });
+        })
+        .then(() => fetch('/users'))
+        .then(response => response.json())
+        .then(data => {
+          rows = data
+            .filter(user => user.email !== '@email')
+            .map(user => ({...user, role: user.role.name, registered: new Date(user.createdAt).toLocaleString()}));
+
+          tableEditorInstace.update({ rows }, { loading: false });
+        })
+    })();
+  </script>
+}

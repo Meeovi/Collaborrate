@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { Url_rewritesOrderByWithRelationInput } from "../../../inputs/Url_rewritesOrderByWithRelationInput";
+import { Url_rewritesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Url_rewritesOrderByWithRelationAndSearchRelevanceInput";
 import { Url_rewritesWhereInput } from "../../../inputs/Url_rewritesWhereInput";
 import { Url_rewritesWhereUniqueInput } from "../../../inputs/Url_rewritesWhereUniqueInput";
 import { Url_rewritesScalarFieldEnum } from "../../../../enums/Url_rewritesScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyUrl_rewritesArgs {
   })
   where?: Url_rewritesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [Url_rewritesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [Url_rewritesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: Url_rewritesOrderByWithRelationInput[] | undefined;
+  orderBy?: Url_rewritesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => Url_rewritesWhereUniqueInput, {
     nullable: true

@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { MeetingOrderByWithRelationInput } from "../../../inputs/MeetingOrderByWithRelationInput";
+import { MeetingOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/MeetingOrderByWithRelationAndSearchRelevanceInput";
 import { MeetingWhereInput } from "../../../inputs/MeetingWhereInput";
 import { MeetingWhereUniqueInput } from "../../../inputs/MeetingWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateMeetingArgs {
   })
   where?: MeetingWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [MeetingOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [MeetingOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: MeetingOrderByWithRelationInput[] | undefined;
+  orderBy?: MeetingOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => MeetingWhereUniqueInput, {
     nullable: true

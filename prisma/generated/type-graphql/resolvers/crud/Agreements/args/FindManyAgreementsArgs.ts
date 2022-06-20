@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { AgreementsOrderByWithRelationInput } from "../../../inputs/AgreementsOrderByWithRelationInput";
+import { AgreementsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/AgreementsOrderByWithRelationAndSearchRelevanceInput";
 import { AgreementsWhereInput } from "../../../inputs/AgreementsWhereInput";
 import { AgreementsWhereUniqueInput } from "../../../inputs/AgreementsWhereUniqueInput";
 import { AgreementsScalarFieldEnum } from "../../../../enums/AgreementsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyAgreementsArgs {
   })
   where?: AgreementsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [AgreementsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [AgreementsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: AgreementsOrderByWithRelationInput[] | undefined;
+  orderBy?: AgreementsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => AgreementsWhereUniqueInput, {
     nullable: true

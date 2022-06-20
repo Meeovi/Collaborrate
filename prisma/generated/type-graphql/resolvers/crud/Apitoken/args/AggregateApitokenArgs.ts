@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { ApitokenOrderByWithRelationInput } from "../../../inputs/ApitokenOrderByWithRelationInput";
+import { ApitokenOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ApitokenOrderByWithRelationAndSearchRelevanceInput";
 import { ApitokenWhereInput } from "../../../inputs/ApitokenWhereInput";
 import { ApitokenWhereUniqueInput } from "../../../inputs/ApitokenWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateApitokenArgs {
   })
   where?: ApitokenWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [ApitokenOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [ApitokenOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: ApitokenOrderByWithRelationInput[] | undefined;
+  orderBy?: ApitokenOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => ApitokenWhereUniqueInput, {
     nullable: true

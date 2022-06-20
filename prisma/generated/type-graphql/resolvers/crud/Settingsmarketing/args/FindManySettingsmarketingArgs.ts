@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { SettingsmarketingOrderByWithRelationInput } from "../../../inputs/SettingsmarketingOrderByWithRelationInput";
+import { SettingsmarketingOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/SettingsmarketingOrderByWithRelationAndSearchRelevanceInput";
 import { SettingsmarketingWhereInput } from "../../../inputs/SettingsmarketingWhereInput";
 import { SettingsmarketingWhereUniqueInput } from "../../../inputs/SettingsmarketingWhereUniqueInput";
 import { SettingsmarketingScalarFieldEnum } from "../../../../enums/SettingsmarketingScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManySettingsmarketingArgs {
   })
   where?: SettingsmarketingWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [SettingsmarketingOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [SettingsmarketingOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: SettingsmarketingOrderByWithRelationInput[] | undefined;
+  orderBy?: SettingsmarketingOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => SettingsmarketingWhereUniqueInput, {
     nullable: true

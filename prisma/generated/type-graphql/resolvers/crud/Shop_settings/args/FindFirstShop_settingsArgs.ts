@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { Shop_settingsOrderByWithRelationInput } from "../../../inputs/Shop_settingsOrderByWithRelationInput";
+import { Shop_settingsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Shop_settingsOrderByWithRelationAndSearchRelevanceInput";
 import { Shop_settingsWhereInput } from "../../../inputs/Shop_settingsWhereInput";
 import { Shop_settingsWhereUniqueInput } from "../../../inputs/Shop_settingsWhereUniqueInput";
 import { Shop_settingsScalarFieldEnum } from "../../../../enums/Shop_settingsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstShop_settingsArgs {
   })
   where?: Shop_settingsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [Shop_settingsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [Shop_settingsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: Shop_settingsOrderByWithRelationInput[] | undefined;
+  orderBy?: Shop_settingsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => Shop_settingsWhereUniqueInput, {
     nullable: true

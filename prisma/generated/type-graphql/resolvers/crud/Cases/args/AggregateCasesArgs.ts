@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { CasesOrderByWithRelationInput } from "../../../inputs/CasesOrderByWithRelationInput";
+import { CasesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/CasesOrderByWithRelationAndSearchRelevanceInput";
 import { CasesWhereInput } from "../../../inputs/CasesWhereInput";
 import { CasesWhereUniqueInput } from "../../../inputs/CasesWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateCasesArgs {
   })
   where?: CasesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [CasesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [CasesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: CasesOrderByWithRelationInput[] | undefined;
+  orderBy?: CasesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => CasesWhereUniqueInput, {
     nullable: true

@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { WorkspacesOrderByWithRelationInput } from "../../../inputs/WorkspacesOrderByWithRelationInput";
+import { WorkspacesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/WorkspacesOrderByWithRelationAndSearchRelevanceInput";
 import { WorkspacesWhereInput } from "../../../inputs/WorkspacesWhereInput";
 import { WorkspacesWhereUniqueInput } from "../../../inputs/WorkspacesWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateWorkspacesArgs {
   })
   where?: WorkspacesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [WorkspacesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [WorkspacesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: WorkspacesOrderByWithRelationInput[] | undefined;
+  orderBy?: WorkspacesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => WorkspacesWhereUniqueInput, {
     nullable: true

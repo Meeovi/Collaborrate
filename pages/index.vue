@@ -1,9 +1,7 @@
 <template>
   <div>
-    <div class="row">
       <!--<chat />-->
       <charts />  
-    </div>
     <div class="row">
         <sales />
         <orders />

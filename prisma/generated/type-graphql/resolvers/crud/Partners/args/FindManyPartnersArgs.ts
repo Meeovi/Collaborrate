@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { PartnersOrderByWithRelationInput } from "../../../inputs/PartnersOrderByWithRelationInput";
+import { PartnersOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/PartnersOrderByWithRelationAndSearchRelevanceInput";
 import { PartnersWhereInput } from "../../../inputs/PartnersWhereInput";
 import { PartnersWhereUniqueInput } from "../../../inputs/PartnersWhereUniqueInput";
 import { PartnersScalarFieldEnum } from "../../../../enums/PartnersScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyPartnersArgs {
   })
   where?: PartnersWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [PartnersOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [PartnersOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: PartnersOrderByWithRelationInput[] | undefined;
+  orderBy?: PartnersOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => PartnersWhereUniqueInput, {
     nullable: true

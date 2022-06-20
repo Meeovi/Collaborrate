@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { ShipmentsOrderByWithRelationInput } from "../../../inputs/ShipmentsOrderByWithRelationInput";
+import { ShipmentsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ShipmentsOrderByWithRelationAndSearchRelevanceInput";
 import { ShipmentsWhereInput } from "../../../inputs/ShipmentsWhereInput";
 import { ShipmentsWhereUniqueInput } from "../../../inputs/ShipmentsWhereUniqueInput";
 import { ShipmentsScalarFieldEnum } from "../../../../enums/ShipmentsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstShipmentsArgs {
   })
   where?: ShipmentsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [ShipmentsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [ShipmentsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: ShipmentsOrderByWithRelationInput[] | undefined;
+  orderBy?: ShipmentsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => ShipmentsWhereUniqueInput, {
     nullable: true

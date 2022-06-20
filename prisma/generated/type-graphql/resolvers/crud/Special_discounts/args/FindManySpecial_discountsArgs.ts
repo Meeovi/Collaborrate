@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { Special_discountsOrderByWithRelationInput } from "../../../inputs/Special_discountsOrderByWithRelationInput";
+import { Special_discountsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Special_discountsOrderByWithRelationAndSearchRelevanceInput";
 import { Special_discountsWhereInput } from "../../../inputs/Special_discountsWhereInput";
 import { Special_discountsWhereUniqueInput } from "../../../inputs/Special_discountsWhereUniqueInput";
 import { Special_discountsScalarFieldEnum } from "../../../../enums/Special_discountsScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManySpecial_discountsArgs {
   })
   where?: Special_discountsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [Special_discountsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [Special_discountsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: Special_discountsOrderByWithRelationInput[] | undefined;
+  orderBy?: Special_discountsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => Special_discountsWhereUniqueInput, {
     nullable: true

@@ -1,0 +1,60 @@
+<!-- Sidenav -->
+  <div
+  id="sidenav"
+  class="sidenav"
+  role="navigation"
+  data-mdb-hidden="false"
+  data-mdb-accordion="true"
+  >
+  <a
+    class="ripple d-flex justify-content-center py-4"
+    href="#!"
+    data-mdb-ripple-color="primary"
+  >
+    <img
+      id="MDB-logo"
+      src="https://mdbootstrap.com/wp-content/uploads/2018/06/logo-mdb-jquery-small.png"
+      alt="MDB Logo"
+      draggable="false"
+    />
+  </a>
+
+  <ul class="sidenav-menu">
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="/dashboard">
+        <i class="fas fa-chart-area fa-fw me-3"></i><span>SEO dashboard</span></a>
+    </li>
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="/user-profile">
+        <i class="fas fa-user fa-fw me-3"></i><span>My profile</span></a>
+    </li>
+    <% if (user.role_id == 1) { %>
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="/user-management">
+        <i class="fas fa-users fa-fw me-3"></i><span>User management</span></a>
+    </li>
+    <% } %>
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="#!">
+        <i class="fas fa-chart-pie fa-fw me-3"></i><span>Stats</span></a>
+    </li>
+    <li class="sidenav-item">
+      <a class="sidenav-link" href="#!">
+        <i class="fas fa-table fa-fw me-3"></i><span>Tables</span></a>
+    </li>
+    <li class="sidenav-item">
+      <a class="sidenav-link"
+        ><i class="fas fa-lock fa-fw me-3"></i><span>Orders</span></a
+      >
+      <ul class="sidenav-collapse">
+        <li class="sidenav-item">
+          <a class="sidenav-link">Overall</a>
+        </li>
+        <li class="sidenav-item">
+          <a class="sidenav-link">Custom</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- Sidenav -->

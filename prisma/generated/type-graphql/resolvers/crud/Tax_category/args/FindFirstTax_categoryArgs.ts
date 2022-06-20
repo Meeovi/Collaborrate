@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { Tax_categoryOrderByWithRelationInput } from "../../../inputs/Tax_categoryOrderByWithRelationInput";
+import { Tax_categoryOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Tax_categoryOrderByWithRelationAndSearchRelevanceInput";
 import { Tax_categoryWhereInput } from "../../../inputs/Tax_categoryWhereInput";
 import { Tax_categoryWhereUniqueInput } from "../../../inputs/Tax_categoryWhereUniqueInput";
 import { Tax_categoryScalarFieldEnum } from "../../../../enums/Tax_categoryScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstTax_categoryArgs {
   })
   where?: Tax_categoryWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [Tax_categoryOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [Tax_categoryOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: Tax_categoryOrderByWithRelationInput[] | undefined;
+  orderBy?: Tax_categoryOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => Tax_categoryWhereUniqueInput, {
     nullable: true

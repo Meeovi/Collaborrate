@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { SourceOrderByWithRelationInput } from "../../../inputs/SourceOrderByWithRelationInput";
+import { SourceOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/SourceOrderByWithRelationAndSearchRelevanceInput";
 import { SourceWhereInput } from "../../../inputs/SourceWhereInput";
 import { SourceWhereUniqueInput } from "../../../inputs/SourceWhereUniqueInput";
 import { SourceScalarFieldEnum } from "../../../../enums/SourceScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManySourceArgs {
   })
   where?: SourceWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [SourceOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [SourceOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: SourceOrderByWithRelationInput[] | undefined;
+  orderBy?: SourceOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => SourceWhereUniqueInput, {
     nullable: true

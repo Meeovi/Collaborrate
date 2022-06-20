@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { Currency_symbolsOrderByWithRelationInput } from "../../../inputs/Currency_symbolsOrderByWithRelationInput";
+import { Currency_symbolsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Currency_symbolsOrderByWithRelationAndSearchRelevanceInput";
 import { Currency_symbolsWhereInput } from "../../../inputs/Currency_symbolsWhereInput";
 import { Currency_symbolsWhereUniqueInput } from "../../../inputs/Currency_symbolsWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateCurrency_symbolsArgs {
   })
   where?: Currency_symbolsWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [Currency_symbolsOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [Currency_symbolsOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: Currency_symbolsOrderByWithRelationInput[] | undefined;
+  orderBy?: Currency_symbolsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => Currency_symbolsWhereUniqueInput, {
     nullable: true

@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { Credit_memosOrderByWithRelationInput } from "../../../inputs/Credit_memosOrderByWithRelationInput";
+import { Credit_memosOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Credit_memosOrderByWithRelationAndSearchRelevanceInput";
 import { Credit_memosWhereInput } from "../../../inputs/Credit_memosWhereInput";
 import { Credit_memosWhereUniqueInput } from "../../../inputs/Credit_memosWhereUniqueInput";
 import { Credit_memosScalarFieldEnum } from "../../../../enums/Credit_memosScalarFieldEnum";
@@ -12,10 +12,10 @@ export class ProductsCredit_memosArgs {
   })
   where?: Credit_memosWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [Credit_memosOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [Credit_memosOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: Credit_memosOrderByWithRelationInput[] | undefined;
+  orderBy?: Credit_memosOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => Credit_memosWhereUniqueInput, {
     nullable: true

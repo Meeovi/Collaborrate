@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { KnowledgebaseOrderByWithRelationInput } from "../../../inputs/KnowledgebaseOrderByWithRelationInput";
+import { KnowledgebaseOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/KnowledgebaseOrderByWithRelationAndSearchRelevanceInput";
 import { KnowledgebaseWhereInput } from "../../../inputs/KnowledgebaseWhereInput";
 import { KnowledgebaseWhereUniqueInput } from "../../../inputs/KnowledgebaseWhereUniqueInput";
 import { KnowledgebaseScalarFieldEnum } from "../../../../enums/KnowledgebaseScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindManyKnowledgebaseArgs {
   })
   where?: KnowledgebaseWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [KnowledgebaseOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [KnowledgebaseOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: KnowledgebaseOrderByWithRelationInput[] | undefined;
+  orderBy?: KnowledgebaseOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => KnowledgebaseWhereUniqueInput, {
     nullable: true

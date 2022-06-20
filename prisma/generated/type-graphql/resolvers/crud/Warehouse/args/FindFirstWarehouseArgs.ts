@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { WarehouseOrderByWithRelationInput } from "../../../inputs/WarehouseOrderByWithRelationInput";
+import { WarehouseOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/WarehouseOrderByWithRelationAndSearchRelevanceInput";
 import { WarehouseWhereInput } from "../../../inputs/WarehouseWhereInput";
 import { WarehouseWhereUniqueInput } from "../../../inputs/WarehouseWhereUniqueInput";
 import { WarehouseScalarFieldEnum } from "../../../../enums/WarehouseScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstWarehouseArgs {
   })
   where?: WarehouseWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [WarehouseOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [WarehouseOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: WarehouseOrderByWithRelationInput[] | undefined;
+  orderBy?: WarehouseOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => WarehouseWhereUniqueInput, {
     nullable: true

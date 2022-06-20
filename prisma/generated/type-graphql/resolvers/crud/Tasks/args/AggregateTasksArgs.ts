@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { TasksOrderByWithRelationInput } from "../../../inputs/TasksOrderByWithRelationInput";
+import { TasksOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/TasksOrderByWithRelationAndSearchRelevanceInput";
 import { TasksWhereInput } from "../../../inputs/TasksWhereInput";
 import { TasksWhereUniqueInput } from "../../../inputs/TasksWhereUniqueInput";
 
@@ -11,10 +11,10 @@ export class AggregateTasksArgs {
   })
   where?: TasksWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [TasksOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [TasksOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: TasksOrderByWithRelationInput[] | undefined;
+  orderBy?: TasksOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => TasksWhereUniqueInput, {
     nullable: true

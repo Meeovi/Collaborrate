@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { ThemesOrderByWithRelationInput } from "../../../inputs/ThemesOrderByWithRelationInput";
+import { ThemesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ThemesOrderByWithRelationAndSearchRelevanceInput";
 import { ThemesWhereInput } from "../../../inputs/ThemesWhereInput";
 import { ThemesWhereUniqueInput } from "../../../inputs/ThemesWhereUniqueInput";
 import { ThemesScalarFieldEnum } from "../../../../enums/ThemesScalarFieldEnum";
@@ -12,10 +12,10 @@ export class FindFirstThemesArgs {
   })
   where?: ThemesWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [ThemesOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [ThemesOrderByWithRelationAndSearchRelevanceInput], {
     nullable: true
   })
-  orderBy?: ThemesOrderByWithRelationInput[] | undefined;
+  orderBy?: ThemesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
 
   @TypeGraphQL.Field(_type => ThemesWhereUniqueInput, {
     nullable: true
