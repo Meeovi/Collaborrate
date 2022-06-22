@@ -1,30 +1,7 @@
-const http = require("http");
-const { postgraphile } = require("postgraphile");
-
-http
-  .createServer(
-    postgraphile(
-      process.env.DATABASE_URL, "public", {
-        subscriptions: true,
-        watchPg: true,
-        dynamicJson: true,
-        setofFunctionsContainNulls: false,
-        ignoreRBAC: false,
-        showErrorStack: "json",
-        extendedErrors: ["hint", "detail", "errcode"],
-        appendPlugins: [require("@graphile-contrib/pg-simplify-inflector")],
-        exportGqlSchemaPath: "schema.graphql",
-        graphiql: true,
-        enhanceGraphiql: true,
-        allowExplain(req) {
-            return true;
-        },
-        enableQueryBatching: true,
-        legacyRelations: "omit",
-        pgSettings: {
-            statement_timeout: "3000",
-        },
-      }
-    )
-  )
-  .listen(process.env.PORT || 5000);
+const { postgraphile } = require('postgraphile')
+module.exports = postgraphile(process.env.DATABASE_URL, 'public', {
+  watchPg: true, // automatic reload when database changes
+  graphiql: true, // for dev
+  graphqlRoute: '/api/graphql', // optional to avoid conflicts with nuxt.js default routing
+  graphiqlRoute: '/api/graphiql'
+})

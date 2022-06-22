@@ -221,7 +221,7 @@ twa: {
       expires: 7, 
     },
     includeNodeModules: true, 
-    browserHttpEndpoint: '/graphql',
+    browserHttpEndpoint: '/api/graphiql',
     httpLinkOptions: {
       credentials: 'same-origin'
     },
@@ -255,9 +255,9 @@ twa: {
         version: 3
       }, */
 
-  publicRuntimeConfig: {
-    
-  },
+  serverMiddleware: [
+    '~/config/postgraphile.config.js'
+  ],
   
   build: {
     extend(config, ctx) {},

@@ -1,4 +1,6 @@
 require('../config/openTelemetryConfig')
+require('../config/apollo')
+require('../config/firebase.config')
 const openTelemetryPlugin = require('@autotelic/fastify-opentelemetry')
 const fastify = require('fastify')({ logger: true })
 const fastifyEnv = require('@fastify/env')
