@@ -65,7 +65,7 @@
     "@sentry/tracing": "^6.16.1",
     "@sentry/vue": "^6.16.1",
     "@supabase/supabase-js": "^1.30.7",
-    "@vue/composition-api": "^1.6.1",
+    "@vue/composition-api": "^1.6.2",
     "ap-style-title-case": "^1.1.2",
     "apollo-server": "^3.9.0",
     "async": "^2.6.3",
