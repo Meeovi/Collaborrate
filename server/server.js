@@ -1,21 +1,8 @@
-require('../config/openTelemetryConfig')
 require('../config/apollo')
 require('../config/firebase.config')
-const openTelemetryPlugin = require('@autotelic/fastify-opentelemetry')
 const fastify = require('fastify')({ logger: true })
 const fastifyEnv = require('@fastify/env')
 const fileUpload = require('fastify-file-upload')
-
-const schema = {
-    type: 'object',
-    required: [ 'PORT' ],
-    properties: {
-      PORT: {
-        type: 'string',
-        default: 8000
-      }
-    }
-}
 
 const options = {
     confKey: 'config', // optional, default: 'config'
@@ -56,10 +43,6 @@ fastify.register(require('@fastify/cors'), {
 })
 
 fastify.register(require('@fastify/elasticsearch'), { node: 'http://localhost:9200' })
-
-fastify.register(require('fastify-nuxtjs')).after(() => {
-    fastify.nuxt('*');
-  });
 
 fastify.get('/user', async function (req, reply) {
   const { body } = await this.elastic.search({

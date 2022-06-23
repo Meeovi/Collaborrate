@@ -20,7 +20,6 @@ Since AlternateCMS is powered by Nuxtjs it support all of Nuxtjs and Vuejs featu
 - Integration with Supabase, Firebase, and Hasura
 - Integrated reporting tools and Sentry integration
 - Paypal & Stripe payment methods
-- TWA (Trusted Web App) that uses built in PWA manifest, Android Files generated, build APK & AAB, handling artifacts signing if keys are provided, and generates & emits asset links file in dist folder
 - Integrated with Netlify
 - Enhanced Security with monthly updates
 - Integrated with Bootstrap and Fontawesome

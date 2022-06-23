@@ -1,4 +1,3 @@
-export { default as IoSocketStatus } from '../..\\node_modules\\nuxt-socket-io\\lib\\components\\SocketStatus.js'
 export { default as Breadcrumbs } from '../..\\components\\Breadcrumbs.vue'
 export { default as Chat } from '../..\\components\\chat.vue'
 export { default as Colormode } from '../..\\components\\colormode.vue'

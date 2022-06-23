@@ -1,7 +1,4 @@
 {
-  "IoSocketStatus": {
-    "description": "Auto imported from node_modules/nuxt-socket-io/lib/components/SocketStatus.js"
-  },
   "Breadcrumbs": {
     "description": "Auto imported from components/Breadcrumbs.vue"
   },

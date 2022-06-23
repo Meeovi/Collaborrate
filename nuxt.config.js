@@ -20,10 +20,6 @@ export default {
         content: ''
       },
       {
-        name: 'csrf-token',
-        content: '{{csrfToken}}'
-      },
-      {
         name: 'format-detection',
         content: 'telephone=no'
       }
@@ -36,13 +32,12 @@ export default {
       {rel: 'stylesheet', href: '/assets/dropdown/css/style.css' },
       {rel: 'stylesheet', href: '/assets/socicon/css/styles.css' },
       {rel: 'stylesheet', href: '/assets/theme/css/style.css' },
-      // {rel: 'stylesheet', href: '/css/mdb.dark.min.css' },
-      {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css'},
+      {rel: 'stylesheet', href: '/mdb/plugins/css/all.min.css'},
+      {rel: 'stylesheet', href: '/mdb/css/mdb.min.css' },
     ],
     script: [
       { src: 'https://polyfill.io/v3/polyfill.min.js?features=es2015', ssr: false },
       { src: 'https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js', ssr: false },
-      { src: 'https://cdn.jsdelivr.net/gh/Rakhmadi/RdataTB@master/dist/index.js', ssr: false },
       { src: '/assets/popper/popper.min.js', ssr: false },
       { src: '/assets/tether/tether.min.js', ssr: false },
       { src: '/assets/smoothscroll/smooth-scroll.js', ssr: false },
@@ -50,21 +45,18 @@ export default {
       { src: '/assets/dropdown/js/navbar-dropdown.js', ssr: false },
       { src: '/assets/touchswipe/jquery.touch-swipe.min.js', ssr: false },
       { src: '/assets/theme/js/script.js', ssr: false },
+      { src: '/mdb/plugins/js/all.min.js', mode: 'client'},
+      { src: '/mdb/js/mdb.min.js', mode: 'client'},
       { src: 'https://editor.unlayer.com/embed.js', ssr: false },
     ]
   },
 
   css: [
-    '~/static/css/mdb.min.css',
     '~/static/styles/styles.css',
     'simplemde/dist/simplemde.min.css',
-    '~/static/styles/snow.min.css',
   ],
 
   script: [
-    { src: '~/static/js/mdb.min.js', mode: 'client' },
-    { src: '~/static/src/mdb/js/mdb.pro.js', ssr: false },
-    { src: '~/plugins/extensions/mdb.client.js', ssr: false },
   ],
 
   plugins: [
@@ -73,8 +65,6 @@ export default {
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
     { src: '~/plugins/ecommerce/pa-dss.js', ssr: false },
     { src: '~/plugins/client.js', ssr: false },
-    { src: '~/plugins/extensions/mdb.client.js', ssr: false },
-    { src: '~/plugins/extensions/calendar.js', ssr: false },
     // { src: '~/plugins/extensions/email.js', ssr: false },
     { src: '~/plugins/upload.js', ssr: false },
   ],
@@ -82,12 +72,10 @@ export default {
   components: true,
 
   buildModules: [
-    '@nuxtjs/dotenv',
     '@nuxtjs/moment',
     '@braid/vue-formulate/nuxt',
     'nuxt-webpack-optimisations',
     '@nuxtjs/composition-api/module',
-    '@aceforth/nuxt-netlify',
   ],
 
   modules: [
@@ -97,18 +85,12 @@ export default {
     '@nuxtjs/apollo',
     '@nuxt/http',
     '@nuxtjs/i18n',
-    'nuxt-socket-io',
-    '@nuxtjs/universal-storage',
     // '@nuxtjs/recaptcha',
-    '@nuxtjs/robots',
-    '@nuxtjs/sitemap',
-    'nuxt-helmet',
     '@nuxt/image',
     'nuxt-client-init-module',
     'nuxtjs-darkmode-js-module',
     '@nuxtjs/firebase',
     'nuxt-stripe-module',
-    'nuxt-twa',
     '@nuxtjs/lunr-module',
   ],
 
@@ -149,48 +131,12 @@ netlify: {
 }
 },
 
-twa: {
-  host: '/'
-},
-
   router: {
     middleware: []
   },
 
   image: {
     // Options
-  },
-
-  helmet: {},
-
-  sitemap: {
-    hostname: 'http://localhost'
-  },
-
-  storage: {
-      vuex: {
-        namespace: 'storage'
-      },
-      cookie: {
-        prefix: '',
-        options: {
-          path: '/'
-        }
-      },
-      localStorage: {
-        prefix: ''
-      },
-      ignoreExceptions: false,
-  },
-
-  io: {
-    sockets: [
-      {
-        name: 'home',
-        url: 'http://localhost:8000',
-        default: true,
-      },
-    ]
   },
 
   i18n: {
@@ -217,19 +163,40 @@ twa: {
   },
   
   apollo: {
-    cookieAttributes: {
-      expires: 7, 
-    },
-    includeNodeModules: true, 
-    browserHttpEndpoint: '/api/graphiql',
-    httpLinkOptions: {
-      credentials: 'same-origin'
-    },
-    authenticationType: 'Bearer', 
-    errorHandler: '~/plugins/apollo-error-handler.js',
     clientConfigs: {
-      default: '~/apollo/clientConfig.js'
-    }
+      default: '~/apollo/clientConfig.js',
+      alternativeClient: {
+        httpEndpoint: 'http://localhost:4000',
+
+        browserHttpEndpoint: 'api/graphiql',
+
+        httpLinkOptions: {
+          credentials: 'same-origin'
+        },
+
+        wsEndpoint: 'ws://localhost:4000',
+        tokenName: 'apollo-token',
+        persisting: false,
+        websocketsOnly: false
+      },
+    },
+    
+    defaultOptions: {
+      $query: {
+        loadingKey: 'loading',
+        fetchPolicy: 'cache-and-network',
+      },
+    },
+    
+    errorHandler: '~/plugins/apollo-error-handler.js',
+    authenticationType: 'Bearer', 
+    tokenName: 'apollo-token',
+    cookieAttributes: {
+      expires: 7,
+      path: '/',
+      domain: 'example.com',
+      secure: false,
+    },
   },
 
   sentry: {
@@ -261,6 +228,5 @@ twa: {
   
   build: {
     extend(config, ctx) {},
-    transpile: [/echarts/, /zrender/]
   },
 }

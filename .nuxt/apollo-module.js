@@ -11,7 +11,7 @@ export default (ctx, inject) => {
   const providerOptions = { clients: {} }
   const { app, beforeNuxtRender, req } = ctx
   const AUTH_TOKEN_NAME = 'apollo-token'
-  const COOKIE_ATTRIBUTES = {"expires":7}
+  const COOKIE_ATTRIBUTES = {"expires":7,"path":"\u002F","domain":"example.com","secure":false}
   const AUTH_TYPE = 'Bearer '
   const cookies = new Cookie(req && req.headers.cookie)
 
@@ -56,6 +56,8 @@ export default (ctx, inject) => {
         defaultClientConfig.httpEndpoint = defaultClientConfig.browserHttpEndpoint
       }
 
+        defaultClientConfig.apollo = { defaultOptions: {"$query":{"loadingKey":"loading","fetchPolicy":"cache-and-network"}} }
+
       defaultClientConfig.ssr = !!process.server
       defaultClientConfig.cache = defaultCache
       defaultClientConfig.tokenName = defaultTokenName
@@ -79,7 +81,77 @@ export default (ctx, inject) => {
 
           providerOptions.defaultClient = defaultApolloCreation.apolloClient
 
+      const alternativeClientTokenName = 'apollo-token'  || AUTH_TOKEN_NAME
+
+      function alternativeClientGetAuth () {
+        const token = cookies.get(alternativeClientTokenName)
+        return token && alternativeClientClientConfig.validateToken(token) ? AUTH_TYPE + token : ''
+      }
+
+      let alternativeClientClientConfig
+
+        alternativeClientClientConfig = {
+  "httpEndpoint": "http://localhost:4000",
+  "browserHttpEndpoint": "api/graphiql",
+  "httpLinkOptions": {
+    "credentials": "same-origin"
+  },
+  "wsEndpoint": "ws://localhost:4000",
+  "tokenName": "apollo-token",
+  "persisting": false,
+  "websocketsOnly": false
+}
+
+      const alternativeClientValidateToken = () => true
+
+      if (!alternativeClientClientConfig.validateToken) {
+        alternativeClientClientConfig.validateToken = alternativeClientValidateToken
+      }
+
+      const alternativeClientCache = alternativeClientClientConfig.cache
+        ? alternativeClientClientConfig.cache
+        : new InMemoryCache(alternativeClientClientConfig.inMemoryCacheOptions ? alternativeClientClientConfig.inMemoryCacheOptions: undefined)
+
+      if (!process.server) {
+        alternativeClientCache.restore(window.__NUXT__ && window.__NUXT__.apollo ? window.__NUXT__.apollo.alternativeClient : null)
+      }
+
+      if (!alternativeClientClientConfig.getAuth) {
+        alternativeClientClientConfig.getAuth = alternativeClientGetAuth
+      }
+
+      if (process.client && alternativeClientClientConfig.browserHttpEndpoint) {
+        alternativeClientClientConfig.httpEndpoint = alternativeClientClientConfig.browserHttpEndpoint
+      }
+
+        alternativeClientClientConfig.apollo = { defaultOptions: {"$query":{"loadingKey":"loading","fetchPolicy":"cache-and-network"}} }
+
+      alternativeClientClientConfig.ssr = !!process.server
+      alternativeClientClientConfig.cache = alternativeClientCache
+      alternativeClientClientConfig.tokenName = alternativeClientTokenName
+
+      // if ssr we'd still like to have our webclient's cookies
+      if (process.server && req && req.headers && req.headers.cookie) {
+        if (!alternativeClientClientConfig.httpLinkOptions) {
+          alternativeClientClientConfig.httpLinkOptions = {}
+        }
+        if (!alternativeClientClientConfig.httpLinkOptions.headers) {
+          alternativeClientClientConfig.httpLinkOptions.headers = {}
+        }
+        alternativeClientClientConfig.httpLinkOptions.headers.cookie = req.headers.cookie
+      }
+
+      // Create apollo client
+      let alternativeClientApolloCreation = createApolloClient({
+        ...alternativeClientClientConfig
+      })
+      alternativeClientApolloCreation.apolloClient.wsClient = alternativeClientApolloCreation.wsClient
+
+          providerOptions.clients.alternativeClient = alternativeClientApolloCreation.apolloClient
+
   const vueApolloOptions = Object.assign(providerOptions, {
+        defaultOptions: {"$query":{"loadingKey":"loading","fetchPolicy":"cache-and-network"}},
+
       errorHandler (error) {
           return require('~/plugins/apollo-error-handler.js').default(error, ctx)
       }

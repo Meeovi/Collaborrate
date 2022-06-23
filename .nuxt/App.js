@@ -6,13 +6,9 @@ import NuxtError from '..\\layouts\\error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import '..\\static\\css\\mdb.min.css'
-
 import '..\\static\\styles\\styles.css'
 
 import '..\\node_modules\\simplemde\\dist\\simplemde.min.css'
-
-import '..\\static\\styles\\snow.min.css'
 
 import _5fa3735e from '..\\layouts\\dashboard.vue'
 import _6f6c098b from '..\\layouts\\default.vue'

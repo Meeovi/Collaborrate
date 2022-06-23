@@ -52,7 +52,11 @@ nav a, .input-group-text {
   }
 
   body {
-    margin: 0;
+    background-color: hsl(0, 0%, 97%);
+  }
+
+  .text-light {
+    color: #9FA6B2 !important;
   }
 
 /******************* Dashboard CSS *********/

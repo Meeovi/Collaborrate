@@ -200,7 +200,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"DATABASE_URL":"postgresql://postgres:Whurashia1986@db.wyhrhklrokwbwfwkgyoi.supabase.co:5432/postgres","YOUR_SUPABASE_URL":"db.wyhrhklrokwbwfwkgyoi.supabase.co","YOUR_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind5aHJoa2xyb2t3Yndmd2tneW9pIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDQ0NDY4ODgsImV4cCI6MTk2MDAyMjg4OH0.YkHlpppiybDFNr_Cv-mE6zfR04Xwmev4NR2a1xEnERs","DB_HOST":"postgresql","DB_PORT":"5432","DB_USER":"postgres","DB_PASSWORD":"Whurashia1986","DB_DATABASE":"postgres","RECAPTCHA_SITE_KEY":"6LfpcpceAAAAAIiNkvhIk9u-Y-vI6YCpixsJ2SgX","GRAPHQL_ENDPOINT":"https://star-gobbler-68.hasura.app/v1/graphql","STRIPE_PUBLISHABLE_KEY":"'YOUR_STRIPE_PUBLISHABLE_KEY',"}
+      env: {}
     }
     // Only set once
 

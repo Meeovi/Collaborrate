@@ -1,13 +1,12 @@
 <template>
-    <main style="margin-top: 58px">
-        <Header />
-        <div class="container">
-           <Breadcrumbs />
-           <Nuxt /> 
-        </div>
-        <Footer />
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.js' defer></script>
+  <div>
+    <main class="mb-5" style="margin-top: -55px;">
+      <Header />
+      <Breadcrumbs />
+      <nuxt />
     </main>
+    <Footer />
+  </div>
 </template>
 
 <script>

@@ -1,15 +1,10 @@
 <template>
-  <div>
     <header>
       <!-- Sidenav -->
-      <nav id="sidenav-1" class="sidenav bg-primary" data-mdb-hidden="false" data-mdb-accordion="true">
-        <a class="ripple d-flex justify-content-center py-4" href="/" data-mdb-ripple-color="primary">
-          <div class="metroname" style="color:indianred;">ALTERNATE</div>
-          <div class="metroname" style="color:powderblue;">CMS</div>
-        </a>
+      <nav id="sidenav-1" class="sidenav bg-primary" data-mdb-hidden="false">
         <ul class="sidenav-menu">
           <li class="sidenav-item">
-            <a class="sidenav-link" href="/">
+            <a class="sidenav-link">
               <i class="fas fa-home fa-fw me-3"></i><span>Main Dashboard</span></a>
           </li>
           <li class="sidenav-item">
@@ -47,31 +42,31 @@
           <li class="sidenav-item">
             <a class="sidenav-link"><i class="fas fa-users fa-fw me-3"></i><span>Customers</span></a>
             <ul class="sidenav-collapse">
-                <li class="sidenav-item">
-                  <a class="sidenav-link" href="/admin/customers/all-customers">All Customers</a>
-                </li>
-                <li class="sidenav-item">
-                  <a class="sidenav-link" href="/admin/customers/online-customers">Online Customers</a>
-                </li>
-                <li class="sidenav-item">
-                  <a class="sidenav-link" href="/admin/customers/segments">Segments</a>
-                </li>
-                <li class="sidenav-item">
-                  <a class="sidenav-link" href="/admin/customers/social-groups">Social Groups</a>
-                </li>
-                <li class="sidenav-item">
-                  <a class="sidenav-link" href="/admin/customers/opportunities">Opportunities</a>
-                </li>
-                <li class="sidenav-item">
-                  <a class="sidenav-link" href="/admin/customers/leads">Leads</a>
-                </li>
-                <li class="sidenav-item">
-                  <a class="sidenav-link" href="/admin/customers/tasks">Tasks</a>
-                </li>
-                <li class="sidenav-item">
-                  <a class="sidenav-link" href="/admin/customers/meetings">Meetings</a>
-                </li>
-              </ul>
+              <li class="sidenav-item">
+                <a class="sidenav-link" href="/admin/customers/all-customers">All Customers</a>
+              </li>
+              <li class="sidenav-item">
+                <a class="sidenav-link" href="/admin/customers/online-customers">Online Customers</a>
+              </li>
+              <li class="sidenav-item">
+                <a class="sidenav-link" href="/admin/customers/segments">Segments</a>
+              </li>
+              <li class="sidenav-item">
+                <a class="sidenav-link" href="/admin/customers/social-groups">Social Groups</a>
+              </li>
+              <li class="sidenav-item">
+                <a class="sidenav-link" href="/admin/customers/opportunities">Opportunities</a>
+              </li>
+              <li class="sidenav-item">
+                <a class="sidenav-link" href="/admin/customers/leads">Leads</a>
+              </li>
+              <li class="sidenav-item">
+                <a class="sidenav-link" href="/admin/customers/tasks">Tasks</a>
+              </li>
+              <li class="sidenav-item">
+                <a class="sidenav-link" href="/admin/customers/meetings">Meetings</a>
+              </li>
+            </ul>
           </li>
 
           <li class="sidenav-item">
@@ -255,11 +250,14 @@
         <!-- Container wrapper -->
         <div class="container-fluid">
           <!-- Toggler -->
-          <button data-mdb-toggle="sidenav" data-mdb-target="#sidenav-1"
-            class="btn shadow-0 p-0 me-3 d-block d-xxl-none" aria-controls="#sidenav-1" aria-haspopup="true">
-            <i class="fas fa-bars fa-lg"></i>
+          <button data-mdb-toggle="sidenav" data-mdb-target="#sidenav-1" class="btn btn-primary"
+            aria-controls="#sidenav-1" aria-haspopup="true">
+            <i class="fas fa-bars"></i>
           </button>
-
+          <a class="navbar-brand" href="/">
+            <div class="metroname" style="color:indianred;">ALTERNATE</div>
+            <div class="metroname" style="color:powderblue;">CMS</div>
+          </a>
           <!-- Search form -->
           <form class="d-none d-md-flex input-group w-auto my-auto">
             <input autocomplete="off" type="search" class="form-control rounded"
@@ -338,13 +336,13 @@
                   <a class="dropdown-item" href="/user/my-account">My Profile</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/admin/">Customer View</a>
+                  <a class="dropdown-item" target="_blank" href="/admin/">Customer View</a>
                 </li>
                 <li>
                   <a class="dropdown-item" target="_blank" href="/api/graphiql">Graphql Playground</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="http://localhost:5858/">Rest API Documentation</a>
+                  <a class="dropdown-item" target="_blank" href="http://localhost:5858/">Rest API Documentation</a>
                 </li>
                 <li>
                   <a class="dropdown-item" aria-current="page" href="/logout">Logout</a>
@@ -357,7 +355,6 @@
       </nav>
       <!-- Navbar -->
     </header>
-  </div>
 </template>
 
 <script>
