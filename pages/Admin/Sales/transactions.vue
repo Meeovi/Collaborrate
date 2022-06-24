@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-transaction"><FormulateInput type="button">Create new Transaction</FormulateInput></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-transaction"><button type="button" class="btn btn-warning">Create new Transaction</button></a>
       </div>
     </nav>
     <br>

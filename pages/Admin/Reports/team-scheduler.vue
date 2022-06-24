@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/reports/add-new-schedule"><FormulateInput type="button">Create New Schedule Request</FormulateInput></a>
+        <a class="navbar-brand" href="/admin/reports/add-new-schedule"><button type="button" class="btn btn-warning">Create New Schedule Request</button></a>
       </div>
     </nav>
     

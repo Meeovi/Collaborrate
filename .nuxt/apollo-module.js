@@ -91,12 +91,12 @@ export default (ctx, inject) => {
       let alternativeClientClientConfig
 
         alternativeClientClientConfig = {
-  "httpEndpoint": "http://localhost:4000",
-  "browserHttpEndpoint": "api/graphiql",
+  "httpEndpoint": "http://0.0.0.0:8000",
+  "browserHttpEndpoint": "/api/graphiql",
   "httpLinkOptions": {
     "credentials": "same-origin"
   },
-  "wsEndpoint": "ws://localhost:4000",
+  "wsEndpoint": "ws://0.0.0.0:8000",
   "tokenName": "apollo-token",
   "persisting": false,
   "websocketsOnly": false

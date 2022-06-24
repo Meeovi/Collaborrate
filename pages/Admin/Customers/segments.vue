@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-segment"><FormulateInput type="button">Add Segment</FormulateInput></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-segment"><button type="button" class="btn btn-warning">Add Segment</button></a>
         
       </div>
     </nav>

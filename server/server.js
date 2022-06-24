@@ -1,4 +1,4 @@
-require('../config/apollo')
+require('../config/postgraphile.config')
 require('../config/firebase.config')
 const fastify = require('fastify')({ logger: true })
 const fastifyEnv = require('@fastify/env')

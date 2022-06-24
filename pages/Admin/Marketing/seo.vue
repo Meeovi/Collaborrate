@@ -2,9 +2,9 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand"><FormulateInput type="button">URL Rewrites</FormulateInput></a>
-        <a class="navbar-brand"><FormulateInput type="button" style="float:left; left: 10%; position: absolute;">Search Terms</FormulateInput></a>
-        <a class="navbar-brand"><FormulateInput type="button" style="float:left; left: 20%; position: absolute;">Site Map</FormulateInput></a>
+        <a class="navbar-brand"><button type="button" class="btn btn-warning">URL Rewrites</button></a>
+        <a class="navbar-brand"><button type="button" class="btn btn-warning" style="float:left; left: 10%; position: absolute;">Search Terms</button></a>
+        <a class="navbar-brand"><button type="button" class="btn btn-warning" style="float:left; left: 20%; position: absolute;">Site Map</button></a>
         
       </div>
     </nav>

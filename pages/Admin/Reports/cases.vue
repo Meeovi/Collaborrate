@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-case"><FormulateInput type="button">Create A Case</FormulateInput></a>        
+        <a class="navbar-brand" href="/admin/add-new/add-new-case"><button type="button" class="btn btn-warning">Create A Case</button></a>        
 </div>
 </nav>
 <br>

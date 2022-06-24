@@ -3,7 +3,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-product"><FormulateInput type="button">Add New Product</FormulateInput></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-product"><button type="button" class="btn btn-warning">Add New Product</button></a>
       </div>
     </nav>
     <br>

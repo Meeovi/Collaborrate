@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand"><FormulateInput type="button">Save Settings</FormulateInput></a>
+        <a class="navbar-brand"><button type="button" class="btn btn-warning">Save Settings</button></a>
         
       </div>
     </nav>

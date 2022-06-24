@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-agreement"><FormulateInput type="button">Create New Agreement</FormulateInput></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-agreement"><button type="button" class="btn btn-warning">Create New Agreement</button></a>
         
       </div>
     </nav>

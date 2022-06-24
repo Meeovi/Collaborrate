@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-visit"><FormulateInput type="button" label="Create A Visit"></FormulateInput></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-visit"><button type="button" class="btn btn-warning" label="Create A Visit"></button></a>
       </div>
 </nav>
 <br>

@@ -2,8 +2,8 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-event"><FormulateInput type="button">Events</FormulateInput></a>
-        <a class="navbar-brand" href="/admin/add-new/add-new-invitation" type="button" style="float:right; right: 15px; position: absolute;"><FormulateInput type="button" style="float:right; right: 8%; position: absolute;">Invitations</FormulateInput></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-event"><button type="button" class="btn btn-warning">Events</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-invitation" type="button" style="float:right; right: 15px; position: absolute;"><button type="button" class="btn btn-warning" style="float:right; right: 8%; position: absolute;">Invitations</button></a>
       </div>
     </nav>
 <br>

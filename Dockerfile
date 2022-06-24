@@ -1,9 +1,21 @@
 FROM node:10-alpine
-WORKDIR /app
-COPY package.json ./app
-COPY . /app
-RUN npm install --force
-EXPOSE 8000
+# Make directories to store the dependencies and the application code:
 
-ENV NUXT_HOST=0.0.0.0
-ENV NUXT_PORT=8000
+RUN mkdir -p /application
+WORKDIR /application
+
+# Set up the basics:
+
+ENV PORT 8080
+EXPOSE 8080
+ENV DOCKER_ENV docker
+ENV PATH /application/node_modules/.bin:$PATH
+
+# Make incremental updates to the dependencies:
+
+COPY package*.json /application/
+RUN npm install
+
+# By default, run the application with node:
+
+CMD [ "npm","run","dev" ]

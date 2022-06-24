@@ -26,25 +26,10 @@ export default {
     ],
     link: [{rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
       {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'},
-      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'},
-      {rel: 'stylesheet', href: '/assets/web/assets/mobirise-icons2/mobirise2.css' },
-      {rel: 'stylesheet', href: '/assets/tether/tether.min.css' },
-      {rel: 'stylesheet', href: '/assets/dropdown/css/style.css' },
-      {rel: 'stylesheet', href: '/assets/socicon/css/styles.css' },
-      {rel: 'stylesheet', href: '/assets/theme/css/style.css' },
       {rel: 'stylesheet', href: '/mdb/plugins/css/all.min.css'},
       {rel: 'stylesheet', href: '/mdb/css/mdb.min.css' },
     ],
     script: [
-      { src: 'https://polyfill.io/v3/polyfill.min.js?features=es2015', ssr: false },
-      { src: 'https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js', ssr: false },
-      { src: '/assets/popper/popper.min.js', ssr: false },
-      { src: '/assets/tether/tether.min.js', ssr: false },
-      { src: '/assets/smoothscroll/smooth-scroll.js', ssr: false },
-      { src: '/assets/dropdown/js/nav-dropdown.js', ssr: false },
-      { src: '/assets/dropdown/js/navbar-dropdown.js', ssr: false },
-      { src: '/assets/touchswipe/jquery.touch-swipe.min.js', ssr: false },
-      { src: '/assets/theme/js/script.js', ssr: false },
       { src: '/mdb/plugins/js/all.min.js', mode: 'client'},
       { src: '/mdb/js/mdb.min.js', mode: 'client'},
       { src: 'https://editor.unlayer.com/embed.js', ssr: false },
@@ -92,6 +77,7 @@ export default {
     '@nuxtjs/firebase',
     'nuxt-stripe-module',
     '@nuxtjs/lunr-module',
+    'nuxt-highcharts',
   ],
 
 // Modules Options -----------------------------------------------------------------------------------------------
@@ -121,6 +107,10 @@ firebase: {
     analytics: true,
     remoteConfig: true
   }
+},
+
+highcharts: {
+  /* module options */
 },
 
 netlify: { 
@@ -166,15 +156,15 @@ netlify: {
     clientConfigs: {
       default: '~/apollo/clientConfig.js',
       alternativeClient: {
-        httpEndpoint: 'http://localhost:4000',
+        httpEndpoint: 'http://0.0.0.0:8000',
 
-        browserHttpEndpoint: 'api/graphiql',
+        browserHttpEndpoint: '/api/graphiql',
 
         httpLinkOptions: {
           credentials: 'same-origin'
         },
 
-        wsEndpoint: 'ws://localhost:4000',
+        wsEndpoint: 'ws://0.0.0.0:8000',
         tokenName: 'apollo-token',
         persisting: false,
         websocketsOnly: false

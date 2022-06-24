@@ -2,8 +2,8 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand"><FormulateInput type="button">Add New Source</FormulateInput></a>
-        <a class="navbar-brand"><FormulateInput type="button" style="float:left; left: 15%; position: absolute;">Add New Stock</FormulateInput></a>
+        <a class="navbar-brand"><button type="button" class="btn btn-warning">Add New Source</button></a>
+        <a class="navbar-brand"><button type="button" style="float:left; left: 15%; position: absolute;">Add New Stock</button></a>
         
       </div>
     </nav>

@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-customergroup"><FormulateInput type="button">Add New Social Group</FormulateInput></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-customergroup"><button type="button" class="btn btn-warning">Add New Social Group</button></a>
         
 </div>
 </nav>

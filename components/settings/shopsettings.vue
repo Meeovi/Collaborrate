@@ -81,7 +81,7 @@
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="/admin/add-new/add-new-currency">
-                    <FormulateInput type="button">Create Currency</FormulateInput>
+                    <button type="button" class="btn btn-danger">Create Currency</button>
                   </a>
                 </div>
               </nav>
@@ -262,7 +262,7 @@
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="/admin/add-new/add-new-zone">
-                    <FormulateInput type="button">Create Zone</FormulateInput>
+                    <button type="button" class="btn btn-danger">Create Zone</button>
                   </a>
                 </div>
               </nav>
@@ -306,7 +306,7 @@
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="/admin/add-new/add-new-channel">
-                    <FormulateInput type="button">Create Channel</FormulateInput>
+                    <button type="button" class="btn btn-danger">Create Channel</button>
                   </a>
                 </div>
               </nav>
@@ -355,7 +355,7 @@
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="/admin/add-new/add-new-city">
-                    <FormulateInput type="button">Add New City</FormulateInput>
+                    <button type="button" class="btn btn-danger">Add New City</button>
                   </a>
 
                 </div>
@@ -404,7 +404,7 @@
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="/admin/add-new/add-new-state">
-                    <FormulateInput type="button">Add New State</FormulateInput>
+                    <button type="button" class="btn btn-danger">Add New State</button>
                   </a>
 
                 </div>
@@ -451,7 +451,7 @@
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="/admin/add-new/add-new-country">
-                    <FormulateInput type="button">Add New Country</FormulateInput>
+                    <button type="button" class="btn btn-danger">Add New Country</button>
                   </a>
 
                 </div>
@@ -500,7 +500,7 @@
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="/admin/add-new/add-new-taxrule">
-                    <FormulateInput type="button">Add New Tax Rule</FormulateInput>
+                    <button type="button" class="btn btn-danger">Add New Tax Rule</button>
                   </a>
 
                 </div>
@@ -545,7 +545,7 @@
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="/admin/add-new/add-new-taxrate">
-                    <FormulateInput type="button">Add New Tax Rate</FormulateInput>
+                    <button type="button" class="btn btn-danger">Add New Tax Rate</button>
                   </a>
 
                 </div>
