@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FormulateForm v-for="checklist in checklists" :key="checklist.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="checklist in checklists" :key="checklist.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>
@@ -9,7 +9,7 @@
               </th>
               <th scope="col" class="visitsAddOptions">
                 <li>
-                  <FormulateInput type="submit" label="Save" @click="addChecklist" />
+                  <input type="submit" value="Save" @click="addChecklist" />
                 </li>
               </th>
             </tr>
@@ -18,76 +18,76 @@
             <tr>
               <td style="text-align: right;">Username</td>
               <td>
-                <FormulateInput v-model="username" type="textarea" />{{ checklist.username }}
+                <input v-model="username" type="textarea" />{{ checklist.username }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Regional Manager</td>
               <td>
-                <FormulateInput v-model="regional_manager" type="text" />{{ checklist.regional_manager }}
+                <input v-model="regional_manager" type="text" />{{ checklist.regional_manager }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Manager</td>
               <td>
-                <FormulateInput v-model="manager" type="text" />{{ checklist.manager }}
+                <input v-model="manager" type="text" />{{ checklist.manager }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Start Date</td>
               <td>
-                <FormulateInput v-model="start_date" type="text" />{{ checklist.start_date }}
+                <input v-model="start_date" type="text" />{{ checklist.start_date }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">End Date</td>
               <td>
-                <FormulateInput v-model="end_date" type="text" />{{ checklist.end_date }}
+                <input v-model="end_date" type="text" />{{ checklist.end_date }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Region</td>
               <td>
-                <FormulateInput v-model="region" type="text" />{{ checklist.region }}
+                <input v-model="region" type="text" />{{ checklist.region }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Location</td>
               <td>
-                <FormulateInput v-model="location" type="text" />{{ checklist.location }}
+                <input v-model="location" type="text" />{{ checklist.location }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Country</td>
               <td>
-                <FormulateInput v-model="country" type="text" />{{ checklist.country }}
+                <input v-model="country" type="text" />{{ checklist.country }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
               <td>
                 <div class="form-wrapper">
-                  <FormulateForm>
-                    <FormulateInput type="group" name="description" :repeatable="true" label="Add Notes"
-                      add-label="+ Add Description">
+                  <form>
+                    <button type="group" name="description" :repeatable="true" value="Add Notes"
+                      add-value="+ Add Description">
                       <div class="description">
-                        <FormulateInput v-model="description" name="name" type="text" label="Description" />{{ checklist.description }}
+                        <input v-model="description" name="name" type="text" value="Description" />{{ checklist.description }}
                       </div>
-                    </FormulateInput>
-                  </FormulateForm>
+                    </button>
+                  </form>
                 </div>
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Media</td>
               <td>
-                <FormulateInput v-model="media" type="file" label="Upload image, video, document, etc" />{{ checklist.media }}
+                <input v-model="media" type="image" value="Upload image, video, document, etc" />{{ checklist.media }}
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

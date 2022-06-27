@@ -1,10 +1,10 @@
 <template>
   <div>
-    <FormulateForm v-for="newsletter in newsletter_subscribers" :key="newsletter.id"  method="POST" @submit.prevent>
+    <form v-for="newsletter in newsletter_subscribers" :key="newsletter.id"  method="POST" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><FormulateInput type="reset" class="btn btn-warning" label="Reset" /></a>
-          <a class="navbar-brand"><FormulateInput type="button" @click="addCustomer" label="Save Customer" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="button" class="btn btn-warning" @click="addCustomer" value="Save Customer" /></a>
         </div>
       </nav>
       <br>
@@ -28,77 +28,76 @@
                     <!--<tr>
                       <td style="text-align: right;">Customer Since</td>
                       <client-only>
-                      <td><FormulateInput id="currentDate" v-model="customer_since" type="text" disabled /></td>
+                      <td><input id="currentDate" v-model="customer_since" type="text" disabled /></td>
                       </client-only>
                     </tr>-->
                     <tr>
                       <td style="text-align: right;">Name Prefix</td>
-                      <td><FormulateInput type="text" />{{ newsletter.name_prefix }}</td>
+                      <td><input type="text" />{{ newsletter.name_prefix }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">First Name</td>
-                      <td><FormulateInput type="text" required />{{ newsletter.first_name }}</td>
+                      <td><input type="text" required />{{ newsletter.first_name }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Middle Name/Initial</td>
-                      <td><FormulateInput type="text" />{{ newsletter.middle_name }}</td>
+                      <td><input type="text" />{{ newsletter.middle_name }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Last Name</td>
-                      <td><FormulateInput type="text" required />{{ newsletter.last_name }}</td>
+                      <td><input type="text" required />{{ newsletter.last_name }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Name Suffix</td>
-                      <td><FormulateInput type="text" />{{ newsletter.name_suffix }}</td>
+                      <td><input type="text" />{{ newsletter.name_suffix }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Email</td>
-                      <td><FormulateInput type="text" required />{{ newsletter.email }}</td>
+                      <td><input type="text" required />{{ newsletter.email }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Date of Birth</td>
-                      <td><FormulateInput type="text" />{{ newsletter.date_of_birth }}</td>
+                      <td><input type="text" />{{ newsletter.date_of_birth }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Phone Number</td>
-                      <td><FormulateInput type="text" />{{ newsletter.phone }}</td>
+                      <td><input type="text" />{{ newsletter.phone }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Tax/VAT Number</td>
-                      <td><FormulateInput type="text" />{{ newsletter.tax_vat_number }}</td>
+                      <td><input type="text" />{{ newsletter.tax_vat_number }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Gender</td>
-                      <td><FormulateInput id="gender" name="gender" type="text" />{{ newsletter.gender }}
+                      <td><input id="gender" name="gender" type="text" />{{ newsletter.gender }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">About Customer</td>
-                      <td><FormulateInput
+                      <td><input
   type="textarea" id="aboutCustomer" name="aboutCustomer" validation="required|max:50,length" error-behavior="live"
-  :help="`Keep it under 50 characters. ${50 - value.length} left.`">{{ newsletter.short_description }}
-                        </FormulateInput></td>
+  :help="`Keep it under 50 characters. ${50 - value.length} left.`">{{ newsletter.short_description }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Address Line 1</td>
-                      <td><FormulateInput type="text" />{{ newsletter.address }}</td>
+                      <td><input type="text" />{{ newsletter.address }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Address Line 2</td>
-                      <td><FormulateInput type="text" />{{ newsletter.address_two }}</td>
+                      <td><input type="text" />{{ newsletter.address_two }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">State</td>
-                      <td><FormulateInput id="state" name="state" type="select" placeholder="Select a State" />{{ newsletter.state }}
+                      <td><input id="state" name="state" type="select" placeholder="Select a State" />{{ newsletter.state }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Postal Code</td>
-                      <td><FormulateInput type="text" />{{ newsletter.zipcode }}</td>
+                      <td><input type="text" />{{ newsletter.zipcode }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Country</td>
-                      <td><FormulateInput id="country" v-model="country" name="country" type="select" placeholder="Select a Country" />{{ newsletter.country }}
+                      <td><input id="country" v-model="country" name="country" type="select" placeholder="Select a Country" />{{ newsletter.country }}
                       </td>
                     </tr>
                   </tbody>
@@ -109,7 +108,7 @@
           <!-- Tab content -->
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

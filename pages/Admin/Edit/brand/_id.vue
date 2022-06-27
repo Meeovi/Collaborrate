@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm v-for="brands in brands" :key="brands.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="brands in brands" :key="brands.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Brand" @click="addBrand" /></a>
+            <input type="button" class="btn btn-warning" value="Save Brand" @click="addBrand" /></a>
         </div>
       </nav>
       <br>
@@ -38,25 +38,25 @@
                     <tr>
                       <td style="text-align: right;">Code</td>
                       <td>
-                        <FormulateInput v-model="code" name="fullfillmentCompanyName" type="text" />{{ brands.code }}
+                        <input v-model="code" name="fullfillmentCompanyName" type="text" />{{ brands.code }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Brand Name</td>
                       <td>
-                        <FormulateInput v-model="name" type="text" required />{{ brands.name }}
+                        <input v-model="name" type="text" required />{{ brands.name }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <FormulateInput v-model="description" type="textarea" />{{ brands.description }}
+                        <input v-model="description" type="textarea" />{{ brands.description }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Public</td>
                       <td>
-                        <FormulateInput v-model="isPublic" type="checkbox" label="Check the box if Brand is public" />
+                        <input v-model="isPublic" type="checkbox" value="Check the box if Brand is public" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
@@ -89,7 +89,7 @@
                     <tr>
                       <td style="text-align: right;">Media</td>
                       <td>
-                        <FormulateInput v-model="media" type="file" />
+                        <input v-model="media" type="image" />
                       </td>
                     </tr>
                   </tbody>
@@ -99,7 +99,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

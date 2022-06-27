@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Occassion" @click="addOccassion" /></a>
+            <input type="button" class="btn btn-warning" value="Save Occassion" @click="addOccassion" /></a>
         </div>
       </nav>
       <br>
@@ -29,13 +29,13 @@
                     <tr>
                       <td style="text-align: right;">Code</td>
                       <td>
-                        <FormulateInput v-model="code" type="text" required />
+                        <input v-model="code" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Occassion Name</td>
                       <td>
-                        <FormulateInput v-model="name" type="text" />
+                        <input v-model="name" type="text" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
@@ -76,7 +76,7 @@
                     </tr>
                     <tr class="col-lg-12">
                       <td>
-                        <FormulateInput v-model="description" type="textarea" label="Description" />
+                        <input v-model="description" type="textarea" value="Description" />
                       </td>
                     </tr>
                   </tbody>
@@ -86,7 +86,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

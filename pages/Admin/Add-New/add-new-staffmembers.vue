@@ -1,12 +1,12 @@
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+        <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save User" @click="addUser" /></a>
+            <input type="button" class="btn btn-warning" value="Save User" @click="addUser" /></a>
         </div>
       </nav>
       <br>
@@ -28,15 +28,15 @@
                 <tbody>
                     <tr>
                         <td style="text-align: right;">First Name</td>
-                        <td><FormulateInput v-model="first_name" type="text" required /></td>
+                        <td><input v-model="first_name" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Last Name</td>
-                        <td><FormulateInput v-model="last_name" type="text" required /></td>
+                        <td><input v-model="last_name" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Email Address</td>
-                        <td><FormulateInput v-model="staff_email" type="text" name="tax" /></td>
+                        <td><input v-model="staff_email" type="text" name="tax" /></td>
                     </tr>
                 </tbody>
             </table>
@@ -45,7 +45,7 @@
         </div>
         </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="event in events" :key="event.id" method="POST" @submit.prevent>
+        <form v-for="event in events" :key="event.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,46 +8,46 @@
                         <th>
                         </th>
                         <th scope="col" class="eventAddOptions">
-                            <li><FormulateInput type="submit" label="Save" @click="addEvent" /></li>
+                            <li><input type="submit" value="Save" @click="addEvent" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Event Name</td>
-                        <td><FormulateInput name="eventName" type="text" label="Name of the Event" required />{{ event.name }}</td>
+                        <td><input name="eventName" type="text" value="Name of the Event" required />{{ event.name }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Amount of Tickets Available</td>
-                        <td><FormulateInput name="eventTickets" type="text" label="Enter amount of tickets for event" required />{{ event.tickets }}</td>
+                        <td><input name="eventTickets" type="text" value="Enter amount of tickets for event" required />{{ event.tickets }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Event City</td>
-                        <td><FormulateInput type="text" required />{{ event.city }}</td>
+                        <td><input type="text" required />{{ event.city }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Event State</td>
-                        <td><FormulateInput type="text" placeholder="$" required />{{ event.state }}</td>
+                        <td><input type="text" placeholder="$" required />{{ event.state }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Event Event</td>
-                        <td><FormulateInput type="text" />{{ event.event }}</td>
+                        <td><input type="text" />{{ event.event }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Event Postal Code</td>
-                        <td><FormulateInput name="eventPostalCode" type="text" />{{ event.postalcode }}</td>
+                        <td><input name="eventPostalCode" type="text" />{{ event.postalcode }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Event Start Date</td>
-                        <td><FormulateInput name="eventStart" type="text" />{{ event.start }}</td>
+                        <td><input name="eventStart" type="text" />{{ event.start }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Event End Date</td>
-                        <td><FormulateInput name="eventEnd" type="text" />{{ event.end }}</td>
+                        <td><input name="eventEnd" type="text" />{{ event.end }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Category</td>
-                        <td><FormulateInput name="productCategory" type="text" />{{ event.category }}</td>
+                        <td><input name="productCategory" type="text" />{{ event.category }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -56,10 +56,10 @@
         <div id="accordionExample" class="accordion">
             <div class="accordion-item">
                 <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Content
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -83,20 +83,20 @@
             </div>
             <div class="accordion-item">
                 <h2 id="headingThree" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Images and Videos
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
-                        <td><FormulateInput type="image" upload-url="/media" name="headshot" label="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/>{{ event.image }}</td>
+                        <td><input type="image" upload-url="/media" name="headshot" value="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/>{{ event.image }}</td>
                     </div>
                 </div>
             </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

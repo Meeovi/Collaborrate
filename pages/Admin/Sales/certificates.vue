@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-gift-certificates"><button type="button" class="btn btn-warning">Create New Gift Certificates</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-gift-certificates"><input type="button" class="btn btn-warning">Create New Gift Certificates</button></a>
         
       </div>
     </nav>

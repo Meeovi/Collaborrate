@@ -1,12 +1,12 @@
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+        <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Segment" @click="addSegment" /></a>
+            <input type="button" class="btn btn-warning" value="Save Segment" @click="addSegment" /></a>
         </div>
       </nav>
       <br>
@@ -28,16 +28,16 @@
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Segment Name</td>
-                        <td><FormulateInput v-model="name" type="text" required /></td>
+                        <td><input v-model="name" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Description</td>
-                        <td><FormulateInput
-  type="textarea" id="description" v-model="description" name="description" cols="50" rows="10" label="Add a short Description" /></td>
+                        <td><input
+  type="textarea" id="description" v-model="description" name="description" cols="50" rows="10" value="Add a short Description" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Assigned to Website</td>
-                        <td><FormulateInput v-model="website" name="website" type="url" /></td>
+                        <td><input v-model="website" name="website" type="url" /></td>
                     </tr>
                 </tbody>
             </table>
@@ -46,7 +46,7 @@
         </div>
         </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

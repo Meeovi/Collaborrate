@@ -1,10 +1,10 @@
 <template>
   <div>
-    <FormulateForm method="POST" @submit.prevent  enctype="multipart/form-data">
+    <form method="POST" @submit.prevent  enctype="multipart/form-data">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><FormulateInput type="reset" class="btn btn-warning" label="Reset" /></a>
-          <a class="navbar-brand"><FormulateInput type="button" @click="addNewsletter" label="Save Newsletter" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="button" class="btn btn-warning" @click="addNewsletter" value="Save Newsletter" /></a>
         </div>
       </nav>
       <br>
@@ -27,23 +27,23 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Customer First Name</td>
-                      <td><FormulateInput v-model="customer_first_name" type="text" /></td>
+                      <td><input v-model="customer_first_name" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Cusotmer Last Name</td>
-                      <td><FormulateInput v-model="customer_last_name" type="text" required /></td>
+                      <td><input v-model="customer_last_name" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Email</td>
-                      <td><FormulateInput v-model="email" type="text" required /></td>
+                      <td><input v-model="email" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Store</td>
-                      <td><FormulateInput v-model="store" type="text" /></td>
+                      <td><input v-model="store" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Website</td>
-                      <td><FormulateInput id="websites" v-model="websites" name="websites" type="url" />
+                      <td><input id="websites" v-model="websites" name="websites" type="url" />
                       </td>
                     </tr>
                   </tbody>
@@ -54,7 +54,7 @@
           <!-- Tab content -->
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

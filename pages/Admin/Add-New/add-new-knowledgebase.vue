@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Knowledgebase" @click="addKnowledgebase" /></a>
+            <input type="button" class="btn btn-warning" value="Save Knowledgebase" @click="addKnowledgebase" /></a>
         </div>
       </nav>
       <br>
@@ -29,43 +29,43 @@
             <tr>
               <td style="text-align: right;">Knowledgebase Name</td>
               <td>
-                <FormulateInput v-model="name" type="text" required />
+                <input v-model="name" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Content</td>
               <td>
-                <vue-simplemde id="longDescription" ref="markdownEditor" v-model="content" required />
+                <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true"></div>
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Resolution</td>
               <td>
-                <FormulateInput v-model="resolution" type="textarea" />
+                <input v-model="resolution" type="textarea" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Author</td>
               <td>
-                <FormulateInput v-model="author" type="text" />
+                <input v-model="author" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Approver</td>
               <td>
-                <FormulateInput v-model="approver" type="text" />
+                <input v-model="approver" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Revision</td>
               <td>
-                <FormulateInput v-model="revision" type="number" />
+                <input v-model="revision" type="number" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Status</td>
               <td>
-                <FormulateInput v-model="status" type="select" :options="[{value: 'Draft', label: 'Draft'}, {value: 'Expired', label: 'Expired'},{value: 'In Review', label: 'In Review'},{value: 'Private', label: 'Private'},{value: 'Public', label: 'Public'}]" />
+                <input v-model="status" type="select" :options="[{value: 'Draft', label: 'Draft'}, {value: 'Expired', label: 'Expired'},{value: 'In Review', label: 'In Review'},{value: 'Private', label: 'Private'},{value: 'Public', label: 'Public'}]" />
               </td>
             </tr>
           </tbody>
@@ -75,7 +75,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

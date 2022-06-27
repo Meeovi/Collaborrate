@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Product" @click="addProduct" /></a>
+            <input type="button" class="btn btn-warning" value="Save Product" @click="addProduct" /></a>
         </div>
       </nav>
       <br>
@@ -30,7 +30,8 @@
                       <td>
                         <label for="type">Product Types</label><br>
                         <select id="productType" v-model="types" name="template" class="form-attribute">
-                          <option v-for="types in product_types" :key="types" :value="product_types">{{ types.name }}</option>
+                          <option v-for="types in product_types" :key="types" :value="product_types">{{ types.name }}
+                          </option>
                         </select>
                       </td>
                     </tr>
@@ -45,43 +46,43 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="name" type="text" required label="Product Name" />
+                        <input v-model="name" type="text" required value="Product Name" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="price" type="text" placeholder="$" label="Product Price" required />
+                        <input v-model="price" type="text" placeholder="$" value="Product Price" required />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="tax_class" name="productTax" label="Tax Class" type="text" />
+                        <input v-model="tax_class" name="productTax" value="Tax Class" type="text" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="quantity_per_source" type="number" label="Quantity" />
+                        <input v-model="quantity_per_source" type="number" value="Quantity" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="stock_status" type="text" name="stockStatus" label="Stock" />
+                        <input v-model="stock_status" type="text" name="stockStatus" value="Stock" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="height" type="text" label="Product Height" />
+                        <input v-model="height" type="text" value="Product Height" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="weight" type="text" label="Product Weight" />
+                        <input v-model="weight" type="text" value="Product Weight" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="visibility" type="select" :options="{first: 'Public', second: 'Draft'}"
-                          label="Product Visibility" />
+                        <input v-model="visibility" type="select" :options="{first: 'Public', second: 'Draft'}"
+                          value="Product Visibility" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
@@ -158,15 +159,15 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="size" type="select"
+                        <input v-model="size" type="select"
                           :options="{first: 'XS', second: 'Small', third: 'Medium', fourth: 'Large', fifth: 'XL', sixth: 'XXL', seventh: '3XL'}"
-                          label="Product Size" />
+                          value="Product Size" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="format" type="select"
-                          :options="{first: 'Downloadable', second: 'Physical'}" label="Product Format" />
+                        <input v-model="format" type="select"
+                          :options="{first: 'Downloadable', second: 'Physical'}" value="Product Format" />
                       </td>
                     </tr>
                     <tr class="col-lg-12">
@@ -185,10 +186,10 @@
               <div id="accordionExample" class="accordion">
                 <div class="accordion-item">
                   <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                       data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       Content
-                    </FormulateInput>
+                    </button>
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -200,8 +201,8 @@
                               <td style="text-align: right;">Short Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <FormulateInput v-model="short_description" type="textarea"
-                                    label="Enter a short description" validation="required|max:50,length"
+                                  <input v-model="short_description" type="textarea"
+                                    value="Enter a short description" validation="required|max:50,length"
                                     validation-name="excerpt" error-behavior="live"
                                     :help="`Keep it under 50 characters. ${50 - short_description.length} left.`" />
                                 </div>
@@ -211,7 +212,7 @@
                               <td style="text-align: right;">Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <vue-simplemde id="longDescription" v-model="content" />
+                                  <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>
                                 </div>
                               </td>
                             </tr>
@@ -223,26 +224,28 @@
                 </div>
                 <div class="accordion-item">
                   <h2 id="headingThree" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                       data-mdb-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                       Images and Videos
-                    </FormulateInput>
+                    </button>
                   </h2>
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
                       <td>
-                        <FormulateInput type="image" name="headshot" v-model="image" label="Select an image to upload"
-                          help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif" />
+                        <div class="file-upload-wrapper">
+                          <input type="file" id="input-file-now" class="file-upload-input"
+                            data-mdb-file-upload="file-upload" data-mdb-accepted-extensions="image/*" />
+                        </div>
                       </td>
                     </div>
                   </div>
                   <div class="accordion-item">
                     <h2 id="headingFour" class="accordion-header">
-                      <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                      <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         Search Engine Optimization
-                      </FormulateInput>
+                      </button>
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                       data-mdb-parent="#accordionExample">
@@ -256,23 +259,23 @@
                             </tr>
                             <tr class="col-lg-6">
                               <td>
-                                <FormulateInput v-model="meta_title" type="text" label="Meta Title" required />
+                                <input v-model="meta_title" type="text" value="Meta Title" required />
                               </td>
                             </tr>
                             <tr class="col-lg-6">
                               <td>
-                                <FormulateInput v-model="meta_keywords" type="text" label="Meta Keywords" />
+                                <input v-model="meta_keywords" type="text" value="Meta Keywords" />
                               </td>
                             </tr>
                             <tr class="col-lg-6">
                               <td>
-                                <FormulateInput type="textarea" v-model="meta_description" label="Meta Description"
+                                <input type="textarea" v-model="meta_description" value="Meta Description"
                                   rows="10" cols="50" />
                               </td>
                             </tr>
                             <tr class="col-lg-6">
                               <td>
-                                <FormulateInput v-model="meta_url" type="url" label="Meta URL" />
+                                <input v-model="meta_url" type="url" value="Meta URL" />
                               </td>
                             </tr>
                           </tbody>
@@ -282,17 +285,19 @@
                   </div>
                   <div class="accordion-item">
                     <h2 id="headingFive" class="accordion-header">
-                      <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                      <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                         Upload Product File(s)
-                      </FormulateInput>
+                      </button>
                     </h2>
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                       data-mdb-parent="#accordionExample">
                       <div class="accordion-body">
                         <td>
-                          <FormulateInput type="file" name="file" v-model="file" label="Select your files to upload"
-                            help="Select one or more files to upload" multiple />
+                          <div class="file-upload-wrapper">
+                            <input type="file" id="input-file-now" class="file-upload-input"
+                              data-mdb-file-upload="file-upload" />
+                          </div>
                         </td>
                       </div>
                     </div>
@@ -303,32 +308,32 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
     <div class="product-footer">
       <li><a href="/admin/add-new/add-new-category" target="_blank">
-          <FormulateInput type="button" label="Add New Category" /></a></li>
+          <input type="button" class="btn btn-warning" value="Add New Category" /></a></li>
       <li><a href="/admin/add-new/add-new-attribute" target="_blank">
-          <FormulateInput type="button" label="Add New Product Attribute" /></a></li>
+          <input type="button" class="btn btn-warning" value="Add New Product Attribute" /></a></li>
       <li><a href="/admin/add-new/add-new-producttype" target="_blank">
-          <FormulateInput type="button" label="Add New Product Type" /></a></li>
+          <input type="button" class="btn btn-warning" value="Add New Product Type" /></a></li>
     </div>
   </div>
 </template>
 
 <script>
-  import  gql from "graphql-tag";
+  import gql from "graphql-tag";
 
-  import  products from "~/apollo/queries/shop/products";
-  import  categories from "~/apollo/queries/shop/categories"
-  import  countries from "~/apollo/queries/shop/countries"
-  import  product_attribute from "~/apollo/queries/shop/attributes"
-  import  product_types from "~/apollo/queries/shop/product-type"
-  import  brands from "~/apollo/queries/shop/brands"
-  import  contracts from "~/apollo/queries/marketing/contracts"
-  import  occassions from "~/apollo/queries/shop/occassions"
-  import  manufacturer from "~/apollo/queries/shop/manufacturer"
-  import  tags from "~/apollo/queries/content/tags"
-  import  zones from "~/apollo/queries/system/zones"
+  import products from "~/apollo/queries/shop/products";
+  import categories from "~/apollo/queries/shop/categories"
+  import countries from "~/apollo/queries/shop/countries"
+  import product_attribute from "~/apollo/queries/shop/attributes"
+  import product_types from "~/apollo/queries/shop/product-type"
+  import brands from "~/apollo/queries/shop/brands"
+  import contracts from "~/apollo/queries/marketing/contracts"
+  import occassions from "~/apollo/queries/shop/occassions"
+  import manufacturer from "~/apollo/queries/shop/manufacturer"
+  import tags from "~/apollo/queries/content/tags"
+  import zones from "~/apollo/queries/system/zones"
 
   const ADD_PRODUCTS = gql `
     mutation ($attributes: String!, $brand: String!, $categories: String!, $content: String!, $contract: String!, $cost_string: String!, $country: String!, $created_at: String!, $customer_type: String!, $family: String!, $file: String!, $format: String!, $height: String!, $id: String!, $image: String!, $manufacture: String!, $manufacturer_part_number: String!, $occassions: String!, $name: String!, $meta_url: String!, $meta_title: String!, $meta_keywords: String!, $meta_description: String!, $part_number: String!, $price: String!, $product: String!, $quantity_per_source: String!, $related_product: String!, $salable_quantity: String!, $short_description: String!, $size: String!, $sku: String!, $status: String!, $stock_status: String!, $tags: String!, $tax_class: String!, $thumbnail: String!, $types: String!, $variants: String!, $visibility: String!, $websites: String!, $weight: String!, $zone: String!){
@@ -386,13 +391,13 @@
   export default {
     data() {
       return {
-        attributes: [ ],
-        brand: [ ],
-        categories: [ ],
+        attributes: [],
+        brand: [],
+        categories: [],
         content: " ",
-        contract: [ ],
+        contract: [],
         cost_string: " ",
-        country: [ ],
+        country: [],
         created_at: " ",
         customer_type: " ",
         family: " ",
@@ -401,9 +406,9 @@
         height: " ",
         id: " ",
         image: " ",
-        manufacture: [ ],
+        manufacture: [],
         manufacturer_part_number: " ",
-        occassions: [ ],
+        occassions: [],
         name: " ",
         meta_url: " ",
         meta_title: " ",
@@ -411,7 +416,7 @@
         meta_description: " ",
         part_number: " ",
         price: " ",
-        product: [ ],
+        product: [],
         quantity_per_source: " ",
         related_product: " ",
         salable_quantity: " ",
@@ -420,15 +425,15 @@
         sku: " ",
         status: " ",
         stock_status: " ",
-        tags: [ ],
+        tags: [],
         tax_class: " ",
         thumbnail: " ",
-        types: [ ],
+        types: [],
         variants: " ",
         visibility: " ",
         websites: " ",
         weight: " ",
-        zone: [ ],
+        zone: [],
         show: true
       }
     },
@@ -561,7 +566,9 @@
               const insertedmanufacturer = insertmanufacturer.returning;
               const insertedProducts = insertProducts.returning;
               const insertedContracts = insertContracts.returning;
-              console.log(insertedCategory, insertedCountries, insertedAttributes, insertedproduct_types, insertedBrands, insertedOccassions, insertedZones, insertedTags, insertedmanufacturer, insertedProducts, insertedContracts)
+              console.log(insertedCategory, insertedCountries, insertedAttributes, insertedproduct_types,
+                insertedBrands, insertedOccassions, insertedZones, insertedTags, insertedmanufacturer,
+                insertedProducts, insertedContracts)
               cache.writeQuery({
                 query: products
               })
@@ -625,9 +632,9 @@
         query: categories
       },
       countries: {
-          prefetch: true,
-          query: countries
-          },
+        prefetch: true,
+        query: countries
+      },
       product_attribute: {
         prefetch: true,
         query: product_attribute

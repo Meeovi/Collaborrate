@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Survey" @click="addSurvey" /></a>
+            <input type="button" class="btn btn-warning" value="Save Survey" @click="addSurvey" /></a>
         </div>
       </nav>
       <br>
@@ -29,7 +29,7 @@
                     <tr>
                       <td style="text-align: right;">Survey Name</td>
                       <td>
-                        <FormulateInput v-model="name" type="text" required />
+                        <input v-model="name" type="text" required />
                       </td>
                     </tr>
                     <tr>
@@ -44,16 +44,16 @@
                     <tr>
                       <td>
                         <div class="form-wrapper">
-                          <FormulateForm v-model="formData">
-                            <FormulateInput type="group" name="surveys" :repeatable="true"
-                              label="Questions" add-label="+ Add Question" validation="required">
+                          <form v-model="formData">
+                            <button type="group" name="surveys" :repeatable="true"
+                              value="Questions" add-value="+ Add Question" validation="required">
                               <div class="survey">
-                                <FormulateInput name="name" validation="required" label="Choice One" />
+                                <input name="name" validation="required" value="Choice One" />
                               </div>
-                            </FormulateInput>
-                            <FormulateInput type="radio" label="Select your payment method" name="payment"
+                            </button>
+                            <input type="radio" value="Select your payment method" name="payment"
                               :options="{paypal: 'PayPal', credit: 'Credit Card'}" />
-                              </FormulateForm>
+                              </form>
                         </div>
                       </td>
                     </tr>
@@ -64,7 +64,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

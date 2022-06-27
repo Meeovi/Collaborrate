@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-tag"><button type="button" class="btn btn-warning">Add New Tags</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-tag"><input type="button" class="btn btn-warning">Add New Tags</button></a>
         
 </div>
 </nav>

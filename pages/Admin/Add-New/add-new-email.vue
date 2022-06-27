@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Email" @click="addEmail" /></a>
+            <input type="button" class="btn btn-warning" value="Save Email" @click="addEmail" /></a>
         </div>
       </nav>
       <br>
@@ -29,31 +29,31 @@
             <tr>
               <td style="text-align: right;">Send Email From</td>
               <td>
-                <FormulateInput v-model="from" type="text" required />
+                <input v-model="from" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Send Email To</td>
               <td>
-                <FormulateInput v-model="cc" type="text" required></FormulateInput>
+                <input v-model="cc" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">BCC</td>
               <td>
-                <FormulateInput v-model="bcc" type="text" label="BCC is another email address you will be sending email to but won't see anyone else you are emailing"></FormulateInput>
+                <input v-model="bcc" type="text" value="BCC is another email address you will be sending email to but won't see anyone else you are emailing" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Email Subject</td>
               <td>
-                <FormulateInput v-model="subject" type="text"></FormulateInput>
+                <input v-model="subject" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Insert Media</td>
               <td>
-                  <FormulateInput v-model="media" type="file" name="file" label="Insert a file, image, video, or other content" multiple></FormulateInput>
+                  <input v-model="media" type="image" name="file" value="Insert a file, image, video, or other content" multiple />
               </td>
             </tr>
             <tr>
@@ -71,7 +71,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

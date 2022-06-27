@@ -1,12 +1,12 @@
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+        <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Opportunity" @click="addOpportunity" /></a>
+            <input type="button" class="btn btn-warning" value="Save Opportunity" @click="addOpportunity" /></a>
         </div>
       </nav>
       <br>
@@ -28,47 +28,47 @@
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Currency</td>
-                        <td><FormulateInput v-model="currency" type="text" required /></td>
+                        <td><input v-model="currency" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Opportunity Amount</td>
-                        <td><FormulateInput v-model="amount" type="text" required /></td>
+                        <td><input v-model="amount" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Sales Stage</td>
-                        <td><FormulateInput v-model="sales_stage" type="text" required /></td>
+                        <td><input v-model="sales_stage" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Probability (%)</td>
-                        <td><FormulateInput v-model="probability" type="text" required /></td>
+                        <td><input v-model="probability" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Next Step</td>
-                        <td><FormulateInput v-model="next_step" type="text" required /></td>
+                        <td><input v-model="next_step" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Description</td>
-                        <td><FormulateInput v-model="description" type="textarea" required /></td>
+                        <td><input v-model="description" type="textarea" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Expected Close Date</td>
-                        <td><FormulateInput v-model="expected_close_date" type="text" required /></td>
+                        <td><input v-model="expected_close_date" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Type</td>
-                        <td><FormulateInput v-model="type" type="text" required /></td>
+                        <td><input v-model="type" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Lead Source</td>
-                        <td><FormulateInput v-model="lead_source" type="text" required /></td>
+                        <td><input v-model="lead_source" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Campaign</td>
-                        <td><FormulateInput v-model="campaign" type="text" required /></td>
+                        <td><input v-model="campaign" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Assigned To</td>
-                        <td><FormulateInput v-model="assigned_to" type="text" required /></td>
+                        <td><input v-model="assigned_to" type="text" required /></td>
                     </tr>
                 </tbody>
             </table>
@@ -77,7 +77,7 @@
         </div>
         </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

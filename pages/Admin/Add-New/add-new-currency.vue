@@ -1,10 +1,10 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit="addCurrency">
+    <form method="POST" enctype="multipart/form-data" @submit="addCurrency">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><FormulateInput type="reset" class="btn btn-warning" label="Reset" /></a>
-          <a class="navbar-brand"><FormulateInput type="button" label="Save Currency" @click="addCurrency" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="button" class="btn btn-warning" value="Save Currency" @click="addCurrency" /></a>
         </div>
       </nav>
       <br>
@@ -26,15 +26,15 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Code</td>
-                      <td><FormulateInput v-model="code" type="text" label="Example is AUD for Australia" required /></td>
+                      <td><input v-model="code" type="text" value="Example is AUD for Australia" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Name</td>
-                      <td><FormulateInput v-model="name" type="text" label="Example is Australian Dollar" required /></td>
+                      <td><input v-model="name" type="text" value="Example is Australian Dollar" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Region</td>
-                      <td><FormulateInput v-model="region" type="text" label="What is the country of this currency?" /></td>
+                      <td><input v-model="region" type="text" value="What is the country of this currency?" /></td>
                     </tr>
                   </tbody>
                 </table>
@@ -43,7 +43,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

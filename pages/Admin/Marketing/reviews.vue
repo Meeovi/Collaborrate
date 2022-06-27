@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-review"><button type="button" class="btn btn-warning">Create A Review</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-review"><input type="button" class="btn btn-warning">Create A Review</button></a>
         
 </div>
 </nav>

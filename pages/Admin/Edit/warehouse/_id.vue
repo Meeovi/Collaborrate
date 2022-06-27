@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FormulateForm v-for="warehouse in warehouses" :key="warehouse.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="warehouse in warehouses" :key="warehouse.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>
@@ -9,7 +9,7 @@
               </th>
               <th scope="col" class="warehouseAddOptions">
                 <li>
-                  <FormulateInput type="submit" label="Save" @click="addWAREHOUSE" />
+                  <input type="submit" value="Save" @click="addWAREHOUSE" />
                 </li>
               </th>
             </tr>
@@ -18,74 +18,74 @@
             <tr>
               <td style="text-align: right;">Status</td>
               <td>
-                <FormulateInput v-model="status" type="checkbox" />{{ warehouse.status }}
+                <input v-model="status" type="checkbox" />{{ warehouse.status }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Warehouse Name</td>
               <td>
-                <FormulateInput v-model="name" type="text" required />{{ warehouse.name }}
+                <input v-model="name" type="text" required />{{ warehouse.name }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
               <td>
-                <FormulateInput v-model="description" type="text" />{{ warehouse.description }}
+                <input v-model="description" type="text" />{{ warehouse.description }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Category</td>
               <td>
-                <FormulateInput v-model="category" type="textarea" />{{ warehouse.category }}
+                <input v-model="category" type="textarea" />{{ warehouse.category }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">City</td>
               <td>
-                <FormulateInput v-model="city" type="text" placeholder="#" required />{{ warehouse.city }}
+                <input v-model="city" type="text" placeholder="#" required />{{ warehouse.city }}
               </td>
             </tr>
             
             <tr>
               <td style="text-align: right;">State</td>
               <td>
-                <FormulateInput v-model="state" type="text" />{{ warehouse.state }}
+                <input v-model="state" type="text" />{{ warehouse.state }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Country</td>
               <td>
-                <FormulateInput v-model="country" type="text" />{{ warehouse.country }}
+                <input v-model="country" type="text" />{{ warehouse.country }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Postal Code</td>
               <td>
-                <FormulateInput v-model="postal" type="text" />{{ warehouse.postal }}
+                <input v-model="postal" type="text" />{{ warehouse.postal }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Products</td>
               <td>
-                <FormulateInput v-model="products" type="text" />{{ warehouse.products }}
+                <input v-model="products" type="text" />{{ warehouse.products }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Image</td>
               <td>
-                <FormulateInput v-model="image" type="text" />{{ warehouse.image }}
+                <input v-model="image" type="text" />{{ warehouse.image }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Public</td>
               <td>
-                <FormulateInput v-model="isPublic" type="checkbox" />{{ warehouse.isPublic }}
+                <input v-model="isPublic" type="checkbox" />{{ warehouse.isPublic }}
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

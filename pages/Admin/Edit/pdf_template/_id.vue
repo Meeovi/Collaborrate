@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FormulateForm v-for="pdf_template in pdf_templates" :key="pdf_template.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="pdf_template in pdf_templates" :key="pdf_template.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>
@@ -9,7 +9,7 @@
               </th>
               <th scope="col" class="pdf_templateAddOptions">
                 <li>
-                  <FormulateInput type="submit" label="Save" @click="addPDF_TEMPLATE" />
+                  <input type="submit" value="Save" @click="addPDF_TEMPLATE" />
                 </li>
               </th>
             </tr>
@@ -18,98 +18,98 @@
             <tr>
               <td style="text-align: right;">Active</td>
               <td>
-                <FormulateInput v-model="active" type="checkbox" />{{ pdf_template.active }}
+                <input v-model="active" type="checkbox" />{{ pdf_template.active }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Template Name</td>
               <td>
-                <FormulateInput v-model="name" type="text" required />{{ pdf_template.name }}
+                <input v-model="name" type="text" required />{{ pdf_template.name }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Orientation</td>
               <td>
-                <FormulateInput v-model="orientation" type="text" />{{ pdf_template.orientation }}
+                <input v-model="orientation" type="text" />{{ pdf_template.orientation }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
               <td>
-                <FormulateInput v-model="content" type="textarea" />{{ pdf_template.description }}
+                <input v-model="content" type="textarea" />{{ pdf_template.description }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Header</td>
               <td>
-                <FormulateInput v-model="header" type="text" placeholder="#" required />{{ pdf_template.header }}
+                <input v-model="header" type="text" placeholder="#" required />{{ pdf_template.header }}
               </td>
             </tr>
             
             <tr>
               <td style="text-align: right;">Footer</td>
               <td>
-                <FormulateInput v-model="footer" type="text" />{{ pdf_template.footer }}
+                <input v-model="footer" type="text" />{{ pdf_template.footer }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Page Size</td>
               <td>
-                <FormulateInput v-model="page_size" type="text" />{{ pdf_template.page_size }}
+                <input v-model="page_size" type="text" />{{ pdf_template.page_size }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Height</td>
               <td>
-                <FormulateInput v-model="height" type="text" />{{ pdf_template.height }}
+                <input v-model="height" type="text" />{{ pdf_template.height }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Type</td>
               <td>
-                <FormulateInput v-model="type" type="text" />{{ pdf_template.type }}
+                <input v-model="type" type="text" />{{ pdf_template.type }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Margin Header</td>
               <td>
-                <FormulateInput v-model="margin_header" type="text" />{{ pdf_template.margin_header }}
+                <input v-model="margin_header" type="text" />{{ pdf_template.margin_header }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Margin Bottom</td>
               <td>
-                <FormulateInput v-model="margin_bottom" type="text" />{{ pdf_template.margin_bottom }}
+                <input v-model="margin_bottom" type="text" />{{ pdf_template.margin_bottom }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Margin Left</td>
               <td>
-                <FormulateInput v-model="margin_left" type="text" />{{ pdf_template.margin_left }}
+                <input v-model="margin_left" type="text" />{{ pdf_template.margin_left }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Margin Right</td>
               <td>
-                <FormulateInput v-model="margin_right" type="text" />{{ pdf_template.margin_right }}
+                <input v-model="margin_right" type="text" />{{ pdf_template.margin_right }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Margin Top</td>
               <td>
-                <FormulateInput v-model="margin_top" type="text" />{{ pdf_template.margin_top }}
+                <input v-model="margin_top" type="text" />{{ pdf_template.margin_top }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Assigned To</td>
               <td>
-                <FormulateInput v-model="assigned_to" type="text" />{{ pdf_template.assigned_to }}
+                <input v-model="assigned_to" type="text" />{{ pdf_template.assigned_to }}
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

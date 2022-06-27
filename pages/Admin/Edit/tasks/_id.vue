@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data"  @submit.prevent>
+        <form method="POST" enctype="multipart/form-data"  @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,51 +8,51 @@
                         <th>
                         </th>
                         <th scope="col" class="taskAddOptions">
-                            <li><FormulateInput type="submit" label="Save" @click="addTask" /></li>
+                            <li><input type="submit" value="Save" @click="addTask" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Subject</td>
-                        <td><FormulateInput v-model="subject" type="text" required />{{ tasks.subject }}</td>
+                        <td><input v-model="subject" type="text" required />{{ tasks.subject }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Start Date</td>
-                        <td><FormulateInput v-model="start_date" type="text" />{{ tasks.start_date }}</td>
+                        <td><input v-model="start_date" type="text" />{{ tasks.start_date }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">End Date</td>
-                        <td><FormulateInput v-model="due_date" type="text" />{{ tasks.due_date }}</td>
+                        <td><input v-model="due_date" type="text" />{{ tasks.due_date }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Priority</td>
-                        <td><FormulateInput v-model="priority" type="text" />{{ tasks.priority }}</td>
+                        <td><input v-model="priority" type="text" />{{ tasks.priority }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Status</td>
-                        <td><FormulateInput v-model="status" type="text" />{{ tasks.status }}</td>
+                        <td><input v-model="status" type="text" />{{ tasks.status }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Related To</td>
-                        <td><FormulateInput v-model="related_to" type="text" />{{ tasks.related_to }}</td>
+                        <td><input v-model="related_to" type="text" />{{ tasks.related_to }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Contact</td>
-                        <td><FormulateInput v-model="contact" type="text" />{{ tasks.contact }}</td>
+                        <td><input v-model="contact" type="text" />{{ tasks.contact }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Description</td>
-                        <td><FormulateInput v-model="description" type="textarea" />{{ tasks.description }}</td>
+                        <td><input v-model="description" type="textarea" />{{ tasks.description }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Assigned To</td>
-                        <td><FormulateInput v-model="assigned_to" type="textarea" />{{ tasks.assigned_to }}</td>
+                        <td><input v-model="assigned_to" type="textarea" />{{ tasks.assigned_to }}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

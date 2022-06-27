@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Meeting" @click="addMeeting" /></a>
+            <input type="button" class="btn btn-warning" value="Save Meeting" @click="addMeeting" /></a>
         </div>
       </nav>
       <br>
@@ -29,64 +29,64 @@
             <tr>
               <td style="text-align: right;">Subject</td>
               <td>
-                <FormulateInput v-model="subject" type="text" required />
+                <input v-model="subject" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Start Date</td>
               <td>
-                <FormulateInput v-model="start_date" type="text" />
+                <input v-model="start_date" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">End Date</td>
               <td>
-                <FormulateInput v-model="end_date" type="text" />
+                <input v-model="end_date" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Duration</td>
               <td>
-                <FormulateInput v-model="duration" type="datetime-local" />
+                <input v-model="duration" type="datetime-local" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Status</td>
               <td>
-                <FormulateInput v-model="status" type="text" />
+                <input v-model="status" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Related To</td>
               <td>
-                <FormulateInput v-model="related_to" type="text" />
+                <input v-model="related_to" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Reminders</td>
               <td>
                 <div class="form-wrapper">
-                  <FormulateForm>
-                    <FormulateInput type="group" name="reminders" :repeatable="true" label="Add Reminders"
-                      add-label="+ Add Reminder">
+                  <form>
+                    <button type="group" name="reminders" :repeatable="true" value="Add Reminders"
+                      add-value="+ Add Reminder">
                       <div class="reminder">
-                        <FormulateInput v-model="reminders" name="name" type="text" label="Reminder" />
+                        <input v-model="reminders" name="name" type="text" value="Reminder" />
                       </div>
-                    </FormulateInput>
-                  </FormulateForm>
+                    </button>
+                  </form>
                 </div>
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
               <td>
-                <FormulateInput v-model="content" type="textarea" />
+                <input v-model="content" type="textarea" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Assigned To</td>
               <td>
-                <FormulateInput v-model="assigned_to" type="textarea" />
+                <input v-model="assigned_to" type="textarea" />
               </td>
             </tr>
           </tbody>
@@ -96,7 +96,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

@@ -3,7 +3,7 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand">
-          <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">Add New Media</button>
+          <input type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">Add New Media</button>
         </a>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -22,7 +22,7 @@
         </thead>
         <tbody v-for="mediamanager in mediamanager" :key="mediamanager">
           <tr>
-            <td><button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#mediaModal">
+            <td><input type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#mediaModal">
             {{ mediamanager.media }}</button></td>
           </tr>
         </tbody>

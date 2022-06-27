@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="partner in partners" :key="partner.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
+        <form v-for="partner in partners" :key="partner.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,43 +8,43 @@
                         <th>
                         </th>
                         <th scope="col" class="staffMemberAddOptions">
-                            <li><FormulateInput type="submit" label="Save" @click="addPartner" /></li>
+                            <li><input type="submit" value="Save" @click="addPartner" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Partner Name</td>
-                        <td><FormulateInput v-model="name" type="text" required />{{ partner.name }}</td>
+                        <td><input v-model="name" type="text" required />{{ partner.name }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Address</td>
-                        <td><FormulateInput v-model="address" type="text" name="tax" />{{ partner.address }}</td>
+                        <td><input v-model="address" type="text" name="tax" />{{ partner.address }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">City</td>
-                        <td><FormulateInput v-model="city" type="text" required />{{ partner.city }}</td>
+                        <td><input v-model="city" type="text" required />{{ partner.city }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">State</td>
-                        <td><FormulateInput v-model="state" type="text" name="tax" />{{ partner.state }}</td>
+                        <td><input v-model="state" type="text" name="tax" />{{ partner.state }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Country</td>
-                        <td><FormulateInput v-model="country" type="text" name="tax" />{{ partner.country }}</td>
+                        <td><input v-model="country" type="text" name="tax" />{{ partner.country }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Business Type</td>
-                        <td><FormulateInput v-model="buiness_type" type="text" name="tax" />{{ partner.business_type }}</td>
+                        <td><input v-model="buiness_type" type="text" name="tax" />{{ partner.business_type }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Is the Partner Public?</td>
-                        <td><FormulateInput v-model="isPublic" type="checkbox" label="Check the box if the partner is public" />{{ partner.isPublic }}</td>
+                        <td><input v-model="isPublic" type="checkbox" value="Check the box if the partner is public" />{{ partner.isPublic }}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

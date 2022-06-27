@@ -1,12 +1,12 @@
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+        <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Taxrate" @click="addTaxrate" /></a>
+            <input type="button" class="btn btn-warning" value="Save Taxrate" @click="addTaxrate" /></a>
         </div>
       </nav>
       <br>
@@ -28,27 +28,27 @@
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Country</td>
-                        <td><FormulateInput id="taxRateName" v-model="country" type="text" required /></td>
+                        <td><input id="taxRateName" v-model="country" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">State</td>
-                        <td><FormulateInput id="taxRateName" v-model="state" type="text" /></td>
+                        <td><input id="taxRateName" v-model="state" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Zip/Postalcode</td>
-                        <td><FormulateInput id="taxRateName" v-model="postcode" type="text" /></td>
+                        <td><input id="taxRateName" v-model="postcode" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Rate Percent</td>
-                        <td><FormulateInput id="taxRateName" v-model="rate_percent" type="text" required /></td>
+                        <td><input id="taxRateName" v-model="rate_percent" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Tax Identifier</td>
-                        <td><FormulateInput id="taxRateName" v-model="tax_identifier" type="text" required /></td>
+                        <td><input id="taxRateName" v-model="tax_identifier" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Zip/Postcode is Range</td>
-                        <td><FormulateInput id="taxRateName" v-model="zip_post_is_range" type="text" required /></td>
+                        <td><input id="taxRateName" v-model="zip_post_is_range" type="text" required /></td>
                     </tr>
                 </tbody>
             </table>
@@ -57,7 +57,7 @@
         </div>
         </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

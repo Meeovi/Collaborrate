@@ -1,12 +1,12 @@
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+        <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Role" @click="addRole" /></a>
+            <input type="button" class="btn btn-warning" value="Save Role" @click="addRole" /></a>
         </div>
       </nav>
       <br>
@@ -28,7 +28,7 @@
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Role Name</td>
-                        <td><FormulateInput v-model="role_name" type="text" required /></td>
+                        <td><input v-model="role_name" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Description</td>
@@ -41,7 +41,7 @@
         </div>
         </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

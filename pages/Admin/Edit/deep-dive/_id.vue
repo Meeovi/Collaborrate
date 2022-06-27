@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FormulateForm v-for="deepdive in deepdives" :key="deepdive.id" method="POST" @submit.prevent enctype="multipart/form-data">
+    <form v-for="deepdive in deepdives" :key="deepdive.id" method="POST" @submit.prevent enctype="multipart/form-data">
       <div class="table table-responsive">
         <table class="table">
           <thead>
@@ -9,7 +9,7 @@
               </th>
               <th scope="col" class="deepdiveAddOptions">
                 <li>
-                  <FormulateInput type="submit" label="Save" @click="addDeepdive" />
+                  <input type="submit" value="Save" @click="addDeepdive" />
                 </li>
               </th>
             </tr>
@@ -18,25 +18,25 @@
             <tr>
               <td style="text-align: right;">Login</td>
               <td>
-                <FormulateInput v-model="login" type="text" required />{{ deepdive.login }}
+                <input v-model="login" type="text" required />{{ deepdive.login }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Start Date</td>
               <td>
-                <FormulateInput v-model="start_date" type="text" required />{{ deepdive.start_date }}
+                <input v-model="start_date" type="text" required />{{ deepdive.start_date }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">End Date</td>
               <td>
-                <FormulateInput v-model="end_date" type="text" />{{ deepdive.end_date }}
+                <input v-model="end_date" type="text" />{{ deepdive.end_date }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Attendees</td>
               <td>
-                <FormulateInput v-model="attendees" type="text"/>{{ deepdive.attendees }}
+                <input v-model="attendees" type="text"/>{{ deepdive.attendees }}
               </td>
             </tr>
             <tr>
@@ -44,7 +44,7 @@
               <td>
                 <div class="form-check form-switch">
                   <client-only>
-                   <vue-simplemde id="longDescription" v-model="content" />{{ deepdive.content }}
+                   <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>{{ deepdive.content }}
                   </client-only>
                 </div>
               </td>
@@ -52,7 +52,7 @@
           </tbody>
         </table>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

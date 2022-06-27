@@ -1,10 +1,10 @@
 <template>
   <div>
-    <FormulateForm v-for="certificates in gift_certificates" :key="certificates.id"  method="POST" @submit.prevent>
+    <form v-for="certificates in gift_certificates" :key="certificates.id"  method="POST" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><FormulateInput type="reset" class="btn btn-warning" label="Reset" /></a>
-          <a class="navbar-brand"><FormulateInput type="button" @click="addGift_Certificate" label="Save Gift_Certificate" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="button" class="btn btn-warning" @click="addGift_Certificate" value="Save Gift_Certificate" /></a>
         </div>
       </nav>
       <br>
@@ -25,25 +25,25 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Gift Name</td>
-                      <td><FormulateInput type="text" required />{{ certificates.name }}</td>
+                      <td><input type="text" required />{{ certificates.name }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Discount</td>
-                      <td><FormulateInput type="text" required />{{ certificates.discount }}</td>
+                      <td><input type="text" required />{{ certificates.discount }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Expiration</td>
-                      <td><FormulateInput id="expiration" name="expiration" type="text" />{{ certificates.expiration }}
+                      <td><input id="expiration" name="expiration" type="text" />{{ certificates.expiration }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Gift Type</td>
-                      <td><FormulateInput id="expiration" name="expiration" type="text" label="Gift Card or Gift Certificate" />{{ certificates.type }}
+                      <td><input id="expiration" name="expiration" type="text" value="Gift Card or Gift Certificate" />{{ certificates.type }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
-                      <td><FormulateInput id="reviewDescription" type="textarea" label="Enter information about this gift" validation="required|max:50,length" :help="`Keep it under 50 characters. ${50 - excerpt.length} left.`" />{{ certificates.excerpt }}
+                      <td><input id="reviewDescription" type="textarea" value="Enter information about this gift" validation="required|max:50,length" :help="`Keep it under 50 characters. ${50 - excerpt.length} left.`" />{{ certificates.excerpt }}
                       </td>
                     </tr>
                   </tbody>
@@ -53,7 +53,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

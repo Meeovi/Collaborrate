@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand"><button type="button" class="btn btn-warning">Create New Order</button></a>
+        <a class="navbar-brand"><input type="button" class="btn btn-warning">Create New Order</button></a>
         
       </div>
     </nav>

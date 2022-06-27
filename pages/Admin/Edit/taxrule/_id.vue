@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="tax_rule in tax_rules" :key="tax_rule.id" method="POST" @submit.prevent>
+        <form v-for="tax_rule in tax_rules" :key="tax_rule.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,23 +8,23 @@
                         <th scope="col">
                         </th>
                         <th scope="col" class="taxRuleAddOptions">
-                            <li><FormulateInput type="submit" @click="addTaxRule" label="Save" /></li>
+                            <li><input type="submit" @click="addTaxRule" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Tax Rule Name</td>
-                        <td><FormulateInput id="taxRuleName" type="text" required />{{ tax_rule.name }}</td>
+                        <td><input id="taxRuleName" type="text" required />{{ tax_rule.name }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Tax Rate</td>
-                        <td><FormulateInput id="taxRate" type="text" required />{{ tax_rule.tax_rate }}</td>
+                        <td><input id="taxRate" type="text" required />{{ tax_rule.tax_rate }}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

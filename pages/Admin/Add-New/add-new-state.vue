@@ -1,12 +1,12 @@
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+        <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save State" @click="addState" /></a>
+            <input type="button" class="btn btn-warning" value="Save State" @click="addState" /></a>
         </div>
       </nav>
       <br>
@@ -30,18 +30,18 @@
                         <th>
                         </th>
                         <th scope="col" class="statesAddOptions">
-                            <li><FormulateInput type="submit" @click="addState" label="Save" /></li>
+                            <li><input type="submit" @click="addState" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">State Name</td>
-                        <td><FormulateInput id="statesName" v-model="name" type="statesName" required /></td>
+                        <td><input id="statesName" v-model="name" type="statesName" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">State Country</td>
-                        <td><FormulateInput id="statesCountry" v-model="country" type="statesCountry" required /></td>
+                        <td><input id="statesCountry" v-model="country" type="statesCountry" required /></td>
                     </tr>
                 </tbody>
             </table>
@@ -50,10 +50,10 @@
         <div id="accordionExample" class="accordion">
             <div class="accordion-item">
                 <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Content
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -65,7 +65,7 @@
                                         <td style="text-align: right;">Description</td>
                                         <td>
                                             <div class="form-check form-switch">
-                                                <FormulateInput
+                                                <input
   type="textarea" id="tagDesc" v-model="description" name="tagDesc" cols="80" rows="10" />
                                             </div>
                                         </td>
@@ -81,7 +81,7 @@
         </div>
         </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-coupon"><button type="button" class="btn btn-warning">Create New Coupons</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-coupon"><input type="button" class="btn btn-warning">Create New Coupons</button></a>
         
       </div>
     </nav>

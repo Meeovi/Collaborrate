@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="cases in cases" :key="cases.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
+        <form v-for="cases in cases" :key="cases.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,51 +8,51 @@
                         <th>
                         </th>
                         <th scope="col" class="caseAddOptions">
-                            <li><FormulateInput type="submit" label="Save" @click="addCase" /></li>
+                            <li><input type="submit" value="Save" @click="addCase" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">State</td>
-                        <td><FormulateInput v-model="state" type="text"  />{{ cases.state }}</td>
+                        <td><input v-model="state" type="text"  />{{ cases.state }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Type</td>
-                        <td><FormulateInput v-model="type" type="text"  />{{ cases.type }}</td>
+                        <td><input v-model="type" type="text"  />{{ cases.type }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Subject</td>
-                        <td><FormulateInput v-model="subject" type="text"  />{{ cases.subject }}</td>
+                        <td><input v-model="subject" type="text"  />{{ cases.subject }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Description</td>
-                        <td><FormulateInput v-model="description" type="textarea"  />{{ cases.description }}</td>
+                        <td><input v-model="description" type="textarea"  />{{ cases.description }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Resolution</td>
-                        <td><FormulateInput v-model="resolution" type="textarea"  />{{ cases.resolution }}</td>
+                        <td><input v-model="resolution" type="textarea"  />{{ cases.resolution }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Assigned To</td>
-                        <td><FormulateInput v-model="assigned_to" type="text"  />{{ cases.assigned_to }}</td>
+                        <td><input v-model="assigned_to" type="text"  />{{ cases.assigned_to }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Priority</td>
-                        <td><FormulateInput v-model="priority" type="text"  />{{ cases.priority }}</td>
+                        <td><input v-model="priority" type="text"  />{{ cases.priority }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Status</td>
-                        <td><FormulateInput v-model="status" type="text"  />{{ cases.status }}</td>
+                        <td><input v-model="status" type="text"  />{{ cases.status }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Account Name</td>
-                        <td><FormulateInput v-model="account_name" type="text"  />{{ cases.account_name }}</td>
+                        <td><input v-model="account_name" type="text"  />{{ cases.account_name }}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        </FormulateForm>
+        </form>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="customer_group in customer_groups" :key="customer_group.id" method="POST" @submit.prevent>
+        <form v-for="customer_group in customer_groups" :key="customer_group.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,23 +8,23 @@
                         <th>
                         </th>
                         <th scope="col" class="customerCustomer_groupAddOptions">
-                            <li><FormulateInput type="submit" @click="addCustomer_group" label="Save" /></li>
+                            <li><input type="submit" @click="addCustomer_group" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Customer Group Name</td>
-                        <td><FormulateInput type="text" required />{{ customer_group.name }}</td>
+                        <td><input type="text" required />{{ customer_group.name }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Tax Class</td>
-                        <td><FormulateInput type="text" name="tax" />{{ customer_group.name }}</td>
+                        <td><input type="text" name="tax" />{{ customer_group.name }}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

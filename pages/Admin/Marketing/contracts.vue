@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-contract"><button type="button" class="btn btn-warning">Add New Contract</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-contract"><input type="button" class="btn btn-warning">Add New Contract</button></a>
         
       </div>
     </nav>

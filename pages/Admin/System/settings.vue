@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand"><button type="button" class="btn btn-warning">Save Settings</button></a>
+        <a class="navbar-brand"><input type="button" class="btn btn-warning">Save Settings</button></a>
         
       </div>
     </nav>
@@ -36,10 +36,10 @@
             <div id="accordionFlushExample" class="accordion accordion-flush">
               <div class="accordion-item">
                 <h2 id="flush-headingOne" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     Accordion Item #1
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                   data-mdb-parent="#accordionFlushExample">
@@ -57,10 +57,10 @@
               </div>
               <div class="accordion-item">
                 <h2 id="flush-headingTwo" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                     Accordion Item #2
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                   data-mdb-parent="#accordionFlushExample">
@@ -78,10 +78,10 @@
               </div>
               <div class="accordion-item">
                 <h2 id="flush-headingThree" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                     Accordion Item #3
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                   data-mdb-parent="#accordionFlushExample">
@@ -103,10 +103,10 @@
             <div id="accordionFlushExample" class="accordion accordion-flush">
               <div class="accordion-item">
                 <h2 id="flush-headingOne" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     Accordion Item #1
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                   data-mdb-parent="#accordionFlushExample">
@@ -124,10 +124,10 @@
               </div>
               <div class="accordion-item">
                 <h2 id="flush-headingTwo" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                     Accordion Item #2
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                   data-mdb-parent="#accordionFlushExample">
@@ -145,10 +145,10 @@
               </div>
               <div class="accordion-item">
                 <h2 id="flush-headingThree" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                     Accordion Item #3
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                   data-mdb-parent="#accordionFlushExample">
@@ -170,10 +170,10 @@
             <div id="accordionFlushExample" class="accordion accordion-flush">
               <div class="accordion-item">
                 <h2 id="flush-headingOne" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     Accordion Item #1
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                   data-mdb-parent="#accordionFlushExample">
@@ -191,10 +191,10 @@
               </div>
               <div class="accordion-item">
                 <h2 id="flush-headingTwo" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                     Accordion Item #2
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                   data-mdb-parent="#accordionFlushExample">
@@ -212,10 +212,10 @@
               </div>
               <div class="accordion-item">
                 <h2 id="flush-headingThree" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                     Accordion Item #3
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                   data-mdb-parent="#accordionFlushExample">
@@ -237,10 +237,10 @@
             <div id="accordionFlushExample" class="accordion accordion-flush">
               <div class="accordion-item">
                 <h2 id="flush-headingOne" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     Accordion Item #1
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                   data-mdb-parent="#accordionFlushExample">
@@ -258,10 +258,10 @@
               </div>
               <div class="accordion-item">
                 <h2 id="flush-headingTwo" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                     Accordion Item #2
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                   data-mdb-parent="#accordionFlushExample">
@@ -279,10 +279,10 @@
               </div>
               <div class="accordion-item">
                 <h2 id="flush-headingThree" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                     Accordion Item #3
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                   data-mdb-parent="#accordionFlushExample">
@@ -304,10 +304,10 @@
             <div id="accordionFlushExample" class="accordion accordion-flush">
               <div class="accordion-item">
                 <h2 id="flush-headingOne" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     Accordion Item #1
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                   data-mdb-parent="#accordionFlushExample">
@@ -325,10 +325,10 @@
               </div>
               <div class="accordion-item">
                 <h2 id="flush-headingTwo" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                     Accordion Item #2
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                   data-mdb-parent="#accordionFlushExample">
@@ -346,10 +346,10 @@
               </div>
               <div class="accordion-item">
                 <h2 id="flush-headingThree" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                     Accordion Item #3
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                   data-mdb-parent="#accordionFlushExample">
@@ -371,10 +371,10 @@
             <div id="accordionFlushExample" class="accordion accordion-flush">
               <div class="accordion-item">
                 <h2 id="flush-headingOne" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     Accordion Item #1
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                   data-mdb-parent="#accordionFlushExample">
@@ -392,10 +392,10 @@
               </div>
               <div class="accordion-item">
                 <h2 id="flush-headingTwo" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                     Accordion Item #2
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                   data-mdb-parent="#accordionFlushExample">
@@ -413,10 +413,10 @@
               </div>
               <div class="accordion-item">
                 <h2 id="flush-headingThree" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                     Accordion Item #3
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                   data-mdb-parent="#accordionFlushExample">
@@ -438,10 +438,10 @@
             <div id="accordionFlushExample" class="accordion accordion-flush">
               <div class="accordion-item">
                 <h2 id="flush-headingOne" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     Accordion Item #1
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                   data-mdb-parent="#accordionFlushExample">
@@ -459,10 +459,10 @@
               </div>
               <div class="accordion-item">
                 <h2 id="flush-headingTwo" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                     Accordion Item #2
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                   data-mdb-parent="#accordionFlushExample">
@@ -480,10 +480,10 @@
               </div>
               <div class="accordion-item">
                 <h2 id="flush-headingThree" class="accordion-header">
-                  <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                  <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                     Accordion Item #3
-                  </FormulateInput>
+                  </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                   data-mdb-parent="#accordionFlushExample">

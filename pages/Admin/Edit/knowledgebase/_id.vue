@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FormulateForm v-for="knowledgebase in knowledgebases" :key="knowledgebase.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
+    <form v-for="knowledgebase in knowledgebases" :key="knowledgebase.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
       <div class="table table-responsive">
         <table class="table" >
           <thead>
@@ -9,7 +9,7 @@
               </th>
               <th scope="col" class="knowledgebaseAddOptions">
                 <li>
-                  <FormulateInput type="submit" label="Save" @click="addKnowledgebase" />
+                  <input type="submit" value="Save" @click="addKnowledgebase" />
                 </li>
               </th>
             </tr>
@@ -18,7 +18,7 @@
             <tr>
               <td style="text-align: right;">Knowledgebase Name</td>
               <td>
-                <FormulateInput v-model="name" type="text" required />{{ knowledgebase.name }}
+                <input v-model="name" type="text" required />{{ knowledgebase.name }}
               </td>
             </tr>
             <tr>
@@ -30,37 +30,37 @@
             <tr>
               <td style="text-align: right;">Resolution</td>
               <td>
-                <FormulateInput v-model="resolution" type="textarea" />{{ knowledgebase.resolution }}
+                <input v-model="resolution" type="textarea" />{{ knowledgebase.resolution }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Author</td>
               <td>
-                <FormulateInput v-model="author" type="text" />{{ knowledgebase.author }}
+                <input v-model="author" type="text" />{{ knowledgebase.author }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Approver</td>
               <td>
-                <FormulateInput v-model="approver" type="text" />{{ knowledgebase.approver }}
+                <input v-model="approver" type="text" />{{ knowledgebase.approver }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Revision</td>
               <td>
-                <FormulateInput v-model="revision" type="text" />{{ knowledgebase.revision }}
+                <input v-model="revision" type="text" />{{ knowledgebase.revision }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Status</td>
               <td>
-                <FormulateInput v-model="status" type="text" /> {{ knowledgebase.status }}
+                <input v-model="status" type="text" /> {{ knowledgebase.status }}
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

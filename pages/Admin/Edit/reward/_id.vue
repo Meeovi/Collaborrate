@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FormulateForm v-for="reward in rewards" :key="reward.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
+    <form v-for="reward in rewards" :key="reward.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
       <div class="table table-responsive">
         <table class="table" >
           <thead>
@@ -9,7 +9,7 @@
               </th>
               <th scope="col" class="rewardAddOptions">
                 <li>
-                  <FormulateInput type="submit" label="Save" @click="addReward" />
+                  <input type="submit" value="Save" @click="addReward" />
                 </li>
               </th>
             </tr>
@@ -18,61 +18,61 @@
             <tr>
               <td style="text-align: right;">Expiration</td>
               <td>
-                <FormulateInput v-model="expiration" type="datetime-local" />{{ reward.expiration }}
+                <input v-model="expiration" type="datetime-local" />{{ reward.expiration }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Reward Name</td>
               <td>
-                <FormulateInput v-model="name" type="text" required />{{ reward.name }}
+                <input v-model="name" type="text" required />{{ reward.name }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Customers</td>
               <td>
-                <FormulateInput v-model="customers" type="text" placeholder="#" />{{ reward.customers }}
+                <input v-model="customers" type="text" placeholder="#" />{{ reward.customers }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Products</td>
               <td>
-                <FormulateInput v-model="products" type="text" />{{ reward.products }}
+                <input v-model="products" type="text" />{{ reward.products }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Coupons</td>
               <td>
-                <FormulateInput v-model="coupons" type="text" />{{ reward.coupons }}
+                <input v-model="coupons" type="text" />{{ reward.coupons }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Users</td>
               <td>
-                <FormulateInput v-model="users" type="text" />{{ reward.users }}
+                <input v-model="users" type="text" />{{ reward.users }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Category</td>
               <td>
-                <FormulateInput v-model="categories" type="text" />{{ reward.categories }}
+                <input v-model="categories" type="text" />{{ reward.categories }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Level</td>
               <td>
-                <FormulateInput v-model="level" type="text" />{{ reward.level }}
+                <input v-model="level" type="text" />{{ reward.level }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Articles</td>
               <td>
-                <FormulateInput v-model="articles" type="text" />{{ reward.articles }}
+                <input v-model="articles" type="text" />{{ reward.articles }}
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

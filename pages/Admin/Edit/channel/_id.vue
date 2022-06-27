@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="channel in channels" :key="channel.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
+        <form v-for="channel in channels" :key="channel.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,38 +8,38 @@
                         <th>
                         </th>
                         <th scope="col" class="caseAddOptions">
-                            <li><FormulateInput type="submit" label="Save" @click="addChannel" /></li>
+                            <li><input type="submit" value="Save" @click="addChannel" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Code</td>
-                        <td><FormulateInput v-model="code" type="text" label="Example is FASHION_WEB"  /></td>
+                        <td><input v-model="code" type="text" value="Example is FASHION_WEB"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Channel Name</td>
-                        <td><FormulateInput v-model="name" type="text" label="Example is eBay, Fashion Web Store, etc" /></td>
+                        <td><input v-model="name" type="text" value="Example is eBay, Fashion Web Store, etc" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Client ID</td>
-                        <td><FormulateInput v-model="client_id" type="password"  /></td>
+                        <td><input v-model="client_id" type="password"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Client Secret</td>
-                        <td><FormulateInput v-model="client_secret" type="password"  /></td>
+                        <td><input v-model="client_secret" type="password"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Default Channel</td>
-                        <td><FormulateInput v-model="default_zone" type="text"  /></td>
+                        <td><input v-model="default_zone" type="text"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Default Shipping</td>
-                        <td><FormulateInput v-model="default_shipping" type="text"  /></td>
+                        <td><input v-model="default_shipping" type="text"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Default Language</td>
-                        <td><FormulateInput v-model="default_lang" type="text"  /></td>
+                        <td><input v-model="default_lang" type="text"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Currency</td>
@@ -49,12 +49,12 @@
                     </tr>
                     <tr>
                         <td style="text-align: right;">Include Tax</td>
-                        <td><FormulateInput v-model="include_tax" type="checkbox"  /></td>
+                        <td><input v-model="include_tax" type="checkbox"  /></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        </FormulateForm>
+        </form>
     </div>
 </template>
 

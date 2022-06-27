@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="tag in tags" :key="tag.id" method="POST" @submit.prevent>
+        <form v-for="tag in tags" :key="tag.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,14 +8,14 @@
                         <th>
                         </th>
                         <th scope="col" class="tagsAddOptions">
-                            <li><FormulateInput type="submit" @click="addTag" label="Save" /></li>
+                            <li><input type="submit" @click="addTag" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Tag Name</td>
-                        <td><FormulateInput id="tagsName" type="tagsName" required />{{ tag.name }}</td>
+                        <td><input id="tagsName" type="tagsName" required />{{ tag.name }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -24,10 +24,10 @@
         <div id="accordionExample" class="accordion">
             <div class="accordion-item">
                 <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Content
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -39,7 +39,7 @@
                                         <td style="text-align: right;">Description</td>
                                         <td>
                                             <div class="form-check form-switch">
-                                                <FormulateInput
+                                                <input
   type="textarea" id="tagDesc" name="tagDesc" cols="80" rows="10" />{{ tag.excerpt }}
                                             </div>
                                         </td>
@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

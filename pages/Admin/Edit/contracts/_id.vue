@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>
@@ -10,7 +10,7 @@
               </th>
               <th scope="col" class="contractAddOptions">
                 <li>
-                  <FormulateInput type="submit" label="Save" @click="addContract" />
+                  <input type="submit" value="Save" @click="addContract" />
                 </li>
               </th>
             </tr>
@@ -19,85 +19,85 @@
             <tr>
               <td style="text-align: right;">Contract Title</td>
               <td>
-                <FormulateInput v-model="contract_title" type="text" />{{ contract.contract_title }}
+                <input v-model="contract_title" type="text" />{{ contract.contract_title }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Contract Value</td>
               <td>
-                <FormulateInput v-model="contract_value" type="text" />{{ contract.contract_value }}
+                <input v-model="contract_value" type="text" />{{ contract.contract_value }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Start Date</td>
               <td>
-                <FormulateInput v-model="start_date" type="text" />{{ contract.start_date }}
+                <input v-model="start_date" type="text" />{{ contract.start_date }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">End Date</td>
               <td>
-                <FormulateInput v-model="end_date" type="text" />{{ contract.end_date }}
+                <input v-model="end_date" type="text" />{{ contract.end_date }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Renewal Reminder Date</td>
               <td>
-                <FormulateInput v-model="renewal_reminder" type="text" />{{ contract.renewal_reminder }}
+                <input v-model="renewal_reminder" type="text" />{{ contract.renewal_reminder }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Customer Signed Date</td>
               <td>
-                <FormulateInput v-model="customer_signed_date" type="text" />{{ contract.customer_signed_date }}
+                <input v-model="customer_signed_date" type="text" />{{ contract.customer_signed_date }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Company Signed Date</td>
               <td>
-                <FormulateInput v-model="company_signed_date" type="text" />{{ contract.company_signed_date }}
+                <input v-model="company_signed_date" type="text" />{{ contract.company_signed_date }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
               <td>
-                <FormulateInput v-model="description" type="text" />{{ contract.description }}
+                <input v-model="description" type="text" />{{ contract.description }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Contract Manager</td>
               <td>
-                <FormulateInput v-model="contract_manager" type="text" />{{ contract.contract_manager }}
+                <input v-model="contract_manager" type="text" />{{ contract.contract_manager }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Status</td>
               <td>
-                <FormulateInput v-model="status" type="text" />{{ contract.status }}
+                <input v-model="status" type="text" />{{ contract.status }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Account</td>
               <td>
-                <FormulateInput v-model="account" type="text" />{{ contract.account }}
+                <input v-model="account" type="text" />{{ contract.account }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Contact</td>
               <td>
-                <FormulateInput v-model="contact" type="text" />{{ contract.contact }}
+                <input v-model="contact" type="text" />{{ contract.contact }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Opportunity</td>
               <td>
-                <FormulateInput v-model="opportunity" type="text" />{{ contract.opportunity }}
+                <input v-model="opportunity" type="text" />{{ contract.opportunity }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Contract Type</td>
               <td>
-                <FormulateInput v-model="contract_type" type="text" />{{ contract.contract_type }}
+                <input v-model="contract_type" type="text" />{{ contract.contract_type }}
               </td>
             </tr>
           </tbody>
@@ -107,10 +107,10 @@
       <div id="accordionExample" class="accordion">
         <div class="accordion-item">
           <h2 id="headingOne" class="accordion-header">
-            <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+            <button class="accordion-button" type="button" data-mdb-toggle="collapse"
               data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Line Items
-            </FormulateInput>
+            </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
             data-mdb-parent="#accordionExample">
@@ -121,49 +121,49 @@
                     <tr>
                       <td style="text-align: right;">Currency</td>
                       <td>
-                        <FormulateInput v-model="currency" type="text" />{{ contract.currency }}
+                        <input v-model="currency" type="text" />{{ contract.currency }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Total</td>
                       <td>
-                        <FormulateInput v-model="total" type="text" />{{ contract.total }}
+                        <input v-model="total" type="text" />{{ contract.total }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Discount</td>
                       <td>
-                        <FormulateInput v-model="discount" type="text" />{{ contract.discount }}
+                        <input v-model="discount" type="text" />{{ contract.discount }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Subtotal</td>
                       <td>
-                        <FormulateInput v-model="subtotal" type="text" />{{ contract.subtotal }}
+                        <input v-model="subtotal" type="text" />{{ contract.subtotal }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Shipping</td>
                       <td>
-                        <FormulateInput v-model="shipping" type="text" />{{ contract.shipping }}
+                        <input v-model="shipping" type="text" />{{ contract.shipping }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Shipping Tax</td>
                       <td>
-                        <FormulateInput v-model="shipping_tax" type="text" />{{ contract.shipping_tax }}
+                        <input v-model="shipping_tax" type="text" />{{ contract.shipping_tax }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Tax</td>
                       <td>
-                        <FormulateInput v-model="tax" type="text" />{{ contract.tax }}
+                        <input v-model="tax" type="text" />{{ contract.tax }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Grand Total</td>
                       <td>
-                        <FormulateInput v-model="grand_total" type="text" />{{ contract.grand_total }}
+                        <input v-model="grand_total" type="text" />{{ contract.grand_total }}
                       </td>
                     </tr>
                   </tbody>
@@ -173,7 +173,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

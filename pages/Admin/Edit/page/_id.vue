@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="page in pages" :key="page.id"  method="POST" @submit.prevent>
+        <form v-for="page in pages" :key="page.id"  method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,18 +8,18 @@
                         <th>
                         </th>
                         <th scope="col" class="pageAddOptions">
-                            <li><FormulateInput type="submit" @click="addPage" label="Save" /></li>
+                            <li><input type="submit" @click="addPage" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Page Name</td>
-                        <td><FormulateInput type="text" required />{{ page.title }}</td>
+                        <td><input type="text" required />{{ page.title }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Page Url</td>
-                        <td><FormulateInput type="url" label="Product URL" />{{ page.url_key }}</td>
+                        <td><input type="url" value="Product URL" />{{ page.url_key }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -28,10 +28,10 @@
         <div id="accordionExample" class="accordion">
             <div class="accordion-item">
                 <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Content
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -57,10 +57,10 @@
             </div>
                         <div class="accordion-item">
                 <h2 id="headingFour" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         Search Engine Optimization
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-mdb-parent="#accordionExample">
@@ -73,16 +73,16 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Title</td>
-                                        <td><FormulateInput type="text" label="Product Url" required />{{ page.meta_title }}</td>
+                                        <td><input type="text" value="Product Url" required />{{ page.meta_title }}</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Keywords</td>
-                                        <td><FormulateInput type="text" label="Product Keywords" />{{ page.meta_keywords }}</td>
+                                        <td><input type="text" value="Product Keywords" />{{ page.meta_keywords }}</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Description</td>
-                                        <td><FormulateInput
-  type="textarea" label="Product Description" rows="10" cols="50" />{{ page.meta_description }}</td>
+                                        <td><input
+  type="textarea" value="Product Description" rows="10" cols="50" />{{ page.meta_description }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -90,7 +90,7 @@
                 </div>
             </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

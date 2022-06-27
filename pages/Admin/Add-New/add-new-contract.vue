@@ -1,13 +1,13 @@
 
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Contract" @click="addContract" /></a>
+            <input type="button" class="btn btn-warning" value="Save Contract" @click="addContract" /></a>
         </div>
       </nav>
       <br>
@@ -30,85 +30,85 @@
             <tr>
               <td style="text-align: right;">Contract Title</td>
               <td>
-                <FormulateInput v-model="contract_title" type="text" required />
+                <input v-model="contract_title" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Contract Value</td>
               <td>
-                <FormulateInput v-model="contract_value" type="text" required />
+                <input v-model="contract_value" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Start Date</td>
               <td>
-                <FormulateInput v-model="start_date" type="text" required />
+                <input v-model="start_date" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">End Date</td>
               <td>
-                <FormulateInput v-model="end_date" type="text" required />
+                <input v-model="end_date" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Renewal Reminder Date</td>
               <td>
-                <FormulateInput v-model="renewal_reminder" type="text" required />
+                <input v-model="renewal_reminder" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Customer Signed Date</td>
               <td>
-                <FormulateInput v-model="company_signed_date" type="text" required />
+                <input v-model="company_signed_date" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Company Signed Date</td>
               <td>
-                <FormulateInput v-model="company_signed_date" type="text" required />
+                <input v-model="company_signed_date" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
               <td>
-                <FormulateInput v-model="description" type="text" required />
+                <input v-model="description" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Contract Manager</td>
               <td>
-                <FormulateInput v-model="contract_manager" type="text" required />
+                <input v-model="contract_manager" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Status</td>
               <td>
-                <FormulateInput v-model="status" type="text" required />
+                <input v-model="status" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Account</td>
               <td>
-                <FormulateInput v-model="account" type="text" required />
+                <input v-model="account" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Contact</td>
               <td>
-                <FormulateInput v-model="contact" type="text" required />
+                <input v-model="contact" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Opportunity</td>
               <td>
-                <FormulateInput v-model="opportunity" type="text" required />
+                <input v-model="opportunity" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Contract Type</td>
               <td>
-                <FormulateInput v-model="type" type="text" required />
+                <input v-model="type" type="text" required />
               </td>
             </tr>
           </tbody>
@@ -118,10 +118,10 @@
       <div id="accordionExample" class="accordion">
         <div class="accordion-item">
           <h2 id="headingOne" class="accordion-header">
-            <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+            <button class="accordion-button" type="button" data-mdb-toggle="collapse"
               data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Line Items
-            </FormulateInput>
+            </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
             data-mdb-parent="#accordionExample">
@@ -132,49 +132,49 @@
                     <tr>
                       <td style="text-align: right;">Currency</td>
                       <td>
-                        <FormulateInput v-model="currency" type="text" required />
+                        <input v-model="currency" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Total</td>
                       <td>
-                        <FormulateInput v-model="total" type="text" required />
+                        <input v-model="total" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Discount</td>
                       <td>
-                        <FormulateInput v-model="discount" type="text" required />
+                        <input v-model="discount" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Subtotal</td>
                       <td>
-                        <FormulateInput v-model="subtotal" type="text" required />
+                        <input v-model="subtotal" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Shipping</td>
                       <td>
-                        <FormulateInput v-model="shipping" type="text" required />
+                        <input v-model="shipping" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Shipping Tax</td>
                       <td>
-                        <FormulateInput v-model="shipping_tax" type="text" required />
+                        <input v-model="shipping_tax" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Tax</td>
                       <td>
-                        <FormulateInput v-model="tax" type="text" required />
+                        <input v-model="tax" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Grand Total</td>
                       <td>
-                        <FormulateInput v-model="grand_total" type="text" required />
+                        <input v-model="grand_total" type="text" required />
                       </td>
                     </tr>
                   </tbody>
@@ -188,7 +188,7 @@
       </div>
       </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FormulateForm  v-for="email_template in email_templates" :key="email_template.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form  v-for="email_template in email_templates" :key="email_template.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>
@@ -9,7 +9,7 @@
               </th>
               <th scope="col" class="email_templateAddOptions">
                 <li>
-                  <FormulateInput type="submit" label="Save" @click="addEMAIL_TEMPLATE" />
+                  <input type="submit" value="Save" @click="addEMAIL_TEMPLATE" />
                 </li>
               </th>
             </tr>
@@ -18,74 +18,74 @@
             <tr>
               <td style="text-align: right;">Active</td>
               <td>
-                <FormulateInput v-model="active" type="checkbox" />{{ email_template.active }}
+                <input v-model="active" type="checkbox" />{{ email_template.active }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Template Name</td>
               <td>
-                <FormulateInput v-model="name" type="text" required />{{ email_template.name }}
+                <input v-model="name" type="text" required />{{ email_template.name }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Subject</td>
               <td>
-                <FormulateInput v-model="subject" type="text" />{{ email_template.subject }}
+                <input v-model="subject" type="text" />{{ email_template.subject }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
               <td>
-                <FormulateInput v-model="content" type="textarea" />{{ email_template.description }}
+                <input v-model="content" type="textarea" />{{ email_template.description }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Header</td>
               <td>
-                <FormulateInput v-model="header" type="text" placeholder="#" required />{{ email_template.header }}
+                <input v-model="header" type="text" placeholder="#" required />{{ email_template.header }}
               </td>
             </tr>
             
             <tr>
               <td style="text-align: right;">Footer</td>
               <td>
-                <FormulateInput v-model="footer" type="text" />{{ email_template.footer }}
+                <input v-model="footer" type="text" />{{ email_template.footer }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Width</td>
               <td>
-                <FormulateInput v-model="width" type="text" />{{ email_template.width }}
+                <input v-model="width" type="text" />{{ email_template.width }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Height</td>
               <td>
-                <FormulateInput v-model="height" type="text" />{{ email_template.height }}
+                <input v-model="height" type="text" />{{ email_template.height }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Type</td>
               <td>
-                <FormulateInput v-model="type" type="text" />{{ email_template.type }}
+                <input v-model="type" type="text" />{{ email_template.type }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Media</td>
               <td>
-                <FormulateInput v-model="media" type="text" />{{ email_template.media }}
+                <input v-model="media" type="text" />{{ email_template.media }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Assigned To</td>
               <td>
-                <FormulateInput v-model="assigned_to" type="text" />{{ email_template.assigned_to }}
+                <input v-model="assigned_to" type="text" />{{ email_template.assigned_to }}
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

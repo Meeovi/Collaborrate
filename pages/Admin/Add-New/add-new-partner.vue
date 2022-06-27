@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Partner" @click="addPartner" /></a>
+            <input type="button" class="btn btn-warning" value="Save Partner" @click="addPartner" /></a>
         </div>
       </nav>
       <br>
@@ -29,19 +29,19 @@
             <tr>
               <td style="text-align: right;">Partner Name</td>
               <td>
-                <FormulateInput v-model="name" type="text" required />
+                <input v-model="name" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Address</td>
               <td>
-                <FormulateInput v-model="address" type="text" name="tax" />
+                <input v-model="address" type="text" name="tax" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">City</td>
               <td>
-                <FormulateInput v-model="city" type="text" required />
+                <input v-model="city" type="text" required />
               </td>
             </tr>
             <tr>
@@ -65,13 +65,13 @@
             <tr>
               <td style="text-align: right;">Business Type</td>
               <td>
-                <FormulateInput v-model="buiness_type" type="text" name="tax" />
+                <input v-model="buiness_type" type="text" name="tax" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Is the Partner Public?</td>
               <td>
-                <FormulateInput v-model="isPublic" type="checkbox" label="Check the box if the partner is public" />
+                <input v-model="isPublic" type="checkbox" value="Check the box if the partner is public" />
               </td>
             </tr>
           </tbody>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

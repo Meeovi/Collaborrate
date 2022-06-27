@@ -1,12 +1,12 @@
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+        <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Invoice" @click="addInvoice" /></a>
+            <input type="button" class="btn btn-warning" value="Save Invoice" @click="addInvoice" /></a>
         </div>
       </nav>
       <br>
@@ -28,47 +28,47 @@
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Customer Name</td>
-                        <td><FormulateInput v-model="customer_name" name="customerName" type="text" label="Customer Name on the Invoice" required /></td>
+                        <td><input v-model="customer_name" name="customerName" type="text" value="Customer Name on the Invoice" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Bill to Name</td>
-                        <td><FormulateInput v-model="bill_to_name" name="orderNumber" type="text" label="Who should we bill to?" required /></td>
+                        <td><input v-model="bill_to_name" name="orderNumber" type="text" value="Who should we bill to?" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Customer Email</td>
-                        <td><FormulateInput v-model="email" type="text" required label="Customer's Email used to email the invoice" /></td>
+                        <td><input v-model="email" type="text" required value="Customer's Email used to email the invoice" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Billing Address</td>
-                        <td><FormulateInput v-model="billing_address" type="text" label="Billing address for this invoice" required /></td>
+                        <td><input v-model="billing_address" type="text" value="Billing address for this invoice" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Customer Group</td>
-                        <td><FormulateInput v-model="customer_group" type="text" label="Group this customer belongs to" /></td>
+                        <td><input v-model="customer_group" type="text" value="Group this customer belongs to" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Shipping Information</td>
-                        <td><FormulateInput v-model="shipping_information" name="shippingInformation" type="text" label="Shipping service used for shipping" /></td>
+                        <td><input v-model="shipping_information" name="shippingInformation" type="text" value="Shipping service used for shipping" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Shipping and Handling</td>
-                        <td><FormulateInput v-model="shipping_and_handling" name="shippingHandling" type="text" label="How much does shipping cost?" /></td>
+                        <td><input v-model="shipping_and_handling" name="shippingHandling" type="text" value="How much does shipping cost?" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Shipping Address</td>
-                        <td><FormulateInput v-model="shipping_address" name="shippingInformation" type="text" label="Where is this the address where the products are shipped to?" /></td>
+                        <td><input v-model="shipping_address" name="shippingInformation" type="text" value="Where is this the address where the products are shipped to?" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Payment Method</td>
-                        <td><FormulateInput v-model="payment_method" name="payment" type="text" label="What payment method is used for this transaction?" /></td>
+                        <td><input v-model="payment_method" name="payment" type="text" value="What payment method is used for this transaction?" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Grand Total Base</td>
-                        <td><FormulateInput v-model="grand_total_base" name="grandTotal" type="text" label="Amount of transaction with tax excluded" /></td>
+                        <td><input v-model="grand_total_base" name="grandTotal" type="text" value="Amount of transaction with tax excluded" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Grand Total Purchased</td>
-                        <td><FormulateInput v-model="grand_total_purchased" name="grandTotal" type="text" label="Amount of transaction with tax included" /></td>
+                        <td><input v-model="grand_total_purchased" name="grandTotal" type="text" value="Amount of transaction with tax included" /></td>
                     </tr>
                 </tbody>
             </table>
@@ -77,7 +77,7 @@
         </div>
         </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

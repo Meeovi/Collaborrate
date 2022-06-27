@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Shop" @click="addShop" /></a>
+            <input type="button" class="btn btn-warning" value="Save Shop" @click="addShop" /></a>
         </div>
       </nav>
       <br>
@@ -29,13 +29,13 @@
             <tr>
               <td style="text-align: right;">Shop Name</td>
               <td>
-                <FormulateInput v-model="name" type="text" required />
+                <input v-model="name" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Shop Type</td>
               <td>
-                <FormulateInput v-model="type" name="shopType" type="text" label="What type of shop is this?" />
+                <input v-model="type" name="shopType" type="text" value="What type of shop is this?" />
               </td>
             </tr>
             <tr>
@@ -57,25 +57,25 @@
             <tr>
               <td style="text-align: right;">Physical Store</td>
               <td>
-                <FormulateInput v-model="physical_store" type="checkbox" label="Check if shop has a physical store." />
+                <input v-model="physical_store" type="checkbox" value="Check if shop has a physical store." />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Website</td>
               <td>
-                <FormulateInput v-model="website" type="url" />
+                <input v-model="website" type="url" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
               <td>
-                <FormulateInput v-model="description" type="textarea" />
+                <input v-model="description" type="textarea" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Shop Image</td>
               <td>
-                <FormulateInput v-model="image" type="image" />
+                <input v-model="image" type="image" />
               </td>
             </tr>
           </tbody>
@@ -85,7 +85,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

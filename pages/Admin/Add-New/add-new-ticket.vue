@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Ticket" @click="addTicket" /></a>
+            <input type="button" class="btn btn-warning" value="Save Ticket" @click="addTicket" /></a>
         </div>
       </nav>
       <br>
@@ -29,88 +29,88 @@
             <tr>
               <td style="text-align: right;">Severity</td>
               <td>
-                <FormulateInput v-model="severity" :options="{first: '1', second: '2', third: '3', four: '4', five: '5'}" type="select"
-  label="Choose the severity based the level of the situation" required />
+                <input v-model="severity" :options="{first: '1', second: '2', third: '3', four: '4', five: '5'}" type="select"
+  value="Choose the severity based the level of the situation" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Stage of Ticket</td>
               <td>
-                <FormulateInput v-model="level" :options="{first: 'Assigned', second: 'Pending', third: 'Work in Progress', four: 'Researching', five: 'Resolved'}" type="select"
-  label="Choose the current phase of the ticket" required />
+                <input v-model="level" :options="{first: 'Assigned', second: 'Pending', third: 'Work in Progress', four: 'Researching', five: 'Resolved'}" type="select"
+  value="Choose the current phase of the ticket" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Ticket Name</td>
               <td>
-                <FormulateInput v-model="name" name="ticketingName" type="text" required />
+                <input v-model="name" name="ticketingName" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Ticket Type</td>
               <td>
-                <FormulateInput v-model="ticket_type" name="ticketingName" required :options="{first: 'Trouble Ticket', second: 'Action Item', third: 'Audit', four: 'Patrol Action', five: 'Private'}" type="select"
-  label="What type of ticket is this?" />
+                <input v-model="ticket_type" name="ticketingName" required :options="{first: 'Trouble Ticket', second: 'Action Item', third: 'Audit', four: 'Patrol Action', five: 'Private'}" type="select"
+  value="What type of ticket is this?" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Ticket Department</td>
               <td>
-                <FormulateInput v-model="department" type="text" required />
+                <input v-model="department" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Account Name</td>
               <td>
-                <FormulateInput v-model="account_name" type="text" required />
+                <input v-model="account_name" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Priority</td>
               <td>
-                <FormulateInput v-model="priority" type="text" />
+                <input v-model="priority" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Requester</td>
               <td>
-                <FormulateInput v-model="requester" type="text" />
+                <input v-model="requester" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Requester Email</td>
               <td>
-                <FormulateInput v-model="requester_email" type="text" required />
+                <input v-model="requester_email" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Date</td>
               <td>
-                <FormulateInput v-model="date" type="datetime-local" />
+                <input v-model="date" type="datetime-local" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
               <td>
-                  <vue-simplemde id="longDescription" v-model="content" label="Leave a description about this ticket" />
+                  <vue-simplemde id="longDescription" v-model="content" value="Leave a description about this ticket" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Team</td>
               <td>
-                <FormulateInput v-model="team" type="text" />
+                <input v-model="team" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Assigned To</td>
               <td>
-                <FormulateInput v-model="assigned_to" type="text" />
+                <input v-model="assigned_to" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Media</td>
               <td>
-                <FormulateInput v-model="media" type="file" label="Upload an Image, Video, PDF, or other file" />
+                <input v-model="media" type="image" value="Upload an Image, Video, PDF, or other file" />
               </td>
             </tr>
           </tbody>
@@ -120,7 +120,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

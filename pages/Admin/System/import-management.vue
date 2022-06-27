@@ -20,7 +20,7 @@
                 <tbody v-for="importm in importm" :key="importm.id">
                   <tr>
                     <td>{{ importm.name }}</td>
-                    <td><button type="button" class="btn btn-primary" data-mdb-toggle="modal"
+                    <td><input type="button" class="btn btn-primary" data-mdb-toggle="modal"
                         data-mdb-target="#exampleModal">import </button></td>
                     <div id="exampleModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
                       aria-hidden="true">
@@ -28,13 +28,13 @@
                         <div class="modal-content">
                           <div class="modal-header">
                             <h5 id="exampleModalLabel" class="modal-title">Edit import </h5>
-                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
-                              aria-label="Close"></button>
+                            <input type="button" class="btn-close" data-mdb-dismiss="modal"
+                              aria-value="Close"></button>
                           </div>
                           <div class="modal-body">...</div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-primary">import </button>
+                            <input type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Cancel</button>
+                            <input type="button" class="btn btn-primary">import </button>
                           </div>
                         </div>
                       </div>

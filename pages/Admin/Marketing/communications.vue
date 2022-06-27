@@ -2,8 +2,8 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-email"><FormulateInput type="button" label="Send Email"></FormulateInput></a>
-        <!--<a class="navbar-brand" href="/admin/marketing/email/email-designer"><FormulateInput type="button" style="float:right; right: 15px; position: absolute;" label="Email Designer"></FormulateInput></a>-->
+        <a class="navbar-brand" href="/admin/add-new/add-new-email"><input type="button" class="btn btn-warning" value="Send Email" /></a>
+        <!--<a class="navbar-brand" href="/admin/marketing/email/email-designer"><input type="button" class="btn btn-warning" style="float:right; right: 15px; position: absolute;" value="Email Designer" /></a>-->
       </div>
 </nav>
 <br>

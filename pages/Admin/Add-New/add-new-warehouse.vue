@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Warehouse" @click="addWarehouse" /></a>
+            <input type="button" class="btn btn-warning" value="Save Warehouse" @click="addWarehouse" /></a>
         </div>
       </nav>
       <br>
@@ -29,31 +29,31 @@
                     <tr>
                       <td style="text-align: right;">Status</td>
                       <td>
-                        <FormulateInput v-model="status" type="text" />
+                        <input v-model="status" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Warehouse Name</td>
                       <td>
-                        <FormulateInput v-model="name" type="text" required />
+                        <input v-model="name" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <FormulateInput v-model="description" type="textarea" />
+                        <input v-model="description" type="textarea" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Category</td>
                       <td>
-                        <FormulateInput v-model="category" type="text" />
+                        <input v-model="category" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">City</td>
                       <td>
-                        <FormulateInput v-model="city" type="text" placeholder="#" />
+                        <input v-model="city" type="text" placeholder="#" />
                       </td>
                     </tr>
                     <tr>
@@ -78,26 +78,26 @@
                     <tr>
                       <td style="text-align: right;">Postal Code</td>
                       <td>
-                        <FormulateInput v-model="postal" type="text" />
+                        <input v-model="postal" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Products</td>
                       <td>
-                        <FormulateInput v-model="products" type="text" />
+                        <input v-model="products" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Image</td>
                       <td>
-                        <FormulateInput v-model="image" type="image" label="Select an image for the warehouse"
+                        <input v-model="image" type="image" value="Select an image for the warehouse"
                           help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Public</td>
                       <td>
-                        <FormulateInput v-model="isPublic" type="checkbox" />
+                        <input v-model="isPublic" type="checkbox" />
                       </td>
                     </tr>
                   </tbody>
@@ -107,7 +107,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

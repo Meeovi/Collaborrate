@@ -3,7 +3,7 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/admin/add-new/add-new-ooto">
-          <button type="button" class="btn btn-warning">Create Out of Office</button>
+          <input type="button" class="btn btn-warning">Create Out of Office</button>
         </a>
       </div>
     </nav>

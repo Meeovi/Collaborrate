@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Deep Dive" @click="addDeepdive" /></a>
+            <input type="button" class="btn btn-warning" value="Save Deep Dive" @click="addDeepdive" /></a>
         </div>
       </nav>
       <br>
@@ -29,25 +29,25 @@
                     <tr>
                       <td style="text-align: right;">Login</td>
                       <td>
-                        <FormulateInput v-model="login" type="text" required />
+                        <input v-model="login" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Start Date</td>
                       <td>
-                        <FormulateInput v-model="start_date" type="text" required />
+                        <input v-model="start_date" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">End Date</td>
                       <td>
-                        <FormulateInput v-model="end_date" type="text" />
+                        <input v-model="end_date" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Attendees</td>
                       <td>
-                        <FormulateInput v-model="attendees" type="text" />
+                        <input v-model="attendees" type="text" />
                       </td>
                     </tr>
                     <tr>
@@ -55,7 +55,7 @@
                       <td>
                         <div class="form-check form-switch">
                           <client-only>
-                            <vue-simplemde id="longDescription" v-model="content" />
+                            <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>
                           </client-only>
                         </div>
                       </td>
@@ -67,7 +67,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

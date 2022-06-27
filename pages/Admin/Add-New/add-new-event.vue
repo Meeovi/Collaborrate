@@ -1,12 +1,12 @@
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+        <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Event" @click="addEvent" /></a>
+            <input type="button" class="btn btn-warning" value="Save Event" @click="addEvent" /></a>
         </div>
       </nav>
       <br>
@@ -28,39 +28,39 @@
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Event Name</td>
-                        <td><FormulateInput v-model="name" name="eventName" type="text" label="Name of the Event" required /></td>
+                        <td><input v-model="name" name="eventName" type="text" value="Name of the Event" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Amount of Tickets Available</td>
-                        <td><FormulateInput v-model="tickets" name="eventTickets" type="text" label="Enter amount of tickets for event" required /></td>
+                        <td><input v-model="tickets" name="eventTickets" type="text" value="Enter amount of tickets for event" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Event City</td>
-                        <td><FormulateInput v-model="city" type="text" required /></td>
+                        <td><input v-model="city" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Event State</td>
-                        <td><FormulateInput v-model="state" type="text" placeholder="$" required /></td>
+                        <td><input v-model="state" type="text" placeholder="$" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Event Country</td>
-                        <td><FormulateInput v-model="country" type="text" /></td>
+                        <td><input v-model="country" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Event Postal Code</td>
-                        <td><FormulateInput v-model="postalcode" name="eventPostalCode" type="text" /></td>
+                        <td><input v-model="postalcode" name="eventPostalCode" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Event Start Date</td>
-                        <td><FormulateInput v-model="start" name="eventStart" type="text" /></td>
+                        <td><input v-model="start" name="eventStart" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Event End Date</td>
-                        <td><FormulateInput v-model="end" name="eventEnd" type="text" /></td>
+                        <td><input v-model="end" name="eventEnd" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Category</td>
-                        <td><FormulateInput v-model="category" name="productCategory" type="text" /></td>
+                        <td><input v-model="category" name="productCategory" type="text" /></td>
                     </tr>
                 </tbody>
             </table>
@@ -69,10 +69,10 @@
         <div id="accordionExample" class="accordion">
             <div class="accordion-item">
                 <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Content
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -84,7 +84,7 @@
                                         <td style="text-align: right;">Description</td>
                                         <td>
                                             <div class="form-check form-switch">
-                                                <vue-simplemde id="longDescription" v-model="content" />
+                                                <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>
                                             </div>
                                         </td>
                                     </tr>
@@ -96,15 +96,23 @@
             </div>
             <div class="accordion-item">
                 <h2 id="headingThree" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Images and Videos
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
-                        <td><FormulateInput type="image" name="headshot" v-model="image" label="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/></td>
+                        <td><div class="file-upload-wrapper">
+  <input
+    type="file"
+    id="input-file-now"
+    class="file-upload-input"
+    data-mdb-file-upload="file-upload"
+    data-mdb-accepted-extensions="image/*"
+  />
+</div></td>
                     </div>
                 </div>
             </div>
@@ -113,7 +121,7 @@
         </div>
         </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

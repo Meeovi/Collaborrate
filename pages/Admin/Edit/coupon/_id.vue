@@ -1,10 +1,10 @@
 <template>
   <div>
-    <FormulateForm v-for="coupon in coupons" :key="coupon.id" method="POST" @submit.prevent>
+    <form v-for="coupon in coupons" :key="coupon.id" method="POST" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><FormulateInput type="reset" class="btn btn-warning" label="Reset" /></a>
-          <a class="navbar-brand"><FormulateInput type="button" @click="addCoupon" label="Save Coupon" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="button" class="btn btn-warning" @click="addCoupon" value="Save Coupon" /></a>
         </div>
       </nav>
       <br>
@@ -27,20 +27,20 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Coupon Name</td>
-                      <td><FormulateInput type="text" required />{{ coupon.name }}</td>
+                      <td><input type="text" required />{{ coupon.name }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Discount</td>
-                      <td><FormulateInput type="text" required />{{ coupon.discount }}</td>
+                      <td><input type="text" required />{{ coupon.discount }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Expiration</td>
-                      <td><FormulateInput id="expiration" name="expiration" type="url" />{{ coupon.expiration }}
+                      <td><input id="expiration" name="expiration" type="url" />{{ coupon.expiration }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Coupon Content</td>
-                      <td><FormulateInput id="reviewDescription" type="textarea" label="Enter information about this coupon" validation="required|max:50,length" :help="`Keep it under 50 characters. ${50 - excerpt.length} left.`" />{{ coupon.excerpt }}
+                      <td><input id="reviewDescription" type="textarea" value="Enter information about this coupon" validation="required|max:50,length" :help="`Keep it under 50 characters. ${50 - excerpt.length} left.`" />{{ coupon.excerpt }}
                       </td>
                     </tr>
                   </tbody>
@@ -50,7 +50,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

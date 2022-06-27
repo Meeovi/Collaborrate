@@ -41,6 +41,30 @@
   "ImportId": {
     "description": "Auto imported from components/import/_id.vue"
   },
+  "IntegrationsContent": {
+    "description": "Auto imported from components/integrations/content.vue"
+  },
+  "IntegrationsCustomers": {
+    "description": "Auto imported from components/integrations/customers.vue"
+  },
+  "IntegrationsMarketing": {
+    "description": "Auto imported from components/integrations/marketing.vue"
+  },
+  "IntegrationsReports": {
+    "description": "Auto imported from components/integrations/reports.vue"
+  },
+  "IntegrationsSales": {
+    "description": "Auto imported from components/integrations/sales.vue"
+  },
+  "IntegrationsSettings": {
+    "description": "Auto imported from components/integrations/settings.vue"
+  },
+  "IntegrationsShop": {
+    "description": "Auto imported from components/integrations/shop.vue"
+  },
+  "IntegrationsToppicks": {
+    "description": "Auto imported from components/integrations/toppicks.vue"
+  },
   "SettingsApitokensettings": {
     "description": "Auto imported from components/settings/apitokensettings.vue"
   },
@@ -77,29 +101,8 @@
   "SettingsWebhooks": {
     "description": "Auto imported from components/settings/webhooks.vue"
   },
-  "IntegrationsContent": {
-    "description": "Auto imported from components/integrations/content.vue"
-  },
-  "IntegrationsCustomers": {
-    "description": "Auto imported from components/integrations/customers.vue"
-  },
-  "IntegrationsMarketing": {
-    "description": "Auto imported from components/integrations/marketing.vue"
-  },
-  "IntegrationsReports": {
-    "description": "Auto imported from components/integrations/reports.vue"
-  },
-  "IntegrationsSales": {
-    "description": "Auto imported from components/integrations/sales.vue"
-  },
-  "IntegrationsSettings": {
-    "description": "Auto imported from components/integrations/settings.vue"
-  },
-  "IntegrationsShop": {
-    "description": "Auto imported from components/integrations/shop.vue"
-  },
-  "IntegrationsToppicks": {
-    "description": "Auto imported from components/integrations/toppicks.vue"
+  "DashboardBestsellers": {
+    "description": "Auto imported from components/dashboard/bestsellers/bestsellers.vue"
   },
   "DashboardCharts": {
     "description": "Auto imported from components/dashboard/charts/charts.vue"
@@ -115,9 +118,6 @@
   },
   "DashboardMostviewed": {
     "description": "Auto imported from components/dashboard/mostviewed/mostviewed.vue"
-  },
-  "DashboardBestsellers": {
-    "description": "Auto imported from components/dashboard/bestsellers/bestsellers.vue"
   },
   "DashboardOrders": {
     "description": "Auto imported from components/dashboard/orders/orders.vue"

@@ -16,17 +16,17 @@
             <Notification v-if="error" :message="error" />
             <b-row>
               <b-col md="4" offset-md="4" class="mt-5">
-                <FormulateForm method="post" @submit.prevent="userRegister">
+                <form method="post" @submit.prevent="userRegister">
                 <div v-if="err" class=" p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
                     {{ err }}
                     </div>
                   <div class="form-group">
                     <label for="email">Your Email</label>
-                    <FormulateInput id="email" v-model="email" type="email" class="form-control" />
+                    <input id="email" v-model="email" type="email" class="form-control" />
                   </div>
                   <input type="hidden" name="_csrf" :value="csrfToken">
-                  <FormulateInput type="submit" style="width:100%">New Password</FormulateInput>
-                </FormulateForm>
+                  <input type="submit" style="width:100%">New Password</button>
+                </form>
               </b-col>
             </b-row>
           </b-container>

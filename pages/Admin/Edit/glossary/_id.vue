@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 <template>
     <div>
-        <FormulateForm v-for="glossary in glossaries" :key="glossary.id"  method="POST" @submit.prevent>
+        <form v-for="glossary in glossaries" :key="glossary.id"  method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -9,14 +9,14 @@
                         <th>
                         </th>
                         <th scope="col" class="glossaryAddOptions">
-                            <li><FormulateInput type="submit" @click="addGlossary" label="Save" /></li>
+                            <li><input type="submit" @click="addGlossary" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Glossary Name</td>
-                        <td><FormulateInput type="text" required />{{ glossary.name }}</td>
+                        <td><input type="text" required />{{ glossary.name }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -25,10 +25,10 @@
         <div id="accordionExample" class="accordion">
             <div class="accordion-item">
                 <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Content
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -52,20 +52,20 @@
             </div>
             <div class="accordion-item">
                 <h2 id="headingThree" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Images and Videos
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
-                        <td><FormulateInput type="image" upload-url="/media" name="headshot" label="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/>{{ glossary.image }}</td>
+                        <td><input type="image" upload-url="/media" name="headshot" value="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/>{{ glossary.image }}</td>
                     </div>
                 </div>
             </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

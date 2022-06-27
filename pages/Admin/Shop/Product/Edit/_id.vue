@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm method="POST" @submit.prevent  enctype="multipart/form-data">
+        <form method="POST" @submit.prevent  enctype="multipart/form-data">
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,68 +8,68 @@
                         <th>
                         </th>
                         <th scope="col" class="productAddOptions">
-                            <li><a href="/admin/add-new/add-new-attribute"><FormulateInput type="button" label="Add Attribute" /></a></li>
-                            <li><FormulateInput type="submit" @click="addProduct" label="Save" /></li>
+                            <li><a href="/admin/add-new/add-new-attribute"><input type="button" class="btn btn-warning" value="Add Attribute" /></a></li>
+                            <li><input type="submit" @click="addProduct" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Product Type</td>
-                        <td><FormulateInput v-model="type" name="productType" type="text" label="What type of product is this?" /></td>
+                        <td><input v-model="type" name="productType" type="text" value="What type of product is this?" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Attribute</td>
-                        <td><FormulateInput v-model="attribute" name="productAttribute" type="text" label="Example is apple, bag, etc" /></td>
+                        <td><input v-model="attribute" name="productAttribute" type="text" value="Example is apple, bag, etc" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Product Name</td>
-                        <td><FormulateInput v-model="name" type="productName" required /></td>
+                        <td><input v-model="name" type="productName" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Price</td>
-                        <td><FormulateInput v-model="price" type="productPrice" label="$" required /></td>
+                        <td><input v-model="price" type="productPrice" value="$" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Tax Class</td>
-                        <td><FormulateInput v-model="tax_class" name="productTax" type="text" /></td>
+                        <td><input v-model="tax_class" name="productTax" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Quantity</td>
-                        <td><FormulateInput v-model="quantity_per_source" type="text" /></td>
+                        <td><input v-model="quantity_per_source" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Stock</td>
-                        <td><FormulateInput v-model="status" type="number" name="stockStatus" />
+                        <td><input v-model="status" type="number" name="stockStatus" />
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Height</td>
-                        <td><FormulateInput v-model="height" type="text" /></td>
+                        <td><input v-model="height" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Weight</td>
-                        <td><FormulateInput v-model="weight" type="text" /></td>
+                        <td><input v-model="weight" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Visibility</td>
-                        <td><FormulateInput v-model="visibility" name="productVisibility" type="text" /></td>
+                        <td><input v-model="visibility" name="productVisibility" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Categories</td>
-                        <td><FormulateInput v-model="categories" name="productCategory" type="text" /></td>
+                        <td><input v-model="categories" name="productCategory" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Country of manufacture</td>
-                        <td><FormulateInput v-model="manufacture" name="productManufacture" type="text" label="Where is this product made?" /></td>
+                        <td><input v-model="manufacture" name="productManufacture" type="text" value="Where is this product made?" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Size</td>
-                        <td><FormulateInput v-model="size" name="productSize" type="text" /></td>
+                        <td><input v-model="size" name="productSize" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Format</td>
-                        <td><FormulateInput v-model="format" name="productFormat" type="text" label="Downloadable or Shipped" /></td>
+                        <td><input v-model="format" name="productFormat" type="text" value="Downloadable or Shipped" /></td>
                     </tr>
                 </tbody>
             </table>
@@ -78,10 +78,10 @@
         <div id="accordionExample" class="accordion">
             <div class="accordion-item">
                 <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Content
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -93,7 +93,7 @@
                                         <td style="text-align: right;">Short Description</td>
                                         <td>
                                             <div class="form-check form-switch">
-                                                <FormulateInput type="textarea" v-model="short_description" label="Enter a short description" validation="required|max:50,length" validation-name="excerpt" error-behavior="live" :help="`Keep it under 50 characters. ${50 - value.length} left.`" />
+                                                <input type="textarea" v-model="short_description" value="Enter a short description" validation="required|max:50,length" validation-name="excerpt" error-behavior="live" :help="`Keep it under 50 characters. ${50 - value.length} left.`" />
                                             </div>
                                         </td>
                                     </tr>
@@ -101,7 +101,7 @@
                                         <td style="text-align: right;">Description</td>
                                         <td>
                                             <div class="form-check form-switch">
-                                                <vue-simplemde id="longDescription" v-model="content" />
+                                                <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>
                                             </div>
                                         </td>
                                     </tr>
@@ -113,24 +113,32 @@
             </div>
             <div class="accordion-item">
                 <h2 id="headingThree" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Images and Videos
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
-                        <td><FormulateInput type="image" name="headshot" v-model="image" label="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/></td>
+                        <td><div class="file-upload-wrapper">
+  <input
+    type="file"
+    id="input-file-now"
+    class="file-upload-input"
+    data-mdb-file-upload="file-upload"
+    data-mdb-accepted-extensions="image/*"
+  />
+</div></td>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 id="headingFour" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         Search Engine Optimization
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-mdb-parent="#accordionExample">
@@ -143,20 +151,20 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Title</td>
-                                        <td><FormulateInput v-model="meta_title" type="text" label="Product Url" required /></td>
+                                        <td><input v-model="meta_title" type="text" value="Product Url" required /></td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Keywords</td>
-                                        <td><FormulateInput v-model="meta_keywords" type="text" label="Product Keywords" /></td>
+                                        <td><input v-model="meta_keywords" type="text" value="Product Keywords" /></td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Description</td>
-                                        <td><FormulateInput
-  type="textarea" v-model="meta_description" label="Product Description" rows="10" cols="50" /></td>
+                                        <td><input
+  type="textarea" v-model="meta_description" value="Product Description" rows="10" cols="50" /></td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Product Url</td>
-                                        <td><FormulateInput v-model="meta_url" type="url" label="Product URL" /></td>
+                                        <td><input v-model="meta_url" type="url" value="Product URL" /></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -165,10 +173,10 @@
             </div>
             <div class="accordion-item">
                 <h2 id="headingFive" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                         Upload Product File(s)
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-mdb-parent="#accordionExample">
@@ -178,7 +186,7 @@
                 </div>
             </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

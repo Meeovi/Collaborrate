@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FormulateForm v-for="visit in visits" :key="visit.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="visit in visits" :key="visit.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>
@@ -9,7 +9,7 @@
               </th>
               <th scope="col" class="visitsAddOptions">
                 <li>
-                  <FormulateInput type="submit" label="Save" @click="addVisit" />
+                  <input type="submit" value="Save" @click="addVisit" />
                 </li>
               </th>
             </tr>
@@ -18,70 +18,70 @@
             <tr>
               <td style="text-align: right;">Username</td>
               <td>
-                <FormulateInput v-model="username" type="textarea" />{{ visits.username }}
+                <input v-model="username" type="textarea" />{{ visits.username }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Reason</td>
               <td>
-                <FormulateInput v-model="reason" type="text" required />{{ visits.reason }}
+                <input v-model="reason" type="text" required />{{ visits.reason }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Start Date</td>
               <td>
-                <FormulateInput v-model="start_date" type="text" />{{ visits.start_date }}
+                <input v-model="start_date" type="text" />{{ visits.start_date }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">End Date</td>
               <td>
-                <FormulateInput v-model="end_date" type="text" />{{ visits.end_date }}
+                <input v-model="end_date" type="text" />{{ visits.end_date }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Emergency</td>
               <td>
-                <FormulateInput v-model="emergency" type="text" />{{ visits.emergency }}
+                <input v-model="emergency" type="text" />{{ visits.emergency }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Location</td>
               <td>
-                <FormulateInput v-model="location" type="text" />{{ visits.location }}
+                <input v-model="location" type="text" />{{ visits.location }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Task</td>
               <td>
-                <FormulateInput v-model="task" type="text" />{{ visits.task }}
+                <input v-model="task" type="text" />{{ visits.task }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
               <td>
-                <vue-simplemde id="longDescription" v-model="content" />{{ visits.content }}
+                <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>{{ visits.content }}
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Meetings</td>
               <td>
                 <div class="form-wrapper">
-                  <FormulateForm>
-                    <FormulateInput type="group" name="meeting" :repeatable="true" label="Add Meetings"
-                      add-label="+ Add Meeting">
+                  <form>
+                    <button type="group" name="meeting" :repeatable="true" value="Add Meetings"
+                      add-value="+ Add Meeting">
                       <div class="reminder">
-                        <FormulateInput v-model="meeting" name="name" type="text" label="Meeting" />{{ visits.meeting }}
+                        <input v-model="meeting" name="name" type="text" value="Meeting" />{{ visits.meeting }}
                       </div>
-                    </FormulateInput>
-                  </FormulateForm>
+                    </button>
+                  </form>
                 </div>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

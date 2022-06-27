@@ -1,13 +1,13 @@
 /* eslint-disable camelcase */
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+        <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Category" @click="addCategory" /></a>
+            <input type="button" class="btn btn-warning" value="Save Category" @click="addCategory" /></a>
         </div>
       </nav>
       <br>
@@ -29,7 +29,7 @@
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Category Name</td>
-                        <td><FormulateInput v-model="name" type="text" required /></td>
+                        <td><input v-model="name" type="text" required /></td>
                     </tr>
                 </tbody>
             </table>
@@ -38,10 +38,10 @@
         <div id="accordionExample" class="accordion">
             <div class="accordion-item">
                 <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Content
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -65,24 +65,32 @@
             </div>
             <div class="accordion-item">
                 <h2 id="headingThree" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Images and Videos
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
-                        <FormulateInput type="image" name="headshot" v-model="image" label="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/>
+                        <div class="file-upload-wrapper">
+  <input
+    type="file"
+    id="input-file-now"
+    class="file-upload-input"
+    data-mdb-file-upload="file-upload"
+    data-mdb-accepted-extensions="image/*"
+  />
+</div>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 id="headingFour" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         Search Engine Optimization
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-mdb-parent="#accordionExample">
@@ -95,16 +103,16 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Title</td>
-                                        <td><FormulateInput v-model="meta_title" type="text" label="Product Url" required /></td>
+                                        <td><input v-model="meta_title" type="text" value="Product Url" required /></td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Keywords</td>
-                                        <td><FormulateInput v-model="meta_keywords" type="text" label="Product Keywords" /></td>
+                                        <td><input v-model="meta_keywords" type="text" value="Product Keywords" /></td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Description</td>
-                                        <td><FormulateInput
-  v-model="meta_description" type="textarea" label="Product Description" rows="10" cols="50" /></td>
+                                        <td><input
+  v-model="meta_description" type="textarea" value="Product Description" rows="10" cols="50" /></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -116,7 +124,7 @@
         </div>
         </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

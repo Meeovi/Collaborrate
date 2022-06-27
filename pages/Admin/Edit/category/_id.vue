@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 <template>
     <div>
-        <FormulateForm v-for="category in categories" :key="category.id"   method="POST" @submit.prevent>
+        <form v-for="category in categories" :key="category.id"   method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -9,14 +9,14 @@
                         <th>
                         </th>
                         <th scope="col" class="categoryAddOptions">
-                            <li><FormulateInput type="submit" label="Save" @click="addCategory" /></li>
+                            <li><input type="submit" value="Save" @click="addCategory" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Category Name</td>
-                        <td><FormulateInput type="text" required />{{ category.name }}</td>
+                        <td><input type="text" required />{{ category.name }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -25,10 +25,10 @@
         <div id="accordionExample" class="accordion">
             <div class="accordion-item">
                 <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Content
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -52,24 +52,24 @@
             </div>
             <div class="accordion-item">
                 <h2 id="headingThree" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Images and Videos
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
-                        <FormulateInput id="image" type="text" name="image" />{{ category.image }}
+                        <input id="image" type="text" name="image" />{{ category.image }}
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 id="headingFour" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         Search Engine Optimization
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-mdb-parent="#accordionExample">
@@ -82,16 +82,16 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Title</td>
-                                        <td><FormulateInput type="text" label="Product Url" required />{{ category.meta_title }}</td>
+                                        <td><input type="text" value="Product Url" required />{{ category.meta_title }}</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Keywords</td>
-                                        <td><FormulateInput type="text" label="Product Keywords" />{{ category.meta_keywords }}</td>
+                                        <td><input type="text" value="Product Keywords" />{{ category.meta_keywords }}</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Description</td>
-                                        <td><FormulateInput
-  type="textarea" label="Product Description" rows="10" cols="50" />{{ category.meta_description }}</td>
+                                        <td><input
+  type="textarea" value="Product Description" rows="10" cols="50" />{{ category.meta_description }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -99,7 +99,7 @@
                 </div>
             </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

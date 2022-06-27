@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="collection in collections" :key="collection.id" method="POST" @submit.prevent>
+        <form v-for="collection in collections" :key="collection.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,14 +8,14 @@
                         <th>
                         </th>
                         <th scope="col" class="collectionsAddOptions">
-                            <li><FormulateInput type="submit" label="Save" @click="addCollection" /></li>
+                            <li><input type="submit" value="Save" @click="addCollection" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Collection Name</td>
-                        <td><FormulateInput id="collectionsName" v-model="name" type="collectionsName" required />{{ collection.name }}</td>
+                        <td><input id="collectionsName" v-model="name" type="collectionsName" required />{{ collection.name }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -24,10 +24,10 @@
         <div id="accordionExample" class="accordion">
             <div class="accordion-item">
                 <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Content
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -39,8 +39,8 @@
                                         <td style="text-align: right;">Description</td>
                                         <td>
                                             <div class="form-check form-switch">
-                                                <FormulateInput
-  v-model="description" type="textarea" label="Product Description" rows="10" cols="50" />{{ collection.description }}
+                                                <input
+  v-model="description" type="textarea" value="Product Description" rows="10" cols="50" />{{ collection.description }}
                                             </div>
                                         </td>
                                     </tr>
@@ -52,24 +52,24 @@
             </div>
             <div class="accordion-item">
                 <h2 id="headingThree" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Images and Videos
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
-                        <td><FormulateInput type="image" upload-url="/media" name="headshot" label="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/>{{ collection.image }}</td>
+                        <td><input type="image" upload-url="/media" name="headshot" value="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/>{{ collection.image }}</td>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 id="headingFour" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         Search Engine Optimization
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-mdb-parent="#accordionExample">
@@ -82,16 +82,16 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Title</td>
-                                        <td><FormulateInput type="text" label="Product Url" required />{{ collection.meta_title }}</td>
+                                        <td><input type="text" value="Product Url" required />{{ collection.meta_title }}</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Keywords</td>
-                                        <td><FormulateInput type="text" label="Product Keywords" />{{ collection.meta_keywords }}</td>
+                                        <td><input type="text" value="Product Keywords" />{{ collection.meta_keywords }}</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;">Meta Description</td>
-                                        <td><FormulateInput
-  type="textarea" label="Product Description" rows="10" cols="50" />{{ collection.meta_description }}</td>
+                                        <td><input
+  type="textarea" value="Product Description" rows="10" cols="50" />{{ collection.meta_description }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -99,7 +99,7 @@
                 </div>
             </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

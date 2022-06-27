@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Quote" @click="addQuote" /></a>
+            <input type="button" class="btn btn-warning" value="Save Quote" @click="addQuote" /></a>
         </div>
       </nav>
       <br>
@@ -29,55 +29,55 @@
             <tr>
               <td style="text-align: right;">Title</td>
               <td>
-                <FormulateInput v-model="name" type="text" required />
+                <input v-model="name" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Opportunity</td>
               <td>
-                <FormulateInput v-model="opportunity" type="text" />
+                <input v-model="opportunity" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Valid Until</td>
               <td>
-                <FormulateInput v-model="valid_until" type="text" required />
+                <input v-model="valid_until" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Quote Stage</td>
               <td>
-                <FormulateInput v-model="quote_stage" type="text" required />
+                <input v-model="quote_stage" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Assigned To</td>
               <td>
-                <FormulateInput v-model="assigned_to" type="text" />
+                <input v-model="assigned_to" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Invoice Status</td>
               <td>
-                <FormulateInput v-model="invoice_status" type="text" />
+                <input v-model="invoice_status" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Payment Terms</td>
               <td>
-                <FormulateInput v-model="payment_terms" type="text" />
+                <input v-model="payment_terms" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Approval Status</td>
               <td>
-                <FormulateInput v-model="approval_status" type="text" />
+                <input v-model="approval_status" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Approval Issues:</td>
               <td>
-                <FormulateInput v-model="approval_issues" type="textarea" />
+                <input v-model="approval_issues" type="textarea" />
               </td>
             </tr>
           </tbody>
@@ -87,10 +87,10 @@
       <div id="accordionExample" class="accordion">
         <div class="accordion-item">
           <h2 id="headingOne" class="accordion-header">
-            <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+            <button class="accordion-button" type="button" data-mdb-toggle="collapse"
               data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Address Information
-            </FormulateInput>
+            </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
             data-mdb-parent="#accordionExample">
@@ -101,13 +101,13 @@
                         <tr>
                           <td style="text-align: right;">Account</td>
                           <td>
-                            <FormulateInput v-model="account" type="text" />
+                            <input v-model="account" type="text" />
                           </td>
                         </tr>
                         <tr>
                           <td style="text-align: right;">Contact</td>
                           <td>
-                            <FormulateInput v-model="contact" type="text" />
+                            <input v-model="contact" type="text" />
                           </td>
                         </tr>
                         </tbody>
@@ -119,31 +119,31 @@
                           <tr> 
                           <td style="text-align: right;">Street Address</td>
                           <td>
-                            <FormulateInput v-model="billing_street" type="text" />
+                            <input v-model="billing_street" type="text" />
                           </td>
                         </tr>
                         <tr>
                           <td style="text-align: right;">City</td>
                           <td>
-                            <FormulateInput v-model="billing_city" type="text" />
+                            <input v-model="billing_city" type="text" />
                           </td>
                         </tr>
                         <tr>
                           <td style="text-align: right;">State/Region</td>
                           <td>
-                            <FormulateInput v-model="billing_state" type="text" />
+                            <input v-model="billing_state" type="text" />
                           </td>
                         </tr>
                         <tr>
                           <td style="text-align: right;">Postal Code</td>
                           <td>
-                            <FormulateInput v-model="billing_postal" type="text" />
+                            <input v-model="billing_postal" type="text" />
                           </td>
                         </tr>
                         <tr>
                           <td style="text-align: right;">Country</td>
                           <td>
-                            <FormulateInput v-model="billing_country" type="text" />
+                            <input v-model="billing_country" type="text" />
                           </td>
                         </tr>
                   </tbody>
@@ -155,31 +155,31 @@
                           <tr> 
                           <td style="text-align: right;">Street Address</td>
                           <td>
-                            <FormulateInput v-model="shipping_street" type="text" />
+                            <input v-model="shipping_street" type="text" />
                           </td>
                         </tr>
                         <tr>
                           <td style="text-align: right;">City</td>
                           <td>
-                            <FormulateInput v-model="shipping_city" type="text" />
+                            <input v-model="shipping_city" type="text" />
                           </td>
                         </tr>
                         <tr>
                           <td style="text-align: right;">State/Region</td>
                           <td>
-                            <FormulateInput v-model="shipping_state" type="text" />
+                            <input v-model="shipping_state" type="text" />
                           </td>
                         </tr>
                         <tr>
                           <td style="text-align: right;">Postal Code</td>
                           <td>
-                            <FormulateInput v-model="shipping_postal" type="text" />
+                            <input v-model="shipping_postal" type="text" />
                           </td>
                         </tr>
                         <tr>
                           <td style="text-align: right;">Country</td>
                           <td>
-                            <FormulateInput v-model="shipping_country" type="text" />
+                            <input v-model="shipping_country" type="text" />
                           </td>
                         </tr>
                   </tbody>
@@ -190,10 +190,10 @@
         </div>
         <div class="accordion-item">
           <h2 id="headingFive" class="accordion-header">
-            <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+            <button class="accordion-button" type="button" data-mdb-toggle="collapse"
               data-mdb-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
               Line Items
-            </FormulateInput>
+            </button>
           </h2>
           <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
             data-mdb-parent="#accordionExample">
@@ -202,43 +202,43 @@
                 <tr>
                   <td style="text-align: right;">Currency</td>
                   <td>
-                    <FormulateInput v-model="currency" :options="{us: 'US Dollar:: $'}" type="select" />
+                    <input v-model="currency" :options="{us: 'US Dollar:: $'}" type="select" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Total:</td>
                   <td>
-                    <FormulateInput v-model="total" type="text" label="0.00"></FormulateInput>
+                    <input v-model="total" type="text" value="0.00" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Discount:</td>
                   <td>
-                    <FormulateInput v-model="discount" type="text" label="0.00"></FormulateInput>
+                    <input v-model="discount" type="text" value="0.00" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Subtotal:</td>
                   <td>
-                    <FormulateInput v-model="subtotal" type="text" label="0.00"></FormulateInput>
+                    <input v-model="subtotal" type="text" value="0.00" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Shipping:</td>
                   <td>
-                    <FormulateInput v-model="shipping" type="text" label="0.00"></FormulateInput>
+                    <input v-model="shipping" type="text" value="0.00" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Shipping Tax:</td>
                   <td>
-                    <FormulateInput v-model="shipping_tax" type="text" label="0.00"></FormulateInput>
+                    <input v-model="shipping_tax" type="text" value="0.00" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Grand Total:</td>
                   <td>
-                    <FormulateInput v-model="grand_total" type="text" label="0.00"></FormulateInput>
+                    <input v-model="grand_total" type="text" value="0.00" />
                   </td>
                 </tr>
               </tbody>
@@ -250,7 +250,7 @@
       </div>
       </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

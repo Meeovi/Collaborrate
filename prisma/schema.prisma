@@ -3,13 +3,19 @@ generator client {
   previewFeatures = ["fullTextSearch", "fullTextIndex", "filterJson"]
 }
 
-generator docs {
-  provider = "node node_modules/prisma-docs-generator"
-}
-
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+generator typegraphql {
+  provider = "typegraphql-prisma"
+  output   = "../prisma/generated/type-graphql"
+}
+
+generator graphql {
+  provider = "graphql-schema-generator"
+  createCRUD = "true"
 }
 
 model articles {

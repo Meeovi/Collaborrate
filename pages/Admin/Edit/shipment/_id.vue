@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="shipment in shipments" :key="shipment.id" method="POST" @submit.prevent>
+        <form v-for="shipment in shipments" :key="shipment.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,36 +8,36 @@
                         <th>
                         </th>
                         <th scope="col" class="shipmentsAddOptions">
-                            <li><FormulateInput type="submit" @click="addShipment" label="Save" /></li>
+                            <li><input type="submit" @click="addShipment" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Carrier Name</td>
-                        <td><FormulateInput id="shipmentsName" type="shipmentsName" required />{{ shipment.carrier_name }}</td>
+                        <td><input id="shipmentsName" type="shipmentsName" required />{{ shipment.carrier_name }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Transit Time</td>
-                        <td><FormulateInput id="shipmentsTime" type="shipmentsTime" required />{{ shipment.transit_time }}</td>
+                        <td><input id="shipmentsTime" type="shipmentsTime" required />{{ shipment.transit_time }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Speed grade</td>
-                        <td><FormulateInput id="shipmentsSpeed" type="text" />{{ shipment.speed_grade }}</td>
+                        <td><input id="shipmentsSpeed" type="text" />{{ shipment.speed_grade }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Tracking URL</td>
-                        <td><FormulateInput id="shipmentsTracking" type="text" />{{ shipment.tracking_url }}</td>
+                        <td><input id="shipmentsTracking" type="text" />{{ shipment.tracking_url }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Logo</td>
                         <td>
-                            <td><FormulateInput type="image" upload-url="/media" name="headshot" label="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/>{{ shipment.image }}</td>
+                            <td><input type="image" upload-url="/media" name="headshot" value="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/>{{ shipment.image }}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

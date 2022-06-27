@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-deepdive"><button type="button" class="btn btn-warning">Create new Deep Dive</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-deepdive"><input type="button" class="btn btn-warning">Create new Deep Dive</button></a>
         
 </div>
 </nav>

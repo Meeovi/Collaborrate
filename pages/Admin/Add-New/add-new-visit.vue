@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Visit" @click="addVisit" /></a>
+            <input type="button" class="btn btn-warning" value="Save Visit" @click="addVisit" /></a>
         </div>
       </nav>
       <br>
@@ -29,63 +29,63 @@
                     <tr>
                       <td style="text-align: right;">Username</td>
                       <td>
-                        <FormulateInput v-model="username" type="textarea" />
+                        <input v-model="username" type="textarea" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Reason</td>
                       <td>
-                        <FormulateInput v-model="reason" type="text" required />
+                        <input v-model="reason" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Start Date</td>
                       <td>
-                        <FormulateInput v-model="start_date" type="text" />
+                        <input v-model="start_date" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">End Date</td>
                       <td>
-                        <FormulateInput v-model="end_date" type="text" />
+                        <input v-model="end_date" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Emergency</td>
                       <td>
-                        <FormulateInput v-model="emergency" type="text" />
+                        <input v-model="emergency" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Location</td>
                       <td>
-                        <FormulateInput v-model="location" type="text" />
+                        <input v-model="location" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Task</td>
                       <td>
-                        <FormulateInput v-model="task" type="text" />
+                        <input v-model="task" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <vue-simplemde id="longDescription" v-model="content" />
+                        <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Meetings</td>
                       <td>
                         <div class="form-wrapper">
-                          <FormulateForm>
-                            <FormulateInput type="group" name="meeting" :repeatable="true" label="Add Meetings"
-                              add-label="+ Add Meeting">
+                          <form>
+                            <button type="group" name="meeting" :repeatable="true" value="Add Meetings"
+                              add-value="+ Add Meeting">
                               <div class="reminder">
-                                <FormulateInput v-model="meeting" name="name" type="text" label="Meeting" />
+                                <input v-model="meeting" name="name" type="text" value="Meeting" />
                               </div>
-                            </FormulateInput>
-                          </FormulateForm>
+                            </button>
+                          </form>
                         </div>
                       </td>
                     </tr>
@@ -96,7 +96,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-knowledgebase"><FormulateInput type="button" label="Create New Knowledge"></FormulateInput></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-knowledgebase"><input type="button" class="btn btn-warning" value="Create New Knowledge" /></a>
       </div>
 </nav>
 <br>

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save FullFillment" @click="addFullFillment" /></a>
+            <input type="button" class="btn btn-warning" value="Save FullFillment" @click="addFullFillment" /></a>
         </div>
       </nav>
       <br>
@@ -29,80 +29,80 @@
                     <tr>
                       <td style="text-align: right;">Pickup</td>
                       <td>
-                        <FormulateInput v-model="pickup" name="fullfillmentPickup" type="checkbox"
-                          label="Check this box if this fullfillment allows pickups" />
+                        <input v-model="pickup" name="fullfillmentPickup" type="checkbox"
+                          value="Check this box if this fullfillment allows pickups" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Stock</td>
                       <td>
-                        <FormulateInput v-model="stock" name="fullfillmentStock" type="text" />
+                        <input v-model="stock" name="fullfillmentStock" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Company Name</td>
                       <td>
-                        <FormulateInput v-model="company" name="fullfillmentCompanyName" type="text" />
+                        <input v-model="company" name="fullfillmentCompanyName" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">FullFillment Name</td>
                       <td>
-                        <FormulateInput v-model="name" type="text" required />
+                        <input v-model="name" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Phone Number</td>
                       <td>
-                        <FormulateInput v-model="phone" type="text" placeholder="#" />
+                        <input v-model="phone" type="text" placeholder="#" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Shipping Zones</td>
                       <td>
-                        <FormulateInput v-model="shipping_zones" name="fullfillmentShippingZones" type="text" />
+                        <input v-model="shipping_zones" name="fullfillmentShippingZones" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Address</td>
                       <td>
-                        <FormulateInput v-model="address" type="text" />
+                        <input v-model="address" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Address Line 2</td>
                       <td>
-                        <FormulateInput v-model="address_two" type="text" name="addressTwo" />
+                        <input v-model="address_two" type="text" name="addressTwo" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">City</td>
                       <td>
-                        <FormulateInput v-model="city" type="text" />
+                        <input v-model="city" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">State</td>
                       <td>
-                        <FormulateInput v-model="state" type="text" />
+                        <input v-model="state" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Country Area</td>
                       <td>
-                        <FormulateInput v-model="country_area" name="fullfillmentCountryArea" type="text" />
+                        <input v-model="country_area" name="fullfillmentCountryArea" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Country</td>
                       <td>
-                        <FormulateInput v-model="country" name="fullfillmentCountry" type="text" />
+                        <input v-model="country" name="fullfillmentCountry" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Zipcode</td>
                       <td>
-                        <FormulateInput v-model="zipcode" name="fullfillmentZipcode" type="text" />
+                        <input v-model="zipcode" name="fullfillmentZipcode" type="text" />
                       </td>
                     </tr>
                   </tbody>
@@ -112,7 +112,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

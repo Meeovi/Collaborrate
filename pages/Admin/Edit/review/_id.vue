@@ -1,10 +1,10 @@
 <template>
   <div>
-    <FormulateForm v-for="review in reviews" :key="review.id"  method="POST" @submit.prevent>
+    <form v-for="review in reviews" :key="review.id"  method="POST" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><FormulateInput type="reset" class="btn btn-warning" label="Reset" /></a>
-          <a class="navbar-brand"><FormulateInput type="button" @click="addReview" label="Save Review" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="button" class="btn btn-warning" @click="addReview" value="Save Review" /></a>
         </div>
       </nav>
       <br>
@@ -27,15 +27,15 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">First Name</td>
-                      <td><FormulateInput v-model="first_name" type="text" />{{ review.first_name }}</td>
+                      <td><input v-model="first_name" type="text" />{{ review.first_name }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Last Name</td>
-                      <td><FormulateInput v-model="last_name" type="text" />{{ review.last_name }}</td>
+                      <td><input v-model="last_name" type="text" />{{ review.last_name }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Website</td>
-                      <td><FormulateInput v-model="website" id="websites" name="websites" type="url" />{{ review.websites }}
+                      <td><input v-model="website" id="websites" name="websites" type="url" />{{ review.websites }}
                       </td>
                     </tr>
                     <tr>
@@ -51,7 +51,7 @@
           <!-- Tab content -->
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

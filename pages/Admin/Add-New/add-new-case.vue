@@ -1,12 +1,12 @@
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+        <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Case" @click="addCase" /></a>
+            <input type="button" class="btn btn-warning" value="Save Case" @click="addCase" /></a>
         </div>
       </nav>
       <br>
@@ -28,39 +28,39 @@
                 <tbody>
                     <tr>
                         <td style="text-align: right;">State</td>
-                        <td><FormulateInput v-model="state" type="text"  /></td>
+                        <td><input v-model="state" type="text"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Type</td>
-                        <td><FormulateInput v-model="type" type="text"  /></td>
+                        <td><input v-model="type" type="text"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Subject</td>
-                        <td><FormulateInput v-model="subject" type="text"  /></td>
+                        <td><input v-model="subject" type="text"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Description</td>
-                        <td><FormulateInput v-model="description" type="textarea"  /></td>
+                        <td><input v-model="description" type="textarea"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Resolution</td>
-                        <td><FormulateInput v-model="resolution" type="textarea"  /></td>
+                        <td><input v-model="resolution" type="textarea"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Assigned To</td>
-                        <td><FormulateInput v-model="assigned_to" type="text"  /></td>
+                        <td><input v-model="assigned_to" type="text"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Priority</td>
-                        <td><FormulateInput v-model="priority" type="text"  /></td>
+                        <td><input v-model="priority" type="text"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Status</td>
-                        <td><FormulateInput v-model="status" type="text"  /></td>
+                        <td><input v-model="status" type="text"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Account Name</td>
-                        <td><FormulateInput v-model="account_name" type="text"  /></td>
+                        <td><input v-model="account_name" type="text"  /></td>
                     </tr>
                 </tbody>
             </table>
@@ -69,7 +69,7 @@
                 </div>
               </div>
               </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

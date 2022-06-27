@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Permission" @click="addPermission" /></a>
+            <input type="button" class="btn btn-warning" value="Save Permission" @click="addPermission" /></a>
         </div>
       </nav>
       <br>
@@ -29,37 +29,37 @@
                     <tr>
                       <td style="text-align: right;">Name</td>
                       <td>
-                        <FormulateInput v-model="update" type="text" />
+                        <input v-model="update" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <FormulateInput v-model="content" type="textarea" />
+                        <input v-model="content" type="textarea" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Create</td>
                       <td>
-                        <FormulateInput v-model="create" type="text" />
+                        <input v-model="create" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Read</td>
                       <td>
-                        <FormulateInput v-model="read" type="text" />
+                        <input v-model="read" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Update</td>
                       <td>
-                        <FormulateInput v-model="update" type="text" />
+                        <input v-model="update" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Delete</td>
                       <td>
-                        <FormulateInput v-model="Delete" type="text" />
+                        <input v-model="Delete" type="text" />
                       </td>
                     </tr>
                     <tr class="col-lg-12">
@@ -87,7 +87,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

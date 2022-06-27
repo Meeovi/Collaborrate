@@ -1,10 +1,10 @@
 <template>
   <div>
-    <FormulateForm v-for="newsletter in newsletters" :key="newsletter.id" method="POST" @submit.prevent>
+    <form v-for="newsletter in newsletters" :key="newsletter.id" method="POST" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><FormulateInput type="reset" class="btn btn-warning" label="Reset" /></a>
-          <a class="navbar-brand"><FormulateInput type="button" @click="addNewsletter" label="Save Newsletter" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="button" class="btn btn-warning" @click="addNewsletter" value="Save Newsletter" /></a>
         </div>
       </nav>
       <br>
@@ -27,23 +27,23 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Customer First Name</td>
-                      <td><FormulateInput type="text" />{{ newsletter.customer_first_name }}</td>
+                      <td><input type="text" />{{ newsletter.customer_first_name }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Cusotmer Last Name</td>
-                      <td><FormulateInput type="text" required />{{ newsletter.customer_last_name }}</td>
+                      <td><input type="text" required />{{ newsletter.customer_last_name }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Email</td>
-                      <td><FormulateInput type="text" required />{{ newsletter.email }}</td>
+                      <td><input type="text" required />{{ newsletter.email }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Store</td>
-                      <td><FormulateInput type="text" />{{ newsletter.store }}</td>
+                      <td><input type="text" />{{ newsletter.store }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Website</td>
-                      <td><FormulateInput id="websites" name="websites" type="url" />{{ newsletter.websites }}
+                      <td><input id="websites" name="websites" type="url" />{{ newsletter.websites }}
                       </td>
                     </tr>
                   </tbody>
@@ -54,7 +54,7 @@
           <!-- Tab content -->
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

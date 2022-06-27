@@ -1,12 +1,12 @@
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+        <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Return" @click="addReturn" /></a>
+            <input type="button" class="btn btn-warning" value="Save Return" @click="addReturn" /></a>
         </div>
       </nav>
       <br>
@@ -29,21 +29,21 @@
                     <tr>
                         <td style="text-align: right;">Returns Name</td>
                         <td>
-                            <FormulateInput id="returnsName" v-model="name" type="returnsName" required />
+                            <input id="returnsName" v-model="name" type="returnsName" required />
                             <p for="name">Name of the return</p>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Time limit of validity</td>
                         <td>
-                            <FormulateInput id="returnsName" v-model="validity" type="returnsName" required />
+                            <input id="returnsName" v-model="validity" type="returnsName" required />
                             <p for="validity">How many days after the delivery date does the customer have to return a product?</p>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Returns prefix</td>
                         <td>
-                            <FormulateInput id="returnsName" v-model="return_prefix" type="returnsName" required />
+                            <input id="returnsName" v-model="return_prefix" type="returnsName" required />
                             <p for="returnsPrefix">Prefix used for returns name (e.g. RE00001).</p>
                         </td>
                     </tr>
@@ -54,7 +54,7 @@
         </div>
         </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

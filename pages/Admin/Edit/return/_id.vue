@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="returns in returns" :key="returns.id" method="POST" @submit.prevent>
+        <form v-for="returns in returns" :key="returns.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,7 +8,7 @@
                         <th>
                         </th>
                         <th scope="col" class="returnsAddOptions">
-                            <li><FormulateInput type="submit" @click="addReturn" label="Save" /></li>
+                            <li><input type="submit" @click="addReturn" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>
@@ -16,28 +16,28 @@
                     <tr>
                         <td style="text-align: right;">Returns Name</td>
                         <td>
-                            <FormulateInput id="returnsName" type="returnsName" required />{{ returns.name }}
+                            <input id="returnsName" type="returnsName" required />{{ returns.name }}
                             <p for="name">Name of the return</p>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Time limit of validity</td>
                         <td>
-                            <FormulateInput id="returnsName" type="returnsName" required />{{ returns.name }}
+                            <input id="returnsName" type="returnsName" required />{{ returns.name }}
                             <p for="validity">How many days after the delivery date does the customer have to return a product?</p>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Returns prefix</td>
                         <td>
-                            <FormulateInput id="returnsName" type="returnsName" required />{{ returns.name }}
+                            <input id="returnsName" type="returnsName" required />{{ returns.name }}
                             <p for="returnsPrefix">Prefix used for returns name (e.g. RE00001).</p>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

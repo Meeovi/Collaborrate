@@ -3,7 +3,7 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/admin/add-new/add-new-permission">
-          <button type="button" class="btn btn-warning">Create New Permission</button>
+          <input type="button" class="btn btn-warning" value="Create New Permission" />
         </a>
 
       </div>
@@ -28,13 +28,13 @@
             <td>{{ permissions.users }}</td>
             <td>{{ permissions.name }}</td>
             <td>
-              <FormulateInput type="checkbox" disabled />{{ permissions.create }}</td>
+              <input type="checkbox" disabled />{{ permissions.create }}</td>
             <td>
-              <FormulateInput type="checkbox" disabled />{{ permissions.read }}</td>
+              <input type="checkbox" disabled />{{ permissions.read }}</td>
             <td>
-              <FormulateInput type="checkbox" disabled />{{ permissions.update }}</td>
+              <input type="checkbox" disabled />{{ permissions.update }}</td>
             <td>
-              <FormulateInput type="checkbox" disabled />{{ permissions.delete }}</td>
+              <input type="checkbox" disabled />{{ permissions.delete }}</td>
             <td>{{ permissions.role }}</td>
             <td>{{ permissions.created_at }}</td>
             <td><a :href="`/admin/edit/permission/${permissions.id}`"><span class="fas fa-pencil"></span></a></td>

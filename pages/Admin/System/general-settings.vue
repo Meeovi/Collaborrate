@@ -3,11 +3,11 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/admin/system/import -management">
-          <button type="button" class="btn btn-warning">import  Data</button>
+          <input type="button" class="btn btn-warning">import  Data</button>
         </a>
         <a class="navbar-brand" href="/admin/system/export-management">
-          <FormulateInput type="button" style="float:right; right: 15px; position: absolute;">Export Data
-          </FormulateInput>
+          <input type="button" class="btn btn-warning" style="float:right; right: 15px; position: absolute;">Export Data
+          </button>
         </a>
       </div>
     </nav>

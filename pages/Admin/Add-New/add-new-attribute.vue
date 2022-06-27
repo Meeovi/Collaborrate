@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Attribute" @click="addAttribute" /></a>
+            <input type="button" class="btn btn-warning" value="Save Attribute" @click="addAttribute" /></a>
         </div>
       </nav>
       <br>
@@ -29,37 +29,37 @@
                 <tr>
                   <td style="text-align: right;">Attribute Name</td>
                   <td>
-                    <FormulateInput id="attributesLabel" v-model="default_label" type="text" required />
+                    <input id="attributesLabel" v-model="default_label" type="text" required />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Attribute Code</td>
                   <td>
-                    <FormulateInput id="attributesCode" v-model="attribute_code" type="text" label="This is used internally. Make sure you don’t use spaces"  />
+                    <input id="attributesCode" v-model="attribute_code" type="text" value="This is used internally. Make sure you don’t use spaces"  />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Default Value</td>
                   <td>
-                    <FormulateInput id="attributesValue" v-model="attribute_value" type="text" />
+                    <input id="attributesValue" v-model="attribute_value" type="text" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Meta Name</td>
                   <td>
-                    <FormulateInput id="attributesValue" v-model="meta_name" type="text" label="Used in Search Engine Optimization" />
+                    <input id="attributesValue" v-model="meta_name" type="text" value="Used in Search Engine Optimization" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Meta URL</td>
                   <td>
-                    <FormulateInput id="attributesValue" v-model="meta_url" type="text" label="Used in Search Engine Optimization"  />
+                    <input id="attributesValue" v-model="meta_url" type="text" value="Used in Search Engine Optimization"  />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Meta Description</td>
                   <td>
-                    <FormulateInput id="attributesValue" v-model="meta_description" type="text" label="Used in Search Engine Optimization"  />
+                    <input id="attributesValue" v-model="meta_description" type="text" value="Used in Search Engine Optimization"  />
                   </td>
                 </tr>
               </tbody>
@@ -81,22 +81,22 @@
                 <tr>
                   <td style="text-align: right;">Attribute Class</td>
                   <td>
-                    <FormulateInput id="attributesAttributeClass" v-model="attribute_class" type="radio" :options="{first: 'Product Attribute', second: 'Content Attribute'}" />
+                    <input id="attributesAttributeClass" v-model="attribute_class" type="radio" :options="{first: 'Product Attribute', second: 'Content Attribute'}" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Storefront Properties</td>
                   <td>
-                    <FormulateInput id="attributesFacetedNavigation" v-model="faceted_navigation" type="checkbox" label="Use in Faceted Navigation" />
-                    <FormulateInput id="attributesPosition" v-model="position" type="text" label="Position in faceted navigation" />
-                    <FormulateInput id="attributesPublic" v-model="isPublic" type="checkbox" label="Check to make public" />
+                    <input id="attributesFacetedNavigation" v-model="faceted_navigation" type="checkbox" value="Use in Faceted Navigation" />
+                    <input id="attributesPosition" v-model="position" type="text" value="Position in faceted navigation" />
+                    <input id="attributesPublic" v-model="isPublic" type="checkbox" value="Check to make public" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Dashboard Properties</td>
                   <td>
-                    <FormulateInput id="attributesFilterOptions" v-model="filter_options" type="checkbox" label="Use in Filtering" />
-                    <FormulateInput id="attributesColumnOptions" v-model="column_options" type="checkbox" label="Add to Column Options" />
+                    <input id="attributesFilterOptions" v-model="filter_options" type="checkbox" value="Use in Filtering" />
+                    <input id="attributesColumnOptions" v-model="column_options" type="checkbox" value="Add to Column Options" />
                   </td>
                 </tr>
               </tbody>
@@ -106,7 +106,7 @@
         </div>
         </div>
         </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

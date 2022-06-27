@@ -8,8 +8,6 @@ import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
 import '..\\static\\styles\\styles.css'
 
-import '..\\node_modules\\simplemde\\dist\\simplemde.min.css'
-
 import _5fa3735e from '..\\layouts\\dashboard.vue'
 import _6f6c098b from '..\\layouts\\default.vue'
 import _dc54f4dc from '..\\layouts\\nologin.vue'

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="segment in segments" :key="segment.id"  method="POST" @submit.prevent>
+        <form v-for="segment in segments" :key="segment.id"  method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,29 +8,29 @@
                         <th>
                         </th>
                         <th scope="col" class="segmentAddOptions">
-                            <li><FormulateInput type="reset" label="Reset" /></li>
-                            <li><FormulateInput type="submit" @click="addSegment" label="Save" /></li>
+                            <li><input type="reset" value="Reset" /></li>
+                            <li><input type="submit" @click="addSegment" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Segment Name</td>
-                        <td><FormulateInput type="text" required />{{ segment.name }}</td>
+                        <td><input type="text" required />{{ segment.name }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Description</td>
-                        <td><FormulateInput
-  type="textarea" id="description" name="description" cols="50" rows="10" label="Add a short Description" />{{ segment.description }}</td>
+                        <td><input
+  type="textarea" id="description" name="description" cols="50" rows="10" value="Add a short Description" />{{ segment.description }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Assigned to Website</td>
-                        <td><FormulateInput name="website" type="url" />{{ segment.website }}</td>
+                        <td><input name="website" type="url" />{{ segment.website }}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

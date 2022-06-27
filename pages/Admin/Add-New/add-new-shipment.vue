@@ -1,12 +1,12 @@
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+        <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Shipment" @click="addShipment" /></a>
+            <input type="button" class="btn btn-warning" value="Save Shipment" @click="addShipment" /></a>
         </div>
       </nav>
       <br>
@@ -28,23 +28,31 @@
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Carrier Name</td>
-                        <td><FormulateInput id="shipmentsName" v-model="carrier_name" type="shipmentsName" required /></td>
+                        <td><input id="shipmentsName" v-model="carrier_name" type="shipmentsName" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Transit Time</td>
-                        <td><FormulateInput id="shipmentsTime" v-model="transit_time" type="shipmentsTime" required /></td>
+                        <td><input id="shipmentsTime" v-model="transit_time" type="shipmentsTime" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Speed grade</td>
-                        <td><FormulateInput id="shipmentsSpeed" v-model="speed_grade" type="text" /></td>
+                        <td><input id="shipmentsSpeed" v-model="speed_grade" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Tracking URL</td>
-                        <td><FormulateInput id="shipmentsTracking" v-model="tracking_url" type="text" /></td>
+                        <td><input id="shipmentsTracking" v-model="tracking_url" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Logo</td>
-                            <td><FormulateInput type="image" name="headshot" v-model="image" label="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/></td>
+                            <td><div class="file-upload-wrapper">
+  <input
+    type="file"
+    id="input-file-now"
+    class="file-upload-input"
+    data-mdb-file-upload="file-upload"
+    data-mdb-accepted-extensions="image/*"
+  />
+</div></td>
                     </tr>
                 </tbody>
             </table>
@@ -53,7 +61,7 @@
         </div>
         </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

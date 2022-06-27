@@ -32,24 +32,22 @@ export default {
     script: [
       { src: '/mdb/plugins/js/all.min.js', mode: 'client'},
       { src: '/mdb/js/mdb.min.js', mode: 'client'},
-      { src: 'https://editor.unlayer.com/embed.js', ssr: false },
     ]
   },
 
   css: [
     '~/static/styles/styles.css',
-    'simplemde/dist/simplemde.min.css',
   ],
 
   script: [
   ],
 
   plugins: [
-    { src: '~/plugins/extensions/simplemde.js', ssr: false },
+    { src: '~/plugins/extensions/postgrest.js', ssr: false },
+    { src: '~/plugins/extensions/mdb.client.js', ssr: false },
     { src: '~/plugins/main.js', ssr: false },
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
     { src: '~/plugins/ecommerce/pa-dss.js', ssr: false },
-    { src: '~/plugins/client.js', ssr: false },
     // { src: '~/plugins/extensions/email.js', ssr: false },
     { src: '~/plugins/upload.js', ssr: false },
   ],
@@ -58,7 +56,6 @@ export default {
 
   buildModules: [
     '@nuxtjs/moment',
-    '@braid/vue-formulate/nuxt',
     'nuxt-webpack-optimisations',
     '@nuxtjs/composition-api/module',
   ],
@@ -70,6 +67,7 @@ export default {
     '@nuxtjs/apollo',
     '@nuxt/http',
     '@nuxtjs/i18n',
+    '@nuxt/image',
     // '@nuxtjs/recaptcha',
     '@nuxt/image',
     'nuxt-client-init-module',
@@ -78,12 +76,18 @@ export default {
     'nuxt-stripe-module',
     '@nuxtjs/lunr-module',
     'nuxt-highcharts',
+    ['nuxt-supabase', { supabaseUrl: 'YOUR_SUPABASE_URL', supabaseKey: 'YOUR_SUPABASE_KEY'}],
   ],
 
 // Modules Options -----------------------------------------------------------------------------------------------
 
 stripe: {
   publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+},
+
+image: {
+  provider: 'netlify',
+  domains: ['']
 },
 
 firebase: {
@@ -154,40 +158,11 @@ netlify: {
   
   apollo: {
     clientConfigs: {
-      default: '~/apollo/clientConfig.js',
-      alternativeClient: {
-        httpEndpoint: 'http://0.0.0.0:8000',
-
-        browserHttpEndpoint: '/api/graphiql',
-
-        httpLinkOptions: {
-          credentials: 'same-origin'
-        },
-
-        wsEndpoint: 'ws://0.0.0.0:8000',
-        tokenName: 'apollo-token',
-        persisting: false,
-        websocketsOnly: false
-      },
-    },
-    
-    defaultOptions: {
-      $query: {
-        loadingKey: 'loading',
-        fetchPolicy: 'cache-and-network',
-      },
-    },
-    
-    errorHandler: '~/plugins/apollo-error-handler.js',
-    authenticationType: 'Bearer', 
-    tokenName: 'apollo-token',
-    cookieAttributes: {
-      expires: 7,
-      path: '/',
-      domain: 'example.com',
-      secure: false,
-    },
-  },
+      default: {
+        httpEndpoint: 'http://localhost:5000/graphiql',
+      }
+  }
+},
 
   sentry: {
     dsn: 'https://b54ea5cfd2cc4c23b49c3d5c6fbbd351@o996770.ingest.sentry.io/6140531',
@@ -203,18 +178,14 @@ netlify: {
 
   content: {},
 
-  formulate: {
-    configPath: '~/formulate.config.js'
-  },
-
   /* recaptcha: {
         siteKey: process.env.RECAPTCHA_SITE_KEY,
         version: 3
-      }, */
+      }, 
 
   serverMiddleware: [
     '~/config/postgraphile.config.js'
-  ],
+  ], */
   
   build: {
     extend(config, ctx) {},

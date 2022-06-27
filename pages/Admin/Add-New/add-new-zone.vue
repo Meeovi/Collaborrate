@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Zone" @click="addZone" /></a>
+            <input type="button" class="btn btn-warning" value="Save Zone" @click="addZone" /></a>
         </div>
       </nav>
       <br>
@@ -29,25 +29,25 @@
                     <tr>
                       <td style="text-align: right;">Code</td>
                       <td>
-                        <FormulateInput v-model="code" type="text" required label="Example would be US, WORLD, etc." />
+                        <input v-model="code" type="text" required value="Example would be US, WORLD, etc." />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Type</td>
                       <td>
-                        <FormulateInput v-model="type" type="text" required :options="{first: 'Country', second: 'Province', third: 'Zone'}" label="What type of zone is this?" />
+                        <input v-model="type" type="text" required :options="{first: 'Country', second: 'Province', third: 'Zone'}" value="What type of zone is this?" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Name</td>
                       <td>
-                        <FormulateInput v-model="name" type="text" required />
+                        <input v-model="name" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Scope</td>
                       <td>
-                        <FormulateInput v-model="scope" type="select" label="What is this zone used for?"
+                        <input v-model="scope" type="select" value="What is this zone used for?"
                           :options="{first: 'Shipping', second: 'Tax'}" />
                       </td>
                     </tr>
@@ -66,7 +66,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

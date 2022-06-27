@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Reward" @click="addReward" /></a>
+            <input type="button" class="btn btn-warning" value="Save Reward" @click="addReward" /></a>
         </div>
       </nav>
       <br>
@@ -29,55 +29,55 @@
             <tr>
               <td style="text-align: right;">Expiration</td>
               <td>
-                <FormulateInput v-model="expiration" type="datetime-local" />
+                <input v-model="expiration" type="datetime-local" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Reward Name</td>
               <td>
-                <FormulateInput v-model="name" type="text" required />
+                <input v-model="name" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Customers</td>
               <td>
-                <FormulateInput v-model="customers" type="text" placeholder="#" />
+                <input v-model="customers" type="text" placeholder="#" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Products</td>
               <td>
-                <FormulateInput v-model="products" type="text" />
+                <input v-model="products" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Coupons</td>
               <td>
-                <FormulateInput v-model="coupons" type="text" />
+                <input v-model="coupons" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Users</td>
               <td>
-                <FormulateInput v-model="users" type="text" name="addressTwo" />
+                <input v-model="users" type="text" name="addressTwo" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Category</td>
               <td>
-                <FormulateInput v-model="categories" type="text" />
+                <input v-model="categories" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Level</td>
               <td>
-                <FormulateInput v-model="level" type="text" />
+                <input v-model="level" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Articles</td>
               <td>
-                <FormulateInput v-model="articles" type="text" />
+                <input v-model="articles" type="text" />
               </td>
             </tr>
           </tbody>
@@ -87,7 +87,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

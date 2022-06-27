@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="invoice in invoices" :key="invoice.id" method="POST" @submit.prevent>
+        <form v-for="invoice in invoices" :key="invoice.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,59 +8,59 @@
                         <th>
                         </th>
                         <th scope="col" class="eventAddOptions">
-                            <li style="display:inline-block;"><FormulateInput type="button" @click="addInvoice" label="Save" /></li>
+                            <li style="display:inline-block;"><input type="button" class="btn btn-warning" @click="addInvoice" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Customer Name</td>
-                        <td><FormulateInput name="customerName" type="text" label="Customer Name on the Invoice" required />{{ invoice.customer_name }}</td>
+                        <td><input name="customerName" type="text" value="Customer Name on the Invoice" required />{{ invoice.customer_name }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Bill to Name</td>
-                        <td><FormulateInput name="orderNumber" type="text" label="Who should we bill to?" required />{{ invoice.bill_to_name }}</td>
+                        <td><input name="orderNumber" type="text" value="Who should we bill to?" required />{{ invoice.bill_to_name }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Customer Email</td>
-                        <td><FormulateInput type="text" required label="Customer's Email used to email the invoice" />{{ invoice.email }}</td>
+                        <td><input type="text" required value="Customer's Email used to email the invoice" />{{ invoice.email }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Billing Address</td>
-                        <td><FormulateInput type="text" label="Billing address for this invoice" required />{{ invoice.billing_address }}</td>
+                        <td><input type="text" value="Billing address for this invoice" required />{{ invoice.billing_address }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Customer Group</td>
-                        <td><FormulateInput type="text" label="Group this customer belongs to" />{{ invoice.customer_group }}</td>
+                        <td><input type="text" value="Group this customer belongs to" />{{ invoice.customer_group }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Shipping Information</td>
-                        <td><FormulateInput name="shippingInformation" type="text" label="Shipping service used for shipping" />{{ invoice.shipping_information }}</td>
+                        <td><input name="shippingInformation" type="text" value="Shipping service used for shipping" />{{ invoice.shipping_information }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Shipping and Handling</td>
-                        <td><FormulateInput name="shippingHandling" type="text" label="How much does shipping cost?" />{{ invoice.shipping_and_handling }}</td>
+                        <td><input name="shippingHandling" type="text" value="How much does shipping cost?" />{{ invoice.shipping_and_handling }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Shipping Address</td>
-                        <td><FormulateInput name="shippingInformation" type="text" label="Where is this the address where the products are shipped to?" />{{ invoice.shipping_address }}</td>
+                        <td><input name="shippingInformation" type="text" value="Where is this the address where the products are shipped to?" />{{ invoice.shipping_address }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Payment Method</td>
-                        <td><FormulateInput name="payment" type="text" label="What payment method is used for this transaction?" />{{ invoice.payment_method }}</td>
+                        <td><input name="payment" type="text" value="What payment method is used for this transaction?" />{{ invoice.payment_method }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Grand Total Base</td>
-                        <td><FormulateInput name="grandTotal" type="text" label="Amount of transaction with tax excluded" />{{ invoice.grand_total_base }}</td>
+                        <td><input name="grandTotal" type="text" value="Amount of transaction with tax excluded" />{{ invoice.grand_total_base }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Grand Total Purchased</td>
-                        <td><FormulateInput name="grandTotal" type="text" label="Amount of transaction with tax included" />{{ invoice.grand_total_purchased }}</td>
+                        <td><input name="grandTotal" type="text" value="Amount of transaction with tax included" />{{ invoice.grand_total_purchased }}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

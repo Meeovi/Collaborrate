@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Checklist" @click="addChecklist" /></a>
+            <input type="button" class="btn btn-warning" value="Save Checklist" @click="addChecklist" /></a>
         </div>
       </nav>
       <br>
@@ -29,70 +29,70 @@
             <tr>
               <td style="text-align: right;">Username</td>
               <td>
-                <FormulateInput v-model="username" type="textarea" />
+                <input v-model="username" type="textarea" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Regional Manager</td>
               <td>
-                <FormulateInput v-model="regional_manager" type="text" required />
+                <input v-model="regional_manager" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Manager</td>
               <td>
-                <FormulateInput v-model="manager" type="text" />
+                <input v-model="manager" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Start Date</td>
               <td>
-                <FormulateInput v-model="start_date" type="text" />
+                <input v-model="start_date" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">End Date</td>
               <td>
-                <FormulateInput v-model="end_date" type="text" />
+                <input v-model="end_date" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Region</td>
               <td>
-                <FormulateInput v-model="region" type="text" />
+                <input v-model="region" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Location</td>
               <td>
-                <FormulateInput v-model="location" type="text" />
+                <input v-model="location" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Country</td>
               <td>
-                <FormulateInput v-model="country" type="text" />
+                <input v-model="country" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
               <td>
                 <div class="form-wrapper">
-                  <FormulateForm>
-                    <FormulateInput type="group" name="description" :repeatable="true" label="Add Notes"
-                      add-label="+ Add Description">
+                  <form>
+                    <button type="group" name="description" :repeatable="true" value="Add Notes"
+                      add-value="+ Add Description">
                       <div class="description">
-                        <FormulateInput v-model="description" name="name" type="text" label="Description" />
+                        <input v-model="description" name="name" type="text" value="Description" />
                       </div>
-                    </FormulateInput>
-                  </FormulateForm>
+                    </button>
+                  </form>
                 </div>
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Media</td>
               <td>
-                <FormulateInput v-model="media" type="file" label="Upload image, video, document, etc" />
+                <input v-model="media" type="image" value="Upload image, video, document, etc" />
               </td>
             </tr>
           </tbody>
@@ -102,7 +102,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

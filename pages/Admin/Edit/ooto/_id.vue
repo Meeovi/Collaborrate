@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm  v-for="ooto in ootos" :key="ooto.id" method="POST" @submit.prevent  enctype="multipart/form-data">
+        <form  v-for="ooto in ootos" :key="ooto.id" method="POST" @submit.prevent  enctype="multipart/form-data">
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,35 +8,35 @@
                         <th>
                         </th>
                         <th scope="col" class="ootoAddOptions">
-                            <li><FormulateInput type="submit" label="Save" @click="addOoto" /></li>
+                            <li><input type="submit" value="Save" @click="addOoto" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">OOTO Name</td>
-                        <td><FormulateInput v-model="login" type="text" required /></td>
+                        <td><input v-model="login" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">WHID</td>
-                        <td><FormulateInput v-model="whid" type="text" /></td>
+                        <td><input v-model="whid" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Start Date</td>
-                        <td><FormulateInput v-model="start_date" type="text" required /></td>
+                        <td><input v-model="start_date" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">End Date</td>
-                        <td><FormulateInput v-model="end_date" type="text" required /></td>
+                        <td><input v-model="end_date" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Description</td>
-                        <td><FormulateInput v-model="description" type="textarea" /></td>
+                        <td><input v-model="description" type="textarea" /></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

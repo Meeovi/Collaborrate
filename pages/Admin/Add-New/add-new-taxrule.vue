@@ -1,12 +1,12 @@
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+        <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Taxrule" @click="addTaxrule" /></a>
+            <input type="button" class="btn btn-warning" value="Save Taxrule" @click="addTaxrule" /></a>
         </div>
       </nav>
       <br>
@@ -28,11 +28,11 @@
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Tax Rule Name</td>
-                        <td><FormulateInput id="taxRuleName" v-model="name" type="text" required /></td>
+                        <td><input id="taxRuleName" v-model="name" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Tax Rate</td>
-                        <td><FormulateInput id="taxRate" v-model="tax_rate" type="text" required /></td>
+                        <td><input id="taxRate" v-model="tax_rate" type="text" required /></td>
                     </tr>
                 </tbody>
             </table>
@@ -41,7 +41,7 @@
         </div>
         </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

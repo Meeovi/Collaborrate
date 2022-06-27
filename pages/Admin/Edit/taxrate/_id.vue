@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="tax_rate in tax_rates" :key="tax_rate.id" method="POST" @submit.prevent>
+        <form v-for="tax_rate in tax_rates" :key="tax_rate.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,39 +8,39 @@
                         <th scope="col">
                         </th>
                         <th scope="col" class="taxRateAddOptions">
-                            <li><FormulateInput type="submit" @click="addTaxRate" label="Save" /></li>
+                            <li><input type="submit" @click="addTaxRate" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Country</td>
-                        <td><FormulateInput id="taxRateName" type="text" required />{{ tax_rate.country }}</td>
+                        <td><input id="taxRateName" type="text" required />{{ tax_rate.country }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">State</td>
-                        <td><FormulateInput id="taxRateName" type="text" />{{ tax_rate.state }}</td>
+                        <td><input id="taxRateName" type="text" />{{ tax_rate.state }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Zip/Postalcode</td>
-                        <td><FormulateInput id="taxRateName" type="text" />{{ tax_rate.postcode }}</td>
+                        <td><input id="taxRateName" type="text" />{{ tax_rate.postcode }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Rate Percent</td>
-                        <td><FormulateInput id="taxRateName" type="text" required />{{ tax_rate.rate_percent }}</td>
+                        <td><input id="taxRateName" type="text" required />{{ tax_rate.rate_percent }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Tax Identifier</td>
-                        <td><FormulateInput id="taxRateName" type="text" required />{{ tax_rate.tax_identifier }}</td>
+                        <td><input id="taxRateName" type="text" required />{{ tax_rate.tax_identifier }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Zip/Postcode is Range</td>
-                        <td><FormulateInput id="taxRateName" type="text" required />{{ tax_rate.zip_post_is_range }}</td>
+                        <td><input id="taxRateName" type="text" required />{{ tax_rate.zip_post_is_range }}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

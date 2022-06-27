@@ -1,12 +1,12 @@
 <template>
     <div>
-        <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+        <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Social Group" @click="addCustomergroup" /></a>
+            <input type="button" class="btn btn-warning" value="Save Social Group" @click="addCustomergroup" /></a>
         </div>
       </nav>
       <br>
@@ -30,18 +30,18 @@
                         <th>
                         </th>
                         <th scope="col" class="customerGroupAddOptions">
-                            <li><FormulateInput type="submit" @click="addGroup" label="Save" /></li>
+                            <li><input type="submit" @click="addGroup" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Group Name</td>
-                        <td><FormulateInput v-model="name" type="text" required /></td>
+                        <td><input v-model="name" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Tax Class</td>
-                        <td><FormulateInput type="text" v-model="tax_class" name="tax" /></td>
+                        <td><input type="text" v-model="tax_class" name="tax" /></td>
                     </tr>
                 </tbody>
             </table>
@@ -50,7 +50,7 @@
         </div>
         </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

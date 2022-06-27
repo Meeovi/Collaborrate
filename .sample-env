@@ -1,21 +1,21 @@
 # Information here will appear across AlternateCMS
 
-# Postgresql and Mongodb Database URL
+# Postgresql Database URL
 
-DATABASE_URL=" "
+DATABASE_URL=""
 
-# Supabase URL and Credentials
+# Supabase URL and Credentials (Supabase is not required, but recommended)
 
 YOUR_SUPABASE_URL=" "
 YOUR_SUPABASE_KEY=" "
 
-# Mysql Database URL
+# DATABASE DETAILS
 
-MYSQL_HOST=" "
-MYSQL_PORT=
-MYSQL_USER=" "
-MYSQL_PASSWORD=" "
-MYSQL_DATABASE=" "
+DB_HOST=""
+DB_PORT=5432
+DB_USER=""
+DB_PASSWORD=""
+DB_DATABASE=""
 
 # RECAPTCHA Credentials
 
@@ -23,7 +23,7 @@ RECAPTCHA_SITE_KEY=" "
 
 # GRAPHQL Endpoint
 
-GRAPHQL_ENDPOINT=" "
+GRAPHQL_ENDPOINT=
 
 # Stripe Payment Method
 

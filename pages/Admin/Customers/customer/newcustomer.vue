@@ -1,10 +1,10 @@
 <template>
   <div>
-    <FormulateForm method="POST" @submit.prevent  enctype="multipart/form-data">
+    <form method="POST" @submit.prevent  enctype="multipart/form-data">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><FormulateInput type="reset" class="btn btn-warning" label="Reset" /></a>
-          <a class="navbar-brand"><FormulateInput type="button" @click="addCustomer">Save Customer</FormulateInput></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="button" class="btn btn-warning" @click="addCustomer">Save Customer</button></a>
         </div>
       </nav>
       <br>
@@ -28,81 +28,88 @@
                     <!--<tr>
                       <td style="text-align: right;">Customer Since</td>
                       <client-only>
-                      <td><FormulateInput id="currentDate" v-model="customer_since" type="text" disabled /></td>
+                      <td><input id="currentDate" v-model="customer_since" type="text" disabled /></td>
                       </client-only>
                     </tr>-->
                     <tr>
                       <td style="text-align: right;">Name Prefix</td>
-                      <td><FormulateInput v-model="name_prefix" type="text" /></td>
+                      <td><input v-model="name_prefix" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">First Name</td>
-                      <td><FormulateInput v-model="first_name" type="text" required /></td>
+                      <td><input v-model="first_name" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Middle Name/Initial</td>
-                      <td><FormulateInput v-model="middle_name" type="text" /></td>
+                      <td><input v-model="middle_name" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Last Name</td>
-                      <td><FormulateInput v-model="last_name" type="text" required /></td>
+                      <td><input v-model="last_name" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Name Suffix</td>
-                      <td><FormulateInput v-model="name_suffix" type="text" /></td>
+                      <td><input v-model="name_suffix" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Email</td>
-                      <td><FormulateInput v-model="email" type="text" required /></td>
+                      <td><input v-model="email" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Date of Birth</td>
-                      <td><FormulateInput v-model="date_of_birth" type="text" /></td>
+                      <td><input v-model="date_of_birth" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Phone Number</td>
-                      <td><FormulateInput v-model="phone" type="text" /></td>
+                      <td><input v-model="phone" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Tax/VAT Number</td>
-                      <td><FormulateInput v-model="tax_vat_number" type="text" /></td>
+                      <td><input v-model="tax_vat_number" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Gender</td>
-                      <td><FormulateInput id="gender" v-model="gender" name="gender" type="text" />
+                      <td><input id="gender" v-model="gender" name="gender" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">About Customer</td>
-                      <td><FormulateInput
-  type="textarea" id="aboutCustomer" v-model="short_description" name="aboutCustomer">
-                        </FormulateInput></td>
+                      <td><input
+  type="textarea" id="aboutCustomer" v-model="short_description" name="aboutCustomer" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Address Line 1</td>
-                      <td><FormulateInput v-model="Address" type="text" /></td>
+                      <td><input v-model="Address" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Address Line 2</td>
-                      <td><FormulateInput v-model="address_two" type="text" /></td>
+                      <td><input v-model="address_two" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">State</td>
-                      <td><FormulateInput id="state" v-model="state" name="state" />
+                      <td><input id="state" v-model="state" name="state" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Postal Code</td>
-                      <td><FormulateInput v-model="zipcode" type="text" /></td>
+                      <td><input v-model="zipcode" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Country</td>
-                      <td><FormulateInput id="country" v-model="country" name="country" />
+                      <td><input id="country" v-model="country" name="country" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Image</td>
-                      <td><FormulateInput type="image" name="headshot" v-model="image" label="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/>
+                      <td><div class="file-upload-wrapper">
+  <input
+    type="file"
+    id="input-file-now"
+    class="file-upload-input"
+    data-mdb-file-upload="file-upload"
+    data-mdb-accepted-extensions="image/*"
+  />
+</div>
                       </td>
                     </tr>
                   </tbody>
@@ -113,7 +120,7 @@
           <!-- Tab content -->
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

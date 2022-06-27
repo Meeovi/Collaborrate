@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm v-for="products in products" :key="products.id" method="POST" @submit.prevent>
+    <form v-for="products in products" :key="products.id" method="POST" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Product" @click="addProduct" /></a>
+            <input type="button" class="btn btn-warning" value="Save Product" @click="addProduct" /></a>
         </div>
       </nav>
       <br>
@@ -45,43 +45,43 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="name" type="text" required label="Product Name" />{{ products.name }}
+                        <input v-model="name" type="text" required value="Product Name" />{{ products.name }}
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="price" type="text" placeholder="$" label="Product Price" required />{{ products.price }}
+                        <input v-model="price" type="text" placeholder="$" value="Product Price" required />{{ products.price }}
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="tax_class" tax_class="productTax" label="Tax Class" type="text" />{{ products.tax_class }}
+                        <input v-model="tax_class" tax_class="productTax" value="Tax Class" type="text" />{{ products.tax_class }}
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="quantity_per_source" type="number" label="Quantity" />{{ products.quantity_per_source }}
+                        <input v-model="quantity_per_source" type="number" value="Quantity" />{{ products.quantity_per_source }}
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="stock_status" type="text" name="stockStatus" label="Stock" />{{ products.stock_status }}
+                        <input v-model="stock_status" type="text" name="stockStatus" value="Stock" />{{ products.stock_status }}
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="height" type="text" label="Product Height" />{{ products.height }}
+                        <input v-model="height" type="text" value="Product Height" />{{ products.height }}
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="weight" type="text" label="Product Weight" />{{ products.weight }}
+                        <input v-model="weight" type="text" value="Product Weight" />{{ products.weight }}
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="visibility" type="select" :options="{first: 'Public', second: 'Draft'}"
-                          label="Product Visibility" />
+                        <input v-model="visibility" type="select" :options="{first: 'Public', second: 'Draft'}"
+                          value="Product Visibility" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
@@ -158,15 +158,15 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="size" type="select"
+                        <input v-model="size" type="select"
                           :options="{first: 'XS', second: 'Small', third: 'Medium', fourth: 'Large', fifth: 'XL', sixth: 'XXL', seventh: '3XL'}"
-                          label="Product Size" />
+                          value="Product Size" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <FormulateInput v-model="format" type="select"
-                          :options="{first: 'Downloadable', second: 'Physical'}" label="Product Format" />
+                        <input v-model="format" type="select"
+                          :options="{first: 'Downloadable', second: 'Physical'}" value="Product Format" />
                       </td>
                     </tr>
                     <tr class="col-lg-12">
@@ -185,10 +185,10 @@
               <div id="accordionExample" class="accordion">
                 <div class="accordion-item">
                   <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                       data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       Content
-                    </FormulateInput>
+                    </button>
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -200,8 +200,8 @@
                               <td style="text-align: right;">Short Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <FormulateInput v-model="short_description" type="textarea"
-                                    label="Enter a short description" validation="required|max:50,length"
+                                  <input v-model="short_description" type="textarea"
+                                    value="Enter a short description" validation="required|max:50,length"
                                     validation-name="excerpt" error-behavior="live"
                                     :help="`Keep it under 50 characters. ${50 - short_description.length} left.`" />{{ products.short_description }}
                                 </div>
@@ -211,7 +211,7 @@
                               <td style="text-align: right;">Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <vue-simplemde id="longDescription" v-model="content" />{{ products.description }}
+                                  <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>{{ products.description }}
                                 </div>
                               </td>
                             </tr>
@@ -223,26 +223,33 @@
                 </div>
                 <div class="accordion-item">
                   <h2 id="headingThree" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                       data-mdb-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                       Images and Videos
-                    </FormulateInput>
+                    </button>
                   </h2>
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
                       <td>
-                        <FormulateInput type="image" name="headshot" v-model="image" label="Select an image to upload"
-                          help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif" />
+                        <div class="file-upload-wrapper">
+  <input
+    type="file"
+    id="input-file-now"
+    class="file-upload-input"
+    data-mdb-file-upload="file-upload"
+    data-mdb-accepted-extensions="image/*"
+  />
+</div>
                       </td>
                     </div>
                   </div>
                   <div class="accordion-item">
                     <h2 id="headingFour" class="accordion-header">
-                      <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                      <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         Search Engine Optimization
-                      </FormulateInput>
+                      </button>
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                       data-mdb-parent="#accordionExample">
@@ -256,23 +263,23 @@
                             </tr>
                             <tr class="col-lg-6">
                               <td>
-                                <FormulateInput v-model="meta_title" type="text" label="Meta Title" required />{{ products.meta_title }}
+                                <input v-model="meta_title" type="text" value="Meta Title" required />{{ products.meta_title }}
                               </td>
                             </tr>
                             <tr class="col-lg-6">
                               <td>
-                                <FormulateInput v-model="meta_keywords" type="text" label="Meta Keywords" />{{ products.meta_keywords }}
+                                <input v-model="meta_keywords" type="text" value="Meta Keywords" />{{ products.meta_keywords }}
                               </td>
                             </tr>
                             <tr class="col-lg-6">
                               <td>
-                                <FormulateInput type="textarea" v-model="meta_description" label="Meta Description"
+                                <input type="textarea" v-model="meta_description" value="Meta Description"
                                   rows="10" cols="50" />{{ products.meta_description }}
                               </td>
                             </tr>
                             <tr class="col-lg-6">
                               <td>
-                                <FormulateInput v-model="meta_url" type="url" label="Meta URL" />{{ products.meta_url }}
+                                <input v-model="meta_url" type="url" value="Meta URL" />{{ products.meta_url }}
                               </td>
                             </tr>
                           </tbody>
@@ -282,17 +289,23 @@
                   </div>
                   <div class="accordion-item">
                     <h2 id="headingFive" class="accordion-header">
-                      <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                      <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                         Upload Product File(s)
-                      </FormulateInput>
+                      </button>
                     </h2>
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                       data-mdb-parent="#accordionExample">
                       <div class="accordion-body">
                         <td>
-                          <FormulateInput type="file" name="file" v-model="file" label="Select your files to upload"
-                            help="Select one or more files to upload" multiple />
+                          <div class="file-upload-wrapper">
+  <input
+    type="file"
+    id="input-file-now"
+    class="file-upload-input"
+    data-mdb-file-upload="file-upload"
+  />
+</div>
                         </td>
                       </div>
                     </div>
@@ -303,14 +316,14 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
     <div class="product-footer">
       <li><a href="/admin/add-new/add-new-category" target="_blank">
-          <FormulateInput type="button" label="Add New Category" /></a></li>
+          <input type="button" class="btn btn-warning" value="Add New Category" /></a></li>
       <li><a href="/admin/add-new/add-new-attribute" target="_blank">
-          <FormulateInput type="button" label="Add New Product Attribute" /></a></li>
+          <input type="button" class="btn btn-warning" value="Add New Product Attribute" /></a></li>
       <li><a href="/admin/add-new/add-new-producttype" target="_blank">
-          <FormulateInput type="button" label="Add New Product Type" /></a></li>
+          <input type="button" class="btn btn-warning" value="Add New Product Type" /></a></li>
     </div>
   </div>
 </template>

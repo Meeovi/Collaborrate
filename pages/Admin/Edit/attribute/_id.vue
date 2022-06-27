@@ -1,7 +1,7 @@
 
 <template>
     <div>
-        <FormulateForm v-for="attribute in attributes" :key="attribute.id"  method="POST" @submit.prevent>
+        <form v-for="attribute in attributes" :key="attribute.id"  method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -9,27 +9,27 @@
                         <th>
                         </th>
                         <th scope="col" class="attributesAddOptions">
-                            <li><FormulateInput type="submit" label="Save" @click="addAttribute" /></li>
+                            <li><input type="submit" value="Save" @click="addAttribute" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Attribute Name</td>
-                        <td><FormulateInput id="attributesLabel" type="text" required />{{ agreement.default_label }}</td>
+                        <td><input id="attributesLabel" type="text" required />{{ agreement.default_label }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Attribute Code</td>
-                        <td><FormulateInput id="attributesCode" type="text" required />{{ agreement.attribute_code }}</td>
+                        <td><input id="attributesCode" type="text" required />{{ agreement.attribute_code }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Default Value</td>
-                        <td><FormulateInput id="attributesValue" type="text" required />{{ agreement.default_value }}</td>
+                        <td><input id="attributesValue" type="text" required />{{ agreement.default_value }}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

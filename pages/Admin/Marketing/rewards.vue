@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-rewards"><button type="button" class="btn btn-warning" label="Create A Reward"></button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-rewards"><input type="button" class="btn btn-warning" value="Create A Reward"></button></a>
       </div>
 </nav>
 <br>

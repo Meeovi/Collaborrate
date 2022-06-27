@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 <template>
   <div>
-    <FormulateForm v-for="permission in permissions" :key="permission.id" method="POST" @submit.prevent>
+    <form v-for="permission in permissions" :key="permission.id" method="POST" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>
@@ -10,7 +10,7 @@
               </th>
               <th scope="col" class="permissionAddOptions">
                 <li>
-                  <FormulateInput type="submit" @click="addPermission" label="Save" />
+                  <input type="submit" @click="addPermission" value="Save" />
                 </li>
               </th>
             </tr>
@@ -19,32 +19,32 @@
             <tr>
               <td style="text-align: right;">Permission Name</td>
               <td>
-                <FormulateInput type="text" v-model="name" required />{{ permission.name }}</td>
+                <input type="text" v-model="name" required />{{ permission.name }}</td>
             </tr>
             <tr>
               <td style="text-align: right;">Role</td>
               <td>
-                <FormulateInput type="text" v-model="role" />{{ permission.role }}</td>
+                <input type="text" v-model="role" />{{ permission.role }}</td>
             </tr>
             <tr>
               <td style="text-align: right;">Create</td>
               <td>
-                <FormulateInput type="text" v-model="create" />{{ permission.create }}</td>
+                <input type="text" v-model="create" />{{ permission.create }}</td>
             </tr>
             <tr>
               <td style="text-align: right;">Read</td>
               <td>
-                <FormulateInput type="text" v-model="read" />{{ permission.read }}</td>
+                <input type="text" v-model="read" />{{ permission.read }}</td>
             </tr>
             <tr>
               <td style="text-align: right;">Update</td>
               <td>
-                <FormulateInput type="text" v-model="update" />{{ permission.update }}</td>
+                <input type="text" v-model="update" />{{ permission.update }}</td>
             </tr>
             <tr>
               <td style="text-align: right;">Delete</td>
               <td>
-                <FormulateInput type="text" v-model="Delete" />{{ permission.delete }}</td>
+                <input type="text" v-model="Delete" />{{ permission.delete }}</td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
@@ -57,7 +57,7 @@
           </tbody>
         </table>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

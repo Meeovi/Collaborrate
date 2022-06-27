@@ -216,6 +216,8 @@
               </li><br>
             </ul>
           </li>
+          <hr style="color: white;" />
+          <h6 style="color: white; width:100%; text-align:left; padding-left: 20px;">General</h6>
           <li class="sidenav-item">
             <a class="sidenav-link" style="color: white;" href="">
               <i class="fas fa-cogs fa-fw me-3" style="color: white;"></i><span>System</span></a>
@@ -231,9 +233,6 @@
               </li><br>
               <li class="sidenav-item">
                 <a class="sidenav-link" style="color: white;" href="/admin/system/knowledgebase">Knowledgebase</a>
-              </li><br>
-              <li class="sidenav-item">
-                <a class="sidenav-link" style="color: white;" href="/admin/system/help">Help Center</a>
               </li><br>
             </ul>
           </li>

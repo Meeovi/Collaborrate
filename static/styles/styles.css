@@ -74,6 +74,10 @@ nav .fa-bell, nav .fa-user-circle {
     padding-left: 20px;
 }
 
+.btn-group, .btn-group-vertical {
+    box-shadow: none !important;
+}
+
 /******************* Dashboard CSS *********/
 
 .dashboard {
@@ -203,3 +207,9 @@ input, select, option {
     height: auto !important;
 }
 
+/******************* Text Editor **************/
+
+.wysiwyg {
+    width: 50%;
+    min-height: 225px;
+}

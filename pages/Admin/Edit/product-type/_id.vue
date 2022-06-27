@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FormulateForm v-for="product_types in product_types" :key="product_types" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="product_types in product_types" :key="product_types" method="POST" enctype="multipart/form-data" @submit.prevent>
         <div class="row">
           <div class="col-lg-6">
             <table class="table">
@@ -10,7 +10,7 @@
                   </th>
                   <th scope="col" class="productTypesAddOptions">
                     <li>
-                      <FormulateInput type="submit" label="Save" @click="addProduct_Type" />
+                      <input type="submit" value="Save" @click="addProduct_Type" />
                     </li>
                   </th>
                 </tr>
@@ -20,37 +20,37 @@
                 <tr>
                   <td style="text-align: right;">Product Type Name</td>
                   <td>
-                    <FormulateInput id="productTypesLabel" v-model="type_name" type="text" required />
+                    <input id="productTypesLabel" v-model="type_name" type="text" required />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Product Types</td>
                   <td>
-                    <FormulateInput id="productTypesCode" v-model="product_type" type="radio" :options="{first: 'Regular product type', second: 'Gift card product type'}" label="This is used internally. Make sure you don’t use spaces"  />
+                    <input id="productTypesCode" v-model="product_type" type="radio" :options="{first: 'Regular product type', second: 'Gift card product type'}" value="This is used internally. Make sure you don’t use spaces"  />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Taxes</td>
                   <td>
-                    <FormulateInput id="productTypesValue" v-model="taxes" type="text" />
+                    <input id="productTypesValue" v-model="taxes" type="text" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Meta Name</td>
                   <td>
-                    <FormulateInput id="productTypesValue" v-model="meta_name" type="text" label="Used in Search Engine Optimization" />
+                    <input id="productTypesValue" v-model="meta_name" type="text" value="Used in Search Engine Optimization" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Meta URL</td>
                   <td>
-                    <FormulateInput id="productTypesValue" v-model="meta_url" type="text" label="Used in Search Engine Optimization"  />
+                    <input id="productTypesValue" v-model="meta_url" type="text" value="Used in Search Engine Optimization"  />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Meta Description</td>
                   <td>
-                    <FormulateInput id="productTypesValue" v-model="meta_description" type="text" label="Used in Search Engine Optimization"  />
+                    <input id="productTypesValue" v-model="meta_description" type="text" value="Used in Search Engine Optimization"  />
                   </td>
                 </tr>
               </tbody>
@@ -72,14 +72,14 @@
                 <tr>
                   <td style="text-align: right;">Is this product shippable?</td>
                   <td>
-                    <FormulateInput id="productTypesShippable" v-model="isShippable" type="checkbox" />
+                    <input id="productTypesShippable" v-model="isShippable" type="checkbox" />
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

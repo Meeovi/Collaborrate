@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-segment"><button type="button" class="btn btn-warning">Add Segment</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-segment"><input type="button" class="btn btn-warning">Add Segment</button></a>
         
       </div>
     </nav>
@@ -21,13 +21,13 @@
         </thead>
         <tbody v-for="segments in segments" :key="segments.id">
           <tr>
-            <td><FormulateInput id="segmentID" type="text" name=" id" /></td>
-            <td><FormulateInput type="text" name="segment" /></td>
-            <td><FormulateInput type="text" name="status" /></td>
-            <td><FormulateInput type="select" :options="categories.name" id="segmentStatus" name="status">
-                </FormulateInput></td>
-            <td><FormulateInput type="select" :options="website.name" id="segmentWebsite" name="website">
-                </FormulateInput></td>
+            <td><input id="segmentID" type="text" name=" id" /></td>
+            <td><input type="text" name="segment" /></td>
+            <td><input type="text" name="status" /></td>
+            <td><input type="select" :options="categories.name" id="segmentStatus" name="status">
+                </button></td>
+            <td><input type="select" :options="website.name" id="segmentWebsite" name="website">
+                </button></td>
           </tr>
           <tr>
             <td>{{ segments.id }}</td>

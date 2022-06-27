@@ -1,12 +1,12 @@
 <template>
   <div>
-    <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <FormulateInput type="button" label="Save Email Template" @click="addEmailtemplates" /></a>
+            <input type="button" class="btn btn-warning" value="Save Email Template" @click="addEmailtemplates" /></a>
         </div>
       </nav>
       <br>
@@ -29,68 +29,68 @@
             <tr>
               <td style="text-align: right;">Active</td>
               <td>
-                <FormulateInput v-model="active" type="checkbox" />
+                <input v-model="active" type="checkbox" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Template Name</td>
               <td>
-                <FormulateInput v-model="name" type="text" required />
+                <input v-model="name" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Subject</td>
               <td>
-                <FormulateInput v-model="subject" type="text" />
+                <input v-model="subject" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
               <td>
-                <FormulateInput v-model="content" type="textarea" />
+                <input v-model="content" type="textarea" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Header</td>
               <td>
-                <FormulateInput v-model="header" type="text" placeholder="#" required />
+                <input v-model="header" type="text" placeholder="#" required />
               </td>
             </tr>
             
             <tr>
               <td style="text-align: right;">Footer</td>
               <td>
-                <FormulateInput v-model="footer" type="text" />
+                <input v-model="footer" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Width</td>
               <td>
-                <FormulateInput v-model="width" type="text" />
+                <input v-model="width" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Height</td>
               <td>
-                <FormulateInput v-model="height" type="text" />
+                <input v-model="height" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Type</td>
               <td>
-                <FormulateInput v-model="type" type="text" />
+                <input v-model="type" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Media</td>
               <td>
-                <FormulateInput v-model="media" type="text" />
+                <input v-model="media" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Assigned To</td>
               <td>
-                <FormulateInput v-model="assigned_to" type="text" />
+                <input v-model="assigned_to" type="text" />
               </td>
             </tr>
           </tbody>
@@ -100,7 +100,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

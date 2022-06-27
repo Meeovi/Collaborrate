@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 <template>
   <div>
-    <FormulateForm v-for="role in roles" :key="role.id" method="POST" @submit.prevent>
+    <form v-for="role in roles" :key="role.id" method="POST" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>
@@ -10,7 +10,7 @@
               </th>
               <th scope="col" class="roleAddOptions">
                 <li>
-                  <FormulateInput type="submit" @click="addRole" label="Save" />
+                  <input type="submit" @click="addRole" value="Save" />
                 </li>
               </th>
             </tr>
@@ -19,7 +19,7 @@
             <tr>
               <td style="text-align: right;">Role Name</td>
               <td>
-                <FormulateInput type="text" v-model="role_name" required />{{ role.name }}</td>
+                <input type="text" v-model="role_name" required />{{ role.name }}</td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
@@ -32,7 +32,7 @@
           </tbody>
         </table>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

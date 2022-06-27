@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="city in cities" :key="city.id"  method="POST" @submit.prevent>
+        <form v-for="city in cities" :key="city.id"  method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,26 +8,26 @@
                         <th>
                         </th>
                         <th scope="col" class="cityAddOptions">
-                            <li><FormulateInput type="submit" label="Save" @click="addCity" /></li>
+                            <li><input type="submit" value="Save" @click="addCity" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">City Name</td>
-                        <td><FormulateInput id="cityName" type="cityName" required />{{ city.name }}</td>
+                        <td><input id="cityName" type="cityName" required />{{ city.name }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">State</td>
-                        <td><FormulateInput id="cityName" type="cityName" required />{{ city.state }}</td>
+                        <td><input id="cityName" type="cityName" required />{{ city.state }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Country</td>
-                        <td><FormulateInput id="cityName" type="cityName" required />{{ city.country }}</td>
+                        <td><input id="cityName" type="cityName" required />{{ city.country }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Postal Code</td>
-                        <td><FormulateInput id="cityName" type="cityName" required />{{ city.postalCode }}</td>
+                        <td><input id="cityName" type="cityName" required />{{ city.postalCode }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -36,10 +36,10 @@
         <div id="accordionExample" class="accordion">
             <div class="accordion-item">
                 <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Content
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -51,7 +51,7 @@
                                         <td style="text-align: right;">Description</td>
                                         <td>
                                             <div class="form-check form-switch">
-                                                <FormulateInput
+                                                <input
   id="tagDesc" type="textarea" name="tagDesc" cols="80" rows="10" />{{ city.description }}
                                             </div>
                                         </td>
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

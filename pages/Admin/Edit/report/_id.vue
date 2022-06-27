@@ -1,10 +1,10 @@
 <template>
   <div>
-    <FormulateForm v-for="report in reports" :key="report.id" method="POST" @submit.prevent>
+    <form v-for="report in reports" :key="report.id" method="POST" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><FormulateInput type="reset" class="btn btn-warning" label="Reset" /></a>
-          <a class="navbar-brand"><FormulateInput type="button" label="Save Report" @click="addReport" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="button" class="btn btn-warning" value="Save Report" @click="addReport" /></a>
         </div>
       </nav>
       <br>
@@ -25,74 +25,74 @@
                     <!--<tr>
                       <td style="text-align: right;">Customer Since</td>
                       <client-only>
-                      <td><FormulateInput id="currentDate" v-model="customer_since" type="text" disabled /></td>
+                      <td><input id="currentDate" v-model="customer_since" type="text" disabled /></td>
                       </client-only>
                     </tr>-->
                     <tr>
                       <td style="text-align: right;">Name Prefix</td>
-                      <td><FormulateInput type="text" />{{ report.name_prefix }}</td>
+                      <td><input type="text" />{{ report.name_prefix }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">First Name</td>
-                      <td><FormulateInput type="text" required />{{ report.first_name }}</td>
+                      <td><input type="text" required />{{ report.first_name }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Middle Name/Initial</td>
-                      <td><FormulateInput type="text" />{{ report.middle_name }}</td>
+                      <td><input type="text" />{{ report.middle_name }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Last Name</td>
-                      <td><FormulateInput type="text" required />{{ report.last_name }}</td>
+                      <td><input type="text" required />{{ report.last_name }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Name Suffix</td>
-                      <td><FormulateInput type="text" />{{ report.name_suffix }}</td>
+                      <td><input type="text" />{{ report.name_suffix }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Email</td>
-                      <td><FormulateInput type="text" required />{{ report.email }}</td>
+                      <td><input type="text" required />{{ report.email }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Date of Birth</td>
-                      <td><FormulateInput type="text" />{{ report.date_of_birth }}</td>
+                      <td><input type="text" />{{ report.date_of_birth }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Phone Number</td>
-                      <td><FormulateInput type="text" />{{ report.phone }}</td>
+                      <td><input type="text" />{{ report.phone }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Tax/VAT Number</td>
-                      <td><FormulateInput type="text" />{{ report.tax_vat_number }}</td>
+                      <td><input type="text" />{{ report.tax_vat_number }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Gender</td>
-                      <td><FormulateInput id="gender" name="gender" type="text" />{{ report.gender }}
+                      <td><input id="gender" name="gender" type="text" />{{ report.gender }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">About Customer</td>
-                      <td><FormulateInput id="aboutCustomer" type="textarea" name="aboutCustomer" />{{ report.short_description }}</td>
+                      <td><input id="aboutCustomer" type="textarea" name="aboutCustomer" />{{ report.short_description }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Address Line 1</td>
-                      <td><FormulateInput type="text" />{{ report.address }}</td>
+                      <td><input type="text" />{{ report.address }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Address Line 2</td>
-                      <td><FormulateInput type="text" />{{ report.address_two }}</td>
+                      <td><input type="text" />{{ report.address_two }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">State</td>
-                      <td><FormulateInput id="state" name="state" :options="states.name" />{{ report.state }}
+                      <td><input id="state" name="state" :options="states.name" />{{ report.state }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Postal Code</td>
-                      <td><FormulateInput type="text" />{{ report.zipcode }}</td>
+                      <td><input type="text" />{{ report.zipcode }}</td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Country</td>
-                      <td><FormulateInput id="country" name="country" />{{ report.country }}
+                      <td><input id="country" name="country" />{{ report.country }}
                       </td>
                     </tr>
                   </tbody>
@@ -102,7 +102,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 

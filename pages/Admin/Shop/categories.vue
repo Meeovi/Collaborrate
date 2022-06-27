@@ -3,7 +3,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-category"><button type="button" class="btn btn-warning">Add New Category</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-category"><input type="button" class="btn btn-warning">Add New Category</button></a>
         
 </div>
 </nav>

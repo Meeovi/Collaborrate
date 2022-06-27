@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormulateForm v-for="article in articles" :key="article.id"  method="POST" @submit.prevent>
+        <form v-for="article in articles" :key="article.id"  method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,20 +8,20 @@
                         <th>
                         </th>
                         <th scope="col" class="articleAddOptions">
-                            <li><a href="/admin/add-new/add-new-tag"><button type="button" class="btn btn-warning">Add New Tag</button></a></li>
-                            <li><FormulateInput type="submit" @click="addArticle" label="Save" /></li>
+                            <li><a href="/admin/add-new/add-new-tag"><input type="button" class="btn btn-warning">Add New Tag</button></a></li>
+                            <li><input type="submit" @click="addArticle" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Article Name</td>
-                        <td><FormulateInput type="text" required />{{ article.name }}</td>
+                        <td><input type="text" required />{{ article.name }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Categories</td>
-                        <td><FormulateInput type="select" name="Select">{{ article.categories.name }}
-                            </FormulateInput></td>
+                        <td><input type="select" name="Select">{{ article.categories.name }}
+                            </button></td>
                     </tr>
                 </tbody>
             </table>
@@ -30,10 +30,10 @@
         <div id="accordionExample" class="accordion">
             <div class="accordion-item">
                 <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Content
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -45,8 +45,8 @@
                                         <td style="text-align: right;">Excerpt</td>
                                         <td>
                                             <div class="form-check form-switch">
-                                                <FormulateInput
-  id="excerpt" type="textarea" validation="required|max:50,length" :help="`Keep it under 50 characters. ${50 - value.length} left.`" cols="50" rows="10" label="Add a short Description">{{ article.excerpt }}</FormulateInput>
+                                                <input
+  id="excerpt" type="textarea" validation="required|max:50,length" :help="`Keep it under 50 characters. ${50 - value.length} left.`" cols="50" rows="10" value="Add a short Description">{{ article.excerpt }}</button>
                                             </div>
                                         </td>
                                     </tr>
@@ -68,24 +68,24 @@
             </div>
             <div class="accordion-item">
                 <h2 id="headingThree" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Images and Videos
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
-                        <td><FormulateInput type="image" upload-url="/media" name="headshot" label="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/>{{ article.image }}</td>
+                        <td><input type="image" upload-url="/media" name="headshot" value="Select an image to upload" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/>{{ article.image }}</td>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 id="headingFive" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                         Related Products, Up-Sells, and Cross-Sells
-                    </FormulateInput>
+                    </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-mdb-parent="#accordionExample">
@@ -95,7 +95,7 @@
                 </div>
             </div>
         </div>
-    </FormulateForm>
+    </form>
     </div>
 </template>
 

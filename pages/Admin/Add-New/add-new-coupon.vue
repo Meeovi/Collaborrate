@@ -1,10 +1,10 @@
 <template>
   <div>
-    <FormulateForm method="POST" @submit.prevent  enctype="multipart/form-data">
+    <form method="POST" @submit.prevent  enctype="multipart/form-data">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><FormulateInput type="reset" class="btn btn-warning" label="Reset" /></a>
-          <a class="navbar-brand"><FormulateInput type="button" @click="addCoupon" label="Save Coupon" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="button" class="btn btn-warning" @click="addCoupon" value="Save Coupon" /></a>
         </div>
       </nav>
       <br>
@@ -27,20 +27,20 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Coupon Name</td>
-                      <td><FormulateInput v-model="name" type="text" required /></td>
+                      <td><input v-model="name" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Discount</td>
-                      <td><FormulateInput v-model="discount" type="text" required /></td>
+                      <td><input v-model="discount" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Expiration</td>
-                      <td><FormulateInput id="expiration" v-model="expiration" name="expiration" type="url" />
+                      <td><input id="expiration" v-model="expiration" name="expiration" type="url" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Coupon Content</td>
-                      <td><FormulateInput id="reviewDescription" v-model="excerpt" type="textarea" label="Enter information about this coupon" validation="required|max:50,length" :help="`Keep it under 50 characters. ${50 - excerpt.length} left.`" />
+                      <td><input id="reviewDescription" v-model="excerpt" type="textarea" value="Enter information about this coupon" validation="required|max:50,length" :help="`Keep it under 50 characters. ${50 - excerpt.length} left.`" />
                       </td>
                     </tr>
                   </tbody>
@@ -50,7 +50,7 @@
           </div>
         </div>
       </div>
-    </FormulateForm>
+    </form>
   </div>
 </template>
 
