@@ -27,7 +27,7 @@ export default (ctx, inject) => {
       let defaultClientConfig
 
         defaultClientConfig = {
-  "httpEndpoint": "http://localhost:5000/graphiql"
+  "httpEndpoint": "http://localhost:8080/graphiql"
 }
 
       const defaultValidateToken = () => true
