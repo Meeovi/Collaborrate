@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-agreement"><input type="button" class="btn btn-warning">Create New Agreement</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-agreement"><input type="button" class="btn btn-warning" value="Create New Agreement"></a>
         
       </div>
     </nav>
@@ -21,7 +21,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="agreements in agreements" :key="agreements.id">
+        <tbody v-for="agreements in allAgreements" :key="agreements.id">
           <tr>
             <td>{{ agreements.id }}</td>
             <td>{{ agreements.name }}</td>
@@ -39,20 +39,25 @@
 </template>
 
 <script>
-import  agreements from '~/apollo/queries/sales/agreements'
+import gql from 'graphql-tag';
+
+const query = gql`
+  {
+    allAgreements {
+    nodes {
+      id
+      name
+      excerpt
+      created
+      updated
+      type
+    }
+  }
+}
+`
 
 export default {
-  data() {
-    return {
-      agreements: [],
-    }
-  },
-  apollo: {
-    agreements: {
-      prefetch: true,
-      query: agreements
-    }
-  },
+
     head: {
       title: 'Agreements'
     }

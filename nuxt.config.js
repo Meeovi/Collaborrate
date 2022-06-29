@@ -158,9 +158,7 @@ netlify: {
   
   apollo: {
     clientConfigs: {
-      default: {
-        httpEndpoint: 'http://localhost:8080/graphiql',
-      }
+      default: '~/apollo/clientConfig.js'
   }
 },
 

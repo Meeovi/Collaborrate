@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 const $ = require( "jquery" );
-require("../config/firebase.config")
+require("../config/databases/firebase")
 // import "echarts";
 
 // AlternateCMS Time Functionality
