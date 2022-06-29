@@ -1,1 +1,0 @@
-export { CommentsMediamanagerArgs } from "./CommentsMediamanagerArgs";

@@ -1,0 +1,9 @@
+
+sources:
+  - name: Main
+    handler:
+      postgraphile:
+        connectionString: postgresql://{env.DB_USER}:{env.DB_PASSWORD}@{env.DB_HOST}:5432/postgres
+        appendPlugins:
+          - '@graphile/federation'
+          - '@graphile-contrib/pg-many-to-many'

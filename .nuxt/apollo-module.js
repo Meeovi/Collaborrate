@@ -26,6 +26,7 @@ export default (ctx, inject) => {
 
       let defaultClientConfig
 
+<<<<<<< HEAD
         defaultClientConfig = require('~/apollo/clientConfig.js')
 
         if ('default' in defaultClientConfig) {
@@ -33,6 +34,11 @@ export default (ctx, inject) => {
         }
 
         defaultClientConfig = defaultClientConfig(ctx)
+=======
+        defaultClientConfig = {
+  "httpEndpoint": "http://localhost:8080/graphiql"
+}
+>>>>>>> 54215278248d2dd4a61680ee4bf2ff98489677ad
 
       const defaultValidateToken = () => true
 
