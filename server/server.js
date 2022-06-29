@@ -1,15 +1,19 @@
-const { ApolloServer } = require('apollo-server')
-const { schema } = require('../prisma/generated/schema.graphql')
-const { context } = require('./context')
+const express = require("express");
+const {
+  postgraphile
+} = require("postgraphile");
 
-const server = new ApolloServer({
-  schema: schema,
-  context: context,
-})
+const app = express();
 
-server.listen().then(async ({ url }) => {
-  console.log(`\
-🚀 Server ready at: ${url}
-⭐️ See sample queries: http://pris.ly/e/js/graphql#using-the-graphql-api
-  `)
-})
+app.use(postgraphile(
+  process.env.DATABASE_URL || "postgresql://postgres:Whurashia1986@db.wyhrhklrokwbwfwkgyoi.supabase.co:5432/postgres",
+  "public", {
+    watchPg: true,
+    graphiql: true,
+    enhanceGraphiql: true,
+    dynamicJson: true,
+    graphqlRoute: '/graphql'
+  }
+));
+
+app.listen(process.env.PORT || 5000);

@@ -101,11 +101,11 @@
   "SettingsWebhooks": {
     "description": "Auto imported from components/settings/webhooks.vue"
   },
-  "DashboardCharts": {
-    "description": "Auto imported from components/dashboard/charts/charts.vue"
-  },
   "DashboardBestsellers": {
     "description": "Auto imported from components/dashboard/bestsellers/bestsellers.vue"
+  },
+  "DashboardCharts": {
+    "description": "Auto imported from components/dashboard/charts/charts.vue"
   },
   "DashboardMediaMediadetails": {
     "description": "Auto imported from components/dashboard/media/mediadetails.vue"
@@ -122,11 +122,11 @@
   "DashboardOrders": {
     "description": "Auto imported from components/dashboard/orders/orders.vue"
   },
-  "DashboardSearchterms": {
-    "description": "Auto imported from components/dashboard/searchterms/searchterms.vue"
-  },
   "DashboardSales": {
     "description": "Auto imported from components/dashboard/sales/sales.vue"
+  },
+  "DashboardSearchterms": {
+    "description": "Auto imported from components/dashboard/searchterms/searchterms.vue"
   },
   "IntegrationsSectionsExtensions": {
     "description": "Auto imported from components/integrations/sections/extensions.vue"

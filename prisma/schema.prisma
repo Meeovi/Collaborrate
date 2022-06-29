@@ -8,14 +8,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-<<<<<<< HEAD
-generator graphql {
-  provider = "graphql-schema-generator"
-  createCRUD = "true"
-}
-
-=======
->>>>>>> 54215278248d2dd4a61680ee4bf2ff98489677ad
 model articles {
   id               Int     @id @default(autoincrement())
   name             String

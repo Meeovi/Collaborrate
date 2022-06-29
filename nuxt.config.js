@@ -158,17 +158,32 @@ netlify: {
   
   apollo: {
     clientConfigs: {
-<<<<<<< HEAD
-      default: '~/apollo/clientConfig.js',
-    }
+      default:{
+        httpEndpoint: 'http://localhost:5000/graphiql',
+        wsEndpoint: 'ws://localhost:5000/graphiql',
+        tokenName: 'apollo-token',
+        persisting: false,
+        websocketsOnly: false
+      },
+    },
+    defaultOptions: {
+      $query: {
+        loadingKey: 'loading',
+        fetchPolicy: 'cache-and-network',
+      },
+    },
+    watchLoading: '~/plugins/apollo-watch-loading-handler.js',
+    errorHandler: '~/plugins/apollo-error-handler.js',
+    authenticationType: 'Bearer', 
+    tokenName: 'apollo-token',
+    includeNodeModules: true,
+    cookieAttributes: {
+      expires: 7,
+      path: '/',
+      domain: 'example.com',
+      secure: false,
+    },
   },
-=======
-      default: {
-        httpEndpoint: 'http://localhost:8080/graphiql',
-      }
-  }
-},
->>>>>>> 54215278248d2dd4a61680ee4bf2ff98489677ad
 
   sentry: {
     dsn: 'https://b54ea5cfd2cc4c23b49c3d5c6fbbd351@o996770.ingest.sentry.io/6140531',
