@@ -1,17 +1,15 @@
-import { schema } from '../prisma/generated/schema'
-import { createServer } from '@graphql-yoga/node'
+const { ApolloServer } = require('apollo-server')
+const { schema } = require('../prisma/generated/schema.graphql')
+const { context } = require('./context')
 
-const server = createServer({
-  schema,
-  cors: (request) => {
-    const requestOrigin = request.headers.get('origin')
-    return {
-      origin: requestOrigin,
-      credentials: true,
-      allowedHeaders: ['X-Custom-Header'],
-      methods: ['POST'],
-    }
-  },
+const server = new ApolloServer({
+  schema: schema,
+  context: context,
 })
-// start the server and explore http://localhost:4000/graphql
-server.start()
+
+server.listen().then(async ({ url }) => {
+  console.log(`\
+🚀 Server ready at: ${url}
+⭐️ See sample queries: http://pris.ly/e/js/graphql#using-the-graphql-api
+  `)
+})

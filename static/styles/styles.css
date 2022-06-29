@@ -50,6 +50,7 @@ main {
     position: relative !important;
     padding: 25px;
     margin-bottom: 10px;
+    min-height: 80vh;
 }
 
 @media (min-width: 1400px) {

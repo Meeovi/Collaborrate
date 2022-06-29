@@ -1,15 +1,12 @@
 query {
-  allAgreements {
-    nodes {
+  agreements {
       id
       name
       image
       created
       excerpt
       content
-      referenceId
       type
       updated
-    }
   }
 }
