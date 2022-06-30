@@ -158,6 +158,7 @@ netlify: {
   
   apollo: {
     clientConfigs: {
+<<<<<<< HEAD
       default:{
         httpEndpoint: 'http://localhost:5000/graphiql',
         wsEndpoint: 'ws://localhost:5000/graphiql',
@@ -184,6 +185,11 @@ netlify: {
       secure: false,
     },
   },
+=======
+      default: '~/apollo/clientConfig.js'
+  }
+},
+>>>>>>> acd45e72049d02adc615a74e9b6de518fe877971
 
   sentry: {
     dsn: 'https://b54ea5cfd2cc4c23b49c3d5c6fbbd351@o996770.ingest.sentry.io/6140531',
