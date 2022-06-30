@@ -1,5 +1,5 @@
 query MyQuery {
-  mediamanager {
+  allMediamanagersList {
     agreements
     albums
     author

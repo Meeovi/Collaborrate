@@ -1,5 +1,5 @@
 query MyQuery {
-  manufacturer {
+  allManufacturerList {
     product
     name
     media

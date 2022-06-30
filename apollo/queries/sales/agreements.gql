@@ -1,15 +1,12 @@
 query MyQuery {
-  allAgreements {
-    edges {
-      node {
-        id
-        created
-        name
-        updated
-        content
-        excerpt
-        type
-      }
-    }
+  allAgreementsList {
+    id
+    name
+    type
+    updated
+    image
+    excerpt
+    created
+    content
   }
 }

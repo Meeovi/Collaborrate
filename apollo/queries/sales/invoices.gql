@@ -1,5 +1,5 @@
 query MyQuery {
-  invoices {
+  allInvoicesList {
     subtotal
     status
     shipping_information

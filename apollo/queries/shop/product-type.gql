@@ -1,5 +1,5 @@
 query MyQuery {
-  product_types {
+  allProduct_typesList {
     filter_options
     id
     isShippable

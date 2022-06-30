@@ -43,6 +43,7 @@ nav a, .input-group-text {
 
 .dropdown-item {
     color: black !important;
+    min-width: 200px !important;
 }
 
 main {
@@ -50,7 +51,7 @@ main {
     position: relative !important;
     padding: 25px;
     margin-bottom: 50px;
-    height: 80vh;
+    height: 100vh;
 }
 
 @media (min-width: 1400px) {

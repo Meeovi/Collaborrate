@@ -1,5 +1,5 @@
 query MyQuery {
-  categories {
+  allCategoriesList {
     id
     name
     content

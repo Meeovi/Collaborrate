@@ -1,5 +1,5 @@
 query MyQuery {
-  deepdive {
+  allDeepdiveList {
     id
     end_date
     content

@@ -1,5 +1,5 @@
 query MyQuery {
-  gift_certificates {
+  allGift_certificatesList {
     id
     image
     name

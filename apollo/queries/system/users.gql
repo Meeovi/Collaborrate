@@ -1,5 +1,5 @@
 query MyQuery {
-  users {
+  allUsersList {
     id
     first_name
     email

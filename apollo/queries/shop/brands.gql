@@ -1,5 +1,5 @@
 query MyQuery{
-  brands{
+  allBrandsList{
     city
     code
     country

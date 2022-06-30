@@ -1,5 +1,5 @@
 query MyQuery {
-  roles {
+  allRolesList {
     id
     created_at
     content

@@ -1,5 +1,5 @@
 query MyQuery {
-  statistics {
+  allStatisticsList {
     id
     expiration
     excerpt

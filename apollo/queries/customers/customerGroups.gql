@@ -1,5 +1,5 @@
 query MyQuery {
-  customer_group {
+  allCustomer_groupList {
     id
     name
     tax_class

@@ -1,5 +1,5 @@
 query MyQuery {
-  contracts {
+  allContractsList {
     id
     account
     company_signed_date

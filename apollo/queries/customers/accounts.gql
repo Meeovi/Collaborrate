@@ -1,5 +1,5 @@
 query MyQuery {
-  accounts {
+  allAccountsList {
     address
     alt_address
     alt_city

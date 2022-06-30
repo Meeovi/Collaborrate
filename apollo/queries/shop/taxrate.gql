@@ -1,5 +1,5 @@
 query MyQuery {
-  tax_rate {
+  allTax_rateList {
     id
     country
     default_store_view

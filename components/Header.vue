@@ -61,7 +61,7 @@
                 <a class="sidenav-link" style="color: white;" href="/admin/customers/leads">Leads</a>
               </li><br>
               <li class="sidenav-item">
-                <a class="sidenav-link" style="color: white;" href="/admin/customers/tasks">Tasks</a>
+                <a class="sidenav-link" style="color: white;" href="/admin/customers/to-do">To Do</a>
               </li><br>
               <li class="sidenav-item">
                 <a class="sidenav-link" style="color: white;" href="/admin/customers/meetings">Meetings</a>
@@ -340,7 +340,7 @@
                   <a class="dropdown-item" target="_blank" href="/admin/">Customer View</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" target="_blank" href="http://localhost:5000/graphiql">Graphql Playground</a>
+                  <a class="dropdown-item" target="_blank" href="http://127.0.0.1:4002/graphql">Graphql Playground</a>
                 </li>
                 <li>
                   <a class="dropdown-item" target="_blank" href="http://localhost:5858/">Rest API Documentation</a>

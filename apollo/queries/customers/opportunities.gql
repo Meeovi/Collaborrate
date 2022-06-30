@@ -1,5 +1,5 @@
 query MyQuery {
-  opportunities {
+  allOpportunitiesList {
     id
     expected_close_date
     description

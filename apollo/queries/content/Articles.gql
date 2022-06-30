@@ -1,5 +1,5 @@
 query MyQuery {
-  articles {
+  allArticlesList {
     categories
     content
     cust_id

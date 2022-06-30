@@ -1,5 +1,5 @@
 query MyQuery {
-  rewards {
+  allRewardsList {
     id
     expiration
     customers

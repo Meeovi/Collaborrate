@@ -1,5 +1,5 @@
 query MyQuery {
-  newsletter_subscribers {
+  allNewsletter_subscribersList {
     id
     email
     customer_last_name

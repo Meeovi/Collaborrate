@@ -1,5 +1,5 @@
 query MyQuery {
-  apitoken {
+  allApitoken {
     id
     name
     token

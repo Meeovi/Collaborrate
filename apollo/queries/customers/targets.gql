@@ -1,5 +1,5 @@
 query MyQuery {
-  targets {
+  allTargetsList {
     id
     first_name
     fax

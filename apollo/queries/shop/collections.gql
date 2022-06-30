@@ -1,5 +1,5 @@
 query MyQuery {
-  collections {
+  allCollectionsList {
     id
     image
     meta_description

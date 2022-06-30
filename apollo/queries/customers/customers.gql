@@ -1,5 +1,5 @@
 query MyQuery {
-  customers {
+  allCustomersList {
     Address
     address_two
     confirmed_email

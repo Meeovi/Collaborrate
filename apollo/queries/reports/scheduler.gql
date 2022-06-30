@@ -1,5 +1,5 @@
 query MyQuery {
-  scheduler {
+  allSchedulerList {
     id
     end_date
     created_at

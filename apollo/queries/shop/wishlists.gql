@@ -1,5 +1,5 @@
 query MyQuery {
-  wishlists {
+  allWishlistsList {
     created_at
     customers
     id

@@ -1,5 +1,5 @@
 query MyQuery {
-  providers {
+  allProvidersList {
     id
     name
     redirect_url

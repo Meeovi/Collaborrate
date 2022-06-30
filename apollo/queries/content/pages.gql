@@ -1,5 +1,5 @@
 query MyQuery {
-  pages {
+  allPagesList {
     id
     title
     enable_page

@@ -1,5 +1,5 @@
 query MyQuery {
-  occassions {
+  allOccassionsList {
     id
     description
     name

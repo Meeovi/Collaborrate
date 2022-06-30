@@ -1,5 +1,5 @@
 query MyQuery {
-  endofshift {
+  allEndofshiftList {
     id
     created_at
     content

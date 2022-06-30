@@ -1,5 +1,5 @@
 query MyQuery {
-  tax_rule {
+  allTax_ruleList {
     id
     name
     tax_rate

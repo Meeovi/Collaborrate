@@ -1,6 +1,6 @@
 query MyQuery {
-  product_attribute {
-    allow_html_tags_storefront
+  allProduct_attributeList {
+    allOw_html_tags_storefront
     attribute_class
     attribute_code
     attribute_value

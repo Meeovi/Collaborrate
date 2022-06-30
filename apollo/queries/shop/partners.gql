@@ -1,5 +1,5 @@
 query MyQuery {
-  partners {
+  allPartnersList {
     id
     created_at
     country

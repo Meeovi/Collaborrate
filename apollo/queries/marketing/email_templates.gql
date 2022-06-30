@@ -1,5 +1,5 @@
 query MyQuery {
-  email_templates {
+  allEmail_templatesList {
     id
     height
     header

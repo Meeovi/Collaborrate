@@ -1,5 +1,5 @@
 query MyQuery {
-  ticketing {
+  allTicketingList {
     id
     department
     date_modified

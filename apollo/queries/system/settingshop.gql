@@ -1,5 +1,5 @@
 query MyQuery {
-  settingshop {
+  allSettingshop {
     vendor_transaction_id
     seller_payouts
     product_videos

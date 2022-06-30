@@ -1,5 +1,5 @@
 query MyQuery {
-  surveys {
+  allSurveysList {
     id
     name
     neither_text

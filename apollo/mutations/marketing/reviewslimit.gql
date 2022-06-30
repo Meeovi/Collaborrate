@@ -1,5 +1,5 @@
 query MyQuery {
-  reviews(limit: 5) {
+  allreviews(limit: 5) {
     id
     first_name
     last_name

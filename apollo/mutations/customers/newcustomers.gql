@@ -1,5 +1,5 @@
 query MyQuery {
-  customers(limit: 5, order_by: {customer_since: asc}) {
+  allcustomers(limit: 5, order_by: {customer_since: asc}) {
     Address
     address_two
     confirmed_email

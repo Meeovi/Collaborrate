@@ -1,5 +1,5 @@
 query MyQuery {
-  channels {
+  allChannelsList {
     id
     default_zone
     default_shipping

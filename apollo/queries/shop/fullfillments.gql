@@ -1,5 +1,5 @@
 query MyQuery {
-  fullfillments {
+  allFullfillmentsList {
     id
     name
     phone

@@ -1,5 +1,5 @@
 query MyQuery {
-  transactions {
+  allTransactionsList {
     id
     order_id
     parent_transaction_id

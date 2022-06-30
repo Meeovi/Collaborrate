@@ -1,5 +1,5 @@
 query MyQuery {
-  ooto {
+  allOoto {
     id
     end_date
     note

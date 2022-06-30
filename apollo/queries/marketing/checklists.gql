@@ -1,5 +1,5 @@
 query MyQuery {
-  checklist {
+  allChecklist {
     country
     created_at
     description

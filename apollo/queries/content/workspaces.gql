@@ -1,5 +1,5 @@
 query MyQuery {
-  workspaces {
+  allWorkspacesList {
     author
     brand {
       id

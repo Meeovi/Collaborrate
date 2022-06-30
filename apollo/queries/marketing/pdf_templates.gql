@@ -1,5 +1,5 @@
 query MyQuery {
-  pdf_templates {
+  allPdf_templatesList {
     id
     header
     footer

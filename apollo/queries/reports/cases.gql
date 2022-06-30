@@ -1,5 +1,5 @@
 query MyQuery {
-  cases {
+  allCasesList {
     id
     priority
     resolution

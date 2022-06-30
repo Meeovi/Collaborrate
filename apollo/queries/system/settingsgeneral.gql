@@ -1,5 +1,5 @@
 query MyQuery {
-  general_settings {
+  allGeneral_settingsList {
     id
     http_response
     email

@@ -21,15 +21,15 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="edge in allAgreements" :key="edge.node.id">
+        <tbody v-for="agreements in allAgreementsList" :key="agreements.id">
           <tr>
-            <td>{{ edge.node.id }}</td>
-            <td>{{ edge.node.name }}</td>
-            <td>{{ edge.node.excerpt }}</td>
-            <td>{{ edge.node.created }}</td>
-            <td>{{ edge.node.updated }}</td>
-            <td>{{ edge.node.type }}</td>
-            <td><a :href="`/admin/edit/agreement/${edge.node.id}`">View</a></td>
+            <td>{{ agreements.id }}</td>
+            <td>{{ agreements.name }}</td>
+            <td>{{ agreements.excerpt }}</td>
+            <td>{{ agreements.created }}</td>
+            <td>{{ agreements.updated }}</td>
+            <td>{{ agreements.type }}</td>
+            <td><a :href="`/admin/edit/agreement/${agreements.id}`">View</a></td>
           </tr>
         </tbody>
       </table>
@@ -39,18 +39,18 @@
 </template>
 
 <script>
-import  allAgreeements from '~/apollo/queries/sales/agreements'
+import  allAgreementsList from '~/apollo/queries/sales/agreements'
 
 export default {
   data() {
     return {
-      allAgreeements: [],
+      allAgreementsList: [],
     }
   },
   apollo: {
-    allAgreeements: {
+    allAgreementsList: {
       prefetch: true,
-      query: allAgreeements
+      query: allAgreementsList
     }
   },
     head: {

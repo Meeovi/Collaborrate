@@ -1,5 +1,5 @@
 query MyQuery {
-  emails {
+  allEmailsList {
     id
     cust_id
     created_at

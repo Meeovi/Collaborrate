@@ -1,5 +1,5 @@
 query MyQuery {
-  coupons {
+  allCouponsList {
     id
     image
     name

@@ -1,5 +1,5 @@
 query MyQuery {
-  tasks {
+  allTasksList {
     id
     due_date
     description

@@ -1,5 +1,5 @@
 query MyQuery {
-  countries {
+  allCountriesList {
     id
     name
     description

@@ -1,5 +1,5 @@
 query MyQuery {
-  importm(order_by: {name: asc}) {
+  allImportm(order_by: {name: asc}) {
     id
     file
     description

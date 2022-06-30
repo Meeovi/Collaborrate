@@ -1,5 +1,5 @@
 query MyQuery {
-  quotes {
+  allQuotesList {
     account
     approval_issues
     approval_status

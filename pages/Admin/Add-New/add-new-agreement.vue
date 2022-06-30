@@ -59,18 +59,13 @@
                     <tr>
                       <td style="text-align: right;">Excerpt</td>
                       <td>
-                        <div class="form-check form-switch">
-                          <input id="excerpt" v-model="excerpt" type="textarea"
-                            validation="required|max:50,length"
-                            :help="`Keep it under 50 characters. ${50 - excerpt.length} left.`" cols="50" rows="10"
-                            value="Add a short Description" />
-                        </div>
+                        <textarea id="excerpt" v-model="excerpt" type="textarea" cols="50" rows="10" value="Add a short Description"></textarea>
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>
+                        <textarea id="excerpt" v-model="content" type="textarea" cols="50" rows="10" value="Add a Description"></textarea>
                       </td>
                     </tr>
                   </tbody>
@@ -107,7 +102,7 @@
 
 <script>
 import gql from "graphql-tag";
-import agreements from "~/apollo/queries/sales/agreements";
+import allAgreementsList from "~/apollo/queries/sales/agreements";
 
 const ADD_AGREEMENTS = gql`
     mutation ($name:String!,$excerpt:String,$type:String,$content:String,$image:String){
@@ -159,7 +154,7 @@ export default {
                             const insertedAgreement = insertAgreements.returning;
                             console.log(insertedAgreement)
                             cache.writeQuery({
-                                query: agreements
+                                query: allAgreementsList
                             })
                         }
                         catch (err) {

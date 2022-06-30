@@ -1,5 +1,5 @@
 query MyQuery {
-  credit_memos {
+  allCredit_memosList {
     bill_to_name
     created
     credit_memo
