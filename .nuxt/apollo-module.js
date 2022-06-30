@@ -11,13 +11,13 @@ export default (ctx, inject) => {
   const providerOptions = { clients: {} }
   const { app, beforeNuxtRender, req } = ctx
   const AUTH_TOKEN_NAME = 'apollo-token'
-  const COOKIE_ATTRIBUTES = {"expires":7,"path":"\u002F","domain":"example.com","secure":false}
+  const COOKIE_ATTRIBUTES = {"expires":7,"path":"\u002F","secure":false}
   const AUTH_TYPE = 'Bearer '
   const cookies = new Cookie(req && req.headers.cookie)
 
   // Config
 
-      const defaultTokenName = 'apollo-token'  || AUTH_TOKEN_NAME
+      const defaultTokenName = ''  || AUTH_TOKEN_NAME
 
       function defaultGetAuth () {
         const token = cookies.get(defaultTokenName)
@@ -26,15 +26,6 @@ export default (ctx, inject) => {
 
       let defaultClientConfig
 
-<<<<<<< HEAD
-        defaultClientConfig = {
-  "httpEndpoint": "http://localhost:5000/graphiql",
-  "wsEndpoint": "ws://localhost:5000/graphiql",
-  "tokenName": "apollo-token",
-  "persisting": false,
-  "websocketsOnly": false
-}
-=======
         defaultClientConfig = require('~/apollo/clientConfig.js')
 
         if ('default' in defaultClientConfig) {
@@ -42,7 +33,6 @@ export default (ctx, inject) => {
         }
 
         defaultClientConfig = defaultClientConfig(ctx)
->>>>>>> acd45e72049d02adc615a74e9b6de518fe877971
 
       const defaultValidateToken = () => true
 
@@ -65,8 +55,6 @@ export default (ctx, inject) => {
       if (process.client && defaultClientConfig.browserHttpEndpoint) {
         defaultClientConfig.httpEndpoint = defaultClientConfig.browserHttpEndpoint
       }
-
-        defaultClientConfig.apollo = { defaultOptions: {"$query":{"loadingKey":"loading","fetchPolicy":"cache-and-network"}} }
 
       defaultClientConfig.ssr = !!process.server
       defaultClientConfig.cache = defaultCache
@@ -92,14 +80,8 @@ export default (ctx, inject) => {
           providerOptions.defaultClient = defaultApolloCreation.apolloClient
 
   const vueApolloOptions = Object.assign(providerOptions, {
-        defaultOptions: {"$query":{"loadingKey":"loading","fetchPolicy":"cache-and-network"}},
-
-        watchLoading (isLoading, countModifier) {
-          return require('~/plugins/apollo-watch-loading-handler.js').default(isLoading, countModifier, ctx)
-        },
-
       errorHandler (error) {
-          return require('~/plugins/apollo-error-handler.js').default(error, ctx)
+          console.log('%cError', 'background: red; color: white; padding: 2px 4px; border-radius: 3px; font-weight: bold;', error.message)
       }
   })
 

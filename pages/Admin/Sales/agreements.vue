@@ -3,10 +3,7 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/admin/add-new/add-new-agreement"><input type="button" class="btn btn-warning" value="Create New Agreement"></a>
-<<<<<<< HEAD
-=======
         
->>>>>>> acd45e72049d02adc615a74e9b6de518fe877971
       </div>
     </nav>
     
@@ -24,15 +21,15 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="agreements in allAgreements" :key="agreements.id">
+        <tbody v-for="edge in allAgreements" :key="edge.node.id">
           <tr>
-            <td>{{ agreements.id }}</td>
-            <td>{{ agreements.name }}</td>
-            <td>{{ agreements.excerpt }}</td>
-            <td>{{ agreements.created }}</td>
-            <td>{{ agreements.updated }}</td>
-            <td>{{ agreements.type }}</td>
-            <td><a :href="`/admin/edit/agreement/${agreements.id}`">View</a></td>
+            <td>{{ edge.node.id }}</td>
+            <td>{{ edge.node.name }}</td>
+            <td>{{ edge.node.excerpt }}</td>
+            <td>{{ edge.node.created }}</td>
+            <td>{{ edge.node.updated }}</td>
+            <td>{{ edge.node.type }}</td>
+            <td><a :href="`/admin/edit/agreement/${edge.node.id}`">View</a></td>
           </tr>
         </tbody>
       </table>
@@ -42,25 +39,20 @@
 </template>
 
 <script>
-import gql from 'graphql-tag';
-
-const query = gql`
-  {
-    allAgreements {
-    nodes {
-      id
-      name
-      excerpt
-      created
-      updated
-      type
-    }
-  }
-}
-`
+import  allAgreeements from '~/apollo/queries/sales/agreements'
 
 export default {
-
+  data() {
+    return {
+      allAgreeements: [],
+    }
+  },
+  apollo: {
+    allAgreeements: {
+      prefetch: true,
+      query: allAgreeements
+    }
+  },
     head: {
       title: 'Agreements'
     }

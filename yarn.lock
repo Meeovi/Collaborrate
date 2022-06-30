@@ -2438,11 +2438,11 @@
     "tslib" "^2.4.0"
 
 "@graphql-tools/import@^6.2.4", "@graphql-tools/import@^6.2.6":
-  "integrity" "sha512-zZbR2o3PpdqtQmjquCkp9DD14Nxns/CljboQpUtFlzffUjj9UtVizhEPzluVELrlegeseTDcWd2781moZSUzMA=="
-  "resolved" "https://registry.npmjs.org/@graphql-tools/import/-/import-6.6.18.tgz"
-  "version" "6.6.18"
+  "integrity" "sha512-u9JL4fClKKyBTQpgb4QFacYUwgBCs4lW1NaHX0hD2zBdahIYidokBY0QkOqOCEAnWeFqpEmAjB62ulLiAJWc2g=="
+  "resolved" "https://registry.npmjs.org/@graphql-tools/import/-/import-6.7.0.tgz"
+  "version" "6.7.0"
   dependencies:
-    "@graphql-tools/utils" "8.7.0"
+    "@graphql-tools/utils" "8.8.0"
     "resolve-from" "5.0.0"
     "tslib" "^2.4.0"
 
@@ -6412,7 +6412,7 @@
   "resolved" "https://registry.npmjs.org/apollo-server-errors/-/apollo-server-errors-3.3.1.tgz"
   "version" "3.3.1"
 
-"apollo-server-express@^2.14.2", "apollo-server-express@^2.25.4":
+"apollo-server-express@^2.14.2":
   "integrity" "sha512-1Yd9DscLlCP5BhfAkNxg+aGcaTKnL36FyezdL7Iqc+KelON5PAyX8qpAChKL8Z3L2YHJzIk/Haf4dFJLKUjx9w=="
   "resolved" "https://registry.npmjs.org/apollo-server-express/-/apollo-server-express-2.25.4.tgz"
   "version" "2.25.4"

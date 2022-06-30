@@ -49,12 +49,8 @@ main {
     margin-top: 5% !important;
     position: relative !important;
     padding: 25px;
-    margin-bottom: 10px;
-<<<<<<< HEAD
-    min-height: 80vh;
-=======
+    margin-bottom: 50px;
     height: 80vh;
->>>>>>> acd45e72049d02adc615a74e9b6de518fe877971
 }
 
 @media (min-width: 1400px) {

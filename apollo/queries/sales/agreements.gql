@@ -1,12 +1,15 @@
-query {
-  agreements {
-      id
-      name
-      image
-      created
-      excerpt
-      content
-      type
-      updated
+query MyQuery {
+  allAgreements {
+    edges {
+      node {
+        id
+        created
+        name
+        updated
+        content
+        excerpt
+        type
+      }
+    }
   }
 }
