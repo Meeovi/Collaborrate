@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form v-for="article in articles" :key="article.id"  method="POST" @submit.prevent>
+        <form v-for="article in allArticlesList" :key="article.id"  method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -8,7 +8,7 @@
                         <th>
                         </th>
                         <th scope="col" class="articleAddOptions">
-                            <li><a href="/admin/add-new/add-new-tag"><input type="button" class="btn btn-warning">Add New Tag</button></a></li>
+                            <li><a href="/admin/add-new/add-new-tag"><input type="button" class="btn btn-warning" value="Add New Tag"></a></li>
                             <li><input type="submit" @click="addArticle" value="Save" /></li>
                         </th>
                     </tr>

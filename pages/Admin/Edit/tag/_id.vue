@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form v-for="tag in tags" :key="tag.id" method="POST" @submit.prevent>
+        <form v-for="tag in allTagsList" :key="tag.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

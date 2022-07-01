@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-customergroup"><input type="button" class="btn btn-warning">Add New Social Group</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-customergroup"><input type="button" class="btn btn-warning" value="Add New Social Group"></a>
         
 </div>
 </nav>
@@ -18,7 +18,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="customers in customer_group" :key="customers.id">
+        <tbody v-for="customers in allCustomer_groupList" :key="customers.id">
           <tr>
             <td>{{ customers.id }}</td>
             <td>{{ customers.name }}</td>
@@ -35,18 +35,18 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import  customer_group from '~/apollo/queries/customers/customerGroups'
+import  allCustomer_groupList from '~/apollo/queries/customers/customerGroups'
 
 export default {
   data() {
     return {
-      customer_group: [],
+      allCustomer_groupList: [],
     }
   },
   apollo: {
-    customer_group: {
+    allCustomer_groupList: {
       prefetch: true,
-      query: customer_group
+      query: allCustomer_groupList
     }
   },
     head: {

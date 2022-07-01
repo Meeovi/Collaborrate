@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-gift-memos"><input type="button" class="btn btn-warning">Create New Gift Certificates</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-gift-memos"><input type="button" class="btn btn-warning" value="Create New Gift Certificates"></a>
         
       </div>
     </nav>
@@ -20,7 +20,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="memos in credit_memos" :key="memos.id">
+        <tbody v-for="memos in allCredit_memosList" :key="memos.id">
           <tr>
             <td>{{ memos.bill_to_name }}</td>
             <td>{{ memos.credit_memo }}</td>
@@ -38,18 +38,18 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import  credit_memos from '~/apollo/queries/sales/credit_memos'
+import  allCredit_memosList from '~/apollo/queries/sales/credit_memos'
 
 export default {
   data() {
     return {
-      credit_memos: [],
+      allCredit_memosList: [],
     }
   },
   apollo: {
-    credit_memos: {
+    allCredit_memosList: {
       prefetch: true,
-      query: credit_memos
+      query: allCredit_memosList
     }
   },
     head: {

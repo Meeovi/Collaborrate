@@ -55,7 +55,7 @@
                       <td style="text-align: right;">Country</td>
                       <td>
                         <select id="category" v-model="country" name="template" class="form-category">
-                          <option v-for="country in country" :key="country" :value="country">{{ country.name }}</option>
+                          <option v-for="country in allCountryList" :key="country" :value="country">{{ country.name }}</option>
                         </select>
                       </td>
                     </tr>

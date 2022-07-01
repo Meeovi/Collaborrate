@@ -3,7 +3,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-attribute"><input type="button" class="btn btn-warning">Add New Attribute</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-occassion"><input type="button" class="btn btn-warning" value="Add New Occassion"></a>
         
 </div>
 </nav>
@@ -12,18 +12,18 @@
         <table id="table" data-toggle="table" class="table">
         <thead class="table table-dark">
           <tr>
-            <th>Attribute Name</th>
-            <th>Attribute Code</th>
-            <th>Attribute Value</th>
+            <th>Occassion ID</th>
+            <th>Occassion Name</th>
+            <th>Occassion Code</th>
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="attributes in product_attribute" :key="attributes.id">
+        <tbody v-for="occassions in allOccassionsList" :key="occassions.id">
           <tr>
-            <td>{{ attributes.default_label }}</td>
-            <td>{{ attributes.attribute_code }}</td>
-            <td>{{ attributes.default_value }}</td>
-            <td><a :href="`/admin/edit/attribute/${attributes.id}`">View</a></td>
+            <td>{{ occassions.id }}</td>
+            <td>{{ occassions.name }}</td>
+            <td>{{ occassions.code }}</td>
+            <td><a :href="`/admin/edit/occassion/${occassions.id}`">View</a></td>
           </tr>
         </tbody>
       </table>
@@ -34,23 +34,23 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  product_attribute from '~/apollo/queries/shop/attributes.gql'
+ import  allOccassionsList from '~/apollo/queries/shop/occassions.gql'
 
 export default {
   data() {
     return {
-      product_attribute: [],
+      allOccassionsList: [],
     }
   },
   apollo: {
-    product_attribute: {
+    allOccassionsList: {
       prefetch: true,
-      query: product_attribute
+      query: allOccassionsList
     }
   }, 
     // eslint-disable-next-line vue/order-in-components
     head: {
-      title: 'Attributes'
+      title: 'Occassions'
     }
   }
 

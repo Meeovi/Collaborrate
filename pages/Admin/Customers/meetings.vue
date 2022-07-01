@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-meeting"><input type="button" class="btn btn-warning">Create New Meeting</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-meeting"><input type="button" class="btn btn-warning" value="Create New Meeting"></a>
         
       </div>
     </nav>
@@ -23,7 +23,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="meetings in meetings" :key="meetings.id">
+        <tbody v-for="meetings in allMeetingsList" :key="meetings.id">
           <tr>
             <td>{{ meetings.subject }}</td>
             <td>{{ meetings.invitees }}</td>
@@ -43,18 +43,18 @@
 </template>
 
 <script>
- import  meetings from '~/apollo/queries/customers/meetings'
+ import  allMeetingsList from '~/apollo/queries/customers/meetings'
 
 export default {
    data() {
     return {
-      meetings: [],
+      allMeetingsList: [],
     }
   },
   apollo: {
-    meetings: {
+    allMeetingsList: {
       prefetch: true,
-      query: meetings
+      query: allMeetingsList
     },
   }, 
     head: {

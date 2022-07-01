@@ -3,7 +3,7 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand">
-          <input type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">Add New Media</button>
+          <input type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal" value="Add New Media">
         </a>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -20,10 +20,10 @@
             <th>Media</th>
           </tr>
         </thead>
-        <tbody v-for="mediamanager in mediamanager" :key="mediamanager">
+        <tbody v-for="mediamanager in allMediamanagerList" :key="mediamanager">
           <tr>
             <td><input type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#mediaModal">
-            {{ mediamanager.media }}</button></td>
+            {{ mediamanager.media }}</td>
           </tr>
         </tbody>
       </table>
@@ -38,19 +38,19 @@
 </template>
 
 <script>
-import  mediamanager from '~/apollo/queries/content/mediamanager.gql'
+import  allMediamanagerList from '~/apollo/queries/content/mediamanager.gql'
 import  mediasettings from '~/components/dashboard/media/mediasettings'
 import  mediadetails from '~/components/dashboard/media/mediadetails'
   export default {
     data() {
       return {
-        mediamanager: [],
+        allMediamanagerList: [],
       }
     },
     apollo: {
-      mediamanager: {
+      allMediamanagerList: {
         prefetch: true,
-        query: mediamanager
+        query: allMediamanagerList
       }
     },
     layout: 'dashboard',

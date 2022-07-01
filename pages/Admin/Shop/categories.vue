@@ -3,7 +3,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-category"><input type="button" class="btn btn-warning">Add New Category</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-category"><input type="button" class="btn btn-warning" value="Add New Category"></a>
         
 </div>
 </nav>
@@ -20,7 +20,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="categories in categories" :key="categories.id">
+        <tbody v-for="categories in allCategoriesList" :key="categories.id">
           <tr>
             <td>{{ categories.name }}</td>
             <td>{{ categories.content }}</td>
@@ -36,18 +36,18 @@
 </template>
 
 <script>
- import  categories from '~/apollo/queries/shop/categories'
+ import  allCategoriesList from '~/apollo/queries/shop/categories'
 
 export default {
   data() {
     return {
-      categories: [],
+      allCategoriesList: [],
     }
   },
   apollo: {
-    categories: {
+    allCategoriesList: {
       prefetch: true,
-      query: categories
+      query: allCategoriesList
     }
   }, 
     // eslint-disable-next-line vue/order-in-components

@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <form  v-for="target in targets" :key="target.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form  v-for="target in allTargetsList" :key="target.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form v-for="segment in segments" :key="segment.id"  method="POST" @submit.prevent>
+        <form v-for="segment in allSegmentsList" :key="segment.id"  method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

@@ -3,11 +3,10 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/admin/system/import -management">
-          <input type="button" class="btn btn-warning">import  Data</button>
+          <input type="button" class="btn btn-warning" value="Import Data">
         </a>
         <a class="navbar-brand" href="/admin/system/export-management">
-          <input type="button" class="btn btn-warning" style="float:right; right: 15px; position: absolute;">Export Data
-          </button>
+          <input type="button" class="btn btn-warning" style="float:right; right: 15px; position: absolute;" value="Export Data">
         </a>
       </div>
     </nav>

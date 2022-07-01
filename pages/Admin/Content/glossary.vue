@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-glossary"><input type="button" class="btn btn-warning">Add New Glossary Term</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-glossary"><input type="button" class="btn btn-warning" value="Add New Glossary Term"></a>
         
 </div>
 </nav>
@@ -18,7 +18,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="glossaries in glossary" :key="glossaries.id">
+        <tbody v-for="glossaries in allAllGlossariesList" :key="glossaries.id">
           <tr>
             <td>{{ glossaries.id }}</td>
             <td>{{ glossaries.image }}</td>
@@ -34,18 +34,18 @@
 </template>
 
 <script>
-import  glossary from '~/apollo/queries/content/glossaries.gql'
+import  allAllGlossariesList from '~/apollo/queries/content/glossaries.gql'
 
 export default {
   data() {
     return {
-      glossary: [],
+      allAllGlossariesList: [],
     }
   },
   apollo: {
-    glossary: {
+    allAllGlossariesList: {
       prefetch: true,
-      query: glossary
+      query: allAllGlossariesList
     }
   },
     head: {

@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-shop"><input type="button" class="btn btn-warning">Add A New Shop</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-shop"><input type="button" class="btn btn-warning" value="Add A New Shop"></a>
       </div>
     </nav>
     
@@ -20,7 +20,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="shop in shops" :key="shop">
+          <tr v-for="shop in allShopsList" :key="shop">
             <td>{{ shop.name }}</td>
             <td>{{ shop.website }}</td>
             <td>{{ shop.type }}</td>
@@ -36,9 +36,20 @@
 </template>
 
 <script>
+import  allShopsList from '~/apollo/queries/shop/products'
 
-  export default {
-
+export default {
+  data() {
+    return {
+      allShopsList: [],
+    }
+  },
+  apollo: {
+    allShopsList: {
+      prefetch: true,
+      query: allShopsList
+    }
+  }, 
     head: {
       title: 'Shops'
     }

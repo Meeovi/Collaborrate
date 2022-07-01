@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="zone in zones" :key="zone.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="zone in allZonesList" :key="zone.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
@@ -55,7 +55,7 @@
                       <td style="text-align: right;">Country</td>
                       <td>
                         <select id="category" v-model="country" name="template" class="form-category">
-                          <option v-for="country in country" :key="country" :value="country">{{ country.name }}</option>
+                          <option v-for="country in allCountryList" :key="country" :value="country">{{ country.name }}</option>
                         </select>
                       </td>
                     </tr>

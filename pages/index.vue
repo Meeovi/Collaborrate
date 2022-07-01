@@ -31,7 +31,7 @@
         </ul>
         <!-- Pills navs -->
 
-        <!-- Pills content -->
+         <!--Pills content-->
         <div id="ex2-content" class="tab-content">
             <div id="ex2-pills-1" class="tab-pane fade show active" role="tabpanel" aria-labelledby="ex2-tab-1">
                 <mostviewed />

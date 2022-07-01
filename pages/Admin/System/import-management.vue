@@ -3,7 +3,7 @@
         <h2 id="flush-headingFive" class="accordion-header">
           <button class="accordion-button" type="button" data-mdb-toggle="collapse"
             data-mdb-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-            import  Content
+            Import Content
           </button>
         </h2>
         <div id="flush-collapseFive" class="accordion-collapse" aria-labelledby="flush-headingFive"
@@ -13,28 +13,28 @@
               <table id="table" data-toggle="table" class="table">
                 <thead class="table table-dark">
                   <tr>
-                    <th>import er Name</th>
+                    <th>Import Name</th>
                     <th>ACTION</th>
                   </tr>
                 </thead>
-                <tbody v-for="importm in importm" :key="importm.id">
+                <tbody v-for="importm in allImportmList" :key="importm.id">
                   <tr>
                     <td>{{ importm.name }}</td>
                     <td><input type="button" class="btn btn-primary" data-mdb-toggle="modal"
-                        data-mdb-target="#exampleModal">import </button></td>
+                        data-mdb-target="#exampleModal" value="Import"></td>
                     <div id="exampleModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
                       aria-hidden="true">
                       <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 id="exampleModalLabel" class="modal-title">Edit import </h5>
+                            <h5 id="exampleModalLabel" class="modal-title">Edit Import</h5>
                             <input type="button" class="btn-close" data-mdb-dismiss="modal"
-                              aria-value="Close"></button>
+                              aria-value="Close">
                           </div>
                           <div class="modal-body">...</div>
                           <div class="modal-footer">
-                            <input type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Cancel</button>
-                            <input type="button" class="btn btn-primary">import </button>
+                            <input type="button" class="btn btn-secondary" data-mdb-dismiss="modal"  value="Cancel">
+                            <input type="button" class="btn btn-primary" value="Import">
                           </div>
                         </div>
                       </div>
@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import importm from '~/apollo/queries/system/importm'
+import  importm from '~/apollo/queries/system/importm'
 
 export default {
   data() {
@@ -64,7 +64,7 @@ export default {
     }
   }, 
   head: {
-      title: 'import  Management'
+      title: 'Import Management'
   }
 }
 </script>

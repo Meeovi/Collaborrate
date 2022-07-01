@@ -3,7 +3,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-producttype"><input type="button" class="btn btn-warning">Add New Product Type</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-producttype"><input type="button" class="btn btn-warning" value="Add New Product Type"></a>
         
 </div>
 </nav>
@@ -18,7 +18,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="types in product_types" :key="types.id">
+        <tbody v-for="types in allProduct_typesList" :key="types.id">
           <tr>
             <td>{{ types.type_name }}</td>
             <td>{{ types.product_type }}</td>
@@ -34,18 +34,18 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  product_types from '~/apollo/queries/shop/product-type.gql'
+ import  allProduct_typesList from '~/apollo/queries/shop/product-type.gql'
 
 export default {
   data() {
     return {
-      product_types: [],
+      allProduct_typesList: [],
     }
   },
   apollo: {
-    product_types: {
+    allProduct_typesList: {
       prefetch: true,
-      query: product_types
+      query: allProduct_typesList
     }
   }, 
     // eslint-disable-next-line vue/order-in-components

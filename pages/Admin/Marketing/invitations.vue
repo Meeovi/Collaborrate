@@ -2,8 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-event"><input type="button" class="btn btn-warning">Events</button></a>
-        <a class="navbar-brand" href="/admin/add-new/add-new-invitation" type="button" style="float:right; right: 15px; position: absolute;"><input type="button" class="btn btn-warning" style="float:right; right: 8%; position: absolute;">Invitations</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-invitation"><input type="button" class="btn btn-warning" value="Events"></a>
       </div>
     </nav>
 <br>
@@ -11,26 +10,31 @@
       <table id="table" data-toggle="table" class="table">
         <thead class="table table-dark">
           <tr>
-            <th>Lorem</th>
-            <th>Ipsum</th>
-            <th>Dolor</th>
+            <th>Invitation ID</th>
+            <th>Invitation Date</th>
+            <th>Customer Email</th>
+            <th>Customer Name</th>
+            <th>Billing Address</th>
+            <th>Shipping Address</th>
+            <th>Grand Total Purchased</th>
+            <th>Order Number</th>
+            <th>Payment Method</th>
+            <th>Status</th>
+            <th>Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody v-for="invitations in allInvoicesList" :key="invitations.id">
           <tr>
-            <td>Sit</td>
-            <td>Amet</td>
-            <td>Consectetur</td>
-          </tr>
-          <tr>
-            <td>Adipisicing</td>
-            <td>Elit</td>
-            <td>Sint</td>
-          </tr>
-          <tr>
-            <td>Hic</td>
-            <td>Fugiat</td>
-            <td>Temporibus</td>
+            <td>{{ invitations.id }}</td>
+            <td>{{ invitations.invoiceDate }}</td>
+            <td>{{ invitations.email }}</td> 
+            <td>{{ invitations.billingAddress }}</td>
+            <td>{{ invitations.shippingAddress }}</td>
+            <td>{{ invitations.grandTotalPurchased }}</td>
+            <td>{{ invitations.orderNumber }}</td>
+            <td>{{ invitations.paymentMethod }}</td>
+            <td>{{ invitations.status }}</td>
+            <td><a :href="`/admin/edit/invitation/${invitations.id}`">View</a></td>
           </tr>
         </tbody>
       </table>
@@ -40,11 +44,22 @@
 </template>
 
 <script>
+import  allInvoicesList from '~/apollo/queries/marketing/invitations'
 
-  export default {
-
+export default {
+  data() {
+    return {
+      allInvoicesList: [],
+    }
+  },
+  apollo: {
+    allInvoicesList: {
+      prefetch: true,
+      query: allInvoicesList
+    }
+  },
     head: {
-      title: 'Private Sales'
+      title: 'Invitations'
     }
   }
 

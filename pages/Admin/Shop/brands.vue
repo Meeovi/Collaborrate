@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-brand"><input type="button" class="btn btn-warning">Add New Brand</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-brand"><input type="button" class="btn btn-warning" value="Add New Brand"></a>
         
 </div>
 </nav>
@@ -22,7 +22,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="brands in brands" :key="brands.id">
+        <tbody v-for="brands in allBrandsList" :key="brands.id">
           <tr>
             <td>{{ brands.media }}</td>
             <td>{{ brands.id }}</td>
@@ -42,18 +42,18 @@
 </template>
 
 <script>
-import  brands from '~/apollo/queries/shop/brands'
+import  allBrandsList from '~/apollo/queries/shop/brands'
 
 export default {
   data() {
     return {
-      brands: [],
+      allBrandsList: [],
     }
   },
   apollo: {
-    brands: {
+    allBrandsList: {
       prefetch: true,
-      query: brands
+      query: allBrandsList
     }
   },
     head: {

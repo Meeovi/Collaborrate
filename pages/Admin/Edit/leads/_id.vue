@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <form v-for="lead in leads" :key="lead.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="lead in allLeadsList" :key="lead.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>

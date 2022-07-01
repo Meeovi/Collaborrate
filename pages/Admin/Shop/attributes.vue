@@ -3,7 +3,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-attribute"><input type="button" class="btn btn-warning">Add New Attribute</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-attribute"><input type="button" class="btn btn-warning" value="Add New Attribute"></a>
         
 </div>
 </nav>
@@ -18,7 +18,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="attributes in product_attribute" :key="attributes.id">
+        <tbody v-for="attributes in allProduct_attributeList" :key="attributes.id">
           <tr>
             <td>{{ attributes.default_label }}</td>
             <td>{{ attributes.attribute_code }}</td>
@@ -34,18 +34,18 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  product_attribute from '~/apollo/queries/shop/attributes.gql'
+ import  allProduct_attributeList from '~/apollo/queries/shop/attributes.gql'
 
 export default {
   data() {
     return {
-      product_attribute: [],
+      allProduct_attributeList: [],
     }
   },
   apollo: {
-    product_attribute: {
+    allProduct_attributeList: {
       prefetch: true,
-      query: product_attribute
+      query: allProduct_attributeList
     }
   }, 
     // eslint-disable-next-line vue/order-in-components

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="checklist in checklists" :key="checklist.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="checklist in allChecklistsList" :key="checklist.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>

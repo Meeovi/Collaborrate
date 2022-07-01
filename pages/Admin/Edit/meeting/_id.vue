@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form  v-for="meeting in meetings" :key="meeting.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
+        <form  v-for="meeting in allMeetingsList" :key="meeting.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

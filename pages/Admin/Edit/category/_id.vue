@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 <template>
     <div>
-        <form v-for="category in categories" :key="category.id"   method="POST" @submit.prevent>
+        <form v-for="category in allCategoriesList" :key="category.id"   method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

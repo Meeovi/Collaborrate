@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="product_types in product_types" :key="product_types" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="product_types in allProduct_typesList" :key="product_types" method="POST" enctype="multipart/form-data" @submit.prevent>
         <div class="row">
           <div class="col-lg-6">
             <table class="table">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form  v-for="email_template in email_templates" :key="email_template.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form  v-for="email_template in allEmail_templatesList" :key="email_template.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>

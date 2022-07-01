@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-survey"><input type="button" class="btn btn-warning">Create A Survey</button></a>        
+        <a class="navbar-brand" href="/admin/add-new/add-new-survey"><input type="button" class="btn btn-warning" value="Create A Survey"></a>        
 </div>
 </nav>
 <br>
@@ -19,7 +19,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="surveys in surveys" :key="surveys.id">
+        <tbody v-for="surveys in allSurveysList" :key="surveys.id">
           <tr>
             <td>{{ surveys.id }}</td>
             <td>{{ surveys.name }}</td>
@@ -37,18 +37,18 @@
 </template>
 
 <script>
- import  surveys from '~/apollo/queries/reports/surveys'
+ import  allSurveysList from '~/apollo/queries/reports/surveys'
 
 export default {
   data() {
     return {
-      surveys: [],
+      allSurveysList: [],
     }
   },
   apollo: {
-    surveys: {
+    allSurveysList: {
       prefetch: true,
-      query: surveys
+      query: allSurveysList
     }
   }, 
     head: {

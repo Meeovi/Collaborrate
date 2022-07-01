@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="warehouse in warehouses" :key="warehouse.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="warehouse in allWarehousesList" :key="warehouse.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>

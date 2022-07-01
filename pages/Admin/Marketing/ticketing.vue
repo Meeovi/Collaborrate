@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-ticket"><input type="button" class="btn btn-warning" value="Create A Ticket"></button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-ticket"><input type="button" class="btn btn-warning" value="Create A Ticket"></a>
       </div>
 </nav>
 <br>
@@ -25,7 +25,7 @@
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody v-for="ticketing in ticketing" :key="ticketing.id">
+        <tbody v-for="ticketing in allTicketingList" :key="ticketing.id">
           <tr>
             <td>{{ ticketing.id }}</td>
             <td>{{ ticketing.name }}</td>
@@ -49,18 +49,18 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  ticketing from '~/apollo/queries/marketing/ticketing'
+ import  allTicketingList from '~/apollo/queries/marketing/ticketing'
 
 export default {
   data() {
     return {
-      ticketing: [],
+      allTicketingList: [],
     }
   },
   apollo: {
-    ticketing: {
+    allTicketingList: {
       prefetch: true,
-      query: ticketing
+      query: allTicketingList
     }
   }, 
     head: {

@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-wishlist"><input type="button" class="btn btn-warning">Add New Wishlist</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-wishlist"><input type="button" class="btn btn-warning" value="Add New Wishlist"></a>
         
 </div>
 </nav>
@@ -19,7 +19,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="wishlists in wishlists" :key="wishlists.id">
+        <tbody v-for="wishlists in allWishlistsList" :key="wishlists.id">
           <tr>
             <td>{{ wishlists.id }}</td>
             <td>{{ wishlists.name }}</td>
@@ -37,18 +37,18 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import  wishlists from '~/apollo/queries/shop/wishlists'
+import  allWishlistsList from '~/apollo/queries/shop/wishlists'
 
 export default {
   data() {
     return {
-      wishlists: [],
+      allWishlistsList: [],
     }
   },
   apollo: {
-    wishlists: {
+    allWishlistsList: {
       prefetch: true,
-      query: wishlists
+      query: allWishlistsList
     }
   },
     head: {

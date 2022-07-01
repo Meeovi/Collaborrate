@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="occassion in occassions" :key="occassion.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="occassion in allOccassionsList" :key="occassion.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
@@ -42,7 +42,7 @@
                       <td>
                         <label for="categories">Categories</label><br>
                         <select id="categories" v-model="category" name="template" class="form-category">
-                          <option v-for="categories in categoriess" :key="categories" :value="categories">
+                          <option v-for="categories in allCategoriessList" :key="categories" :value="categories">
                             {{ categories.name }}</option>
                         </select>
                       </td>
@@ -51,7 +51,7 @@
                       <td>
                         <label for="tags">Tags</label><br>
                         <select id="tags" v-model="tags" name="template" class="form-category">
-                          <option v-for="tags in tagss" :key="tags" :value="tags">
+                          <option v-for="tags in allTagssList" :key="tags" :value="tags">
                             {{ tags.name }}</option>
                         </select>
                       </td>
@@ -60,7 +60,7 @@
                       <td>
                         <label for="products">Products</label><br>
                         <select id="products" v-model="products" name="template" class="form-category">
-                          <option v-for="products in productss" :key="products" :value="products">
+                          <option v-for="products in allProductssList" :key="products" :value="products">
                             {{ products.name }}</option>
                         </select>
                       </td>
@@ -69,7 +69,7 @@
                       <td>
                         <label for="wishlists">Wishlists</label><br>
                         <select id="wishlists" v-model="wishlists" name="template" class="form-category">
-                          <option v-for="wishlists in wishlistss" :key="wishlists" :value="wishlistss">
+                          <option v-for="wishlists in allWishlistssList" :key="wishlists" :value="wishlistss">
                             {{ wishlists.name }}</option>
                         </select>
                       </td>

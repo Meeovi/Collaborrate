@@ -3,7 +3,7 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/admin/add-new/add-new-ooto">
-          <input type="button" class="btn btn-warning">Create Out of Office</button>
+          <input type="button" class="btn btn-warning" value="Create Out of Office">
         </a>
       </div>
     </nav>
@@ -23,7 +23,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="ooto in ooto" :key="ooto">
+          <tr v-for="ooto in allOotoList" :key="ooto">
             <th>{{ ooto.created_at }}</th>
             <td>{{ ooto.login }}</td>
             <td>{{ ooto.start_date }}</td>
@@ -38,18 +38,18 @@
 </template>
 
 <script>
-  import  ooto from '~/apollo/queries/system/ooto'
+  import  allOotoList from '~/apollo/queries/system/ooto'
 
   export default {
     data() {
       return {
-        ooto: [],
+        allOotoList: [],
       }
     },
     apollo: {
-      ooto: {
+      allOotoList: {
         prefetch: true,
-        query: ooto
+        query: allOotoList
       },
     },
     head: {

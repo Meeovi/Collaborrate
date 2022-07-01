@@ -18,7 +18,7 @@
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody v-for="emails in emails" :key="emails.id">
+        <tbody v-for="emails in allEmailsList" :key="emails.id">
           <tr>
             <td>{{ emails.id }}</td>
             <td>{{ emails.cc }}</td>
@@ -35,18 +35,18 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  emails from '~/apollo/queries/marketing/emails'
+ import  allEmailsList from '~/apollo/queries/marketing/emails'
 
 export default {
   data() {
     return {
-      emails: [],
+      allEmailsList: [],
     }
   },
   apollo: {
-    emails: {
+    allEmailsList: {
       prefetch: true,
-      query: emails
+      query: allEmailsList
     }
   }, 
     head: {

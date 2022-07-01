@@ -24,7 +24,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="permissions in permissions" :key="permissions.id">
+          <tr v-for="permissions in allPermissionsList" :key="permissions.id">
             <td>{{ permissions.users }}</td>
             <td>{{ permissions.name }}</td>
             <td>
@@ -47,18 +47,18 @@
 </template>
 
 <script>
-  import  permissions from '~/apollo/queries/system/permissions.gql'
+  import  allPermissionsList from '~/apollo/queries/system/permissions.gql'
 
   export default {
     data() {
       return {
-        permissions: [],
+        allPermissionsList: [],
       }
     },
     apollo: {
-      permissions: {
+      allPermissionsList: {
         prefetch: true,
-        query: permissions
+        query: allPermissionsList
       }
     },
     head: {

@@ -66,7 +66,7 @@
                       <td>
                         <label for="role">Role</label><br>
                         <select id="role" v-model="role" name="template" class="form-category">
-                          <option v-for="role in roles" :key="role" :value="role">
+                          <option v-for="role in allRolesList" :key="role" :value="role">
                             {{ role.name }}</option>
                         </select>
                       </td>
@@ -75,7 +75,7 @@
                       <td>
                         <label for="users">Users</label><br>
                         <select id="users" v-model="users" name="template" class="form-category">
-                          <option v-for="users in products" :key="users" :value="users">
+                          <option v-for="users in allProductsList" :key="users" :value="users">
                             {{ users.name }}</option>
                         </select>
                       </td>

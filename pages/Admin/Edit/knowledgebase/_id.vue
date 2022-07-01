@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="knowledgebase in knowledgebases" :key="knowledgebase.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
+    <form v-for="knowledgebase in allKnowledgebasesList" :key="knowledgebase.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
       <div class="table table-responsive">
         <table class="table" >
           <thead>

@@ -1,7 +1,7 @@
 
 <template>
     <div>
-        <form v-for="attribute in attributes" :key="attribute.id"  method="POST" @submit.prevent>
+        <form v-for="attribute in allAttributesList" :key="attribute.id"  method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

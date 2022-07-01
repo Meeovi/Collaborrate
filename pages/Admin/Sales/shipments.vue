@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-shipment"><input type="button" class="btn btn-warning">Create new Shipment</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-shipment"><input type="button" class="btn btn-warning" value="Create new Shipment"></a>
 
       </div>
     </nav>
@@ -19,7 +19,7 @@
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody v-for="shipments in shipments" :key="shipments.id">
+        <tbody v-for="shipments in allShipmentsList" :key="shipments.id">
           <tr>
             <td>{{ shipments.id }}</td>
             <td>{{ shipments.carrier_name }}</td>
@@ -36,18 +36,18 @@
 </template>
 
 <script>
- import  shipments from '~/apollo/queries/sales/shipments'
+ import  allShipmentsList from '~/apollo/queries/sales/shipments'
 
 export default {
   data() {
     return {
-      shipments: [],
+      allShipmentsList: [],
     }
   },
   apollo: {
-    shipments: {
+    allShipmentsList: {
       prefetch: true,
-      query: shipments
+      query: allShipmentsList
     }
   }, 
     head: {

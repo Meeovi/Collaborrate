@@ -21,7 +21,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="tasks in tasks" :key="tasks.id">
+        <tbody v-for="tasks in allTasksList" :key="tasks.id">
           <tr>
             <td>{{ tasks.subject }}</td>
             <td>{{ tasks.contact }}</td>
@@ -40,20 +40,20 @@
 </template>
 
 <script>
- import  tasks from '~/apollo/queries/customers/tasks'
+ import  allTasksList from '~/apollo/queries/customers/tasks'
 
 export default {
    data() {
     return {
-      tasks: [],
+      allTasksList: [],
       website: [],
       categories: []
     }
   },
   apollo: {
-    tasks: {
+    allTasksList: {
       prefetch: true,
-      query: tasks
+      query: allTasksList
     },
   }, 
     head: {

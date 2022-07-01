@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="reward in rewards" :key="reward.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
+    <form v-for="reward in allRewardsList" :key="reward.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
       <div class="table table-responsive">
         <table class="table" >
           <thead>

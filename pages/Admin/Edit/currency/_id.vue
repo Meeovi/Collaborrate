@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="currency in currencies" :key="currency.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
+    <form v-for="currency in allCurrenciesList" :key="currency.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>

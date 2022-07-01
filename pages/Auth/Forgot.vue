@@ -25,7 +25,7 @@
                     <input id="email" v-model="email" type="email" class="form-control" />
                   </div>
                   <input type="hidden" name="_csrf" :value="csrfToken">
-                  <input type="submit" style="width:100%">New Password</button>
+                  <input type="submit" style="width:100%" value="New Password">
                 </form>
               </b-col>
             </b-row>

@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 <template>
   <div>
-    <form v-for="role in roles" :key="role.id" method="POST" @submit.prevent>
+    <form v-for="role in allRolesList" :key="role.id" method="POST" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>

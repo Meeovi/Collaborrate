@@ -17,11 +17,11 @@
                     <th>ACTION</th>
                   </tr>
                 </thead>
-                <tbody v-for="importm in importm" :key="importm.id">
+                <tbody v-for="importm in allImportmList" :key="importm.id">
                   <tr>
                     <td>{{ importm.name }}</td>
                     <td><input type="button" class="btn btn-primary" data-mdb-toggle="modal"
-                        data-mdb-target="#exampleModal">Export</button></td>
+                        data-mdb-target="#exampleModal" value="Export"></td>
                     <div id="exampleModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
                       aria-hidden="true">
                       <div class="modal-dialog">
@@ -29,12 +29,12 @@
                           <div class="modal-header">
                             <h5 id="exampleModalLabel" class="modal-title">Edit Export</h5>
                             <input type="button" class="btn-close" data-mdb-dismiss="modal"
-                              aria-value="Close"></button>
+                              aria-value="Close">
                           </div>
                           <div class="modal-body">...</div>
                           <div class="modal-footer">
-                            <input type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Cancel</button>
-                            <input type="button" class="btn btn-primary">Export</button>
+                            <input type="button" class="btn btn-secondary" data-mdb-dismiss="modal"  value="Cancel">
+                            <input type="button" class="btn btn-primary" value="Export">
                           </div>
                         </div>
                       </div>

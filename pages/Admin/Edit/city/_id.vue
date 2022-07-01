@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form v-for="city in cities" :key="city.id"  method="POST" @submit.prevent>
+        <form v-for="city in allCitiesList" :key="city.id"  method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

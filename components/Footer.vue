@@ -17,9 +17,6 @@
         <li><a class="dropdown-item" href="https://www.alternatecms.com/docs">Documentation</a></li>
         <li><a class="dropdown-item" href="https://github.com/Meeovi/alternatecms/discussions">Discussions</a></li>
         <li><a class="dropdown-item" href="https://github.com/Meeovi/alternatecms/releases">Versions</a></li>
-        <li>
-          <hr class="dropdown-divider" />
-        </li>
         <li><a class="dropdown-item" href="https://www.alternatecms.com">Official Site</a></li>
       </ul>
     </div>

@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-quote"><input type="button" class="btn btn-warning">Create A Quote</button></a>        
+        <a class="navbar-brand" href="/admin/add-new/add-new-quote"><input type="button" class="btn btn-warning" value="Create A Quote"></a>        
 </div>
 </nav>
 <br>
@@ -20,7 +20,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="quotes in quotes" :key="quotes.id">
+        <tbody v-for="quotes in allQuotesList" :key="quotes.id">
           <tr>
             <td>{{ quotes.id }}</td>
             <td>{{ quotes.name }}</td>
@@ -39,18 +39,18 @@
 </template>
 
 <script>
- import  quotes from '~/apollo/queries/sales/quotes'
+ import  allQuotesList from '~/apollo/queries/sales/quotes'
 
 export default {
   data() {
     return {
-      quotes: [],
+      allQuotesList: [],
     }
   },
   apollo: {
-    quotes: {
+    allQuotesList: {
       prefetch: true,
-      query: quotes
+      query: allQuotesList
     }
   }, 
     head: {

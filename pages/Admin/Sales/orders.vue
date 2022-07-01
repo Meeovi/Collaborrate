@@ -2,35 +2,32 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand"><input type="button" class="btn btn-warning">Create New Order</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-order"><input type="button" class="btn btn-warning" value="Create New Order"></a>
         
       </div>
     </nav>
-<br>
+    
+    <br>
     <div class="table table-responsive">
       <table id="table" data-toggle="table" class="table">
         <thead class="table table-dark">
           <tr>
-            <th>Lorem</th>
-            <th>Ipsum</th>
-            <th>Dolor</th>
+            <th>Order ID</th>
+            <th>Bill to Name</th>
+            <th>Purchased Date</th>
+            <th>Ship to Name</th>
+            <th>Grand Total Purchased</th>
+            <th>Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody v-for="orders in allOrdersList" :key="orders.id">
           <tr>
-            <td>Sit</td>
-            <td>Amet</td>
-            <td>Consectetur</td>
-          </tr>
-          <tr>
-            <td>Adipisicing</td>
-            <td>Elit</td>
-            <td>Sint</td>
-          </tr>
-          <tr>
-            <td>Hic</td>
-            <td>Fugiat</td>
-            <td>Temporibus</td>
+            <td>{{ orders.id }}</td>
+            <td>{{ orders.bill_to_name }}</td>
+            <td>{{ orders.purchased_date }}</td>
+            <td>{{ orders.ship_to_name }}</td>
+            <td>{{ orders.grand_total_purchased }}</td>
+            <td><a :href="`/admin/edit/order/${orders.id}`">View</a></td>
           </tr>
         </tbody>
       </table>
@@ -40,9 +37,21 @@
 </template>
 
 <script>
+// eslint-disable-next-line camelcase
+import  allOrdersList from '~/apollo/queries/sales/orders'
 
-  export default {
-
+export default {
+  data() {
+    return {
+      allOrdersList: [],
+    }
+  },
+  apollo: {
+    allOrdersList: {
+      prefetch: true,
+      query: allOrdersList
+    }
+  },
     head: {
       title: 'Orders'
     }

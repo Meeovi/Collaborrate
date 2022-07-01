@@ -87,7 +87,7 @@
                 <tr>
                   <td style="text-align: right;">Storefront Properties</td>
                   <td>
-                    <input id="attributesFacetedNavigation" v-model="faceted_navigation" type="checkbox" value="Use in Faceted Navigation" />
+                    <input id="attributesFacetedNavigation" v-model="faceted_navigation" type="checkbox" value="Use in allFaceted Navigation" />
                     <input id="attributesPosition" v-model="position" type="text" value="Position in faceted navigation" />
                     <input id="attributesPublic" v-model="isPublic" type="checkbox" value="Check to make public" />
                   </td>
@@ -95,7 +95,7 @@
                 <tr>
                   <td style="text-align: right;">Dashboard Properties</td>
                   <td>
-                    <input id="attributesFilterOptions" v-model="filter_options" type="checkbox" value="Use in Filtering" />
+                    <input id="attributesFilterOptions" v-model="filter_options" type="checkbox" value="Use in allFiltering" />
                     <input id="attributesColumnOptions" v-model="column_options" type="checkbox" value="Add to Column Options" />
                   </td>
                 </tr>

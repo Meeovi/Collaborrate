@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="pdf_template in pdf_templates" :key="pdf_template.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="pdf_template in allPdf_templatesList" :key="pdf_template.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>
@@ -71,7 +71,7 @@
               </td>
             </tr>
             <tr>
-              <td style="text-align: right;">Margin Header</td>
+              <td style="text-align: right;">Margin allHeader</td>
               <td>
                 <input v-model="margin_header" type="text" />{{ pdf_template.margin_header }}
               </td>

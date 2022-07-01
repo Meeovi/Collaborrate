@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form  v-for="opportunities in opportunities" :key="opportunities.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
+        <form  v-for="opportunities in allOpportunitiesList" :key="opportunities.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

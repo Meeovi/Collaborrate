@@ -1,6 +1,6 @@
 <template>
     <div v-if="agreements">
-        <form v-for="agreement in agreements" :key="agreement.id" method="POST" @submit.prevent>
+        <form v-for="agreement in allAgreementsList" :key="agreement.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

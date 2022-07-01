@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-transaction"><input type="button" class="btn btn-warning">Create new Transaction</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-transaction"><input type="button" class="btn btn-warning" value="Create new Transaction"></a>
       </div>
     </nav>
     <br>
@@ -19,7 +19,7 @@
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody v-for="transactions in transactions" :key="transactions.id">
+        <tbody v-for="transactions in allTransactionsList" :key="transactions.id">
           <tr>
             <td>{{ transactions.id }}</td>
             <td>{{ transactions.order_id }}</td>
@@ -37,18 +37,18 @@
 </template>
 
 <script>
- import  transactions from '~/apollo/queries/sales/transactions'
+ import  allTransactionsList from '~/apollo/queries/sales/transactions'
 
 export default {
   data() {
     return {
-      transactions: [],
+      allTransactionsList: [],
     }
   },
   apollo: {
-    transactions: {
+    allTransactionsList: {
       prefetch: true,
-      query: transactions
+      query: allTransactionsList
     }
   }, 
     head: {

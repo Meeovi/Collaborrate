@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-article"><input type="button" class="btn btn-warning">Add New Article</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-projects"><input type="button" class="btn btn-warning" value="Add New Project"></a>
         
       </div>
     </nav>
@@ -12,21 +12,27 @@
         <thead class="table table-dark">
           <tr>
             <th>ID</th>
-            <th>Title</th>
-            <th>Excerpt</th>
-            <th>Image</th>
-            <th>Published</th>
+            <th>Project Title</th>
+            <th>Assignee</th>
+            <th>Project Manager</th>
+            <th>Start Date</th>
+            <th>Expected End Date</th>
+            <th>Status</th>
+            <th>Completed</th>
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="article in articles" :key="article.id">
+        <tbody v-for="projects in allProjectsList" :key="projects.id">
           <tr>
-            <td>{{ article.id }}</td>
-            <td>{{ article.name }}</td>
-            <td>{{ article.excerpt }}</td>
-            <td>{{ article.image }}</td>
-            <td>{{ article.published }}</td>
-            <td><a :href="`/admin/edit/article/${articles.id}`">View</a></td>
+            <td>{{ projects.id }}</td>
+            <td>{{ projects.name }}</td>
+            <td>{{ projects.assignee }}</td>
+            <td>{{ projects.projectmanager }}</td>
+            <td>{{ projects.startDate }}</td>
+            <td>{{ projects.endDate }}</td>
+            <td>{{ projects.status }}</td>
+            <td>{{ projects.done }}</td>
+            <td><a :href="`/admin/edit/projects/${projects.id}`">View</a></td>
           </tr>
         </tbody>
       </table>
@@ -36,18 +42,18 @@
 </template>
 
 <script>
- import  articles from '~/apollo/queries/content/articles'
+ import  allProjectsList from '~/apollo/queries/content/projects'
 
 export default {
   data() {
     return {
-      articles: [],
+      allProjectsList: [],
     }
   },
   apollo: {
-    articles: {
+    allProjectsList: {
       prefetch: true,
-      query: articles
+      query: allProjectsList
     }
   }, 
     head: {

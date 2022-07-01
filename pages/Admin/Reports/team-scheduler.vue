@@ -2,45 +2,41 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/reports/add-new-schedule"><input type="button" class="btn btn-warning">Create New Schedule Request</button></a>
+        <a class="navbar-brand" href="/admin/reports/add-new-schedule"><input type="button" class="btn btn-warning"
+            value="Create New Schedule Request"></a>
       </div>
     </nav>
-    
-    <br>
-    <div class="table table-responsive">
-      <table id="table" data-toggle="table" class="table">
-        <thead class="table table-dark">
-          <tr>
-            <th>Created On</th>
-            <th>Login</th>
-            <th>WHID</th>
-            <th>Notes</th>
-            <th>Need by Date</th>
-            <th>How Many People Needed?</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Sit</td>
-            <td>Amet</td>
-            <td>Consectetur</td>
-            <td>Consectetur</td>
-            <td>Consectetur</td>
-            <td>Consectetur</td>
-            <td><a :href="`/admin/edit/agreement/${agreements.id}`">View</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
+    <br>
+    <div v-for="scheduler in allSchedulerList" :key="scheduler.id">
+      <div class="card text-center">
+        <div class="card-header">{{ scheduler.whid }}</div>
+        <div class="card-body">
+          <h5 class="card-title">{{ scheduler.start_date }} - {{ scheduler.end_date }}</h5>
+          <p class="card-text">{{ scheduler.notes }}</p>
+          <a href="#" class="btn btn-primary">Accept</a>
+        </div>
+        <div class="card-footer text-muted">Level needed - {{ scheduler.level }}</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import  allSchedulerList from '~/apollo/queries/reports/scheduler'
 
   export default {
-
+    data() {
+      return {
+        allSchedulerList: [],
+      }
+    },
+    apollo: {
+      allSchedulerList: {
+        prefetch: true,
+        query: allSchedulerList
+      },
+    },
     head: {
       title: 'Team Scheduler'
     }

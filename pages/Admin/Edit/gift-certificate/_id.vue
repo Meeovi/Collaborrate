@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="certificates in gift_certificates" :key="certificates.id"  method="POST" @submit.prevent>
+    <form v-for="certificates in allAllGift_certificatesList" :key="certificates.id"  method="POST" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>

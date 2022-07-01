@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-segment"><input type="button" class="btn btn-warning">Add Segment</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-segment"><input type="button" class="btn btn-warning" value="Add Segment"></a>
         
       </div>
     </nav>
@@ -19,15 +19,13 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="segments in segments" :key="segments.id">
+        <tbody v-for="segments in allSegmentsList" :key="segments.id">
           <tr>
             <td><input id="segmentID" type="text" name=" id" /></td>
             <td><input type="text" name="segment" /></td>
             <td><input type="text" name="status" /></td>
-            <td><input type="select" :options="categories.name" id="segmentStatus" name="status">
-                </button></td>
-            <td><input type="select" :options="website.name" id="segmentWebsite" name="website">
-                </button></td>
+            <td><input type="select" :options="categories.name" id="segmentStatus" name="status"></td>
+            <td><input type="select" :options="website.name" id="segmentWebsite" name="website"></td>
           </tr>
           <tr>
             <td>{{ segments.id }}</td>
@@ -44,22 +42,22 @@
 </template>
 
 <script>
- import  segments from '~/apollo/queries/customers/segments'
+ import  allSegmentsList from '~/apollo/queries/customers/segments'
  import  website from '~/apollo/queries/shop/website'
  import  categories from '~/apollo/queries/shop/categories'
 
 export default {
    data() {
     return {
-      segments: [],
+      allSegmentsList: [],
       website: [],
       categories: []
     }
   },
   apollo: {
-    segments: {
+    allSegmentsList: {
       prefetch: true,
-      query: segments
+      query: allSegmentsList
     },
     website: {
       prefetch: true,

@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-manufacturer"><input type="button" class="btn btn-warning">Add New Manufacturer</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-manufacturer"><input type="button" class="btn btn-warning" value="Add New Manufacturer"></a>
         
 </div>
 </nav>
@@ -21,7 +21,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="manufacturer in manufacturer" :key="manufacturer.id">
+        <tbody v-for="manufacturer in allManufacturerList" :key="manufacturer.id">
           <tr>
             <td>{{ manufacturer.media }}</td>
             <td>{{ manufacturer.id }}</td>
@@ -40,18 +40,18 @@
 </template>
 
 <script>
-import  manufacturer from '~/apollo/queries/shop/manufacturer'
+import  allManufacturerList from '~/apollo/queries/shop/manufacturer'
 
 export default {
   data() {
     return {
-      manufacturer: [],
+      allManufacturerList: [],
     }
   },
   apollo: {
-    manufacturer: {
+    allManufacturerList: {
       prefetch: true,
-      query: manufacturer
+      query: allManufacturerList
     }
   },
     head: {

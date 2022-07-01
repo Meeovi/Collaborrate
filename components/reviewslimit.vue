@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import allReviewsLimit from '~/apollo/queries/marketing/reviews'
+import allReviewsLimit from '~/apollo/queries/marketing/reviewslimit'
 
 export default {
   data() {

@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-contract"><input type="button" class="btn btn-warning">Add New Contract</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-contract"><input type="button" class="btn btn-warning" value="Add New Contract"></a>
         
       </div>
     </nav>
@@ -22,7 +22,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="contracts in contracts" :key="contracts.id">
+        <tbody v-for="contracts in allContractsList" :key="contracts.id">
           <tr>
             <td>{{ contracts.contract_title }}</td>
             <td>{{ contracts.status }}</td>
@@ -41,18 +41,18 @@
 </template>
 
 <script>
- import  contracts from '~/apollo/queries/marketing/contracts'
+ import  allContractsList from '~/apollo/queries/marketing/contracts'
 
 export default {
    data() {
     return {
-      contracts: [],
+      allContractsList: [],
     }
   },
   apollo: {
-    contracts: {
+    allContractsList: {
       prefetch: true,
-      query: contracts
+      query: allContractsList
     },
   }, 
     head: {

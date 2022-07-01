@@ -21,7 +21,7 @@
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody v-for="checklist in checklist" :key="checklist.id">
+        <tbody v-for="checklist in allChecklistList" :key="checklist.id">
           <tr>
             <td>{{ checklist.id }}</td>
             <td>{{ checklist.region }}</td>
@@ -42,18 +42,18 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  checklist from '~/apollo/queries/marketing/checklists'
+ import  allChecklistList from '~/apollo/queries/marketing/checklists'
 
 export default {
   data() {
     return {
-      checklist: [],
+      allChecklistList: [],
     }
   },
   apollo: {
-    checklist: {
+    allChecklistList: {
       prefetch: true,
-      query: checklist
+      query: allChecklistList
     }
   }, 
     head: {

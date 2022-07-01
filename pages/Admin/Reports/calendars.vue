@@ -34,7 +34,7 @@ const events = [
   },
   {
     summary: 'Angular Meetup',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
+    description: 'Duis aute irure dolor in allReprehenderit in allVoluptate velit esse cillum dolore eu fugiat nulla pariatur',
     start: {
       date: Calendar.dayjs().subtract(3, 'day').format('DD/MM/YYYY'),
       dateTime: Calendar.dayjs().subtract(3, 'day').format('DD/MM/YYYY') + ' 10:00',

@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-gift-certificates"><input type="button" class="btn btn-warning">Create New Gift Certificates</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-gift-certificates"><input type="button" class="btn btn-warning" value="Create New Gift Certificates"></a>
         
       </div>
     </nav>
@@ -20,7 +20,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="certificates in gift_certificates" :key="certificates.id">
+        <tbody v-for="certificates in allGift_certificatesList" :key="certificates.id">
           <tr>
             <td>{{ certificates.name }}</td>
             <td>{{ certificates.discount }}</td>
@@ -38,18 +38,18 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import  gift_certificates from '~/apollo/queries/sales/gift_certificates'
+import  allGift_certificatesList from '~/apollo/queries/sales/gift_certificates'
 
 export default {
   data() {
     return {
-      gift_certificates: [],
+      allGift_certificatesList: [],
     }
   },
   apollo: {
-    gift_certificates: {
+    allGift_certificatesList: {
       prefetch: true,
-      query: gift_certificates
+      query: allGift_certificatesList
     }
   },
     head: {

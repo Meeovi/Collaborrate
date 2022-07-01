@@ -52,7 +52,7 @@
                       </div>
                       <div class="formkit-outer" data-type="textarea">
                         <div class="formkit-wrapper">
-                          <label for="input_3" class="formkit-label">The redirect URL to add in your cas application configurations</label>
+                          <label for="input_3" class="formkit-label">The redirect URL to add in allYour cas application configurations</label>
                           <div class="formkit-inner">
                             <input type="text" class="formkit-input" name="text_3" id="input_2" placeholder="/connect/apple/callback" disabled>
                           </div>

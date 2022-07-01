@@ -36,7 +36,7 @@
                       <td style="text-align: right;">Categories</td>
                       <td>
                         <select id="category" v-model="categories" name="template" class="form-category">
-                          <option v-for="categories in categories" :key="categories" :value="categories">
+                          <option v-for="categories in allCategoriesList" :key="categories" :value="categories">
                             {{ categories.name }}</option>
                         </select>
                       </td>

@@ -2,8 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-review"><input type="button" class="btn btn-warning">Create A Review</button></a>
-        
+        <a class="navbar-brand" href="/admin/add-new/add-new-review"><input type="button" class="btn btn-warning" value="Create A Review"></a>
 </div>
 </nav>
 <br>
@@ -17,7 +16,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="reviews in reviews" :key="reviews.id">
+        <tbody v-for="reviews in allReviewsList" :key="reviews.id">
           <tr>
             <td>{{ reviews.first_name }} {{ reviews.last_name }}</td>
             <td>{{ reviews.content }}</td>
@@ -33,18 +32,18 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  reviews from '~/apollo/queries/marketing/reviews'
+ import  allReviewsList from '~/apollo/queries/marketing/reviews'
 
 export default {
   data() {
     return {
-      reviews: [],
+      allReviewsList: [],
     }
   },
   apollo: {
-    reviews: {
+    allReviewsList: {
       prefetch: true,
-      query: reviews
+      query: allReviewsList
     }
   }, 
     head: {

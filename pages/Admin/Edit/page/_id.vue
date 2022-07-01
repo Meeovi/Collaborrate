@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form v-for="page in pages" :key="page.id"  method="POST" @submit.prevent>
+        <form v-for="page in allPagesList" :key="page.id"  method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

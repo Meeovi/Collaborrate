@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form v-for="channel in channels" :key="channel.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
+        <form v-for="channel in allChannelsList" :key="channel.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>
@@ -44,7 +44,7 @@
                     <tr>
                         <td style="text-align: right;">Currency</td>
                         <select v-model="currencies" name="template" class="form-category">
-                            <option v-for="currencies in currencies" :key="currencies" :value="currencies">{{ currencies.name }}</option>
+                            <option v-for="currencies in allCurrenciesList" :key="currencies" :value="currencies">{{ currencies.name }}</option>
                         </select>
                     </tr>
                     <tr>

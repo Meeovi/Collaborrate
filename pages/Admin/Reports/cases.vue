@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-case"><input type="button" class="btn btn-warning">Create A Case</button></a>        
+        <a class="navbar-brand" href="/admin/add-new/add-new-case"><input type="button" class="btn btn-warning" value="Create A Case"></a>        
 </div>
 </nav>
 <br>
@@ -20,7 +20,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody v-for="cases in allCasesList" :key="cases.id">
           <tr>
             <td>{{ cases.id }}</td>
             <td>{{ cases.subject }}</td>
@@ -39,18 +39,18 @@
 </template>
 
 <script>
- import  cases from '~/apollo/queries/reports/cases'
+ import  allCasesList from '~/apollo/queries/reports/cases'
 
 export default {
   data() {
     return {
-      cases: [],
+      allCasesList: [],
     }
   },
   apollo: {
-    cases: {
+    allCasesList: {
       prefetch: true,
-      query: cases
+      query: allCasesList
     }
   }, 
     head: {

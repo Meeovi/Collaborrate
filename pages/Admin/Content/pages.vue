@@ -2,8 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-page"><input type="button" class="btn btn-warning">Add New Page</button></a>
-        
+        <a class="navbar-brand" href="/admin/add-new/add-new-page"><input type="button" class="btn btn-warning" value="Add New Page"></a>
       </div>
     </nav>
 <br>
@@ -19,7 +18,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="pages in pages" :key="pages.id">
+        <tbody v-for="pages in allPagesList" :key="pages.id">
           <tr>
             <td>{{ pages.id }}</td>
             <td>{{ pages.title }}</td>
@@ -35,18 +34,18 @@
 </template>
 
 <script>
-import  pages from '~/apollo/queries/content/pages.gql'
+import  allPagesList from '~/apollo/queries/content/pages.gql'
 
 export default {
   data() {
     return {
-      pages: [],
+      allPagesList: [],
     }
   },
   apollo: {
-    pages: {
+    allPagesList: {
       prefetch: true,
-      query: pages
+      query: allPagesList
     }
   },
     head: {

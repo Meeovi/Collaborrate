@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="newsletter in newsletter_subscribers" :key="newsletter.id"  method="POST" @submit.prevent>
+    <form v-for="newsletter in allNewsletter_subscribersList" :key="newsletter.id"  method="POST" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>

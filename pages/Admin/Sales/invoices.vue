@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-invoice"><input type="button" class="btn btn-warning">Create New Invoice</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-invoice"><input type="button" class="btn btn-warning" value="Create New Invoice"></a>
         
       </div>
     </nav>
@@ -24,7 +24,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="invoices in invoices" :key="invoices.id">
+        <tbody v-for="invoices in allInvoicesList" :key="invoices.id">
           <tr>
             <td>{{ invoices.id }}</td>
             <td>{{ invoices.customer_name }}</td>

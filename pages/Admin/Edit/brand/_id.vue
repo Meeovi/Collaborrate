@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="brands in brands" :key="brands.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="brands in allBrandsList" :key="brands.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
@@ -30,7 +30,7 @@
                       <td>
                         <label for="products">Products</label><br>
                         <select id="products" v-model="products" name="template" class="form-category">
-                          <option v-for="products in productss" :key="products" :value="products">
+                          <option v-for="products in allProductssList" :key="products" :value="products">
                             {{ products.name }}</option>
                         </select>
                       </td>
@@ -63,7 +63,7 @@
                       <td>
                         <label for="cities">City</label><br>
                         <select id="cities" v-model="city" name="template" class="form-category">
-                          <option v-for="cities in cities" :key="cities" :value="cities">
+                          <option v-for="cities in allCitiesList" :key="cities" :value="cities">
                             {{ cities.name }}</option>
                         </select>
                       </td>
@@ -72,7 +72,7 @@
                       <td>
                         <label for="states">State</label><br>
                         <select id="states" v-model="state" name="template" class="form-category">
-                          <option v-for="states in states" :key="states" :value="states">
+                          <option v-for="states in allStatesList" :key="states" :value="states">
                             {{ states.name }}</option>
                         </select>
                       </td>
@@ -81,7 +81,7 @@
                       <td>
                         <label for="countries">Countries</label><br>
                         <select id="countries" v-model="country" name="template" class="form-category">
-                          <option v-for="countries in countries" :key="countries" :value="countries">
+                          <option v-for="countries in allCountriesList" :key="countries" :value="countries">
                             {{ countries.name }}</option>
                         </select>
                       </td>

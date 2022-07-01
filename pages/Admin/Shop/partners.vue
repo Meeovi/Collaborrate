@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-partner"><input type="button" class="btn btn-warning">Add A New Partner</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-partner"><input type="button" class="btn btn-warning" value="Add A New Partner"></a>
       </div>
     </nav>
     
@@ -21,7 +21,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="partner in partners" :key="partner">
+          <tr v-for="partner in allPartnersList" :key="partner">
             <td>{{ partner.name }}</td>
             <td>{{ partner.address }}</td>
             <td>{{ partner.city }}</td>
@@ -38,9 +38,20 @@
 </template>
 
 <script>
+ import  allPartnersList from '~/apollo/queries/shop/partners.gql'
 
-  export default {
-
+export default {
+  data() {
+    return {
+      allPartnersList: [],
+    }
+  },
+  apollo: {
+    allPartnersList: {
+      prefetch: true,
+      query: allPartnersList
+    }
+  }, 
     head: {
       title: 'Partners'
     }

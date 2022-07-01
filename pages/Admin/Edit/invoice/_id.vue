@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form v-for="invoice in invoices" :key="invoice.id" method="POST" @submit.prevent>
+        <form v-for="invoice in allInvoicesList" :key="invoice.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

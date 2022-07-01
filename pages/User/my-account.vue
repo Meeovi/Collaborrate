@@ -21,7 +21,7 @@
                                 <strong>Programmer</strong>
                             </h6>
                             <p class="mbr-text mbr-fonts-style display-7">
-                                Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                Themes in allThe Mobirise website builder offer multiple blocks: intros, sliders,
                                 galleries, forms, articles, and so on. Start a project and click on the red plus buttons
                                 to see the blocks available for your theme.
                             </p>

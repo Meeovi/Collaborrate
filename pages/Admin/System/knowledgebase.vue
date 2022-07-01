@@ -19,7 +19,7 @@
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody v-for="knowledgebase in knowledgebase" :key="knowledgebase.id">
+        <tbody v-for="knowledgebase in allKnowledgebaseList" :key="knowledgebase.id">
           <tr>
             <td>{{ knowledgebase.id }}</td>
             <td>{{ knowledgebase.name }}</td>
@@ -38,18 +38,18 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  knowledgebase from '~/apollo/queries/system/knowledgebase'
+ import  allKnowledgebaseList from '~/apollo/queries/system/knowledgebase'
 
 export default {
   data() {
     return {
-      knowledgebase: [],
+      allKnowledgebaseList: [],
     }
   },
   apollo: {
-    knowledgebase: {
+    allKnowledgebaseList: {
       prefetch: true,
-      query: knowledgebase
+      query: allKnowledgebaseList
     }
   }, 
     head: {

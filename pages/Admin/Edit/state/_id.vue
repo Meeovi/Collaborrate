@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form v-for="state in states" :key="state.id" method="POST" @submit.prevent>
+        <form v-for="state in allStatesList" :key="state.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

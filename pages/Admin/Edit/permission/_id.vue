@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 <template>
   <div>
-    <form v-for="permission in permissions" :key="permission.id" method="POST" @submit.prevent>
+    <form v-for="permission in allPermissionsList" :key="permission.id" method="POST" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>

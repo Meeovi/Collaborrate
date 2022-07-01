@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form v-for="collection in collections" :key="collection.id" method="POST" @submit.prevent>
+        <form v-for="collection in allCollectionsList" :key="collection.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

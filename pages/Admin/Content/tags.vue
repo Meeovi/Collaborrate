@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-tag"><input type="button" class="btn btn-warning">Add New Tags</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-tag"><input type="button" class="btn btn-warning" value="Add New Tags"></a>
         
 </div>
 </nav>
@@ -17,7 +17,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="tags in tags" :key="tags.id">
+        <tbody v-for="tags in allTagsList" :key="tags.id">
           <tr>
             <td>{{ tags.id }}</td>
             <td>{{ tags.name }}</td>
@@ -32,18 +32,18 @@
 </template>
 
 <script>
- import  tags from '~/apollo/queries/content/tags'
+ import  allTagsList from '~/apollo/queries/content/tags'
 
 export default {
   data() {
     return {
-      tags: [],
+      allTagsList: [],
     }
   },
   apollo: {
-    tags: {
+    allTagsList: {
       prefetch: true,
-      query: tags
+      query: allTagsList
     }
   }, 
     head: {

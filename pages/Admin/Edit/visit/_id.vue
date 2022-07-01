@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="visit in visits" :key="visit.id" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <form v-for="visit in allVisitsList" :key="visit.id" method="POST" enctype="multipart/form-data" @submit.prevent>
       <div class="table table-responsive">
         <table class="table">
           <thead>

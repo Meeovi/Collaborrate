@@ -1,29 +1,33 @@
 query MyQuery {
-  allCustomersList {
-    Address
-    address_two
-    confirmed_email
+  allCustomersList(first: 5) {
+    address
+    addressTwo
+    confirmedEmail
     country
-    customer_group
-    customer_since
-    date_of_birth
+    customerGroup
+    customerSince
+    dateOfBirth
     description
     email
-    first_name
+    firstName
     gender
     id
     image
-    middle_name
-    name_prefix
-    last_name
-    name_suffix
+    lastName
+    middleName
+    namePrefix
+    nameSuffix
+    nodeId
+    password
+    paymentType
     phone
     product
-    short_description
+    shortDescription
     state
-    tax_vat_number
+    taxVatNumber
     thumbnail
-    websites
+    username
     zipcode
+    websites
   }
 }

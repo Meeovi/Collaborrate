@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-coupon"><input type="button" class="btn btn-warning">Create New Coupons</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-coupon"><input type="button" class="btn btn-warning" value="Create New Coupons"></a>
         
       </div>
     </nav>
@@ -19,7 +19,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="coupons in coupons" :key="coupons.id">
+        <tbody v-for="coupons in allCouponsList" :key="coupons.id">
           <tr>
             <td>{{ coupons.name }}</td>
             <td>{{ coupons.discount }}</td>
@@ -36,18 +36,18 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import  coupons from '~/apollo/queries/shop/coupons'
+import  allCouponsList from '~/apollo/queries/shop/coupons'
 
 export default {
   data() {
     return {
-      coupons: [],
+      allCouponsList: [],
     }
   },
   apollo: {
-    coupons: {
+    allCouponsList: {
       prefetch: true,
-      query: coupons
+      query: allCouponsList
     }
   },
     head: {

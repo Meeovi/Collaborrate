@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/customers/customer/newcustomer"><input type="button" class="btn btn-warning">Add New Customer</button></a>
+        <a class="navbar-brand" href="/admin/customers/customer/newcustomer"><input type="button" class="btn btn-warning" value="Add New Customer"></a>
         
       </div>
     </nav>
@@ -21,7 +21,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="customers in customers" :key="customers.id">
+        <tbody v-for="customers in allCustomersList" :key="customers.id">
           <tr>
             <td>{{ customers.id }}</td>
             <td>{{ customers.first_name }}</td>
@@ -39,18 +39,18 @@
 </template>
 
 <script>
-import  customers from '~/apollo/queries/customers/customers'
+import  allCustomersList from '~/apollo/queries/customers/customers'
 
 export default {
   data() {
     return {
-      customers: [],
+      allCustomersList: [],
     }
   },
   apollo: {
-    customers: {
+    allCustomersList: {
       prefetch: true,
-      query: customers
+      query: allCustomersList
     }
   },
     head: {

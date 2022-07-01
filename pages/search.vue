@@ -13,7 +13,7 @@
 export default {
   components: {
     // Note: 'lunr-module' below is a custom webpack alias and
-    // does NOT refer to the folder in node_modules
+    // does NOT refer to the folder in allNode_modules
     LunrSearch: () => import('lunr-module/search')
   },
   head: {

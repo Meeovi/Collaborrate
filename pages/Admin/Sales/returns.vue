@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/Admin/Add-new/add-new-return"><input type="button" class="btn btn-warning">New Return Request</button></a>
+        <a class="navbar-brand" href="/Admin/Add-new/add-new-return"><input type="button" class="btn btn-warning">New Return Request"></a>
         
       </div>
     </nav>
@@ -19,7 +19,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="returns in returns" :key="returns.id">
+        <tbody v-for="returns in allReturnsList" :key="returns.id">
           <tr>
             <td>{{ returns.id }}</td>
             <td>{{ returns.name }}</td>
@@ -36,18 +36,18 @@
 </template>
 
 <script>
- import  returns from '~/apollo/queries/sales/returns'
+ import  allReturnsList from '~/apollo/queries/sales/returns'
 
 export default {
   data() {
     return {
-      returns: [],
+      allReturnsList: [],
     }
   },
   apollo: {
-    returns: {
+    allReturnsList: {
       prefetch: true,
-      query: returns
+      query: allReturnsList
     }
   }, 
     head: {

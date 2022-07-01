@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-deepdive"><input type="button" class="btn btn-warning">Create new Deep Dive</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-deepdive"><input type="button" class="btn btn-warning" value="Create new Deep Dive"></a>
         
 </div>
 </nav>
@@ -21,7 +21,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody v-for="deepdive in allDeepdiveList" :key="deepdive.id">
           <tr>
             <td>{{ deepdive.id }}</td>
             <td>{{ deepdive.login }}</td>
@@ -40,18 +40,18 @@
 </template>
 
 <script>
- import  deepdive from '~/apollo/queries/reports/deepdive'
+ import  allDeepdiveList from '~/apollo/queries/reports/deepdive'
 
 export default {
   data() {
     return {
-      deepdive: [],
+      allDeepdiveList: [],
     }
   },
   apollo: {
-    deepdive: {
+    allDeepdiveList: {
       prefetch: true,
-      query: deepdive
+      query: allDeepdiveList
     }
   }, 
     head: {

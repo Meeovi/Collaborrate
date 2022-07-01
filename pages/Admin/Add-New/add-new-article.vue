@@ -36,7 +36,7 @@
                       <td style="text-align: right;">Categories</td>
                       <td>
                         <select id="category" v-model="categories" name="template" class="form-category">
-                          <option v-for="categories in categories" :key="categories" :value="categories">
+                          <option v-for="categories in allCategoriesList" :key="categories" :value="categories">
                             {{ categories.name }}
                           </option>
                         </select>
@@ -46,7 +46,7 @@
                       <td style="text-align: right;">Tags</td>
                       <td>
                         <select id="category" v-model="tags" name="template" class="form-category">
-                          <option v-for="tags in tags" :key="tags" :value="tags">{{ tags.name }}</option>
+                          <option v-for="tags in allTagsList" :key="tags" :value="tags">{{ tags.name }}</option>
                         </select>
                       </td>
                     </tr>
@@ -69,7 +69,7 @@
                       <td style="text-align: right;">Author(s)</td>
                       <td>
                         <select id="category" v-model="customers" name="template" class="form-category">
-                          <option v-for="customers in customers" :key="customers" :value="customers">
+                          <option v-for="customers in allCustomersList" :key="customers" :value="customers">
                             {{ customers.name }}</option>
                         </select>
                       </td>
@@ -183,7 +183,7 @@
 <script>
   import  gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import articles from "~/apollo/queries/content/articles";
+  import allArticlesList from "~/apollo/queries/content/articles";
   import  categories from '~/apollo/queries/shop/categories';
   import  tags from '~/apollo/queries/content/tags';
   import  customers from '~/apollo/queries/customers/customers';
@@ -279,7 +279,7 @@
               const insertedCategory = insertCategories.returning;
               console.log(insertedCategory)
               cache.writeQuery({
-                query: articles
+                query: allArticlesList
               })
             } catch (err) {
               console.error(err)

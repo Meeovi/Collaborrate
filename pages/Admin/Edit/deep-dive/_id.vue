@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="deepdive in deepdives" :key="deepdive.id" method="POST" @submit.prevent enctype="multipart/form-data">
+    <form v-for="deepdive in allDeepdivesList" :key="deepdive.id" method="POST" @submit.prevent enctype="multipart/form-data">
       <div class="table table-responsive">
         <table class="table">
           <thead>

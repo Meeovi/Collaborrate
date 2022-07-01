@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/reports/add-new-eosr"><input type="button" class="btn btn-warning">Create End of Shift Report</button></a>
+        <a class="navbar-brand" href="/admin/reports/add-new-eosr"><input type="button" class="btn btn-warning" value="Create End of Shift Report"></a>
         
       </div>
     </nav>

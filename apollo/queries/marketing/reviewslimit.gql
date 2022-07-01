@@ -1,10 +1,13 @@
 query MyQuery {
-  allReviewsList {
+  allReviewsList(first: 5) {
     id
-    first_name
-    last_name
-    content
+    firstName
+    lastName
+    shopId
     websites
-    created_at
+    nodeId
+    createdAt
+    content
+    commentId
   }
 }

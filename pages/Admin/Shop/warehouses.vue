@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-warehouse"><input type="button" class="btn btn-warning">Create Warehouse</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-warehouse"><input type="button" class="btn btn-warning" value="Create Warehouse"></a>
         
       </div>
     </nav>
@@ -17,7 +17,7 @@
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody v-for="warehouse in warehouse" :key="warehouse.id">
+        <tbody v-for="warehouse in allWarehouseList" :key="warehouse.id">
           <tr>
             <td>{{ warehouse.name }}</td>
             <td>{{ warehouse.shipping_zones }}</td>
@@ -31,18 +31,18 @@
 </template>
 
 <script>
- import  warehouse from '~/apollo/queries/shop/warehouses.gql'
+ import  allWarehouseList from '~/apollo/queries/shop/warehouses.gql'
 
 export default {
   data() {
     return {
-      warehouse: [],
+      allWarehouseList: [],
     }
   },
   apollo: {
-    warehouse: {
+    allWarehouseList: {
       prefetch: true,
-      query: warehouse
+      query: allWarehouseList
     }
   }, 
     head: {

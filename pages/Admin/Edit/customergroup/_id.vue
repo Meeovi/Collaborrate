@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form v-for="customer_group in customer_groups" :key="customer_group.id" method="POST" @submit.prevent>
+        <form v-for="customer_group in allCustomer_groupsList" :key="customer_group.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

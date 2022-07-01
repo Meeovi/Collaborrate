@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-opportunity"><input type="button" class="btn btn-warning">Create A New Opportunity</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-opportunity"><input type="button" class="btn btn-warning" value="Create A New Opportunity"></a>
       </div>
     </nav>
     <br>
@@ -21,7 +21,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="opportunities in opportunities" :key="opportunities.id">
+        <tbody v-for="opportunities in allOpportunitiesList" :key="opportunities.id">
           <tr>
             <td>{{ opportunities.name }}</td>
             <td>{{ opportunities.account_name }}</td>
@@ -40,18 +40,18 @@
 </template>
 
 <script>
- import  opportunities from '~/apollo/queries/customers/opportunities'
+ import  allOpportunitiesList from '~/apollo/queries/customers/opportunities'
 
 export default {
    data() {
     return {
-      opportunities: [],
+      allOpportunitiesList: [],
     }
   },
   apollo: {
-    opportunities: {
+    allOpportunitiesList: {
       prefetch: true,
-      query: opportunities
+      query: allOpportunitiesList
     },
   }, 
     head: {

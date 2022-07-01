@@ -30,7 +30,7 @@
                       <td>
                         <label for="type">Product Types</label><br>
                         <select id="productType" v-model="types" name="template" class="form-attribute">
-                          <option v-for="types in product_types" :key="types" :value="product_types">{{ types.name }}
+                          <option v-for="types in allProduct_typesList" :key="types" :value="product_types">{{ types.name }}
                           </option>
                         </select>
                       </td>
@@ -39,7 +39,7 @@
                       <td>
                         <label for="attributes">Attributes</label><br>
                         <select id="productAttribute" v-model="attributes" name="template" class="form-attribute">
-                          <option v-for="attributes in product_attribute" :key="attributes" :value="product_attribute">
+                          <option v-for="attributes in allProduct_attributeList" :key="attributes" :value="product_attribute">
                             {{ attributes.name }}</option>
                         </select>
                       </td>
@@ -89,7 +89,7 @@
                       <td>
                         <label for="categories">Categories</label><br>
                         <select id="category" v-model="categories" name="template" class="form-category">
-                          <option v-for="categories in categories" :key="categories" :value="categories">
+                          <option v-for="categories in allCategoriesList" :key="categories" :value="categories">
                             {{ categories.name }}</option>
                         </select>
                       </td>
@@ -98,7 +98,7 @@
                       <td>
                         <label for="brand">Brands</label><br>
                         <select id="category" v-model="brand" name="template" class="form-category">
-                          <option v-for="brand in brands" :key="brand" :value="brand">
+                          <option v-for="brand in allBrandsList" :key="brand" :value="brand">
                             {{ brand.name }}</option>
                         </select>
                       </td>
@@ -107,7 +107,7 @@
                       <td>
                         <label for="manufacture">manufacturer</label><br>
                         <select id="category" v-model="manufacture" name="template" class="form-category">
-                          <option v-for="manufacture in manufacturer" :key="manufacture" :value="manufacture">
+                          <option v-for="manufacture in allManufacturerList" :key="manufacture" :value="manufacture">
                             {{ manufacture.name }}</option>
                         </select>
                       </td>
@@ -116,7 +116,7 @@
                       <td>
                         <label for="occassions">Occassions</label><br>
                         <select id="category" v-model="occassions" name="template" class="form-category">
-                          <option v-for="occassions in occassions" :key="occassions" :value="occassions">
+                          <option v-for="occassions in allOccassionsList" :key="occassions" :value="occassions">
                             {{ occassions.name }}</option>
                         </select>
                       </td>
@@ -125,7 +125,7 @@
                       <td>
                         <label for="tags">Tags</label><br>
                         <select id="category" v-model="tags" name="template" class="form-category">
-                          <option v-for="tags in tags" :key="tags" :value="tags">
+                          <option v-for="tags in allTagsList" :key="tags" :value="tags">
                             {{ tags.name }}</option>
                         </select>
                       </td>
@@ -134,7 +134,7 @@
                       <td>
                         <label for="countries">Countries</label><br>
                         <select id="category" v-model="country" name="template" class="form-category">
-                          <option v-for="countries in countries" :key="countries" :value="countries">
+                          <option v-for="countries in allCountriesList" :key="countries" :value="countries">
                             {{ countries.name }}</option>
                         </select>
                       </td>
@@ -143,7 +143,7 @@
                       <td>
                         <label for="contract">Contracts</label><br>
                         <select id="contract" v-model="contract" name="template" class="form-category">
-                          <option v-for="contract in contracts" :key="contract" :value="contract">
+                          <option v-for="contract in allContractsList" :key="contract" :value="contract">
                             {{ contract.name }}</option>
                         </select>
                       </td>
@@ -152,7 +152,7 @@
                       <td>
                         <label for="zone">Zones</label><br>
                         <select id="zone" v-model="zone" name="template" class="form-category">
-                          <option v-for="zone in zones" :key="zone" :value="zone">
+                          <option v-for="zone in allZonesList" :key="zone" :value="zone">
                             {{ zone.name }}</option>
                         </select>
                       </td>
@@ -174,7 +174,7 @@
                       <td>
                         <label for="product">Related Products</label><br>
                         <select id="product" v-model="product" name="template" class="form-category">
-                          <option v-for="product in products" :key="product" :value="product">
+                          <option v-for="product in allProductsList" :key="product" :value="product">
                             {{ product.name }}</option>
                         </select>
                       </td>

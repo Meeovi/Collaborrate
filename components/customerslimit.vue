@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import allCustomersList from '~/apollo/queries/customers/customers'
+import allCustomersList from '~/apollo/queries/customers/customerslimit'
 
 export default {
   data() {

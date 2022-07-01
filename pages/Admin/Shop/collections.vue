@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-collection"><input type="button" class="btn btn-warning">Create Collection</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-collection"><input type="button" class="btn btn-warning" value="Create Collection"></a>
         
 </div>
 </nav>
@@ -18,7 +18,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="collections in collections" :key="collections.id">
+        <tbody v-for="collections in allCollectionsList" :key="collections.id">
           <tr>
             <td>{{ collections.id }}</td>
             <td>{{ collections.name }}</td>
@@ -34,18 +34,18 @@
 </template>
 
 <script>
-import  collections from '~/apollo/queries/shop/collections'
+import  allCollectionsList from '~/apollo/queries/shop/collections'
 
 export default {
   data() {
     return {
-      collections: [],
+      allCollectionsList: [],
     }
   },
   apollo: {
-    collections: {
+    allCollectionsList: {
       prefetch: true,
-      query: collections
+      query: allCollectionsList
     }
   },
     head: {

@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-rewards"><input type="button" class="btn btn-warning" value="Create A Reward"></button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-rewards"><input type="button" class="btn btn-warning" value="Create A Reward"></a>
       </div>
 </nav>
 <br>
@@ -19,7 +19,7 @@
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody v-for="rewards in rewards" :key="rewards.id">
+        <tbody v-for="rewards in allRewardsList" :key="rewards.id">
           <tr>
             <td>{{ rewards.id }}</td>
             <td>{{ rewards.name }}</td>
@@ -38,18 +38,18 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  rewards from '~/apollo/queries/marketing/rewards'
+ import  allRewardsList from '~/apollo/queries/marketing/rewards'
 
 export default {
   data() {
     return {
-      rewards: [],
+      allRewardsList: [],
     }
   },
   apollo: {
-    rewards: {
+    allRewardsList: {
       prefetch: true,
-      query: rewards
+      query: allRewardsList
     }
   }, 
     head: {

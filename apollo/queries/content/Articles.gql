@@ -1,17 +1,18 @@
 query MyQuery {
   allArticlesList {
-    categories
-    content
-    cust_id
-    customers
-    excerpt
     id
+    excerpt
+    customers
+    custId
+    content
+    categories
     image
     isPublic
-    meta_description
-    meta_name
-    meta_url
+    metaDescription
+    metaName
+    metaUrl
     name
+    nodeId
     published
     tags
     users

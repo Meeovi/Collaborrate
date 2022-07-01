@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-event"><input type="button" class="btn btn-warning">Add New Event</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-event"><input type="button" class="btn btn-warning" value="Add New Event"></a>
       </div>
     </nav>
 
@@ -20,7 +20,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="events in events" :key="events.id">
+        <tbody v-for="events in allEventsList" :key="events.id">
           <tr>
             <td>{{ events.id }}</td>
             <td>{{ events.name }}</td>
@@ -38,18 +38,18 @@
 </template>
 
 <script>
-import  events from '~/apollo/queries/marketing/events'
+import  allEventsList from '~/apollo/queries/marketing/events'
 
 export default {
   data() {
     return {
-      events: [],
+      allEventsList: [],
     }
   },
   apollo: {
-    events: {
+    allEventsList: {
       prefetch: true,
-      query: events
+      query: allEventsList
     }
   },
     head: {

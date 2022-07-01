@@ -42,7 +42,7 @@
               <td style="text-align: right;">Country</td>
               <td>
                 <select id="category" v-model="country" name="template" class="form-country">
-                  <option v-for="country in countries" :key="country" :value="categories">{{ country.name }}</option>
+                  <option v-for="country in allCountriesList" :key="country" :value="categories">{{ country.name }}</option>
                 </select>
               </td>
             </tr>
@@ -50,7 +50,7 @@
               <td style="text-align: right;">Categories</td>
               <td>
                 <select id="category" v-model="categories" name="template" class="form-category">
-                  <option v-for="categories in categories" :key="categories" :value="categories">{{ categories.name }}</option>
+                  <option v-for="categories in allCategoriesList" :key="categories" :value="categories">{{ categories.name }}</option>
                 </select>
               </td>
             </tr>

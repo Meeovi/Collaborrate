@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-workspace"><input type="button" class="btn btn-warning">Add New Workspace</button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-workspace"><input type="button" class="btn btn-warning" value="Add New Workspace"></a>
         
 </div>
 </nav>
@@ -19,7 +19,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="workspaces in workspaces" :key="workspaces.id">
+        <tbody v-for="workspaces in allWorkspacesList" :key="workspaces.id">
           <tr>
             <td>{{ workspaces.id }}</td>
             <td>{{ workspaces.code }}</td>
@@ -36,18 +36,18 @@
 </template>
 
 <script>
-import  workspaces from '~/apollo/queries/content/workspaces'
+import  allWorkspacesList from '~/apollo/queries/content/workspaces'
 
 export default {
   data() {
     return {
-      workspaces: [],
+      allWorkspacesList: [],
     }
   },
   apollo: {
-    workspaces: {
+    allWorkspacesList: {
       prefetch: true,
-      query: workspaces
+      query: allWorkspacesList
     }
   },
     head: {

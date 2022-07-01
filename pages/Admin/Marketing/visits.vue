@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-visit"><input type="button" class="btn btn-warning" value="Create A Visit"></button></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-visit"><input type="button" class="btn btn-warning" value="Create A Visit"></a>
       </div>
 </nav>
 <br>
@@ -21,7 +21,7 @@
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody v-for="visits in visits" :key="visits.id">
+        <tbody v-for="visits in allVisitsList" :key="visits.id">
           <tr>
             <td>{{ visits.id }}</td>
             <td>{{ visits.username }}</td>
@@ -42,18 +42,18 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  visits from '~/apollo/queries/marketing/visits'
+ import  allVisitsList from '~/apollo/queries/marketing/visits'
 
 export default {
   data() {
     return {
-      visits: [],
+      allVisitsList: [],
     }
   },
   apollo: {
-    visits: {
+    allVisitsList: {
       prefetch: true,
-      query: visits
+      query: allVisitsList
     }
   }, 
     head: {

@@ -16,7 +16,7 @@
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody v-for="newsletter_subscribers in newsletter_subscribers" :key="newsletter_subscribers.id">
+        <tbody v-for="newsletter_subscribers in allNewsletter_subscribersList" :key="newsletter_subscribers.id">
           <tr>
             <td>{{ newsletter_subscribers.id }}</td>
             <td>{{ newsletter_subscribers.email }}</td>
@@ -32,18 +32,18 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  newsletter_subscribers from '~/apollo/queries/marketing/newsletter_subscribers'
+ import  allNewsletter_subscribersList from '~/apollo/queries/marketing/newsletter_subscribers'
 
 export default {
   data() {
     return {
-      newsletter_subscribers: [],
+      allNewsletter_subscribersList: [],
     }
   },
   apollo: {
-    newsletter_subscribers: {
+    allNewsletter_subscribersList: {
       prefetch: true,
-      query: newsletter_subscribers
+      query: allNewsletter_subscribersList
     }
   }, 
     head: {

@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 <template>
     <div>
-        <form v-for="glossary in glossaries" :key="glossary.id"  method="POST" @submit.prevent>
+        <form v-for="glossary in allAllGlossariesList" :key="glossary.id"  method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form v-for="tax_rate in tax_rates" :key="tax_rate.id" method="POST" @submit.prevent>
+        <form v-for="tax_rate in allTax_ratesList" :key="tax_rate.id" method="POST" @submit.prevent>
         <div class="table table-responsive">
             <table class="table" >
                 <thead>

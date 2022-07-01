@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="ticketing in ticketing" :key="ticketing.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
+    <form v-for="ticketing in allTicketingList" :key="ticketing.id" method="POST" enctype="multipart/form-data"  @submit.prevent>
       <div class="table table-responsive">
         <table class="table" >
           <thead>
