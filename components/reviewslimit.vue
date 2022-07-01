@@ -11,7 +11,7 @@
                                 <th>Websites</th>
                             </tr>
                         </thead>
-                        <tbody v-for="reviews in reviews" :key="reviews.id">
+                        <tbody v-for="reviews in allReviewsLimit" :key="reviews.id">
                             <tr>
                                 <th scope="row">{{reviews.id}}</th>
                                 <td>{{reviews.first_name}} {{reviews.last_name}}</td>
@@ -26,18 +26,18 @@
 </template>
 
 <script>
-import reviews from '~/apollo/queries/marketing/reviewslimit'
+import allReviewsLimit from '~/apollo/queries/marketing/reviews'
 
 export default {
   data() {
     return {
-      reviews: [],
+      allReviewsLimit: [],
     }
   },
   apollo: {
-    reviews: {
+    allReviewsLimit: {
       prefetch: true,
-      query: reviews
+      query: allReviewsLimit
     },
   },
 }

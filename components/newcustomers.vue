@@ -11,7 +11,7 @@
                                 <th>Email</th>
                             </tr>
                         </thead>
-                        <tbody v-for="customers in customers" :key="customers.id">
+                        <tbody v-for="customers in allCustomersList" :key="customers.id">
                             <tr>
                                 <th scope="row">{{customers.id}}</th>
                                 <td>{{customers.first_name}}</td>
@@ -26,18 +26,18 @@
 </template>
 
 <script>
-import customers from '~/apollo/queries/customers/newcustomers'
+import allCustomersList from '~/apollo/queries/customers/customers'
 
 export default {
   data() {
     return {
-      customers: [],
+      allCustomersList: [],
     }
   },
   apollo: {
-    customers: {
+    allCustomersList: {
       prefetch: true,
-      query: customers
+      query: allCustomersList
     },
   },
 }

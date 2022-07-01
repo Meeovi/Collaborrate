@@ -54,6 +54,10 @@ main {
     height: 100vh;
 }
 
+.sidenav-menu {
+    top: 50px !important;
+}
+
 @media (min-width: 1400px) {
 
   #main-navbar {

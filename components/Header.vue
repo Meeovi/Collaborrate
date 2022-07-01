@@ -1,7 +1,7 @@
 <template>
     <header>
       <!-- Sidenav -->
-      <nav id="sidenav-1" class="sidenav bg-primary" data-mdb-hidden="false">
+      <nav id="sidenav-1" class="sidenav bg-primary" data-mdb-hidden="true">
         <ul class="sidenav-menu">
           <li class="sidenav-item">
             <a class="sidenav-link">
