@@ -296,9 +296,6 @@
                     <i class="fa fa-check text-success ms-2"></i></a>
                 </li>
                 <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
                   <a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski</a>
                 </li>
                 <li>

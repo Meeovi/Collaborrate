@@ -1,20 +1,21 @@
 query MyQuery {
   allStatisticsList {
-    id
-    expiration
-    excerpt
-    description
+    articles
+    categories
     coupons
     customers
-    categories
-    articles
+    description
+    excerpt
+    expiration
+    id
     image
     name
+    nodeId
     products
     published
     reports
     rewards
-    special_offers
+    specialOffers
     users
   }
 }

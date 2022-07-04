@@ -1,12 +1,20 @@
 query MyQuery {
-  allNewsletter_subscribersList {
-    id
+  allNewsletterSubscribersList {
+    createdAt
+    custId
+    customerFirstName
+    customerLastName
     email
-    customer_last_name
-    customer_first_name
+    id
+    nodeId
     status
     store
     websites
-    created_at
+    customerByCustId {
+      confirmedEmail
+      country
+      email
+      id
+    }
   }
 }

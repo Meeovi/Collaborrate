@@ -1656,6 +1656,37 @@ type Query {
     """A condition to be used in determining which values should be returned by the collection."""
     condition: InternalizationCondition
   ): [Internalization!]
+  """Reads and enables pagination through a set of `Invitation`."""
+  allInvitations(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Invitation`."""
+    orderBy: [InvitationsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: InvitationCondition
+  ): InvitationsConnection
+  """Reads a set of `Invitation`."""
+  allInvitationsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Invitation`."""
+    orderBy: [InvitationsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: InvitationCondition
+  ): [Invitation!]
   """Reads and enables pagination through a set of `Invoice`."""
   allInvoices(
     """Only read the first `n` values of the set."""
@@ -3361,6 +3392,37 @@ type Query {
     """A condition to be used in determining which values should be returned by the collection."""
     condition: TicketingCondition
   ): [Ticketing!]
+  """Reads and enables pagination through a set of `Training`."""
+  allTrainings(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection
+  """Reads a set of `Training`."""
+  allTrainingsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]
   """Reads and enables pagination through a set of `Transaction`."""
   allTransactions(
     """Only read the first `n` values of the set."""
@@ -3754,6 +3816,7 @@ type Query {
   importmById(id: BigInt!): Importm
   integrationById(id: BigInt!): Integration
   internalizationById(id: BigInt!): Internalization
+  invitationById(id: BigInt!): Invitation
   invoiceById(id: BigInt!): Invoice
   knowledgebaseById(id: BigInt!): Knowledgebase
   leadById(id: BigInt!): Lead
@@ -3810,6 +3873,7 @@ type Query {
   taxRuleById(id: Int!): TaxRule
   themeById(id: Int!): Theme
   ticketingById(id: BigInt!): Ticketing
+  trainingById(id: BigInt!): Training
   transactionById(id: Int!): Transaction
   uploadFileById(id: Int!): UploadFile
   uploadFileMorphById(id: Int!): UploadFileMorph
@@ -4089,6 +4153,11 @@ type Query {
     """The globally unique `ID` to be used in selecting a single `Internalization`."""
     nodeId: ID!
   ): Internalization
+  """Reads a single `Invitation` using its globally unique `ID`."""
+  invitation(
+    """The globally unique `ID` to be used in selecting a single `Invitation`."""
+    nodeId: ID!
+  ): Invitation
   """Reads a single `Invoice` using its globally unique `ID`."""
   invoice(
     """The globally unique `ID` to be used in selecting a single `Invoice`."""
@@ -4369,6 +4438,11 @@ type Query {
     """The globally unique `ID` to be used in selecting a single `Ticketing`."""
     nodeId: ID!
   ): Ticketing
+  """Reads a single `Training` using its globally unique `ID`."""
+  training(
+    """The globally unique `ID` to be used in selecting a single `Training`."""
+    nodeId: ID!
+  ): Training
   """Reads a single `Transaction` using its globally unique `ID`."""
   transaction(
     """The globally unique `ID` to be used in selecting a single `Transaction`."""
@@ -7311,6 +7385,37 @@ type Comment implements Node @key(fields: "nodeId") {
     """A condition to be used in determining which values should be returned by the collection."""
     condition: MediamanagerCondition
   ): [Mediamanager!]!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByComment(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCommentList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
   """Reads and enables pagination through a set of `Brand`."""
   brandsByMediamanagerCommentAndBrands(
     """Only read the first `n` values of the set."""
@@ -7497,6 +7602,130 @@ type Comment implements Node @key(fields: "nodeId") {
     """A condition to be used in determining which values should be returned by the collection."""
     condition: ProductCondition
   ): [Product!]!
+  """Reads and enables pagination through a set of `Country`."""
+  countriesByTrainingCommentAndCountry(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Country`."""
+    orderBy: [CountriesOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CountryCondition
+  ): CommentCountriesByTrainingCommentAndCountryManyToManyConnection!
+  """Reads and enables pagination through a set of `Country`."""
+  countriesByTrainingCommentAndCountryList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Country`."""
+    orderBy: [CountriesOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CountryCondition
+  ): [Country!]!
+  """Reads and enables pagination through a set of `State`."""
+  statesByTrainingCommentAndState(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `State`."""
+    orderBy: [StatesOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: StateCondition
+  ): CommentStatesByTrainingCommentAndStateManyToManyConnection!
+  """Reads and enables pagination through a set of `State`."""
+  statesByTrainingCommentAndStateList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `State`."""
+    orderBy: [StatesOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: StateCondition
+  ): [State!]!
+  """Reads and enables pagination through a set of `Product`."""
+  productsByTrainingCommentAndProducts(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Product`."""
+    orderBy: [ProductsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ProductCondition
+  ): CommentProductsByTrainingCommentAndProductsManyToManyConnection!
+  """Reads and enables pagination through a set of `Product`."""
+  productsByTrainingCommentAndProductsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Product`."""
+    orderBy: [ProductsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ProductCondition
+  ): [Product!]!
+  """Reads and enables pagination through a set of `Checklist`."""
+  checklistsByTrainingCommentAndChecklists(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Checklist`."""
+    orderBy: [ChecklistsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ChecklistCondition
+  ): CommentChecklistsByTrainingCommentAndChecklistsManyToManyConnection!
+  """Reads and enables pagination through a set of `Checklist`."""
+  checklistsByTrainingCommentAndChecklistsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Checklist`."""
+    orderBy: [ChecklistsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ChecklistCondition
+  ): [Checklist!]!
 }
 
 """A connection to a list of `Mediamanager` values."""
@@ -8591,6 +8820,37 @@ type Product implements Node @key(fields: "nodeId") {
     """A condition to be used in determining which values should be returned by the collection."""
     condition: WorkspaceCondition
   ): [Workspace!]!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByProducts(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByProductsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
   """Reads and enables pagination through a set of `Customer`."""
   customersByCreditMemoProdIdAndCustId(
     """Only read the first `n` values of the set."""
@@ -9180,6 +9440,130 @@ type Product implements Node @key(fields: "nodeId") {
     """A condition to be used in determining which values should be returned by the collection."""
     condition: ProjectCondition
   ): [Project!]!
+  """Reads and enables pagination through a set of `Comment`."""
+  commentsByTrainingProductsAndComment(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Comment`."""
+    orderBy: [CommentsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CommentCondition
+  ): ProductCommentsByTrainingProductsAndCommentManyToManyConnection!
+  """Reads and enables pagination through a set of `Comment`."""
+  commentsByTrainingProductsAndCommentList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Comment`."""
+    orderBy: [CommentsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CommentCondition
+  ): [Comment!]!
+  """Reads and enables pagination through a set of `Country`."""
+  countriesByTrainingProductsAndCountry(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Country`."""
+    orderBy: [CountriesOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CountryCondition
+  ): ProductCountriesByTrainingProductsAndCountryManyToManyConnection!
+  """Reads and enables pagination through a set of `Country`."""
+  countriesByTrainingProductsAndCountryList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Country`."""
+    orderBy: [CountriesOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CountryCondition
+  ): [Country!]!
+  """Reads and enables pagination through a set of `State`."""
+  statesByTrainingProductsAndState(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `State`."""
+    orderBy: [StatesOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: StateCondition
+  ): ProductStatesByTrainingProductsAndStateManyToManyConnection!
+  """Reads and enables pagination through a set of `State`."""
+  statesByTrainingProductsAndStateList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `State`."""
+    orderBy: [StatesOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: StateCondition
+  ): [State!]!
+  """Reads and enables pagination through a set of `Checklist`."""
+  checklistsByTrainingProductsAndChecklists(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Checklist`."""
+    orderBy: [ChecklistsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ChecklistCondition
+  ): ProductChecklistsByTrainingProductsAndChecklistsManyToManyConnection!
+  """Reads and enables pagination through a set of `Checklist`."""
+  checklistsByTrainingProductsAndChecklistsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Checklist`."""
+    orderBy: [ChecklistsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ChecklistCondition
+  ): [Checklist!]!
 }
 
 """A connection to a list of `Coupon` values."""
@@ -16689,6 +17073,1493 @@ type WorkspacesEdge {
   node: Workspace
 }
 
+"""A connection to a list of `Training` values."""
+type TrainingsConnection {
+  """A list of `Training` objects."""
+  nodes: [Training]!
+  """A list of edges which contains the `Training` and cursor to aid in pagination."""
+  edges: [TrainingsEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Training` you could get from the connection."""
+  totalCount: Int!
+}
+
+type Training implements Node @key(fields: "nodeId") {
+  """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
+  nodeId: ID!
+  id: BigInt!
+  createdAt: Datetime
+  name: String
+  subject: String
+  content: String
+  media: String
+  link: String
+  steps: String
+  updated: Datetime
+  analytics: String
+  competency: String
+  course: String
+  grade: String
+  school: String
+  comment: Int
+  address: String
+  country: Int
+  state: Int
+  postal: String
+  teacher: String
+  student: String
+  anncouncement: String
+  resource: String
+  badges: String
+  isPublic: String
+  isCompleted: String
+  speakers: String
+  fieldTrips: String
+  assignments: String
+  assignmentsDueDate: String
+  origanlityReport: String
+  products: BigInt
+  faqs: String
+  languages: String
+  checklists: BigInt
+  city: String
+  meetups: String
+  lab: String
+  digiboards: String
+  """Reads a single `Comment` that is related to this `Training`."""
+  commentByComment: Comment
+  """Reads a single `Country` that is related to this `Training`."""
+  countryByCountry: Country
+  """Reads a single `State` that is related to this `Training`."""
+  stateByState: State
+  """Reads a single `Product` that is related to this `Training`."""
+  productByProducts: Product
+  """Reads a single `Checklist` that is related to this `Training`."""
+  checklistByChecklists: Checklist
+}
+
+type Country implements Node @key(fields: "nodeId") {
+  """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
+  nodeId: ID!
+  id: Int!
+  name: String!
+  description: String
+  image: String
+  region: String
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCountry(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCountryList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+  """Reads and enables pagination through a set of `Comment`."""
+  commentsByTrainingCountryAndComment(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Comment`."""
+    orderBy: [CommentsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CommentCondition
+  ): CountryCommentsByTrainingCountryAndCommentManyToManyConnection!
+  """Reads and enables pagination through a set of `Comment`."""
+  commentsByTrainingCountryAndCommentList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Comment`."""
+    orderBy: [CommentsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CommentCondition
+  ): [Comment!]!
+  """Reads and enables pagination through a set of `State`."""
+  statesByTrainingCountryAndState(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `State`."""
+    orderBy: [StatesOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: StateCondition
+  ): CountryStatesByTrainingCountryAndStateManyToManyConnection!
+  """Reads and enables pagination through a set of `State`."""
+  statesByTrainingCountryAndStateList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `State`."""
+    orderBy: [StatesOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: StateCondition
+  ): [State!]!
+  """Reads and enables pagination through a set of `Product`."""
+  productsByTrainingCountryAndProducts(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Product`."""
+    orderBy: [ProductsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ProductCondition
+  ): CountryProductsByTrainingCountryAndProductsManyToManyConnection!
+  """Reads and enables pagination through a set of `Product`."""
+  productsByTrainingCountryAndProductsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Product`."""
+    orderBy: [ProductsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ProductCondition
+  ): [Product!]!
+  """Reads and enables pagination through a set of `Checklist`."""
+  checklistsByTrainingCountryAndChecklists(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Checklist`."""
+    orderBy: [ChecklistsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ChecklistCondition
+  ): CountryChecklistsByTrainingCountryAndChecklistsManyToManyConnection!
+  """Reads and enables pagination through a set of `Checklist`."""
+  checklistsByTrainingCountryAndChecklistsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Checklist`."""
+    orderBy: [ChecklistsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ChecklistCondition
+  ): [Checklist!]!
+}
+
+"""Methods to use when ordering `Training`."""
+enum TrainingsOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  NAME_ASC
+  NAME_DESC
+  SUBJECT_ASC
+  SUBJECT_DESC
+  CONTENT_ASC
+  CONTENT_DESC
+  MEDIA_ASC
+  MEDIA_DESC
+  LINK_ASC
+  LINK_DESC
+  STEPS_ASC
+  STEPS_DESC
+  UPDATED_ASC
+  UPDATED_DESC
+  ANALYTICS_ASC
+  ANALYTICS_DESC
+  COMPETENCY_ASC
+  COMPETENCY_DESC
+  COURSE_ASC
+  COURSE_DESC
+  GRADE_ASC
+  GRADE_DESC
+  SCHOOL_ASC
+  SCHOOL_DESC
+  COMMENT_ASC
+  COMMENT_DESC
+  ADDRESS_ASC
+  ADDRESS_DESC
+  COUNTRY_ASC
+  COUNTRY_DESC
+  STATE_ASC
+  STATE_DESC
+  POSTAL_ASC
+  POSTAL_DESC
+  TEACHER_ASC
+  TEACHER_DESC
+  STUDENT_ASC
+  STUDENT_DESC
+  ANNCOUNCEMENT_ASC
+  ANNCOUNCEMENT_DESC
+  RESOURCE_ASC
+  RESOURCE_DESC
+  BADGES_ASC
+  BADGES_DESC
+  IS_PUBLIC_ASC
+  IS_PUBLIC_DESC
+  IS_COMPLETED_ASC
+  IS_COMPLETED_DESC
+  SPEAKERS_ASC
+  SPEAKERS_DESC
+  FIELD_TRIPS_ASC
+  FIELD_TRIPS_DESC
+  ASSIGNMENTS_ASC
+  ASSIGNMENTS_DESC
+  ASSIGNMENTS_DUE_DATE_ASC
+  ASSIGNMENTS_DUE_DATE_DESC
+  ORIGANLITY_REPORT_ASC
+  ORIGANLITY_REPORT_DESC
+  PRODUCTS_ASC
+  PRODUCTS_DESC
+  FAQS_ASC
+  FAQS_DESC
+  LANGUAGES_ASC
+  LANGUAGES_DESC
+  CHECKLISTS_ASC
+  CHECKLISTS_DESC
+  CITY_ASC
+  CITY_DESC
+  MEETUPS_ASC
+  MEETUPS_DESC
+  LAB_ASC
+  LAB_DESC
+  DIGIBOARDS_ASC
+  DIGIBOARDS_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""
+A condition to be used against `Training` object types. All fields are tested
+for equality and combined with a logical ‘and.’
+"""
+input TrainingCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: BigInt
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+  """Checks for equality with the object’s `name` field."""
+  name: String
+  """Checks for equality with the object’s `subject` field."""
+  subject: String
+  """Checks for equality with the object’s `content` field."""
+  content: String
+  """Checks for equality with the object’s `media` field."""
+  media: String
+  """Checks for equality with the object’s `link` field."""
+  link: String
+  """Checks for equality with the object’s `steps` field."""
+  steps: String
+  """Checks for equality with the object’s `updated` field."""
+  updated: Datetime
+  """Checks for equality with the object’s `analytics` field."""
+  analytics: String
+  """Checks for equality with the object’s `competency` field."""
+  competency: String
+  """Checks for equality with the object’s `course` field."""
+  course: String
+  """Checks for equality with the object’s `grade` field."""
+  grade: String
+  """Checks for equality with the object’s `school` field."""
+  school: String
+  """Checks for equality with the object’s `comment` field."""
+  comment: Int
+  """Checks for equality with the object’s `address` field."""
+  address: String
+  """Checks for equality with the object’s `country` field."""
+  country: Int
+  """Checks for equality with the object’s `state` field."""
+  state: Int
+  """Checks for equality with the object’s `postal` field."""
+  postal: String
+  """Checks for equality with the object’s `teacher` field."""
+  teacher: String
+  """Checks for equality with the object’s `student` field."""
+  student: String
+  """Checks for equality with the object’s `anncouncement` field."""
+  anncouncement: String
+  """Checks for equality with the object’s `resource` field."""
+  resource: String
+  """Checks for equality with the object’s `badges` field."""
+  badges: String
+  """Checks for equality with the object’s `isPublic` field."""
+  isPublic: String
+  """Checks for equality with the object’s `isCompleted` field."""
+  isCompleted: String
+  """Checks for equality with the object’s `speakers` field."""
+  speakers: String
+  """Checks for equality with the object’s `fieldTrips` field."""
+  fieldTrips: String
+  """Checks for equality with the object’s `assignments` field."""
+  assignments: String
+  """Checks for equality with the object’s `assignmentsDueDate` field."""
+  assignmentsDueDate: String
+  """Checks for equality with the object’s `origanlityReport` field."""
+  origanlityReport: String
+  """Checks for equality with the object’s `products` field."""
+  products: BigInt
+  """Checks for equality with the object’s `faqs` field."""
+  faqs: String
+  """Checks for equality with the object’s `languages` field."""
+  languages: String
+  """Checks for equality with the object’s `checklists` field."""
+  checklists: BigInt
+  """Checks for equality with the object’s `city` field."""
+  city: String
+  """Checks for equality with the object’s `meetups` field."""
+  meetups: String
+  """Checks for equality with the object’s `lab` field."""
+  lab: String
+  """Checks for equality with the object’s `digiboards` field."""
+  digiboards: String
+}
+
+"""A connection to a list of `Comment` values, with data from `Training`."""
+type CountryCommentsByTrainingCountryAndCommentManyToManyConnection {
+  """A list of `Comment` objects."""
+  nodes: [Comment]!
+  """A list of edges which contains the `Comment`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [CountryCommentsByTrainingCountryAndCommentManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Comment` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Comment` edge in the connection, with data from `Training`."""
+type CountryCommentsByTrainingCountryAndCommentManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Comment` at the end of the edge."""
+  node: Comment
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByComment(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCommentList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A connection to a list of `State` values, with data from `Training`."""
+type CountryStatesByTrainingCountryAndStateManyToManyConnection {
+  """A list of `State` objects."""
+  nodes: [State]!
+  """A list of edges which contains the `State`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [CountryStatesByTrainingCountryAndStateManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `State` you could get from the connection."""
+  totalCount: Int!
+}
+
+type State implements Node @key(fields: "nodeId") {
+  """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
+  nodeId: ID!
+  id: Int!
+  name: String!
+  description: String
+  country: String
+  image: String
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByState(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByStateList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+  """Reads and enables pagination through a set of `Comment`."""
+  commentsByTrainingStateAndComment(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Comment`."""
+    orderBy: [CommentsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CommentCondition
+  ): StateCommentsByTrainingStateAndCommentManyToManyConnection!
+  """Reads and enables pagination through a set of `Comment`."""
+  commentsByTrainingStateAndCommentList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Comment`."""
+    orderBy: [CommentsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CommentCondition
+  ): [Comment!]!
+  """Reads and enables pagination through a set of `Country`."""
+  countriesByTrainingStateAndCountry(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Country`."""
+    orderBy: [CountriesOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CountryCondition
+  ): StateCountriesByTrainingStateAndCountryManyToManyConnection!
+  """Reads and enables pagination through a set of `Country`."""
+  countriesByTrainingStateAndCountryList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Country`."""
+    orderBy: [CountriesOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CountryCondition
+  ): [Country!]!
+  """Reads and enables pagination through a set of `Product`."""
+  productsByTrainingStateAndProducts(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Product`."""
+    orderBy: [ProductsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ProductCondition
+  ): StateProductsByTrainingStateAndProductsManyToManyConnection!
+  """Reads and enables pagination through a set of `Product`."""
+  productsByTrainingStateAndProductsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Product`."""
+    orderBy: [ProductsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ProductCondition
+  ): [Product!]!
+  """Reads and enables pagination through a set of `Checklist`."""
+  checklistsByTrainingStateAndChecklists(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Checklist`."""
+    orderBy: [ChecklistsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ChecklistCondition
+  ): StateChecklistsByTrainingStateAndChecklistsManyToManyConnection!
+  """Reads and enables pagination through a set of `Checklist`."""
+  checklistsByTrainingStateAndChecklistsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Checklist`."""
+    orderBy: [ChecklistsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ChecklistCondition
+  ): [Checklist!]!
+}
+
+"""A connection to a list of `Comment` values, with data from `Training`."""
+type StateCommentsByTrainingStateAndCommentManyToManyConnection {
+  """A list of `Comment` objects."""
+  nodes: [Comment]!
+  """A list of edges which contains the `Comment`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [StateCommentsByTrainingStateAndCommentManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Comment` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Comment` edge in the connection, with data from `Training`."""
+type StateCommentsByTrainingStateAndCommentManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Comment` at the end of the edge."""
+  node: Comment
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByComment(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCommentList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A connection to a list of `Country` values, with data from `Training`."""
+type StateCountriesByTrainingStateAndCountryManyToManyConnection {
+  """A list of `Country` objects."""
+  nodes: [Country]!
+  """A list of edges which contains the `Country`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [StateCountriesByTrainingStateAndCountryManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Country` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Country` edge in the connection, with data from `Training`."""
+type StateCountriesByTrainingStateAndCountryManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Country` at the end of the edge."""
+  node: Country
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCountry(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCountryList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""Methods to use when ordering `Country`."""
+enum CountriesOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  NAME_ASC
+  NAME_DESC
+  DESCRIPTION_ASC
+  DESCRIPTION_DESC
+  IMAGE_ASC
+  IMAGE_DESC
+  REGION_ASC
+  REGION_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""A condition to be used against `Country` object types. All fields are tested for equality and combined with a logical ‘and.’"""
+input CountryCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+  """Checks for equality with the object’s `name` field."""
+  name: String
+  """Checks for equality with the object’s `description` field."""
+  description: String
+  """Checks for equality with the object’s `image` field."""
+  image: String
+  """Checks for equality with the object’s `region` field."""
+  region: String
+}
+
+"""A connection to a list of `Product` values, with data from `Training`."""
+type StateProductsByTrainingStateAndProductsManyToManyConnection {
+  """A list of `Product` objects."""
+  nodes: [Product]!
+  """A list of edges which contains the `Product`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [StateProductsByTrainingStateAndProductsManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Product` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Product` edge in the connection, with data from `Training`."""
+type StateProductsByTrainingStateAndProductsManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Product` at the end of the edge."""
+  node: Product
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByProducts(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByProductsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A connection to a list of `Checklist` values, with data from `Training`."""
+type StateChecklistsByTrainingStateAndChecklistsManyToManyConnection {
+  """A list of `Checklist` objects."""
+  nodes: [Checklist]!
+  """A list of edges which contains the `Checklist`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [StateChecklistsByTrainingStateAndChecklistsManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Checklist` you could get from the connection."""
+  totalCount: Int!
+}
+
+type Checklist implements Node @key(fields: "nodeId") {
+  """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
+  nodeId: ID!
+  id: BigInt!
+  createdAt: Datetime
+  username: String
+  location: String
+  regionalManager: String
+  manager: String
+  description: String
+  ticket: String
+  project: String
+  region: String
+  country: String
+  media: String
+  prodId: String
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByChecklists(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByChecklistsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+  """Reads and enables pagination through a set of `Comment`."""
+  commentsByTrainingChecklistsAndComment(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Comment`."""
+    orderBy: [CommentsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CommentCondition
+  ): ChecklistCommentsByTrainingChecklistsAndCommentManyToManyConnection!
+  """Reads and enables pagination through a set of `Comment`."""
+  commentsByTrainingChecklistsAndCommentList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Comment`."""
+    orderBy: [CommentsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CommentCondition
+  ): [Comment!]!
+  """Reads and enables pagination through a set of `Country`."""
+  countriesByTrainingChecklistsAndCountry(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Country`."""
+    orderBy: [CountriesOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CountryCondition
+  ): ChecklistCountriesByTrainingChecklistsAndCountryManyToManyConnection!
+  """Reads and enables pagination through a set of `Country`."""
+  countriesByTrainingChecklistsAndCountryList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Country`."""
+    orderBy: [CountriesOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: CountryCondition
+  ): [Country!]!
+  """Reads and enables pagination through a set of `State`."""
+  statesByTrainingChecklistsAndState(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `State`."""
+    orderBy: [StatesOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: StateCondition
+  ): ChecklistStatesByTrainingChecklistsAndStateManyToManyConnection!
+  """Reads and enables pagination through a set of `State`."""
+  statesByTrainingChecklistsAndStateList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `State`."""
+    orderBy: [StatesOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: StateCondition
+  ): [State!]!
+  """Reads and enables pagination through a set of `Product`."""
+  productsByTrainingChecklistsAndProducts(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Product`."""
+    orderBy: [ProductsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ProductCondition
+  ): ChecklistProductsByTrainingChecklistsAndProductsManyToManyConnection!
+  """Reads and enables pagination through a set of `Product`."""
+  productsByTrainingChecklistsAndProductsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Product`."""
+    orderBy: [ProductsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: ProductCondition
+  ): [Product!]!
+}
+
+"""A connection to a list of `Comment` values, with data from `Training`."""
+type ChecklistCommentsByTrainingChecklistsAndCommentManyToManyConnection {
+  """A list of `Comment` objects."""
+  nodes: [Comment]!
+  """A list of edges which contains the `Comment`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [ChecklistCommentsByTrainingChecklistsAndCommentManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Comment` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Comment` edge in the connection, with data from `Training`."""
+type ChecklistCommentsByTrainingChecklistsAndCommentManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Comment` at the end of the edge."""
+  node: Comment
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByComment(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCommentList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A connection to a list of `Country` values, with data from `Training`."""
+type ChecklistCountriesByTrainingChecklistsAndCountryManyToManyConnection {
+  """A list of `Country` objects."""
+  nodes: [Country]!
+  """A list of edges which contains the `Country`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [ChecklistCountriesByTrainingChecklistsAndCountryManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Country` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Country` edge in the connection, with data from `Training`."""
+type ChecklistCountriesByTrainingChecklistsAndCountryManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Country` at the end of the edge."""
+  node: Country
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCountry(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCountryList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A connection to a list of `State` values, with data from `Training`."""
+type ChecklistStatesByTrainingChecklistsAndStateManyToManyConnection {
+  """A list of `State` objects."""
+  nodes: [State]!
+  """A list of edges which contains the `State`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [ChecklistStatesByTrainingChecklistsAndStateManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `State` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `State` edge in the connection, with data from `Training`."""
+type ChecklistStatesByTrainingChecklistsAndStateManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `State` at the end of the edge."""
+  node: State
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByState(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByStateList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""Methods to use when ordering `State`."""
+enum StatesOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  NAME_ASC
+  NAME_DESC
+  DESCRIPTION_ASC
+  DESCRIPTION_DESC
+  COUNTRY_ASC
+  COUNTRY_DESC
+  IMAGE_ASC
+  IMAGE_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""A condition to be used against `State` object types. All fields are tested for equality and combined with a logical ‘and.’"""
+input StateCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: Int
+  """Checks for equality with the object’s `name` field."""
+  name: String
+  """Checks for equality with the object’s `description` field."""
+  description: String
+  """Checks for equality with the object’s `country` field."""
+  country: String
+  """Checks for equality with the object’s `image` field."""
+  image: String
+}
+
+"""A connection to a list of `Product` values, with data from `Training`."""
+type ChecklistProductsByTrainingChecklistsAndProductsManyToManyConnection {
+  """A list of `Product` objects."""
+  nodes: [Product]!
+  """A list of edges which contains the `Product`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [ChecklistProductsByTrainingChecklistsAndProductsManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Product` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Product` edge in the connection, with data from `Training`."""
+type ChecklistProductsByTrainingChecklistsAndProductsManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Product` at the end of the edge."""
+  node: Product
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByProducts(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByProductsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A `Checklist` edge in the connection, with data from `Training`."""
+type StateChecklistsByTrainingStateAndChecklistsManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Checklist` at the end of the edge."""
+  node: Checklist
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByChecklists(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByChecklistsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""Methods to use when ordering `Checklist`."""
+enum ChecklistsOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  USERNAME_ASC
+  USERNAME_DESC
+  LOCATION_ASC
+  LOCATION_DESC
+  REGIONAL_MANAGER_ASC
+  REGIONAL_MANAGER_DESC
+  MANAGER_ASC
+  MANAGER_DESC
+  DESCRIPTION_ASC
+  DESCRIPTION_DESC
+  TICKET_ASC
+  TICKET_DESC
+  PROJECT_ASC
+  PROJECT_DESC
+  REGION_ASC
+  REGION_DESC
+  COUNTRY_ASC
+  COUNTRY_DESC
+  MEDIA_ASC
+  MEDIA_DESC
+  PROD_ID_ASC
+  PROD_ID_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""
+A condition to be used against `Checklist` object types. All fields are tested
+for equality and combined with a logical ‘and.’
+"""
+input ChecklistCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: BigInt
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+  """Checks for equality with the object’s `username` field."""
+  username: String
+  """Checks for equality with the object’s `location` field."""
+  location: String
+  """Checks for equality with the object’s `regionalManager` field."""
+  regionalManager: String
+  """Checks for equality with the object’s `manager` field."""
+  manager: String
+  """Checks for equality with the object’s `description` field."""
+  description: String
+  """Checks for equality with the object’s `ticket` field."""
+  ticket: String
+  """Checks for equality with the object’s `project` field."""
+  project: String
+  """Checks for equality with the object’s `region` field."""
+  region: String
+  """Checks for equality with the object’s `country` field."""
+  country: String
+  """Checks for equality with the object’s `media` field."""
+  media: String
+  """Checks for equality with the object’s `prodId` field."""
+  prodId: String
+}
+
+"""A `State` edge in the connection, with data from `Training`."""
+type CountryStatesByTrainingCountryAndStateManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `State` at the end of the edge."""
+  node: State
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByState(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByStateList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A connection to a list of `Product` values, with data from `Training`."""
+type CountryProductsByTrainingCountryAndProductsManyToManyConnection {
+  """A list of `Product` objects."""
+  nodes: [Product]!
+  """A list of edges which contains the `Product`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [CountryProductsByTrainingCountryAndProductsManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Product` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Product` edge in the connection, with data from `Training`."""
+type CountryProductsByTrainingCountryAndProductsManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Product` at the end of the edge."""
+  node: Product
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByProducts(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByProductsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A connection to a list of `Checklist` values, with data from `Training`."""
+type CountryChecklistsByTrainingCountryAndChecklistsManyToManyConnection {
+  """A list of `Checklist` objects."""
+  nodes: [Checklist]!
+  """A list of edges which contains the `Checklist`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [CountryChecklistsByTrainingCountryAndChecklistsManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Checklist` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Checklist` edge in the connection, with data from `Training`."""
+type CountryChecklistsByTrainingCountryAndChecklistsManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Checklist` at the end of the edge."""
+  node: Checklist
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByChecklists(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByChecklistsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A `Training` edge in the connection."""
+type TrainingsEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Training` at the end of the edge."""
+  node: Training
+}
+
 """A connection to a list of `Customer` values, with data from `CreditMemo`."""
 type ProductCustomersByCreditMemoProdIdAndCustIdManyToManyConnection {
   """A list of `Customer` objects."""
@@ -17700,6 +19571,210 @@ type ProductProjectsByWorkspaceProductsAndProjectsManyToManyEdge {
   ): [Workspace!]!
 }
 
+"""A connection to a list of `Comment` values, with data from `Training`."""
+type ProductCommentsByTrainingProductsAndCommentManyToManyConnection {
+  """A list of `Comment` objects."""
+  nodes: [Comment]!
+  """A list of edges which contains the `Comment`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [ProductCommentsByTrainingProductsAndCommentManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Comment` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Comment` edge in the connection, with data from `Training`."""
+type ProductCommentsByTrainingProductsAndCommentManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Comment` at the end of the edge."""
+  node: Comment
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByComment(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCommentList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A connection to a list of `Country` values, with data from `Training`."""
+type ProductCountriesByTrainingProductsAndCountryManyToManyConnection {
+  """A list of `Country` objects."""
+  nodes: [Country]!
+  """A list of edges which contains the `Country`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [ProductCountriesByTrainingProductsAndCountryManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Country` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Country` edge in the connection, with data from `Training`."""
+type ProductCountriesByTrainingProductsAndCountryManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Country` at the end of the edge."""
+  node: Country
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCountry(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCountryList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A connection to a list of `State` values, with data from `Training`."""
+type ProductStatesByTrainingProductsAndStateManyToManyConnection {
+  """A list of `State` objects."""
+  nodes: [State]!
+  """A list of edges which contains the `State`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [ProductStatesByTrainingProductsAndStateManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `State` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `State` edge in the connection, with data from `Training`."""
+type ProductStatesByTrainingProductsAndStateManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `State` at the end of the edge."""
+  node: State
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByState(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByStateList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A connection to a list of `Checklist` values, with data from `Training`."""
+type ProductChecklistsByTrainingProductsAndChecklistsManyToManyConnection {
+  """A list of `Checklist` objects."""
+  nodes: [Checklist]!
+  """A list of edges which contains the `Checklist`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [ProductChecklistsByTrainingProductsAndChecklistsManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Checklist` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Checklist` edge in the connection, with data from `Training`."""
+type ProductChecklistsByTrainingProductsAndChecklistsManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Checklist` at the end of the edge."""
+  node: Checklist
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByChecklists(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByChecklistsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
 """A connection to a list of `Customer` values, with data from `Mediamanager`."""
 type BrandCustomersByMediamanagerBrandsAndAuthorManyToManyConnection {
   """A list of `Customer` objects."""
@@ -18675,6 +20750,210 @@ type CommentProductsByMediamanagerCommentAndProductsManyToManyEdge {
     """A condition to be used in determining which values should be returned by the collection."""
     condition: MediamanagerCondition
   ): [Mediamanager!]!
+}
+
+"""A connection to a list of `Country` values, with data from `Training`."""
+type CommentCountriesByTrainingCommentAndCountryManyToManyConnection {
+  """A list of `Country` objects."""
+  nodes: [Country]!
+  """A list of edges which contains the `Country`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [CommentCountriesByTrainingCommentAndCountryManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Country` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Country` edge in the connection, with data from `Training`."""
+type CommentCountriesByTrainingCommentAndCountryManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Country` at the end of the edge."""
+  node: Country
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCountry(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByCountryList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A connection to a list of `State` values, with data from `Training`."""
+type CommentStatesByTrainingCommentAndStateManyToManyConnection {
+  """A list of `State` objects."""
+  nodes: [State]!
+  """A list of edges which contains the `State`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [CommentStatesByTrainingCommentAndStateManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `State` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `State` edge in the connection, with data from `Training`."""
+type CommentStatesByTrainingCommentAndStateManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `State` at the end of the edge."""
+  node: State
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByState(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByStateList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A connection to a list of `Product` values, with data from `Training`."""
+type CommentProductsByTrainingCommentAndProductsManyToManyConnection {
+  """A list of `Product` objects."""
+  nodes: [Product]!
+  """A list of edges which contains the `Product`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [CommentProductsByTrainingCommentAndProductsManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Product` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Product` edge in the connection, with data from `Training`."""
+type CommentProductsByTrainingCommentAndProductsManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Product` at the end of the edge."""
+  node: Product
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByProducts(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByProductsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
+}
+
+"""A connection to a list of `Checklist` values, with data from `Training`."""
+type CommentChecklistsByTrainingCommentAndChecklistsManyToManyConnection {
+  """A list of `Checklist` objects."""
+  nodes: [Checklist]!
+  """A list of edges which contains the `Checklist`, info from the `Training`, and the cursor to aid in pagination."""
+  edges: [CommentChecklistsByTrainingCommentAndChecklistsManyToManyEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Checklist` you could get from the connection."""
+  totalCount: Int!
+}
+
+"""A `Checklist` edge in the connection, with data from `Training`."""
+type CommentChecklistsByTrainingCommentAndChecklistsManyToManyEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Checklist` at the end of the edge."""
+  node: Checklist
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByChecklists(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection!
+  """Reads and enables pagination through a set of `Training`."""
+  trainingsByChecklistsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]!
 }
 
 """A `Comment` edge in the connection."""
@@ -22119,96 +24398,12 @@ type ChecklistsConnection {
   totalCount: Int!
 }
 
-type Checklist implements Node @key(fields: "nodeId") {
-  """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
-  nodeId: ID!
-  id: BigInt!
-  createdAt: Datetime
-  username: String
-  location: String
-  regionalManager: String
-  manager: String
-  description: String
-  ticket: String
-  project: String
-  region: String
-  country: String
-  media: String
-  prodId: String
-}
-
 """A `Checklist` edge in the connection."""
 type ChecklistsEdge {
   """A cursor for use in pagination."""
   cursor: Cursor
   """The `Checklist` at the end of the edge."""
   node: Checklist
-}
-
-"""Methods to use when ordering `Checklist`."""
-enum ChecklistsOrderBy {
-  NATURAL
-  ID_ASC
-  ID_DESC
-  CREATED_AT_ASC
-  CREATED_AT_DESC
-  USERNAME_ASC
-  USERNAME_DESC
-  LOCATION_ASC
-  LOCATION_DESC
-  REGIONAL_MANAGER_ASC
-  REGIONAL_MANAGER_DESC
-  MANAGER_ASC
-  MANAGER_DESC
-  DESCRIPTION_ASC
-  DESCRIPTION_DESC
-  TICKET_ASC
-  TICKET_DESC
-  PROJECT_ASC
-  PROJECT_DESC
-  REGION_ASC
-  REGION_DESC
-  COUNTRY_ASC
-  COUNTRY_DESC
-  MEDIA_ASC
-  MEDIA_DESC
-  PROD_ID_ASC
-  PROD_ID_DESC
-  PRIMARY_KEY_ASC
-  PRIMARY_KEY_DESC
-}
-
-"""
-A condition to be used against `Checklist` object types. All fields are tested
-for equality and combined with a logical ‘and.’
-"""
-input ChecklistCondition {
-  """Checks for equality with the object’s `id` field."""
-  id: BigInt
-  """Checks for equality with the object’s `createdAt` field."""
-  createdAt: Datetime
-  """Checks for equality with the object’s `username` field."""
-  username: String
-  """Checks for equality with the object’s `location` field."""
-  location: String
-  """Checks for equality with the object’s `regionalManager` field."""
-  regionalManager: String
-  """Checks for equality with the object’s `manager` field."""
-  manager: String
-  """Checks for equality with the object’s `description` field."""
-  description: String
-  """Checks for equality with the object’s `ticket` field."""
-  ticket: String
-  """Checks for equality with the object’s `project` field."""
-  project: String
-  """Checks for equality with the object’s `region` field."""
-  region: String
-  """Checks for equality with the object’s `country` field."""
-  country: String
-  """Checks for equality with the object’s `media` field."""
-  media: String
-  """Checks for equality with the object’s `prodId` field."""
-  prodId: String
 }
 
 """A connection to a list of `City` values."""
@@ -22736,53 +24931,12 @@ type CountriesConnection {
   totalCount: Int!
 }
 
-type Country implements Node @key(fields: "nodeId") {
-  """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
-  nodeId: ID!
-  id: Int!
-  name: String!
-  description: String
-  image: String
-  region: String
-}
-
 """A `Country` edge in the connection."""
 type CountriesEdge {
   """A cursor for use in pagination."""
   cursor: Cursor
   """The `Country` at the end of the edge."""
   node: Country
-}
-
-"""Methods to use when ordering `Country`."""
-enum CountriesOrderBy {
-  NATURAL
-  ID_ASC
-  ID_DESC
-  NAME_ASC
-  NAME_DESC
-  DESCRIPTION_ASC
-  DESCRIPTION_DESC
-  IMAGE_ASC
-  IMAGE_DESC
-  REGION_ASC
-  REGION_DESC
-  PRIMARY_KEY_ASC
-  PRIMARY_KEY_DESC
-}
-
-"""A condition to be used against `Country` object types. All fields are tested for equality and combined with a logical ‘and.’"""
-input CountryCondition {
-  """Checks for equality with the object’s `id` field."""
-  id: Int
-  """Checks for equality with the object’s `name` field."""
-  name: String
-  """Checks for equality with the object’s `description` field."""
-  description: String
-  """Checks for equality with the object’s `image` field."""
-  image: String
-  """Checks for equality with the object’s `region` field."""
-  region: String
 }
 
 """A connection to a list of `Currency` values."""
@@ -24043,6 +26197,105 @@ input InternalizationCondition {
   default: String
   """Checks for equality with the object’s `website` field."""
   website: String
+}
+
+"""A connection to a list of `Invitation` values."""
+type InvitationsConnection {
+  """A list of `Invitation` objects."""
+  nodes: [Invitation]!
+  """A list of edges which contains the `Invitation` and cursor to aid in pagination."""
+  edges: [InvitationsEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Invitation` you could get from the connection."""
+  totalCount: Int!
+}
+
+type Invitation implements Node @key(fields: "nodeId") {
+  """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
+  nodeId: ID!
+  id: BigInt!
+  createdAt: Datetime
+  invoiceDate: Datetime
+  email: String
+  billingAddress: String
+  shippingAddress: String
+  orderNumber: String
+  grandTotalPurchased: String
+  paymentMethod: String
+  status: String
+  media: String
+  content: String
+}
+
+"""A `Invitation` edge in the connection."""
+type InvitationsEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Invitation` at the end of the edge."""
+  node: Invitation
+}
+
+"""Methods to use when ordering `Invitation`."""
+enum InvitationsOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  INVOICE_DATE_ASC
+  INVOICE_DATE_DESC
+  EMAIL_ASC
+  EMAIL_DESC
+  BILLING_ADDRESS_ASC
+  BILLING_ADDRESS_DESC
+  SHIPPING_ADDRESS_ASC
+  SHIPPING_ADDRESS_DESC
+  ORDER_NUMBER_ASC
+  ORDER_NUMBER_DESC
+  GRAND_TOTAL_PURCHASED_ASC
+  GRAND_TOTAL_PURCHASED_DESC
+  PAYMENT_METHOD_ASC
+  PAYMENT_METHOD_DESC
+  STATUS_ASC
+  STATUS_DESC
+  MEDIA_ASC
+  MEDIA_DESC
+  CONTENT_ASC
+  CONTENT_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""
+A condition to be used against `Invitation` object types. All fields are tested
+for equality and combined with a logical ‘and.’
+"""
+input InvitationCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: BigInt
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+  """Checks for equality with the object’s `invoiceDate` field."""
+  invoiceDate: Datetime
+  """Checks for equality with the object’s `email` field."""
+  email: String
+  """Checks for equality with the object’s `billingAddress` field."""
+  billingAddress: String
+  """Checks for equality with the object’s `shippingAddress` field."""
+  shippingAddress: String
+  """Checks for equality with the object’s `orderNumber` field."""
+  orderNumber: String
+  """Checks for equality with the object’s `grandTotalPurchased` field."""
+  grandTotalPurchased: String
+  """Checks for equality with the object’s `paymentMethod` field."""
+  paymentMethod: String
+  """Checks for equality with the object’s `status` field."""
+  status: String
+  """Checks for equality with the object’s `media` field."""
+  media: String
+  """Checks for equality with the object’s `content` field."""
+  content: String
 }
 
 """A connection to a list of `Invoice` values."""
@@ -26852,53 +29105,12 @@ type StatesConnection {
   totalCount: Int!
 }
 
-type State implements Node @key(fields: "nodeId") {
-  """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
-  nodeId: ID!
-  id: Int!
-  name: String!
-  description: String
-  country: String
-  image: String
-}
-
 """A `State` edge in the connection."""
 type StatesEdge {
   """A cursor for use in pagination."""
   cursor: Cursor
   """The `State` at the end of the edge."""
   node: State
-}
-
-"""Methods to use when ordering `State`."""
-enum StatesOrderBy {
-  NATURAL
-  ID_ASC
-  ID_DESC
-  NAME_ASC
-  NAME_DESC
-  DESCRIPTION_ASC
-  DESCRIPTION_DESC
-  COUNTRY_ASC
-  COUNTRY_DESC
-  IMAGE_ASC
-  IMAGE_DESC
-  PRIMARY_KEY_ASC
-  PRIMARY_KEY_DESC
-}
-
-"""A condition to be used against `State` object types. All fields are tested for equality and combined with a logical ‘and.’"""
-input StateCondition {
-  """Checks for equality with the object’s `id` field."""
-  id: Int
-  """Checks for equality with the object’s `name` field."""
-  name: String
-  """Checks for equality with the object’s `description` field."""
-  description: String
-  """Checks for equality with the object’s `country` field."""
-  country: String
-  """Checks for equality with the object’s `image` field."""
-  image: String
 }
 
 """A connection to a list of `Statistic` values."""
@@ -28382,7 +30594,7 @@ type _User implements Node @key(fields: "nodeId") {
 }
 
 """A union of all federated types (those that use the @key directive)."""
-union _Entity = _Audience | _GlobalConfig | _GraphQlConfig | _Idempotency | _JobSchedule | _JobStatus | _JoinRolesRole | _JoinUsersRole | _PushStatus | Role | _Schema | User | Email | Customer | Comment | Mediamanager | Brand | Product | Coupon | CreditMemo | Order | Quote | Transaction | CustomerPayment | ProductAttribute | ProductAttributeSet | Rating | TaxRate | TaxRule | Return | ProductType | Occassion | Wishlist | Manufacturer | Workspace | Task | Project | Ticketing | Shop | Category | Agreement | NewsletterSubscriber | CustomerGroup | Message | _PrismaMigration | Account | Analytic | Apitoken | Article | CartPriceRule | Case | CatalogPriceRule | Channel | Checklist | City | Collection | ContentType | Contract | CoreStore | Country | Currency | CurrencyRate | CurrencySymbol | Customization | Dashboard | EmailTemplate | Event | Fullfillment | GeneralSetting | GiftCertificate | Glossary | Importm | Integration | Internalization | Invoice | Knowledgebase | Lead | Meeting | Ooto | Opportunity | Page | Partner | Payment | PdfTemplate | Permission | Plugin | Poll | ProjectTemplate | Provider | Report | Review | Reward | Segment | Settingscustomer | Settingsgeneral | Settingshop | Settingsmarketing | Settingssale | Shipment | ShopSetting | Source | SpecialDiscount | State | Statistic | Stock | Survey | Tag | Target | TaxCategory | Theme | Website | UploadFile | UploadFileMorph | UrlRewrite | Visit | Warehouse | Webhook | Zone | _Role | _User
+union _Entity = _Audience | _GlobalConfig | _GraphQlConfig | _Idempotency | _JobSchedule | _JobStatus | _JoinRolesRole | _JoinUsersRole | _PushStatus | Role | _Schema | User | Email | Customer | Comment | Mediamanager | Brand | Product | Coupon | CreditMemo | Order | Quote | Transaction | CustomerPayment | ProductAttribute | ProductAttributeSet | Rating | TaxRate | TaxRule | Return | ProductType | Occassion | Wishlist | Manufacturer | Workspace | Task | Project | Ticketing | Shop | Category | Agreement | Training | Country | State | Checklist | NewsletterSubscriber | CustomerGroup | Message | _PrismaMigration | Account | Analytic | Apitoken | Article | CartPriceRule | Case | CatalogPriceRule | Channel | City | Collection | ContentType | Contract | CoreStore | Currency | CurrencyRate | CurrencySymbol | Customization | Dashboard | EmailTemplate | Event | Fullfillment | GeneralSetting | GiftCertificate | Glossary | Importm | Integration | Internalization | Invitation | Invoice | Knowledgebase | Lead | Meeting | Ooto | Opportunity | Page | Partner | Payment | PdfTemplate | Permission | Plugin | Poll | ProjectTemplate | Provider | Report | Review | Reward | Segment | Settingscustomer | Settingsgeneral | Settingshop | Settingsmarketing | Settingssale | Shipment | ShopSetting | Source | SpecialDiscount | Statistic | Stock | Survey | Tag | Target | TaxCategory | Theme | Website | UploadFile | UploadFileMorph | UrlRewrite | Visit | Warehouse | Webhook | Zone | _Role | _User
 
 scalar _Any
 
@@ -30062,6 +32274,37 @@ type Subscription {
     """A condition to be used in determining which values should be returned by the collection."""
     condition: InternalizationCondition
   ): [Internalization!]
+  """Reads and enables pagination through a set of `Invitation`. (live)"""
+  allInvitations(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Invitation`."""
+    orderBy: [InvitationsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: InvitationCondition
+  ): InvitationsConnection
+  """Reads a set of `Invitation`. (live)"""
+  allInvitationsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Invitation`."""
+    orderBy: [InvitationsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: InvitationCondition
+  ): [Invitation!]
   """Reads and enables pagination through a set of `Invoice`. (live)"""
   allInvoices(
     """Only read the first `n` values of the set."""
@@ -31767,6 +34010,37 @@ type Subscription {
     """A condition to be used in determining which values should be returned by the collection."""
     condition: TicketingCondition
   ): [Ticketing!]
+  """Reads and enables pagination through a set of `Training`. (live)"""
+  allTrainings(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): TrainingsConnection
+  """Reads a set of `Training`. (live)"""
+  allTrainingsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Training`."""
+    orderBy: [TrainingsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: TrainingCondition
+  ): [Training!]
   """Reads and enables pagination through a set of `Transaction`. (live)"""
   allTransactions(
     """Only read the first `n` values of the set."""
@@ -32213,6 +34487,8 @@ type Subscription {
   """ (live)"""
   internalizationById(id: BigInt!): Internalization
   """ (live)"""
+  invitationById(id: BigInt!): Invitation
+  """ (live)"""
   invoiceById(id: BigInt!): Invoice
   """ (live)"""
   knowledgebaseById(id: BigInt!): Knowledgebase
@@ -32324,6 +34600,8 @@ type Subscription {
   themeById(id: Int!): Theme
   """ (live)"""
   ticketingById(id: BigInt!): Ticketing
+  """ (live)"""
+  trainingById(id: BigInt!): Training
   """ (live)"""
   transactionById(id: Int!): Transaction
   """ (live)"""
@@ -32622,6 +34900,11 @@ type Subscription {
     """The globally unique `ID` to be used in selecting a single `Internalization`."""
     nodeId: ID!
   ): Internalization
+  """Reads a single `Invitation` using its globally unique `ID`. (live)"""
+  invitation(
+    """The globally unique `ID` to be used in selecting a single `Invitation`."""
+    nodeId: ID!
+  ): Invitation
   """Reads a single `Invoice` using its globally unique `ID`. (live)"""
   invoice(
     """The globally unique `ID` to be used in selecting a single `Invoice`."""
@@ -32902,6 +35185,11 @@ type Subscription {
     """The globally unique `ID` to be used in selecting a single `Ticketing`."""
     nodeId: ID!
   ): Ticketing
+  """Reads a single `Training` using its globally unique `ID`. (live)"""
+  training(
+    """The globally unique `ID` to be used in selecting a single `Training`."""
+    nodeId: ID!
+  ): Training
   """Reads a single `Transaction` using its globally unique `ID`. (live)"""
   transaction(
     """The globally unique `ID` to be used in selecting a single `Transaction`."""

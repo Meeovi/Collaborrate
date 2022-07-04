@@ -1,28 +1,32 @@
 query MyQuery {
   allCustomersList {
-    Address
-    address_two
-    confirmed_email
+    address
+    addressTwo
+    confirmedEmail
     country
-    customer_group
-    customer_since
-    date_of_birth
+    customerGroup
+    customerSince
+    dateOfBirth
     description
     email
-    first_name
+    firstName
     gender
     id
+    lastName
     image
-    middle_name
-    name_prefix
-    last_name
-    name_suffix
-    phone
+    middleName
+    namePrefix
+    nameSuffix
+    nodeId
     product
-    short_description
+    phone
+    paymentType
+    password
+    shortDescription
     state
-    tax_vat_number
+    taxVatNumber
     thumbnail
+    username
     websites
     zipcode
   }

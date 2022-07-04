@@ -12,6 +12,10 @@
     padding-left: 10px;
 }
 
+.breadcrumb li {
+    display: flex;
+}
+
 .navTotal {
     padding-left: 20px;
     position: relative;
@@ -51,7 +55,7 @@ main {
     position: relative !important;
     padding: 25px;
     margin-bottom: 50px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .sidenav-menu {
@@ -84,6 +88,9 @@ nav .fa-bell, nav .fa-user-circle {
     box-shadow: none !important;
 }
 
+.bg-image p {
+    width: fit-content;
+}
 /******************* Dashboard CSS *********/
 
 .dashboard {
@@ -218,4 +225,11 @@ input, select, option {
 .wysiwyg {
     width: 50%;
     min-height: 225px;
+}
+
+/****************** Footer ********************/
+
+footer {
+    bottom: 0;
+    position: relative !important;
 }

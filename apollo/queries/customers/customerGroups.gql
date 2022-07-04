@@ -1,8 +1,10 @@
 query MyQuery {
-  allCustomer_groupList {
+  allCustomerGroupsList {
     id
     name
-    tax_class
-    created_at
+    nodeId
+    taxClass
+    createdAt
+    custId
   }
 }

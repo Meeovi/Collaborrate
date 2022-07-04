@@ -1,27 +1,36 @@
 query MyQuery {
-  allTicketingList {
-    id
-    department
-    date_modified
-    date
-    created_at
-    content
+  allTicketingsList {
+    accountName
+    assignedTo
     comment
-    assigned_to
-    account_name
+    content
+    createdAt
+    date
+    dateModified
+    department
+    id
     level
     location
     media
     name
+    nodeId
     priority
     products
     projects
     requester
-    requester_email
+    requesterEmail
     resolution
-    ticket_type
-    team
-    status
     severity
+    status
+    team
+    ticketType
+    projectsByTicketIdList {
+      id
+      name
+    }
+    tasksByProjectTicketIdAndTaskIdList {
+      id
+      subject
+    }
   }
 }

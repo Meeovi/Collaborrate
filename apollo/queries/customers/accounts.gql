@@ -1,25 +1,26 @@
 query MyQuery {
   allAccountsList {
     address
-    alt_address
-    alt_city
-    alt_country
-    alt_postalcode
-    alt_state
-    annual_revenue
-    assigned_to
+    altAddress
+    altCity
+    altCountry
+    altPostalcode
+    altState
+    annualRevenue
+    assignedTo
     campaign
     city
-    id
-    fax
-    employees
-    email
-    created_at
     country
-    member_of
+    createdAt
+    email
+    employees
+    fax
+    id
     industry
+    memberOf
     name
-    office_phone
+    nodeId
+    officePhone
     postalcode
     state
     type

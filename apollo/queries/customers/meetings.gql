@@ -1,16 +1,17 @@
 query MyQuery {
-  allMeetingList {
-    id
-    assigned_to
+  allMeetingsList {
+    assignedTo
     content
-    created_at
+    createdAt
     duration
-    end_date
+    endDate
+    id
     invitees
-    related_to
+    nodeId
+    relatedTo
     reminders
     scheduling
-    start_date
+    startDate
     status
     subject
   }

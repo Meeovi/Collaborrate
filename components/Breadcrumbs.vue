@@ -1,17 +1,12 @@
 <template>
   <div>
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="/"><param class=""><p style="color:orange;">Home</p></a>
-        </li>
-        <li class="breadcrumb-item active" aria-current="page">
-          <p v-for="(crumb, index) in crumbs" :key="index" property="itemListElement"
-            typeof="ListItem" style="color: #1266f1;font-size: 20px;">
-            {{$route.fullPath === crumb.path && title !== null ? title : crumb.title}}</p>
-        </li>
-      </ol>
-    </nav>
+    <!-- Jumbotron -->
+    <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+      style="background-image: url('/images/mbr-1.png');overlay: 0.7 gray;">
+      <p v-for="(crumb, index) in crumbs" :key="index" property="itemListElement" typeof="ListItem"
+        style="color: black;font-size: 20px;">
+        {{$route.fullPath === crumb.path && title !== null ? title : crumb.title}}</p>
+    </div>
   </div>
 </template>
 
@@ -50,7 +45,8 @@
 </script>
 
 <style>
-.breadcrumb-item {
-  display: inline-block;
-}
+  .breadcrumb-item {
+    display: inline-block;
+  }
+
 </style>

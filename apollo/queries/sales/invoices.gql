@@ -1,20 +1,22 @@
 query MyQuery {
   allInvoicesList {
-    subtotal
-    status
-    shipping_information
-    shipping_and_handling
-    shipping_address
-    payment_method
-    order_number
-    invoice_date
-    invoice
-    grand_total_purchased
-    grand_total_base
+    billToName
+    billingAddress
+    customerGroup
+    customerName
     email
-    customer_name
-    customer_group
-    billing_address
-    bill_to_name
+    grandTotalBase
+    grandTotalPurchased
+    id
+    invoice
+    invoiceDate
+    nodeId
+    orderNumber
+    paymentMethod
+    shippingAddress
+    shippingAndHandling
+    shippingInformation
+    status
+    subtotal
   }
 }

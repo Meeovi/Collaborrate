@@ -12,22 +12,22 @@ query MyQuery {
     firstName
     gender
     id
-    image
     lastName
+    image
     middleName
     namePrefix
     nameSuffix
     nodeId
-    password
-    paymentType
-    phone
     product
+    phone
+    paymentType
+    password
     shortDescription
     state
     taxVatNumber
     thumbnail
     username
-    zipcode
     websites
+    zipcode
   }
 }

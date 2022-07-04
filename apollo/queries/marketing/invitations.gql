@@ -1,0 +1,17 @@
+query MyQuery {
+  allInvitationsList {
+    id
+    grandTotalPurchased
+    email
+    createdAt
+    content
+    billingAddress
+    invoiceDate
+    media
+    nodeId
+    orderNumber
+    paymentMethod
+    shippingAddress
+    status
+  }
+}

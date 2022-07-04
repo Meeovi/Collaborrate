@@ -1,29 +1,30 @@
 query MyQuery {
   allContractsList {
-    id
     account
-    company_signed_date
+    companySignedDate
     contact
-    contract_manager
-    contract_title
-    contract_type
-    contract_value
-    created_at
+    contractManager
+    contractTitle
+    contractType
+    contractValue
+    createdAt
     currency
-    customer_signed_date
+    customerSignedDate
     description
     discount
-    end_date
-    grand_total
-    line_items
+    endDate
+    grandTotal
+    id
+    lineItems
+    nodeId
     opportunity
-    renewal_reminder
+    renewalReminder
     shipping
-    shipping_tax
-    start_date
+    shippingTax
+    startDate
     status
-    total
-    tax
     subtotal
+    tax
+    total
   }
 }

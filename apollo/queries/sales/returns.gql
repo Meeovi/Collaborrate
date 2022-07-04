@@ -1,9 +1,12 @@
 query MyQuery {
   allReturnsList {
+    createdAt
+    custId
     id
     name
-    return_prefix
+    nodeId
+    prodId
+    returnPrefix
     validity
-    created_at
   }
 }

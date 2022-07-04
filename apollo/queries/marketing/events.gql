@@ -1,16 +1,17 @@
 query MyQuery {
   allEventsList {
-    id
-    image
-    name
-    postalcode
-    start
-    state
     tickets
+    state
+    postalcode
+    nodeId
+    name
+    image
+    id
     end
-    created_at
+    createdAt
     country
     content
+    start
     city
     category
   }

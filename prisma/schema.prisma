@@ -1,6 +1,6 @@
 generator client {
-  provider = "prisma-client-js"
-  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
 }
 
 datasource db {
@@ -101,6 +101,7 @@ model comments {
   cust_id       Int            @default(autoincrement())
   customers     customers      @relation(fields: [cust_id], references: [id])
   mediamanager  mediamanager[]
+  trainings     trainings[]
 }
 
 model core_store {
@@ -113,11 +114,12 @@ model core_store {
 }
 
 model countries {
-  id          Int     @id @default(autoincrement())
-  name        String  @db.VarChar(255)
+  id          Int         @id @default(autoincrement())
+  name        String      @db.VarChar(255)
   description String?
   image       String?
   region      String?
+  trainings   trainings[]
 }
 
 model coupons {
@@ -411,6 +413,7 @@ model products {
   returns                         returns[]
   tax_rate                        tax_rate[]
   tax_rule                        tax_rule[]
+  trainings                       trainings[]
   workspaces                      workspaces[]
 }
 
@@ -580,11 +583,12 @@ model special_discounts {
 }
 
 model states {
-  id          Int     @id @default(autoincrement())
-  name        String  @db.VarChar(255)
+  id          Int         @id @default(autoincrement())
+  name        String      @db.VarChar(255)
   description String?
   country     String?
   image       String?
+  trainings   trainings[]
 }
 
 model statistics {
@@ -1334,8 +1338,8 @@ model rewards {
 }
 
 model checklist {
-  id               BigInt    @id @default(autoincrement())
-  created_at       DateTime? @default(now()) @db.Timestamptz(6)
+  id               BigInt      @id @default(autoincrement())
+  created_at       DateTime?   @default(now()) @db.Timestamptz(6)
   username         String?
   location         String?
   regional_manager String?
@@ -1347,6 +1351,7 @@ model checklist {
   country          String?
   media            String?
   prod_id          String?
+  trainings        trainings[]
 }
 
 model content_type {
@@ -1751,4 +1756,238 @@ model roles {
   role_name  String
   content    String?
   created_at DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+model Audience {
+  objectId  String    @id
+  createdAt DateTime? @db.Timestamptz(6)
+  updatedAt DateTime? @db.Timestamptz(6)
+  name      String?
+  query     String?
+  lastUsed  DateTime? @db.Timestamptz(6)
+  timesUsed Float?
+  rperm     String[]  @map("_rperm")
+  wperm     String[]  @map("_wperm")
+
+  @@map("_Audience")
+}
+
+model GlobalConfig {
+  objectId      String @id
+  params        Json?
+  masterKeyOnly Json?
+
+  @@map("_GlobalConfig")
+}
+
+model GraphQLConfig {
+  objectId String @id
+  config   Json?
+
+  @@map("_GraphQLConfig")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model Hooks {
+  functionName String?
+  className    String?
+  triggerName  String?
+  url          String?
+
+  @@map("_Hooks")
+  @@ignore
+}
+
+model Idempotency {
+  objectId  String    @id
+  createdAt DateTime? @db.Timestamptz(6)
+  updatedAt DateTime? @db.Timestamptz(6)
+  reqId     String?   @unique
+  expire    DateTime? @db.Timestamptz(6)
+  rperm     String[]  @map("_rperm")
+  wperm     String[]  @map("_wperm")
+
+  @@index([expire], name: "ttl")
+  @@map("_Idempotency")
+}
+
+model JobSchedule {
+  objectId      String    @id
+  createdAt     DateTime? @db.Timestamptz(6)
+  updatedAt     DateTime? @db.Timestamptz(6)
+  jobName       String?
+  description   String?
+  params        String?
+  startAfter    String?
+  daysOfWeek    Json?
+  timeOfDay     String?
+  lastRun       Float?
+  repeatMinutes Float?
+  rperm         String[]  @map("_rperm")
+  wperm         String[]  @map("_wperm")
+
+  @@map("_JobSchedule")
+}
+
+model JobStatus {
+  objectId   String    @id
+  createdAt  DateTime? @db.Timestamptz(6)
+  updatedAt  DateTime? @db.Timestamptz(6)
+  jobName    String?
+  source     String?
+  status     String?
+  message    String?
+  params     Json?
+  finishedAt DateTime? @db.Timestamptz(6)
+  rperm      String[]  @map("_rperm")
+  wperm      String[]  @map("_wperm")
+
+  @@map("_JobStatus")
+}
+
+model Join_roles__Role {
+  relatedId String @db.VarChar(120)
+  owningId  String @db.VarChar(120)
+
+  @@id([relatedId, owningId])
+  @@map("_Join:roles:_Role")
+}
+
+model Join_users__Role {
+  relatedId String @db.VarChar(120)
+  owningId  String @db.VarChar(120)
+
+  @@id([relatedId, owningId])
+  @@map("_Join:users:_Role")
+}
+
+model PushStatus {
+  objectId            String    @id
+  createdAt           DateTime? @db.Timestamptz(6)
+  updatedAt           DateTime? @db.Timestamptz(6)
+  pushTime            String?
+  source              String?
+  query               String?
+  payload             String?
+  title               String?
+  expiry              Float?
+  expiration_interval Float?
+  status              String?
+  numSent             Float?
+  numFailed           Float?
+  pushHash            String?
+  errorMessage        Json?
+  sentPerType         Json?
+  failedPerType       Json?
+  sentPerUTCOffset    Json?
+  failedPerUTCOffset  Json?
+  count               Float?
+  rperm               String[]  @map("_rperm")
+  wperm               String[]  @map("_wperm")
+
+  @@map("_PushStatus")
+}
+
+model Role {
+  objectId  String    @id
+  createdAt DateTime? @db.Timestamptz(6)
+  updatedAt DateTime? @db.Timestamptz(6)
+  name      String?   @unique
+  rperm     String[]  @map("_rperm")
+  wperm     String[]  @map("_wperm")
+
+  @@map("_Role")
+}
+
+model SCHEMA {
+  className    String   @id @db.VarChar(120)
+  schema       Json?
+  isParseClass Boolean?
+
+  @@map("_SCHEMA")
+}
+
+model User {
+  objectId                      String    @id
+  createdAt                     DateTime? @db.Timestamptz(6)
+  updatedAt                     DateTime? @db.Timestamptz(6)
+  username                      String?   @unique
+  email                         String?   @unique
+  emailVerified                 Boolean?
+  authData                      Json?
+  rperm                         String[]  @map("_rperm")
+  wperm                         String[]  @map("_wperm")
+  hashed_password               String?   @map("_hashed_password")
+  email_verify_token_expires_at DateTime? @map("_email_verify_token_expires_at") @db.Timestamptz(6)
+  email_verify_token            String?   @map("_email_verify_token")
+  account_lockout_expires_at    DateTime? @map("_account_lockout_expires_at") @db.Timestamptz(6)
+  failed_login_count            Float?    @map("_failed_login_count")
+  perishable_token              String?   @map("_perishable_token")
+  perishable_token_expires_at   DateTime? @map("_perishable_token_expires_at") @db.Timestamptz(6)
+  password_changed_at           DateTime? @map("_password_changed_at") @db.Timestamptz(6)
+  password_history              Json?     @map("_password_history")
+
+  @@map("_User")
+}
+
+model invitations {
+  id                  BigInt    @id @default(autoincrement())
+  created_at          DateTime? @default(now()) @db.Timestamptz(6)
+  invoiceDate         DateTime? @default(now()) @db.Timestamptz(6)
+  email               String?
+  billingAddress      String?
+  shippingAddress     String?
+  orderNumber         String?
+  grandTotalPurchased String?
+  paymentMethod       String?
+  status              String?
+  media               String?
+  content             String?
+}
+
+model trainings {
+  id                           BigInt     @id @default(autoincrement())
+  created_at                   DateTime?  @default(now()) @db.Timestamptz(6)
+  name                         String?
+  subject                      String?
+  content                      String?
+  media                        String?
+  link                         String?
+  steps                        String?
+  updated                      DateTime?  @default(now()) @db.Timestamptz(6)
+  analytics                    String?
+  competency                   String?
+  course                       String?
+  grade                        String?
+  school                       String?
+  comment                      Int?
+  address                      String?
+  country                      Int?
+  state                        Int?
+  postal                       String?
+  teacher                      String?
+  student                      String?
+  anncouncement                String?
+  resource                     String?
+  badges                       String?
+  isPublic                     String?
+  isCompleted                  String?
+  speakers                     String?
+  fieldTrips                   String?
+  assignments                  String?
+  assignmentsDueDate           String?
+  origanlityReport             String?
+  products                     BigInt?
+  faqs                         String?
+  languages                    String?
+  checklists                   BigInt?
+  city                         String?
+  meetups                      String?
+  lab                          String?
+  digiboards                   String?
+  checklist                    checklist? @relation(fields: [checklists], references: [id])
+  comments                     comments?  @relation(fields: [comment], references: [id])
+  countries                    countries? @relation(fields: [country], references: [id])
+  products_productsTotrainings products?  @relation(fields: [products], references: [id])
+  states                       states?    @relation(fields: [state], references: [id])
 }

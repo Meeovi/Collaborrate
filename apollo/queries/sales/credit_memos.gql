@@ -1,10 +1,25 @@
 query MyQuery {
-  allCredit_memosList {
-    bill_to_name
+  allCreditMemosList {
+    action
+    billToName
     created
-    credit_memo
-    order_number
+    creditMemo
+    custId
+    id
+    nodeId
+    orderNumber
+    prodId
     refunded
     status
+    customerByCustId {
+      id
+      firstName
+      lastName
+    }
+    productByProdId {
+      id
+      name
+      price
+    }
   }
 }

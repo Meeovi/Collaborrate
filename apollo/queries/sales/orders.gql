@@ -1,15 +1,18 @@
 query MyQuery {
   allOrdersList {
-    id
-    grand_total_purchased
-    grand_total_base
-    braintree_transaction_source
-    bill_to_name
-    allOcated_sources
     action
-    purchase_date
-    purchase_point
-    ship_to_name
+    allocatedSources
+    billToName
+    braintreeTransactionSource
+    custId
+    grandTotalBase
+    grandTotalPurchased
+    id
+    nodeId
+    prodId
+    purchaseDate
+    purchasePoint
     status
+    shipToName
   }
 }

@@ -1,14 +1,15 @@
 query MyQuery {
   allReportsList {
+    appliedCoupon
+    created
+    customer
+    email
     id
-    ip_address
+    ipAddress
+    nodeId
     products
     quantity
     subtotal
     updated
-    email
-    customer
-    created
-    applied_coupon
   }
 }

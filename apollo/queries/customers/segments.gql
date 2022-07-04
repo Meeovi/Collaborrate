@@ -1,12 +1,13 @@
 query MyQuery {
   allSegmentsList {
-    id
-    name
-    status
-    website
+    applyTo
+    createdAt
     customers
     description
-    created_at
-    apply_to
+    id
+    name
+    nodeId
+    status
+    website
   }
 }

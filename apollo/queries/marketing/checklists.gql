@@ -1,17 +1,30 @@
 query MyQuery {
-  allChecklist {
+  allChecklistsList {
     country
-    created_at
+    createdAt
     description
     id
     location
     manager
     media
-    prod_id
+    nodeId
+    prodId
     project
     region
-    regional_manager
+    regionalManager
     ticket
     username
+    trainingsByChecklistsList {
+      id
+      assignments
+    }
+    statesByTrainingChecklistsAndStateList {
+      id
+      name
+    }
+    productsByTrainingChecklistsAndProductsList {
+      id
+      name
+    }
   }
 }

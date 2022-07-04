@@ -1,15 +1,16 @@
 query MyQuery {
   allTasksList {
-    id
-    due_date
-    description
-    date_modified
-    created_at
+    assignedTo
     contact
-    assigned_to
+    createdAt
+    dateModified
+    description
+    dueDate
+    id
+    nodeId
     priority
-    related_to
-    start_date
+    relatedTo
+    startDate
     status
     subject
   }

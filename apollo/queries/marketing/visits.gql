@@ -1,14 +1,15 @@
 query MyQuery {
   allVisitsList {
     content
-    created_at
+    createdAt
     emergency
-    end_date
+    endDate
     id
     location
     meeting
+    nodeId
     reason
-    start_date
+    startDate
     task
     username
   }

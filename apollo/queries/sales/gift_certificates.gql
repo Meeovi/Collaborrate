@@ -1,20 +1,21 @@
 query MyQuery {
-  allGift_certificatesList {
+  allGiftCertificatesList {
+    articles
+    categories
+    customers
+    coupons
+    discount
+    excerpt
+    expiration
     id
     image
     name
+    nodeId
     products
     published
     rewards
-    special_offers
-    expiration
-    excerpt
-    discount
-    customers
-    coupons
-    categories
-    articles
-    users
+    specialOffers
     type
+    users
   }
 }

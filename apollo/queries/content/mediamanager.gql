@@ -5,27 +5,28 @@ query MyQuery {
     author
     brands
     comment
-    content_type
+    contentType
     copyright
-    created_at
+    createdAt
     description
     dimensions
-    expiration_date
+    expirationDate
     id
     keywords
     media
     members
     name
-    status
+    nodeId
     products
+    status
     tags
-    task_description
-    task_name
-    task_type
+    taskDescription
+    taskName
+    taskType
     versions
-    watermark_description
-    watermark_media
-    watermark_name
+    watermarkDescription
+    watermarkMedia
+    watermarkName
     workspace
   }
 }

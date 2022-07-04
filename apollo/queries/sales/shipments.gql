@@ -1,12 +1,17 @@
 query MyQuery {
   allShipmentsList {
+    carrierName
+    clientId
+    clientSecret
+    country
     id
-    carrier_name
     image
+    nodeId
     product
-    ship_date
-    speed_grade
-    tracking_url
-    transit_time
+    shipDate
+    speedGrade
+    trackingUrl
+    transitTime
+    website
   }
 }

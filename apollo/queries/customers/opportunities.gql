@@ -1,19 +1,20 @@
 query MyQuery {
   allOpportunitiesList {
-    id
-    expected_close_date
-    description
-    currency
-    created_at
-    campaign
-    assigned_to
+    accountName
     amount
-    account_name
-    lead_source
+    assignedTo
+    campaign
+    createdAt
+    currency
+    description
+    expectedCloseDate
+    id
+    leadSource
     name
-    next_step
+    nextStep
+    nodeId
     probability
-    sales_stage
+    salesStage
     type
   }
 }

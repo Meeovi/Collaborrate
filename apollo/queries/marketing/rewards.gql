@@ -1,16 +1,17 @@
 query MyQuery {
   allRewardsList {
+    users
+    slug
+    products
+    nodeId
+    name
+    level
     id
     expiration
     customers
-    created_at
+    createdAt
     coupons
     categories
     articles
-    level
-    name
-    slug
-    products
-    users
   }
 }

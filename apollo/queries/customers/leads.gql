@@ -1,36 +1,37 @@
 query MyQuery {
   allLeadsList {
-    Prefix
-    account_name
+    accountName
     address
-    alt_address
-    alt_city
-    alt_country
-    alt_postalcode
-    alt_state
+    altAddress
+    altCountry
+    altCity
+    altPostalcode
+    altState
     campaign
     city
     country
-    created_at
-    customer_name
+    createdAt
+    customerName
     department
     description
     email
     fax
-    first_name
+    firstName
     id
-    job_title
-    last_name
-    lead_source
-    lead_source_description
+    jobTitle
+    lastName
+    leadSource
+    leadSourceDescription
     mobile
-    office_phone
-    opportunity_amount
+    nodeId
+    officePhone
+    opportunityAmount
     postalcode
-    referred_by
+    prefix
+    referredBy
     state
     status
-    status_description
+    statusDescription
     website
   }
 }

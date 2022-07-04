@@ -1,12 +1,20 @@
 query MyQuery {
   allCategoriesList {
-    id
-    name
     content
+    country
+    description
+    id
     image
-    meta_description
-    meta_keywords
-    meta_url
-    meta_title
+    metaDescription
+    metaKeywords
+    metaTitle
+    metaUrl
+    name
+    nodeId
+    product
+    status
+    thumbnail
+    visibility
+    websites
   }
 }

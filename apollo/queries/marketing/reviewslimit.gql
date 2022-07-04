@@ -2,12 +2,12 @@ query MyQuery {
   allReviewsList(first: 5) {
     id
     firstName
-    lastName
-    shopId
-    websites
-    nodeId
     createdAt
     content
     commentId
+    lastName
+    nodeId
+    shopId
+    websites
   }
 }

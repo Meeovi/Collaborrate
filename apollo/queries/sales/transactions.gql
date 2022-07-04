@@ -1,11 +1,20 @@
 query MyQuery {
   allTransactionsList {
-    id
-    order_id
-    parent_transaction_id
-    payment_method
-    transaction_id
-    created
     closed
+    created
+    id
+    nodeId
+    orderId
+    parentTransactionId
+    paymentMethod
+    transactionId
+    orderByOrderId {
+      id
+      billToName
+    }
+    customerPaymentByPaymentMethod {
+      id
+      provider
+    }
   }
 }

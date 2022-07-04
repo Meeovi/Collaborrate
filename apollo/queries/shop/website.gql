@@ -1,10 +1,11 @@
 query MyQuery {
   allWebsitesList {
+    createdAt
     id
     name
+    nodeId
     shop
     store
     url
-    created_at
   }
 }

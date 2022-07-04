@@ -24,8 +24,8 @@
             <td><input id="segmentID" type="text" name=" id" /></td>
             <td><input type="text" name="segment" /></td>
             <td><input type="text" name="status" /></td>
-            <td><input type="select" :options="categories.name" id="segmentStatus" name="status"></td>
-            <td><input type="select" :options="website.name" id="segmentWebsite" name="website"></td>
+            <td><input type="select" :options="allCategoriesList.name" id="segmentStatus" name="status"></td>
+            <td><input type="select" :options="allWebsitesList.name" id="segmentWebsite" name="website"></td>
           </tr>
           <tr>
             <td>{{ segments.id }}</td>
@@ -43,15 +43,15 @@
 
 <script>
  import  allSegmentsList from '~/apollo/queries/customers/segments'
- import  website from '~/apollo/queries/shop/website'
- import  categories from '~/apollo/queries/shop/categories'
+ import  allWebsitesList from '~/apollo/queries/shop/website'
+ import  allCategoriesList from '~/apollo/queries/shop/categories'
 
 export default {
    data() {
     return {
       allSegmentsList: [],
-      website: [],
-      categories: []
+      allWebsitesList: [],
+      allCategoriesList: []
     }
   },
   apollo: {
@@ -59,13 +59,13 @@ export default {
       prefetch: true,
       query: allSegmentsList
     },
-    website: {
+    allWebsitesList: {
       prefetch: true,
-      query: website
+      query: allWebsitesList
     },
-    categories: {
+    allCategoriesList: {
       prefetch: true,
-      query: categories
+      query: allCategoriesList
     }
   }, 
     head: {

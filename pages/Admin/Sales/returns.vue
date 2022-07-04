@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/Admin/Add-new/add-new-return"><input type="button" class="btn btn-warning">New Return Request"></a>
+        <a class="navbar-brand" href="/Admin/Add-new/add-new-return"><input type="button" class="btn btn-warning" value="New Return Request"></a>
         
       </div>
     </nav>

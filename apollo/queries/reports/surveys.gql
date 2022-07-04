@@ -1,16 +1,17 @@
 query MyQuery {
   allSurveysList {
+    answer
+    assignedTo
+    createdAt
+    description
+    dissatisfiedText
     id
     name
-    neither_text
+    neitherText
+    nodeId
     question
-    satisfied_text
+    satisfiedText
     status
-    submit_text
-    dissatisfied_text
-    description
-    created_at
-    assigned_to
-    answer
+    submitText
   }
 }
