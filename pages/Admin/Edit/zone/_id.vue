@@ -6,7 +6,7 @@
           <a class="navbar-brand">
             <input type="reset" class="btn btn-warning" value="Reset" /></a>
           <a class="navbar-brand">
-            <input type="button" class="btn btn-warning" value="Save Zone" @click="addZone" /></a>
+            <input type="submit" class="btn btn-warning" value="Save Zone" @click="addZone" /></a>
         </div>
       </nav>
       <br>

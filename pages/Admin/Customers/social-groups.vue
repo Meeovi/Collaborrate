@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-customergroup"><input type="button" class="btn btn-warning" value="Add New Social Group"></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-customergroup"><input type="submit" class="btn btn-warning" value="Add New Social Group"></a>
         
 </div>
 </nav>

@@ -1,7 +1,9 @@
 query MyQuery {
-  allTax_ruleList {
+  allTaxRulesList {
     id
     name
-    tax_rate
+    nodeId
+    prodId
+    taxRate
   }
 }

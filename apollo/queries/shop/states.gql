@@ -1,9 +1,10 @@
 query MyQuery {
   allStatesList {
-    id
-    name
-    description
-    image
     country
+    description
+    id
+    image
+    name
+    nodeId
   }
 }

@@ -1,11 +1,12 @@
 query MyQuery {
   allWishlistsList {
-    created_at
+    createdAt
     customers
     id
     name
-    products
-    quantity
+    nodeId
     visibility
+    quantity
+    products
   }
 }

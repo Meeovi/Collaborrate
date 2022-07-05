@@ -1,13 +1,14 @@
 query MyQuery {
   allCollectionsList {
+    createdAt
+    description
     id
     image
-    meta_description
-    meta_keywords
-    meta_title
+    metaDescription
+    metaKeywords
+    metaTitle
     name
+    nodeId
     product
-    description
-    created_at
   }
 }

@@ -1,66 +1,54 @@
 query MyQuery {
   allWorkspacesList {
     author
-    brand {
-      id
-      name
-      media
-      isPublic
-      description
-      created_at
-      country
-      code
-      city
-      product
-      state
-    }
+    brands
     category
     code
-    created_at
-    brands
+    createdAt
     customers
     description
     id
     isPublic
     media
     name
-    users
-    tasks
-    shops
-    projects
+    nodeId
     products
-    product {
+    projects
+    shops
+    tasks
+    users
+    brandByBrands {
       id
       name
-      price
-    }
-    project {
-      id
-      name
-      assignee
-    }
-    shop {
-      id
-      name
-      products
-    }
-    task {
-      id
-      subject
-    }
-    user {
-      id
-      username
-    }
-    customer {
-      id
-      first_name
-      last_name
-      email
     }
     categoryByCategory {
       id
       name
+    }
+    customerByCustomers {
+      id
+      firstName
+      lastName
+    }
+    productByProducts {
+      id
+      name
+    }
+    projectByProjects {
+      id
+      name
+    }
+    shopByShops {
+      id
+      name
+    }
+    taskByTasks {
+      id
+      subject
+    }
+    userByUsers {
+      id
+      username
     }
   }
 }

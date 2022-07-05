@@ -6,7 +6,7 @@
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <input type="button" class="btn btn-warning" value="Save Product" @click="addProduct" /></a>
+            <input type="submit" class="btn btn-warning" value="Save Product" @click="addProduct" /></a>
         </div>
       </nav>
       <br>
@@ -319,11 +319,11 @@
     </form>
     <div class="product-footer">
       <li><a href="/admin/add-new/add-new-category" target="_blank">
-          <input type="button" class="btn btn-warning" value="Add New Category" /></a></li>
+          <input type="submit" class="btn btn-warning" value="Add New Category" /></a></li>
       <li><a href="/admin/add-new/add-new-attribute" target="_blank">
-          <input type="button" class="btn btn-warning" value="Add New Product Attribute" /></a></li>
+          <input type="submit" class="btn btn-warning" value="Add New Product Attribute" /></a></li>
       <li><a href="/admin/add-new/add-new-producttype" target="_blank">
-          <input type="button" class="btn btn-warning" value="Add New Product Type" /></a></li>
+          <input type="submit" class="btn btn-warning" value="Add New Product Type" /></a></li>
     </div>
   </div>
 </template>

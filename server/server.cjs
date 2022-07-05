@@ -2,7 +2,7 @@ const express = require("express");
 const {
   postgraphile
 } = require("postgraphile");
-require("../config/apollo.config")
+require("../config/sofa.config")
 
 const app = express();
 

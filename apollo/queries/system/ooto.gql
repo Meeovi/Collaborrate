@@ -1,11 +1,13 @@
 query MyQuery {
-  allOoto {
+  allOotosList {
+    createdAt
+    endDate
     id
-    end_date
-    note
-    created_at
-    login
-    start_date
     location
+    login
+    nodeId
+    note
+    startDate
+    usingTime
   }
 }

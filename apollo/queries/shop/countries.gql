@@ -1,9 +1,10 @@
 query MyQuery {
   allCountriesList {
-    id
-    name
     description
+    id
     image
+    name
+    nodeId
     region
   }
 }

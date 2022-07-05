@@ -1903,10 +1903,17 @@
   dependencies:
     "tslib" "^2.0.1"
 
-"@graphile/pg-pubsub@^4.12.2":
-  "integrity" "sha512-2HvfxvFxe6yEO0vMJQKZINakvWkAUiEFqgN4NMFdP5wOGGJQOK92IWougHyqscRsj/3QasSdtNamladohh9J0w=="
-  "resolved" "https://registry.npmjs.org/@graphile/pg-pubsub/-/pg-pubsub-4.12.2.tgz"
-  "version" "4.12.2"
+"@graphile/operation-hooks@^1.0.0":
+  "integrity" "sha512-RutVA5T1+mPhRoJ5afShKiKCLOqE0DhzqYoebPZMIKtEQhHSR2dLUlZ/MczvmcUgOhA7uH/+jKi4CauPlsdEsA=="
+  "resolved" "https://registry.npmjs.org/@graphile/operation-hooks/-/operation-hooks-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "graphile-utils" "^4.4.4"
+
+"@graphile/pg-pubsub@^4.12.3":
+  "integrity" "sha512-UzL/mXmqXVBEi2Q7ckr52UQ8G17N+6mfDANu8yHVvSoEfhsbS9JSER6GwJDcZJ10JpU2U4iDYhoJdy8iaDrmLQ=="
+  "resolved" "https://registry.npmjs.org/@graphile/pg-pubsub/-/pg-pubsub-4.12.3.tgz"
+  "version" "4.12.3"
   dependencies:
     "@types/debug" "^4.1.4"
     "@types/pg" ">=6 <9"
@@ -13114,7 +13121,7 @@
   "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.15.tgz"
   "version" "4.1.15"
 
-"graphile-build-pg@^4.5.0", "graphile-build-pg@4.12.2":
+"graphile-build-pg@^4.4.0-beta.10", "graphile-build-pg@^4.5.0", "graphile-build-pg@4.12.2":
   "integrity" "sha512-4zWS7yb2L3afNpzADX9iBc2do4UOd3abiHd/WG0ao8lharU4YxEDS5qKlE2/2s+gSNqW2okKXEuI1/ci9DXVbw=="
   "resolved" "https://registry.npmjs.org/graphile-build-pg/-/graphile-build-pg-4.12.2.tgz"
   "version" "4.12.2"
@@ -13143,7 +13150,7 @@
     "pluralize" "^7.0.0"
     "semver" "^6.0.0"
 
-"graphile-utils@^4.12.2", "graphile-utils@^4.4.5":
+"graphile-utils@^4.12.2", "graphile-utils@^4.4.4", "graphile-utils@^4.4.5", "graphile-utils@^4.5.6":
   "integrity" "sha512-2UcTWWMFLFkKwbDLqlN0mF5sxLqz9y0p7I3zNOJpXtHVjrHyp7oQZsWComPsit/PWIrIgtDUagP+HPkypBRrqA=="
   "resolved" "https://registry.npmjs.org/graphile-utils/-/graphile-utils-4.12.2.tgz"
   "version" "4.12.2"
@@ -19623,7 +19630,20 @@
     "graphile-build-pg" "4.12.2"
     "tslib" "^2.0.1"
 
-"postgraphile@^4.12.9", "postgraphile@^4.4.0-beta.10", "postgraphile@4.12.9":
+"postgraphile-plugin-many-create-update-delete@^1.0.7":
+  "integrity" "sha512-rksWrIvVsQQdzjpcRiyuKQCnJxQ9bOLQuvy9yR5HAT1PeJ8VUCOwRVw6ooV6j2Ez7s3Fs6XKoO9ovT87jGgV6g=="
+  "resolved" "https://registry.npmjs.org/postgraphile-plugin-many-create-update-delete/-/postgraphile-plugin-many-create-update-delete-1.0.7.tgz"
+  "version" "1.0.7"
+  dependencies:
+    "graphile-utils" "^4.5.6"
+    "postgraphile" "^4.7.0"
+
+"postgraphile-plugin-zombodb@^1.0.0-beta.5":
+  "integrity" "sha512-5YT98IPOn7bNAqzTK9YhDNAp7vrWzRcB5OfLsAtKHriA11Usv19kwr5sDy/9YqSEtbnJHo+smn3EIj8DwFEO9A=="
+  "resolved" "https://registry.npmjs.org/postgraphile-plugin-zombodb/-/postgraphile-plugin-zombodb-1.0.0-beta.5.tgz"
+  "version" "1.0.0-beta.5"
+
+"postgraphile@^4.12.9", "postgraphile@^4.4.0-beta.10", "postgraphile@^4.7.0", "postgraphile@4.12.9":
   "integrity" "sha512-4yxCleFqLH3o0eyM1ybMDCyDJvKNsYQ/d7VKtU8l62B12iNNL/xGipYYoYrLkEdEQdXlOwRxXxagRrvbZU1nIw=="
   "resolved" "https://registry.npmjs.org/postgraphile/-/postgraphile-4.12.9.tgz"
   "version" "4.12.9"

@@ -1,12 +1,14 @@
 query MyQuery {
-  allTax_rateList {
-    id
+  allTaxRatesList {
     country
-    default_store_view
+    defaultStoreView
+    nodeId
+    id
     postcode
-    rate_percent
+    prodId
+    ratePercent
     state
-    tax_identifier
-    zip_post_is_range
+    taxIdentifier
+    zipPostIsRange
   }
 }

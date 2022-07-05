@@ -1,19 +1,20 @@
 query MyQuery {
   allFullfillmentsList {
+    address
+    addressTwo
+    city
+    company
+    country
+    countryArea
+    createdAt
     id
     name
+    nodeId
     phone
     pickup
-    shipping_zones
+    shippingZones
     state
     stock
     zipcode
-    created_at
-    country_area
-    country
-    company
-    city
-    address_two
-    address
   }
 }

@@ -1,12 +1,13 @@
 query MyQuery {
-  allSchedulerList {
+  allSchedulersList {
+    createdAt
+    endDate
     id
-    end_date
-    created_at
     level
     login
+    nodeId
     notes
-    start_date
+    startDate
     whid
   }
 }

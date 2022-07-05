@@ -139,9 +139,9 @@
               <li class="sidenav-item">
                 <a class="sidenav-link" style="color: white;" href="/admin/reports/statistics">Statistics</a>
               </li><br>
-              <li class="sidenav-item">
+              <!--<li class="sidenav-item">
                 <a class="sidenav-link" style="color: white;" href="/admin/reports/calendars">Calendars</a>
-              </li><br>
+              </li><br>-->
             </ul>
           </li>
           <li class="sidenav-item">

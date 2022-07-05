@@ -2,13 +2,13 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/reports/add-new-schedule"><input type="button" class="btn btn-warning"
+        <a class="navbar-brand" href="/admin/reports/add-new-schedule"><input type="submit" class="btn btn-warning"
             value="Create New Schedule Request"></a>
       </div>
     </nav>
 
     <br>
-    <div v-for="scheduler in allSchedulerList" :key="scheduler.id">
+    <div v-for="scheduler in allSchedulersList" :key="scheduler.id">
       <div class="card text-center">
         <div class="card-header">{{ scheduler.whid }}</div>
         <div class="card-body">
@@ -23,18 +23,18 @@
 </template>
 
 <script>
-import  allSchedulerList from '~/apollo/queries/reports/scheduler'
+import  allSchedulersList from '~/apollo/queries/reports/scheduler'
 
   export default {
     data() {
       return {
-        allSchedulerList: [],
+        allSchedulersList: [],
       }
     },
     apollo: {
-      allSchedulerList: {
+      allSchedulersList: {
         prefetch: true,
-        query: allSchedulerList
+        query: allSchedulersList
       },
     },
     head: {

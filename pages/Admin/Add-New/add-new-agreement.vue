@@ -6,7 +6,7 @@
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <input type="button" class="btn btn-warning" value="Save Agreement" @click="addAgreement" /></a>
+            <button class="btn btn-warning" value="" @click="addAgreement" >Save Agreement</button></a>
         </div>
       </nav>
       <br>
@@ -102,10 +102,10 @@
 
 <script>
 import gql from "graphql-tag";
-import allAgreementsList from "~/apollo/queries/sales/agreements";
+import { allAgreementsList } from "~/apollo/queries/sales/agreements";
 
 const ADD_AGREEMENTS = gql`
-    mutation ($name:String!,$excerpt:String,$type:String,$content:String,$image:String){
+    mutation ($name:String!,$excerpt:String!,$type:String!,$content:String!,$image:String!){
     insert_agreements(objects: {name: $name, excerpt: $excerpt, type: $type, content: $content, image: $image}) {
         affected_rows
         returning {

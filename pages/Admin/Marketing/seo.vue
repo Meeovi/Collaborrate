@@ -2,9 +2,9 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand"><input type="button" class="btn btn-warning">URL Rewrites"></a>
-        <a class="navbar-brand"><input type="button" class="btn btn-warning" style="float:left; left: 10%; position: absolute;">Search Terms"></a>
-        <a class="navbar-brand"><input type="button" class="btn btn-warning" style="float:left; left: 20%; position: absolute;">Site Map"></a>
+        <a class="navbar-brand"><input type="submit" class="btn btn-warning">URL Rewrites"></a>
+        <a class="navbar-brand"><input type="submit" class="btn btn-warning" style="float:left; left: 10%; position: absolute;">Search Terms"></a>
+        <a class="navbar-brand"><input type="submit" class="btn btn-warning" style="float:left; left: 20%; position: absolute;">Site Map"></a>
         
       </div>
     </nav>

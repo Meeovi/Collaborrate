@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-shipment"><input type="button" class="btn btn-warning" value="Create new Shipment"></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-shipment"><input type="submit" class="btn btn-warning" value="Create new Shipment"></a>
 
       </div>
     </nav>

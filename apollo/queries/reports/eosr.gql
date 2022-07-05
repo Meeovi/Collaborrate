@@ -1,11 +1,12 @@
 query MyQuery {
-  allEndofshiftList {
-    id
-    created_at
+  allEndofshiftsList {
     content
+    createdAt
+    id
     login
     mcms
-    next_shift
+    nextShift
+    nodeId
     projects
     tickets
     whid

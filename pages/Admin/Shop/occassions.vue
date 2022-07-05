@@ -3,7 +3,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-occassion"><input type="button" class="btn btn-warning" value="Add New Occassion"></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-occassion"><input type="submit" class="btn btn-warning" value="Add New Occassion"></a>
         
 </div>
 </nav>

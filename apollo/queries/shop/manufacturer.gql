@@ -1,12 +1,14 @@
 query MyQuery {
-  allManufacturerList {
+  allManufacturersList {
+    state
     product
+    nodeId
     name
     media
     isPublic
     id
     description
-    created_at
+    createdAt
     country
     code
     city

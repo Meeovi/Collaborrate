@@ -7,7 +7,7 @@
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <input type="button" class="btn btn-warning" value="Save Target" @click="addTarget" /></a>
+            <input type="submit" class="btn btn-warning" value="Save Target" @click="addTarget" /></a>
         </div>
       </nav>
       <br>

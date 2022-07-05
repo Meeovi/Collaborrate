@@ -6,7 +6,7 @@
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <input type="button" class="btn btn-warning" value="Save Deep Dive" @click="addDeepdive" /></a>
+            <input type="submit" class="btn btn-warning" value="Save Deep Dive" @click="addDeepdive" /></a>
         </div>
       </nav>
       <br>

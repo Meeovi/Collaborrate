@@ -5,10 +5,10 @@ query MyQuery {
     categories
     content
     contract
-    cost_string
+    costString
     country
-    created_at
-    customer_type
+    createdAt
+    customerType
     family
     file
     format
@@ -16,26 +16,27 @@ query MyQuery {
     id
     image
     manufacture
-    manufacturer_part_number
-    occassions
+    manufacturerPartNumber
+    metaDescription
+    metaKeywords
+    metaTitle
+    metaUrl
     name
-    meta_url
-    meta_title
-    meta_keywords
-    meta_description
-    part_number
+    nodeId
+    occassions
+    partNumber
     price
     product
-    quantity_per_source
-    related_product
-    salable_quantity
-    short_description
+    quantityPerSource
+    relatedProduct
+    salableQuantity
+    shortDescription
     size
     sku
     status
-    stock_status
+    stockStatus
     tags
-    tax_class
+    taxClass
     thumbnail
     types
     variants

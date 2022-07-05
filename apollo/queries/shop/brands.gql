@@ -1,19 +1,16 @@
-query MyQuery{
-  allBrandsList{
+query MyQuery {
+  allBrandsList {
     city
     code
     country
-    created_at
+    createdAt
     description
     id
     isPublic
     media
     name
+    nodeId
     product
     state
-    productByProduct {
-      id
-      name
-    }
   }
 }

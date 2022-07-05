@@ -1,13 +1,14 @@
 query MyQuery {
   allPartnersList {
+    state
+    nodeId
+    name
+    isPublic
     id
-    created_at
+    createdAt
     country
     city
-    business_type
+    businessType
     address
-    isPublic
-    name
-    state
   }
 }

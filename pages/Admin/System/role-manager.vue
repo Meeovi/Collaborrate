@@ -3,7 +3,7 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/admin/add-new/add-new-permission">
-          <input type="button" class="btn btn-warning" value="Create New Permission" />
+          <input type="submit" class="btn btn-warning" value="Create New Permission" />
         </a>
 
       </div>

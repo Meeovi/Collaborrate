@@ -12,9 +12,9 @@ query MyQuery {
     name
     nodeId
     product
-    status
-    thumbnail
-    visibility
     websites
+    visibility
+    thumbnail
+    status
   }
 }

@@ -6,7 +6,7 @@
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <input type="button" class="btn btn-warning" value="Save Shipment" @click="addShipment" /></a>
+            <input type="submit" class="btn btn-warning" value="Save Shipment" @click="addShipment" /></a>
         </div>
       </nav>
       <br>

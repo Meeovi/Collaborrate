@@ -1,17 +1,18 @@
 query MyQuery {
-  allWarehouseList {
+  allWarehousesList {
+    status
+    state
+    products
+    postal
+    nodeId
+    name
+    isPublic
+    image
     id
     description
-    created_at
+    createdAt
     country
     city
     category
-    image
-    name
-    postal
-    products
-    isPublic
-    state
-    status
   }
 }

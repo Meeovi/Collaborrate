@@ -1,16 +1,18 @@
 query MyQuery {
   allCouponsList {
-    id
+    articles
+    categories
+    customers
+    discount
+    excerpt
+    expiration
     image
+    id
+    prodId
     name
+    nodeId
     products
     published
     users
-    expiration
-    excerpt
-    discount
-    customers
-    categories
-    articles
   }
 }

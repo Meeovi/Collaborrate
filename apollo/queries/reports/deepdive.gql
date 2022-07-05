@@ -1,12 +1,13 @@
 query MyQuery {
-  allDeepdiveList {
-    id
-    end_date
-    content
-    created_at
+  allDeepdivesList {
     attendees
+    content
+    createdAt
+    endDate
+    id
     login
-    start_date
+    nodeId
+    startDate
     whid
   }
 }

@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand"><input type="button" class="btn btn-warning">Save Settings"></a>
+        <a class="navbar-brand"><input type="submit" class="btn btn-warning">Save Settings"></a>
         
       </div>
     </nav>

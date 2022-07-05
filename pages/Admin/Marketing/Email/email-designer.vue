@@ -2,8 +2,8 @@
   <div id="app">
     <div>
       <div id="bar">
-        <input type="button" class="btn btn-warning" style="display: inline-block;" @click="saveDesign">Save Design</button>
-        <input type="button" class="btn btn-warning" style="display: inline-block;" @click="exportHtml">Export HTML</button>
+        <input type="submit" class="btn btn-warning" style="display: inline-block;" @click="saveDesign">Save Design</button>
+        <input type="submit" class="btn btn-warning" style="display: inline-block;" @click="exportHtml">Export HTML</button>
       </div>
 
     </div>

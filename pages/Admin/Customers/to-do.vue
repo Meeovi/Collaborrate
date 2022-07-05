@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-task"><input type="button" class="btn btn-warning" value="Add A To Do List"></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-task"><input type="submit" class="btn btn-warning" value="Add A To Do List"></a>
       </div>
     </nav>
     <br>

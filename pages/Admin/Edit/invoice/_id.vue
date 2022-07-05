@@ -8,7 +8,7 @@
                         <th>
                         </th>
                         <th scope="col" class="eventAddOptions">
-                            <li style="display:inline-block;"><input type="button" class="btn btn-warning" @click="addInvoice" value="Save" /></li>
+                            <li style="display:inline-block;"><input type="submit" class="btn btn-warning" @click="addInvoice" value="Save" /></li>
                         </th>
                     </tr>
                 </thead>

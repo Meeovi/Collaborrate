@@ -1,11 +1,12 @@
 query MyQuery {
   allCitiesList {
-    id
-    name
-    state
-    description
     country
-    postalCode
+    description
+    id
     image
+    name
+    nodeId
+    postalCode
+    state
   }
 }

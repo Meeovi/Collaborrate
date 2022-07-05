@@ -6,7 +6,7 @@
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <input type="button" class="btn btn-warning" value="Save Product" @click="addProduct" /></a>
+            <input type="submit" class="btn btn-warning" value="Save Product" @click="addProduct" /></a>
         </div>
       </nav>
       <br>
@@ -30,7 +30,7 @@
                       <td>
                         <label for="type">Product Types</label><br>
                         <select id="productType" v-model="types" name="template" class="form-attribute">
-                          <option v-for="types in allProduct_typesList" :key="types" :value="product_types">{{ types.name }}
+                          <option v-for="types in allProductTypesList" :key="types" :value="product_types">{{ types.name }}
                           </option>
                         </select>
                       </td>
@@ -39,7 +39,7 @@
                       <td>
                         <label for="attributes">Attributes</label><br>
                         <select id="productAttribute" v-model="attributes" name="template" class="form-attribute">
-                          <option v-for="attributes in allProduct_attributeList" :key="attributes" :value="product_attribute">
+                          <option v-for="attributes in allProductAttributesList" :key="attributes" :value="product_attribute">
                             {{ attributes.name }}</option>
                         </select>
                       </td>
@@ -107,7 +107,7 @@
                       <td>
                         <label for="manufacture">manufacturer</label><br>
                         <select id="category" v-model="manufacture" name="template" class="form-category">
-                          <option v-for="manufacture in allManufacturerList" :key="manufacture" :value="manufacture">
+                          <option v-for="manufacture in allManufacturersList" :key="manufacture" :value="manufacture">
                             {{ manufacture.name }}</option>
                         </select>
                       </td>
@@ -311,11 +311,11 @@
     </form>
     <div class="product-footer">
       <li><a href="/admin/add-new/add-new-category" target="_blank">
-          <input type="button" class="btn btn-warning" value="Add New Category" /></a></li>
+          <input type="submit" class="btn btn-warning" value="Add New Category" /></a></li>
       <li><a href="/admin/add-new/add-new-attribute" target="_blank">
-          <input type="button" class="btn btn-warning" value="Add New Product Attribute" /></a></li>
+          <input type="submit" class="btn btn-warning" value="Add New Product Attribute" /></a></li>
       <li><a href="/admin/add-new/add-new-producttype" target="_blank">
-          <input type="button" class="btn btn-warning" value="Add New Product Type" /></a></li>
+          <input type="submit" class="btn btn-warning" value="Add New Product Type" /></a></li>
     </div>
   </div>
 </template>
@@ -323,17 +323,17 @@
 <script>
   import gql from "graphql-tag";
 
-  import products from "~/apollo/queries/shop/products";
-  import categories from "~/apollo/queries/shop/categories"
-  import countries from "~/apollo/queries/shop/countries"
-  import product_attribute from "~/apollo/queries/shop/attributes"
-  import product_types from "~/apollo/queries/shop/product-type"
-  import brands from "~/apollo/queries/shop/brands"
-  import contracts from "~/apollo/queries/marketing/contracts"
-  import occassions from "~/apollo/queries/shop/occassions"
-  import manufacturer from "~/apollo/queries/shop/manufacturer"
-  import tags from "~/apollo/queries/content/tags"
-  import zones from "~/apollo/queries/system/zones"
+  import allProductsList from "~/apollo/queries/shop/products"
+  import allCategoriesList from "~/apollo/queries/shop/categories"
+  import allCountriesList from "~/apollo/queries/shop/countries"
+  import allProductAttributesList from "~/apollo/queries/shop/attributes"
+  import allProductTypesList from "~/apollo/queries/shop/product-type"
+  import allBrandsList from "~/apollo/queries/shop/brands"
+  import allContractsList from "~/apollo/queries/marketing/contracts"
+  import allOccassionsList from "~/apollo/queries/shop/occassions"
+  import allManufacturersList from "~/apollo/queries/shop/manufacturer"
+  import allTagsList from "~/apollo/queries/content/tags"
+  import allZonesList from "~/apollo/queries/system/zones"
 
   const ADD_PRODUCTS = gql `
     mutation ($attributes: String!, $brand: String!, $categories: String!, $content: String!, $contract: String!, $cost_string: String!, $country: String!, $created_at: String!, $customer_type: String!, $family: String!, $file: String!, $format: String!, $height: String!, $id: String!, $image: String!, $manufacture: String!, $manufacturer_part_number: String!, $occassions: String!, $name: String!, $meta_url: String!, $meta_title: String!, $meta_keywords: String!, $meta_description: String!, $part_number: String!, $price: String!, $product: String!, $quantity_per_source: String!, $related_product: String!, $salable_quantity: String!, $short_description: String!, $size: String!, $sku: String!, $status: String!, $stock_status: String!, $tags: String!, $tax_class: String!, $thumbnail: String!, $types: String!, $variants: String!, $visibility: String!, $websites: String!, $weight: String!, $zone: String!){
@@ -536,7 +536,6 @@
             websites,
             weight,
             zone,
-
           },
           update: (cache, {
             data: {
@@ -570,7 +569,7 @@
                 insertedBrands, insertedOccassions, insertedZones, insertedTags, insertedmanufacturer,
                 insertedProducts, insertedContracts)
               cache.writeQuery({
-                query: products
+                query: allProductsList
               })
             } catch (err) {
               console.error(err)
@@ -627,49 +626,49 @@
       },
     },
     apollo: {
-      categories: {
+      allCategoriesList: {
         prefetch: true,
-        query: categories
+        query: allCategoriesList
       },
-      countries: {
+      allCountriesList: {
         prefetch: true,
-        query: countries
+        query: allCountriesList
       },
-      product_attribute: {
+      allProductAttributesList: {
         prefetch: true,
-        query: product_attribute
+        query: allProductAttributesList
       },
-      product_types: {
+      allProductTypesList: {
         prefetch: true,
-        query: product_types
+        query: allProductTypesList
       },
-      brands: {
+      allBrandsList: {
         prefetch: true,
-        query: brands
+        query: allBrandsList
       },
-      contracts: {
+      allContractsList: {
         prefetch: true,
-        query: contracts
+        query: allContractsList
       },
-      manufacturer: {
+      allManufacturersList: {
         prefetch: true,
-        query: manufacturer
+        query: allManufacturersList
       },
-      occassions: {
+      allOccassionsList: {
         prefetch: true,
-        query: occassions
+        query: allOccassionsList
       },
-      tags: {
+      allTagsList: {
         prefetch: true,
-        query: tags
+        query: allTagsList
       },
-      zones: {
+      allZonesList: {
         prefetch: true,
-        query: zones
+        query: allZonesList
       },
-      products: {
+      allProductsList: {
         prefetch: true,
-        query: products
+        query: allProductsList
       }
     }
   }

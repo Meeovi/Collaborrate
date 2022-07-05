@@ -13,6 +13,68 @@ directive @key(fields: _FieldSet!) on OBJECT | INTERFACE
 
 """The root query type which gives access points into the data universe."""
 type Query {
+  """Reads and enables pagination through a set of `Endofshift`."""
+  allEndofshifts(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Endofshift`."""
+    orderBy: [EndofshiftsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: EndofshiftCondition
+  ): EndofshiftsConnection
+  """Reads a set of `Endofshift`."""
+  allEndofshiftsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Endofshift`."""
+    orderBy: [EndofshiftsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: EndofshiftCondition
+  ): [Endofshift!]
+  """Reads and enables pagination through a set of `Scheduler`."""
+  allSchedulers(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Scheduler`."""
+    orderBy: [SchedulersOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: SchedulerCondition
+  ): SchedulersConnection
+  """Reads a set of `Scheduler`."""
+  allSchedulersList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Scheduler`."""
+    orderBy: [SchedulersOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: SchedulerCondition
+  ): [Scheduler!]
   """Reads and enables pagination through a set of `_Audience`."""
   allAudiences(
     """Only read the first `n` values of the set."""
@@ -1346,6 +1408,37 @@ type Query {
     """A condition to be used in determining which values should be returned by the collection."""
     condition: DashboardCondition
   ): [Dashboard!]
+  """Reads and enables pagination through a set of `Deepdive`."""
+  allDeepdives(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Deepdive`."""
+    orderBy: [DeepdivesOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: DeepdiveCondition
+  ): DeepdivesConnection
+  """Reads a set of `Deepdive`."""
+  allDeepdivesList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Deepdive`."""
+    orderBy: [DeepdivesOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: DeepdiveCondition
+  ): [Deepdive!]
   """Reads and enables pagination through a set of `EmailTemplate`."""
   allEmailTemplates(
     """Only read the first `n` values of the set."""
@@ -3764,6 +3857,8 @@ type Query {
     """A condition to be used in determining which values should be returned by the collection."""
     condition: ZoneCondition
   ): [Zone!]
+  endofshiftById(id: BigInt!): Endofshift
+  schedulerById(id: BigInt!): Scheduler
   _audienceByObjectId(objectId: String!): _Audience
   _globalConfigByObjectId(objectId: String!): _GlobalConfig
   _graphQlConfigByObjectId(objectId: String!): _GraphQlConfig
@@ -3806,6 +3901,7 @@ type Query {
   customerById(id: Int!): Customer
   customizationById(id: Int!): Customization
   dashboardById(id: BigInt!): Dashboard
+  deepdiveById(id: BigInt!): Deepdive
   emailTemplateById(id: BigInt!): EmailTemplate
   emailById(id: Int!): Email
   eventById(id: BigInt!): Event
@@ -3893,6 +3989,16 @@ type Query {
   arrayContainsAllRegex(array: JSON!, values: JSON!): Boolean
   arrayRemove(array: JSON!, values: JSON!): JSON
   jsonObjectSetKey(json: JSON!, keyToSet: String!, valueToSet: String!): JSON
+  """Reads a single `Endofshift` using its globally unique `ID`."""
+  endofshift(
+    """The globally unique `ID` to be used in selecting a single `Endofshift`."""
+    nodeId: ID!
+  ): Endofshift
+  """Reads a single `Scheduler` using its globally unique `ID`."""
+  scheduler(
+    """The globally unique `ID` to be used in selecting a single `Scheduler`."""
+    nodeId: ID!
+  ): Scheduler
   """Reads a single `_Audience` using its globally unique `ID`."""
   _audience(
     """The globally unique `ID` to be used in selecting a single `_Audience`."""
@@ -4103,6 +4209,11 @@ type Query {
     """The globally unique `ID` to be used in selecting a single `Dashboard`."""
     nodeId: ID!
   ): Dashboard
+  """Reads a single `Deepdive` using its globally unique `ID`."""
+  deepdive(
+    """The globally unique `ID` to be used in selecting a single `Deepdive`."""
+    nodeId: ID!
+  ): Deepdive
   """Reads a single `EmailTemplate` using its globally unique `ID`."""
   emailTemplate(
     """The globally unique `ID` to be used in selecting a single `EmailTemplate`."""
@@ -4515,6 +4626,203 @@ type Query {
   _service: _Service! @deprecated(reason: "Only Apollo Federation should use this")
 }
 
+"""A connection to a list of `Endofshift` values."""
+type EndofshiftsConnection {
+  """A list of `Endofshift` objects."""
+  nodes: [Endofshift]!
+  """A list of edges which contains the `Endofshift` and cursor to aid in pagination."""
+  edges: [EndofshiftsEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Endofshift` you could get from the connection."""
+  totalCount: Int!
+}
+
+type Endofshift implements Node @key(fields: "nodeId") {
+  """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
+  nodeId: ID!
+  id: BigInt!
+  createdAt: Datetime
+  content: String
+  login: String
+  mcms: String
+  nextShift: String
+  projects: String
+  tickets: String
+  whid: String
+}
+
+"""An object with a globally unique `ID`."""
+interface Node {
+  """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
+  nodeId: ID!
+}
+
+"""
+A signed eight-byte integer. The upper big integer values are greater than the
+max value for a JavaScript number. Therefore all big integers will be output as
+strings and not numbers.
+"""
+scalar BigInt
+
+"""
+A point in time as described by the [ISO
+8601](https://en.wikipedia.org/wiki/ISO_8601) standard. May or may not include a timezone.
+"""
+scalar Datetime
+
+"""A `Endofshift` edge in the connection."""
+type EndofshiftsEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Endofshift` at the end of the edge."""
+  node: Endofshift
+}
+
+"""A location in a connection that can be used for resuming pagination."""
+scalar Cursor
+
+"""Information about pagination in a connection."""
+type PageInfo {
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+  """When paginating backwards, the cursor to continue."""
+  startCursor: Cursor
+  """When paginating forwards, the cursor to continue."""
+  endCursor: Cursor
+}
+
+"""Methods to use when ordering `Endofshift`."""
+enum EndofshiftsOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  CONTENT_ASC
+  CONTENT_DESC
+  LOGIN_ASC
+  LOGIN_DESC
+  MCMS_ASC
+  MCMS_DESC
+  NEXT_SHIFT_ASC
+  NEXT_SHIFT_DESC
+  PROJECTS_ASC
+  PROJECTS_DESC
+  TICKETS_ASC
+  TICKETS_DESC
+  WHID_ASC
+  WHID_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""
+A condition to be used against `Endofshift` object types. All fields are tested
+for equality and combined with a logical ‘and.’
+"""
+input EndofshiftCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: BigInt
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+  """Checks for equality with the object’s `content` field."""
+  content: String
+  """Checks for equality with the object’s `login` field."""
+  login: String
+  """Checks for equality with the object’s `mcms` field."""
+  mcms: String
+  """Checks for equality with the object’s `nextShift` field."""
+  nextShift: String
+  """Checks for equality with the object’s `projects` field."""
+  projects: String
+  """Checks for equality with the object’s `tickets` field."""
+  tickets: String
+  """Checks for equality with the object’s `whid` field."""
+  whid: String
+}
+
+"""A connection to a list of `Scheduler` values."""
+type SchedulersConnection {
+  """A list of `Scheduler` objects."""
+  nodes: [Scheduler]!
+  """A list of edges which contains the `Scheduler` and cursor to aid in pagination."""
+  edges: [SchedulersEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Scheduler` you could get from the connection."""
+  totalCount: Int!
+}
+
+type Scheduler implements Node @key(fields: "nodeId") {
+  """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
+  nodeId: ID!
+  id: BigInt!
+  createdAt: Datetime
+  endDate: String
+  level: String
+  login: String
+  notes: String
+  startDate: String
+  whid: String
+}
+
+"""A `Scheduler` edge in the connection."""
+type SchedulersEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Scheduler` at the end of the edge."""
+  node: Scheduler
+}
+
+"""Methods to use when ordering `Scheduler`."""
+enum SchedulersOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  END_DATE_ASC
+  END_DATE_DESC
+  LEVEL_ASC
+  LEVEL_DESC
+  LOGIN_ASC
+  LOGIN_DESC
+  NOTES_ASC
+  NOTES_DESC
+  START_DATE_ASC
+  START_DATE_DESC
+  WHID_ASC
+  WHID_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""
+A condition to be used against `Scheduler` object types. All fields are tested
+for equality and combined with a logical ‘and.’
+"""
+input SchedulerCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: BigInt
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+  """Checks for equality with the object’s `endDate` field."""
+  endDate: String
+  """Checks for equality with the object’s `level` field."""
+  level: String
+  """Checks for equality with the object’s `login` field."""
+  login: String
+  """Checks for equality with the object’s `notes` field."""
+  notes: String
+  """Checks for equality with the object’s `startDate` field."""
+  startDate: String
+  """Checks for equality with the object’s `whid` field."""
+  whid: String
+}
+
 """A connection to a list of `_Audience` values."""
 type _AudiencesConnection {
   """A list of `_Audience` objects."""
@@ -4541,39 +4849,12 @@ type _Audience implements Node @key(fields: "nodeId") {
   _wperm: [String]
 }
 
-"""An object with a globally unique `ID`."""
-interface Node {
-  """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
-  nodeId: ID!
-}
-
-"""
-A point in time as described by the [ISO
-8601](https://en.wikipedia.org/wiki/ISO_8601) standard. May or may not include a timezone.
-"""
-scalar Datetime
-
 """A `_Audience` edge in the connection."""
 type _AudiencesEdge {
   """A cursor for use in pagination."""
   cursor: Cursor
   """The `_Audience` at the end of the edge."""
   node: _Audience
-}
-
-"""A location in a connection that can be used for resuming pagination."""
-scalar Cursor
-
-"""Information about pagination in a connection."""
-type PageInfo {
-  """When paginating forwards, are there more items?"""
-  hasNextPage: Boolean!
-  """When paginating backwards, are there more items?"""
-  hasPreviousPage: Boolean!
-  """When paginating backwards, the cursor to continue."""
-  startCursor: Cursor
-  """When paginating forwards, the cursor to continue."""
-  endCursor: Cursor
 }
 
 """Methods to use when ordering `_Audience`."""
@@ -7785,13 +8066,6 @@ type Mediamanager implements Node @key(fields: "nodeId") {
   """Reads a single `Product` that is related to this `Mediamanager`."""
   productByProducts: Product
 }
-
-"""
-A signed eight-byte integer. The upper big integer values are greater than the
-max value for a JavaScript number. Therefore all big integers will be output as
-strings and not numbers.
-"""
-scalar BigInt
 
 type Brand implements Node @key(fields: "nodeId") {
   """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
@@ -25359,6 +25633,85 @@ input DashboardCondition {
   sales: String
 }
 
+"""A connection to a list of `Deepdive` values."""
+type DeepdivesConnection {
+  """A list of `Deepdive` objects."""
+  nodes: [Deepdive]!
+  """A list of edges which contains the `Deepdive` and cursor to aid in pagination."""
+  edges: [DeepdivesEdge!]!
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """The count of *all* `Deepdive` you could get from the connection."""
+  totalCount: Int!
+}
+
+type Deepdive implements Node @key(fields: "nodeId") {
+  """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
+  nodeId: ID!
+  id: BigInt!
+  createdAt: Datetime
+  endDate: String
+  content: String
+  attendees: String
+  login: String
+  startDate: String
+  whid: String
+}
+
+"""A `Deepdive` edge in the connection."""
+type DeepdivesEdge {
+  """A cursor for use in pagination."""
+  cursor: Cursor
+  """The `Deepdive` at the end of the edge."""
+  node: Deepdive
+}
+
+"""Methods to use when ordering `Deepdive`."""
+enum DeepdivesOrderBy {
+  NATURAL
+  ID_ASC
+  ID_DESC
+  CREATED_AT_ASC
+  CREATED_AT_DESC
+  END_DATE_ASC
+  END_DATE_DESC
+  CONTENT_ASC
+  CONTENT_DESC
+  ATTENDEES_ASC
+  ATTENDEES_DESC
+  LOGIN_ASC
+  LOGIN_DESC
+  START_DATE_ASC
+  START_DATE_DESC
+  WHID_ASC
+  WHID_DESC
+  PRIMARY_KEY_ASC
+  PRIMARY_KEY_DESC
+}
+
+"""
+A condition to be used against `Deepdive` object types. All fields are tested
+for equality and combined with a logical ‘and.’
+"""
+input DeepdiveCondition {
+  """Checks for equality with the object’s `id` field."""
+  id: BigInt
+  """Checks for equality with the object’s `createdAt` field."""
+  createdAt: Datetime
+  """Checks for equality with the object’s `endDate` field."""
+  endDate: String
+  """Checks for equality with the object’s `content` field."""
+  content: String
+  """Checks for equality with the object’s `attendees` field."""
+  attendees: String
+  """Checks for equality with the object’s `login` field."""
+  login: String
+  """Checks for equality with the object’s `startDate` field."""
+  startDate: String
+  """Checks for equality with the object’s `whid` field."""
+  whid: String
+}
+
 """A connection to a list of `EmailTemplate` values."""
 type EmailTemplatesConnection {
   """A list of `EmailTemplate` objects."""
@@ -30594,7 +30947,7 @@ type _User implements Node @key(fields: "nodeId") {
 }
 
 """A union of all federated types (those that use the @key directive)."""
-union _Entity = _Audience | _GlobalConfig | _GraphQlConfig | _Idempotency | _JobSchedule | _JobStatus | _JoinRolesRole | _JoinUsersRole | _PushStatus | Role | _Schema | User | Email | Customer | Comment | Mediamanager | Brand | Product | Coupon | CreditMemo | Order | Quote | Transaction | CustomerPayment | ProductAttribute | ProductAttributeSet | Rating | TaxRate | TaxRule | Return | ProductType | Occassion | Wishlist | Manufacturer | Workspace | Task | Project | Ticketing | Shop | Category | Agreement | Training | Country | State | Checklist | NewsletterSubscriber | CustomerGroup | Message | _PrismaMigration | Account | Analytic | Apitoken | Article | CartPriceRule | Case | CatalogPriceRule | Channel | City | Collection | ContentType | Contract | CoreStore | Currency | CurrencyRate | CurrencySymbol | Customization | Dashboard | EmailTemplate | Event | Fullfillment | GeneralSetting | GiftCertificate | Glossary | Importm | Integration | Internalization | Invitation | Invoice | Knowledgebase | Lead | Meeting | Ooto | Opportunity | Page | Partner | Payment | PdfTemplate | Permission | Plugin | Poll | ProjectTemplate | Provider | Report | Review | Reward | Segment | Settingscustomer | Settingsgeneral | Settingshop | Settingsmarketing | Settingssale | Shipment | ShopSetting | Source | SpecialDiscount | Statistic | Stock | Survey | Tag | Target | TaxCategory | Theme | Website | UploadFile | UploadFileMorph | UrlRewrite | Visit | Warehouse | Webhook | Zone | _Role | _User
+union _Entity = Endofshift | Scheduler | _Audience | _GlobalConfig | _GraphQlConfig | _Idempotency | _JobSchedule | _JobStatus | _JoinRolesRole | _JoinUsersRole | _PushStatus | Role | _Schema | User | Email | Customer | Comment | Mediamanager | Brand | Product | Coupon | CreditMemo | Order | Quote | Transaction | CustomerPayment | ProductAttribute | ProductAttributeSet | Rating | TaxRate | TaxRule | Return | ProductType | Occassion | Wishlist | Manufacturer | Workspace | Task | Project | Ticketing | Shop | Category | Agreement | Training | Country | State | Checklist | NewsletterSubscriber | CustomerGroup | Message | _PrismaMigration | Account | Analytic | Apitoken | Article | CartPriceRule | Case | CatalogPriceRule | Channel | City | Collection | ContentType | Contract | CoreStore | Currency | CurrencyRate | CurrencySymbol | Customization | Dashboard | Deepdive | EmailTemplate | Event | Fullfillment | GeneralSetting | GiftCertificate | Glossary | Importm | Integration | Internalization | Invitation | Invoice | Knowledgebase | Lead | Meeting | Ooto | Opportunity | Page | Partner | Payment | PdfTemplate | Permission | Plugin | Poll | ProjectTemplate | Provider | Report | Review | Reward | Segment | Settingscustomer | Settingsgeneral | Settingshop | Settingsmarketing | Settingssale | Shipment | ShopSetting | Source | SpecialDiscount | Statistic | Stock | Survey | Tag | Target | TaxCategory | Theme | Website | UploadFile | UploadFileMorph | UrlRewrite | Visit | Warehouse | Webhook | Zone | _Role | _User
 
 scalar _Any
 
@@ -30631,6 +30984,68 @@ server-side event occurs. This makes them a lot more efficient than Live
 Queries, but it is still recommended that you keep payloads fairly small.
 """
 type Subscription {
+  """Reads and enables pagination through a set of `Endofshift`. (live)"""
+  allEndofshifts(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Endofshift`."""
+    orderBy: [EndofshiftsOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: EndofshiftCondition
+  ): EndofshiftsConnection
+  """Reads a set of `Endofshift`. (live)"""
+  allEndofshiftsList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Endofshift`."""
+    orderBy: [EndofshiftsOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: EndofshiftCondition
+  ): [Endofshift!]
+  """Reads and enables pagination through a set of `Scheduler`. (live)"""
+  allSchedulers(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Scheduler`."""
+    orderBy: [SchedulersOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: SchedulerCondition
+  ): SchedulersConnection
+  """Reads a set of `Scheduler`. (live)"""
+  allSchedulersList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Scheduler`."""
+    orderBy: [SchedulersOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: SchedulerCondition
+  ): [Scheduler!]
   """Reads and enables pagination through a set of `_Audience`. (live)"""
   allAudiences(
     """Only read the first `n` values of the set."""
@@ -31964,6 +32379,37 @@ type Subscription {
     """A condition to be used in determining which values should be returned by the collection."""
     condition: DashboardCondition
   ): [Dashboard!]
+  """Reads and enables pagination through a set of `Deepdive`. (live)"""
+  allDeepdives(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Only read the last `n` values of the set."""
+    last: Int
+    """
+    Skip the first `n` values from our `after` cursor, an alternative to cursor
+    based pagination. May not be used with `last`.
+    """
+    offset: Int
+    """Read all values in the set before (above) this cursor."""
+    before: Cursor
+    """Read all values in the set after (below) this cursor."""
+    after: Cursor
+    """The method to use when ordering `Deepdive`."""
+    orderBy: [DeepdivesOrderBy!] = [PRIMARY_KEY_ASC]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: DeepdiveCondition
+  ): DeepdivesConnection
+  """Reads a set of `Deepdive`. (live)"""
+  allDeepdivesList(
+    """Only read the first `n` values of the set."""
+    first: Int
+    """Skip the first `n` values."""
+    offset: Int
+    """The method to use when ordering `Deepdive`."""
+    orderBy: [DeepdivesOrderBy!]
+    """A condition to be used in determining which values should be returned by the collection."""
+    condition: DeepdiveCondition
+  ): [Deepdive!]
   """Reads and enables pagination through a set of `EmailTemplate`. (live)"""
   allEmailTemplates(
     """Only read the first `n` values of the set."""
@@ -34383,6 +34829,10 @@ type Subscription {
     condition: ZoneCondition
   ): [Zone!]
   """ (live)"""
+  endofshiftById(id: BigInt!): Endofshift
+  """ (live)"""
+  schedulerById(id: BigInt!): Scheduler
+  """ (live)"""
   _audienceByObjectId(objectId: String!): _Audience
   """ (live)"""
   _globalConfigByObjectId(objectId: String!): _GlobalConfig
@@ -34466,6 +34916,8 @@ type Subscription {
   customizationById(id: Int!): Customization
   """ (live)"""
   dashboardById(id: BigInt!): Dashboard
+  """ (live)"""
+  deepdiveById(id: BigInt!): Deepdive
   """ (live)"""
   emailTemplateById(id: BigInt!): EmailTemplate
   """ (live)"""
@@ -34640,6 +35092,16 @@ type Subscription {
   arrayRemove(array: JSON!, values: JSON!): JSON
   """ (live)"""
   jsonObjectSetKey(json: JSON!, keyToSet: String!, valueToSet: String!): JSON
+  """Reads a single `Endofshift` using its globally unique `ID`. (live)"""
+  endofshift(
+    """The globally unique `ID` to be used in selecting a single `Endofshift`."""
+    nodeId: ID!
+  ): Endofshift
+  """Reads a single `Scheduler` using its globally unique `ID`. (live)"""
+  scheduler(
+    """The globally unique `ID` to be used in selecting a single `Scheduler`."""
+    nodeId: ID!
+  ): Scheduler
   """Reads a single `_Audience` using its globally unique `ID`. (live)"""
   _audience(
     """The globally unique `ID` to be used in selecting a single `_Audience`."""
@@ -34850,6 +35312,11 @@ type Subscription {
     """The globally unique `ID` to be used in selecting a single `Dashboard`."""
     nodeId: ID!
   ): Dashboard
+  """Reads a single `Deepdive` using its globally unique `ID`. (live)"""
+  deepdive(
+    """The globally unique `ID` to be used in selecting a single `Deepdive`."""
+    nodeId: ID!
+  ): Deepdive
   """Reads a single `EmailTemplate` using its globally unique `ID`. (live)"""
   emailTemplate(
     """The globally unique `ID` to be used in selecting a single `EmailTemplate`."""

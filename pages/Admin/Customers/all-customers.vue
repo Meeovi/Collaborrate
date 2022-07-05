@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/customers/customer/newcustomer"><input type="button" class="btn btn-warning" value="Add New Customer"></a>
+        <a class="navbar-brand" href="/admin/customers/customer/newcustomer"><input type="submit" class="btn btn-warning" value="Add New Customer"></a>
         
       </div>
     </nav>

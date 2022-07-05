@@ -1,20 +1,27 @@
 query MyQuery {
-  allProduct_attributeList {
-    allOw_html_tags_storefront
-    attribute_class
-    attribute_code
-    attribute_value
-    column_options
-    faceted_navigation
-    filter_options
+  allProductAttributesList {
+    allowHtmlTagsStorefront
+    attributeClass
+    attributeCode
+    attributeValue
+    columnOptions
+    defaultLabel
+    facetedNavigation
+    filterOptions
     id
     isPublic
-    layered_navigation
-    meta_description
-    meta_name
-    meta_url
+    layeredNavigation
+    metaDescription
+    metaName
+    metaUrl
+    nodeId
     position
-    prod_id
-    default_label
+    prodId
+    promoRuleConditions
+    searchResultsLayeredNavigation
+    useSearch
+    usedProductListing
+    usedSortingProductListing
+    visibleCatalogPagesStorefront
   }
 }

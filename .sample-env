@@ -2,7 +2,7 @@
 
 # Postgresql Database URL
 
-DATABASE_URL=""
+DATABASE_URL='postgresql://{env.DB_USER}:{env.DB_PASSWORD}@{env.DB_HOST}:{env.DB_PORT}/{env.DB_DATABASE}'
 
 # Supabase URL and Credentials (Supabase is not required, but recommended)
 

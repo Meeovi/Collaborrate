@@ -5,7 +5,7 @@
         <tr>
           <td>Apple</td>
           <td>{{ article.name }}</td>
-          <td><input type="button" class="btn btn-primary fas fa-pencil" data-mdb-toggle="modal"
+          <td><input type="submit" class="btn btn-primary fas fa-pencil" data-mdb-toggle="modal"
               data-mdb-target="#exampleModal"></button></td>
           <div id="exampleModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -13,7 +13,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 id="exampleModalLabel" class="modal-title">Edit Provider > Apple</h5>
-                  <input type="button" class="btn-close" data-mdb-dismiss="modal" aria-value="Close"></button>
+                  <input type="submit" class="btn-close" data-mdb-dismiss="modal" aria-value="Close"></button>
                 </div>
                 <div class="modal-body">
                   <form id="input_0" class="formkit-form" name="form_1">
@@ -64,8 +64,8 @@
                       </details>
                     </div>
                     <div class="modal-footer">
-                      <input type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Cancel</button>
-                      <input type="button" class="btn btn-primary">Save</button>
+                      <input type="submit" class="btn btn-secondary" data-mdb-dismiss="modal">Cancel</button>
+                      <input type="submit" class="btn btn-primary">Save</button>
                     </div>
                   </form>
                 </div>

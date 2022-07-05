@@ -6,8 +6,8 @@
           <a class="navbar-brand">
             <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <li><a href="/admin/add-new/add-new-tag"><input type="button" class="btn btn-warning" value="Add New Tag" /></a></li>
-            <input type="button" class="btn btn-warning" value="Save Campaign" @click="addCampaign" /></a>
+            <li><a href="/admin/add-new/add-new-tag"><input type="submit" class="btn btn-warning" value="Add New Tag" /></a></li>
+            <input type="submit" class="btn btn-warning" value="Save Campaign" @click="addCampaign" /></a>
         </div>
       </nav>
       <br>

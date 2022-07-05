@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
-          <a class="navbar-brand"><input type="button" class="btn btn-warning" @click="addReview" value="Save Review" /></a>
+          <a class="navbar-brand"><input type="submit" class="btn btn-warning" @click="addReview" value="Save Review" /></a>
         </div>
       </nav>
       <br>

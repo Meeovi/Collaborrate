@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-collection"><input type="button" class="btn btn-warning" value="Create Collection"></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-collection"><input type="submit" class="btn btn-warning" value="Create Collection"></a>
         
 </div>
 </nav>

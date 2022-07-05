@@ -1,13 +1,14 @@
 query MyQuery {
-  allProduct_typesList {
-    filter_options
+  allProductTypesList {
+    filterOptions
     id
     isShippable
-    meta_description
-    meta_url
-    prod_id
-    product_type
+    metaDescription
+    metaUrl
+    nodeId
+    prodId
+    productType
     taxes
-    type_name
+    typeName
   }
 }

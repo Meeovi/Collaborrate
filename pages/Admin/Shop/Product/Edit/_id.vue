@@ -8,7 +8,7 @@
                         <th>
                         </th>
                         <th scope="col" class="productAddOptions">
-                            <li><a href="/admin/add-new/add-new-attribute"><input type="button" class="btn btn-warning" value="Add Attribute" /></a></li>
+                            <li><a href="/admin/add-new/add-new-attribute"><input type="submit" class="btn btn-warning" value="Add Attribute" /></a></li>
                             <li><input type="submit" @click="addProduct" value="Save" /></li>
                         </th>
                     </tr>

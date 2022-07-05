@@ -1,31 +1,32 @@
 query MyQuery {
   allShopsList {
-    id
-    name
-    invoices
-    image
-    gift_certificates
-    description
-    customers
-    coupons
-    comments
-    categories
     articles
+    categories
+    comments
+    country
+    coupons
+    customers
+    description
+    giftCertificates
+    id
+    image
+    invoices
+    name
+    nodeId
+    physicalStore
     polls
     products
     quotes
     rating
     reports
     reviews
-    reward_points
-    special_discounts
+    rewardPoints
+    specialDiscounts
     statistics
     stocks
     tags
-    users
     website
-    country
-    physical_store
     type
+    users
   }
 }

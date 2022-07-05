@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-checklist"><input type="button" class="btn btn-warning" value="Create A Checklist" /></a>
+        <a class="navbar-brand" href="/admin/add-new/add-new-checklist"><input type="submit" class="btn btn-warning" value="Create A Checklist" /></a>
       </div>
 </nav>
 <br>

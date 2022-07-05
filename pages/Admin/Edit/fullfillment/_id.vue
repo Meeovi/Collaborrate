@@ -9,7 +9,7 @@
               </th>
               <th scope="col" class="fullfillmentAddOptions">
                 <li><a href="/admin/add-new/add-new-warehouse">
-                    <input type="button" class="btn btn-warning" value="Add A Warehouse" /></a></li>
+                    <input type="submit" class="btn btn-warning" value="Add A Warehouse" /></a></li>
                 <li>
                   <input type="submit" value="Save" @click="addFullfillment" />
                 </li>
