@@ -9,5 +9,4 @@ sources:
           - '@graphile-contrib/pg-many-to-many'
 
 serve:
-  staticFiles: './media'
   playgroundTitle: 'AlternateCMS Graphql'

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "alternatecms",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\Users\\sehilton\\Documents\\GitHub\\alternatecms\\amplify\\backend\\api\\alternatecms\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}

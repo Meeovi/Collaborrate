@@ -32,6 +32,7 @@ export default {
     script: [
       { src: '/mdb/plugins/js/all.min.js', mode: 'client'},
       { src: '/mdb/js/mdb.min.js', mode: 'client'},
+      { src: 'https://beta.console.harmony.a2z.com/navigation/harmony-navbar.js', mode: 'client'},
     ]
   },
 
