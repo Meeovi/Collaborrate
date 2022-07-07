@@ -397,7 +397,7 @@ model products {
   family                          String?
   zone                            String?
   variants                        String?
-  products                        products?           @relation("productsToproducts_related_product", fields: [related_product], references: [id])
+  products                        products?           @relation("productsToproducts_related_product", fields: [related_product], references: [id], onDelete: NoAction, onUpdate: NoAction)
   brands                          brands[]
   coupons                         coupons[]
   credit_memos                    credit_memos[]
@@ -1076,10 +1076,10 @@ model projects {
   staff_id             Int?
   task_id              BigInt?
   ticket_id            BigInt?
-  customers            customers?   @relation(fields: [cust_id], references: [id])
-  users                users?       @relation(fields: [staff_id], references: [id])
-  tasks                tasks?       @relation(fields: [task_id], references: [id])
-  ticketing            ticketing?   @relation(fields: [ticket_id], references: [id])
+  customers            customers?   @relation(fields: [cust_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users                users?       @relation(fields: [staff_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  tasks                tasks?       @relation(fields: [task_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  ticketing            ticketing?   @relation(fields: [ticket_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
   workspaces           workspaces[]
 }
 
@@ -1639,7 +1639,7 @@ model brands {
   product      BigInt?
   description  String?
   media        String?
-  products     products?      @relation(fields: [product], references: [id])
+  products     products?      @relation(fields: [product], references: [id], onDelete: NoAction, onUpdate: NoAction)
   mediamanager mediamanager[]
   workspaces   workspaces[]
 }
@@ -1656,7 +1656,7 @@ model manufacturer {
   product     BigInt?
   description String?
   media       String?
-  products    products? @relation(fields: [product], references: [id])
+  products    products? @relation(fields: [product], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
 
 model mediamanager {
@@ -1687,13 +1687,13 @@ model mediamanager {
   task_type                           String?
   members                             Int?
   products                            BigInt?
-  agreements_agreementsTomediamanager agreements? @relation(fields: [agreements], references: [id])
-  customers                           customers?  @relation(fields: [author], references: [id])
-  brands_brandsTomediamanager         brands?     @relation(fields: [brands], references: [id])
-  comments                            comments?   @relation(fields: [comment], references: [id])
-  users                               users?      @relation(fields: [members], references: [id])
-  products_mediamanagerToproducts     products?   @relation(fields: [products], references: [id])
-  tasks                               tasks?      @relation(fields: [task_name], references: [id])
+  agreements_agreementsTomediamanager agreements? @relation(fields: [agreements], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  customers                           customers?  @relation(fields: [author], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  brands_brandsTomediamanager         brands?     @relation(fields: [brands], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  comments                            comments?   @relation(fields: [comment], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users                               users?      @relation(fields: [members], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  products_mediamanagerToproducts     products?   @relation(fields: [products], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  tasks                               tasks?      @relation(fields: [task_name], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
 
 model occassions {
@@ -1706,8 +1706,8 @@ model occassions {
   description                     String?
   products                        BigInt?
   wishlists                       BigInt?
-  products_occassionsToproducts   products?  @relation(fields: [products], references: [id])
-  wishlists_occassionsTowishlists wishlists? @relation(fields: [wishlists], references: [id])
+  products_occassionsToproducts   products?  @relation(fields: [products], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  wishlists_occassionsTowishlists wishlists? @relation(fields: [wishlists], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
 
 model workspaces {
@@ -1727,14 +1727,14 @@ model workspaces {
   projects                        BigInt?
   author                          String?
   media                           String?
-  brands_brandsToworkspaces       brands?     @relation(fields: [brands], references: [id])
-  categories                      categories? @relation(fields: [category], references: [id])
-  customers_customersToworkspaces customers?  @relation(fields: [customers], references: [id])
-  products_productsToworkspaces   products?   @relation(fields: [products], references: [id])
-  projects_projectsToworkspaces   projects?   @relation(fields: [projects], references: [id])
-  shops_shopsToworkspaces         shops?      @relation(fields: [shops], references: [id])
-  tasks_tasksToworkspaces         tasks?      @relation(fields: [tasks], references: [id])
-  users_usersToworkspaces         users?      @relation(fields: [users], references: [id])
+  brands_brandsToworkspaces       brands?     @relation(fields: [brands], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  categories                      categories? @relation(fields: [category], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  customers_customersToworkspaces customers?  @relation(fields: [customers], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  products_productsToworkspaces   products?   @relation(fields: [products], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  projects_projectsToworkspaces   projects?   @relation(fields: [projects], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  shops_shopsToworkspaces         shops?      @relation(fields: [shops], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  tasks_tasksToworkspaces         tasks?      @relation(fields: [tasks], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users_usersToworkspaces         users?      @relation(fields: [users], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
 
 model customizations {
@@ -1752,7 +1752,7 @@ model customizations {
 }
 
 model roles {
-  id         Int       @id @default(autoincrement())
+  id         Int       @id(map: "role_pkey") @default(autoincrement())
   role_name  String
   content    String?
   created_at DateTime? @default(now()) @db.Timestamptz(6)
@@ -1802,12 +1802,12 @@ model Idempotency {
   objectId  String    @id
   createdAt DateTime? @db.Timestamptz(6)
   updatedAt DateTime? @db.Timestamptz(6)
-  reqId     String?   @unique
+  reqId     String?   @unique(map: "_Idempotency_unique_reqId")
   expire    DateTime? @db.Timestamptz(6)
   rperm     String[]  @map("_rperm")
   wperm     String[]  @map("_wperm")
 
-  @@index([expire], name: "ttl")
+  @@index([expire], map: "ttl")
   @@map("_Idempotency")
 }
 
@@ -1892,7 +1892,7 @@ model Role {
   objectId  String    @id
   createdAt DateTime? @db.Timestamptz(6)
   updatedAt DateTime? @db.Timestamptz(6)
-  name      String?   @unique
+  name      String?   @unique(map: "_Role_unique_name")
   rperm     String[]  @map("_rperm")
   wperm     String[]  @map("_wperm")
 
@@ -1911,8 +1911,8 @@ model User {
   objectId                      String    @id
   createdAt                     DateTime? @db.Timestamptz(6)
   updatedAt                     DateTime? @db.Timestamptz(6)
-  username                      String?   @unique
-  email                         String?   @unique
+  username                      String?   @unique(map: "_User_unique_username")
+  email                         String?   @unique(map: "_User_unique_email")
   emailVerified                 Boolean?
   authData                      Json?
   rperm                         String[]  @map("_rperm")
@@ -1985,9 +1985,43 @@ model trainings {
   meetups                      String?
   lab                          String?
   digiboards                   String?
-  checklist                    checklist? @relation(fields: [checklists], references: [id])
-  comments                     comments?  @relation(fields: [comment], references: [id])
-  countries                    countries? @relation(fields: [country], references: [id])
-  products_productsTotrainings products?  @relation(fields: [products], references: [id])
-  states                       states?    @relation(fields: [state], references: [id])
+  checklist                    checklist? @relation(fields: [checklists], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  comments                     comments?  @relation(fields: [comment], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  countries                    countries? @relation(fields: [country], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  products_productsTotrainings products?  @relation(fields: [products], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  states                       states?    @relation(fields: [state], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model Endofshift {
+  id         BigInt    @id @default(autoincrement())
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+  content    String?
+  login      String?
+  mcms       String?
+  next_shift String?
+  projects   String?
+  tickets    String?
+  whid       String?
+}
+
+model Scheduler {
+  id         BigInt    @id @default(autoincrement())
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+  end_date   String?
+  level      String?
+  login      String?
+  notes      String?
+  start_date String?
+  whid       String?
+}
+
+model deepdive {
+  id         BigInt    @id @default(autoincrement())
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+  end_date   String?
+  content    String?
+  attendees  String?
+  login      String?
+  start_date String?
+  whid       String?
 }

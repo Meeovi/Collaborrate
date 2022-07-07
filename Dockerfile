@@ -6,8 +6,8 @@ WORKDIR /application
 
 # Set up the basics:
 
-ENV PORT 8080
-EXPOSE 8080
+ENV PORT 8000
+EXPOSE 8000
 ENV DOCKER_ENV docker
 ENV PATH /application/node_modules/.bin:$PATH
 
@@ -18,4 +18,4 @@ RUN npm install
 
 # By default, run the application with node:
 
-CMD [ "npm","run","dev" ]
+CMD [ "npm","run","all" ]
