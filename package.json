@@ -132,7 +132,7 @@
     "postgraphile": "^4.12.9",
     "prisma-docs-generator": "^0.5.0",
     "sass": "^1.32.13",
-    "sass-loader": "^10.1.1",
+    "sass-loader": "^13.0.2",
     "sqlite3": "^5.0.8",
     "stripe": "^8.184.0",
     "tedious": "^14.6.1",
