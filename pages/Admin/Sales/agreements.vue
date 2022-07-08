@@ -34,31 +34,24 @@
         </tbody>
       </table>
     </div>
-
   </div>
 </template>
 
 <script>
-// import  allAgreementsList from '~/apollo/queries/sales/agreements'
-const { PrismaClient } = require('@prisma/client')
-
-const prisma = new PrismaClient()
-
-async function main() {
-  const agreements = await prisma.agreements.findMany()
-  console.log(agreements)
-}
-
-main()
-  .catch((e) => {
-    throw e
-  })
-  .finally(async () => {
-    await prisma.$disconnect()
-  })
+import allAgreementsList from '~/apollo/queries/sales/agreements'
 
 export default {
-  
+  data() {
+    return {
+      allAgreementsList: [],
+    }
+  },
+  apollo: {
+    allAgreementsList: {
+      prefetch: true,
+      query: allAgreementsList
+    }
+  },
     head: {
       title: 'Agreements'
     }

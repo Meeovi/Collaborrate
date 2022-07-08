@@ -8,6 +8,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+generator docs {
+  provider = "node node_modules/prisma-docs-generator"
+}
+
 model articles {
   id               Int     @id @default(autoincrement())
   name             String
