@@ -177,7 +177,7 @@
     "reflect-metadata": "^0.1.13",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
-    "responsive-loader": "^2.3.0",
+    "responsive-loader": "^3.0.4",
     "sharp": "^0.29.3",
     "sqip-loader": "^1.0.0",
     "supertest": "^4.0.2",
