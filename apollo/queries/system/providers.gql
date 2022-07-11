@@ -1,14 +1,15 @@
 query MyQuery {
   allProvidersList {
+    active
+    clientId
+    clientSecret
+    createdAt
+    hostUri
+    icon
     id
     name
-    redirect_url
-    icon
-    host_uri
-    created_at
-    client_secret
-    client_id
-    active
-    redirect_url_app
+    nodeId
+    redirectUrl
+    redirectUrlApp
   }
 }

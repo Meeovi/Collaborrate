@@ -28,6 +28,7 @@ export default {
       {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'},
       {rel: 'stylesheet', href: '/mdb/plugins/css/all.min.css'},
       {rel: 'stylesheet', href: '/mdb/css/mdb.min.css' },
+      {rel: 'stylesheet', href: '/styles/styles.css' },
     ],
     script: [
       { src: '/mdb/plugins/js/all.min.js', mode: 'client'},
@@ -36,7 +37,6 @@ export default {
   },
 
   css: [
-    '~/static/styles/styles.css',
   ],
 
   script: [
@@ -56,7 +56,6 @@ export default {
 
   buildModules: [
     '@nuxtjs/moment',
-    'nuxt-webpack-optimisations',
     '@nuxtjs/composition-api/module',
   ],
 
@@ -72,7 +71,6 @@ export default {
     '@nuxt/image',
     'nuxt-client-init-module',
     'nuxtjs-darkmode-js-module',
-    '@nuxtjs/firebase',
     'nuxt-stripe-module',
     '@nuxtjs/lunr-module',
     'nuxt-highcharts',
@@ -88,29 +86,6 @@ stripe: {
 image: {
   provider: 'netlify',
   domains: ['']
-},
-
-firebase: {
-  config: {
-    apiKey: '<apiKey>',
-    authDomain: '<authDomain>',
-    projectId: '<projectId>',
-    storageBucket: '<storageBucket>',
-    messagingSenderId: '<messagingSenderId>',
-    appId: '<appId>',
-    measurementId: '<measurementId>'
-  },
-  services: {
-    auth: true,
-    firestore: true,
-    functions: true,
-    storage: true,
-    database: true,
-    messaging: true,
-    performance: true,
-    analytics: true,
-    remoteConfig: true
-  }
 },
 
 highcharts: {
@@ -158,9 +133,26 @@ netlify: {
   
   apollo: {
     clientConfigs: {
-      default: '~/apollo/clientConfig.js'
-  }
-},
+      default: '~/apollo/clientConfig.js', // default graphql connection, dont' change
+
+      alternativeClient: { // Hasura Integration, configuration goes here
+        httpEndpoint: process.env.HASURA_ENDPOINT,
+        browserHttpEndpoint: '/graphql',
+        httpLinkOptions: {
+          credentials: 'same-origin',
+          headers: {
+            'x-hasura-admin-secret': process.env.HASURA_SECRET,
+            'content-type': 'application/json'
+            }
+        },
+
+        wsEndpoint: 'ws://localhost:4000',
+        tokenName: 'apollo-token',
+        persisting: false,
+        websocketsOnly: false
+      },
+    },
+  },
 
   sentry: {
     dsn: 'https://b54ea5cfd2cc4c23b49c3d5c6fbbd351@o996770.ingest.sentry.io/6140531',

@@ -1,0 +1,12 @@
+export { AggregateShop_settingsArgs } from "./AggregateShop_settingsArgs";
+export { CreateManyShop_settingsArgs } from "./CreateManyShop_settingsArgs";
+export { CreateOneShop_settingsArgs } from "./CreateOneShop_settingsArgs";
+export { DeleteManyShop_settingsArgs } from "./DeleteManyShop_settingsArgs";
+export { DeleteOneShop_settingsArgs } from "./DeleteOneShop_settingsArgs";
+export { FindFirstShop_settingsArgs } from "./FindFirstShop_settingsArgs";
+export { FindManyShop_settingsArgs } from "./FindManyShop_settingsArgs";
+export { FindUniqueShop_settingsArgs } from "./FindUniqueShop_settingsArgs";
+export { GroupByShop_settingsArgs } from "./GroupByShop_settingsArgs";
+export { UpdateManyShop_settingsArgs } from "./UpdateManyShop_settingsArgs";
+export { UpdateOneShop_settingsArgs } from "./UpdateOneShop_settingsArgs";
+export { UpsertOneShop_settingsArgs } from "./UpsertOneShop_settingsArgs";

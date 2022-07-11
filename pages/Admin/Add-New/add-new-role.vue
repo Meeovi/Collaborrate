@@ -48,7 +48,7 @@
 <script>
 /* eslint-disable camelcase */
 import  gql from "graphql-tag";
-import roles from "~/apollo/queries/system/roles";
+import allRolesList from "~/apollo/queries/system/roles";
 
 const ADD_ROLES = gql`
     mutation ($role_name:String!,$content:String){
@@ -84,7 +84,7 @@ export default {
                             const insertedRole = insertRole.returning;
                             console.log(insertedRole)
                             cache.writeQuery({
-                                query: roles
+                                query: allRolesList
                             })
                         }
                         catch (err) {

@@ -20,7 +20,7 @@
                     <th>Action</th>
                   </tr>
                 </thead>
-                <tbody v-for="apitoken in apitoken" :key="apitoken.id">
+                <tbody v-for="apitoken in allApitokensList" :key="apitoken.id">
                   <tr>
                     <td>{{ apitoken.name }}</td>
                     <td>{{ apitoken.description }}</td>
@@ -55,18 +55,18 @@
 </template>
 
 <script>
-import apitoken from '~/apollo/queries/system/apitokens'
+import allApitokensList from '~/apollo/queries/system/apitokens'
 
 export default {
   data() {
     return {
-      apitoken: [],
+      allApitokensList: [],
     }
   },
   apollo: {
-    apitoken: {
+    allApitokensList: {
       prefetch: true,
-      query: apitoken
+      query: allApitokensList
     }
   }, 
 }

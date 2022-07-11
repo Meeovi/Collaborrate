@@ -1,0 +1,12 @@
+export { AggregateGlobalConfigArgs } from "./AggregateGlobalConfigArgs";
+export { CreateManyGlobalConfigArgs } from "./CreateManyGlobalConfigArgs";
+export { CreateOneGlobalConfigArgs } from "./CreateOneGlobalConfigArgs";
+export { DeleteManyGlobalConfigArgs } from "./DeleteManyGlobalConfigArgs";
+export { DeleteOneGlobalConfigArgs } from "./DeleteOneGlobalConfigArgs";
+export { FindFirstGlobalConfigArgs } from "./FindFirstGlobalConfigArgs";
+export { FindManyGlobalConfigArgs } from "./FindManyGlobalConfigArgs";
+export { FindUniqueGlobalConfigArgs } from "./FindUniqueGlobalConfigArgs";
+export { GroupByGlobalConfigArgs } from "./GroupByGlobalConfigArgs";
+export { UpdateManyGlobalConfigArgs } from "./UpdateManyGlobalConfigArgs";
+export { UpdateOneGlobalConfigArgs } from "./UpdateOneGlobalConfigArgs";
+export { UpsertOneGlobalConfigArgs } from "./UpsertOneGlobalConfigArgs";

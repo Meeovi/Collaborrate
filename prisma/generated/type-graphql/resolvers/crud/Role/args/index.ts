@@ -1,0 +1,12 @@
+export { AggregateRoleArgs } from "./AggregateRoleArgs";
+export { CreateManyRoleArgs } from "./CreateManyRoleArgs";
+export { CreateOneRoleArgs } from "./CreateOneRoleArgs";
+export { DeleteManyRoleArgs } from "./DeleteManyRoleArgs";
+export { DeleteOneRoleArgs } from "./DeleteOneRoleArgs";
+export { FindFirstRoleArgs } from "./FindFirstRoleArgs";
+export { FindManyRoleArgs } from "./FindManyRoleArgs";
+export { FindUniqueRoleArgs } from "./FindUniqueRoleArgs";
+export { GroupByRoleArgs } from "./GroupByRoleArgs";
+export { UpdateManyRoleArgs } from "./UpdateManyRoleArgs";
+export { UpdateOneRoleArgs } from "./UpdateOneRoleArgs";
+export { UpsertOneRoleArgs } from "./UpsertOneRoleArgs";

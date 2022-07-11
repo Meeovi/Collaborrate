@@ -167,6 +167,9 @@
                 <a class="sidenav-link" style="color: white;" href="/admin/content/projects">Projects</a>
               </li><br>
               <li class="sidenav-item">
+                <a class="sidenav-link" style="color: white;" href="/admin/content/websites">Websites</a>
+              </li><br>
+              <li class="sidenav-item">
                 <a class="sidenav-link" style="color: white;" href="/admin/content/workspaces">Workspaces</a>
               </li><br>
             </ul>

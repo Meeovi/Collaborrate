@@ -1,0 +1,9 @@
+version: 3
+endpoint: https://star-gobbler-68.hasura.app/v1/graphql
+admin_secret: H6RyPGzrnqzzdfmAJk0ykWBOpe92o12MHN0bOLsMNuDP8qKuHrni5fV4dLv2WmPR
+migrations_directory: migrations
+seeds_directory: seeds
+metadata_directory: metadata
+actions:
+  kind: synchronous
+  handler_webhook_baseurl: http://localhost:3000

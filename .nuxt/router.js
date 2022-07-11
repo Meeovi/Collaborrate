@@ -75,6 +75,7 @@ const _3627c162 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-ne
 const _0a69c694 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-ticket.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-ticket" */))
 const _1174b573 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-visit.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-visit" */))
 const _97dfc22a = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-warehouse.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-warehouse" */))
+const _9cc8c67a = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-website.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-website" */))
 const _630797bd = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-workspace.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-workspace" */))
 const _79c42b34 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-zone.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-zone" */))
 const _a6af2054 = () => interopDefault(import('..\\pages\\Admin\\Content\\blog.vue' /* webpackChunkName: "pages/Admin/Content/blog" */))
@@ -83,6 +84,7 @@ const _389f7040 = () => interopDefault(import('..\\pages\\Admin\\Content\\media-
 const _32f27580 = () => interopDefault(import('..\\pages\\Admin\\Content\\pages.vue' /* webpackChunkName: "pages/Admin/Content/pages" */))
 const _49f27eae = () => interopDefault(import('..\\pages\\Admin\\Content\\projects.vue' /* webpackChunkName: "pages/Admin/Content/projects" */))
 const _b0c93e66 = () => interopDefault(import('..\\pages\\Admin\\Content\\tags.vue' /* webpackChunkName: "pages/Admin/Content/tags" */))
+const _6fd7eb28 = () => interopDefault(import('..\\pages\\Admin\\Content\\websites.vue' /* webpackChunkName: "pages/Admin/Content/websites" */))
 const _3c7a989c = () => interopDefault(import('..\\pages\\Admin\\Content\\workspaces.vue' /* webpackChunkName: "pages/Admin/Content/workspaces" */))
 const _75fda189 = () => interopDefault(import('..\\pages\\Admin\\Customers\\all-customers.vue' /* webpackChunkName: "pages/Admin/Customers/all-customers" */))
 const _d6f16812 = () => interopDefault(import('..\\pages\\Admin\\Customers\\leads.vue' /* webpackChunkName: "pages/Admin/Customers/leads" */))
@@ -513,6 +515,10 @@ export const routerOptions = {
     component: _97dfc22a,
     name: "Admin-Add-New-add-new-warehouse___en"
   }, {
+    path: "/Admin/Add-New/add-new-website",
+    component: _9cc8c67a,
+    name: "Admin-Add-New-add-new-website___en"
+  }, {
     path: "/Admin/Add-New/add-new-workspace",
     component: _630797bd,
     name: "Admin-Add-New-add-new-workspace___en"
@@ -544,6 +550,10 @@ export const routerOptions = {
     path: "/Admin/Content/tags",
     component: _b0c93e66,
     name: "Admin-Content-tags___en"
+  }, {
+    path: "/Admin/Content/websites",
+    component: _6fd7eb28,
+    name: "Admin-Content-websites___en"
   }, {
     path: "/Admin/Content/workspaces",
     component: _3c7a989c,
@@ -1097,6 +1107,10 @@ export const routerOptions = {
     component: _97dfc22a,
     name: "Admin-Add-New-add-new-warehouse___es"
   }, {
+    path: "/es/Admin/Add-New/add-new-website",
+    component: _9cc8c67a,
+    name: "Admin-Add-New-add-new-website___es"
+  }, {
     path: "/es/Admin/Add-New/add-new-workspace",
     component: _630797bd,
     name: "Admin-Add-New-add-new-workspace___es"
@@ -1128,6 +1142,10 @@ export const routerOptions = {
     path: "/es/Admin/Content/tags",
     component: _b0c93e66,
     name: "Admin-Content-tags___es"
+  }, {
+    path: "/es/Admin/Content/websites",
+    component: _6fd7eb28,
+    name: "Admin-Content-websites___es"
   }, {
     path: "/es/Admin/Content/workspaces",
     component: _3c7a989c,
@@ -1621,6 +1639,10 @@ export const routerOptions = {
     component: _97dfc22a,
     name: "Admin-Add-New-add-new-warehouse___fr"
   }, {
+    path: "/fr/Admin/Add-New/add-new-website",
+    component: _9cc8c67a,
+    name: "Admin-Add-New-add-new-website___fr"
+  }, {
     path: "/fr/Admin/Add-New/add-new-workspace",
     component: _630797bd,
     name: "Admin-Add-New-add-new-workspace___fr"
@@ -1652,6 +1674,10 @@ export const routerOptions = {
     path: "/fr/Admin/Content/tags",
     component: _b0c93e66,
     name: "Admin-Content-tags___fr"
+  }, {
+    path: "/fr/Admin/Content/websites",
+    component: _6fd7eb28,
+    name: "Admin-Content-websites___fr"
   }, {
     path: "/fr/Admin/Content/workspaces",
     component: _3c7a989c,

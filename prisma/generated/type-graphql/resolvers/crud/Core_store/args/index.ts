@@ -1,0 +1,12 @@
+export { AggregateCore_storeArgs } from "./AggregateCore_storeArgs";
+export { CreateManyCore_storeArgs } from "./CreateManyCore_storeArgs";
+export { CreateOneCore_storeArgs } from "./CreateOneCore_storeArgs";
+export { DeleteManyCore_storeArgs } from "./DeleteManyCore_storeArgs";
+export { DeleteOneCore_storeArgs } from "./DeleteOneCore_storeArgs";
+export { FindFirstCore_storeArgs } from "./FindFirstCore_storeArgs";
+export { FindManyCore_storeArgs } from "./FindManyCore_storeArgs";
+export { FindUniqueCore_storeArgs } from "./FindUniqueCore_storeArgs";
+export { GroupByCore_storeArgs } from "./GroupByCore_storeArgs";
+export { UpdateManyCore_storeArgs } from "./UpdateManyCore_storeArgs";
+export { UpdateOneCore_storeArgs } from "./UpdateOneCore_storeArgs";
+export { UpsertOneCore_storeArgs } from "./UpsertOneCore_storeArgs";

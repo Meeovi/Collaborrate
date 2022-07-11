@@ -1,0 +1,12 @@
+export { AggregateGraphQLConfigArgs } from "./AggregateGraphQLConfigArgs";
+export { CreateManyGraphQLConfigArgs } from "./CreateManyGraphQLConfigArgs";
+export { CreateOneGraphQLConfigArgs } from "./CreateOneGraphQLConfigArgs";
+export { DeleteManyGraphQLConfigArgs } from "./DeleteManyGraphQLConfigArgs";
+export { DeleteOneGraphQLConfigArgs } from "./DeleteOneGraphQLConfigArgs";
+export { FindFirstGraphQLConfigArgs } from "./FindFirstGraphQLConfigArgs";
+export { FindManyGraphQLConfigArgs } from "./FindManyGraphQLConfigArgs";
+export { FindUniqueGraphQLConfigArgs } from "./FindUniqueGraphQLConfigArgs";
+export { GroupByGraphQLConfigArgs } from "./GroupByGraphQLConfigArgs";
+export { UpdateManyGraphQLConfigArgs } from "./UpdateManyGraphQLConfigArgs";
+export { UpdateOneGraphQLConfigArgs } from "./UpdateOneGraphQLConfigArgs";
+export { UpsertOneGraphQLConfigArgs } from "./UpsertOneGraphQLConfigArgs";

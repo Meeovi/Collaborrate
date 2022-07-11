@@ -1,12 +1,13 @@
 query MyQuery {
-  allKnowledgebase {
-    id
-    date_modified
-    created_at
-    content
-    author
+  allKnowledgebasesList {
     approver
+    author
+    content
+    createdAt
+    dateModified
+    id
     name
+    nodeId
     resolution
     revision
     status

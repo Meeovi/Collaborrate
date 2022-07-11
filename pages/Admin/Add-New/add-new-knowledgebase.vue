@@ -82,7 +82,7 @@
 <script>
 import  gql from "graphql-tag";
 
-import knowledgebases from "~/apollo/queries/system/knowledgebase";
+import allKnowledgebasesList from "~/apollo/queries/system/knowledgebase";
 
   const ADD_KNOWLEDGEBASES = gql `
     mutation ($name: String!,$status: String!,$revision: String!,$resolution: String!,$approver: String!,$author: String!,$content: String!){
@@ -151,7 +151,7 @@ import knowledgebases from "~/apollo/queries/system/knowledgebase";
               const insertedKnowledgebase = insertKnowledgebases.returning;
               console.log(insertedKnowledgebase)
               cache.writeQuery({
-                query: knowledgebases
+                query: allKnowledgebasesList
               })
             } catch (err) {
               console.error(err)

@@ -8,7 +8,7 @@ export default function (ctx, inject) {
   const config = {
     dsn:"https:\u002F\u002Fb54ea5cfd2cc4c23b49c3d5c6fbbd351@o996770.ingest.sentry.io\u002F6140531",
     environment:"development",
-    release:"5c7c35b9fb345dacb81da96ba376d23ef93177bb"
+    release:"a6695a2d776f035d689c443de00c90cb7fa42b76"
   }
 
   const runtimeConfigKey = "sentry"
@@ -17,10 +17,10 @@ export default function (ctx, inject) {
   }
 
   config.integrations = [
-    new Dedupe({}),
-    new ExtraErrorData({}),
-    new ReportingObserver({}),
-    new RewriteFrames({}),
+    new Dedupe(),
+    new ExtraErrorData(),
+    new ReportingObserver(),
+    new RewriteFrames(),
     new Vue({ Vue: VueLib, ...{"attachProps":true,"logErrors":true}})
   ]
 

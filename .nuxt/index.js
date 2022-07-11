@@ -21,7 +21,6 @@ import nuxt_plugin_supabase_9a5acb90 from 'nuxt_plugin_supabase_9a5acb90' // Sou
 import nuxt_plugin_supabasecookie_15e14c25 from 'nuxt_plugin_supabasecookie_15e14c25' // Source: .\\supabase-cookie.js (mode: 'all')
 import nuxt_plugin_plugin_0c43743a from 'nuxt_plugin_plugin_0c43743a' // Source: .\\nuxt-highcharts\\plugin.js (mode: 'all')
 import nuxt_plugin_templatesplugin0eabed9e_857f83c2 from 'nuxt_plugin_templatesplugin0eabed9e_857f83c2' // Source: .\\templates.plugin.0eabed9e.js (mode: 'client')
-import nuxt_plugin_index_34a7be0b from 'nuxt_plugin_index_34a7be0b' // Source: .\\firebase\\index.js (mode: 'all')
 import nuxt_plugin_nuxtjsdarkmodejsmodule_d77de8ae from 'nuxt_plugin_nuxtjsdarkmodejsmodule_d77de8ae' // Source: .\\nuxtjs-darkmode-js-module.js (mode: 'all')
 import nuxt_plugin_image_7133ffab from 'nuxt_plugin_image_7133ffab' // Source: .\\image.js (mode: 'all')
 import nuxt_plugin_pluginutils_1bed21be from 'nuxt_plugin_pluginutils_1bed21be' // Source: .\\nuxt-i18n\\plugin.utils.js (mode: 'all')
@@ -110,7 +109,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"AlternateCMS","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Ffont-awesome\u002F5.15.1\u002Fcss\u002Fall.min.css"},{"rel":"stylesheet","href":"\u002Fmdb\u002Fplugins\u002Fcss\u002Fall.min.css"},{"rel":"stylesheet","href":"\u002Fmdb\u002Fcss\u002Fmdb.min.css"}],"script":[{"src":"\u002Fmdb\u002Fplugins\u002Fjs\u002Fall.min.js","mode":"client"},{"src":"\u002Fmdb\u002Fjs\u002Fmdb.min.js","mode":"client"}],"style":[]},
+    head: {"title":"AlternateCMS","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Ffont-awesome\u002F5.15.1\u002Fcss\u002Fall.min.css"},{"rel":"stylesheet","href":"\u002Fmdb\u002Fplugins\u002Fcss\u002Fall.min.css"},{"rel":"stylesheet","href":"\u002Fmdb\u002Fcss\u002Fmdb.min.css"},{"rel":"stylesheet","href":"\u002Fstyles\u002Fstyles.css"}],"script":[{"src":"\u002Fmdb\u002Fplugins\u002Fjs\u002Fall.min.js","mode":"client"},{"src":"\u002Fmdb\u002Fjs\u002Fmdb.min.js","mode":"client"}],"style":[]},
 
     store,
     router,
@@ -269,10 +268,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_templatesplugin0eabed9e_857f83c2 === 'function') {
     await nuxt_plugin_templatesplugin0eabed9e_857f83c2(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_index_34a7be0b === 'function') {
-    await nuxt_plugin_index_34a7be0b(app.context, inject)
   }
 
   if (typeof nuxt_plugin_nuxtjsdarkmodejsmodule_d77de8ae === 'function') {

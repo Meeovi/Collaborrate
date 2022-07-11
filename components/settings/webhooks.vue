@@ -18,7 +18,7 @@
                     <th>Action</th>
                   </tr>
                 </thead>
-                <tbody v-for="webhooks in webhooks" :key="webhooks.id">
+                <tbody v-for="webhooks in allWebhooksList" :key="webhooks.id">
                   <tr>
                     <td>{{ webhooks.name }}</td>
                     <td>{{ webhooks.url }}</td>
@@ -51,18 +51,18 @@
 </template>
 
 <script>
-import webhooks from '~/apollo/queries/system/webhooks'
+import allWebhooksList from '~/apollo/queries/system/webhooks'
 
 export default {
   data() {
     return {
-      webhooks: [],
+      allWebhooksList: [],
     }
   },
   apollo: {
-    webhooks: {
+    allWebhooksList: {
       prefetch: true,
-      query: webhooks
+      query: allWebhooksList
     }
   }, 
 }

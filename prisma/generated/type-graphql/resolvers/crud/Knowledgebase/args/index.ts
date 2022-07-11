@@ -1,0 +1,12 @@
+export { AggregateKnowledgebaseArgs } from "./AggregateKnowledgebaseArgs";
+export { CreateManyKnowledgebaseArgs } from "./CreateManyKnowledgebaseArgs";
+export { CreateOneKnowledgebaseArgs } from "./CreateOneKnowledgebaseArgs";
+export { DeleteManyKnowledgebaseArgs } from "./DeleteManyKnowledgebaseArgs";
+export { DeleteOneKnowledgebaseArgs } from "./DeleteOneKnowledgebaseArgs";
+export { FindFirstKnowledgebaseArgs } from "./FindFirstKnowledgebaseArgs";
+export { FindManyKnowledgebaseArgs } from "./FindManyKnowledgebaseArgs";
+export { FindUniqueKnowledgebaseArgs } from "./FindUniqueKnowledgebaseArgs";
+export { GroupByKnowledgebaseArgs } from "./GroupByKnowledgebaseArgs";
+export { UpdateManyKnowledgebaseArgs } from "./UpdateManyKnowledgebaseArgs";
+export { UpdateOneKnowledgebaseArgs } from "./UpdateOneKnowledgebaseArgs";
+export { UpsertOneKnowledgebaseArgs } from "./UpsertOneKnowledgebaseArgs";

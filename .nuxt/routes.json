@@ -444,6 +444,12 @@
     "chunkName": "pages/Admin/Add-New/add-new-warehouse"
   },
   {
+    "name": "Admin-Add-New-add-new-website___en",
+    "path": "/Admin/Add-New/add-new-website",
+    "component": "C:\\\\Users\\\\Basti\\\\OneDrive\\\\Documents\\\\My Websites\\\\Handmade Sites\\\\Javascript-Projects\\\\Nuxt-Projects\\\\Applications\\\\AlternateCMS\\\\pages\\\\Admin\\\\Add-New\\\\add-new-website.vue",
+    "chunkName": "pages/Admin/Add-New/add-new-website"
+  },
+  {
     "name": "Admin-Add-New-add-new-workspace___en",
     "path": "/Admin/Add-New/add-new-workspace",
     "component": "C:\\\\Users\\\\Basti\\\\OneDrive\\\\Documents\\\\My Websites\\\\Handmade Sites\\\\Javascript-Projects\\\\Nuxt-Projects\\\\Applications\\\\AlternateCMS\\\\pages\\\\Admin\\\\Add-New\\\\add-new-workspace.vue",
@@ -490,6 +496,12 @@
     "path": "/Admin/Content/tags",
     "component": "C:\\\\Users\\\\Basti\\\\OneDrive\\\\Documents\\\\My Websites\\\\Handmade Sites\\\\Javascript-Projects\\\\Nuxt-Projects\\\\Applications\\\\AlternateCMS\\\\pages\\\\Admin\\\\Content\\\\tags.vue",
     "chunkName": "pages/Admin/Content/tags"
+  },
+  {
+    "name": "Admin-Content-websites___en",
+    "path": "/Admin/Content/websites",
+    "component": "C:\\\\Users\\\\Basti\\\\OneDrive\\\\Documents\\\\My Websites\\\\Handmade Sites\\\\Javascript-Projects\\\\Nuxt-Projects\\\\Applications\\\\AlternateCMS\\\\pages\\\\Admin\\\\Content\\\\websites.vue",
+    "chunkName": "pages/Admin/Content/websites"
   },
   {
     "name": "Admin-Content-workspaces___en",
@@ -1320,6 +1332,12 @@
     "chunkName": "pages/Admin/Add-New/add-new-warehouse"
   },
   {
+    "name": "Admin-Add-New-add-new-website___es",
+    "path": "/es/Admin/Add-New/add-new-website",
+    "component": "C:\\\\Users\\\\Basti\\\\OneDrive\\\\Documents\\\\My Websites\\\\Handmade Sites\\\\Javascript-Projects\\\\Nuxt-Projects\\\\Applications\\\\AlternateCMS\\\\pages\\\\Admin\\\\Add-New\\\\add-new-website.vue",
+    "chunkName": "pages/Admin/Add-New/add-new-website"
+  },
+  {
     "name": "Admin-Add-New-add-new-workspace___es",
     "path": "/es/Admin/Add-New/add-new-workspace",
     "component": "C:\\\\Users\\\\Basti\\\\OneDrive\\\\Documents\\\\My Websites\\\\Handmade Sites\\\\Javascript-Projects\\\\Nuxt-Projects\\\\Applications\\\\AlternateCMS\\\\pages\\\\Admin\\\\Add-New\\\\add-new-workspace.vue",
@@ -1366,6 +1384,12 @@
     "path": "/es/Admin/Content/tags",
     "component": "C:\\\\Users\\\\Basti\\\\OneDrive\\\\Documents\\\\My Websites\\\\Handmade Sites\\\\Javascript-Projects\\\\Nuxt-Projects\\\\Applications\\\\AlternateCMS\\\\pages\\\\Admin\\\\Content\\\\tags.vue",
     "chunkName": "pages/Admin/Content/tags"
+  },
+  {
+    "name": "Admin-Content-websites___es",
+    "path": "/es/Admin/Content/websites",
+    "component": "C:\\\\Users\\\\Basti\\\\OneDrive\\\\Documents\\\\My Websites\\\\Handmade Sites\\\\Javascript-Projects\\\\Nuxt-Projects\\\\Applications\\\\AlternateCMS\\\\pages\\\\Admin\\\\Content\\\\websites.vue",
+    "chunkName": "pages/Admin/Content/websites"
   },
   {
     "name": "Admin-Content-workspaces___es",
@@ -2106,6 +2130,12 @@
     "chunkName": "pages/Admin/Add-New/add-new-warehouse"
   },
   {
+    "name": "Admin-Add-New-add-new-website___fr",
+    "path": "/fr/Admin/Add-New/add-new-website",
+    "component": "C:\\\\Users\\\\Basti\\\\OneDrive\\\\Documents\\\\My Websites\\\\Handmade Sites\\\\Javascript-Projects\\\\Nuxt-Projects\\\\Applications\\\\AlternateCMS\\\\pages\\\\Admin\\\\Add-New\\\\add-new-website.vue",
+    "chunkName": "pages/Admin/Add-New/add-new-website"
+  },
+  {
     "name": "Admin-Add-New-add-new-workspace___fr",
     "path": "/fr/Admin/Add-New/add-new-workspace",
     "component": "C:\\\\Users\\\\Basti\\\\OneDrive\\\\Documents\\\\My Websites\\\\Handmade Sites\\\\Javascript-Projects\\\\Nuxt-Projects\\\\Applications\\\\AlternateCMS\\\\pages\\\\Admin\\\\Add-New\\\\add-new-workspace.vue",
@@ -2152,6 +2182,12 @@
     "path": "/fr/Admin/Content/tags",
     "component": "C:\\\\Users\\\\Basti\\\\OneDrive\\\\Documents\\\\My Websites\\\\Handmade Sites\\\\Javascript-Projects\\\\Nuxt-Projects\\\\Applications\\\\AlternateCMS\\\\pages\\\\Admin\\\\Content\\\\tags.vue",
     "chunkName": "pages/Admin/Content/tags"
+  },
+  {
+    "name": "Admin-Content-websites___fr",
+    "path": "/fr/Admin/Content/websites",
+    "component": "C:\\\\Users\\\\Basti\\\\OneDrive\\\\Documents\\\\My Websites\\\\Handmade Sites\\\\Javascript-Projects\\\\Nuxt-Projects\\\\Applications\\\\AlternateCMS\\\\pages\\\\Admin\\\\Content\\\\websites.vue",
+    "chunkName": "pages/Admin/Content/websites"
   },
   {
     "name": "Admin-Content-workspaces___fr",

@@ -79,6 +79,76 @@ export default (ctx, inject) => {
 
           providerOptions.defaultClient = defaultApolloCreation.apolloClient
 
+      const alternativeClientTokenName = 'apollo-token'  || AUTH_TOKEN_NAME
+
+      function alternativeClientGetAuth () {
+        const token = cookies.get(alternativeClientTokenName)
+        return token && alternativeClientClientConfig.validateToken(token) ? AUTH_TYPE + token : ''
+      }
+
+      let alternativeClientClientConfig
+
+        alternativeClientClientConfig = {
+  "httpEndpoint": "https://star-gobbler-68.hasura.app/v1/graphql",
+  "browserHttpEndpoint": "/graphql",
+  "httpLinkOptions": {
+    "credentials": "same-origin",
+    "headers": {
+      "x-hasura-admin-secret": "H6RyPGzrnqzzdfmAJk0ykWBOpe92o12MHN0bOLsMNuDP8qKuHrni5fV4dLv2WmPR",
+      "content-type": "application/json"
+    }
+  },
+  "wsEndpoint": "ws://localhost:4000",
+  "tokenName": "apollo-token",
+  "persisting": false,
+  "websocketsOnly": false
+}
+
+      const alternativeClientValidateToken = () => true
+
+      if (!alternativeClientClientConfig.validateToken) {
+        alternativeClientClientConfig.validateToken = alternativeClientValidateToken
+      }
+
+      const alternativeClientCache = alternativeClientClientConfig.cache
+        ? alternativeClientClientConfig.cache
+        : new InMemoryCache(alternativeClientClientConfig.inMemoryCacheOptions ? alternativeClientClientConfig.inMemoryCacheOptions: undefined)
+
+      if (!process.server) {
+        alternativeClientCache.restore(window.__NUXT__ && window.__NUXT__.apollo ? window.__NUXT__.apollo.alternativeClient : null)
+      }
+
+      if (!alternativeClientClientConfig.getAuth) {
+        alternativeClientClientConfig.getAuth = alternativeClientGetAuth
+      }
+
+      if (process.client && alternativeClientClientConfig.browserHttpEndpoint) {
+        alternativeClientClientConfig.httpEndpoint = alternativeClientClientConfig.browserHttpEndpoint
+      }
+
+      alternativeClientClientConfig.ssr = !!process.server
+      alternativeClientClientConfig.cache = alternativeClientCache
+      alternativeClientClientConfig.tokenName = alternativeClientTokenName
+
+      // if ssr we'd still like to have our webclient's cookies
+      if (process.server && req && req.headers && req.headers.cookie) {
+        if (!alternativeClientClientConfig.httpLinkOptions) {
+          alternativeClientClientConfig.httpLinkOptions = {}
+        }
+        if (!alternativeClientClientConfig.httpLinkOptions.headers) {
+          alternativeClientClientConfig.httpLinkOptions.headers = {}
+        }
+        alternativeClientClientConfig.httpLinkOptions.headers.cookie = req.headers.cookie
+      }
+
+      // Create apollo client
+      let alternativeClientApolloCreation = createApolloClient({
+        ...alternativeClientClientConfig
+      })
+      alternativeClientApolloCreation.apolloClient.wsClient = alternativeClientApolloCreation.wsClient
+
+          providerOptions.clients.alternativeClient = alternativeClientApolloCreation.apolloClient
+
   const vueApolloOptions = Object.assign(providerOptions, {
       errorHandler (error) {
           console.log('%cError', 'background: red; color: white; padding: 2px 4px; border-radius: 3px; font-weight: bold;', error.message)

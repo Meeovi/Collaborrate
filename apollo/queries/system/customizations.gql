@@ -1,15 +1,16 @@
 query MyQuery {
   allCustomizationsList {
+    siteUrl
+    siteName
+    notification
+    nodeId
+    navLink
     id
-    footer_link
+    footerLink
     email
-    created_at
+    createdAt
     banner
     announcement
-    allOw_signup
-    nav_link
-    notification
-    site_name
-    site_url
+    allowSignup
   }
 }

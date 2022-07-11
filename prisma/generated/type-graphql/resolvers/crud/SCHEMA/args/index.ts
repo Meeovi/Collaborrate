@@ -1,0 +1,12 @@
+export { AggregateSCHEMAArgs } from "./AggregateSCHEMAArgs";
+export { CreateManySCHEMAArgs } from "./CreateManySCHEMAArgs";
+export { CreateOneSCHEMAArgs } from "./CreateOneSCHEMAArgs";
+export { DeleteManySCHEMAArgs } from "./DeleteManySCHEMAArgs";
+export { DeleteOneSCHEMAArgs } from "./DeleteOneSCHEMAArgs";
+export { FindFirstSCHEMAArgs } from "./FindFirstSCHEMAArgs";
+export { FindManySCHEMAArgs } from "./FindManySCHEMAArgs";
+export { FindUniqueSCHEMAArgs } from "./FindUniqueSCHEMAArgs";
+export { GroupBySCHEMAArgs } from "./GroupBySCHEMAArgs";
+export { UpdateManySCHEMAArgs } from "./UpdateManySCHEMAArgs";
+export { UpdateOneSCHEMAArgs } from "./UpdateOneSCHEMAArgs";
+export { UpsertOneSCHEMAArgs } from "./UpsertOneSCHEMAArgs";

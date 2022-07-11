@@ -1,0 +1,12 @@
+export { AggregateSettingsgeneralArgs } from "./AggregateSettingsgeneralArgs";
+export { CreateManySettingsgeneralArgs } from "./CreateManySettingsgeneralArgs";
+export { CreateOneSettingsgeneralArgs } from "./CreateOneSettingsgeneralArgs";
+export { DeleteManySettingsgeneralArgs } from "./DeleteManySettingsgeneralArgs";
+export { DeleteOneSettingsgeneralArgs } from "./DeleteOneSettingsgeneralArgs";
+export { FindFirstSettingsgeneralArgs } from "./FindFirstSettingsgeneralArgs";
+export { FindManySettingsgeneralArgs } from "./FindManySettingsgeneralArgs";
+export { FindUniqueSettingsgeneralArgs } from "./FindUniqueSettingsgeneralArgs";
+export { GroupBySettingsgeneralArgs } from "./GroupBySettingsgeneralArgs";
+export { UpdateManySettingsgeneralArgs } from "./UpdateManySettingsgeneralArgs";
+export { UpdateOneSettingsgeneralArgs } from "./UpdateOneSettingsgeneralArgs";
+export { UpsertOneSettingsgeneralArgs } from "./UpsertOneSettingsgeneralArgs";

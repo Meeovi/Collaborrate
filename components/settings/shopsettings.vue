@@ -19,7 +19,7 @@
                     </th>
                     <th scope="col" class="generalSettingsAddOptions">
                       <li>
-                        <FormulateInput type="submit" label="Save" @click="addGeneralSettings" />
+                        <input type="submit" label="Save" @click="addGeneralSettings" />
                       </li>
                     </th>
                   </tr>
@@ -28,35 +28,35 @@
                   <tr>
                     <td style="text-align: right;">Product Videos</td>
                     <td>
-                      <FormulateInput v-model="siteTitle" type="text" required label="YouTube API Key" />
+                      <input v-model="siteTitle" type="text" required label="YouTube API Key" />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Global out-of-stock threshold</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="text">
-                      </FormulateInput>
+                      <input v-model="tagline" type="text">
+                      
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Track inventory by default</td>
                     <td>
-                      <FormulateInput v-model="siteUrl" type="checkbox"
+                      <input v-model="siteUrl" type="checkbox"
                         label="If checked, then inventory is being tracked">
-                      </FormulateInput>
+                      
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Adminstration Email Address</td>
                     <td>
-                      <FormulateInput v-model="siteAdminEmail" type="text" name="Type">
-                      </FormulateInput>
+                      <input v-model="siteAdminEmail" type="text" name="Type">
+                      
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Tax Categories</td>
                     <td>
-                      <FormulateInput v-model="value"
+                      <input v-model="value"
                         :options="{first: 'Apps and Games', second: 'Athletic/Sporting Goods', third: 'Arts and Design', fourth: 'Auto Parts'}"
                         type="select" placeholder="Select an option" label="--Please Select--" />
                     </td>
@@ -99,7 +99,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr v-for="currencies in currencies" :key="currencies">
+                    <tr v-for="currencies in allCurrenciesList" :key="currencies">
                       <td>{{ currencies.id }}</td>
                       <th>{{ currencies.code }}</th>
                       <td>{{ currencies.name }}</td>
@@ -131,7 +131,7 @@
                     </th>
                     <th scope="col" class="generalSettingsAddOptions">
                       <li>
-                        <FormulateInput type="submit" label="Save" @click="addGeneralSettings" />
+                        <input type="submit" label="Save" @click="addGeneralSettings" />
                       </li>
                     </th>
                   </tr>
@@ -140,63 +140,63 @@
                   <tr>
                     <td style="text-align: right;">Enable Vendor Review System</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="select" :options="{first: 'Yes', second: 'No'}" />
+                      <input v-model="tagline" type="select" :options="{first: 'Yes', second: 'No'}" />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Admin Approval Required</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="select" :options="{first: 'Yes', second: 'No'}" />
+                      <input v-model="tagline" type="select" :options="{first: 'Yes', second: 'No'}" />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Allow Customer To Rate Vendor Only If They Have Purchased Vendor's
                       Product</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="select" :options="{first: 'Yes', second: 'No'}" />
+                      <input v-model="tagline" type="select" :options="{first: 'Yes', second: 'No'}" />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Enable Vendor MultiShipping System</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="select" :options="{first: 'Yes', second: 'No'}" />
+                      <input v-model="tagline" type="select" :options="{first: 'Yes', second: 'No'}" />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Enable Product Assignment</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="select" :options="{first: 'Yes', second: 'No'}" />
+                      <input v-model="tagline" type="select" :options="{first: 'Yes', second: 'No'}" />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Vendor Multi Shipping - Carrier Title</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="text" />
+                      <input v-model="tagline" type="text" />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Vendor Multi Shipping - Method Title</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="text" />
+                      <input v-model="tagline" type="text" />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Vendor Multi Shipping - Charge Transfer To</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="text" />
+                      <input v-model="tagline" type="text" />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Calculate Commission Fee</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="select"
+                      <input v-model="tagline" type="select"
                         :options="{first: 'Percentage', second: 'Fixed'}" />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Commission Fee</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="number" />
+                      <input v-model="tagline" type="number" />
                     </td>
                   </tr>
                 </tbody>
@@ -223,7 +223,7 @@
                     </th>
                     <th scope="col" class="generalSettingsAddOptions">
                       <li>
-                        <FormulateInput type="submit" label="Save" @click="addGeneralSettings" />
+                        <input type="submit" label="Save" @click="addGeneralSettings" />
                       </li>
                     </th>
                   </tr>
@@ -232,14 +232,14 @@
                   <tr>
                     <td style="text-align: right;">GeneralSettings Name</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="text" required />
+                      <input v-model="tagline" type="text" required />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">GeneralSettings Type</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="text" name="Type">
-                      </FormulateInput>
+                      <input v-model="tagline" type="text" name="Type">
+                      
                     </td>
                   </tr>
                 </tbody>
@@ -279,7 +279,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr v-for="zones in zones" :key="zones">
+                    <tr v-for="zones in allZonesList" :key="zones">
                       <th>{{ zones.code }}</th>
                       <td>{{ zones.name }}</td>
                       <td>{{ zones.type }}</td>
@@ -325,7 +325,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr v-for="channels in channels" :key="channels">
+                    <tr v-for="channels in allChannelsList" :key="channels">
                       <th>{{ channels.name }}</th>
                       <td>{{ channels.code }}</td>
                       <td>{{ channels.default_zone }}</td>
@@ -373,7 +373,7 @@
                       <th>Action</th>
                     </tr>
                   </thead>
-                  <tbody v-for="cities in cities" :key="cities.id">
+                  <tbody v-for="cities in allCitiesList" :key="cities.id">
                     <tr>
                       <td>{{ cities.id }}</td>
                       <td>{{ cities.name }}</td>
@@ -421,7 +421,7 @@
                       <th>Action</th>
                     </tr>
                   </thead>
-                  <tbody v-for="states in states" :key="states.id">
+                  <tbody v-for="states in allStatesList" :key="states.id">
                     <tr>
                       <td>{{ states.id }}</td>
                       <td>{{ states.name }}</td>
@@ -469,7 +469,7 @@
                       <th>Action</th>
                     </tr>
                   </thead>
-                  <tbody v-for="countries in countries" :key="countries.id">
+                  <tbody v-for="countries in allCountriesList" :key="countries.id">
                     <tr>
                       <td>{{ countries.id }}</td>
                       <td>{{ countries.name }}</td>
@@ -516,7 +516,7 @@
                       <th>Action</th>
                     </tr>
                   </thead>
-                  <tbody v-for="tax_rule in tax_rule" :key="tax_rule.id">
+                  <tbody v-for="tax_rule in allTaxRulesList" :key="tax_rule.id">
                     <tr>
                       <td>{{ tax_rule.id }}</td>
                       <td>{{ tax_rule.name }}</td>
@@ -589,17 +589,17 @@
   import gql from "graphql-tag";
 
   import {
-    generalSettings
+    allGeneralSettingsList
   } from "~/apollo/queries/system/settingsgeneral";
   import paymentsettings from '~/components/settings/paymentsettings';
-  import currencies from '~/apollo/queries/system/currencies.gql'
-  import cities from '~/apollo/queries/shop/cities.gql'
-  import states from '~/apollo/queries/shop/states.gql'
-  import countries from '~/apollo/queries/shop/countries.gql'
-  import channels from '~/apollo/queries/system/channels.gql'
-  import zones from '~/apollo/queries/system/zones.gql'
-  import tax_rate from '~/apollo/queries/shop/taxrate.gql'
-  import tax_rule from '~/apollo/queries/shop/taxrule.gql'
+  import allCurrenciesList from '~/apollo/queries/system/currencies.gql'
+  import allCitiesList from '~/apollo/queries/shop/cities.gql'
+  import allStatesList from '~/apollo/queries/shop/states.gql'
+  import allCountriesList from '~/apollo/queries/shop/countries.gql'
+  import allChannelsList from '~/apollo/queries/system/channels.gql'
+  import allZonesList from '~/apollo/queries/system/zones.gql'
+  import allTaxRatesList from '~/apollo/queries/shop/taxrate.gql'
+  import allTaxRulesList from '~/apollo/queries/shop/taxrule.gql'
 
   const ADD_GENERAL_SETTINGS = gql `
     mutation ($siteTitle:String!,$tagline:String,$siteUrl:String,$siteAdminEmail:String,$value:String){
@@ -663,7 +663,7 @@
               const insertedGeneralSettings = insertGeneralSettingss.returning;
               console.log(insertedGeneralSettings)
               cache.writeQuery({
-                query: generalSettings
+                query: allGeneralSettingsList
               })
             } catch (err) {
               console.error(err)
@@ -683,37 +683,37 @@
 
     },
     apollo: {
-      cities: {
+      allCitiesList: {
         prefetch: true,
-        query: cities
+        query: allCitiesList
       },
-      states: {
+      allStatesList: {
         prefetch: true,
-        query: states
+        query: allStatesList
       },
-      countries: {
+      allCountriesList: {
         prefetch: true,
-        query: countries
+        query: allCountriesList
       },
-      zones: {
+      allZonesList: {
         prefetch: true,
-        query: zones
+        query: allZonesList
       },
-      currencies: {
+      allCurrenciesList: {
         prefetch: true,
-        query: currencies
+        query: allCurrenciesList
       },
-      channels: {
+      allChannelsList: {
         prefetch: true,
-        query: channels
+        query: allChannelsList
       },
-      tax_rate: {
+      allTaxRatesList: {
         prefetch: true,
-        query: tax_rate
+        query: allTaxRatesList
       },
-      tax_rule: {
+      allTaxRulesList: {
         prefetch: true,
-        query: tax_rule
+        query: allTaxRulesList
       },
     }, 
     // eslint-disable-next-line vue/order-in-components

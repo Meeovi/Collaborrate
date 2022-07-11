@@ -1,10 +1,11 @@
 query MyQuery {
-  allApitoken {
+  allApitokensList {
+    createdAt
+    description
     id
     name
+    nodeId
     token
-    token_type
-    description
-    created_at
+    tokenType
   }
 }

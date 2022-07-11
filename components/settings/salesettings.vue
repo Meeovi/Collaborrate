@@ -28,29 +28,29 @@
                         <th>
                         </th>
                         <th scope="col" class="generalSettingsAddOptions">
-                            <li><FormulateInput type="submit" label="Save" @click="addGeneralSettings" /></li>
+                            <li><input type="submit" label="Save" @click="addGeneralSettings" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Account Type</td>
-                        <td><FormulateInput v-model="siteTitle" type="text" required /></td>
+                        <td><input v-model="siteTitle" type="text" required /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Account Number</td>
-                        <td><FormulateInput v-model="tagline" type="number">
-                            </FormulateInput></td>
+                        <td><input v-model="tagline" type="number">
+                            </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Anonymize IP</td>
-                        <td><FormulateInput v-model="siteUrl" type="number">
-                            </FormulateInput></td>
+                        <td><input v-model="siteUrl" type="number">
+                            </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Enable Content Experiments</td>
-                        <td><FormulateInput v-model="siteAdminEmail" type="checkbox">
-                            </FormulateInput></td>
+                        <td><input v-model="siteAdminEmail" type="checkbox">
+                            </td>
                     </tr>
                 </tbody>
             </table>
@@ -85,44 +85,44 @@
                         <th>
                         </th>
                         <th scope="col" class="generalSettingsAddOptions">
-                            <li><FormulateInput type="submit" label="Save" @click="addGeneralSettings" /></li>
+                            <li><input type="submit" label="Save" @click="addGeneralSettings" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Conversion ID</td>
-                        <td><FormulateInput v-model="siteTitle" type="text" /></td>
+                        <td><input v-model="siteTitle" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Conversion Language</td>
-                        <td><FormulateInput v-model="tagline" type="text">
-                            </FormulateInput></td>
+                        <td><input v-model="tagline" type="text">
+                            </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Conversion Format</td>
-                        <td><FormulateInput v-model="siteUrl" type="text">
-                            </FormulateInput></td>
+                        <td><input v-model="siteUrl" type="text">
+                            </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Conversion Color</td>
-                        <td><FormulateInput v-model="siteAdminEmail" type="color">
-                            </FormulateInput></td>
+                        <td><input v-model="siteAdminEmail" type="color">
+                            </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Conversion Label</td>
-                        <td><FormulateInput v-model="siteAdminEmail" type="text">
-                            </FormulateInput></td>
+                        <td><input v-model="siteAdminEmail" type="text">
+                            </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Conversion Value Type</td>
-                        <td><FormulateInput v-model="siteAdminEmail" type="text">
-                            </FormulateInput></td>
+                        <td><input v-model="siteAdminEmail" type="text">
+                            </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Send Order Currency</td>
-                        <td><FormulateInput v-model="siteAdminEmail" type="text">
-                            </FormulateInput></td>
+                        <td><input v-model="siteAdminEmail" type="text">
+                            </td>
                     </tr>
                 </tbody>
             </table>
@@ -157,24 +157,24 @@
                         <th>
                         </th>
                         <th scope="col" class="generalSettingsAddOptions">
-                            <li><FormulateInput type="submit" label="Save" @click="addGeneralSettings" /></li>
+                            <li><input type="submit" label="Save" @click="addGeneralSettings" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Anonymize IP</td>
-                        <td><FormulateInput v-model="siteTitle" type="number" /></td>
+                        <td><input v-model="siteTitle" type="number" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Enable Content Experiments</td>
-                        <td><FormulateInput v-model="tagline" type="text">
-                            </FormulateInput></td>
+                        <td><input v-model="tagline" type="text">
+                            </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Container ID</td>
-                        <td><FormulateInput v-model="siteUrl" type="text">
-                            </FormulateInput></td>
+                        <td><input v-model="siteUrl" type="text">
+                            </td>
                     </tr>
                 </tbody>
             </table>
@@ -189,7 +189,7 @@
 <script>
 import gql from "graphql-tag";
 
-import { generalSettings } from "~/apollo/queries/system/settingsgeneral";
+import { allGeneralSettingsList } from "~/apollo/queries/system/settingsgeneral";
 
 const ADD_GENERAL_SETTINGS = gql`
     mutation ($siteTitle:String!,$tagline:String,$siteUrl:String,$siteAdminEmail:String,$value:String){
@@ -238,7 +238,7 @@ export default {
                             const insertedGeneralSettings = insertGeneralSettingss.returning;
                             console.log(insertedGeneralSettings)
                             cache.writeQuery({
-                                query: generalSettings
+                                query: allGeneralSettingsList
                             })
                         }
                         catch (err) {

@@ -1,0 +1,12 @@
+export { AggregateAudienceArgs } from "./AggregateAudienceArgs";
+export { CreateManyAudienceArgs } from "./CreateManyAudienceArgs";
+export { CreateOneAudienceArgs } from "./CreateOneAudienceArgs";
+export { DeleteManyAudienceArgs } from "./DeleteManyAudienceArgs";
+export { DeleteOneAudienceArgs } from "./DeleteOneAudienceArgs";
+export { FindFirstAudienceArgs } from "./FindFirstAudienceArgs";
+export { FindManyAudienceArgs } from "./FindManyAudienceArgs";
+export { FindUniqueAudienceArgs } from "./FindUniqueAudienceArgs";
+export { GroupByAudienceArgs } from "./GroupByAudienceArgs";
+export { UpdateManyAudienceArgs } from "./UpdateManyAudienceArgs";
+export { UpdateOneAudienceArgs } from "./UpdateOneAudienceArgs";
+export { UpsertOneAudienceArgs } from "./UpsertOneAudienceArgs";

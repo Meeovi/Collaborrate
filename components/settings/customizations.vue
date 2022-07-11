@@ -8,26 +8,26 @@
                         <th>
                         </th>
                         <th scope="col" class="customizationAddOptions">
-                            <li><FormulateInput type="submit" label="Delete" @click="deleteCustomization(customization)" /></li>
-                            <li><FormulateInput type="submit" label="Save" @click="updateCustomization" /></li>
+                            <li><input type="submit" label="Delete" @click="deleteCustomization(customization)" /></li>
+                            <li><input type="submit" label="Save" @click="updateCustomization" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Site Name</td>
-                        <td><FormulateInput type="text" :value="site_name" required />{{ customization.site_name }}</td>
+                        <td><input type="text" :value="site_name" required />{{ customization.site_name }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Site URL</td>
-                        <td><FormulateInput type="text" :value="site_url" >{{ customization.site_url }}</FormulateInput></td>
+                        <td><input type="text" :value="site_url" >{{ customization.site_url }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Nav Link</td>
                         <td>
                           <div class="field-group">
                           <div class="repeatable-container"></div>
-                          <FormulateInput type="text" :value="nav_link" >{{ customization.nav_link }} <span class="fas fa-circle-plus"></span></FormulateInput>
+                          <input type="text" :value="nav_link" >{{ customization.nav_link }} <span class="fas fa-circle-plus"></span>
                           <input type="button" class="delete" value="X" />
                           </div>
                           </td>
@@ -37,21 +37,21 @@
                         <td>
                           <div class="field-group">
                           <div class="repeatable-container"></div>
-                          <FormulateInput type="text" :value="footer_link" >{{ customization.footer_link }}</FormulateInput>
+                          <input type="text" :value="footer_link" >{{ customization.footer_link }}
                           <input type="button" class="delete" value="X" />
                           </div>
                           </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Email</td>
-                        <td><FormulateInput type="text" :value="email" >{{ customization.email }}</FormulateInput></td>
+                        <td><input type="text" :value="email" >{{ customization.email }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Notifications</td>
                         <td>
                           <div class="field-group">
                           <div class="repeatable-container"></div>
-                          <FormulateInput type="textarea" :value="notification" >{{ customization.notification }}</FormulateInput>
+                          <input type="textarea" :value="notification" >{{ customization.notification }}
                           <input type="button" class="delete" value="X" />
                           </div>
                           </td>
@@ -61,18 +61,18 @@
                         <td>
                           <div class="field-group">
                           <div class="repeatable-container"></div>
-                          <FormulateInput type="textarea" :value="announcement" >{{ customization.announcement }}</FormulateInput>
+                          <input type="textarea" :value="announcement" >{{ customization.announcement }}
                           <input type="button" class="delete" value="X" />
                           </div>
                           </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Allow User Signup</td>
-                        <td><FormulateInput type="checkbox" label="Check box if users can create accounts on your site?" :value="allow_signup" >{{ customization.allow_signup }}</FormulateInput></td>
+                        <td><input type="checkbox" label="Check box if users can create accounts on your site?" :value="allow_signup" >{{ customization.allow_signup }}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Banners</td>
-                        <td><FormulateInput type="image" :value="banner" >{{ customization.banner }}</FormulateInput></td>
+                        <td><input type="image" :value="banner" >{{ customization.banner }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -81,10 +81,10 @@
         <div id="accordionExample" class="accordion">
             <div class="accordion-item">
                 <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    <input class="accordion-button" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Content
-                    </FormulateInput>
+                    
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
@@ -96,8 +96,8 @@
                                         <td style="text-align: right;">Excerpt</td>
                                         <td>
                                             <div class="form-check form-switch">
-                                                <FormulateInput
-  id="excerpt" type="textarea" validation="required|max:50,length" cols="50" rows="10">{{ customization.excerpt }}</FormulateInput>
+                                                <input
+  id="excerpt" type="textarea" validation="required|max:50,length" cols="50" rows="10">{{ customization.excerpt }}
                                             </div>
                                         </td>
                                     </tr>
@@ -119,15 +119,15 @@
             </div>
             <div class="accordion-item">
                 <h2 id="headingThree" class="accordion-header">
-                    <FormulateInput class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                    <input class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Images and Videos
-                    </FormulateInput>
+                    
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
-                        <td><FormulateInput type="image" upload-url="/media" name="headshot" :label="customization.image" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/></td>
+                        <td><input type="image" upload-url="/media" name="headshot" :label="customization.image" help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif"/></td>
                     </div>
                 </div>
             </div>
@@ -140,7 +140,7 @@
 // eslint-disable-next-line camelcase
 import gql from 'graphql-tag'
 import customizations from '~/apollo/mutations/system/customizations'
-import allCustomizations from '~/apollo/queries/system/customizations'
+import allCustomizationsList from '~/apollo/queries/system/customizations'
 
 const DELETE_CUSTOMIZATION = gql `
   mutation delete_customizations($id: Int!){
@@ -177,7 +177,7 @@ export default {
         },
         refetchQueries: [
           {
-            query: allCustomizations
+            query: allCustomizationsList
           }       
           
         ]
@@ -193,7 +193,7 @@ export default {
         },
         refetchQueries: [
           {
-            query: allCustomizations
+            query: allCustomizationsList
           }       
           
         ]

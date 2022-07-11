@@ -28,33 +28,33 @@
                         <th>
                         </th>
                         <th scope="col" class="generalSettingsAddOptions">
-                            <li><FormulateInput type="submit" label="Save" @click="addGeneralSettings" /></li>
+                            <li><input type="submit" label="Save" @click="addGeneralSettings" /></li>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Login as Customer</td>
-                        <td><FormulateInput v-model="value" :options="{first: 'Auto Detect', second: 'Manual'}" type="radio"
+                        <td><input v-model="value" :options="{first: 'Auto Detect', second: 'Manual'}" type="radio"
   label="Use the Manual Selection option on a multi-website setup that has Share Customer Accounts enabled globally. If set to Manual Selection, the Login as Customer admin can select a store view after logging in." /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Share Customer Accounts</td>
-                        <td><FormulateInput v-model="value" :options="{first: 'Global', second: 'Per Website'}" type="radio" /></td>
+                        <td><input v-model="value" :options="{first: 'Global', second: 'Per Website'}" type="radio" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Online Minutes Interval</td>
-                        <td><FormulateInput v-model="siteUrl" type="text" name="Type" label="Default is (30 minutes).">
-                            </FormulateInput></td>
+                        <td><input v-model="siteUrl" type="text" name="Type" label="Default is (30 minutes).">
+                            </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Customer Data Lifetime</td>
-                        <td><FormulateInput v-model="siteAdminEmail" type="text" name="Type" label="The value is in minutes.">
-                            </FormulateInput></td>
+                        <td><input v-model="siteAdminEmail" type="text" name="Type" label="The value is in minutes.">
+                            </td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Send an email after registration</td>
-                        <td><FormulateInput v-model="value" :options="{first: 'Yes', second: 'No'}" type="radio" /></td>
+                        <td><input v-model="value" :options="{first: 'Yes', second: 'No'}" type="radio" /></td>
                     </tr>
                 </tbody>
             </table>
@@ -69,7 +69,7 @@
 <script>
 import gql from "graphql-tag";
 
-import { generalSettings } from "~/apollo/queries/system/settingsgeneral";
+import { allGeneralSettingsList } from "~/apollo/queries/system/settingsgeneral";
 
 const ADD_GENERAL_SETTINGS = gql`
     mutation ($siteTitle:String!,$tagline:String,$siteUrl:String,$siteAdminEmail:String,$value:String){
@@ -118,7 +118,7 @@ export default {
                             const insertedGeneralSettings = insertGeneralSettingss.returning;
                             console.log(insertedGeneralSettings)
                             cache.writeQuery({
-                                query: generalSettings
+                                query: allGeneralSettingsList
                             })
                         }
                         catch (err) {
