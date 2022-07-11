@@ -1,0 +1,12 @@
+export { AggregateCatalog_price_ruleArgs } from "./AggregateCatalog_price_ruleArgs";
+export { CreateManyCatalog_price_ruleArgs } from "./CreateManyCatalog_price_ruleArgs";
+export { CreateOneCatalog_price_ruleArgs } from "./CreateOneCatalog_price_ruleArgs";
+export { DeleteManyCatalog_price_ruleArgs } from "./DeleteManyCatalog_price_ruleArgs";
+export { DeleteOneCatalog_price_ruleArgs } from "./DeleteOneCatalog_price_ruleArgs";
+export { FindFirstCatalog_price_ruleArgs } from "./FindFirstCatalog_price_ruleArgs";
+export { FindManyCatalog_price_ruleArgs } from "./FindManyCatalog_price_ruleArgs";
+export { FindUniqueCatalog_price_ruleArgs } from "./FindUniqueCatalog_price_ruleArgs";
+export { GroupByCatalog_price_ruleArgs } from "./GroupByCatalog_price_ruleArgs";
+export { UpdateManyCatalog_price_ruleArgs } from "./UpdateManyCatalog_price_ruleArgs";
+export { UpdateOneCatalog_price_ruleArgs } from "./UpdateOneCatalog_price_ruleArgs";
+export { UpsertOneCatalog_price_ruleArgs } from "./UpsertOneCatalog_price_ruleArgs";

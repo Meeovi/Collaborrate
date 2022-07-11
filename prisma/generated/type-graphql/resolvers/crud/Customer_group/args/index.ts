@@ -1,0 +1,12 @@
+export { AggregateCustomer_groupArgs } from "./AggregateCustomer_groupArgs";
+export { CreateManyCustomer_groupArgs } from "./CreateManyCustomer_groupArgs";
+export { CreateOneCustomer_groupArgs } from "./CreateOneCustomer_groupArgs";
+export { DeleteManyCustomer_groupArgs } from "./DeleteManyCustomer_groupArgs";
+export { DeleteOneCustomer_groupArgs } from "./DeleteOneCustomer_groupArgs";
+export { FindFirstCustomer_groupArgs } from "./FindFirstCustomer_groupArgs";
+export { FindManyCustomer_groupArgs } from "./FindManyCustomer_groupArgs";
+export { FindUniqueCustomer_groupArgs } from "./FindUniqueCustomer_groupArgs";
+export { GroupByCustomer_groupArgs } from "./GroupByCustomer_groupArgs";
+export { UpdateManyCustomer_groupArgs } from "./UpdateManyCustomer_groupArgs";
+export { UpdateOneCustomer_groupArgs } from "./UpdateOneCustomer_groupArgs";
+export { UpsertOneCustomer_groupArgs } from "./UpsertOneCustomer_groupArgs";

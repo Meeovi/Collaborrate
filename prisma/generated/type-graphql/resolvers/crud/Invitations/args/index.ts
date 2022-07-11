@@ -1,0 +1,12 @@
+export { AggregateInvitationsArgs } from "./AggregateInvitationsArgs";
+export { CreateManyInvitationsArgs } from "./CreateManyInvitationsArgs";
+export { CreateOneInvitationsArgs } from "./CreateOneInvitationsArgs";
+export { DeleteManyInvitationsArgs } from "./DeleteManyInvitationsArgs";
+export { DeleteOneInvitationsArgs } from "./DeleteOneInvitationsArgs";
+export { FindFirstInvitationsArgs } from "./FindFirstInvitationsArgs";
+export { FindManyInvitationsArgs } from "./FindManyInvitationsArgs";
+export { FindUniqueInvitationsArgs } from "./FindUniqueInvitationsArgs";
+export { GroupByInvitationsArgs } from "./GroupByInvitationsArgs";
+export { UpdateManyInvitationsArgs } from "./UpdateManyInvitationsArgs";
+export { UpdateOneInvitationsArgs } from "./UpdateOneInvitationsArgs";
+export { UpsertOneInvitationsArgs } from "./UpsertOneInvitationsArgs";

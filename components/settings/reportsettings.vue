@@ -50,7 +50,7 @@
 <script>
 import gql from "graphql-tag";
 
-import { generalSettings } from "~/apollo/queries/system/settingsgeneral";
+import { allGeneralSettingsList } from "~/apollo/queries/system/settingsgeneral";
 
 const ADD_GENERAL_SETTINGS = gql`
     mutation ($siteTitle:String!,$tagline:String,$siteUrl:String,$siteAdminEmail:String,$value:String){
@@ -99,7 +99,7 @@ export default {
                             const insertedGeneralSettings = insertGeneralSettingss.returning;
                             console.log(insertedGeneralSettings)
                             cache.writeQuery({
-                                query: generalSettings
+                                query: allGeneralSettingsList
                             })
                         }
                         catch (err) {

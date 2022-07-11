@@ -20,7 +20,7 @@
                     <th>ACTION</th>
                   </tr>
                 </thead>
-                <tbody v-for="payments in payments" :key="payments.id">
+                <tbody v-for="payments in allPaymentsList" :key="payments.id">
                   <tr>
                     <td>{{ payments.icon }}</td>
                     <td>{{ payments.name }}</td>
@@ -55,18 +55,18 @@
 </template>
 
 <script>
-import payments from '~/apollo/queries/shop/payments'
+import allPaymentsList from '~/apollo/queries/shop/payments'
 
 export default {
   data() {
     return {
-      payments: [],
+      allPaymentsList: [],
     }
   },
   apollo: {
-    payments: {
+    allPaymentsList: {
       prefetch: true,
-      query: payments
+      query: allPaymentsList
     }
   }, 
 }

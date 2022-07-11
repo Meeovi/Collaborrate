@@ -1,0 +1,12 @@
+export { AggregateProduct_attribute_setArgs } from "./AggregateProduct_attribute_setArgs";
+export { CreateManyProduct_attribute_setArgs } from "./CreateManyProduct_attribute_setArgs";
+export { CreateOneProduct_attribute_setArgs } from "./CreateOneProduct_attribute_setArgs";
+export { DeleteManyProduct_attribute_setArgs } from "./DeleteManyProduct_attribute_setArgs";
+export { DeleteOneProduct_attribute_setArgs } from "./DeleteOneProduct_attribute_setArgs";
+export { FindFirstProduct_attribute_setArgs } from "./FindFirstProduct_attribute_setArgs";
+export { FindManyProduct_attribute_setArgs } from "./FindManyProduct_attribute_setArgs";
+export { FindUniqueProduct_attribute_setArgs } from "./FindUniqueProduct_attribute_setArgs";
+export { GroupByProduct_attribute_setArgs } from "./GroupByProduct_attribute_setArgs";
+export { UpdateManyProduct_attribute_setArgs } from "./UpdateManyProduct_attribute_setArgs";
+export { UpdateOneProduct_attribute_setArgs } from "./UpdateOneProduct_attribute_setArgs";
+export { UpsertOneProduct_attribute_setArgs } from "./UpsertOneProduct_attribute_setArgs";

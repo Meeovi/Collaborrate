@@ -75,7 +75,7 @@
                       <td>
                         <label for="users">Users</label><br>
                         <select id="users" v-model="users" name="template" class="form-category">
-                          <option v-for="users in allProductsList" :key="users" :value="users">
+                          <option v-for="users in allUsersList" :key="users" :value="users">
                             {{ users.name }}</option>
                         </select>
                       </td>
@@ -94,9 +94,9 @@
 <script>
   import gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import permissions from "~/apollo/queries/system/permissions";
-  import roles from "~/apollo/queries/system/roles";
-  import users from "~/apollo/queries/system/users";
+  import allPermissionsList from "~/apollo/queries/system/permissions";
+  import allRolesList from "~/apollo/queries/system/roles";
+  import allUsersList from "~/apollo/queries/system/users";
 
   const ADD_PERMISSIONS = gql `
     mutation ($Delete:String!,$update:String,$users:String,$content:String,$read:String!,$role:String!,$created_at:String!,$create:String!,$name:String){
@@ -164,7 +164,7 @@
               const insertedPermission = insertPermissions.returning;
               console.log(insertedPermission)
               cache.writeQuery({
-                query: permissions
+                query: allPermissionsList
               })
             } catch (err) {
               console.error(err)
@@ -190,13 +190,13 @@
       title: 'Add New Permission'
     },
     apollo: {
-      roles: {
+      allRolesList: {
         prefetch: true,
-        query: roles
+        query: allRolesList
       },
-      users: {
+      allUsersList: {
         prefetch: true,
-        query: users
+        query: allUsersList
       },
     }
   }

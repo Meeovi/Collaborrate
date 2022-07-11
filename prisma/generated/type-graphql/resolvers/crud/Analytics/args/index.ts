@@ -1,0 +1,12 @@
+export { AggregateAnalyticsArgs } from "./AggregateAnalyticsArgs";
+export { CreateManyAnalyticsArgs } from "./CreateManyAnalyticsArgs";
+export { CreateOneAnalyticsArgs } from "./CreateOneAnalyticsArgs";
+export { DeleteManyAnalyticsArgs } from "./DeleteManyAnalyticsArgs";
+export { DeleteOneAnalyticsArgs } from "./DeleteOneAnalyticsArgs";
+export { FindFirstAnalyticsArgs } from "./FindFirstAnalyticsArgs";
+export { FindManyAnalyticsArgs } from "./FindManyAnalyticsArgs";
+export { FindUniqueAnalyticsArgs } from "./FindUniqueAnalyticsArgs";
+export { GroupByAnalyticsArgs } from "./GroupByAnalyticsArgs";
+export { UpdateManyAnalyticsArgs } from "./UpdateManyAnalyticsArgs";
+export { UpdateOneAnalyticsArgs } from "./UpdateOneAnalyticsArgs";
+export { UpsertOneAnalyticsArgs } from "./UpsertOneAnalyticsArgs";

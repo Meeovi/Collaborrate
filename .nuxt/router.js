@@ -4,6 +4,7 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+<<<<<<< HEAD
 const _bd46fd4a = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 const _35f2836f = () => interopDefault(import('..\\pages\\search.vue' /* webpackChunkName: "pages/search" */))
 const _4eb64cdc = () => interopDefault(import('..\\pages\\Auth\\Forgot.vue' /* webpackChunkName: "pages/Auth/Forgot" */))
@@ -204,6 +205,210 @@ const _71f392b1 = () => interopDefault(import('..\\pages\\Admin\\Edit\\visit\\_i
 const _2b735739 = () => interopDefault(import('..\\pages\\Admin\\Edit\\warehouse\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/warehouse/_id" */))
 const _1a030ec8 = () => interopDefault(import('..\\pages\\Admin\\Edit\\zone\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/zone/_id" */))
 const _2f457988 = () => interopDefault(import('..\\pages\\Admin\\Marketing\\Email\\_id.vue' /* webpackChunkName: "pages/Admin/Marketing/Email/_id" */))
+=======
+const _f59c08d0 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _66675e5c = () => interopDefault(import('..\\pages\\search.vue' /* webpackChunkName: "pages/search" */))
+const _098c5e96 = () => interopDefault(import('..\\pages\\Auth\\Forgot.vue' /* webpackChunkName: "pages/Auth/Forgot" */))
+const _6015c9c7 = () => interopDefault(import('..\\pages\\Auth\\Login.vue' /* webpackChunkName: "pages/Auth/Login" */))
+const _45d525b5 = () => interopDefault(import('..\\pages\\Auth\\Register.vue' /* webpackChunkName: "pages/Auth/Register" */))
+const _3f3094ad = () => interopDefault(import('..\\pages\\Auth\\Reset.vue' /* webpackChunkName: "pages/Auth/Reset" */))
+const _511aaf21 = () => interopDefault(import('..\\pages\\User\\my-account.vue' /* webpackChunkName: "pages/User/my-account" */))
+const _0e6f9a3a = () => interopDefault(import('..\\pages\\User\\notifications.vue' /* webpackChunkName: "pages/User/notifications" */))
+const _ff618a9c = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-agreement.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-agreement" */))
+const _e6e2105a = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-agreement copy.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-agreement copy" */))
+const _60a6e39e = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-article.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-article" */))
+const _afea0b78 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-attribute.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-attribute" */))
+const _727d35af = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-brand.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-brand" */))
+const _4ec082d0 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-campaign.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-campaign" */))
+const _487a20b8 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-case.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-case" */))
+const _308458f4 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-category.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-category" */))
+const _4038c52b = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-channel.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-channel" */))
+const _4a9ce764 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-checklist.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-checklist" */))
+const _1b0aad1a = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-city.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-city" */))
+const _39340db4 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-collection.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-collection" */))
+const _7abffd9a = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-contract.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-contract" */))
+const _5041c384 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-country.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-country" */))
+const _9b97d2a4 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-coupon.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-coupon" */))
+const _0a414519 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-currency.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-currency" */))
+const _04002666 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-customer.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-customer" */))
+const _4a170e89 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-customergroup.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-customergroup" */))
+const _3b53eb30 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-deepdive.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-deepdive" */))
+const _1fcd2344 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-email.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-email" */))
+const _661ec225 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-emailtemplates.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-emailtemplates" */))
+const _04ea2cde = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-eosr.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-eosr" */))
+const _b96cc97c = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-event.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-event" */))
+const _20d82120 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-fullfilment.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-fullfilment" */))
+const _4b24c461 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-gift-certificates.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-gift-certificates" */))
+const _86c45eb4 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-glossary.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-glossary" */))
+const _06ff3356 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-invoice.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-invoice" */))
+const _363a3677 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-knowledgebase.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-knowledgebase" */))
+const _b78f6238 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-lead.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-lead" */))
+const _098b933a = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-meeting.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-meeting" */))
+const _8d6c6c7e = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-newsletter.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-newsletter" */))
+const _111cb9fc = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-newslettersubscriber copy.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-newslettersubscriber copy" */))
+const _42251a5e = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-occassion.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-occassion" */))
+const _0de13c63 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-ooto.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-ooto" */))
+const _b0be820a = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-opportunity.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-opportunity" */))
+const _7a6f4097 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-page.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-page" */))
+const _69faba70 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-partner.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-partner" */))
+const _0be8348f = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-pdftemplates.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-pdftemplates" */))
+const _7b250fd7 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-permission.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-permission" */))
+const _520d81d2 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-product.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-product" */))
+const _295949d1 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-producttype.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-producttype" */))
+const _1046cf7e = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-project.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-project" */))
+const _4905a624 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-quote.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-quote" */))
+const _00fc5cbc = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-report.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-report" */))
+const _44dc3290 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-return.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-return" */))
+const _1cd94ce0 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-review.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-review" */))
+const _667be6cc = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-rewards.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-rewards" */))
+const _375112fe = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-role.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-role" */))
+const _139b349f = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-schedule.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-schedule" */))
+const _11d5614a = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-segment.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-segment" */))
+const _a7de4bbc = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-shipment.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-shipment" */))
+const _32a02d7e = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-shop.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-shop" */))
+const _5b361341 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-staffmembers.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-staffmembers" */))
+const _251619b9 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-state.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-state" */))
+const _65b22be2 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-survey.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-survey" */))
+const _7220277c = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-tag.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-tag" */))
+const _aa41face = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-target.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-target" */))
+const _2ec2a88d = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-task.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-task" */))
+const _5ed3799a = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-taxrate.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-taxrate" */))
+const _3627c162 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-taxrule.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-taxrule" */))
+const _0a69c694 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-ticket.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-ticket" */))
+const _1174b573 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-visit.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-visit" */))
+const _97dfc22a = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-warehouse.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-warehouse" */))
+const _9cc8c67a = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-website.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-website" */))
+const _630797bd = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-workspace.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-workspace" */))
+const _79c42b34 = () => interopDefault(import('..\\pages\\Admin\\Add-New\\add-new-zone.vue' /* webpackChunkName: "pages/Admin/Add-New/add-new-zone" */))
+const _a6af2054 = () => interopDefault(import('..\\pages\\Admin\\Content\\blog.vue' /* webpackChunkName: "pages/Admin/Content/blog" */))
+const _01a3835c = () => interopDefault(import('..\\pages\\Admin\\Content\\glossary.vue' /* webpackChunkName: "pages/Admin/Content/glossary" */))
+const _389f7040 = () => interopDefault(import('..\\pages\\Admin\\Content\\media-manager.vue' /* webpackChunkName: "pages/Admin/Content/media-manager" */))
+const _32f27580 = () => interopDefault(import('..\\pages\\Admin\\Content\\pages.vue' /* webpackChunkName: "pages/Admin/Content/pages" */))
+const _49f27eae = () => interopDefault(import('..\\pages\\Admin\\Content\\projects.vue' /* webpackChunkName: "pages/Admin/Content/projects" */))
+const _b0c93e66 = () => interopDefault(import('..\\pages\\Admin\\Content\\tags.vue' /* webpackChunkName: "pages/Admin/Content/tags" */))
+const _6fd7eb28 = () => interopDefault(import('..\\pages\\Admin\\Content\\websites.vue' /* webpackChunkName: "pages/Admin/Content/websites" */))
+const _3c7a989c = () => interopDefault(import('..\\pages\\Admin\\Content\\workspaces.vue' /* webpackChunkName: "pages/Admin/Content/workspaces" */))
+const _75fda189 = () => interopDefault(import('..\\pages\\Admin\\Customers\\all-customers.vue' /* webpackChunkName: "pages/Admin/Customers/all-customers" */))
+const _d6f16812 = () => interopDefault(import('..\\pages\\Admin\\Customers\\leads.vue' /* webpackChunkName: "pages/Admin/Customers/leads" */))
+const _ca932230 = () => interopDefault(import('..\\pages\\Admin\\Customers\\meetings.vue' /* webpackChunkName: "pages/Admin/Customers/meetings" */))
+const _f697adaa = () => interopDefault(import('..\\pages\\Admin\\Customers\\online-customers.vue' /* webpackChunkName: "pages/Admin/Customers/online-customers" */))
+const _f5a22dde = () => interopDefault(import('..\\pages\\Admin\\Customers\\opportunities.vue' /* webpackChunkName: "pages/Admin/Customers/opportunities" */))
+const _1a3e74f0 = () => interopDefault(import('..\\pages\\Admin\\Customers\\segments.vue' /* webpackChunkName: "pages/Admin/Customers/segments" */))
+const _24ea8914 = () => interopDefault(import('..\\pages\\Admin\\Customers\\social-groups.vue' /* webpackChunkName: "pages/Admin/Customers/social-groups" */))
+const _f30bc506 = () => interopDefault(import('..\\pages\\Admin\\Customers\\to-do.vue' /* webpackChunkName: "pages/Admin/Customers/to-do" */))
+const _e78edfa4 = () => interopDefault(import('..\\pages\\Admin\\Marketing\\checklists.vue' /* webpackChunkName: "pages/Admin/Marketing/checklists" */))
+const _a90ef904 = () => interopDefault(import('..\\pages\\Admin\\Marketing\\communications.vue' /* webpackChunkName: "pages/Admin/Marketing/communications" */))
+const _0bc563e0 = () => interopDefault(import('..\\pages\\Admin\\Marketing\\contracts.vue' /* webpackChunkName: "pages/Admin/Marketing/contracts" */))
+const _4185143a = () => interopDefault(import('..\\pages\\Admin\\Marketing\\events.vue' /* webpackChunkName: "pages/Admin/Marketing/events" */))
+const _65b9aa29 = () => interopDefault(import('..\\pages\\Admin\\Marketing\\invitations.vue' /* webpackChunkName: "pages/Admin/Marketing/invitations" */))
+const _7352894c = () => interopDefault(import('..\\pages\\Admin\\Marketing\\newsletter.vue' /* webpackChunkName: "pages/Admin/Marketing/newsletter" */))
+const _08010d4a = () => interopDefault(import('..\\pages\\Admin\\Marketing\\reviews.vue' /* webpackChunkName: "pages/Admin/Marketing/reviews" */))
+const _26fdf85a = () => interopDefault(import('..\\pages\\Admin\\Marketing\\rewards.vue' /* webpackChunkName: "pages/Admin/Marketing/rewards" */))
+const _bffeefe8 = () => interopDefault(import('..\\pages\\Admin\\Marketing\\seo.vue' /* webpackChunkName: "pages/Admin/Marketing/seo" */))
+const _06fa1b45 = () => interopDefault(import('..\\pages\\Admin\\Marketing\\ticketing.vue' /* webpackChunkName: "pages/Admin/Marketing/ticketing" */))
+const _49e8553b = () => interopDefault(import('..\\pages\\Admin\\Marketing\\training.vue' /* webpackChunkName: "pages/Admin/Marketing/training" */))
+const _ce857fae = () => interopDefault(import('..\\pages\\Admin\\Marketing\\visits.vue' /* webpackChunkName: "pages/Admin/Marketing/visits" */))
+const _9ed7c42a = () => interopDefault(import('..\\pages\\Admin\\Reports\\calendars.vue' /* webpackChunkName: "pages/Admin/Reports/calendars" */))
+const _413fe439 = () => interopDefault(import('..\\pages\\Admin\\Reports\\cases.vue' /* webpackChunkName: "pages/Admin/Reports/cases" */))
+const _32a4772b = () => interopDefault(import('..\\pages\\Admin\\Reports\\deep-dive.vue' /* webpackChunkName: "pages/Admin/Reports/deep-dive" */))
+const _74fccb03 = () => interopDefault(import('..\\pages\\Admin\\Reports\\eosr.vue' /* webpackChunkName: "pages/Admin/Reports/eosr" */))
+const _f559c456 = () => interopDefault(import('..\\pages\\Admin\\Reports\\ooto.vue' /* webpackChunkName: "pages/Admin/Reports/ooto" */))
+const _0fa52d35 = () => interopDefault(import('..\\pages\\Admin\\Reports\\reports.vue' /* webpackChunkName: "pages/Admin/Reports/reports" */))
+const _44d9b51d = () => interopDefault(import('..\\pages\\Admin\\Reports\\statistics.vue' /* webpackChunkName: "pages/Admin/Reports/statistics" */))
+const _41a942cf = () => interopDefault(import('..\\pages\\Admin\\Reports\\surveys.vue' /* webpackChunkName: "pages/Admin/Reports/surveys" */))
+const _d9f07776 = () => interopDefault(import('..\\pages\\Admin\\Reports\\team-scheduler.vue' /* webpackChunkName: "pages/Admin/Reports/team-scheduler" */))
+const _09cd8ab0 = () => interopDefault(import('..\\pages\\Admin\\Sales\\agreements.vue' /* webpackChunkName: "pages/Admin/Sales/agreements" */))
+const _312acb83 = () => interopDefault(import('..\\pages\\Admin\\Sales\\certificates.vue' /* webpackChunkName: "pages/Admin/Sales/certificates" */))
+const _4d1cafec = () => interopDefault(import('..\\pages\\Admin\\Sales\\credit-memos.vue' /* webpackChunkName: "pages/Admin/Sales/credit-memos" */))
+const _48e971a6 = () => interopDefault(import('..\\pages\\Admin\\Sales\\invoices.vue' /* webpackChunkName: "pages/Admin/Sales/invoices" */))
+const _3f65cf6c = () => interopDefault(import('..\\pages\\Admin\\Sales\\orders.vue' /* webpackChunkName: "pages/Admin/Sales/orders" */))
+const _5ec164fe = () => interopDefault(import('..\\pages\\Admin\\Sales\\quotes.vue' /* webpackChunkName: "pages/Admin/Sales/quotes" */))
+const _7c76c868 = () => interopDefault(import('..\\pages\\Admin\\Sales\\returns.vue' /* webpackChunkName: "pages/Admin/Sales/returns" */))
+const _1fcb0162 = () => interopDefault(import('..\\pages\\Admin\\Sales\\shipments.vue' /* webpackChunkName: "pages/Admin/Sales/shipments" */))
+const _233822c8 = () => interopDefault(import('..\\pages\\Admin\\Sales\\transactions.vue' /* webpackChunkName: "pages/Admin/Sales/transactions" */))
+const _7504dbbc = () => interopDefault(import('..\\pages\\Admin\\Shop\\attributes.vue' /* webpackChunkName: "pages/Admin/Shop/attributes" */))
+const _407ec4d2 = () => interopDefault(import('..\\pages\\Admin\\Shop\\brands.vue' /* webpackChunkName: "pages/Admin/Shop/brands" */))
+const _67414467 = () => interopDefault(import('..\\pages\\Admin\\Shop\\categories.vue' /* webpackChunkName: "pages/Admin/Shop/categories" */))
+const _343b825a = () => interopDefault(import('..\\pages\\Admin\\Shop\\collections.vue' /* webpackChunkName: "pages/Admin/Shop/collections" */))
+const _767e6c52 = () => interopDefault(import('..\\pages\\Admin\\Shop\\coupons.vue' /* webpackChunkName: "pages/Admin/Shop/coupons" */))
+const _1da0fc3e = () => interopDefault(import('..\\pages\\Admin\\Shop\\inventory.vue' /* webpackChunkName: "pages/Admin/Shop/inventory" */))
+const _a8224472 = () => interopDefault(import('..\\pages\\Admin\\Shop\\manufacturers.vue' /* webpackChunkName: "pages/Admin/Shop/manufacturers" */))
+const _6ea77548 = () => interopDefault(import('..\\pages\\Admin\\Shop\\occassions.vue' /* webpackChunkName: "pages/Admin/Shop/occassions" */))
+const _69f4a794 = () => interopDefault(import('..\\pages\\Admin\\Shop\\partners.vue' /* webpackChunkName: "pages/Admin/Shop/partners" */))
+const _dd8e86c0 = () => interopDefault(import('..\\pages\\Admin\\Shop\\product-types.vue' /* webpackChunkName: "pages/Admin/Shop/product-types" */))
+const _04508722 = () => interopDefault(import('..\\pages\\Admin\\Shop\\products.vue' /* webpackChunkName: "pages/Admin/Shop/products" */))
+const _5b18da7c = () => interopDefault(import('..\\pages\\Admin\\Shop\\shops.vue' /* webpackChunkName: "pages/Admin/Shop/shops" */))
+const _3a1d025b = () => interopDefault(import('..\\pages\\Admin\\Shop\\warehouses.vue' /* webpackChunkName: "pages/Admin/Shop/warehouses" */))
+const _2b8822d3 = () => interopDefault(import('..\\pages\\Admin\\Shop\\wishlists.vue' /* webpackChunkName: "pages/Admin/Shop/wishlists" */))
+const _11cb2130 = () => interopDefault(import('..\\pages\\Admin\\System\\export-management.vue' /* webpackChunkName: "pages/Admin/System/export-management" */))
+const _7a2e26a8 = () => interopDefault(import('..\\pages\\Admin\\System\\general-settings.vue' /* webpackChunkName: "pages/Admin/System/general-settings" */))
+const _358a0f57 = () => interopDefault(import('..\\pages\\Admin\\System\\import-management.vue' /* webpackChunkName: "pages/Admin/System/import-management" */))
+const _72c4f8e3 = () => interopDefault(import('..\\pages\\Admin\\System\\integrations.vue' /* webpackChunkName: "pages/Admin/System/integrations" */))
+const _02a33f8a = () => interopDefault(import('..\\pages\\Admin\\System\\knowledgebase.vue' /* webpackChunkName: "pages/Admin/System/knowledgebase" */))
+const _d44744cc = () => interopDefault(import('..\\pages\\Admin\\System\\role-manager.vue' /* webpackChunkName: "pages/Admin/System/role-manager" */))
+const _1ef183e7 = () => interopDefault(import('..\\pages\\Admin\\System\\settings.vue' /* webpackChunkName: "pages/Admin/System/settings" */))
+const _4e49ac80 = () => interopDefault(import('..\\pages\\Admin\\Customers\\customer\\newcustomer.vue' /* webpackChunkName: "pages/Admin/Customers/customer/newcustomer" */))
+const _20246e2e = () => interopDefault(import('..\\pages\\Admin\\Edit\\providers\\id.vue' /* webpackChunkName: "pages/Admin/Edit/providers/id" */))
+const _774a9b67 = () => interopDefault(import('..\\pages\\Admin\\Marketing\\Email\\email-designer.vue' /* webpackChunkName: "pages/Admin/Marketing/Email/email-designer" */))
+const _36b5b128 = () => interopDefault(import('..\\pages\\Admin\\Shop\\Product\\Edit\\_id.vue' /* webpackChunkName: "pages/Admin/Shop/Product/Edit/_id" */))
+const _0bf0fe4f = () => interopDefault(import('..\\pages\\Admin\\Edit\\agreement\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/agreement/_id" */))
+const _d8b29aba = () => interopDefault(import('..\\pages\\Admin\\Edit\\article\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/article/_id" */))
+const _67d829fd = () => interopDefault(import('..\\pages\\Admin\\Edit\\attribute\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/attribute/_id" */))
+const _153bc61c = () => interopDefault(import('..\\pages\\Admin\\Edit\\brand\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/brand/_id" */))
+const _c1651e94 = () => interopDefault(import('..\\pages\\Admin\\Edit\\cases\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/cases/_id" */))
+const _5fa9e326 = () => interopDefault(import('..\\pages\\Admin\\Edit\\category\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/category/_id" */))
+const _ac967d94 = () => interopDefault(import('..\\pages\\Admin\\Edit\\channel\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/channel/_id" */))
+const _218d4e33 = () => interopDefault(import('..\\pages\\Admin\\Edit\\checklist\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/checklist/_id" */))
+const _310e9dc0 = () => interopDefault(import('..\\pages\\Admin\\Edit\\city\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/city/_id" */))
+const _fdde42e6 = () => interopDefault(import('..\\pages\\Admin\\Edit\\collection\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/collection/_id" */))
+const _c8744ed0 = () => interopDefault(import('..\\pages\\Admin\\Edit\\contracts\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/contracts/_id" */))
+const _2cebc7fa = () => interopDefault(import('..\\pages\\Admin\\Edit\\country\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/country/_id" */))
+const _727fa285 = () => interopDefault(import('..\\pages\\Admin\\Edit\\coupon\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/coupon/_id" */))
+const _d402be8c = () => interopDefault(import('..\\pages\\Admin\\Edit\\currency\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/currency/_id" */))
+const _be681550 = () => interopDefault(import('..\\pages\\Admin\\Edit\\customergroup\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/customergroup/_id" */))
+const _6a512af8 = () => interopDefault(import('..\\pages\\Admin\\Edit\\deep-dive\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/deep-dive/_id" */))
+const _84abac64 = () => interopDefault(import('..\\pages\\Admin\\Edit\\email_template\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/email_template/_id" */))
+const _8f358982 = () => interopDefault(import('..\\pages\\Admin\\Edit\\event\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/event/_id" */))
+const _1943523b = () => interopDefault(import('..\\pages\\Admin\\Edit\\fullfillment\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/fullfillment/_id" */))
+const _a40bcd1e = () => interopDefault(import('..\\pages\\Admin\\Edit\\gift-certificate\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/gift-certificate/_id" */))
+const _1f5c454d = () => interopDefault(import('..\\pages\\Admin\\Edit\\glossary\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/glossary/_id" */))
+const _f4956b68 = () => interopDefault(import('..\\pages\\Admin\\Edit\\invoice\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/invoice/_id" */))
+const _14aadbac = () => interopDefault(import('..\\pages\\Admin\\Edit\\knowledgebase\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/knowledgebase/_id" */))
+const _2ac34de2 = () => interopDefault(import('..\\pages\\Admin\\Edit\\leads\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/leads/_id" */))
+const _4afd5a04 = () => interopDefault(import('..\\pages\\Admin\\Edit\\meeting\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/meeting/_id" */))
+const _4ce3925c = () => interopDefault(import('..\\pages\\Admin\\Edit\\newsletter\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/newsletter/_id" */))
+const _46401f6a = () => interopDefault(import('..\\pages\\Admin\\Edit\\newslettersubscriber\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/newslettersubscriber/_id" */))
+const _551febba = () => interopDefault(import('..\\pages\\Admin\\Edit\\occassion\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/occassion/_id" */))
+const _8e2f17a0 = () => interopDefault(import('..\\pages\\Admin\\Edit\\ooto\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/ooto/_id" */))
+const _2a0e5208 = () => interopDefault(import('..\\pages\\Admin\\Edit\\opportunities\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/opportunities/_id" */))
+const _2138f07c = () => interopDefault(import('..\\pages\\Admin\\Edit\\page\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/page/_id" */))
+const _0cbb61de = () => interopDefault(import('..\\pages\\Admin\\Edit\\partner\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/partner/_id" */))
+const _4c3117e4 = () => interopDefault(import('..\\pages\\Admin\\Edit\\pdf_template\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/pdf_template/_id" */))
+const _bd4d6308 = () => interopDefault(import('..\\pages\\Admin\\Edit\\permission\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/permission/_id" */))
+const _70ee4a5a = () => interopDefault(import('..\\pages\\Admin\\Edit\\product-type\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/product-type/_id" */))
+const _580f9aca = () => interopDefault(import('..\\pages\\Admin\\Edit\\product\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/product/_id" */))
+const _7b84431e = () => interopDefault(import('..\\pages\\Admin\\Edit\\projects\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/projects/_id" */))
+const _23e6d454 = () => interopDefault(import('..\\pages\\Admin\\Edit\\quotes\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/quotes/_id" */))
+const _a8521592 = () => interopDefault(import('..\\pages\\Admin\\Edit\\report\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/report/_id" */))
+const _4b576e8a = () => interopDefault(import('..\\pages\\Admin\\Edit\\return\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/return/_id" */))
+const _61fe7b93 = () => interopDefault(import('..\\pages\\Admin\\Edit\\review\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/review/_id" */))
+const _fdc3f4c8 = () => interopDefault(import('..\\pages\\Admin\\Edit\\reward\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/reward/_id" */))
+const _526d8675 = () => interopDefault(import('..\\pages\\Admin\\Edit\\role\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/role/_id" */))
+const _a9f1d5f4 = () => interopDefault(import('..\\pages\\Admin\\Edit\\segment\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/segment/_id" */))
+const _0effc951 = () => interopDefault(import('..\\pages\\Admin\\Edit\\shipment\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/shipment/_id" */))
+const _ec675e08 = () => interopDefault(import('..\\pages\\Admin\\Edit\\shops\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/shops/_id" */))
+const _43c82f28 = () => interopDefault(import('..\\pages\\Admin\\Edit\\state\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/state/_id" */))
+const _043113ff = () => interopDefault(import('..\\pages\\Admin\\Edit\\tag\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/tag/_id" */))
+const _301b1d0c = () => interopDefault(import('..\\pages\\Admin\\Edit\\target\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/target/_id" */))
+const _1c6404cb = () => interopDefault(import('..\\pages\\Admin\\Edit\\tasks\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/tasks/_id" */))
+const _48866fa4 = () => interopDefault(import('..\\pages\\Admin\\Edit\\taxrate\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/taxrate/_id" */))
+const _630fc4dc = () => interopDefault(import('..\\pages\\Admin\\Edit\\taxrule\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/taxrule/_id" */))
+const _1bf9f25f = () => interopDefault(import('..\\pages\\Admin\\Edit\\ticket\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/ticket/_id" */))
+const _1eb7d7ae = () => interopDefault(import('..\\pages\\Admin\\Edit\\visit\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/visit/_id" */))
+const _bb3a5494 = () => interopDefault(import('..\\pages\\Admin\\Edit\\warehouse\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/warehouse/_id" */))
+const _1f61c002 = () => interopDefault(import('..\\pages\\Admin\\Edit\\zone\\_id.vue' /* webpackChunkName: "pages/Admin/Edit/zone/_id" */))
+const _4f5d945f = () => interopDefault(import('..\\pages\\Admin\\Marketing\\Email\\_id.vue' /* webpackChunkName: "pages/Admin/Marketing/Email/_id" */))
+>>>>>>> a98e424a92b60fb3e673ff0cfc45b84cd321f0e8
 
 const emptyFn = () => {}
 
@@ -513,6 +718,10 @@ export const routerOptions = {
     component: _46cc322e,
     name: "Admin-Add-New-add-new-warehouse___en"
   }, {
+    path: "/Admin/Add-New/add-new-website",
+    component: _9cc8c67a,
+    name: "Admin-Add-New-add-new-website___en"
+  }, {
     path: "/Admin/Add-New/add-new-workspace",
     component: _1478aa00,
     name: "Admin-Add-New-add-new-workspace___en"
@@ -544,6 +753,10 @@ export const routerOptions = {
     path: "/Admin/Content/tags",
     component: _0c923caa,
     name: "Admin-Content-tags___en"
+  }, {
+    path: "/Admin/Content/websites",
+    component: _6fd7eb28,
+    name: "Admin-Content-websites___en"
   }, {
     path: "/Admin/Content/workspaces",
     component: _54ab1462,
@@ -1097,6 +1310,10 @@ export const routerOptions = {
     component: _46cc322e,
     name: "Admin-Add-New-add-new-warehouse___es"
   }, {
+    path: "/es/Admin/Add-New/add-new-website",
+    component: _9cc8c67a,
+    name: "Admin-Add-New-add-new-website___es"
+  }, {
     path: "/es/Admin/Add-New/add-new-workspace",
     component: _1478aa00,
     name: "Admin-Add-New-add-new-workspace___es"
@@ -1128,6 +1345,10 @@ export const routerOptions = {
     path: "/es/Admin/Content/tags",
     component: _0c923caa,
     name: "Admin-Content-tags___es"
+  }, {
+    path: "/es/Admin/Content/websites",
+    component: _6fd7eb28,
+    name: "Admin-Content-websites___es"
   }, {
     path: "/es/Admin/Content/workspaces",
     component: _54ab1462,
@@ -1621,6 +1842,10 @@ export const routerOptions = {
     component: _46cc322e,
     name: "Admin-Add-New-add-new-warehouse___fr"
   }, {
+    path: "/fr/Admin/Add-New/add-new-website",
+    component: _9cc8c67a,
+    name: "Admin-Add-New-add-new-website___fr"
+  }, {
     path: "/fr/Admin/Add-New/add-new-workspace",
     component: _1478aa00,
     name: "Admin-Add-New-add-new-workspace___fr"
@@ -1652,6 +1877,10 @@ export const routerOptions = {
     path: "/fr/Admin/Content/tags",
     component: _0c923caa,
     name: "Admin-Content-tags___fr"
+  }, {
+    path: "/fr/Admin/Content/websites",
+    component: _6fd7eb28,
+    name: "Admin-Content-websites___fr"
   }, {
     path: "/fr/Admin/Content/workspaces",
     component: _54ab1462,

@@ -1,11 +1,12 @@
 query MyQuery {
   allWebhooksList {
-    id
-    headers
-    delete
-    created_at
     create
+    createdAt
+    delete
+    headers
+    id
     name
+    nodeId
     publish
     retrieve
     unpublish

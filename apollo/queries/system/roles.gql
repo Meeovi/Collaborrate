@@ -1,8 +1,9 @@
 query MyQuery {
   allRolesList {
-    id
-    created_at
     content
-    role_name
+    createdAt
+    id
+    nodeId
+    roleName
   }
 }

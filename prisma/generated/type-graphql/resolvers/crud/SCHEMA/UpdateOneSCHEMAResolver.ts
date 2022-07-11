@@ -1,0 +1,22 @@
+import * as TypeGraphQL from "type-graphql";
+import graphqlFields from "graphql-fields";
+import { GraphQLResolveInfo } from "graphql";
+import { UpdateOneSCHEMAArgs } from "./args/UpdateOneSCHEMAArgs";
+import { SCHEMA } from "../../../models/SCHEMA";
+import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
+
+@TypeGraphQL.Resolver(_of => SCHEMA)
+export class UpdateOneSCHEMAResolver {
+  @TypeGraphQL.Mutation(_returns => SCHEMA, {
+    nullable: true
+  })
+  async updateOneSCHEMA(@TypeGraphQL.Ctx() ctx: any, @TypeGraphQL.Info() info: GraphQLResolveInfo, @TypeGraphQL.Args() args: UpdateOneSCHEMAArgs): Promise<SCHEMA | null> {
+    const { _count } = transformFields(
+      graphqlFields(info as any)
+    );
+    return getPrismaFromContext(ctx).sCHEMA.update({
+      ...args,
+      ...(_count && transformCountFieldIntoSelectRelationsCount(_count)),
+    });
+  }
+}

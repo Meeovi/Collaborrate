@@ -19,7 +19,7 @@
                     </th>
                     <th scope="col" class="generalSettingsAddOptions">
                       <li>
-                        <FormulateInput type="submit" label="Save" @click="addGeneralSettings" />
+                        <input type="submit" label="Save" @click="addGeneralSettings" />
                       </li>
                     </th>
                   </tr>
@@ -28,34 +28,31 @@
                   <tr>
                     <td style="text-align: right;">Site Title</td>
                     <td>
-                      <FormulateInput v-model="siteTitle" type="text" required />
+                      <input v-model="siteTitle" type="text" required />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Site Tagline</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="text" name="Type">
-                      </FormulateInput>
+                      <input v-model="tagline" type="text" name="Type" />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Site Website Address (URL)</td>
                     <td>
-                      <FormulateInput v-model="siteUrl" type="text" name="Type">
-                      </FormulateInput>
+                      <input v-model="siteUrl" type="text" name="Type" />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Adminstration Email Address</td>
                     <td>
-                      <FormulateInput v-model="siteAdminEmail" type="text" name="Type">
-                      </FormulateInput>
+                      <input v-model="siteAdminEmail" type="text" name="Type" />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Your Industry</td>
                     <td>
-                      <FormulateInput v-model="value"
+                      <input v-model="value"
                         :options="{first: 'Apps and Games', second: 'Athletic/Sporting Goods', third: 'Arts and Design', fourth: 'Auto Parts'}"
                         type="select" placeholder="Select an option" label="--Please Select--" />
                     </td>
@@ -84,7 +81,7 @@
                     </th>
                     <th scope="col" class="generalSettingsAddOptions">
                       <li>
-                        <FormulateInput type="submit" label="Save" @click="addGeneralSettings" />
+                        <input type="submit" label="Save" @click="addGeneralSettings" />
                       </li>
                     </th>
                   </tr>
@@ -93,16 +90,15 @@
                   <tr>
                     <td style="text-align: right;">AWS S3 API Key</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="text" required
+                      <input v-model="tagline" type="text" required
                         label="AWS S3 is a storage service by Amazon." />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Google Drive API Key</td>
                     <td>
-                      <FormulateInput v-model="tagline" type="text" name="Type"
-                        label="Google Drive is a personal cloud storage service by Google.">
-                      </FormulateInput>
+                      <input v-model="tagline" type="text" name="Type"
+                        label="Google Drive is a personal cloud storage service by Google." />
                     </td>
                   </tr>
                 </tbody>
@@ -129,7 +125,7 @@
                     </th>
                     <th scope="col" class="generalSettingsAddOptions">
                       <li>
-                        <FormulateInput type="submit" label="Save" @click="addGeneralSettings" />
+                        <input type="submit" label="Save" @click="addGeneralSettings" />
                       </li>
                     </th>
                   </tr>
@@ -138,21 +134,21 @@
                   <tr>
                     <td style="text-align: right;">Responsive friendly upload</td>
                     <td>
-                      <FormulateInput v-model="value" :options="{first: 'OFF', second: 'ON'}" type="radio"
+                      <input v-model="value" :options="{first: 'OFF', second: 'ON'}" type="radio"
                         label="Enabling this option will generate multiple formats (small, medium and large) of the uploaded asset." />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Size Optimization</td>
                     <td>
-                      <FormulateInput v-model="tagline" :options="{first: 'OFF', second: 'ON'}" type="radio"
+                      <input v-model="tagline" :options="{first: 'OFF', second: 'ON'}" type="radio"
                         label="Enabling this option will reduce the image size and slightly reduce its quality." />
                     </td>
                   </tr>
                   <tr>
                     <td style="text-align: right;">Auto Orientation</td>
                     <td>
-                      <FormulateInput v-model="siteUrl" :options="{first: 'OFF', second: 'ON'}" type="radio"
+                      <input v-model="siteUrl" :options="{first: 'OFF', second: 'ON'}" type="radio"
                         label="Enabling this option will automatically rotate the image according to EXIF orientation tag." />
                     </td>
                   </tr>
@@ -180,7 +176,7 @@
                     </th>
                     <th scope="col" class="generalSettingsAddOptions">
                       <li>
-                        <FormulateInput type="submit" label="Save" @click="addGeneralSettings" />
+                        <input type="submit" label="Save" @click="addGeneralSettings" />
                       </li>
                     </th>
                   </tr>
@@ -189,7 +185,7 @@
                   <tr>
                     <td style="text-align: right;">Translations</td>
                     <td>
-                      <FormulateInput v-model="languages"
+                      <input v-model="languages"
                         :options="{first: 'First', second: 'Second', third: 'Third', fourth: 'Fourth'}" type="select"
                         placeholder="Select an option" label="List of store languages" />
                     </td>
@@ -212,7 +208,7 @@ import gql from "graphql-tag";
 import providersettings from '~/components/settings/providersettings';
 import apitokensettings from '~/components/settings/apitokensettings';
 import webhooks from '~/components/settings/webhooks'
-import { generalSettings } from "~/apollo/queries/system/settingsgeneral";
+import { allGeneralSettingsList } from "~/apollo/queries/system/settingsgeneral";
 
 const ADD_GENERAL_SETTINGS = gql `
     mutation ($siteTitle:String!,$tagline:String,$siteUrl:String,$siteAdminEmail:String,$languages:String,$value:String){
@@ -271,7 +267,7 @@ export default {
               const insertedGeneralSettings = insertGeneralSettingss.returning;
               console.log(insertedGeneralSettings)
               cache.writeQuery({
-                query: generalSettings
+                query: allGeneralSettingsList
               })
             } catch (err) {
               console.error(err)

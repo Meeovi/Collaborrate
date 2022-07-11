@@ -1,0 +1,12 @@
+export { AggregateTax_categoryArgs } from "./AggregateTax_categoryArgs";
+export { CreateManyTax_categoryArgs } from "./CreateManyTax_categoryArgs";
+export { CreateOneTax_categoryArgs } from "./CreateOneTax_categoryArgs";
+export { DeleteManyTax_categoryArgs } from "./DeleteManyTax_categoryArgs";
+export { DeleteOneTax_categoryArgs } from "./DeleteOneTax_categoryArgs";
+export { FindFirstTax_categoryArgs } from "./FindFirstTax_categoryArgs";
+export { FindManyTax_categoryArgs } from "./FindManyTax_categoryArgs";
+export { FindUniqueTax_categoryArgs } from "./FindUniqueTax_categoryArgs";
+export { GroupByTax_categoryArgs } from "./GroupByTax_categoryArgs";
+export { UpdateManyTax_categoryArgs } from "./UpdateManyTax_categoryArgs";
+export { UpdateOneTax_categoryArgs } from "./UpdateOneTax_categoryArgs";
+export { UpsertOneTax_categoryArgs } from "./UpsertOneTax_categoryArgs";

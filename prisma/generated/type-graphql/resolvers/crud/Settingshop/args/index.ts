@@ -1,0 +1,12 @@
+export { AggregateSettingshopArgs } from "./AggregateSettingshopArgs";
+export { CreateManySettingshopArgs } from "./CreateManySettingshopArgs";
+export { CreateOneSettingshopArgs } from "./CreateOneSettingshopArgs";
+export { DeleteManySettingshopArgs } from "./DeleteManySettingshopArgs";
+export { DeleteOneSettingshopArgs } from "./DeleteOneSettingshopArgs";
+export { FindFirstSettingshopArgs } from "./FindFirstSettingshopArgs";
+export { FindManySettingshopArgs } from "./FindManySettingshopArgs";
+export { FindUniqueSettingshopArgs } from "./FindUniqueSettingshopArgs";
+export { GroupBySettingshopArgs } from "./GroupBySettingshopArgs";
+export { UpdateManySettingshopArgs } from "./UpdateManySettingshopArgs";
+export { UpdateOneSettingshopArgs } from "./UpdateOneSettingshopArgs";
+export { UpsertOneSettingshopArgs } from "./UpsertOneSettingshopArgs";

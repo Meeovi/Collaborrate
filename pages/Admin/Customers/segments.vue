@@ -43,7 +43,7 @@
 
 <script>
  import  allSegmentsList from '~/apollo/queries/customers/segments'
- import  allWebsitesList from '~/apollo/queries/shop/website'
+ import  allWebsitesList from '~/apollo/queries/content/website'
  import  allCategoriesList from '~/apollo/queries/shop/categories'
 
 export default {

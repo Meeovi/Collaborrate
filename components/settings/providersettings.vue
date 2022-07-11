@@ -19,7 +19,7 @@
                     <th>Image</th>
                   </tr>
                 </thead>
-                <tbody v-for="providers in providers" :key="providers.id">
+                <tbody v-for="providers in allProvidersList" :key="providers.id">
                   <tr>
                     <td>{{ providers.icon }}</td>
                     <td>{{ providers.name }}</td>
@@ -53,18 +53,18 @@
 </template>
 
 <script>
-import providers from '~/apollo/queries/system/providers'
+import allProvidersList from '~/apollo/queries/system/providers'
 
 export default {
   data() {
     return {
-      providers: [],
+      allProvidersList: [],
     }
   },
   apollo: {
-    providers: {
+    allProvidersList: {
       prefetch: true,
-      query: providers
+      query: allProvidersList
     }
   }, 
 }

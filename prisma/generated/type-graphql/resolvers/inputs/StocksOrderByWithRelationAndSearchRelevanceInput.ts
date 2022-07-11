@@ -1,0 +1,46 @@
+import * as TypeGraphQL from "type-graphql";
+import * as GraphQLScalars from "graphql-scalars";
+import { Prisma } from "@prisma/client";
+import { DecimalJSScalar } from "../../scalars";
+import { StocksOrderByRelevanceInput } from "../inputs/StocksOrderByRelevanceInput";
+import { SortOrder } from "../../enums/SortOrder";
+
+@TypeGraphQL.InputType("StocksOrderByWithRelationAndSearchRelevanceInput", {
+  isAbstract: true
+})
+export class StocksOrderByWithRelationAndSearchRelevanceInput {
+  @TypeGraphQL.Field(_type => SortOrder, {
+    nullable: true
+  })
+  id?: "asc" | "desc" | undefined;
+
+  @TypeGraphQL.Field(_type => SortOrder, {
+    nullable: true
+  })
+  name?: "asc" | "desc" | undefined;
+
+  @TypeGraphQL.Field(_type => SortOrder, {
+    nullable: true
+  })
+  enabled?: "asc" | "desc" | undefined;
+
+  @TypeGraphQL.Field(_type => SortOrder, {
+    nullable: true
+  })
+  description?: "asc" | "desc" | undefined;
+
+  @TypeGraphQL.Field(_type => SortOrder, {
+    nullable: true
+  })
+  website?: "asc" | "desc" | undefined;
+
+  @TypeGraphQL.Field(_type => SortOrder, {
+    nullable: true
+  })
+  sources?: "asc" | "desc" | undefined;
+
+  @TypeGraphQL.Field(_type => StocksOrderByRelevanceInput, {
+    nullable: true
+  })
+  _relevance?: StocksOrderByRelevanceInput | undefined;
+}

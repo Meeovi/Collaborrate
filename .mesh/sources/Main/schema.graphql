@@ -30107,6 +30107,8 @@ type Website implements Node @key(fields: "nodeId") {
   url: String
   shop: String
   store: String
+  image: String
+  category: String
   """Reads and enables pagination through a set of `Theme`."""
   themesByWebsiteId(
     """Only read the first `n` values of the set."""
@@ -30796,6 +30798,10 @@ enum WebsitesOrderBy {
   SHOP_DESC
   STORE_ASC
   STORE_DESC
+  IMAGE_ASC
+  IMAGE_DESC
+  CATEGORY_ASC
+  CATEGORY_DESC
   PRIMARY_KEY_ASC
   PRIMARY_KEY_DESC
 }
@@ -30814,6 +30820,10 @@ input WebsiteCondition {
   shop: String
   """Checks for equality with the object’s `store` field."""
   store: String
+  """Checks for equality with the object’s `image` field."""
+  image: String
+  """Checks for equality with the object’s `category` field."""
+  category: String
 }
 
 """A connection to a list of `Wishlist` values."""

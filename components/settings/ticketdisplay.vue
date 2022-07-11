@@ -8,18 +8,18 @@
 </template>
 
 <script>
-  import customers from '~/apollo/queries/customers/customerslimit'
+  import allCustomersList from '~/apollo/queries/customers/customerslimit'
 
   export default {
     data() {
       return {
-        customers: [],
+        allCustomersList: [],
       }
     },
     apollo: {
-      customers: {
+      allCustomersList: {
         prefetch: true,
-        query: customers
+        query: allCustomersList
       },
     },
   }

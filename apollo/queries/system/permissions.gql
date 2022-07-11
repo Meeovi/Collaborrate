@@ -1,11 +1,12 @@
 query MyQuery {
   allPermissionsList {
-    id
-    created_at
     content
-    name
     create
+    createdAt
     delete
+    id
+    name
+    nodeId
     read
     role
     update

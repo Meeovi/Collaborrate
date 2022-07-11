@@ -1,0 +1,12 @@
+export { AggregateNewsletter_subscribersArgs } from "./AggregateNewsletter_subscribersArgs";
+export { CreateManyNewsletter_subscribersArgs } from "./CreateManyNewsletter_subscribersArgs";
+export { CreateOneNewsletter_subscribersArgs } from "./CreateOneNewsletter_subscribersArgs";
+export { DeleteManyNewsletter_subscribersArgs } from "./DeleteManyNewsletter_subscribersArgs";
+export { DeleteOneNewsletter_subscribersArgs } from "./DeleteOneNewsletter_subscribersArgs";
+export { FindFirstNewsletter_subscribersArgs } from "./FindFirstNewsletter_subscribersArgs";
+export { FindManyNewsletter_subscribersArgs } from "./FindManyNewsletter_subscribersArgs";
+export { FindUniqueNewsletter_subscribersArgs } from "./FindUniqueNewsletter_subscribersArgs";
+export { GroupByNewsletter_subscribersArgs } from "./GroupByNewsletter_subscribersArgs";
+export { UpdateManyNewsletter_subscribersArgs } from "./UpdateManyNewsletter_subscribersArgs";
+export { UpdateOneNewsletter_subscribersArgs } from "./UpdateOneNewsletter_subscribersArgs";
+export { UpsertOneNewsletter_subscribersArgs } from "./UpsertOneNewsletter_subscribersArgs";

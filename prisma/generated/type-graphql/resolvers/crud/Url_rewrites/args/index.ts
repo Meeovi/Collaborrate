@@ -1,0 +1,12 @@
+export { AggregateUrl_rewritesArgs } from "./AggregateUrl_rewritesArgs";
+export { CreateManyUrl_rewritesArgs } from "./CreateManyUrl_rewritesArgs";
+export { CreateOneUrl_rewritesArgs } from "./CreateOneUrl_rewritesArgs";
+export { DeleteManyUrl_rewritesArgs } from "./DeleteManyUrl_rewritesArgs";
+export { DeleteOneUrl_rewritesArgs } from "./DeleteOneUrl_rewritesArgs";
+export { FindFirstUrl_rewritesArgs } from "./FindFirstUrl_rewritesArgs";
+export { FindManyUrl_rewritesArgs } from "./FindManyUrl_rewritesArgs";
+export { FindUniqueUrl_rewritesArgs } from "./FindUniqueUrl_rewritesArgs";
+export { GroupByUrl_rewritesArgs } from "./GroupByUrl_rewritesArgs";
+export { UpdateManyUrl_rewritesArgs } from "./UpdateManyUrl_rewritesArgs";
+export { UpdateOneUrl_rewritesArgs } from "./UpdateOneUrl_rewritesArgs";
+export { UpsertOneUrl_rewritesArgs } from "./UpsertOneUrl_rewritesArgs";
