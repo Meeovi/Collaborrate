@@ -116,7 +116,7 @@
     "passport": "^0.6.0",
     "passport-github": "^1.1.0",
     "pg-listen": "^1.7.0",
-    "postgraphile": "^4.12.9",
+    "postgraphile": "^4.12.11",
     "prisma-docs-generator": "^0.5.0",
     "sass": "^1.32.13",
     "sass-loader": "^10.1.1",
