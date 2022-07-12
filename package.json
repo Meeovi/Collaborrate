@@ -31,12 +31,11 @@
   ],
   "scripts": {
     "dev": "nuxt && node server/server.js",
-    "start": "nuxt start && forever -w --minUptime 2000 --spinSleepTime 2000 src/server.js",
+    "start": "nuxt start",
     "build": "nuxt build",
     "mesh": "npx graphql-mesh dev --port 4002",
     "mesh-start": "mesh start",
     "mesh-build": "mesh build",
-    "migrate": "node node_modules/db-migrate/bin/db-migrate",
     "generate": "nuxt generate",
     "docs": "npx prisma-docs-generator serve",
     "prisma-dev": "npx prisma generate",
@@ -49,7 +48,6 @@
     "all": "npm-run-all --parallel dev docs mesh prisma-dev"
   },
   "dependencies": {
-    "@fastify/express": "^2.0.0",
     "@graphile-contrib/pg-many-to-many": "^1.0.1",
     "@graphile-contrib/pg-simplify-inflector": "^6.1.0",
     "@graphile/federation": "^0.1.0",
@@ -78,15 +76,12 @@
     "babel-plugin-graphql-tag": "^3.3.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.0",
-    "casbin": "^5.15.2",
-    "casbin-knex-adapter": "^0.7.2",
     "child_process": "^1.0.2",
     "connect-pg-simple": "^7.0.0",
     "core-js": "^3.15.1",
     "cors": "^2.8.5",
     "cross-var": "^1.1.0",
     "csurf": "^1.11.0",
-    "db-migrate": "^0.11.13",
     "debug": "^4.3.4",
     "dotenv": "^16.0.0",
     "dotenv-cli": "^5.1.0",
@@ -103,15 +98,10 @@
     "http-proxy": "^1.18.1",
     "i": "^0.3.7",
     "jquery": "^3.6.0",
-    "knex": "^2.1.0",
-    "knex-firebird-dialect": "^1.2.0",
-    "knex-schema-inspector": "^2.0.2",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "mongoose": "^6.4.2",
     "multer": "^1.4.2",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.3.3",
     "node-cron": "^2.0.3",
     "nodemailer": "^6.7.5",
     "nodemon": "^2.0.16",
@@ -122,26 +112,16 @@
     "nuxt-supabase": "^2.3.1",
     "nuxtjs-darkmode-js-module": "^1.0.3",
     "object-hash": "^2.0.1",
-<<<<<<< HEAD
-    "objection": "^3.0.1",
-    "objection-find": "^3.0.1",
-    "objection-graphql": "^0.4.5",
-    "objection-rest": "^0.5.0",
-    "oracledb": "^5.4.0",
-=======
->>>>>>> a98e424a92b60fb3e673ff0cfc45b84cd321f0e8
     "pa-dss-version": "^1.0.4",
     "passport": "^0.6.0",
     "passport-github": "^1.1.0",
     "pg-listen": "^1.7.0",
     "postgraphile": "^4.12.9",
-    "postgraphile-apollo-server": "^0.1.1",
     "prisma-docs-generator": "^0.5.0",
     "sass": "^1.32.13",
     "sass-loader": "^10.1.1",
     "sqlite3": "^5.0.8",
     "stripe": "^8.184.0",
-    "tedious": "^14.6.1",
     "vue": "^2.7.4",
     "vue-apollo": "^3.1.0",
     "vue-loader": "^15.10.0",
@@ -168,7 +148,6 @@
     "graphql": "^15.8.0",
     "graphql-fields": "^2.0.3",
     "graphql-scalars": "^1.17.0",
-    "hasura-cli": "^2.8.4",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.2",
@@ -199,16 +178,11 @@
     "webp-loader": "^0.6.0"
   },
   "engines": {
-<<<<<<< HEAD
-    "npm": ">=7.0.0",
-    "node": ">=16.0.0"
-=======
     "npm": ">=8.13.2",
     "node": ">=16.14.0"
   },
   "compilerOptions": {
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
->>>>>>> a98e424a92b60fb3e673ff0cfc45b84cd321f0e8
   }
 }
