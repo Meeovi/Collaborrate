@@ -151,7 +151,7 @@
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.2",
-    "imagemin-svgo": "^10.0.0",
+    "imagemin-svgo": "^10.0.1",
     "less": "^3.12.2",
     "lqip-loader": "^2.2.1",
     "netlify-lambda": "^0.4.0",
