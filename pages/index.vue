@@ -1,7 +1,7 @@
 <template>
   <div>
-      <!--<chat />-->
-      <charts />  
+      <!--<chat />
+      <charts />-->  
     <div class="row">
         <sales />
         <orders />
@@ -54,7 +54,7 @@
 
 <script>
 // import  chat from '~/components/chat'
-import  charts from '~/components/dashboard/charts/charts'
+// import  charts from '~/components/dashboard/charts/charts'
 import  Customerslimit from '~/components/customerslimit'
 import  Newcustomers from '~/components/newcustomers'
 import  Reviewslimit from '~/components/reviewslimit'
@@ -74,7 +74,7 @@ export default {
       orders, 
       mostviewed, 
       bestsellers,
-      charts,
+      // charts,
       // chat
   },
 

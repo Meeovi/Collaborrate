@@ -1,1 +1,0 @@
-export { CategoriesWorkspacesArgs } from "./CategoriesWorkspacesArgs";

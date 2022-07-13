@@ -12,12 +12,6 @@ generator docs {
   provider = "node node_modules/prisma-docs-generator"
 }
 
-generator typegraphql {
-  provider = "typegraphql-prisma"
-  output   = "../prisma/generated/type-graphql"
-  emitTranspiledCode = false
-}
-
 model articles {
   id               Int     @id @default(autoincrement())
   name             String
