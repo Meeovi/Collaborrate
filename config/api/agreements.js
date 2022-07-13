@@ -7,7 +7,7 @@ const prisma = new PrismaClient()
 // Body parser, to access `req.body`
 app.use(express.json())
 
-app.agreement(`/api/agreement`, async (req, res) => {
+app.agreement(`/api/agreements`, async (req, res) => {
   const { title, content, authorEmail } = req.body
   const result = await prisma.agreement.create({
     data: {
@@ -20,7 +20,7 @@ app.agreement(`/api/agreement`, async (req, res) => {
   res.json(result)
 })
 
-app.delete(`/api/agreement/:id`, async (req, res) => {
+app.delete(`/api/agreements/:id`, async (req, res) => {
   const { id } = req.params
   const agreement = await prisma.agreement.delete({
     where: {
@@ -30,7 +30,7 @@ app.delete(`/api/agreement/:id`, async (req, res) => {
   res.json(agreement)
 })
 
-app.get(`/api/agreement/:id`, async (req, res) => {
+app.get(`/api/agreements/:id`, async (req, res) => {
   const { id } = req.params
   const agreement = await prisma.agreement.findUnique({
     where: {
