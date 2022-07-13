@@ -65,7 +65,7 @@
     "@nuxtjs/recaptcha": "^1.0.4",
     "@nuxtjs/sentry": "^5.1.6",
     "@prisma/client": "3.16.0-integration-tmp-revert-node14.1",
-    "@sentry/tracing": "^6.16.1",
+    "@sentry/tracing": "^7.6.0",
     "@sentry/vue": "^6.16.1",
     "@vue/composition-api": "^1.6.1",
     "ap-style-title-case": "^1.1.2",
