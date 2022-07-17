@@ -138,7 +138,7 @@
     "js-cookie": "^3.0.1",
     "less": "^3.12.2",
     "lqip-loader": "^2.2.1",
-    "netlify-lambda": "^0.4.0",
+    "netlify-lambda": "^2.0.15",
     "nightwatch": "^1.7.6",
     "node-fetch": "^2.6.1",
     "nodemon": "2.0.16",
