@@ -1,4 +1,4 @@
-query MyQuery {
+query allSettingssalesList {
   allSettingssalesList {
     adwords_conversioncolor
     adwords_conversionformat

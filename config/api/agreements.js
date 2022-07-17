@@ -8,13 +8,14 @@ const prisma = new PrismaClient()
 app.use(express.json())
 
 app.agreement(`/api/agreements`, async (req, res) => {
-  const { title, content, authorEmail } = req.body
+  const { name, content, excerpt, type, image } = req.body
   const result = await prisma.agreement.create({
     data: {
-      title,
+      name,
+      excerpt,
+      type,
       content,
-      published: false,
-      author: { connect: { email: authorEmail } },
+      image,
     },
   })
   res.json(result)
@@ -49,3 +50,7 @@ app.get('/api/feed', async (req, res) => {
   res.json(agreements)
 })
 
+export default {
+  path: '/api',
+  handler: app
+}

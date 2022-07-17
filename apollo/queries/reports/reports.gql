@@ -1,4 +1,4 @@
-query MyQuery {
+query allReportsList {
   allReportsList {
     appliedCoupon
     created

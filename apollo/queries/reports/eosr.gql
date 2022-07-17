@@ -1,4 +1,4 @@
-query MyQuery {
+query allEndofshiftsList {
   allEndofshiftsList {
     content
     createdAt

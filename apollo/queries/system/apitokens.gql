@@ -1,4 +1,4 @@
-query MyQuery {
+query allApitokensList {
   allApitokensList {
     createdAt
     description

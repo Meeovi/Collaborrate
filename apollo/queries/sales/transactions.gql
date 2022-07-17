@@ -1,4 +1,4 @@
-query MyQuery {
+query allTransactionsList {
   allTransactionsList {
     closed
     created

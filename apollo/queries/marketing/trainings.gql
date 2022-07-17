@@ -1,4 +1,4 @@
-query MyQuery {
+query allTrainingsList {
   allTrainingsList {
     id
     grade

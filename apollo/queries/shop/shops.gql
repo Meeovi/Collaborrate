@@ -1,4 +1,4 @@
-query MyQuery {
+query allShopsList {
   allShopsList {
     articles
     categories

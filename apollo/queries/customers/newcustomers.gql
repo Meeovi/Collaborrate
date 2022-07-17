@@ -1,4 +1,4 @@
-query MyQuery {
+query allCustomersListNew {
   allCustomersList(first: 5, orderBy: CUSTOMER_SINCE_ASC) {
     address
     addressTwo

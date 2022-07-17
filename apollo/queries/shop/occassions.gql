@@ -1,4 +1,4 @@
-query MyQuery {
+query allOccassionsList {
   allOccassionsList {
     id
     description

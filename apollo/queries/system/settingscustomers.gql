@@ -1,4 +1,4 @@
-query MyQuery {
+query allSettingscustomersList {
   allSettingscustomersList {
     created_at
     customer_data_lifetime

@@ -1,4 +1,4 @@
-query MyQuery {
+query allReviewsListLimit {
   allReviewsList(first: 5) {
     id
     firstName

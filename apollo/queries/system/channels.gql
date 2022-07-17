@@ -1,4 +1,4 @@
-query MyQuery {
+query allChannelsList {
   allChannelsList {
     id
     default_zone

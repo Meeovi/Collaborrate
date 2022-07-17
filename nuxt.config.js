@@ -43,7 +43,6 @@ export default {
   ],
 
   plugins: [
-    { src: '~/plugins/extensions/postgrest.js', ssr: false },
     { src: '~/plugins/extensions/mdb.client.js', ssr: false },
     { src: '~/plugins/main.js', ssr: false },
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
@@ -178,6 +177,16 @@ netlify: {
   ], */
   
   build: {
-    extend(config, ctx) {},
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.devtool = 'eval-source-map';
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/,
+        });
+      }
+    },
   },
 }

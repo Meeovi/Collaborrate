@@ -1,5 +1,5 @@
-query MyQuery {
-  allInternalization {
+query allInternalizationsList {
+  allInternalizationsList {
     id
     name
     region

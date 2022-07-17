@@ -1,4 +1,4 @@
-query MyQuery {
+query allPdf_templatesList {
   allPdf_templatesList {
     id
     header
