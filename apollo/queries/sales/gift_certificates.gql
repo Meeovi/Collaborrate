@@ -1,4 +1,4 @@
-query MyQuery {
+query allGiftCertificatesList {
   allGiftCertificatesList {
     articles
     categories

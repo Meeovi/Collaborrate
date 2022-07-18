@@ -1,4 +1,4 @@
-query MyQuery {
+query allRewardsList {
   allRewardsList {
     users
     slug

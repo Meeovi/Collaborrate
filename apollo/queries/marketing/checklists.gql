@@ -1,4 +1,4 @@
-query MyQuery {
+query allChecklistsList {
   allChecklistsList {
     country
     createdAt

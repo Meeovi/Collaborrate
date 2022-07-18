@@ -1,4 +1,4 @@
-query MyQuery {
+query allTicketingsList {
   allTicketingsList {
     accountName
     assignedTo

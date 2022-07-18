@@ -1,4 +1,4 @@
-query MyQuery {
+query allUsersList {
   allUsersList {
     id
     first_name

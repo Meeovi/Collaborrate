@@ -1,4 +1,4 @@
-query MyQuery {
+query allTargetsList {
   allTargetsList {
     accountName
     address

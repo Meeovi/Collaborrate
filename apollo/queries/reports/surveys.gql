@@ -1,4 +1,4 @@
-query MyQuery {
+query allSurveysList {
   allSurveysList {
     answer
     assignedTo

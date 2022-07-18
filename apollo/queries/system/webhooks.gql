@@ -1,4 +1,4 @@
-query MyQuery {
+query allWebhooksList {
   allWebhooksList {
     create
     createdAt

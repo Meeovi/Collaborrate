@@ -1,4 +1,4 @@
-query MyQuery {
+query allCustomersListLimit {
   allCustomersList(first: 5) {
     address
     addressTwo

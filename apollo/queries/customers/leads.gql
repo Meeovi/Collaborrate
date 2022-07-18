@@ -1,4 +1,4 @@
-query MyQuery {
+query allLeadsList {
   allLeadsList {
     accountName
     address

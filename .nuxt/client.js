@@ -636,6 +636,13 @@ function hotReloadAPI(_app) {
   let $components = getNuxtChildComponents(_app.$nuxt, [])
 
   $components.forEach(addHotReload.bind(_app))
+
+  if (_app.context.isHMR) {
+    const Components = getMatchedComponents(router.currentRoute)
+    Components.forEach((Component) => {
+      Component.prototype.constructor = Component
+    })
+  }
 }
 
 function addHotReload ($component, depth) {

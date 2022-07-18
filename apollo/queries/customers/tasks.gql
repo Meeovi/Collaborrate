@@ -1,4 +1,4 @@
-query MyQuery {
+query allTasksList {
   allTasksList {
     assignedTo
     contact

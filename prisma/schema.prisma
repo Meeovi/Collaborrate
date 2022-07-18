@@ -3,13 +3,13 @@ generator client {
   previewFeatures = ["fullTextSearch"]
 }
 
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
-
 generator docs {
   provider = "node node_modules/prisma-docs-generator"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:Whurashia1986@db.wyhrhklrokwbwfwkgyoi.supabase.co:5432/postgres"
 }
 
 model articles {
@@ -108,15 +108,6 @@ model comments {
   trainings     trainings[]
 }
 
-model core_store {
-  id          Int     @id @default(autoincrement())
-  key         String? @db.VarChar(255)
-  value       String?
-  type        String? @db.VarChar(255)
-  environment String? @db.VarChar(255)
-  tag         String? @db.VarChar(255)
-}
-
 model countries {
   id          Int         @id @default(autoincrement())
   name        String      @db.VarChar(255)
@@ -163,11 +154,13 @@ model credit_memos {
 model currency_rates {
   import_service String   @id
   usd            Decimal? @db.Money
+  id             BigInt   @unique @default(autoincrement())
 }
 
 model currency_symbols {
   symbol       String   @id
   use_standard Boolean?
+  id           BigInt   @unique @default(autoincrement())
 }
 
 model customers {
@@ -295,35 +288,20 @@ model orders {
 }
 
 model pages {
-  id               Int      @id @default(autoincrement())
+  id               BigInt    @id @default(autoincrement())
   enable_page      Boolean?
-  title            String   @db.VarChar(255)
-  content_title    String?  @db.VarChar(255)
+  title            String
+  content_title    String?
   content          String?
   url_key          String?
   meta_title       String?
   meta_keywords    String?
   meta_description String?
-}
-
-model polls {
-  id          Int       @id @default(autoincrement())
-  name        String
-  excerpt     String?
-  description String?
-  image       String?
-  published   DateTime? @default(now()) @db.Timestamp(6)
-  question    String?
-  response    String?
-  categories  String?
-  articles    String?
-  products    String?
-  customers   String?
-  users       String?
+  createdAt        DateTime? @default(now()) @db.Timestamptz(6)
 }
 
 model product_attribute {
-  id                                Int                     @id @default(autoincrement())
+  id                                BigInt   @id @default(autoincrement())
   default_label                     String?
   attribute_code                    String?
   filter_options                    String?
@@ -336,7 +314,7 @@ model product_attribute {
   visible_catalog_pages_storefront  Boolean?
   used_product_listing              Boolean?
   used_sorting_product_listing      Boolean?
-  prod_id                           BigInt                  @default(autoincrement())
+  prod_id                           BigInt   @default(autoincrement())
   attribute_class                   String?
   attribute_value                   String?
   column_options                    String?
@@ -345,16 +323,7 @@ model product_attribute {
   meta_description                  String?
   meta_name                         Boolean?
   meta_url                          String?
-  products                          products                @relation(fields: [prod_id], references: [id])
-  product_attribute_set             product_attribute_set[]
-}
-
-model product_attribute_set {
-  id                Int               @id @default(autoincrement())
-  name              String            @db.VarChar(255)
-  based_on          String?
-  attribute_id      Int               @default(autoincrement())
-  product_attribute product_attribute @relation(fields: [attribute_id], references: [id])
+  products                          products @relation(fields: [prod_id], references: [id])
 }
 
 model products {
@@ -401,7 +370,7 @@ model products {
   family                          String?
   zone                            String?
   variants                        String?
-  products                        products?           @relation("productsToproducts_related_product", fields: [related_product], references: [id])
+  products                        products?           @relation("productsToproducts_related_product", fields: [related_product], references: [id], onDelete: NoAction, onUpdate: NoAction)
   brands                          brands[]
   coupons                         coupons[]
   credit_memos                    credit_memos[]
@@ -422,7 +391,7 @@ model products {
 }
 
 model quotes {
-  id                          Int       @id @default(autoincrement())
+  id                          BigInt    @id @default(autoincrement())
   name                        String
   grand_total                 String?
   created_at                  DateTime? @default(now()) @db.Timestamp(6)
@@ -469,7 +438,7 @@ model quotes {
 }
 
 model rating {
-  id                 Int      @id @default(autoincrement())
+  id                 BigInt   @id @default(autoincrement())
   default_value      String?
   default_store_view String?
   rating_visibility  String?
@@ -480,7 +449,7 @@ model rating {
 }
 
 model reports {
-  id             Int       @id @default(autoincrement())
+  id             BigInt    @id @default(autoincrement())
   customer       String?
   email          String?
   products       String?
@@ -493,7 +462,7 @@ model reports {
 }
 
 model reviews {
-  id         Int       @id @default(autoincrement())
+  id         BigInt    @id @default(autoincrement())
   first_name String?
   last_name  String?
   content    String?
@@ -519,7 +488,7 @@ model shipments {
 }
 
 model shops {
-  id                Int          @id @default(autoincrement())
+  id                BigInt       @id @default(autoincrement())
   name              String
   description       String?
   image             String?
@@ -546,36 +515,15 @@ model shops {
   country           String?
   physical_store    String?
   type              String?
-  workspaces        workspaces[]
-}
-
-model source {
-  id              Int      @id @default(autoincrement())
-  name            String   @db.VarChar(255)
-  code            Int      @default(autoincrement())
-  enabled         Boolean?
-  description     String?  @db.VarChar(255)
-  latitude        String?
-  longitude       String?
-  pickup_location Boolean?
-  contact_name    String?  @db.VarChar(255)
-  email           String?  @db.VarChar(255)
-  phone           Decimal? @db.Decimal
-  fax             Decimal? @db.Decimal
-  country         String?
-  state           String?
-  city            String?
-  street          String?
-  postcode        Decimal? @db.Decimal
+  workspaces        String?
 }
 
 model special_discounts {
-  id         Int       @id @default(autoincrement())
-  name       String    @db.VarChar(255)
-  excerpt    String?   @db.VarChar(255)
-  discount   Decimal?  @db.Money
+  id         BigInt    @id @default(autoincrement())
+  name       String
+  excerpt    String?
   image      String?
-  published  DateTime? @db.Timestamp(6)
+  published  DateTime? @default(now()) @db.Timestamp(6)
   rewards    String?
   coupons    String?
   expiration DateTime? @db.Date
@@ -584,19 +532,20 @@ model special_discounts {
   products   String?
   customers  String?
   users      String?
+  discount   String?
 }
 
 model states {
-  id          Int         @id @default(autoincrement())
+  id          BigInt      @id @default(autoincrement())
   name        String      @db.VarChar(255)
   description String?
   country     String?
   image       String?
-  trainings   trainings[]
+  trainings   String?
 }
 
 model statistics {
-  id             Int       @id @default(autoincrement())
+  id             BigInt    @id @default(autoincrement())
   name           String    @db.VarChar(255)
   excerpt        String?   @db.VarChar(255)
   description    String?
@@ -615,7 +564,7 @@ model statistics {
 }
 
 model stocks {
-  id          Int      @id @default(autoincrement())
+  id          BigInt   @id @default(autoincrement())
   name        String   @db.VarChar(255)
   enabled     Boolean?
   description String?  @db.VarChar(255)
@@ -624,7 +573,7 @@ model stocks {
 }
 
 model tags {
-  id         Int     @id @default(autoincrement())
+  id         BigInt  @id @default(autoincrement())
   name       String  @db.VarChar(255)
   excerpt    String? @db.VarChar(255)
   categories String?
@@ -635,7 +584,7 @@ model tags {
 }
 
 model tax_rate {
-  id                 Int      @id @default(autoincrement())
+  id                 BigInt   @id @default(autoincrement())
   tax_identifier     String
   zip_post_is_range  Boolean?
   postcode           String?
@@ -648,7 +597,7 @@ model tax_rate {
 }
 
 model tax_rule {
-  id       Int      @id @default(autoincrement())
+  id       BigInt   @id @default(autoincrement())
   name     String   @db.VarChar(255)
   tax_rate String?
   prod_id  BigInt   @default(autoincrement())
@@ -656,7 +605,7 @@ model tax_rule {
 }
 
 model themes {
-  id           Int      @id @default(autoincrement())
+  id           BigInt   @id @default(autoincrement())
   title        String?
   parent_theme String?
   theme_path   String?
@@ -666,7 +615,7 @@ model themes {
 }
 
 model transactions {
-  id                    Int              @id @default(autoincrement())
+  id                    BigInt           @id @default(autoincrement())
   order_id              Int              @default(autoincrement())
   transaction_id        Int              @default(autoincrement())
   parent_transaction_id Int              @default(autoincrement())
@@ -677,39 +626,8 @@ model transactions {
   customer_payment      customer_payment @relation(fields: [payment_method], references: [id])
 }
 
-model upload_file {
-  id                Int       @id @default(autoincrement())
-  name              String    @db.VarChar(255)
-  alternativeText   String?   @db.VarChar(255)
-  caption           String?   @db.VarChar(255)
-  width             Int?
-  height            Int?
-  formats           Json?
-  hash              String    @db.VarChar(255)
-  ext               String?   @db.VarChar(255)
-  mime              String    @db.VarChar(255)
-  size              Decimal   @db.Decimal(10, 2)
-  url               String    @db.VarChar(255)
-  previewUrl        String?   @db.VarChar(255)
-  provider          String    @db.VarChar(255)
-  provider_metadata Json?
-  created_by        Int?
-  updated_by        Int?
-  created_at        DateTime? @default(now()) @db.Timestamptz(6)
-  updated_at        DateTime? @default(now()) @db.Timestamptz(6)
-}
-
-model upload_file_morph {
-  id             Int     @id @default(autoincrement())
-  upload_file_id Int?
-  related_id     Int?
-  related_type   String?
-  field          String?
-  order          Int?
-}
-
 model url_rewrites {
-  id            Int      @id @default(autoincrement())
+  id            BigInt   @id @default(autoincrement())
   request_path  String?
   description   String?  @db.VarChar(255)
   redirect_type Boolean?
@@ -718,7 +636,7 @@ model url_rewrites {
 }
 
 model users {
-  id               Int            @id @default(autoincrement())
+  id               BigInt         @id @default(autoincrement())
   username         String
   first_name       String
   last_name        String?
@@ -728,16 +646,16 @@ model users {
   value            String?
   permissions      String?
   created_at       DateTime?      @default(now()) @db.Timestamptz(6)
-  emails           emails[]
-  mediamanager     mediamanager[]
-  messages         messages[]
-  projects         projects[]
-  workspaces       workspaces[]
+  emails           String?
+  mediamanager     String?
+  messages         String?
+  projects         String?
+  workspaces       String?
 }
 
 model agreements {
-  id           Int            @id @default(autoincrement())
-  reference_id Int            @default(autoincrement())
+  id           BigInt         @id @default(autoincrement())
+  reference_id String
   created      DateTime?      @default(now()) @db.Timestamp(6)
   updated      DateTime?      @default(now()) @db.Timestamp(6)
   content      String?
@@ -745,9 +663,9 @@ model agreements {
   image        String?
   excerpt      String?
   type         String?
-  user_id      Int            @default(autoincrement())
-  shop_id      Int            @default(autoincrement())
-  mediamanager mediamanager[]
+  user_id      String
+  shop_id      String
+  mediamanager String?
 }
 
 model collections {
@@ -783,7 +701,7 @@ model emails {
   media      String?
   staff_id   Int?
   customers  customers @relation(fields: [cust_id], references: [id])
-  users      users?    @relation(fields: [staff_id], references: [id])
+  users      String?
 }
 
 model events {
@@ -832,6 +750,8 @@ model websites {
   url        String?
   shop       String?
   store      String?
+  image      String?
+  category   String?
   themes     themes[]
 }
 
@@ -1080,10 +1000,10 @@ model projects {
   staff_id             Int?
   task_id              BigInt?
   ticket_id            BigInt?
-  customers            customers?   @relation(fields: [cust_id], references: [id])
-  users                users?       @relation(fields: [staff_id], references: [id])
-  tasks                tasks?       @relation(fields: [task_id], references: [id])
-  ticketing            ticketing?   @relation(fields: [ticket_id], references: [id])
+  customers            customers?   @relation(fields: [cust_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users                String?
+  todoLists            todoLists?   @relation(fields: [task_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  ticketing            ticketing?   @relation(fields: [ticket_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
   workspaces           workspaces[]
 }
 
@@ -1143,24 +1063,6 @@ model targets {
   customer_name  String?
   email_opt_out  String?
   donotcall      String?
-}
-
-model tasks {
-  id            BigInt         @id @default(autoincrement())
-  created_at    DateTime?      @default(now()) @db.Timestamptz(6)
-  subject       String?
-  start_date    String?
-  due_date      String?
-  priority      String?
-  description   String?
-  status        String?
-  related_to    String?
-  contact       String?
-  assigned_to   String?
-  date_modified DateTime?      @default(now()) @db.Timestamptz(6)
-  mediamanager  mediamanager[]
-  projects      projects[]
-  workspaces    workspaces[]
 }
 
 model webhooks {
@@ -1327,7 +1229,7 @@ model project_templates {
 }
 
 model rewards {
-  id         Int       @id @default(autoincrement())
+  id         BigInt    @id @default(autoincrement())
   name       String
   slug       String?
   level      String?
@@ -1393,7 +1295,7 @@ model plugins {
 }
 
 model product_types {
-  id               Int      @id @default(autoincrement())
+  id               BigInt   @id @default(autoincrement())
   type_name        String?
   taxes            String?
   isShippable      String?
@@ -1479,7 +1381,7 @@ model messages {
   media      String?
   staff_id   Int?
   customers  customers @relation(fields: [cust_id], references: [id])
-  users      users?    @relation(fields: [staff_id], references: [id])
+  users      String?
 }
 
 model partners {
@@ -1643,7 +1545,7 @@ model brands {
   product      BigInt?
   description  String?
   media        String?
-  products     products?      @relation(fields: [product], references: [id])
+  products     products?      @relation(fields: [product], references: [id], onDelete: NoAction, onUpdate: NoAction)
   mediamanager mediamanager[]
   workspaces   workspaces[]
 }
@@ -1660,7 +1562,7 @@ model manufacturer {
   product     BigInt?
   description String?
   media       String?
-  products    products? @relation(fields: [product], references: [id])
+  products    products? @relation(fields: [product], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
 
 model mediamanager {
@@ -1691,13 +1593,13 @@ model mediamanager {
   task_type                           String?
   members                             Int?
   products                            BigInt?
-  agreements_agreementsTomediamanager agreements? @relation(fields: [agreements], references: [id])
-  customers                           customers?  @relation(fields: [author], references: [id])
-  brands_brandsTomediamanager         brands?     @relation(fields: [brands], references: [id])
-  comments                            comments?   @relation(fields: [comment], references: [id])
-  users                               users?      @relation(fields: [members], references: [id])
-  products_mediamanagerToproducts     products?   @relation(fields: [products], references: [id])
-  tasks                               tasks?      @relation(fields: [task_name], references: [id])
+  agreements_agreementsTomediamanager String?
+  customers                           customers?  @relation(fields: [author], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  brands_brandsTomediamanager         brands?     @relation(fields: [brands], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  comments                            comments?   @relation(fields: [comment], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users                               String?
+  products_mediamanagerToproducts     products?   @relation(fields: [products], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  todoLists                           todoLists?  @relation(fields: [task_name], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
 
 model occassions {
@@ -1710,8 +1612,8 @@ model occassions {
   description                     String?
   products                        BigInt?
   wishlists                       BigInt?
-  products_occassionsToproducts   products?  @relation(fields: [products], references: [id])
-  wishlists_occassionsTowishlists wishlists? @relation(fields: [wishlists], references: [id])
+  products_occassionsToproducts   products?  @relation(fields: [products], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  wishlists_occassionsTowishlists wishlists? @relation(fields: [wishlists], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
 
 model workspaces {
@@ -1731,14 +1633,14 @@ model workspaces {
   projects                        BigInt?
   author                          String?
   media                           String?
-  brands_brandsToworkspaces       brands?     @relation(fields: [brands], references: [id])
-  categories                      categories? @relation(fields: [category], references: [id])
-  customers_customersToworkspaces customers?  @relation(fields: [customers], references: [id])
-  products_productsToworkspaces   products?   @relation(fields: [products], references: [id])
-  projects_projectsToworkspaces   projects?   @relation(fields: [projects], references: [id])
-  shops_shopsToworkspaces         shops?      @relation(fields: [shops], references: [id])
-  tasks_tasksToworkspaces         tasks?      @relation(fields: [tasks], references: [id])
-  users_usersToworkspaces         users?      @relation(fields: [users], references: [id])
+  brands_brandsToworkspaces       brands?     @relation(fields: [brands], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  categories                      categories? @relation(fields: [category], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  customers_customersToworkspaces customers?  @relation(fields: [customers], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  products_productsToworkspaces   products?   @relation(fields: [products], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  projects_projectsToworkspaces   projects?   @relation(fields: [projects], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  shops_shopsToworkspaces         String?
+  todoLists                       todoLists?  @relation(fields: [tasks], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users_usersToworkspaces         String?
 }
 
 model customizations {
@@ -1755,183 +1657,12 @@ model customizations {
   allow_signup String?
 }
 
-model roles {
-  id         Int       @id @default(autoincrement())
-  role_name  String
-  content    String?
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-}
-
-model Audience {
-  objectId  String    @id
-  createdAt DateTime? @db.Timestamptz(6)
-  updatedAt DateTime? @db.Timestamptz(6)
-  name      String?
-  query     String?
-  lastUsed  DateTime? @db.Timestamptz(6)
-  timesUsed Float?
-  rperm     String[]  @map("_rperm")
-  wperm     String[]  @map("_wperm")
-
-  @@map("_Audience")
-}
-
-model GlobalConfig {
-  objectId      String @id
-  params        Json?
-  masterKeyOnly Json?
-
-  @@map("_GlobalConfig")
-}
-
-model GraphQLConfig {
-  objectId String @id
-  config   Json?
-
-  @@map("_GraphQLConfig")
-}
-
-/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
-model Hooks {
-  functionName String?
-  className    String?
-  triggerName  String?
-  url          String?
-
-  @@map("_Hooks")
-  @@ignore
-}
-
-model Idempotency {
-  objectId  String    @id
-  createdAt DateTime? @db.Timestamptz(6)
-  updatedAt DateTime? @db.Timestamptz(6)
-  reqId     String?   @unique
-  expire    DateTime? @db.Timestamptz(6)
-  rperm     String[]  @map("_rperm")
-  wperm     String[]  @map("_wperm")
-
-  @@index([expire])
-  @@map("_Idempotency")
-}
-
-model JobSchedule {
-  objectId      String    @id
-  createdAt     DateTime? @db.Timestamptz(6)
-  updatedAt     DateTime? @db.Timestamptz(6)
-  jobName       String?
-  description   String?
-  params        String?
-  startAfter    String?
-  daysOfWeek    Json?
-  timeOfDay     String?
-  lastRun       Float?
-  repeatMinutes Float?
-  rperm         String[]  @map("_rperm")
-  wperm         String[]  @map("_wperm")
-
-  @@map("_JobSchedule")
-}
-
-model JobStatus {
-  objectId   String    @id
-  createdAt  DateTime? @db.Timestamptz(6)
-  updatedAt  DateTime? @db.Timestamptz(6)
-  jobName    String?
-  source     String?
-  status     String?
-  message    String?
-  params     Json?
-  finishedAt DateTime? @db.Timestamptz(6)
-  rperm      String[]  @map("_rperm")
-  wperm      String[]  @map("_wperm")
-
-  @@map("_JobStatus")
-}
-
-model Join_roles__Role {
-  relatedId String @db.VarChar(120)
-  owningId  String @db.VarChar(120)
-
-  @@id([relatedId, owningId])
-  @@map("_Join:roles:_Role")
-}
-
-model Join_users__Role {
-  relatedId String @db.VarChar(120)
-  owningId  String @db.VarChar(120)
-
-  @@id([relatedId, owningId])
-  @@map("_Join:users:_Role")
-}
-
-model PushStatus {
-  objectId            String    @id
-  createdAt           DateTime? @db.Timestamptz(6)
-  updatedAt           DateTime? @db.Timestamptz(6)
-  pushTime            String?
-  source              String?
-  query               String?
-  payload             String?
-  title               String?
-  expiry              Float?
-  expiration_interval Float?
-  status              String?
-  numSent             Float?
-  numFailed           Float?
-  pushHash            String?
-  errorMessage        Json?
-  sentPerType         Json?
-  failedPerType       Json?
-  sentPerUTCOffset    Json?
-  failedPerUTCOffset  Json?
-  count               Float?
-  rperm               String[]  @map("_rperm")
-  wperm               String[]  @map("_wperm")
-
-  @@map("_PushStatus")
-}
-
-model Role {
-  objectId  String    @id
-  createdAt DateTime? @db.Timestamptz(6)
-  updatedAt DateTime? @db.Timestamptz(6)
-  name      String?   @unique
-  rperm     String[]  @map("_rperm")
-  wperm     String[]  @map("_wperm")
-
-  @@map("_Role")
-}
-
 model SCHEMA {
   className    String   @id @db.VarChar(120)
   schema       Json?
   isParseClass Boolean?
 
   @@map("_SCHEMA")
-}
-
-model User {
-  objectId                      String    @id
-  createdAt                     DateTime? @db.Timestamptz(6)
-  updatedAt                     DateTime? @db.Timestamptz(6)
-  username                      String?   @unique
-  email                         String?   @unique
-  emailVerified                 Boolean?
-  authData                      Json?
-  rperm                         String[]  @map("_rperm")
-  wperm                         String[]  @map("_wperm")
-  hashed_password               String?   @map("_hashed_password")
-  email_verify_token_expires_at DateTime? @map("_email_verify_token_expires_at") @db.Timestamptz(6)
-  email_verify_token            String?   @map("_email_verify_token")
-  account_lockout_expires_at    DateTime? @map("_account_lockout_expires_at") @db.Timestamptz(6)
-  failed_login_count            Float?    @map("_failed_login_count")
-  perishable_token              String?   @map("_perishable_token")
-  perishable_token_expires_at   DateTime? @map("_perishable_token_expires_at") @db.Timestamptz(6)
-  password_changed_at           DateTime? @map("_password_changed_at") @db.Timestamptz(6)
-  password_history              Json?     @map("_password_history")
-
-  @@map("_User")
 }
 
 model invitations {
@@ -1989,11 +1720,11 @@ model trainings {
   meetups                      String?
   lab                          String?
   digiboards                   String?
-  checklist                    checklist? @relation(fields: [checklists], references: [id])
-  comments                     comments?  @relation(fields: [comment], references: [id])
-  countries                    countries? @relation(fields: [country], references: [id])
-  products_productsTotrainings products?  @relation(fields: [products], references: [id])
-  states                       states?    @relation(fields: [state], references: [id])
+  checklist                    checklist? @relation(fields: [checklists], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  comments                     comments?  @relation(fields: [comment], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  countries                    countries? @relation(fields: [country], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  products_productsTotrainings products?  @relation(fields: [products], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  states                       String?
 }
 
 model Endofshift {
@@ -2008,17 +1739,6 @@ model Endofshift {
   whid       String?
 }
 
-model Scheduler {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-  end_date   String?
-  level      String?
-  login      String?
-  notes      String?
-  start_date String?
-  whid       String?
-}
-
 model deepdive {
   id         BigInt    @id @default(autoincrement())
   created_at DateTime? @default(now()) @db.Timestamptz(6)
@@ -2028,4 +1748,50 @@ model deepdive {
   login      String?
   start_date String?
   whid       String?
+}
+
+model userRoles {
+  id         BigInt    @id(map: "role_pkey") @default(autoincrement())
+  role_name  String
+  content    String?
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+model scheduler {
+  id         BigInt    @id(map: "Scheduler_pkey") @default(autoincrement())
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+  endDate    String?
+  level      String?
+  login      String?
+  notes      String?
+  startDate  String?
+  whid       String?
+}
+
+model todoLists {
+  id                           BigInt         @id(map: "tasks_pkey") @default(autoincrement())
+  created_at                   DateTime?      @default(now()) @db.Timestamptz(6)
+  subject                      String?
+  start_date                   String?
+  due_date                     String?
+  priority                     String?
+  description                  String?
+  status                       String?
+  related_to                   String?
+  contact                      String?
+  assigned_to                  String?
+  date_modified                DateTime?      @default(now()) @db.Timestamptz(6)
+  task                         String?
+  checklists                   String?
+  visits                       String?
+  projects                     String?
+  tickets                      String?
+  cases                        String?
+  surveys                      String?
+  articles                     String?
+  endofshift                   String?
+  name                         String?
+  mediamanager                 mediamanager[]
+  projects_projectsTotodoLists projects[]
+  workspaces                   workspaces[]
 }

@@ -1,4 +1,4 @@
-query MyQuery {
+query allSettingshop {
   allSettingshop {
     vendor_transaction_id
     seller_payouts

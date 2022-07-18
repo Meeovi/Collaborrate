@@ -1,4 +1,4 @@
-query MyQuery {
+query allEmailsList {
   allEmailsList {
     id
     cust_id

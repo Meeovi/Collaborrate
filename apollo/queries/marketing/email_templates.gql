@@ -1,4 +1,4 @@
-query MyQuery {
+query allEmail_templatesList {
   allEmail_templatesList {
     id
     height

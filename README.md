@@ -1,47 +1,34 @@
 # AlternateCMS
-AlternateCMS
 
 A powerful, consistent, and flexible headless content management framework. Built using the Nuxtjs framework, AlternateCMS provides headless content management system capabilities for sites of all types. 
 
 ## Features include:
 
-Since AlternateCMS is powered by Nuxtjs it support all of Nuxtjs and Vuejs features and hundreds of modules.
-
-- AlternateCMS supports PostgresSQL, Postgraphile, Supabase, Hasura, and Firebase
+- AlternateCMS supports PostgresSQL, Postgraphile, Supabase, and Hasura with easy integration
 - Blog Functionality with tags
-- Theme and Extensions support
-- Unlimited Products with product attributes and product types
+- Extendible system that supports Nuxtjs and Vuejs modules
+- Inventory Management System with support for Unlimited Products with product attributes and product types, categories, multi-channel creation, graphql
 - Per page & entire system SEO
-- Create To Do Lists
-- Audio and Video management
 - Integrated File System Manager
 - Powerful Search capabilities
 - User authentication and authorization 
-- Graphql support & Rest Apis
+- Graphql support & Rest Apis with Rest Documentation
 - Integrated reporting tools and Sentry integration
 - Paypal & Stripe payment methods
-- Integrated with Netlify
+- Easily deploy with Netlify
 - Enhanced Security with monthly updates
-- Integrated with Bootstrap and Fontawesome
+- Designed with Bootstrap and Fontawesome
 - Multi-lingual support
 - Sales features including creation of agreements, invoices, transactions, returns, Sales reports, and more
-- Charts on main dashboard
-- Built in Rest API documentation
-- Customer management features including creating, deleting customers, users, staff members
+- Dashboard sneek peak with your data
+- Customer management features including creating & managing customers, cases, opportunities, todo lists, meetings, contracts, leads, campaigns, quotes, leads, projects, tickets, and more.
 - Manage cities, countries, states, tax rates, and tax rules
-- Media Upload & Graphql Media Upload
+- Media Manager with support for media comments, watermarks, sharing, downloading, retail, wholesale, multi-channel support, create galleries, save to s3 or filesystem
 - Filterable datatables with export functionality
 - PWA Support
-- Easy integrate with Supabase & Hasura
-- Mobile and Desktop support
-- Docker Support
-- Integrated PM2 support
-- Built in DAM (Digital Assest Management) including managing of images for multi-channels including products, retail, wholesale, multiple sites, commenting, sharing, downloading, watermarks, create galleries, save to S3 or filesystem
-- Built in PIM (Product Information Management) including powerful multi-channel creation, graphql supported apis, categories, products, product types, attributes
-- Built in CRM (Customer Relationship Management) including Cases, Opportunities, Tasks, Accounts, Meetings, Contracts, Leads, Campaigns, Quotes, and more.
+- Mobile, Desktop, Docker, and PM2 support
 - Built in ERP (Enterprise Resource Planning) includes Project Management, Checklist, Error Reporting, Visits, Team Scheduler, Deep Dives, Dashboard Creations.
 - Built in LMS (Learning Management System) includes Course Creation, Assign instructors, students, different forms of media, create digital schools, badges, announcements, training material, integrates with products, polls, checklists, cities, states, countries, create meetups, Digital Boards (digiboards), and labs
-- Built on top of Nuxtjs & VueJS
 
 and much more. Take a look at www.alternatecms.com 
 
@@ -82,7 +69,7 @@ AlternateCMS API Documentation is located at: http://localhost:5858
 
 AlternateCMS will be at: http://localhost:8000
 
-AlternateCMS Graphiql Playground will be at: http://localhost:5000/graphiql
+AlternateCMS Graphiql Playground will be at: http://localhost:4002/graphql
 
 AlternateCMS API Documentation is located at: http://localhost:5858
 

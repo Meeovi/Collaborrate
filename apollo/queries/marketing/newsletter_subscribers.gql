@@ -1,4 +1,4 @@
-query MyQuery {
+query allNewsletterSubscribersList {
   allNewsletterSubscribersList {
     createdAt
     custId
