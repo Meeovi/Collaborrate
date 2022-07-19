@@ -58,16 +58,16 @@ main {
     min-height: 100vh;
 }
 
-.sidenav-menu {
-    top: 50px !important;
-}
-
 @media (min-width: 1400px) {
 
-  #main-navbar {
-    padding-left: 240px;
-    padding-right: 240px;
+    #main-navbar {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
+
+.sidenav-menu {
+    top: 50px !important;
 }
 
 .text-light {
