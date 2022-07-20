@@ -1,3 +1,4 @@
+
 export default {
   name: 'NuxtChild',
   functional: true,

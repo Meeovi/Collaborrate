@@ -16,6 +16,7 @@ import { createStore } from './store.js'
 import nuxt_plugin_plugin_3e3b230d from 'nuxt_plugin_plugin_3e3b230d' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_sentryserver_73891274 from 'nuxt_plugin_sentryserver_73891274' // Source: .\\sentry.server.js (mode: 'server')
 import nuxt_plugin_sentryclient_0dcfa0ec from 'nuxt_plugin_sentryclient_0dcfa0ec' // Source: .\\sentry.client.js (mode: 'client')
+import nuxt_plugin_plugin_b3281f64 from 'nuxt_plugin_plugin_b3281f64' // Source: .\\composition-api\\plugin.mjs (mode: 'all')
 import nuxt_plugin_supabase_9a5acb90 from 'nuxt_plugin_supabase_9a5acb90' // Source: .\\supabase.js (mode: 'all')
 import nuxt_plugin_supabasecookie_15e14c25 from 'nuxt_plugin_supabasecookie_15e14c25' // Source: .\\supabase-cookie.js (mode: 'all')
 import nuxt_plugin_plugin_0c43743a from 'nuxt_plugin_plugin_0c43743a' // Source: .\\nuxt-highcharts\\plugin.js (mode: 'all')
@@ -33,12 +34,12 @@ import nuxt_plugin_metaplugin_557ff44c from 'nuxt_plugin_metaplugin_557ff44c' //
 import nuxt_plugin_iconplugin_5a2799c0 from 'nuxt_plugin_iconplugin_5a2799c0' // Source: .\\pwa\\icon.plugin.js (mode: 'all')
 import nuxt_plugin_axios_f3a5faa0 from 'nuxt_plugin_axios_f3a5faa0' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_moment_4e1ee4e8 from 'nuxt_plugin_moment_4e1ee4e8' // Source: .\\moment.js (mode: 'all')
-import nuxt_plugin_mdbclient_45fda484 from 'nuxt_plugin_mdbclient_45fda484' // Source: ..\\plugins\\extensions\\mdb.client.js (mode: 'client')
 import nuxt_plugin_main_1856e168 from 'nuxt_plugin_main_1856e168' // Source: ..\\plugins\\main.js (mode: 'client')
 import nuxt_plugin_apolloerrorhandler_4a9e745a from 'nuxt_plugin_apolloerrorhandler_4a9e745a' // Source: ..\\plugins\\apollo-error-handler.js (mode: 'client')
 import nuxt_plugin_padss_01fba8ca from 'nuxt_plugin_padss_01fba8ca' // Source: ..\\plugins\\ecommerce\\pa-dss.js (mode: 'client')
 import nuxt_plugin_upload_8ca86cc0 from 'nuxt_plugin_upload_8ca86cc0' // Source: ..\\plugins\\upload.js (mode: 'client')
 import nuxt_plugin_libnuxtclientinitpluginclient1189b8a7_3491f618 from 'nuxt_plugin_libnuxtclientinitpluginclient1189b8a7_3491f618' // Source: .\\lib.nuxt-client-init.plugin.client.1189b8a7.js (mode: 'client')
+import nuxt_plugin_meta_578f86e0 from 'nuxt_plugin_meta_578f86e0' // Source: .\\composition-api\\meta.mjs (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -67,7 +68,7 @@ Vue.component(Nuxt.name, Nuxt)
 
 Object.defineProperty(Vue.prototype, '$nuxt', {
   get() {
-    const globalNuxt = this.$root ? this.$root.$options.$nuxt : null
+    const globalNuxt = this.$root.$options.$nuxt
     if (process.client && !globalNuxt && typeof window !== 'undefined') {
       return window.$nuxt
     }
@@ -92,9 +93,9 @@ function registerModule (path, rawModule, options = {}) {
 }
 
 async function createApp(ssrContext, config = {}) {
-  const store = createStore(ssrContext)
-  const router = await createRouter(ssrContext, config, { store })
+  const router = await createRouter(ssrContext, config)
 
+  const store = createStore(ssrContext)
   // Add this.$router into store actions/mutations
   store.$router = router
 
@@ -176,7 +177,6 @@ async function createApp(ssrContext, config = {}) {
     req: ssrContext ? ssrContext.req : undefined,
     res: ssrContext ? ssrContext.res : undefined,
     beforeRenderFns: ssrContext ? ssrContext.beforeRenderFns : undefined,
-    beforeSerializeFns: ssrContext ? ssrContext.beforeSerializeFns : undefined,
     ssrContext
   })
 
@@ -248,6 +248,10 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_sentryclient_0dcfa0ec(app.context, inject)
   }
 
+  if (typeof nuxt_plugin_plugin_b3281f64 === 'function') {
+    await nuxt_plugin_plugin_b3281f64(app.context, inject)
+  }
+
   if (typeof nuxt_plugin_supabase_9a5acb90 === 'function') {
     await nuxt_plugin_supabase_9a5acb90(app.context, inject)
   }
@@ -316,10 +320,6 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_moment_4e1ee4e8(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_mdbclient_45fda484 === 'function') {
-    await nuxt_plugin_mdbclient_45fda484(app.context, inject)
-  }
-
   if (process.client && typeof nuxt_plugin_main_1856e168 === 'function') {
     await nuxt_plugin_main_1856e168(app.context, inject)
   }
@@ -338,6 +338,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_libnuxtclientinitpluginclient1189b8a7_3491f618 === 'function') {
     await nuxt_plugin_libnuxtclientinitpluginclient1189b8a7_3491f618(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_meta_578f86e0 === 'function') {
+    await nuxt_plugin_meta_578f86e0(app.context, inject)
   }
 
   // Lock enablePreview in context

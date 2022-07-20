@@ -101,18 +101,6 @@
   "SettingsWebhooks": {
     "description": "Auto imported from components/settings/webhooks.vue"
   },
-  "IntegrationsSectionsExtensions": {
-    "description": "Auto imported from components/integrations/sections/extensions.vue"
-  },
-  "IntegrationsSectionsHome": {
-    "description": "Auto imported from components/integrations/sections/home.vue"
-  },
-  "Integrations": {
-    "description": "Auto imported from components/integrations/sections/integrations.vue"
-  },
-  "IntegrationsSectionsThemes": {
-    "description": "Auto imported from components/integrations/sections/themes.vue"
-  },
   "DashboardBestsellers": {
     "description": "Auto imported from components/dashboard/bestsellers/bestsellers.vue"
   },
@@ -139,5 +127,17 @@
   },
   "DashboardSearchterms": {
     "description": "Auto imported from components/dashboard/searchterms/searchterms.vue"
+  },
+  "IntegrationsSectionsExtensions": {
+    "description": "Auto imported from components/integrations/sections/extensions.vue"
+  },
+  "IntegrationsSectionsHome": {
+    "description": "Auto imported from components/integrations/sections/home.vue"
+  },
+  "Integrations": {
+    "description": "Auto imported from components/integrations/sections/integrations.vue"
+  },
+  "IntegrationsSectionsThemes": {
+    "description": "Auto imported from components/integrations/sections/themes.vue"
   }
 }

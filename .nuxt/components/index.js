@@ -32,10 +32,6 @@ export { default as SettingsSalesettings } from '../..\\components\\settings\\sa
 export { default as SettingsShopsettings } from '../..\\components\\settings\\shopsettings.vue'
 export { default as SettingsTicketdisplay } from '../..\\components\\settings\\ticketdisplay.vue'
 export { default as SettingsWebhooks } from '../..\\components\\settings\\webhooks.vue'
-export { default as IntegrationsSectionsExtensions } from '../..\\components\\integrations\\sections\\extensions.vue'
-export { default as IntegrationsSectionsHome } from '../..\\components\\integrations\\sections\\home.vue'
-export { default as Integrations } from '../..\\components\\integrations\\sections\\integrations.vue'
-export { default as IntegrationsSectionsThemes } from '../..\\components\\integrations\\sections\\themes.vue'
 export { default as DashboardBestsellers } from '../..\\components\\dashboard\\bestsellers\\bestsellers.vue'
 export { default as DashboardCharts } from '../..\\components\\dashboard\\charts\\charts.vue'
 export { default as DashboardMediaMediadetails } from '../..\\components\\dashboard\\media\\mediadetails.vue'
@@ -45,6 +41,10 @@ export { default as DashboardMostviewed } from '../..\\components\\dashboard\\mo
 export { default as DashboardOrders } from '../..\\components\\dashboard\\orders\\orders.vue'
 export { default as DashboardSales } from '../..\\components\\dashboard\\sales\\sales.vue'
 export { default as DashboardSearchterms } from '../..\\components\\dashboard\\searchterms\\searchterms.vue'
+export { default as IntegrationsSectionsExtensions } from '../..\\components\\integrations\\sections\\extensions.vue'
+export { default as IntegrationsSectionsHome } from '../..\\components\\integrations\\sections\\home.vue'
+export { default as Integrations } from '../..\\components\\integrations\\sections\\integrations.vue'
+export { default as IntegrationsSectionsThemes } from '../..\\components\\integrations\\sections\\themes.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
