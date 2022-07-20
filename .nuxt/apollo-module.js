@@ -89,12 +89,10 @@ export default (ctx, inject) => {
       let alternativeClientClientConfig
 
         alternativeClientClientConfig = {
-  "httpEndpoint": "https://star-gobbler-68.hasura.app/v1/graphql",
   "browserHttpEndpoint": "/graphql",
   "httpLinkOptions": {
     "credentials": "same-origin",
     "headers": {
-      "x-hasura-admin-secret": "H6RyPGzrnqzzdfmAJk0ykWBOpe92o12MHN0bOLsMNuDP8qKuHrni5fV4dLv2WmPR",
       "content-type": "application/json"
     }
   },
