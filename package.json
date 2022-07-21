@@ -125,7 +125,7 @@
     "webpack": "^4.45.0"
   },
   "devDependencies": {
-    "@nuxt/image": "^0.6.2",
+    "@nuxt/image": "^0.7.1",
     "@nuxtjs/pwa": "^3.3.5",
     "@prisma/client": "^4.1.0",
     "class-validator": "^0.13.2",
