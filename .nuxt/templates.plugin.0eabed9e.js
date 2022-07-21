@@ -1,7 +1,7 @@
 import { loadStripe } from '@stripe/stripe-js/pure'
 
 export default async function (context, inject) {
-  const parsedOptions = {"stripeAccount":"","locale":"en","apiVersion":null}
+  const parsedOptions = {"stripeAccount":"","publishableKey":"'YOUR_STRIPE_PUBLISHABLE_KEY',","locale":"en","apiVersion":null}
 
   let stripePlugin = null
   try {

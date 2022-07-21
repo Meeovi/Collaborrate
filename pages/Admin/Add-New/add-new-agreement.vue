@@ -6,7 +6,7 @@
           <a class="navbar-brand">
             <input type="reset" class="btn btn-warning" value="Reset"></a>
           <a class="navbar-brand">
-            <input type="submit" class="btn btn-warning" value="Save Agreement" @click.prevent="createAgreement()"></a>
+            <input type="submit" class="btn btn-warning" value="Save Agreement" @submit.prevent="createAgreement()"></a>
         </div>
       </nav>
       <br>

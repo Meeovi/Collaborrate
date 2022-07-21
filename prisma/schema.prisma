@@ -24,12 +24,15 @@ model Endofshift {
   whid       String?
 }
 
-model SCHEMA {
-  className    String   @id @db.VarChar(120)
-  schema       Json?
-  isParseClass Boolean?
-
-  @@map("_SCHEMA")
+model Scheduler {
+  id         BigInt    @id @default(autoincrement())
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+  end_date   String?
+  level      String?
+  login      String?
+  notes      String?
+  start_date String?
+  whid       String?
 }
 
 model accounts {
@@ -208,8 +211,6 @@ model categories {
   meta_description String?
   meta_url         String?
   workspaces       String?
-<<<<<<< HEAD
-=======
 }
 
 model channels {
@@ -241,7 +242,6 @@ model checklist {
   media            String?
   prod_id          String?
   trainings        String?
->>>>>>> d61ac2795ed4538d58996740c139c4706fa69c7a
 }
 
 model cities {
@@ -277,8 +277,6 @@ model comments {
   customers     String?
   mediamanager  String?
   trainings     String?
-<<<<<<< HEAD
-=======
 }
 
 model content_type {
@@ -326,7 +324,15 @@ model contracts {
   tax                  String?
   grand_total          String?
   created_at           DateTime? @default(now()) @db.Timestamptz(6)
->>>>>>> d61ac2795ed4538d58996740c139c4706fa69c7a
+}
+
+model core_store {
+  id          Int     @id @default(autoincrement())
+  key         String? @db.VarChar(255)
+  value       String?
+  type        String? @db.VarChar(255)
+  environment String? @db.VarChar(255)
+  tag         String? @db.VarChar(255)
 }
 
 model countries {
@@ -455,8 +461,6 @@ model customers {
   quotes                                   String?
   returns                                  String?
   workspaces                               String?
-<<<<<<< HEAD
-=======
 }
 
 model customizations {
@@ -590,7 +594,6 @@ model general_settings {
   store_contact       String?
   store_contact_two   String?
   customer_support    String?
->>>>>>> d61ac2795ed4538d58996740c139c4706fa69c7a
 }
 
 model gift_certificates {
@@ -826,8 +829,6 @@ model newsletter_subscribers {
   created_at          DateTime? @default(now()) @db.Timestamp(6)
   cust_id             Int       @default(autoincrement())
   customers           String?
-<<<<<<< HEAD
-=======
 }
 
 model occassions {
@@ -871,7 +872,6 @@ model opportunities {
   type                String?
   account_name        String?
   expected_close_date String?
->>>>>>> d61ac2795ed4538d58996740c139c4706fa69c7a
 }
 
 model orders {
@@ -904,8 +904,6 @@ model pages {
   meta_title       String?
   meta_keywords    String?
   meta_description String?
-<<<<<<< HEAD
-=======
 }
 
 model partners {
@@ -980,7 +978,22 @@ model plugins {
   publisher_name  String?
   agree_terms     Boolean?
   publisher_email String?
->>>>>>> d61ac2795ed4538d58996740c139c4706fa69c7a
+}
+
+model polls {
+  id          Int       @id @default(autoincrement())
+  name        String
+  excerpt     String?
+  description String?
+  image       String?
+  published   DateTime? @default(now()) @db.Timestamp(6)
+  question    String?
+  response    String?
+  categories  String?
+  articles    String?
+  products    String?
+  customers   String?
+  users       String?
 }
 
 model product_attribute {
@@ -1008,8 +1021,14 @@ model product_attribute {
   meta_url                          String?
   product_attribute_set             String?
   products                          String?
-<<<<<<< HEAD
-=======
+}
+
+model product_attribute_set {
+  id                Int     @id @default(autoincrement())
+  name              String  @db.VarChar(255)
+  based_on          String?
+  attribute_id      Int     @default(autoincrement())
+  product_attribute String?
 }
 
 model product_types {
@@ -1023,7 +1042,6 @@ model product_types {
   product_type     String?
   prod_id          BigInt  @default(autoincrement())
   products         String?
->>>>>>> d61ac2795ed4538d58996740c139c4706fa69c7a
 }
 
 model products {
@@ -1088,8 +1106,6 @@ model products {
   tax_rule                        String?
   trainings                       String?
   workspaces                      String?
-<<<<<<< HEAD
-=======
 }
 
 model project_templates {
@@ -1148,7 +1164,6 @@ model providers {
   icon             String?
   name             String    @unique(map: "providers.name_unique")
   active           String?
->>>>>>> d61ac2795ed4538d58996740c139c4706fa69c7a
 }
 
 model quotes {
@@ -1245,763 +1260,6 @@ model reviews {
   comment_id Int       @default(autoincrement())
 }
 
-<<<<<<< HEAD
-model shipments {
-  product       String?
-  speed_grade   String?
-  ship_date     DateTime? @default(now()) @db.Timestamp(6)
-  carrier_name  String
-  transit_time  String?
-  tracking_url  String?
-  image         String?
-  id            BigInt    @id @default(autoincrement())
-  client_id     String?
-  client_secret String?
-  country       String?
-  website       String?
-}
-
-model shops {
-  id                Int     @id @default(autoincrement())
-  name              String
-  description       String?
-  image             String?
-  website           String?
-  products          String?
-  articles          String?
-  customers         String?
-  comments          String?
-  coupons           String?
-  categories        String?
-  polls             String?
-  quotes            String?
-  reviews           String?
-  gift_certificates String?
-  rating            String?
-  tags              String?
-  users             String?
-  invoices          String?
-  reports           String?
-  reward_points     String?
-  special_discounts String?
-  statistics        String?
-  stocks            String?
-  country           String?
-  physical_store    String?
-  type              String?
-  workspaces        String?
-}
-
-model special_discounts {
-  id         Int       @id @default(autoincrement())
-  name       String    @db.VarChar(255)
-  excerpt    String?   @db.VarChar(255)
-  discount   Decimal?  @db.Money
-  image      String?
-  published  DateTime? @db.Timestamp(6)
-  rewards    String?
-  coupons    String?
-  expiration DateTime? @db.Date
-  categories String?
-  articles   String?
-  products   String?
-  customers  String?
-  users      String?
-}
-
-model states {
-  id          Int     @id @default(autoincrement())
-  name        String  @db.VarChar(255)
-  description String?
-  country     String?
-  image       String?
-  trainings   String?
-}
-
-model statistics {
-  id             Int       @id @default(autoincrement())
-  name           String    @db.VarChar(255)
-  excerpt        String?   @db.VarChar(255)
-  description    String?
-  image          String?
-  published      DateTime? @db.Timestamp(6)
-  special_offers String?
-  reports        String?
-  rewards        String?
-  coupons        String?
-  expiration     DateTime? @db.Date
-  categories     String?
-  articles       String?
-  products       String?
-  customers      String?
-  users          String?
-}
-
-model stocks {
-  id          Int      @id @default(autoincrement())
-  name        String   @db.VarChar(255)
-  enabled     Boolean?
-  description String?  @db.VarChar(255)
-  website     String?
-  sources     String?
-}
-
-model tags {
-  id         Int     @id @default(autoincrement())
-  name       String  @db.VarChar(255)
-  excerpt    String? @db.VarChar(255)
-  categories String?
-  articles   String?
-  products   String?
-  customers  String?
-  users      String?
-}
-
-model tax_rate {
-  id                 Int      @id @default(autoincrement())
-  tax_identifier     String
-  zip_post_is_range  Boolean?
-  postcode           String?
-  state              String?
-  country            String?
-  rate_percent       String?
-  default_store_view String?
-  prod_id            BigInt   @default(autoincrement())
-  products           String?
-}
-
-model tax_rule {
-  id       Int     @id @default(autoincrement())
-  name     String  @db.VarChar(255)
-  tax_rate String?
-  prod_id  BigInt  @default(autoincrement())
-  products String?
-}
-
-model themes {
-  id           Int      @id @default(autoincrement())
-  title        String?
-  parent_theme String?
-  theme_path   String?
-  action       String?
-  website_id   BigInt   @default(autoincrement())
-  websites     websites @relation(fields: [website_id], references: [id])
-}
-
-model transactions {
-  id                    Int       @id @default(autoincrement())
-  order_id              Int       @default(autoincrement())
-  transaction_id        Int       @default(autoincrement())
-  parent_transaction_id Int       @default(autoincrement())
-  created               DateTime? @default(now()) @db.Timestamp(6)
-  payment_method        BigInt    @default(autoincrement())
-  closed                String?
-  customer_payment      String?
-  orders                String?
-}
-
-model url_rewrites {
-  id            Int      @id @default(autoincrement())
-  request_path  String?
-  description   String?  @db.VarChar(255)
-  redirect_type Boolean?
-  target_path   String?
-  store         String?
-}
-
-model users {
-  id               BigInt    @id @default(autoincrement())
-  username         String
-  first_name       String
-  last_name        String?
-  email            String
-  password         String
-  interface_locale String?
-  value            String?
-  permissions      String?
-  created_at       DateTime? @default(now()) @db.Timestamptz(6)
-  emails           String?
-  mediamanager     String?
-  messages         String?
-  projects         String?
-  workspaces       String?
-}
-
-model agreements {
-  id           BigInt    @id @default(autoincrement())
-  reference_id Int       @default(autoincrement())
-  created      DateTime? @default(now()) @db.Timestamp(6)
-  updated      DateTime? @default(now()) @db.Timestamp(6)
-  content      String?
-  name         String?
-  image        String?
-  excerpt      String?
-  type         String?
-  user_id      Int       @default(autoincrement())
-  shop_id      Int       @default(autoincrement())
-  mediamanager String?
-}
-
-model collections {
-  id               BigInt    @id @default(autoincrement())
-  created_at       DateTime? @default(now()) @db.Timestamptz(6)
-  name             String?
-  description      String?
-  image            String?
-  product          String?
-  meta_title       String?
-  meta_keywords    String?
-  meta_description String?
-}
-
-model customer_group {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-  name       String?
-  tax_class  String?
-  cust_id    Int       @default(autoincrement())
-  customers  String?
-}
-
-model emails {
-  id         Int       @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamp(6)
-  subject    String?
-  content    String?
-  cust_id    Int       @default(autoincrement())
-  bcc        String?
-  cc         String?
-  from       String?
-  media      String?
-  staff_id   Int?
-  customers  String?
-  users      String?
-}
-
-model events {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-  name       String?
-  content    String?
-  tickets    String?
-  image      String?
-  start      String?
-  end        String?
-  category   String?
-  city       String?
-  state      String?
-  country    String?
-  postalcode String?
-}
-
-model returns {
-  id            BigInt    @id @default(autoincrement())
-  created_at    DateTime? @default(now()) @db.Timestamptz(6)
-  name          String?
-  validity      String?
-  return_prefix String?
-  prod_id       BigInt    @default(autoincrement())
-  cust_id       Int       @default(autoincrement())
-  customers     String?
-  products      String?
-}
-
-model segments {
-  id          BigInt    @id @unique(map: "segments.id_unique") @default(autoincrement())
-  created_at  DateTime? @default(now()) @db.Timestamptz(6)
-  name        String?
-  description String?
-  website     String?
-  status      String?
-  apply_to    String?
-  customers   String?
-}
-
-model websites {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-  name       String?
-  url        String?
-  shop       String?
-  store      String?
-  themes     themes[]
-}
-
-model customer_payment {
-  id           BigInt    @id @default(autoincrement())
-  created_at   DateTime? @default(now()) @db.Timestamptz(6)
-  cust_id      Int       @unique(map: "customer_payment.cust_id_unique") @default(autoincrement())
-  payment_info String?
-  provider     String?
-  account_no   BigInt    @unique(map: "customer_payment.account_no_unique") @default(autoincrement())
-  expiry       BigInt?
-  customers    String?
-  transactions String?
-}
-
-model general_settings {
-  id                  BigInt    @id @default(autoincrement())
-  created_at          DateTime? @default(now()) @db.Timestamptz(6)
-  title               String?
-  tagline             String?
-  url                 String?
-  email               String?
-  access_restrictions String?
-  restriction_mode    String?
-  startup_page        String?
-  landing_page        String?
-  http_response       String?
-  store_email         String?
-  store_contact       String?
-  store_contact_two   String?
-  customer_support    String?
-}
-
-model shop_settings {
-  id                       BigInt    @id @default(autoincrement())
-  created_at               DateTime? @default(now()) @db.Timestamptz(6)
-  store_name               String?
-  store_phone              String?
-  store_hours              String?
-  country                  String?
-  region                   String?
-  zipcode                  String?
-  city                     String?
-  address                  String?
-  address_two              String?
-  vat_number               String?
-  allow_state              String?
-  state_required_for       String?
-  allow_countries          String?
-  default_country          String?
-  optional_zip             String?
-  european_union_countries String?
-  top_destinations         String?
-  base_currency            String?
-  default_currency         String?
-  allowed_currency         String?
-}
-
-model fullfillments {
-  id             BigInt    @id @default(autoincrement())
-  created_at     DateTime? @default(now()) @db.Timestamptz(6)
-  name           String?
-  shipping_zones String?
-  company        String?
-  address        String?
-  address_two    String?
-  city           String?
-  state          String?
-  zipcode        String?
-  country        String?
-  country_area   String?   @map("country area")
-  phone          String?
-  pickup         String?
-  stock          String?
-}
-
-model permissions {
-  id         BigInt    @id @unique(map: "permissions.id_unique") @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-  name       String?
-  content    String?
-  create     String?
-  delete     String?
-  read       String?
-  role       String?
-  update     String?
-  users      String?
-}
-
-model warehouse {
-  id          BigInt    @id @unique(map: "warehouse.id_unique") @default(autoincrement())
-  created_at  DateTime? @default(now()) @db.Timestamptz(6)
-  name        String?
-  description String?
-  city        String?
-  state       String?
-  country     String?
-  postal      String?
-  status      String?
-  image       String?
-  products    String?
-  category    String?
-  isPublic    String?
-}
-
-model apitoken {
-  id          BigInt    @id @default(autoincrement())
-  created_at  DateTime? @default(now()) @db.Timestamptz(6)
-  name        String    @unique(map: "apitoken.name_unique")
-  token_type  String?
-  description String?
-  token       BigInt    @unique(map: "apitoken.token_unique")
-}
-
-model cases {
-  id            BigInt    @id @default(autoincrement())
-  created_at    DateTime? @default(now()) @db.Timestamptz(6)
-  case_number   Int?      @db.SmallInt
-  state         String?
-  type          String?
-  subject       String?
-  description   String?
-  resolution    String?
-  priority      String?
-  status        String?
-  account_name  String?
-  assigned_to   String?
-  date_modified DateTime? @default(now()) @db.Timestamptz(6)
-}
-
-model contracts {
-  id                   BigInt    @id @default(autoincrement())
-  contract_title       String?
-  contract_value       String?
-  start_date           String?
-  end_date             String?
-  renewal_reminder     String?
-  customer_signed_date String?
-  company_signed_date  String?
-  status               String?
-  contract_manager     String?
-  account              String?
-  contact              String?
-  description          String?
-  opportunity          String?
-  contract_type        String?
-  currency             String?
-  line_items           String?
-  total                String?
-  discount             String?
-  subtotal             String?
-  shipping             String?
-  shipping_tax         String?
-  tax                  String?
-  grand_total          String?
-  created_at           DateTime? @default(now()) @db.Timestamptz(6)
-}
-
-model internalization {
-  id          BigInt    @id @default(autoincrement())
-  created_at  DateTime? @default(now()) @db.Timestamptz(6)
-  name        String?
-  region      String?
-  description String?
-  default     String?
-  website     String?
-}
-
-model leads {
-  id                      BigInt    @id @default(autoincrement())
-  created_at              DateTime? @default(now()) @db.Timestamptz(6)
-  Prefix                  String?
-  first_name              String?
-  last_name               String?
-  department              String?
-  account_name            String?
-  address                 String?
-  postalcode              String?
-  city                    String?
-  state                   String?
-  country                 String?
-  email                   String?
-  description             String?
-  fax                     String?
-  website                 String?
-  mobile                  String?
-  job_title               String?
-  alt_address             String?
-  alt_postalcode          String?
-  alt_city                String?
-  alt_state               String?
-  alt_country             String?
-  office_phone            String?
-  status                  String?
-  status_description      String?
-  opportunity_amount      String?
-  campaign                String?
-  lead_source             String?
-  lead_source_description String?
-  referred_by             String?
-  customer_name           String?
-}
-
-model opportunities {
-  id                  BigInt    @id @default(autoincrement())
-  created_at          DateTime? @default(now()) @db.Timestamptz(6)
-  name                String?
-  amount              String?
-  sales_stage         String?
-  currency            String?
-  probability         String?
-  next_step           String?
-  description         String?
-  assigned_to         String?
-  lead_source         String?
-  campaign            String?
-  type                String?
-  account_name        String?
-  expected_close_date String?
-}
-
-model projects {
-  id                   BigInt    @id @default(autoincrement())
-  name                 String?
-  project_manager      String?
-  start_date           String?
-  end_date             String?
-  resource             String?
-  considerworkingdays  String?
-  project_template     String?
-  status               String?
-  created_at           DateTime? @default(now()) @db.Timestamptz(6)
-  assignee             String?
-  cust_id              Int?
-  doing                String?
-  done                 String?
-  goal_collaborators   String?
-  goal_measurement     String?
-  goal_name            String?
-  goal_privacy         String?
-  goal_progress_source String?
-  goal_timeperiod      String?
-  goal_updatemethod    String?
-  priority             String?
-  section_rule         String?
-  staff_id             Int?
-  task_id              BigInt?
-  ticket_id            BigInt?
-  customers            String?
-  tasks                String?
-  ticketing            String?
-  users                String?
-  workspaces           String?
-}
-
-model providers {
-  id               BigInt    @id @unique(map: "providers.id_unique") @default(autoincrement())
-  created_at       DateTime? @default(now()) @db.Timestamptz(6)
-  client_id        String?
-  client_secret    String?
-  host_uri         String?
-  redirect_url     String?
-  redirect_url_app String?
-  icon             String?
-  name             String    @unique(map: "providers.name_unique")
-  active           String?
-}
-
-model surveys {
-  id                BigInt    @id @default(autoincrement())
-  created_at        DateTime? @default(now()) @db.Timestamptz(6)
-  name              String?
-  assigned_to       String?
-  status            String?
-  description       String?
-  question          String?
-  answer            String?
-  submit_text       String?
-  satisfied_text    String?
-  neither_text      String?
-  dissatisfied_text String?
-}
-
-model targets {
-  id             BigInt    @id @default(autoincrement())
-  created_at     DateTime? @default(now()) @db.Timestamptz(6)
-  Prefix         String?
-  first_name     String?
-  last_name      String?
-  department     String?
-  account_name   String?
-  address        String?
-  postalcode     String?
-  city           String?
-  state          String?
-  country        String?
-  email          String?
-  description    String?
-  fax            String?
-  website        String?
-  mobile         String?
-  job_title      String?
-  alt_address    String?
-  alt_postalcode String?
-  alt_city       String?
-  alt_state      String?
-  alt_country    String?
-  office_phone   String?
-  customer_name  String?
-  email_opt_out  String?
-  donotcall      String?
-}
-
-model webhooks {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-  name       String    @unique(map: "webhooks.name_unique")
-  url        String
-  headers    String?
-  create     String?
-  retrieve   String?
-  update     String?
-  delete     String?
-  publish    String?
-  unpublish  String?
-}
-
-model meeting {
-  id          BigInt    @id @default(autoincrement())
-  created_at  DateTime? @default(now()) @db.Timestamptz(6)
-  subject     String?
-  start_date  String?
-  end_date    String?
-  duration    String?
-  status      String?
-  related_to  String?
-  reminders   String?
-  content     String?
-  assigned_to String?
-  invitees    String?
-  scheduling  String?
-}
-
-model ooto {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-  login      String?
-  start_date String?
-  end_date   String?
-  note       String?
-  using_time String?
-  location   String?
-}
-
-model accounts {
-  id             BigInt    @id @default(autoincrement())
-  created_at     DateTime? @default(now()) @db.Timestamptz(6)
-  name           String?
-  website        String?
-  office_phone   String?
-  fax            String?
-  email          String?
-  address        String?
-  postalcode     String?
-  city           String?
-  state          String?
-  country        String?
-  assigned_to    String?
-  alt_address    String?
-  alt_postalcode String?
-  alt_city       String?
-  alt_state      String?
-  alt_country    String?
-  type           String?
-  industry       String?
-  employees      String?
-  annual_revenue String?
-  member_of      String?
-  campaign       String?
-}
-
-model email_templates {
-  id              BigInt    @id @default(autoincrement())
-  created_at      DateTime? @default(now()) @db.Timestamptz(6)
-  name            String?
-  assigned_to     String?
-  type            String?
-  active          String?
-  insert_variable String?
-  subject         String?
-  content         String?
-  header          String?
-  footer          String?
-  width           String?
-  height          String?
-  media           String?
-}
-
-model importm {
-  id          BigInt    @id @default(autoincrement())
-  created_at  DateTime? @default(now()) @db.Timestamptz(6)
-  name        String?
-  description String?
-  file        String?
-  url         String?
-  image       String?
-}
-
-model integrations {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-  name       String?
-  content    String?
-  media      String?
-  location   String?
-  category   String?
-}
-
-model knowledgebase {
-  id            BigInt    @id @default(autoincrement())
-  created_at    DateTime? @default(now()) @db.Timestamptz(6)
-  name          String?
-  status        String?
-  revision      String?
-  content       String?
-  resolution    String?
-  author        String?
-  approver      String?
-  date_modified DateTime? @default(now()) @db.Timestamptz(6)
-}
-
-model payments {
-  id               BigInt    @id @unique(map: "payments.id_unique") @default(autoincrement())
-  created_at       DateTime? @default(now()) @db.Timestamptz(6)
-  client_id        String?
-  client_secret    String?
-  host_uri         String?
-  redirect_url     String?
-  redirect_url_app String?
-  icon             String?
-  name             String    @unique(map: "payments.name_unique")
-  active           String?
-  country          String?
-}
-
-model pdf_templates {
-  id            BigInt    @id @default(autoincrement())
-  created_at    DateTime? @default(now()) @db.Timestamptz(6)
-  name          String?
-  assigned_to   String?
-  type          String?
-  active        String?
-  page_size     String?
-  orientation   String?
-  content       String?
-  header        String?
-  footer        String?
-  margin_left   String?
-  margin_right  String?
-  margin_top    String?
-  margin_bottom String?
-  margin_header String?
-  margin_footer String?
-}
-
-model project_templates {
-  id                    BigInt  @id @default(autoincrement())
-  name                  String?
-  status                String?
-  consider_working_days String?
-  priority              String?
-  project_manager       String?
-  resource              String?
-  content               String?
-}
-
-=======
->>>>>>> d61ac2795ed4538d58996740c139c4706fa69c7a
 model rewards {
   id         Int       @id @default(autoincrement())
   name       String
@@ -2017,159 +1275,13 @@ model rewards {
   users      String?
 }
 
-<<<<<<< HEAD
-model checklist {
-  id               BigInt    @id @default(autoincrement())
-  created_at       DateTime? @default(now()) @db.Timestamptz(6)
-  username         String?
-  location         String?
-  regional_manager String?
-  manager          String?
-  description      String?
-  ticket           String?
-  project          String?
-  region           String?
-  country          String?
-  media            String?
-  prod_id          String?
-  trainings        String?
-}
-
-model content_type {
-  id            BigInt    @id @default(autoincrement())
-  created_at    DateTime? @default(now()) @db.Timestamptz(6)
-  text          String?
-  number        Decimal?  @db.Decimal
-  json          Json?     @db.Json
-  link          String?
-  email         String?
-  uid           String?   @db.Uuid
-  date          DateTime? @db.Date
-  time          DateTime? @db.Time(6)
-  timestamp     DateTime? @db.Timestamptz(6)
-  boolean       Boolean?
-  rich_text     String?
-  password      String?
-  media         String?
-  database_name String?
-}
-
-model plugins {
-  id              BigInt    @id @default(autoincrement())
-  created_at      DateTime? @default(now()) @db.Timestamptz(6)
-  name            String?
-  url             String?
-  github_link     String?
-  description     String?
-  logo            String?
-  screenshots     String?
-  last_updated    DateTime? @default(now()) @db.Timestamptz(6)
-  publisher_name  String?
-  agree_terms     Boolean?
-  publisher_email String?
-}
-
-model product_types {
-  id               Int     @id @default(autoincrement())
-  type_name        String?
-  taxes            String?
-  isShippable      String?
-  meta_url         String?
-  meta_description String?
-  filter_options   String?
-  product_type     String?
-  prod_id          BigInt  @default(autoincrement())
-  products         String?
-}
-
-model ticketing {
-  id                           BigInt    @id @default(autoincrement())
-  created_at                   DateTime? @default(now()) @db.Timestamptz(6)
-  name                         String?
-  location                     String?
-  date                         String?
-  severity                     String?
-  team                         String?
-  requester                    String?
-  requester_email              String?
-  content                      String?
-  department                   String?
-  media                        String?
-  projects                     String?
-  ticket_type                  String?
-  comment                      String?
-  products                     String?
-  priority                     String?
-  status                       String?
-  resolution                   String?
-  assigned_to                  String?
-  date_modified                DateTime? @default(now()) @db.Timestamptz(6)
-  account_name                 String?
-  level                        String?
-  projects_projectsToticketing String?
-}
-
-model visits {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-  location   String?
-  username   String?
-  reason     String?
-  content    String?
-  emergency  String?
-  start_date String?
-  end_date   String?
-  task       String?
-  meeting    String?
-}
-
-model channels {
-  id               BigInt    @id @default(autoincrement())
-  created_at       DateTime? @default(now()) @db.Timestamptz(6)
-  code             String?
-  name             String?
-  currency         String?
-  default_lang     String?
-  include_tax      String?
-  default_zone     String?
-  default_shipping String?
-  client_id        String?
-  client_secret    String?
-}
-
-model currencies {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-  code       String?
-  name       String?
-  region     String?
-}
-
-model messages {
+model roles {
   id         Int       @id @default(autoincrement())
-  from       String?
-  created_at DateTime? @default(now()) @db.Timestamp(6)
-  subject    String?
+  role_name  String
   content    String?
-  sender     String?
-  cust_id    Int       @default(autoincrement())
-  media      String?
-  staff_id   Int?
-  customers  String?
-  users      String?
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
 }
 
-model partners {
-  id            BigInt    @id @default(autoincrement())
-  created_at    DateTime? @default(now()) @db.Timestamptz(6)
-  name          String?
-  address       String?
-  city          String?
-  state         String?
-  country       String?
-  isPublic      String?
-  business_type String?
-=======
 model segments {
   id          BigInt    @id @unique(map: "segments.id_unique") @default(autoincrement())
   created_at  DateTime? @default(now()) @db.Timestamptz(6)
@@ -2179,7 +1291,6 @@ model segments {
   status      String?
   apply_to    String?
   customers   String?
->>>>>>> d61ac2795ed4538d58996740c139c4706fa69c7a
 }
 
 model settingscustomers {
@@ -2316,6 +1427,26 @@ model shops {
   workspaces        String?
 }
 
+model source {
+  id              Int      @id @default(autoincrement())
+  name            String   @db.VarChar(255)
+  code            Int      @default(autoincrement())
+  enabled         Boolean?
+  description     String?  @db.VarChar(255)
+  latitude        String?
+  longitude       String?
+  pickup_location Boolean?
+  contact_name    String?  @db.VarChar(255)
+  email           String?  @db.VarChar(255)
+  phone           Decimal? @db.Decimal
+  fax             Decimal? @db.Decimal
+  country         String?
+  state           String?
+  city            String?
+  street          String?
+  postcode        Decimal? @db.Decimal
+}
+
 model special_discounts {
   id         Int       @id @default(autoincrement())
   name       String    @db.VarChar(255)
@@ -2426,6 +1557,24 @@ model targets {
   donotcall      String?
 }
 
+model tasks {
+  id            BigInt    @id @default(autoincrement())
+  created_at    DateTime? @default(now()) @db.Timestamptz(6)
+  subject       String?
+  start_date    String?
+  due_date      String?
+  priority      String?
+  description   String?
+  status        String?
+  related_to    String?
+  contact       String?
+  assigned_to   String?
+  date_modified DateTime? @default(now()) @db.Timestamptz(6)
+  mediamanager  String?
+  projects      String?
+  workspaces    String?
+}
+
 model tax_category {
   id         BigInt    @id @default(autoincrement())
   created_at DateTime? @default(now()) @db.Timestamptz(6)
@@ -2433,17 +1582,6 @@ model tax_category {
   default    String?
 }
 
-<<<<<<< HEAD
-model wishlists {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-  name       String?
-  customers  String?
-  visibility String?
-  products   String?
-  quantity   String?
-  occassions String?
-=======
 model tax_rate {
   id                 Int      @id @default(autoincrement())
   tax_identifier     String
@@ -2455,7 +1593,6 @@ model tax_rate {
   default_store_view String?
   prod_id            BigInt   @default(autoincrement())
   products           String?
->>>>>>> d61ac2795ed4538d58996740c139c4706fa69c7a
 }
 
 model tax_rule {
@@ -2476,177 +1613,6 @@ model themes {
   websites     websites @relation(fields: [website_id], references: [id])
 }
 
-<<<<<<< HEAD
-model dashboards {
-  id            BigInt    @id @default(autoincrement())
-  created_at    DateTime? @default(now()) @db.Timestamptz(6)
-  name          String?
-  client_id     String?
-  client_secret String?
-  privacy       String?
-  category      String?
-  url           String?
-  media         String?
-  task          String?
-  reports       String?
-  tasks         String?
-  projects      String?
-  tickets       String?
-  customers     String?
-  checklists    String?
-  visits        String?
-  users         String?
-  products      String?
-  articles      String?
-  sales         String?
-}
-
-model brands {
-  id           BigInt    @id @default(autoincrement())
-  created_at   DateTime? @default(now()) @db.Timestamptz(6)
-  code         String?
-  name         String?
-  country      String?
-  state        String?
-  isPublic     String?
-  city         String?
-  product      BigInt?
-  description  String?
-  media        String?
-  mediamanager String?
-  products     String?
-  workspaces   String?
-}
-
-model manufacturer {
-  id          BigInt    @id @default(autoincrement())
-  created_at  DateTime? @default(now()) @db.Timestamptz(6)
-  code        String?
-  name        String?
-  country     String?
-  state       String?
-  isPublic    String?
-  city        String?
-  product     BigInt?
-  description String?
-  media       String?
-  products    String?
-}
-
-model mediamanager {
-  id                                  Int       @id @default(autoincrement())
-  created_at                          DateTime? @default(now()) @db.Timestamptz(6)
-  name                                String?
-  description                         String?
-  media                               String?
-  keywords                            String?
-  tags                                String?
-  brands                              BigInt?
-  status                              String?
-  expiration_date                     String?
-  copyright                           String?
-  dimensions                          String?
-  author                              Int?
-  content_type                        String?
-  versions                            String?
-  watermark_name                      String?
-  watermark_description               String?
-  watermark_media                     String?
-  agreements                          Int?
-  albums                              String?
-  comment                             Int?
-  workspace                           String?
-  task_name                           BigInt?
-  task_description                    String?
-  task_type                           String?
-  members                             Int?
-  products                            BigInt?
-  agreements_agreementsTomediamanager String?
-  brands_brandsTomediamanager         String?
-  comments                            String?
-  customers                           String?
-  products_mediamanagerToproducts     String?
-  tasks                               String?
-  users                               String?
-}
-
-model occassions {
-  id                              BigInt    @id @default(autoincrement())
-  created_at                      DateTime? @default(now()) @db.Timestamptz(6)
-  code                            String?
-  name                            String?
-  category                        String?
-  tags                            String?
-  description                     String?
-  products                        BigInt?
-  wishlists                       BigInt?
-  products_occassionsToproducts   String?
-  wishlists_occassionsTowishlists String?
-}
-
-model workspaces {
-  id                              BigInt    @id @default(autoincrement())
-  created_at                      DateTime? @default(now()) @db.Timestamptz(6)
-  code                            String?
-  name                            String?
-  description                     String?
-  customers                       Int?
-  users                           Int?
-  products                        BigInt?
-  tasks                           BigInt?
-  brands                          BigInt?
-  shops                           Int?
-  category                        Int?
-  isPublic                        Boolean?
-  projects                        BigInt?
-  author                          String?
-  media                           String?
-  brands_brandsToworkspaces       String?
-  categories                      String?
-  customers_customersToworkspaces String?
-  products_productsToworkspaces   String?
-  projects_projectsToworkspaces   String?
-  shops_shopsToworkspaces         String?
-  tasks_tasksToworkspaces         String?
-  users_usersToworkspaces         String?
-}
-
-model customizations {
-  id           Int       @id @default(autoincrement())
-  created_at   DateTime? @default(now()) @db.Timestamptz(6)
-  site_name    String?
-  nav_link     String?
-  notification String?
-  banner       String?
-  footer_link  String?
-  announcement String?
-  email        String?
-  site_url     String?
-  allow_signup String?
-}
-
-model SCHEMA {
-  className    String   @id @db.VarChar(120)
-  schema       Json?
-  isParseClass Boolean?
-
-  @@map("_SCHEMA")
-}
-
-model invitations {
-  id                  BigInt    @id @default(autoincrement())
-  created_at          DateTime? @default(now()) @db.Timestamptz(6)
-  invoiceDate         DateTime? @default(now()) @db.Timestamptz(6)
-  email               String?
-  billingAddress      String?
-  shippingAddress     String?
-  orderNumber         String?
-  grandTotalPurchased String?
-  paymentMethod       String?
-  status              String?
-  media               String?
-  content             String?
-=======
 model ticketing {
   id                           BigInt    @id @default(autoincrement())
   created_at                   DateTime? @default(now()) @db.Timestamptz(6)
@@ -2672,7 +1638,6 @@ model ticketing {
   account_name                 String?
   level                        String?
   projects_projectsToticketing String?
->>>>>>> d61ac2795ed4538d58996740c139c4706fa69c7a
 }
 
 model trainings {
@@ -2732,6 +1697,37 @@ model transactions {
   closed                String?
   customer_payment      String?
   orders                String?
+}
+
+model upload_file {
+  id                Int       @id @default(autoincrement())
+  name              String    @db.VarChar(255)
+  alternativeText   String?   @db.VarChar(255)
+  caption           String?   @db.VarChar(255)
+  width             Int?
+  height            Int?
+  formats           Json?
+  hash              String    @db.VarChar(255)
+  ext               String?   @db.VarChar(255)
+  mime              String    @db.VarChar(255)
+  size              Decimal   @db.Decimal(10, 2)
+  url               String    @db.VarChar(255)
+  previewUrl        String?   @db.VarChar(255)
+  provider          String    @db.VarChar(255)
+  provider_metadata Json?
+  created_by        Int?
+  updated_by        Int?
+  created_at        DateTime? @default(now()) @db.Timestamptz(6)
+  updated_at        DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+model upload_file_morph {
+  id             Int     @id @default(autoincrement())
+  upload_file_id Int?
+  related_id     Int?
+  related_type   String?
+  field          String?
+  order          Int?
 }
 
 model url_rewrites {
@@ -2862,302 +1858,4 @@ model zones {
   type       String?
   country    String?
   code       String?
-}
-
-model Scheduler {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-  end_date   String?
-  level      String?
-  login      String?
-  notes      String?
-  start_date String?
-  whid       String?
-}
-
-<<<<<<< HEAD
-model Scheduler {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-  end_date   String?
-  level      String?
-  login      String?
-  notes      String?
-  start_date String?
-  whid       String?
-}
-
-=======
->>>>>>> d61ac2795ed4538d58996740c139c4706fa69c7a
-model Audience {
-  objectId  String    @id
-  createdAt DateTime? @db.Timestamptz(6)
-  updatedAt DateTime? @db.Timestamptz(6)
-  name      String?
-  query     String?
-  lastUsed  DateTime? @db.Timestamptz(6)
-  timesUsed Float?
-  rperm     String[]  @map("_rperm")
-  wperm     String[]  @map("_wperm")
-
-  @@map("_Audience")
-}
-
-model GlobalConfig {
-  objectId      String @id
-  params        Json?
-  masterKeyOnly Json?
-
-  @@map("_GlobalConfig")
-}
-
-model GraphQLConfig {
-  objectId String @id
-  config   Json?
-
-  @@map("_GraphQLConfig")
-}
-
-/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
-model Hooks {
-  functionName String?
-  className    String?
-  triggerName  String?
-  url          String?
-
-  @@map("_Hooks")
-  @@ignore
-}
-
-model Idempotency {
-  objectId  String    @id
-  createdAt DateTime? @db.Timestamptz(6)
-  updatedAt DateTime? @db.Timestamptz(6)
-  reqId     String?   @unique(map: "_Idempotency.reqId_unique")
-  expire    DateTime? @db.Timestamptz(6)
-  rperm     String[]  @map("_rperm")
-  wperm     String[]  @map("_wperm")
-
-  @@index([expire], map: "_Idempotency.expire_index")
-  @@map("_Idempotency")
-}
-
-model JobSchedule {
-  objectId      String    @id
-  createdAt     DateTime? @db.Timestamptz(6)
-  updatedAt     DateTime? @db.Timestamptz(6)
-  jobName       String?
-  description   String?
-  params        String?
-  startAfter    String?
-  daysOfWeek    Json?
-  timeOfDay     String?
-  lastRun       Float?
-  repeatMinutes Float?
-  rperm         String[]  @map("_rperm")
-  wperm         String[]  @map("_wperm")
-
-  @@map("_JobSchedule")
-}
-
-model JobStatus {
-  objectId   String    @id
-  createdAt  DateTime? @db.Timestamptz(6)
-  updatedAt  DateTime? @db.Timestamptz(6)
-  jobName    String?
-  source     String?
-  status     String?
-  message    String?
-  params     Json?
-  finishedAt DateTime? @db.Timestamptz(6)
-  rperm      String[]  @map("_rperm")
-  wperm      String[]  @map("_wperm")
-
-  @@map("_JobStatus")
-}
-
-model Join_roles__Role {
-  relatedId String @db.VarChar(120)
-  owningId  String @db.VarChar(120)
-
-  @@id([relatedId, owningId])
-  @@map("_Join:roles:_Role")
-}
-
-model Join_users__Role {
-  relatedId String @db.VarChar(120)
-  owningId  String @db.VarChar(120)
-
-  @@id([relatedId, owningId])
-  @@map("_Join:users:_Role")
-}
-
-model PushStatus {
-  objectId            String    @id
-  createdAt           DateTime? @db.Timestamptz(6)
-  updatedAt           DateTime? @db.Timestamptz(6)
-  pushTime            String?
-  source              String?
-  query               String?
-  payload             String?
-  title               String?
-  expiry              Float?
-  expiration_interval Float?
-  status              String?
-  numSent             Float?
-  numFailed           Float?
-  pushHash            String?
-  errorMessage        Json?
-  sentPerType         Json?
-  failedPerType       Json?
-  sentPerUTCOffset    Json?
-  failedPerUTCOffset  Json?
-  count               Float?
-  rperm               String[]  @map("_rperm")
-  wperm               String[]  @map("_wperm")
-
-  @@map("_PushStatus")
-}
-
-model Role {
-  objectId  String    @id
-  createdAt DateTime? @db.Timestamptz(6)
-  updatedAt DateTime? @db.Timestamptz(6)
-  name      String?   @unique(map: "_Role.name_unique")
-  rperm     String[]  @map("_rperm")
-  wperm     String[]  @map("_wperm")
-
-  @@map("_Role")
-}
-
-model User {
-  objectId                      String    @id
-  createdAt                     DateTime? @db.Timestamptz(6)
-  updatedAt                     DateTime? @db.Timestamptz(6)
-  username                      String?   @unique(map: "_User.username_unique")
-  email                         String?   @unique(map: "_User.email_unique")
-  emailVerified                 Boolean?
-  authData                      Json?
-  rperm                         String[]  @map("_rperm")
-  wperm                         String[]  @map("_wperm")
-  hashed_password               String?   @map("_hashed_password")
-  email_verify_token_expires_at DateTime? @map("_email_verify_token_expires_at") @db.Timestamptz(6)
-  email_verify_token            String?   @map("_email_verify_token")
-  account_lockout_expires_at    DateTime? @map("_account_lockout_expires_at") @db.Timestamptz(6)
-  failed_login_count            Float?    @map("_failed_login_count")
-  perishable_token              String?   @map("_perishable_token")
-  perishable_token_expires_at   DateTime? @map("_perishable_token_expires_at") @db.Timestamptz(6)
-  password_changed_at           DateTime? @map("_password_changed_at") @db.Timestamptz(6)
-  password_history              Json?     @map("_password_history")
-
-  @@map("_User")
-}
-
-model core_store {
-  id          Int     @id @default(autoincrement())
-  key         String? @db.VarChar(255)
-  value       String?
-  type        String? @db.VarChar(255)
-  environment String? @db.VarChar(255)
-  tag         String? @db.VarChar(255)
-}
-
-model polls {
-  id          Int       @id @default(autoincrement())
-  name        String
-  excerpt     String?
-  description String?
-  image       String?
-  published   DateTime? @default(now()) @db.Timestamp(6)
-  question    String?
-  response    String?
-  categories  String?
-  articles    String?
-  products    String?
-  customers   String?
-  users       String?
-}
-
-model product_attribute_set {
-  id                Int     @id @default(autoincrement())
-  name              String  @db.VarChar(255)
-  based_on          String?
-  attribute_id      Int     @default(autoincrement())
-  product_attribute String?
-}
-
-model roles {
-  id         Int       @id @default(autoincrement())
-  role_name  String
-  content    String?
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
-}
-
-model source {
-  id              Int      @id @default(autoincrement())
-  name            String   @db.VarChar(255)
-  code            Int      @default(autoincrement())
-  enabled         Boolean?
-  description     String?  @db.VarChar(255)
-  latitude        String?
-  longitude       String?
-  pickup_location Boolean?
-  contact_name    String?  @db.VarChar(255)
-  email           String?  @db.VarChar(255)
-  phone           Decimal? @db.Decimal
-  fax             Decimal? @db.Decimal
-  country         String?
-  state           String?
-  city            String?
-  street          String?
-  postcode        Decimal? @db.Decimal
-}
-
-model tasks {
-  id            BigInt    @id @default(autoincrement())
-  created_at    DateTime? @default(now()) @db.Timestamptz(6)
-  subject       String?
-  start_date    String?
-  due_date      String?
-  priority      String?
-  description   String?
-  status        String?
-  related_to    String?
-  contact       String?
-  assigned_to   String?
-  date_modified DateTime? @default(now()) @db.Timestamptz(6)
-  mediamanager  String?
-  projects      String?
-  workspaces    String?
-}
-
-model upload_file {
-  id                Int       @id @default(autoincrement())
-  name              String    @db.VarChar(255)
-  alternativeText   String?   @db.VarChar(255)
-  caption           String?   @db.VarChar(255)
-  width             Int?
-  height            Int?
-  formats           Json?
-  hash              String    @db.VarChar(255)
-  ext               String?   @db.VarChar(255)
-  mime              String    @db.VarChar(255)
-  size              Decimal   @db.Decimal(10, 2)
-  url               String    @db.VarChar(255)
-  previewUrl        String?   @db.VarChar(255)
-  provider          String    @db.VarChar(255)
-  provider_metadata Json?
-  created_by        Int?
-  updated_by        Int?
-  created_at        DateTime? @default(now()) @db.Timestamptz(6)
-  updated_at        DateTime? @default(now()) @db.Timestamptz(6)
-}
-
-model upload_file_morph {
-  id             Int     @id @default(autoincrement())
-  upload_file_id Int?
-  related_id     Int?
-  related_type   String?
-  field          String?
-  order          Int?
 }

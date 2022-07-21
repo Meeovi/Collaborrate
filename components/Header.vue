@@ -176,7 +176,7 @@
           </li>
           <li class="sidenav-item">
             <a class="sidenav-link" style="color: white;" href="">
-              <i class="fas fa-shopping-basket fa-fw me-3" style="color: white;"></i><span>Shop</span></a>
+              <i class="fas fa-shopping-basket fa-fw me-3" style="color: white;"></i><span>Inventory</span></a>
             <ul class="sidenav-collapse">
               <li class="sidenav-item">
                 <a class="sidenav-link" style="color: white;" href="/admin/shop/products">Products</a>
@@ -248,7 +248,7 @@
       <!-- Sidenav -->
 
       <!-- Navbar -->
-      <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+      <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-primary fixed-top" style="z-index:999999">
         <!-- Container wrapper -->
         <div class="container-fluid">
           <!-- Toggler -->
