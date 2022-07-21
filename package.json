@@ -65,7 +65,7 @@
     "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/recaptcha": "^1.0.4",
     "@nuxtjs/sentry": "^5.1.6",
-    "@sentry/tracing": "^6.16.1",
+    "@sentry/tracing": "^7.7.0",
     "@sentry/vue": "^6.16.1",
     "ap-style-title-case": "^1.1.2",
     "async": "^2.6.3",
