@@ -156,7 +156,7 @@
     "sharp": "^0.29.3",
     "sqip-loader": "^1.0.0",
     "ts-node": "^8.10.2",
-    "ts-node-dev": "^1.1.8",
+    "ts-node-dev": "^2.0.0",
     "tslib": "^1.14.1",
     "typescript": "^4.7.4",
     "webp-loader": "^0.6.0"
