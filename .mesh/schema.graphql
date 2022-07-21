@@ -3176,37 +3176,6 @@ type Query {
     """A condition to be used in determining which values should be returned by the collection."""
     condition: UploadFileCondition
   ): [UploadFile!]
-  """Reads and enables pagination through a set of `UploadFileMorph`."""
-  allUploadFileMorphs(
-    """Only read the first `n` values of the set."""
-    first: Int
-    """Only read the last `n` values of the set."""
-    last: Int
-    """
-    Skip the first `n` values from our `after` cursor, an alternative to cursor
-    based pagination. May not be used with `last`.
-    """
-    offset: Int
-    """Read all values in the set before (above) this cursor."""
-    before: Cursor
-    """Read all values in the set after (below) this cursor."""
-    after: Cursor
-    """The method to use when ordering `UploadFileMorph`."""
-    orderBy: [UploadFileMorphsOrderBy!] = [PRIMARY_KEY_ASC]
-    """A condition to be used in determining which values should be returned by the collection."""
-    condition: UploadFileMorphCondition
-  ): UploadFileMorphsConnection
-  """Reads a set of `UploadFileMorph`."""
-  allUploadFileMorphsList(
-    """Only read the first `n` values of the set."""
-    first: Int
-    """Skip the first `n` values."""
-    offset: Int
-    """The method to use when ordering `UploadFileMorph`."""
-    orderBy: [UploadFileMorphsOrderBy!]
-    """A condition to be used in determining which values should be returned by the collection."""
-    condition: UploadFileMorphCondition
-  ): [UploadFileMorph!]
   """Reads and enables pagination through a set of `UrlRewrite`."""
   allUrlRewrites(
     """Only read the first `n` values of the set."""
@@ -3590,7 +3559,6 @@ type Query {
   trainingById(id: BigInt!): Training
   transactionById(id: Int!): Transaction
   uploadFileById(id: Int!): UploadFile
-  uploadFileMorphById(id: Int!): UploadFileMorph
   urlRewriteById(id: Int!): UrlRewrite
   userById(id: BigInt!): User
   visitById(id: BigInt!): Visit
@@ -4110,11 +4078,6 @@ type Query {
     """The globally unique `ID` to be used in selecting a single `UploadFile`."""
     nodeId: ID!
   ): UploadFile
-  """Reads a single `UploadFileMorph` using its globally unique `ID`."""
-  uploadFileMorph(
-    """The globally unique `ID` to be used in selecting a single `UploadFileMorph`."""
-    nodeId: ID!
-  ): UploadFileMorph
   """Reads a single `UrlRewrite` using its globally unique `ID`."""
   urlRewrite(
     """The globally unique `ID` to be used in selecting a single `UrlRewrite`."""
@@ -15111,75 +15074,6 @@ input UploadFileCondition {
   updatedAt: Datetime
 }
 
-"""A connection to a list of `UploadFileMorph` values."""
-type UploadFileMorphsConnection {
-  """A list of `UploadFileMorph` objects."""
-  nodes: [UploadFileMorph]!
-  """A list of edges which contains the `UploadFileMorph` and cursor to aid in pagination."""
-  edges: [UploadFileMorphsEdge!]!
-  """Information to aid in pagination."""
-  pageInfo: PageInfo!
-  """The count of *all* `UploadFileMorph` you could get from the connection."""
-  totalCount: Int!
-}
-
-type UploadFileMorph implements Node @key(fields: "nodeId") {
-  """A globally unique identifier. Can be used in various places throughout the system to identify this single value."""
-  nodeId: ID!
-  id: Int!
-  uploadFileId: Int
-  relatedId: Int
-  relatedType: String
-  field: String
-  order: Int
-}
-
-"""A `UploadFileMorph` edge in the connection."""
-type UploadFileMorphsEdge {
-  """A cursor for use in pagination."""
-  cursor: Cursor
-  """The `UploadFileMorph` at the end of the edge."""
-  node: UploadFileMorph
-}
-
-"""Methods to use when ordering `UploadFileMorph`."""
-enum UploadFileMorphsOrderBy {
-  NATURAL
-  ID_ASC
-  ID_DESC
-  UPLOAD_FILE_ID_ASC
-  UPLOAD_FILE_ID_DESC
-  RELATED_ID_ASC
-  RELATED_ID_DESC
-  RELATED_TYPE_ASC
-  RELATED_TYPE_DESC
-  FIELD_ASC
-  FIELD_DESC
-  ORDER_ASC
-  ORDER_DESC
-  PRIMARY_KEY_ASC
-  PRIMARY_KEY_DESC
-}
-
-"""
-A condition to be used against `UploadFileMorph` object types. All fields are
-tested for equality and combined with a logical ‘and.’
-"""
-input UploadFileMorphCondition {
-  """Checks for equality with the object’s `id` field."""
-  id: Int
-  """Checks for equality with the object’s `uploadFileId` field."""
-  uploadFileId: Int
-  """Checks for equality with the object’s `relatedId` field."""
-  relatedId: Int
-  """Checks for equality with the object’s `relatedType` field."""
-  relatedType: String
-  """Checks for equality with the object’s `field` field."""
-  field: String
-  """Checks for equality with the object’s `order` field."""
-  order: Int
-}
-
 """A connection to a list of `UrlRewrite` values."""
 type UrlRewritesConnection {
   """A list of `UrlRewrite` objects."""
@@ -16016,7 +15910,7 @@ input ZoneCondition {
 }
 
 """A union of all federated types (those that use the @key directive)."""
-union _Entity = Endofshift | Scheduler | Account | Agreement | Analytic | Apitoken | Article | Brand | CartPriceRule | Case | CatalogPriceRule | Category | Channel | Checklist | City | Collection | Comment | ContentType | Contract | CoreStore | Country | Coupon | CreditMemo | Currency | CurrencyRate | CurrencySymbol | CustomerGroup | CustomerPayment | Customer | Customization | Dashboard | Deepdive | EmailTemplate | Email | Event | Fullfillment | GeneralSetting | GiftCertificate | Glossary | Importm | Integration | Internalization | Invitation | Invoice | Knowledgebase | Lead | Manufacturer | Mediamanager | Meeting | Message | NewsletterSubscriber | Occassion | Ooto | Opportunity | Order | Page | Partner | Payment | PdfTemplate | Permission | Plugin | Poll | ProductAttribute | ProductAttributeSet | ProductType | Product | ProjectTemplate | Project | Provider | Quote | Rating | Report | Return | Review | Reward | Role | Segment | Settingscustomer | Settingsgeneral | Settingshop | Settingsmarketing | Settingssale | Shipment | ShopSetting | Shop | Source | SpecialDiscount | State | Statistic | Stock | Survey | Tag | Target | Task | TaxCategory | TaxRate | TaxRule | Theme | Website | Ticketing | Training | Transaction | UploadFile | UploadFileMorph | UrlRewrite | User | Visit | Warehouse | Webhook | Wishlist | Workspace | Zone
+union _Entity = Endofshift | Scheduler | Account | Agreement | Analytic | Apitoken | Article | Brand | CartPriceRule | Case | CatalogPriceRule | Category | Channel | Checklist | City | Collection | Comment | ContentType | Contract | CoreStore | Country | Coupon | CreditMemo | Currency | CurrencyRate | CurrencySymbol | CustomerGroup | CustomerPayment | Customer | Customization | Dashboard | Deepdive | EmailTemplate | Email | Event | Fullfillment | GeneralSetting | GiftCertificate | Glossary | Importm | Integration | Internalization | Invitation | Invoice | Knowledgebase | Lead | Manufacturer | Mediamanager | Meeting | Message | NewsletterSubscriber | Occassion | Ooto | Opportunity | Order | Page | Partner | Payment | PdfTemplate | Permission | Plugin | Poll | ProductAttribute | ProductAttributeSet | ProductType | Product | ProjectTemplate | Project | Provider | Quote | Rating | Report | Return | Review | Reward | Role | Segment | Settingscustomer | Settingsgeneral | Settingshop | Settingsmarketing | Settingssale | Shipment | ShopSetting | Shop | Source | SpecialDiscount | State | Statistic | Stock | Survey | Tag | Target | Task | TaxCategory | TaxRate | TaxRule | Theme | Website | Ticketing | Training | Transaction | UploadFile | UrlRewrite | User | Visit | Warehouse | Webhook | Wishlist | Workspace | Zone
 
 scalar _Any
 
@@ -16542,11 +16436,6 @@ type Mutation {
     """The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields."""
     input: CreateUploadFileInput!
   ): CreateUploadFilePayload
-  """Creates a single `UploadFileMorph`."""
-  createUploadFileMorph(
-    """The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields."""
-    input: CreateUploadFileMorphInput!
-  ): CreateUploadFileMorphPayload
   """Creates a single `UrlRewrite`."""
   createUrlRewrite(
     """The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields."""
@@ -17622,16 +17511,6 @@ type Mutation {
     """The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields."""
     input: UpdateUploadFileByIdInput!
   ): UpdateUploadFilePayload
-  """Updates a single `UploadFileMorph` using its globally unique id and a patch."""
-  updateUploadFileMorph(
-    """The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields."""
-    input: UpdateUploadFileMorphInput!
-  ): UpdateUploadFileMorphPayload
-  """Updates a single `UploadFileMorph` using a unique key and a patch."""
-  updateUploadFileMorphById(
-    """The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields."""
-    input: UpdateUploadFileMorphByIdInput!
-  ): UpdateUploadFileMorphPayload
   """Updates a single `UrlRewrite` using its globally unique id and a patch."""
   updateUrlRewrite(
     """The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields."""
@@ -18752,16 +18631,6 @@ type Mutation {
     """The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields."""
     input: DeleteUploadFileByIdInput!
   ): DeleteUploadFilePayload
-  """Deletes a single `UploadFileMorph` using its globally unique id."""
-  deleteUploadFileMorph(
-    """The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields."""
-    input: DeleteUploadFileMorphInput!
-  ): DeleteUploadFileMorphPayload
-  """Deletes a single `UploadFileMorph` using a unique key."""
-  deleteUploadFileMorphById(
-    """The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields."""
-    input: DeleteUploadFileMorphByIdInput!
-  ): DeleteUploadFileMorphPayload
   """Deletes a single `UrlRewrite` using its globally unique id."""
   deleteUrlRewrite(
     """The exclusive input argument for this mutation. An object type, make sure to see documentation for this object’s fields."""
@@ -23620,45 +23489,6 @@ input UploadFileInput {
   updatedBy: Int
   createdAt: Datetime
   updatedAt: Datetime
-}
-
-"""The output of our create `UploadFileMorph` mutation."""
-type CreateUploadFileMorphPayload {
-  """
-  The exact same `clientMutationId` that was provided in the mutation input,
-  unchanged and unused. May be used by a client to track mutations.
-  """
-  clientMutationId: String
-  """The `UploadFileMorph` that was created by this mutation."""
-  uploadFileMorph: UploadFileMorph
-  """Our root query field type. Allows us to run any query from our mutation payload."""
-  query: Query
-  """An edge for our `UploadFileMorph`. May be used by Relay 1."""
-  uploadFileMorphEdge(
-    """The method to use when ordering `UploadFileMorph`."""
-    orderBy: [UploadFileMorphsOrderBy!] = [PRIMARY_KEY_ASC]
-  ): UploadFileMorphsEdge
-}
-
-"""All input for the create `UploadFileMorph` mutation."""
-input CreateUploadFileMorphInput {
-  """
-  An arbitrary string value with no semantic meaning. Will be included in the
-  payload verbatim. May be used to track mutations by the client.
-  """
-  clientMutationId: String
-  """The `UploadFileMorph` to be created by this mutation."""
-  uploadFileMorph: UploadFileMorphInput!
-}
-
-"""An input for mutations affecting `UploadFileMorph`"""
-input UploadFileMorphInput {
-  id: Int
-  uploadFileId: Int
-  relatedId: Int
-  relatedType: String
-  field: String
-  order: Int
 }
 
 """The output of our create `UrlRewrite` mutation."""
@@ -30281,59 +30111,6 @@ input UpdateUploadFileByIdInput {
   id: Int!
 }
 
-"""The output of our update `UploadFileMorph` mutation."""
-type UpdateUploadFileMorphPayload {
-  """
-  The exact same `clientMutationId` that was provided in the mutation input,
-  unchanged and unused. May be used by a client to track mutations.
-  """
-  clientMutationId: String
-  """The `UploadFileMorph` that was updated by this mutation."""
-  uploadFileMorph: UploadFileMorph
-  """Our root query field type. Allows us to run any query from our mutation payload."""
-  query: Query
-  """An edge for our `UploadFileMorph`. May be used by Relay 1."""
-  uploadFileMorphEdge(
-    """The method to use when ordering `UploadFileMorph`."""
-    orderBy: [UploadFileMorphsOrderBy!] = [PRIMARY_KEY_ASC]
-  ): UploadFileMorphsEdge
-}
-
-"""All input for the `updateUploadFileMorph` mutation."""
-input UpdateUploadFileMorphInput {
-  """
-  An arbitrary string value with no semantic meaning. Will be included in the
-  payload verbatim. May be used to track mutations by the client.
-  """
-  clientMutationId: String
-  """The globally unique `ID` which will identify a single `UploadFileMorph` to be updated."""
-  nodeId: ID!
-  """An object where the defined keys will be set on the `UploadFileMorph` being updated."""
-  uploadFileMorphPatch: UploadFileMorphPatch!
-}
-
-"""Represents an update to a `UploadFileMorph`. Fields that are set will be updated."""
-input UploadFileMorphPatch {
-  id: Int
-  uploadFileId: Int
-  relatedId: Int
-  relatedType: String
-  field: String
-  order: Int
-}
-
-"""All input for the `updateUploadFileMorphById` mutation."""
-input UpdateUploadFileMorphByIdInput {
-  """
-  An arbitrary string value with no semantic meaning. Will be included in the
-  payload verbatim. May be used to track mutations by the client.
-  """
-  clientMutationId: String
-  """An object where the defined keys will be set on the `UploadFileMorph` being updated."""
-  uploadFileMorphPatch: UploadFileMorphPatch!
-  id: Int!
-}
-
 """The output of our update `UrlRewrite` mutation."""
 type UpdateUrlRewritePayload {
   """
@@ -34962,46 +34739,6 @@ input DeleteUploadFileByIdInput {
   id: Int!
 }
 
-"""The output of our delete `UploadFileMorph` mutation."""
-type DeleteUploadFileMorphPayload {
-  """
-  The exact same `clientMutationId` that was provided in the mutation input,
-  unchanged and unused. May be used by a client to track mutations.
-  """
-  clientMutationId: String
-  """The `UploadFileMorph` that was deleted by this mutation."""
-  uploadFileMorph: UploadFileMorph
-  deletedUploadFileMorphId: ID
-  """Our root query field type. Allows us to run any query from our mutation payload."""
-  query: Query
-  """An edge for our `UploadFileMorph`. May be used by Relay 1."""
-  uploadFileMorphEdge(
-    """The method to use when ordering `UploadFileMorph`."""
-    orderBy: [UploadFileMorphsOrderBy!] = [PRIMARY_KEY_ASC]
-  ): UploadFileMorphsEdge
-}
-
-"""All input for the `deleteUploadFileMorph` mutation."""
-input DeleteUploadFileMorphInput {
-  """
-  An arbitrary string value with no semantic meaning. Will be included in the
-  payload verbatim. May be used to track mutations by the client.
-  """
-  clientMutationId: String
-  """The globally unique `ID` which will identify a single `UploadFileMorph` to be deleted."""
-  nodeId: ID!
-}
-
-"""All input for the `deleteUploadFileMorphById` mutation."""
-input DeleteUploadFileMorphByIdInput {
-  """
-  An arbitrary string value with no semantic meaning. Will be included in the
-  payload verbatim. May be used to track mutations by the client.
-  """
-  clientMutationId: String
-  id: Int!
-}
-
 """The output of our delete `UrlRewrite` mutation."""
 type DeleteUrlRewritePayload {
   """
@@ -38547,37 +38284,6 @@ type Subscription {
     """A condition to be used in determining which values should be returned by the collection."""
     condition: UploadFileCondition
   ): [UploadFile!]
-  """Reads and enables pagination through a set of `UploadFileMorph`. (live)"""
-  allUploadFileMorphs(
-    """Only read the first `n` values of the set."""
-    first: Int
-    """Only read the last `n` values of the set."""
-    last: Int
-    """
-    Skip the first `n` values from our `after` cursor, an alternative to cursor
-    based pagination. May not be used with `last`.
-    """
-    offset: Int
-    """Read all values in the set before (above) this cursor."""
-    before: Cursor
-    """Read all values in the set after (below) this cursor."""
-    after: Cursor
-    """The method to use when ordering `UploadFileMorph`."""
-    orderBy: [UploadFileMorphsOrderBy!] = [PRIMARY_KEY_ASC]
-    """A condition to be used in determining which values should be returned by the collection."""
-    condition: UploadFileMorphCondition
-  ): UploadFileMorphsConnection
-  """Reads a set of `UploadFileMorph`. (live)"""
-  allUploadFileMorphsList(
-    """Only read the first `n` values of the set."""
-    first: Int
-    """Skip the first `n` values."""
-    offset: Int
-    """The method to use when ordering `UploadFileMorph`."""
-    orderBy: [UploadFileMorphsOrderBy!]
-    """A condition to be used in determining which values should be returned by the collection."""
-    condition: UploadFileMorphCondition
-  ): [UploadFileMorph!]
   """Reads and enables pagination through a set of `UrlRewrite`. (live)"""
   allUrlRewrites(
     """Only read the first `n` values of the set."""
@@ -39065,8 +38771,6 @@ type Subscription {
   transactionById(id: Int!): Transaction
   """ (live)"""
   uploadFileById(id: Int!): UploadFile
-  """ (live)"""
-  uploadFileMorphById(id: Int!): UploadFileMorph
   """ (live)"""
   urlRewriteById(id: Int!): UrlRewrite
   """ (live)"""
@@ -39595,11 +39299,6 @@ type Subscription {
     """The globally unique `ID` to be used in selecting a single `UploadFile`."""
     nodeId: ID!
   ): UploadFile
-  """Reads a single `UploadFileMorph` using its globally unique `ID`. (live)"""
-  uploadFileMorph(
-    """The globally unique `ID` to be used in selecting a single `UploadFileMorph`."""
-    nodeId: ID!
-  ): UploadFileMorph
   """Reads a single `UrlRewrite` using its globally unique `ID`. (live)"""
   urlRewrite(
     """The globally unique `ID` to be used in selecting a single `UrlRewrite`."""

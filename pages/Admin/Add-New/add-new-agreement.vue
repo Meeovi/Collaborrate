@@ -1,12 +1,12 @@
 <template>
   <div>
-    <form method="POST">
+    <form method="POST" @submit.prevent="createAgreement()">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
             <input type="reset" class="btn btn-warning" value="Reset"></a>
           <a class="navbar-brand">
-            <input type="submit" class="btn btn-warning" value="Save Agreement" @submit.prevent="createAgreement()"></a>
+            <input type="submit" class="btn btn-warning" value="Save Agreement"></a>
         </div>
       </nav>
       <br>
@@ -103,13 +103,12 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+  import gql from "graphql-tag";
+import allAgreementsList from '~/apollo/queries/sales/agreements'
 
-const CREATE_AGREEMENT = gql `
-  mutation createAgreement ($name:String!,$excerpt:String!,$type:String!,$content:String!,$image:String!){
-  createAgreement(input: {agreement: {name: $name, excerpt: $excerpt, type: $type, content: $content, image: $image}}) {
-  agreementEdge {
-      node {
+  export const CREATE_AGREEMENT = gql `
+  mutation createAgreement ($name: String!, $excerpt: String!, $type: String!, $content: String!, $image: String!){
+    createAgreement(name: $name, excerpt: $excerpt, type: $type, content: $content, image: $image) {
         content
         excerpt
         id
@@ -118,14 +117,13 @@ const CREATE_AGREEMENT = gql `
         type
         created
         updated
-      }
     }
-  }
 }`;
 
-export default {
+  export default {
     data() {
       return {
+        id: null,
         type: [],
         name: " ",
         excerpt: " ",
@@ -139,16 +137,39 @@ export default {
     methods: {
       createAgreement() {
         this.$apollo.mutate({
-          mutation: CREATE_AGREEMENT,
-          variables: {
-            name: this.name,
-            content: this.content,
-            excerpt: this.excerpt,
-            type: this.type,
-            image: this.image,
-          },
-        }).catch(err => console.log(err));
-      },
+            mutation: CREATE_AGREEMENT,
+            variables: {
+              name: this.name,
+              content: this.content,
+              excerpt: this.excerpt,
+              type: this.type,
+              image: this.image
+            },
+            update: (store, {
+              data: {
+                createAgreement
+              }
+            }) => {
+              // read data from cache for this query
+              const data = store.readQuery({
+                query: allAgreementsList
+              })
+
+              // add new post from the mutation to existing posts
+              data.allAgreementsList.push(createAgreement)
+
+              // write data back to the cache
+              store.writeQuery({
+                query: allAgreementsList,
+                data
+              })
+            }
+          })
+          .then(response => {
+            // redirect to all posts
+            this.$router.replace('../sales/agreements')
+          })
+      }
     }
   }
 

@@ -1721,15 +1721,6 @@ model upload_file {
   updated_at        DateTime? @default(now()) @db.Timestamptz(6)
 }
 
-model upload_file_morph {
-  id             Int     @id @default(autoincrement())
-  upload_file_id Int?
-  related_id     Int?
-  related_type   String?
-  field          String?
-  order          Int?
-}
-
 model url_rewrites {
   id            Int      @id @default(autoincrement())
   request_path  String?
