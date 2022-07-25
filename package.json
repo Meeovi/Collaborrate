@@ -119,7 +119,7 @@
     "vue-loader": "^15.10.0",
     "vue-meta": "^2.4.0",
     "vue-moment": "^4.1.0",
-    "vue-server-renderer": "^2.7.4",
+    "vue-server-renderer": "^2.7.8",
     "vue-style-loader": "^4.1.3",
     "vue-template-compiler": "^2.7.4",
     "webpack": "^4.45.0"
