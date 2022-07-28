@@ -1,5 +1,5 @@
-query allPluginsList {
-  allPluginsList {
+query plugins {
+  plugins {
     id
     name
     logo

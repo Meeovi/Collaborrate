@@ -60,7 +60,7 @@
             <tr>
               <td style="text-align: right;">Description</td>
               <td>
-                <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>{{ visits.content }}
+                <editor :init="{ plugins: 'lists link image table code help wordcount'}" />{{ visits.content }}
               </td>
             </tr>
             <tr>

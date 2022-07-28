@@ -1,5 +1,5 @@
-query allGiftCertificatesList {
-  allGiftCertificatesList {
+query giftCertificates {
+  giftCertificates {
     articles
     categories
     customers

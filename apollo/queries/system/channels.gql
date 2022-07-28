@@ -1,5 +1,5 @@
-query allChannelsList {
-  allChannelsList {
+query channels {
+  channels {
     id
     default_zone
     default_shipping

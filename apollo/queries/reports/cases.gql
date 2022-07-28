@@ -1,5 +1,5 @@
-query allCasesList {
-  allCasesList {
+query cases {
+  cases {
     accountName
     assignedTo
     caseNumber

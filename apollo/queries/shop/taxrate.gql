@@ -1,5 +1,5 @@
-query allTaxRatesList {
-  allTaxRatesList {
+query taxRates {
+  taxRates {
     country
     defaultStoreView
     nodeId

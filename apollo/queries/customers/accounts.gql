@@ -1,5 +1,5 @@
-query allAccountsList {
-  allAccountsList {
+query accounts {
+  accounts {
     address
     altAddress
     altCity

@@ -1,5 +1,5 @@
-query allReturnsList {
-  allReturnsList {
+query returns {
+  returns {
     createdAt
     custId
     id

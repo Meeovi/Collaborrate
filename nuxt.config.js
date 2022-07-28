@@ -1,5 +1,4 @@
 
-
 export default {
   target: 'static',
   server: {
@@ -45,9 +44,9 @@ export default {
   plugins: [
     { src: '~/plugins/main.js', ssr: false },
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
-    { src: '~/plugins/ecommerce/pa-dss.js', ssr: false },
     // { src: '~/plugins/extensions/email.js', ssr: false },
     { src: '~/plugins/upload.js', ssr: false },
+    { src: '~/plugins/extensions/editor.js', ssr: false },
   ],
 
   components: true,
@@ -61,49 +60,48 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/sentry',
-    '@nuxtjs/apollo',
     '@nuxt/http',
     '@nuxtjs/i18n',
-    '@nuxt/image',
     // '@nuxtjs/recaptcha',
-    '@nuxt/image',
     'nuxt-client-init-module',
-    'nuxtjs-darkmode-js-module',
     'nuxt-stripe-module',
-    '@nuxtjs/lunr-module',
     'nuxt-highcharts',
-    ['nuxt-supabase', { supabaseUrl: 'YOUR_SUPABASE_URL', supabaseKey: 'YOUR_SUPABASE_KEY'}],
+    'nuxt-graphql-request',
   ],
 
 // Modules Options -----------------------------------------------------------------------------------------------
 
-stripe: {
-  publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+graphql: {
+  /**
+   * An Object of your GraphQL clients
+   */
+  clients: {
+    default: {
+      endpoint: 'https://swapi-graphql.netlify.com/.netlify/functions/index',
+      options: {},
+    },
+    secondClient: {
+      // ...client config
+    },
+  },
+
+  options: {
+    method: 'get', // Default to `POST`
+  },
+  useFetchPolyfill: true,
+  includeNodeModules: true,
 },
 
-image: {
-  provider: 'netlify',
-  domains: ['']
+stripe: {
+  publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
 },
 
 highcharts: {
   /* module options */
 },
 
-netlify: { 
-  headers: {
-    '/*': [
-      'Access-Control-Allow-Origin: *'
-    ],
-}
-},
-
   router: {
     middleware: []
-  },
-
-  image: {
-    // Options
   },
 
   i18n: {
@@ -128,29 +126,6 @@ netlify: {
   axios: {
     baseURL: '~/',
   },
-  
-  apollo: {
-    clientConfigs: {
-      default: '~/apollo/clientConfig.js', // default graphql connection, dont' change
-
-      alternativeClient: { // Hasura Integration, configuration goes here
-        httpEndpoint: process.env.HASURA_ENDPOINT,
-        browserHttpEndpoint: '/graphql',
-        httpLinkOptions: {
-          credentials: 'same-origin',
-          headers: {
-            'x-hasura-admin-secret': process.env.HASURA_SECRET,
-            'content-type': 'application/json'
-            }
-        },
-
-        wsEndpoint: 'ws://localhost:4000',
-        tokenName: 'apollo-token',
-        persisting: false,
-        websocketsOnly: false
-      },
-    },
-  },
 
   sentry: {
     dsn: 'https://b54ea5cfd2cc4c23b49c3d5c6fbbd351@o996770.ingest.sentry.io/6140531',
@@ -169,13 +144,12 @@ netlify: {
   /* recaptcha: {
         siteKey: process.env.RECAPTCHA_SITE_KEY,
         version: 3
-      }, 
+      }, */
 
   serverMiddleware: [
-    '~/config/postgraphile.config.js'
-  ], */
+    module.exports = {path: '~/server/api/', handler: '~/server/api/index.js'} 
+  ],
   
   build: {
-    extend(config, ctx) {}
   }
 }

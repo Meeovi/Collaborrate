@@ -1,5 +1,5 @@
-query allReportsList {
-  allReportsList {
+query reports {
+  reports {
     appliedCoupon
     created
     customer

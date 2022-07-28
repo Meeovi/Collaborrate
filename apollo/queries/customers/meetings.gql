@@ -1,5 +1,5 @@
-query allMeetingsList {
-  allMeetingsList {
+query meetings {
+  meetings {
     assignedTo
     content
     createdAt

@@ -1,5 +1,5 @@
-query allEventsList {
-  allEventsList {
+query events {
+  events {
     tickets
     state
     postalcode

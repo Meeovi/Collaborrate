@@ -1,5 +1,5 @@
-query allTagsList {
-  allTagsList {
+query tags {
+  tags {
     id
     name
     excerpt

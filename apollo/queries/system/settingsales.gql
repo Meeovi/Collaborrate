@@ -1,5 +1,5 @@
-query allSettingssalesList {
-  allSettingssalesList {
+query settingssales {
+  settingssales {
     adwords_conversioncolor
     adwords_conversionformat
     adwords_conversionid

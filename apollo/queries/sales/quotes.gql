@@ -1,5 +1,5 @@
-query allQuotesList {
-  allQuotesList {
+query quotes {
+  quotes {
     account
     approvalIssues
     approvalStatus

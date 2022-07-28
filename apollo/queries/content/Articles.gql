@@ -1,5 +1,5 @@
-query allArticlesList {
-  allArticlesList {
+query articles {
+  articles {
     id
     excerpt
     customers

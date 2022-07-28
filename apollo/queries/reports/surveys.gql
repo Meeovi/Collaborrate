@@ -1,5 +1,5 @@
-query allSurveysList {
-  allSurveysList {
+query surveys {
+  surveys {
     answer
     assignedTo
     createdAt

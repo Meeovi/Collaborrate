@@ -1,5 +1,5 @@
-query allBrandsList {
-  allBrandsList {
+query brands {
+  brands {
     city
     code
     country

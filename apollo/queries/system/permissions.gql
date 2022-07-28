@@ -1,5 +1,5 @@
-query allPermissionsList {
-  allPermissionsList {
+query permissions {
+  permissions {
     content
     create
     createdAt

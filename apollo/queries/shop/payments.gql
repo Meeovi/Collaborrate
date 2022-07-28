@@ -1,5 +1,5 @@
-query allPaymentsList {
-  allPaymentsList {
+query payments {
+  payments {
     active
     clientId
     clientSecret

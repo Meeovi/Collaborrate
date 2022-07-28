@@ -1,5 +1,5 @@
-query allStatesList {
-  allStatesList {
+query states {
+  states {
     country
     description
     id

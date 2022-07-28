@@ -211,7 +211,7 @@
                               <td style="text-align: right;">Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>{{ products.description }}
+                                  <editor :init="{ plugins: 'lists link image table code help wordcount'}" />{{ products.description }}
                                 </div>
                               </td>
                             </tr>

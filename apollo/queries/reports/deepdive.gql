@@ -1,5 +1,5 @@
-query allDeepdivesList {
-  allDeepdivesList {
+query deepdives {
+  deepdives {
     attendees
     content
     createdAt

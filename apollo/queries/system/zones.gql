@@ -1,5 +1,5 @@
-query zonesList {
-  allZonesList {
+query zones {
+  zones {
     id
     created_at
     name

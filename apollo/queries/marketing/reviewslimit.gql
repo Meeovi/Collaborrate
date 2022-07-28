@@ -1,5 +1,5 @@
-query allReviewsListLimit {
-  allReviewsList(first: 5) {
+query reviewsLimit {
+  reviews(first: 5) {
     id
     firstName
     createdAt

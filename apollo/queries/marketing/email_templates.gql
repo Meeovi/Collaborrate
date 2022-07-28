@@ -1,5 +1,5 @@
-query allEmail_templatesList {
-  allEmail_templatesList {
+query email_templates {
+  email_templates {
     id
     height
     header

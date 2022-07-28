@@ -1,5 +1,5 @@
-query allCustomersListNew {
-  allCustomersList(first: 5, orderBy: CUSTOMER_SINCE_ASC) {
+query customersNew {
+  customers(first: 5, orderBy: CUSTOMER_SINCE_ASC) {
     address
     addressTwo
     confirmedEmail

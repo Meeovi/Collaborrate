@@ -1,5 +1,5 @@
-query allEndofshiftsList {
-  allEndofshiftsList {
+query endofshifts {
+  endofshifts {
     content
     createdAt
     id

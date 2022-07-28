@@ -1,5 +1,5 @@
-query allReviewsList {
-  allReviewsList {
+query reviews {
+  reviews {
     id
     firstName
     createdAt

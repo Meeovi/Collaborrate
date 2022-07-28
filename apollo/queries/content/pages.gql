@@ -1,5 +1,5 @@
-query allPagesList {
-  allPagesList {
+query pages {
+  pages {
     id
     title
     enable_page

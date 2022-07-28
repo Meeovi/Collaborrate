@@ -1,5 +1,5 @@
-query allGlossariesList {
-  allGlossariesList {
+query glossaries {
+  glossaries {
     id
     name
     image

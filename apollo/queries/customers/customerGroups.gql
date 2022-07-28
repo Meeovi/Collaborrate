@@ -1,5 +1,5 @@
-query allCustomerGroupsList {
-  allCustomerGroupsList {
+query customerGroups {
+  customerGroups {
     id
     name
     nodeId

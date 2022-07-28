@@ -1,5 +1,5 @@
-query allCitiesList {
-  allCitiesList {
+query cities {
+  cities {
     country
     description
     id

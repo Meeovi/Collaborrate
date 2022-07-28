@@ -1,5 +1,5 @@
-query allPdf_templatesList {
-  allPdf_templatesList {
+query pdf_templates {
+  pdf_templates {
     id
     header
     footer

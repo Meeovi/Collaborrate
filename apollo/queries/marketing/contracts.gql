@@ -1,5 +1,5 @@
-query allContractsList {
-  allContractsList {
+query contracts {
+  contracts {
     account
     companySignedDate
     contact

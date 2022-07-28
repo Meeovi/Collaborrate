@@ -70,7 +70,7 @@
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>
+                        <vue-simplemde :highlight="true"  v-model="content" preview-class="markdown-body" ref="markdownEditor" />
                       </td>
                     </tr>
                   </tbody>

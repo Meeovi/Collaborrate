@@ -1,5 +1,5 @@
-query allProjectsList {
-  allProjectsList {
+query projects {
+  projects {
     id
     name
     nodeId

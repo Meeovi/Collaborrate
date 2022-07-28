@@ -1,5 +1,5 @@
-query allAgreementsList {
-  allAgreementsList {
+query agreements {
+  agreements {
     id
     name
     type

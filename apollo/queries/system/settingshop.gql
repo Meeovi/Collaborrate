@@ -1,5 +1,5 @@
-query allSettingshop {
-  allSettingshop {
+query settingshop {
+  settingshop {
     vendor_transaction_id
     seller_payouts
     product_videos

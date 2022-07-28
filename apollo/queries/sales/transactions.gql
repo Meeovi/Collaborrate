@@ -1,5 +1,5 @@
-query allTransactionsList {
-  allTransactionsList {
+query transactions {
+  transactions {
     closed
     created
     id

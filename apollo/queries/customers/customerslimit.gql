@@ -1,5 +1,5 @@
-query allCustomersListLimit {
-  allCustomersList(first: 5) {
+query customersLimit {
+  customers(first: 5) {
     address
     addressTwo
     confirmedEmail

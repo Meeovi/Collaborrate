@@ -1,5 +1,5 @@
-query allEmailsList {
-  allEmailsList {
+query emails {
+  emails {
     id
     cust_id
     created_at

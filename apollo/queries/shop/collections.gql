@@ -1,5 +1,5 @@
-query allCollectionsList {
-  allCollectionsList {
+query collections {
+  collections {
     createdAt
     description
     id

@@ -1,5 +1,5 @@
-query allShipmentsList {
-  allShipmentsList {
+query shipments {
+  shipments {
     carrierName
     clientId
     clientSecret

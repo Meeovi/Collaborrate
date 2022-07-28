@@ -1,5 +1,5 @@
-query allSchedulersList {
-  allSchedulersList {
+query schedulers {
+  schedulers {
     createdAt
     endDate
     id

@@ -1,5 +1,5 @@
-query allGeneralSettingsList {
-  allGeneralSettingsList {
+query generalSettings {
+  generalSettings {
     accessRestrictions
     createdAt
     customerSupport

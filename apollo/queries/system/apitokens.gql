@@ -1,5 +1,5 @@
-query allApitokensList {
-  allApitokensList {
+query apitokens {
+  apitokens {
     createdAt
     description
     id

@@ -1,5 +1,5 @@
-query allTaxRulesList {
-  allTaxRulesList {
+query taxRules {
+  taxRules {
     id
     name
     nodeId

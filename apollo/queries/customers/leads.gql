@@ -1,5 +1,5 @@
-query allLeadsList {
-  allLeadsList {
+query leads {
+  leads {
     accountName
     address
     altAddress

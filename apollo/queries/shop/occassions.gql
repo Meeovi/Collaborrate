@@ -1,5 +1,5 @@
-query allOccassionsList {
-  allOccassionsList {
+query occassions {
+  occassions {
     id
     description
     name

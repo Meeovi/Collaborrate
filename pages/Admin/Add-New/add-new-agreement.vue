@@ -1,12 +1,12 @@
 <template>
   <div>
-    <form method="POST" @submit.prevent="createAgreement()">
+    <form method="POST" enctype="multipart/form-data" @submit.prevent>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <input type="reset" class="btn btn-warning" value="Reset"></a>
+            <button type="reset" class="btn btn-warning">Reset</button></a>
           <a class="navbar-brand">
-            <input type="submit" class="btn btn-warning" value="Save Agreement"></a>
+            <input type="submit" class="btn btn-warning" value="Save Agreement" @click="addAgreement" /></a>
         </div>
       </nav>
       <br>
@@ -35,7 +35,11 @@
                     <tr>
                       <td style="text-align: right;">Agreement Type</td>
                       <td>
-                        <input v-model="type" type="text" name="Type" />
+                        <select name="agreementType" id="agreementType">
+                          <option value="policies">Policies</option>
+                          <option value="agreements">Agreements</option>
+                          <option value="announcements">Announcements</option>
+                        </select>
                       </td>
                     </tr>
                   </tbody>
@@ -59,15 +63,13 @@
                             <tr>
                               <td style="text-align: right;">Excerpt</td>
                               <td>
-                                <textarea id="excerpt" v-model="excerpt" type="textarea" cols="50" rows="10"
-                                  value="Add a short Description"></textarea>
+                                  <textarea id="excerpt" v-model="excerpt" cols="50" rows="10" value="Add a short Description"></textarea>
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Description</td>
                               <td>
-                                <textarea id="excerpt" v-model="content" type="textarea" cols="50" rows="10"
-                                  value="Add a Description"></textarea>
+                                <editor :init="{ plugins: 'lists link image table code help wordcount'}" />
                               </td>
                             </tr>
                           </tbody>
@@ -104,72 +106,77 @@
 
 <script>
   import gql from "graphql-tag";
-import allAgreementsList from '~/apollo/queries/sales/agreements'
+  import allAgreementsList from "~/apollo/queries/sales/agreements";
 
-  export const CREATE_AGREEMENT = gql `
-  mutation createAgreement ($name: String!, $excerpt: String!, $type: String!, $content: String!, $image: String!){
-    createAgreement(name: $name, excerpt: $excerpt, type: $type, content: $content, image: $image) {
-        content
-        excerpt
-        id
-        image
+  const ADD_AGREEMENTS = gql `
+    mutation createAgreement ($name:String!,$excerpt:String,$type:String,$content:String,$image:String){
+      createAgreement(objects: {name: $name, excerpt: $excerpt, type: $type, content: $content, image: $image}) {
         name
+        excerpt
         type
-        created
-        updated
+        content
+        image
     }
 }`;
 
   export default {
     data() {
       return {
-        id: null,
         type: [],
         name: " ",
         excerpt: " ",
         content: " ",
         image: " ",
+
       }
     },
     head: {
       title: 'Add New Agreement'
     },
     methods: {
-      createAgreement() {
-        this.$apollo.mutate({
-            mutation: CREATE_AGREEMENT,
-            variables: {
-              name: this.name,
-              content: this.content,
-              excerpt: this.excerpt,
-              type: this.type,
-              image: this.image
-            },
-            update: (store, {
-              data: {
-                createAgreement
-              }
-            }) => {
-              // read data from cache for this query
-              const data = store.readQuery({
+      async addAgreement() {
+        const name = this.name;
+        const content = this.content;
+        const excerpt = this.excerpt;
+        const type = this.type;
+        const image = this.image;
+        await this.$apollo.mutate({
+          mutation: ADD_AGREEMENTS,
+          variables: {
+            name,
+            excerpt,
+            type,
+            content,
+            image,
+          },
+          update: (cache, {
+            data: {
+              insertAgreements
+            }
+          }) => {
+            // Read data from cache for this query
+            try {
+              const insertedAgreement = insertAgreements.returning;
+              console.log(insertedAgreement)
+              cache.writeQuery({
                 query: allAgreementsList
               })
-
-              // add new post from the mutation to existing posts
-              data.allAgreementsList.push(createAgreement)
-
-              // write data back to the cache
-              store.writeQuery({
-                query: allAgreementsList,
-                data
-              })
+            } catch (err) {
+              console.error(err)
             }
+          }
+        }).then(() => {
+          this.$router.push({
+            path: '../sales/agreements'
           })
-          .then(response => {
-            // redirect to all posts
-            this.$router.replace('../sales/agreements')
-          })
-      }
+        }).catch(err => console.log(err));
+        this.name = ' ';
+        this.excerpt = ' ';
+        this.type = ' ';
+        this.content = ' ';
+        this.image = ' ';
+      },
+
     }
   }
 
@@ -185,5 +192,9 @@ import allAgreementsList from '~/apollo/queries/sales/agreements'
   li {
     display: inline-block;
   }
+
+#agreementType {
+  width: 50%;
+}
 
 </style>

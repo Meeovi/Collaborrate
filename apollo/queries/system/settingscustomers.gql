@@ -1,5 +1,5 @@
-query allSettingscustomersList {
-  allSettingscustomersList {
+query settingscustomers {
+  settingscustomers {
     created_at
     customer_data_lifetime
     email_after_registration

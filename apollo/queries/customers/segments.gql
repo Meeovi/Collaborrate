@@ -1,5 +1,5 @@
-query allSegmentsList {
-  allSegmentsList {
+query segments {
+  segments {
     applyTo
     createdAt
     customers

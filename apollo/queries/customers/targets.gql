@@ -1,5 +1,5 @@
-query allTargetsList {
-  allTargetsList {
+query targets {
+  targets {
     accountName
     address
     altAddress

@@ -1,5 +1,5 @@
-query allNewsletterSubscribersList {
-  allNewsletterSubscribersList {
+query newsletterSubscribers {
+  newsletterSubscribers {
     createdAt
     custId
     customerFirstName

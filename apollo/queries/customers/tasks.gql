@@ -1,5 +1,5 @@
-query allTasksList {
-  allTasksList {
+query tasks {
+  tasks {
     assignedTo
     contact
     createdAt

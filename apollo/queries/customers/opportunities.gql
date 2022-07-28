@@ -1,5 +1,5 @@
-query allOpportunitiesList {
-  allOpportunitiesList {
+query opportunities {
+  opportunities {
     accountName
     amount
     assignedTo

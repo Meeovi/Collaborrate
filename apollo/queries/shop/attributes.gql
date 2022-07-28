@@ -1,5 +1,5 @@
-query allProductAttributesList {
-  allProductAttributesList {
+query productAttributes {
+  productAttributes {
     allowHtmlTagsStorefront
     attributeClass
     attributeCode
@@ -20,8 +20,8 @@ query allProductAttributesList {
     promoRuleConditions
     searchResultsLayeredNavigation
     useSearch
-    usedProductListing
-    usedSortingProductListing
+    usedProducting
+    usedSortingProducting
     visibleCatalogPagesStorefront
   }
 }

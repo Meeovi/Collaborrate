@@ -1,5 +1,5 @@
-query allOotosList {
-  allOotosList {
+query ootos {
+  ootos {
     createdAt
     endDate
     id

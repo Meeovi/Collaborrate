@@ -82,7 +82,7 @@
               <td style="text-align: right;">Description</td>
               <td>
                 <client-only>
-                  <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>{{ ticketing.content }}
+                  <editor :init="{ plugins: 'lists link image table code help wordcount'}" />{{ ticketing.content }}
                 </client-only>
               </td>
             </tr>

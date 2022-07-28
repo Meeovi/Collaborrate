@@ -1,5 +1,5 @@
-query allInvitationsList {
-  allInvitationsList {
+query invitations {
+  invitations {
     id
     grandTotalPurchased
     email

@@ -1,5 +1,5 @@
-query allInvoicesList {
-  allInvoicesList {
+query invoices {
+  invoices {
     billToName
     billingAddress
     customerGroup

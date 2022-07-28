@@ -1,5 +1,5 @@
-query allTicketingsList {
-  allTicketingsList {
+query ticketings {
+  ticketings {
     accountName
     assignedTo
     comment
@@ -24,11 +24,11 @@ query allTicketingsList {
     status
     team
     ticketType
-    projectsByTicketIdList {
+    projectsByTicketId {
       id
       name
     }
-    tasksByProjectTicketIdAndTaskIdList {
+    tasksByProjectTicketIdAndTaskId {
       id
       subject
     }

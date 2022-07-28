@@ -1,5 +1,5 @@
-query allCurrenciesList {
-  allCurrenciesList {
+query currencies {
+  currencies {
     id
     name
     region

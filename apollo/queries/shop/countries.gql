@@ -1,5 +1,5 @@
-query allCountriesList {
-  allCountriesList {
+query countries {
+  countries {
     description
     id
     image

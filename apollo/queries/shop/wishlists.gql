@@ -1,5 +1,5 @@
-query allWishlistsList {
-  allWishlistsList {
+query wishlists {
+  wishlists {
     createdAt
     customers
     id

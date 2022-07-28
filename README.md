@@ -26,7 +26,7 @@ A powerful, consistent, and flexible headless content management framework. Buil
 - Media Manager with support for media comments, watermarks, sharing, downloading, retail, wholesale, multi-channel support, create galleries, save to s3 or filesystem
 - Filterable datatables with export functionality
 - PWA Support
-- Mobile, Desktop, Docker, and PM2 support
+- Mobile, Desktop, and Docker support
 - Built in ERP (Enterprise Resource Planning) includes Project Management, Checklist, Error Reporting, Visits, Team Scheduler, Deep Dives, Dashboard Creations.
 - Built in LMS (Learning Management System) includes Course Creation, Assign instructors, students, different forms of media, create digital schools, badges, announcements, training material, integrates with products, polls, checklists, cities, states, countries, create meetups, Digital Boards (digiboards), and labs
 

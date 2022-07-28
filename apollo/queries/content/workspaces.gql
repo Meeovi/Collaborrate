@@ -1,5 +1,5 @@
-query allWorkspacesList {
-  allWorkspacesList {
+query workspaces {
+  workspaces {
     author
     brands
     category

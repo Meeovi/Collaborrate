@@ -1,5 +1,5 @@
-query allProductTypesList {
-  allProductTypesList {
+query productTypes {
+  productTypes {
     filterOptions
     id
     isShippable

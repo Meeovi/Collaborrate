@@ -1,5 +1,5 @@
-query allCreditMemosList {
-  allCreditMemosList {
+query creditMemos {
+  creditMemos {
     action
     billToName
     created

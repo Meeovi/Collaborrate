@@ -1,5 +1,5 @@
-query allVisitsList {
-  allVisitsList {
+query visits {
+  visits {
     content
     createdAt
     emergency

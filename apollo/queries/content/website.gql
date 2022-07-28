@@ -1,5 +1,5 @@
-query allWebsitesList {
-  allWebsitesList {
+query websites {
+  websites {
     url
     store
     shop

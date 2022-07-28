@@ -201,10 +201,7 @@
                               <td style="text-align: right;">Short Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <input v-model="short_description" type="textarea"
-                                    value="Enter a short description" validation="required|max:50,length"
-                                    validation-name="excerpt" error-behavior="live"
-                                    :help="`Keep it under 50 characters. ${50 - short_description.length} left.`" />
+                                  <textarea v-model="short_description" cols="50" rows="10" value="Add a short Description"></textarea>
                                 </div>
                               </td>
                             </tr>
@@ -212,7 +209,7 @@
                               <td style="text-align: right;">Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>
+                                  <editor :init="{ plugins: 'lists link image table code help wordcount'}" />
                                 </div>
                               </td>
                             </tr>

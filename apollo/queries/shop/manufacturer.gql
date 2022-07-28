@@ -1,5 +1,5 @@
-query allManufacturersList {
-  allManufacturersList {
+query manufacturers {
+  manufacturers {
     state
     product
     nodeId

@@ -1,5 +1,5 @@
-query allPartnersList {
-  allPartnersList {
+query partners {
+  partners {
     state
     nodeId
     name

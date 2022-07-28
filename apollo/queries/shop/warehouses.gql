@@ -1,5 +1,5 @@
-query allWarehousesList {
-  allWarehousesList {
+query warehouses {
+  warehouses {
     status
     state
     products

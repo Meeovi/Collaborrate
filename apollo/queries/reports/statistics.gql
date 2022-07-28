@@ -1,5 +1,5 @@
-query allStatisticsList {
-  allStatisticsList {
+query statistics {
+  statistics {
     articles
     categories
     coupons

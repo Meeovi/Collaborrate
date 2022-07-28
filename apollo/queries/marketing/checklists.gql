@@ -1,5 +1,5 @@
-query allChecklistsList {
-  allChecklistsList {
+query checklists {
+  checklists {
     country
     createdAt
     description
@@ -14,15 +14,15 @@ query allChecklistsList {
     regionalManager
     ticket
     username
-    trainingsByChecklistsList {
+    trainingsByChecklists {
       id
       assignments
     }
-    statesByTrainingChecklistsAndStateList {
+    statesByTrainingChecklistsAndState {
       id
       name
     }
-    productsByTrainingChecklistsAndProductsList {
+    productsByTrainingChecklistsAndProducts {
       id
       name
     }

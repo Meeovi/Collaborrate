@@ -1,5 +1,5 @@
-query allOrdersList {
-  allOrdersList {
+query orders {
+  orders {
     action
     allocatedSources
     billToName

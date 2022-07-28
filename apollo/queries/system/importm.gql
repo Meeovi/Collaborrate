@@ -1,5 +1,5 @@
-query allImportmsList {
-  allImportmsList(order_by: {name: asc}) {
+query importms {
+  importms(order_by: {name: asc}) {
     id
     file
     description

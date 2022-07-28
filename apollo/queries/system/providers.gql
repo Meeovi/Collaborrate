@@ -1,5 +1,5 @@
-query allProvidersList {
-  allProvidersList {
+query providers {
+  providers {
     active
     clientId
     clientSecret

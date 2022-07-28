@@ -1,5 +1,5 @@
-query allInternalizationsList {
-  allInternalizationsList {
+query internalizations {
+  internalizations {
     id
     name
     region

@@ -1,5 +1,5 @@
-query allRolesList {
-  allRolesList {
+query roles {
+  roles {
     content
     createdAt
     id

@@ -1,5 +1,5 @@
-query allWebhooksList {
-  allWebhooksList {
+query webhooks {
+  webhooks {
     create
     createdAt
     delete

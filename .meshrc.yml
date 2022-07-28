@@ -3,10 +3,14 @@ sources:
   - name: Main
     handler:
       postgraphile:
-        connectionString: postgresql://postgres:Whurashia1986@db.wyhrhklrokwbwfwkgyoi.supabase.co:5432/postgres
-        appendPlugins:
-          - '@graphile/federation'
-          - '@graphile-contrib/pg-many-to-many'
+        connectionString: postgresql://{env.DB_USER}:{env.DB_PASSWORD}@{env.DB_HOST}/{env.DB_DATABASE}
+
+  #- name: GraphqlEndpoint
+  #  handler:
+  #    graphql:
+  #      endpoint: https://star-gobbler-68.hasura.app/v1/graphql
+  #      operationHeaders:
+  #        Authorization: 'H6RyPGzrnqzzdfmAJk0ykWBOpe92o12MHN0bOLsMNuDP8qKuHrni5fV4dLv2WmPR'
 
 serve:
   staticFiles: './media'

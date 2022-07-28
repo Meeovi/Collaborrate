@@ -1,5 +1,5 @@
-query allShopsList {
-  allShopsList {
+query shops {
+  shops {
     articles
     categories
     comments

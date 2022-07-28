@@ -95,16 +95,13 @@
                             <tr>
                               <td style="text-align: right;">Excerpt</td>
                               <td>
-                                <input id="excerpt" v-model="excerpt" type="textarea"
-                                  validation="required|max:50,length"
-                                  :help="`Keep it under 50 characters. ${50 - excerpt.length} left.`" cols="50"
-                                  rows="10" value="Add a short Description" />
+                                <textarea id="excerpt" v-model="excerpt" cols="50" rows="10" value="Add a short Description"></textarea>
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Description</td>
                               <td>
-                                <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>
+                                <editor :init="{ plugins: 'lists link image table code help wordcount'}" />
                               </td>
                             </tr>
                           </tbody>
@@ -156,8 +153,8 @@
                           <tr>
                             <td style="text-align: right;">Meta Description</td>
                             <td>
-                              <input v-model="meta_description" type="textarea" value="Article Description"
-                                rows="10" cols="50" />
+                              <textarea v-model="meta_description" value="SEO Description"
+                                rows="10" cols="50"></textarea>
                             </td>
                           </tr>
                           <tr>

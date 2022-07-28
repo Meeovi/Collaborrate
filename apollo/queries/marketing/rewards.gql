@@ -1,5 +1,5 @@
-query allRewardsList {
-  allRewardsList {
+query rewards {
+  rewards {
     users
     slug
     products

@@ -1,10 +1,9 @@
 <template>
     <div>
         <div>
-           <Nuxt /> 
+           <nuxt />
         </div>
         <Footer />
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.js' defer></script>
     </div>
 </template>
 

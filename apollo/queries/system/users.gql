@@ -1,5 +1,5 @@
-query allUsersList {
-  allUsersList {
+query users {
+  users {
     id
     first_name
     email

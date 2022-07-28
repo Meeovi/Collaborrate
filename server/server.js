@@ -1,5 +1,2 @@
-const cors = require('cors');
-
-const  app  =  express();
-
-app.use(cors())
+require('dotenv').config({ path: './.env'})
+require('./config/database/apollo.config')

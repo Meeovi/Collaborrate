@@ -1,5 +1,5 @@
-query allFullfillmentsList {
-  allFullfillmentsList {
+query fullfillments {
+  fullfillments {
     address
     addressTwo
     city

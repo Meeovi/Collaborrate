@@ -1,5 +1,5 @@
-query allTrainingsList {
-  allTrainingsList {
+query trainings {
+  trainings {
     id
     grade
     faqs

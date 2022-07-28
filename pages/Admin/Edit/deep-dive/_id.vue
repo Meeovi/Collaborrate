@@ -44,7 +44,7 @@
               <td>
                 <div class="form-check form-switch">
                   <client-only>
-                   <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true" :content="content"></div>{{ deepdive.content }}
+                   <editor :init="{ plugins: 'lists link image table code help wordcount'}" />{{ deepdive.content }}
                   </client-only>
                 </div>
               </td>

@@ -25,51 +25,58 @@
             <div id="v-tabs-home" class="tab-pane fade show active" role="tabpanel" aria-labelledby="v-tabs-home-tab">
               <div class="table table-responsive">
                 <table class="table">
-          <tbody>
-            <tr>
-              <td style="text-align: right;">Knowledgebase Name</td>
-              <td>
-                <input v-model="name" type="text" required />
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: right;">Content</td>
-              <td>
-                <div class="wysiwyg" data-mdb-wysiwyg="wysiwyg" data-mdb-wysiwyg-fixed="true"></div>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: right;">Resolution</td>
-              <td>
-                <input v-model="resolution" type="textarea" />
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: right;">Author</td>
-              <td>
-                <input v-model="author" type="text" />
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: right;">Approver</td>
-              <td>
-                <input v-model="approver" type="text" />
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: right;">Revision</td>
-              <td>
-                <input v-model="revision" type="number" />
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: right;">Status</td>
-              <td>
-                <input v-model="status" type="select" :options="[{value: 'Draft', label: 'Draft'}, {value: 'Expired', label: 'Expired'},{value: 'In Review', label: 'In Review'},{value: 'Private', label: 'Private'},{value: 'Public', label: 'Public'}]" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                  <tbody>
+                    <tr>
+                      <td style="text-align: right;">Knowledgebase Name</td>
+                      <td>
+                        <input v-model="name" type="text" required />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: right;">Content</td>
+                      <td>
+                        <vue-simplemde :highlight="true" v-model="content" preview-class="markdown-body"
+                          ref="markdownEditor" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: right;">Resolution</td>
+                      <td>
+                        <input v-model="resolution" type="textarea" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: right;">Author</td>
+                      <td>
+                        <input v-model="author" type="text" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: right;">Approver</td>
+                      <td>
+                        <input v-model="approver" type="text" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: right;">Revision</td>
+                      <td>
+                        <input v-model="revision" type="number" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: right;">Status</td>
+                      <td>
+                        <select name="status" id="status">
+                          <option value="Draft">Draft</option>
+                          <option value="review">In Review</option>
+                          <option value="private">Private</option>
+                          <option value="public">Public</option>
+                          <option value="expired">Expired</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -80,9 +87,9 @@
 </template>
 
 <script>
-import  gql from "graphql-tag";
+  import gql from "graphql-tag";
 
-import allKnowledgebasesList from "~/apollo/queries/system/knowledgebase";
+  import allKnowledgebasesList from "~/apollo/queries/system/knowledgebase";
 
   const ADD_KNOWLEDGEBASES = gql `
     mutation ($name: String!,$status: String!,$revision: String!,$resolution: String!,$approver: String!,$author: String!,$content: String!){
@@ -121,7 +128,9 @@ import allKnowledgebasesList from "~/apollo/queries/system/knowledgebase";
     },
 
     methods: {
-      async addKnowledgebase({ target }) {
+      async addKnowledgebase({
+        target
+      }) {
         const name = this.name;
         const status = this.status;
         const revision = this.revision;
@@ -129,7 +138,7 @@ import allKnowledgebasesList from "~/apollo/queries/system/knowledgebase";
         const approver = this.approver;
         const author = this.author;
         const content = this.content;
-        
+
         await this.$apollo.mutate({
           mutation: ADD_KNOWLEDGEBASES,
           variables: {
@@ -171,7 +180,8 @@ import allKnowledgebasesList from "~/apollo/queries/system/knowledgebase";
         this.content = ' ';
       },
     },
-}
+  }
+
 </script>
 
 <style>

@@ -1,5 +1,5 @@
-query allCustomizationsList {
-  allCustomizationsList {
+query customizations {
+  customizations {
     siteUrl
     siteName
     notification
