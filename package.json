@@ -47,7 +47,7 @@
     "all": "npm-run-all --parallel dev prisma-dev mesh"
   },
   "dependencies": {
-    "@graphql-mesh/cli": "^0.73.3",
+    "@graphql-mesh/cli": "^0.75.3",
     "@graphql-mesh/postgraphile": "^0.20.30",
     "@nuxt/http": "^0.6.4",
     "@nuxtjs/axios": "^5.13.6",
