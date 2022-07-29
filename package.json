@@ -92,7 +92,7 @@
   },
   "devDependencies": {
     "@nuxtjs/pwa": "^3.3.5",
-    "@prisma/client": "^4.1.0",
+    "@prisma/client": "^4.1.1",
     "express": "^4.18.1",
     "graphql": "^15.8.0",
     "nightwatch": "^1.7.6",
