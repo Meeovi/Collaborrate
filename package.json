@@ -56,7 +56,7 @@
     "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/sentry": "^5.1.6",
     "@sentry/tracing": "^6.16.1",
-    "@sentry/vue": "^6.16.1",
+    "@sentry/vue": "^7.8.1",
     "@tinymce/tinymce-vue": "^3.2.8",
     "ap-style-title-case": "^1.1.2",
     "apollo-server": "^3.10.0",
