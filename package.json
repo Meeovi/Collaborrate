@@ -55,7 +55,7 @@
     "@nuxtjs/i18n": "^7.2.0",
     "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/sentry": "^5.1.6",
-    "@sentry/tracing": "^6.16.1",
+    "@sentry/tracing": "^7.8.1",
     "@sentry/vue": "^6.16.1",
     "@tinymce/tinymce-vue": "^3.2.8",
     "ap-style-title-case": "^1.1.2",
