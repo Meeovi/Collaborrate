@@ -85,7 +85,7 @@
     "oracledb": "^5.4.0",
     "postgraphile-apollo-server": "^0.1.1",
     "sqlite3": "^5.0.10",
-    "stripe": "^8.184.0",
+    "stripe": "^10.0.0",
     "tedious": "^15.0.0",
     "tinymce": "^6.1.0",
     "webpack": "^4.45.0"
