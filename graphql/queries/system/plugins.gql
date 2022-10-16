@@ -1,0 +1,18 @@
+
+query plugins {
+  findManyPlugins {
+    id
+    name
+    logo
+    lastUpdated
+    githubLink
+    description
+    createdAt
+    agreeTerms
+    nodeId
+    publisherEmail
+    publisherName
+    screenshots
+    url
+  }
+}

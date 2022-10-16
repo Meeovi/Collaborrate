@@ -1,0 +1,23 @@
+
+query invoices {
+  findManyInvoices {
+    billToName
+    billingAddress
+    customerGroup
+    customerName
+    email
+    grandTotalBase
+    grandTotalPurchased
+    id
+    invoice
+    invoiceDate
+    nodeId
+    orderNumber
+    paymentMethod
+    shippingAddress
+    shippingAndHandling
+    shippingInformation
+    status
+    subtotal
+  }
+}

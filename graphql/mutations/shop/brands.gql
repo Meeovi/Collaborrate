@@ -1,0 +1,20 @@
+
+query ($id: Int){
+  createOneBrands (where: {id: {_eq: $id}}){
+    city
+    code
+    country
+    created_at
+    description
+    id
+    isPublic
+    media
+    name
+    product
+    state
+    productByProduct {
+      id
+      name
+    }
+  }
+}

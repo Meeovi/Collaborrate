@@ -1,0 +1,12 @@
+
+query internalization ($id: Int) {
+  createOneInternalization (where: {id: {_eq: $id}}) {
+    id
+    name
+    region
+    website
+    description
+    default
+    created_at
+  }
+}

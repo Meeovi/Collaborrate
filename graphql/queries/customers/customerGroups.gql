@@ -1,0 +1,10 @@
+query MyQuery {
+  customer_groups {
+    created_at
+    cust_id
+    customers
+    id
+    name
+    tax_class
+  }
+}

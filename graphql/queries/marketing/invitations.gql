@@ -1,0 +1,18 @@
+
+query invitations {
+  findManyInvitations {
+    id
+    grandTotalPurchased
+    email
+    createdAt
+    content
+    billingAddress
+    invoiceDate
+    media
+    nodeId
+    orderNumber
+    paymentMethod
+    shippingAddress
+    status
+  }
+}

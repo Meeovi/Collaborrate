@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregatePollsArgs } from "./args/AggregatePollsArgs";
+import { CreateManyPollsArgs } from "./args/CreateManyPollsArgs";
+import { CreateOnePollsArgs } from "./args/CreateOnePollsArgs";
+import { DeleteManyPollsArgs } from "./args/DeleteManyPollsArgs";
+import { DeleteOnePollsArgs } from "./args/DeleteOnePollsArgs";
+import { FindFirstPollsArgs } from "./args/FindFirstPollsArgs";
+import { FindManyPollsArgs } from "./args/FindManyPollsArgs";
+import { FindUniquePollsArgs } from "./args/FindUniquePollsArgs";
+import { GroupByPollsArgs } from "./args/GroupByPollsArgs";
+import { UpdateManyPollsArgs } from "./args/UpdateManyPollsArgs";
+import { UpdateOnePollsArgs } from "./args/UpdateOnePollsArgs";
+import { UpsertOnePollsArgs } from "./args/UpsertOnePollsArgs";
+import { Polls } from "../../../models/Polls";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregatePolls } from "../../outputs/AggregatePolls";
+import { PollsGroupBy } from "../../outputs/PollsGroupBy";
+export declare class PollsCrudResolver {
+    aggregatePolls(ctx: any, info: GraphQLResolveInfo, args: AggregatePollsArgs): Promise<AggregatePolls>;
+    createManyPolls(ctx: any, info: GraphQLResolveInfo, args: CreateManyPollsArgs): Promise<AffectedRowsOutput>;
+    createOnePolls(ctx: any, info: GraphQLResolveInfo, args: CreateOnePollsArgs): Promise<Polls>;
+    deleteManyPolls(ctx: any, info: GraphQLResolveInfo, args: DeleteManyPollsArgs): Promise<AffectedRowsOutput>;
+    deleteOnePolls(ctx: any, info: GraphQLResolveInfo, args: DeleteOnePollsArgs): Promise<Polls | null>;
+    findFirstPolls(ctx: any, info: GraphQLResolveInfo, args: FindFirstPollsArgs): Promise<Polls | null>;
+    findManyPolls(ctx: any, info: GraphQLResolveInfo, args: FindManyPollsArgs): Promise<Polls[]>;
+    findUniquePolls(ctx: any, info: GraphQLResolveInfo, args: FindUniquePollsArgs): Promise<Polls | null>;
+    groupByPolls(ctx: any, info: GraphQLResolveInfo, args: GroupByPollsArgs): Promise<PollsGroupBy[]>;
+    updateManyPolls(ctx: any, info: GraphQLResolveInfo, args: UpdateManyPollsArgs): Promise<AffectedRowsOutput>;
+    updateOnePolls(ctx: any, info: GraphQLResolveInfo, args: UpdateOnePollsArgs): Promise<Polls | null>;
+    upsertOnePolls(ctx: any, info: GraphQLResolveInfo, args: UpsertOnePollsArgs): Promise<Polls>;
+}

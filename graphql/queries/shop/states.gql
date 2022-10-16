@@ -1,0 +1,10 @@
+query MyQuery {
+  findManyStates {
+    trainings
+    name
+    image
+    id
+    description
+    country
+  }
+}

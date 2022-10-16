@@ -1,0 +1,33 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CouponsOrderByRelevanceInput = void 0;
+const tslib_1 = require("tslib");
+const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
+const CouponsOrderByRelevanceFieldEnum_1 = require("../../enums/CouponsOrderByRelevanceFieldEnum");
+const SortOrder_1 = require("../../enums/SortOrder");
+let CouponsOrderByRelevanceInput = class CouponsOrderByRelevanceInput {
+};
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => [CouponsOrderByRelevanceFieldEnum_1.CouponsOrderByRelevanceFieldEnum], {
+        nullable: false
+    }),
+    tslib_1.__metadata("design:type", Array)
+], CouponsOrderByRelevanceInput.prototype, "fields", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: false
+    }),
+    tslib_1.__metadata("design:type", String)
+], CouponsOrderByRelevanceInput.prototype, "sort", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: false
+    }),
+    tslib_1.__metadata("design:type", String)
+], CouponsOrderByRelevanceInput.prototype, "search", void 0);
+CouponsOrderByRelevanceInput = tslib_1.__decorate([
+    TypeGraphQL.InputType("CouponsOrderByRelevanceInput", {
+        isAbstract: true
+    })
+], CouponsOrderByRelevanceInput);
+exports.CouponsOrderByRelevanceInput = CouponsOrderByRelevanceInput;

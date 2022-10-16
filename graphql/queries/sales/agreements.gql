@@ -1,0 +1,17 @@
+
+query Query {
+  findManyAgreements {
+    id
+    reference_id
+    created
+    updated
+    content
+    name
+    image
+    excerpt
+    type
+    user_id
+    shop_id
+    mediamanager
+  }
+}

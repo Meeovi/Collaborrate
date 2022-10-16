@@ -1,0 +1,11 @@
+import { LeadsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/LeadsOrderByWithRelationAndSearchRelevanceInput";
+import { LeadsWhereInput } from "../../../inputs/LeadsWhereInput";
+import { LeadsWhereUniqueInput } from "../../../inputs/LeadsWhereUniqueInput";
+export declare class FindManyLeadsArgs {
+    where?: LeadsWhereInput | undefined;
+    orderBy?: LeadsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    cursor?: LeadsWhereUniqueInput | undefined;
+    take?: number | undefined;
+    skip?: number | undefined;
+    distinct?: Array<"id" | "created_at" | "Prefix" | "first_name" | "last_name" | "department" | "account_name" | "address" | "postalcode" | "city" | "state" | "country" | "email" | "description" | "fax" | "website" | "mobile" | "job_title" | "alt_address" | "alt_postalcode" | "alt_city" | "alt_state" | "alt_country" | "office_phone" | "status" | "status_description" | "opportunity_amount" | "campaign" | "lead_source" | "lead_source_description" | "referred_by" | "customer_name"> | undefined;
+}

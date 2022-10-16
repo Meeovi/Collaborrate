@@ -1,0 +1,12 @@
+
+query settingsmarketing ($id: Int) {
+  createOneSettingsmarketing (where: {id: {_eq: $id}}) {
+    adsense_api
+    customer_data_lifetime
+    id
+    mail_port
+    mail_server
+    recaptcha_api
+    sitemap_url
+  }
+}

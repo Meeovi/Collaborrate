@@ -1,0 +1,24 @@
+query MyQuery {
+  findManyReturns {
+    created_at
+    customers
+    id
+    name
+    products
+    return_prefix
+    description
+    height
+    howShipped
+    liquidationReason
+    location
+    media
+    shipTo
+    shippingDescription
+    shippingNumber
+    status
+    type
+    weight
+    validity
+    case_id
+  }
+}

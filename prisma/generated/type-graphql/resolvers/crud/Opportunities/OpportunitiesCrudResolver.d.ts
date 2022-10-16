@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateOpportunitiesArgs } from "./args/AggregateOpportunitiesArgs";
+import { CreateManyOpportunitiesArgs } from "./args/CreateManyOpportunitiesArgs";
+import { CreateOneOpportunitiesArgs } from "./args/CreateOneOpportunitiesArgs";
+import { DeleteManyOpportunitiesArgs } from "./args/DeleteManyOpportunitiesArgs";
+import { DeleteOneOpportunitiesArgs } from "./args/DeleteOneOpportunitiesArgs";
+import { FindFirstOpportunitiesArgs } from "./args/FindFirstOpportunitiesArgs";
+import { FindManyOpportunitiesArgs } from "./args/FindManyOpportunitiesArgs";
+import { FindUniqueOpportunitiesArgs } from "./args/FindUniqueOpportunitiesArgs";
+import { GroupByOpportunitiesArgs } from "./args/GroupByOpportunitiesArgs";
+import { UpdateManyOpportunitiesArgs } from "./args/UpdateManyOpportunitiesArgs";
+import { UpdateOneOpportunitiesArgs } from "./args/UpdateOneOpportunitiesArgs";
+import { UpsertOneOpportunitiesArgs } from "./args/UpsertOneOpportunitiesArgs";
+import { Opportunities } from "../../../models/Opportunities";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateOpportunities } from "../../outputs/AggregateOpportunities";
+import { OpportunitiesGroupBy } from "../../outputs/OpportunitiesGroupBy";
+export declare class OpportunitiesCrudResolver {
+    aggregateOpportunities(ctx: any, info: GraphQLResolveInfo, args: AggregateOpportunitiesArgs): Promise<AggregateOpportunities>;
+    createManyOpportunities(ctx: any, info: GraphQLResolveInfo, args: CreateManyOpportunitiesArgs): Promise<AffectedRowsOutput>;
+    createOneOpportunities(ctx: any, info: GraphQLResolveInfo, args: CreateOneOpportunitiesArgs): Promise<Opportunities>;
+    deleteManyOpportunities(ctx: any, info: GraphQLResolveInfo, args: DeleteManyOpportunitiesArgs): Promise<AffectedRowsOutput>;
+    deleteOneOpportunities(ctx: any, info: GraphQLResolveInfo, args: DeleteOneOpportunitiesArgs): Promise<Opportunities | null>;
+    findFirstOpportunities(ctx: any, info: GraphQLResolveInfo, args: FindFirstOpportunitiesArgs): Promise<Opportunities | null>;
+    findManyOpportunities(ctx: any, info: GraphQLResolveInfo, args: FindManyOpportunitiesArgs): Promise<Opportunities[]>;
+    findUniqueOpportunities(ctx: any, info: GraphQLResolveInfo, args: FindUniqueOpportunitiesArgs): Promise<Opportunities | null>;
+    groupByOpportunities(ctx: any, info: GraphQLResolveInfo, args: GroupByOpportunitiesArgs): Promise<OpportunitiesGroupBy[]>;
+    updateManyOpportunities(ctx: any, info: GraphQLResolveInfo, args: UpdateManyOpportunitiesArgs): Promise<AffectedRowsOutput>;
+    updateOneOpportunities(ctx: any, info: GraphQLResolveInfo, args: UpdateOneOpportunitiesArgs): Promise<Opportunities | null>;
+    upsertOneOpportunities(ctx: any, info: GraphQLResolveInfo, args: UpsertOneOpportunitiesArgs): Promise<Opportunities>;
+}

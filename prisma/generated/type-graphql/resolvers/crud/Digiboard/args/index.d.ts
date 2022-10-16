@@ -1,0 +1,12 @@
+export { AggregateDigiboardArgs } from "./AggregateDigiboardArgs";
+export { CreateManyDigiboardArgs } from "./CreateManyDigiboardArgs";
+export { CreateOneDigiboardArgs } from "./CreateOneDigiboardArgs";
+export { DeleteManyDigiboardArgs } from "./DeleteManyDigiboardArgs";
+export { DeleteOneDigiboardArgs } from "./DeleteOneDigiboardArgs";
+export { FindFirstDigiboardArgs } from "./FindFirstDigiboardArgs";
+export { FindManyDigiboardArgs } from "./FindManyDigiboardArgs";
+export { FindUniqueDigiboardArgs } from "./FindUniqueDigiboardArgs";
+export { GroupByDigiboardArgs } from "./GroupByDigiboardArgs";
+export { UpdateManyDigiboardArgs } from "./UpdateManyDigiboardArgs";
+export { UpdateOneDigiboardArgs } from "./UpdateOneDigiboardArgs";
+export { UpsertOneDigiboardArgs } from "./UpsertOneDigiboardArgs";

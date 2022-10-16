@@ -1,0 +1,30 @@
+export declare class TargetsCountAggregate {
+    id: number;
+    created_at: number;
+    Prefix: number;
+    first_name: number;
+    last_name: number;
+    department: number;
+    account_name: number;
+    address: number;
+    postalcode: number;
+    city: number;
+    state: number;
+    country: number;
+    email: number;
+    description: number;
+    fax: number;
+    website: number;
+    mobile: number;
+    job_title: number;
+    alt_address: number;
+    alt_postalcode: number;
+    alt_city: number;
+    alt_state: number;
+    alt_country: number;
+    office_phone: number;
+    customer_name: number;
+    email_opt_out: number;
+    donotcall: number;
+    _all: number;
+}

@@ -1,0 +1,12 @@
+export { AggregateStatisticsArgs } from "./AggregateStatisticsArgs";
+export { CreateManyStatisticsArgs } from "./CreateManyStatisticsArgs";
+export { CreateOneStatisticsArgs } from "./CreateOneStatisticsArgs";
+export { DeleteManyStatisticsArgs } from "./DeleteManyStatisticsArgs";
+export { DeleteOneStatisticsArgs } from "./DeleteOneStatisticsArgs";
+export { FindFirstStatisticsArgs } from "./FindFirstStatisticsArgs";
+export { FindManyStatisticsArgs } from "./FindManyStatisticsArgs";
+export { FindUniqueStatisticsArgs } from "./FindUniqueStatisticsArgs";
+export { GroupByStatisticsArgs } from "./GroupByStatisticsArgs";
+export { UpdateManyStatisticsArgs } from "./UpdateManyStatisticsArgs";
+export { UpdateOneStatisticsArgs } from "./UpdateOneStatisticsArgs";
+export { UpsertOneStatisticsArgs } from "./UpsertOneStatisticsArgs";

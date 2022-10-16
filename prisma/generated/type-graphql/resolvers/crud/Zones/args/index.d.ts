@@ -1,0 +1,12 @@
+export { AggregateZonesArgs } from "./AggregateZonesArgs";
+export { CreateManyZonesArgs } from "./CreateManyZonesArgs";
+export { CreateOneZonesArgs } from "./CreateOneZonesArgs";
+export { DeleteManyZonesArgs } from "./DeleteManyZonesArgs";
+export { DeleteOneZonesArgs } from "./DeleteOneZonesArgs";
+export { FindFirstZonesArgs } from "./FindFirstZonesArgs";
+export { FindManyZonesArgs } from "./FindManyZonesArgs";
+export { FindUniqueZonesArgs } from "./FindUniqueZonesArgs";
+export { GroupByZonesArgs } from "./GroupByZonesArgs";
+export { UpdateManyZonesArgs } from "./UpdateManyZonesArgs";
+export { UpdateOneZonesArgs } from "./UpdateOneZonesArgs";
+export { UpsertOneZonesArgs } from "./UpsertOneZonesArgs";

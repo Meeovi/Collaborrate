@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateCurrency_ratesArgs } from "./args/AggregateCurrency_ratesArgs";
+import { CreateManyCurrency_ratesArgs } from "./args/CreateManyCurrency_ratesArgs";
+import { CreateOneCurrency_ratesArgs } from "./args/CreateOneCurrency_ratesArgs";
+import { DeleteManyCurrency_ratesArgs } from "./args/DeleteManyCurrency_ratesArgs";
+import { DeleteOneCurrency_ratesArgs } from "./args/DeleteOneCurrency_ratesArgs";
+import { FindFirstCurrency_ratesArgs } from "./args/FindFirstCurrency_ratesArgs";
+import { FindManyCurrency_ratesArgs } from "./args/FindManyCurrency_ratesArgs";
+import { FindUniqueCurrency_ratesArgs } from "./args/FindUniqueCurrency_ratesArgs";
+import { GroupByCurrency_ratesArgs } from "./args/GroupByCurrency_ratesArgs";
+import { UpdateManyCurrency_ratesArgs } from "./args/UpdateManyCurrency_ratesArgs";
+import { UpdateOneCurrency_ratesArgs } from "./args/UpdateOneCurrency_ratesArgs";
+import { UpsertOneCurrency_ratesArgs } from "./args/UpsertOneCurrency_ratesArgs";
+import { Currency_rates } from "../../../models/Currency_rates";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateCurrency_rates } from "../../outputs/AggregateCurrency_rates";
+import { Currency_ratesGroupBy } from "../../outputs/Currency_ratesGroupBy";
+export declare class Currency_ratesCrudResolver {
+    aggregateCurrency_rates(ctx: any, info: GraphQLResolveInfo, args: AggregateCurrency_ratesArgs): Promise<AggregateCurrency_rates>;
+    createManyCurrency_rates(ctx: any, info: GraphQLResolveInfo, args: CreateManyCurrency_ratesArgs): Promise<AffectedRowsOutput>;
+    createOneCurrency_rates(ctx: any, info: GraphQLResolveInfo, args: CreateOneCurrency_ratesArgs): Promise<Currency_rates>;
+    deleteManyCurrency_rates(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCurrency_ratesArgs): Promise<AffectedRowsOutput>;
+    deleteOneCurrency_rates(ctx: any, info: GraphQLResolveInfo, args: DeleteOneCurrency_ratesArgs): Promise<Currency_rates | null>;
+    findFirstCurrency_rates(ctx: any, info: GraphQLResolveInfo, args: FindFirstCurrency_ratesArgs): Promise<Currency_rates | null>;
+    findManyCurrency_rates(ctx: any, info: GraphQLResolveInfo, args: FindManyCurrency_ratesArgs): Promise<Currency_rates[]>;
+    findUniqueCurrency_rates(ctx: any, info: GraphQLResolveInfo, args: FindUniqueCurrency_ratesArgs): Promise<Currency_rates | null>;
+    groupByCurrency_rates(ctx: any, info: GraphQLResolveInfo, args: GroupByCurrency_ratesArgs): Promise<Currency_ratesGroupBy[]>;
+    updateManyCurrency_rates(ctx: any, info: GraphQLResolveInfo, args: UpdateManyCurrency_ratesArgs): Promise<AffectedRowsOutput>;
+    updateOneCurrency_rates(ctx: any, info: GraphQLResolveInfo, args: UpdateOneCurrency_ratesArgs): Promise<Currency_rates | null>;
+    upsertOneCurrency_rates(ctx: any, info: GraphQLResolveInfo, args: UpsertOneCurrency_ratesArgs): Promise<Currency_rates>;
+}

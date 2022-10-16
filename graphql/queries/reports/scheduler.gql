@@ -1,0 +1,14 @@
+
+query schedulers {
+  findManySchedulers {
+    createdAt
+    endDate
+    id
+    level
+    login
+    nodeId
+    notes
+    startDate
+    whid
+  }
+}

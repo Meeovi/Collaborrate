@@ -1,0 +1,17 @@
+
+query payments {
+  findManyPayments {
+    active
+    clientId
+    clientSecret
+    country
+    createdAt
+    hostUri
+    icon
+    id
+    name
+    nodeId
+    redirectUrl
+    redirectUrlApp
+  }
+}

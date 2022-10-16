@@ -1,0 +1,12 @@
+
+query importms {
+  findManyImportms(order_by: {name: asc}) {
+    id
+    file
+    description
+    created_at
+    image
+    name
+    url
+  }
+}

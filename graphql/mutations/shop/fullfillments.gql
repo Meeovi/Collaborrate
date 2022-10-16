@@ -1,0 +1,20 @@
+
+query ($id: Int){
+  createOneFullfillments (where: {id: {_eq: $id}}){
+    id
+    name
+    phone
+    pickup
+    shipping_zones
+    state
+    stock
+    zipcode
+    created_at
+    country_area
+    country
+    company
+    city
+    address_two
+    address
+  }
+}

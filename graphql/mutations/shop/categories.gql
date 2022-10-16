@@ -1,0 +1,13 @@
+
+query ($id: Int){
+  createOneCategories (where: {id: {_eq: $id}}){
+    id
+    name
+    content
+    image
+    meta_description
+    meta_keywords
+    meta_url
+    meta_title
+  }
+}

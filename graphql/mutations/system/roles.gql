@@ -1,0 +1,9 @@
+
+query ($id: Int){
+  createOneRoles (where: {id: {_eq: $id}}){
+    id
+    created_at
+    content
+    role_name
+  }
+}

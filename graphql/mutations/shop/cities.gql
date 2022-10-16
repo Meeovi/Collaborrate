@@ -1,0 +1,12 @@
+
+query ($id: Int){
+  createOneCities (where: {id: {_eq: $id}}){
+    id
+    name
+    state
+    description
+    country
+    postalCode
+    image
+  }
+}

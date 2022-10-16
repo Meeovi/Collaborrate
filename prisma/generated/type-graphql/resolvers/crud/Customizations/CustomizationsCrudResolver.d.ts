@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateCustomizationsArgs } from "./args/AggregateCustomizationsArgs";
+import { CreateManyCustomizationsArgs } from "./args/CreateManyCustomizationsArgs";
+import { CreateOneCustomizationsArgs } from "./args/CreateOneCustomizationsArgs";
+import { DeleteManyCustomizationsArgs } from "./args/DeleteManyCustomizationsArgs";
+import { DeleteOneCustomizationsArgs } from "./args/DeleteOneCustomizationsArgs";
+import { FindFirstCustomizationsArgs } from "./args/FindFirstCustomizationsArgs";
+import { FindManyCustomizationsArgs } from "./args/FindManyCustomizationsArgs";
+import { FindUniqueCustomizationsArgs } from "./args/FindUniqueCustomizationsArgs";
+import { GroupByCustomizationsArgs } from "./args/GroupByCustomizationsArgs";
+import { UpdateManyCustomizationsArgs } from "./args/UpdateManyCustomizationsArgs";
+import { UpdateOneCustomizationsArgs } from "./args/UpdateOneCustomizationsArgs";
+import { UpsertOneCustomizationsArgs } from "./args/UpsertOneCustomizationsArgs";
+import { Customizations } from "../../../models/Customizations";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateCustomizations } from "../../outputs/AggregateCustomizations";
+import { CustomizationsGroupBy } from "../../outputs/CustomizationsGroupBy";
+export declare class CustomizationsCrudResolver {
+    aggregateCustomizations(ctx: any, info: GraphQLResolveInfo, args: AggregateCustomizationsArgs): Promise<AggregateCustomizations>;
+    createManyCustomizations(ctx: any, info: GraphQLResolveInfo, args: CreateManyCustomizationsArgs): Promise<AffectedRowsOutput>;
+    createOneCustomizations(ctx: any, info: GraphQLResolveInfo, args: CreateOneCustomizationsArgs): Promise<Customizations>;
+    deleteManyCustomizations(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCustomizationsArgs): Promise<AffectedRowsOutput>;
+    deleteOneCustomizations(ctx: any, info: GraphQLResolveInfo, args: DeleteOneCustomizationsArgs): Promise<Customizations | null>;
+    findFirstCustomizations(ctx: any, info: GraphQLResolveInfo, args: FindFirstCustomizationsArgs): Promise<Customizations | null>;
+    findManyCustomizations(ctx: any, info: GraphQLResolveInfo, args: FindManyCustomizationsArgs): Promise<Customizations[]>;
+    findUniqueCustomizations(ctx: any, info: GraphQLResolveInfo, args: FindUniqueCustomizationsArgs): Promise<Customizations | null>;
+    groupByCustomizations(ctx: any, info: GraphQLResolveInfo, args: GroupByCustomizationsArgs): Promise<CustomizationsGroupBy[]>;
+    updateManyCustomizations(ctx: any, info: GraphQLResolveInfo, args: UpdateManyCustomizationsArgs): Promise<AffectedRowsOutput>;
+    updateOneCustomizations(ctx: any, info: GraphQLResolveInfo, args: UpdateOneCustomizationsArgs): Promise<Customizations | null>;
+    upsertOneCustomizations(ctx: any, info: GraphQLResolveInfo, args: UpsertOneCustomizationsArgs): Promise<Customizations>;
+}

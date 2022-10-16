@@ -1,0 +1,22 @@
+
+query giftCertificates {
+  findManyGiftCertificates {
+    articles
+    categories
+    customers
+    coupons
+    discount
+    excerpt
+    expiration
+    id
+    image
+    name
+    nodeId
+    products
+    published
+    rewards
+    specialOffers
+    type
+    users
+  }
+}

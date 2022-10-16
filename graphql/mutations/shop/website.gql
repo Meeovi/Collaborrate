@@ -1,0 +1,11 @@
+
+query ($id: Int){
+  createOneWebsites (where: {id: {_eq: $id}}){
+    id
+    name
+    shop
+    store
+    url
+    created_at
+  }
+}

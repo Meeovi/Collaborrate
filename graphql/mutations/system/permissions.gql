@@ -1,0 +1,15 @@
+
+query ($id: Int){
+  createOnePermissions (where: {id: {_eq: $id}}){
+    id
+    created_at
+    content
+    name
+    create
+    delete
+    read
+    role
+    update
+    users
+  }
+}

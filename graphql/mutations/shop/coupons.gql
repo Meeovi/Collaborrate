@@ -1,0 +1,17 @@
+
+query ($id: Int){
+  createOneCoupons (where: {id: {_eq: $id}}){
+    id
+    image
+    name
+    products
+    published
+    users
+    expiration
+    excerpt
+    discount
+    customers
+    categories
+    articles
+  }
+}

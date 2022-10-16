@@ -1,0 +1,19 @@
+
+query cases {
+  findManyCases {
+    accountName
+    assignedTo
+    caseNumber
+    createdAt
+    dateModified
+    description
+    id
+    nodeId
+    priority
+    resolution
+    state
+    status
+    subject
+    type
+  }
+}

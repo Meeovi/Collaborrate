@@ -1,0 +1,14 @@
+query MyQuery {
+  findManyReports {
+    applied_coupon
+    created
+    customer
+    email
+    id
+    ip_address
+    products
+    quantity
+    subtotal
+    updated
+  }
+}

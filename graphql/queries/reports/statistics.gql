@@ -1,0 +1,22 @@
+
+query statistics {
+  findManyStatistics {
+    articles
+    categories
+    coupons
+    customers
+    description
+    excerpt
+    expiration
+    id
+    image
+    name
+    nodeId
+    products
+    published
+    reports
+    rewards
+    specialOffers
+    users
+  }
+}

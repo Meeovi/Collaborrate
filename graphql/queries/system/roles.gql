@@ -1,0 +1,8 @@
+query MyQuery {
+  findManyRoles {
+    content
+    created_at
+    id
+    role_name
+  }
+}

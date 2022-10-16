@@ -1,0 +1,17 @@
+
+query ($id: Int){
+  createOneRewards (where: {id: {_eq: $id}}){
+    id
+    expiration
+    customers
+    created_at
+    coupons
+    categories
+    articles
+    level
+    name
+    slug
+    products
+    users
+  }
+}

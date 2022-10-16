@@ -1,0 +1,12 @@
+
+query apitokens {
+  findManyApitokens {
+    createdAt
+    description
+    id
+    name
+    nodeId
+    token
+    tokenType
+  }
+}

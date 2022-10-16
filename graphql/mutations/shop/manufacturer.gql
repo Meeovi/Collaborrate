@@ -1,0 +1,15 @@
+
+query ($id: Int){
+  createOneManufacturer (where: {id: {_eq: $id}}){
+    product
+    name
+    media
+    isPublic
+    id
+    description
+    created_at
+    country
+    code
+    city
+  }
+}

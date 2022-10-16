@@ -1,0 +1,35 @@
+export declare class LeadsCountAggregate {
+    id: number;
+    created_at: number;
+    Prefix: number;
+    first_name: number;
+    last_name: number;
+    department: number;
+    account_name: number;
+    address: number;
+    postalcode: number;
+    city: number;
+    state: number;
+    country: number;
+    email: number;
+    description: number;
+    fax: number;
+    website: number;
+    mobile: number;
+    job_title: number;
+    alt_address: number;
+    alt_postalcode: number;
+    alt_city: number;
+    alt_state: number;
+    alt_country: number;
+    office_phone: number;
+    status: number;
+    status_description: number;
+    opportunity_amount: number;
+    campaign: number;
+    lead_source: number;
+    lead_source_description: number;
+    referred_by: number;
+    customer_name: number;
+    _all: number;
+}

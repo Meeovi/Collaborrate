@@ -1,0 +1,16 @@
+query MyQuery {
+  findFirstCredit_memos {
+    action
+    bill_to_name
+    created
+    credit_memo
+    cust_id
+    customers
+    id
+    order_number
+    prod_id
+    products
+    refunded
+    status
+  }
+}

@@ -1,0 +1,30 @@
+import { BigIntFieldUpdateOperationsInput } from "../inputs/BigIntFieldUpdateOperationsInput";
+import { NullableDateTimeFieldUpdateOperationsInput } from "../inputs/NullableDateTimeFieldUpdateOperationsInput";
+import { NullableStringFieldUpdateOperationsInput } from "../inputs/NullableStringFieldUpdateOperationsInput";
+export declare class ContractsUpdateInput {
+    id?: BigIntFieldUpdateOperationsInput | undefined;
+    contract_title?: NullableStringFieldUpdateOperationsInput | undefined;
+    contract_value?: NullableStringFieldUpdateOperationsInput | undefined;
+    start_date?: NullableStringFieldUpdateOperationsInput | undefined;
+    end_date?: NullableStringFieldUpdateOperationsInput | undefined;
+    renewal_reminder?: NullableStringFieldUpdateOperationsInput | undefined;
+    customer_signed_date?: NullableStringFieldUpdateOperationsInput | undefined;
+    company_signed_date?: NullableStringFieldUpdateOperationsInput | undefined;
+    status?: NullableStringFieldUpdateOperationsInput | undefined;
+    contract_manager?: NullableStringFieldUpdateOperationsInput | undefined;
+    account?: NullableStringFieldUpdateOperationsInput | undefined;
+    contact?: NullableStringFieldUpdateOperationsInput | undefined;
+    description?: NullableStringFieldUpdateOperationsInput | undefined;
+    opportunity?: NullableStringFieldUpdateOperationsInput | undefined;
+    contract_type?: NullableStringFieldUpdateOperationsInput | undefined;
+    currency?: NullableStringFieldUpdateOperationsInput | undefined;
+    line_items?: NullableStringFieldUpdateOperationsInput | undefined;
+    total?: NullableStringFieldUpdateOperationsInput | undefined;
+    discount?: NullableStringFieldUpdateOperationsInput | undefined;
+    subtotal?: NullableStringFieldUpdateOperationsInput | undefined;
+    shipping?: NullableStringFieldUpdateOperationsInput | undefined;
+    shipping_tax?: NullableStringFieldUpdateOperationsInput | undefined;
+    tax?: NullableStringFieldUpdateOperationsInput | undefined;
+    grand_total?: NullableStringFieldUpdateOperationsInput | undefined;
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | undefined;
+}

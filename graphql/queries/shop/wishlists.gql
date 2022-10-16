@@ -1,0 +1,13 @@
+
+query wishlists {
+  findManyWishlists {
+    createdAt
+    customers
+    id
+    name
+    nodeId
+    visibility
+    quantity
+    products
+  }
+}

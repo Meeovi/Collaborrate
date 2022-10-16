@@ -1,0 +1,32 @@
+import { BigIntFieldUpdateOperationsInput } from "../inputs/BigIntFieldUpdateOperationsInput";
+import { NullableDateTimeFieldUpdateOperationsInput } from "../inputs/NullableDateTimeFieldUpdateOperationsInput";
+import { NullableStringFieldUpdateOperationsInput } from "../inputs/NullableStringFieldUpdateOperationsInput";
+export declare class TargetsUpdateManyMutationInput {
+    id?: BigIntFieldUpdateOperationsInput | undefined;
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | undefined;
+    Prefix?: NullableStringFieldUpdateOperationsInput | undefined;
+    first_name?: NullableStringFieldUpdateOperationsInput | undefined;
+    last_name?: NullableStringFieldUpdateOperationsInput | undefined;
+    department?: NullableStringFieldUpdateOperationsInput | undefined;
+    account_name?: NullableStringFieldUpdateOperationsInput | undefined;
+    address?: NullableStringFieldUpdateOperationsInput | undefined;
+    postalcode?: NullableStringFieldUpdateOperationsInput | undefined;
+    city?: NullableStringFieldUpdateOperationsInput | undefined;
+    state?: NullableStringFieldUpdateOperationsInput | undefined;
+    country?: NullableStringFieldUpdateOperationsInput | undefined;
+    email?: NullableStringFieldUpdateOperationsInput | undefined;
+    description?: NullableStringFieldUpdateOperationsInput | undefined;
+    fax?: NullableStringFieldUpdateOperationsInput | undefined;
+    website?: NullableStringFieldUpdateOperationsInput | undefined;
+    mobile?: NullableStringFieldUpdateOperationsInput | undefined;
+    job_title?: NullableStringFieldUpdateOperationsInput | undefined;
+    alt_address?: NullableStringFieldUpdateOperationsInput | undefined;
+    alt_postalcode?: NullableStringFieldUpdateOperationsInput | undefined;
+    alt_city?: NullableStringFieldUpdateOperationsInput | undefined;
+    alt_state?: NullableStringFieldUpdateOperationsInput | undefined;
+    alt_country?: NullableStringFieldUpdateOperationsInput | undefined;
+    office_phone?: NullableStringFieldUpdateOperationsInput | undefined;
+    customer_name?: NullableStringFieldUpdateOperationsInput | undefined;
+    email_opt_out?: NullableStringFieldUpdateOperationsInput | undefined;
+    donotcall?: NullableStringFieldUpdateOperationsInput | undefined;
+}

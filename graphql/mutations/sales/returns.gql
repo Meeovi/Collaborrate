@@ -1,0 +1,10 @@
+
+query ($id: Int){
+  createOneReturns (where: {id: {_eq: $id}}){
+    id
+    name
+    return_prefix
+    validity
+    created_at
+  }
+}

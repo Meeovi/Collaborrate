@@ -1,0 +1,16 @@
+{
+  "name": "payments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "paypal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@paypal/sdk-client": "^4.0.168",
+    "nuxt-stripe-module": "^3.2.0"
+  }
+}

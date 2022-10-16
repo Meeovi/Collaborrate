@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateTargetsArgs } from "./args/AggregateTargetsArgs";
+import { CreateManyTargetsArgs } from "./args/CreateManyTargetsArgs";
+import { CreateOneTargetsArgs } from "./args/CreateOneTargetsArgs";
+import { DeleteManyTargetsArgs } from "./args/DeleteManyTargetsArgs";
+import { DeleteOneTargetsArgs } from "./args/DeleteOneTargetsArgs";
+import { FindFirstTargetsArgs } from "./args/FindFirstTargetsArgs";
+import { FindManyTargetsArgs } from "./args/FindManyTargetsArgs";
+import { FindUniqueTargetsArgs } from "./args/FindUniqueTargetsArgs";
+import { GroupByTargetsArgs } from "./args/GroupByTargetsArgs";
+import { UpdateManyTargetsArgs } from "./args/UpdateManyTargetsArgs";
+import { UpdateOneTargetsArgs } from "./args/UpdateOneTargetsArgs";
+import { UpsertOneTargetsArgs } from "./args/UpsertOneTargetsArgs";
+import { Targets } from "../../../models/Targets";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateTargets } from "../../outputs/AggregateTargets";
+import { TargetsGroupBy } from "../../outputs/TargetsGroupBy";
+export declare class TargetsCrudResolver {
+    aggregateTargets(ctx: any, info: GraphQLResolveInfo, args: AggregateTargetsArgs): Promise<AggregateTargets>;
+    createManyTargets(ctx: any, info: GraphQLResolveInfo, args: CreateManyTargetsArgs): Promise<AffectedRowsOutput>;
+    createOneTargets(ctx: any, info: GraphQLResolveInfo, args: CreateOneTargetsArgs): Promise<Targets>;
+    deleteManyTargets(ctx: any, info: GraphQLResolveInfo, args: DeleteManyTargetsArgs): Promise<AffectedRowsOutput>;
+    deleteOneTargets(ctx: any, info: GraphQLResolveInfo, args: DeleteOneTargetsArgs): Promise<Targets | null>;
+    findFirstTargets(ctx: any, info: GraphQLResolveInfo, args: FindFirstTargetsArgs): Promise<Targets | null>;
+    findManyTargets(ctx: any, info: GraphQLResolveInfo, args: FindManyTargetsArgs): Promise<Targets[]>;
+    findUniqueTargets(ctx: any, info: GraphQLResolveInfo, args: FindUniqueTargetsArgs): Promise<Targets | null>;
+    groupByTargets(ctx: any, info: GraphQLResolveInfo, args: GroupByTargetsArgs): Promise<TargetsGroupBy[]>;
+    updateManyTargets(ctx: any, info: GraphQLResolveInfo, args: UpdateManyTargetsArgs): Promise<AffectedRowsOutput>;
+    updateOneTargets(ctx: any, info: GraphQLResolveInfo, args: UpdateOneTargetsArgs): Promise<Targets | null>;
+    upsertOneTargets(ctx: any, info: GraphQLResolveInfo, args: UpsertOneTargetsArgs): Promise<Targets>;
+}

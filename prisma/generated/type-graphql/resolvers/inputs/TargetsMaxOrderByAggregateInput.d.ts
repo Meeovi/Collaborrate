@@ -1,0 +1,29 @@
+export declare class TargetsMaxOrderByAggregateInput {
+    id?: "asc" | "desc" | undefined;
+    created_at?: "asc" | "desc" | undefined;
+    Prefix?: "asc" | "desc" | undefined;
+    first_name?: "asc" | "desc" | undefined;
+    last_name?: "asc" | "desc" | undefined;
+    department?: "asc" | "desc" | undefined;
+    account_name?: "asc" | "desc" | undefined;
+    address?: "asc" | "desc" | undefined;
+    postalcode?: "asc" | "desc" | undefined;
+    city?: "asc" | "desc" | undefined;
+    state?: "asc" | "desc" | undefined;
+    country?: "asc" | "desc" | undefined;
+    email?: "asc" | "desc" | undefined;
+    description?: "asc" | "desc" | undefined;
+    fax?: "asc" | "desc" | undefined;
+    website?: "asc" | "desc" | undefined;
+    mobile?: "asc" | "desc" | undefined;
+    job_title?: "asc" | "desc" | undefined;
+    alt_address?: "asc" | "desc" | undefined;
+    alt_postalcode?: "asc" | "desc" | undefined;
+    alt_city?: "asc" | "desc" | undefined;
+    alt_state?: "asc" | "desc" | undefined;
+    alt_country?: "asc" | "desc" | undefined;
+    office_phone?: "asc" | "desc" | undefined;
+    customer_name?: "asc" | "desc" | undefined;
+    email_opt_out?: "asc" | "desc" | undefined;
+    donotcall?: "asc" | "desc" | undefined;
+}
