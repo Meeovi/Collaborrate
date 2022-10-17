@@ -4,11 +4,19 @@ query MyQuery {
     team
     status
     severity
+<<<<<<< HEAD
     resolution
     requester_email
     requester
     projects_projectsToticketing
     projects
+=======
+    requester_email
+    resolution
+    requester
+    projects
+    projects_projectsToticketing
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     products
     priority
     name
@@ -25,4 +33,8 @@ query MyQuery {
     assigned_to
     account_name
   }
+<<<<<<< HEAD
+=======
+  ticketing(where: {})
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 }

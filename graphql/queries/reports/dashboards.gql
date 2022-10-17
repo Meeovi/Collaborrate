@@ -1,13 +1,22 @@
 query MyQuery {
+<<<<<<< HEAD
   findManyDashboards {
+=======
+  findManyDashboards(orderBy: {name: asc}) {
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     articles
     category
     checklists
     client_id
     client_secret
     content
+<<<<<<< HEAD
     customers
     created_at
+=======
+    created_at
+    customers
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     id
     logo
     media

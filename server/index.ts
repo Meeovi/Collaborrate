@@ -1,15 +1,20 @@
 import "reflect-metadata";
 export {};
 
+<<<<<<< HEAD
 const express = require('express');
 import * as swaggerUi from 'swagger-ui-express'
 import { buildSchema } from "type-graphql";
+=======
+import {  buildSchema } from "type-graphql";
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 import { createServer } from '@graphql-yoga/node';
 import * as path from "path";
 import { prisma, PrismaClient } from "@prisma/client";
 import { useParserCache } from '@envelop/parser-cache';
 import { useValidationCache } from '@envelop/validation-cache';
 const { getUserId } = require('../server/config/utils');
+<<<<<<< HEAD
 import Fastify, { fastify, FastifyRequest, FastifyReply, FastifyInstance } from 'fastify';
 import { createModule, Scope, InjectionToken } from 'graphql-modules'
 import middie from "middie";
@@ -17,12 +22,20 @@ import fs from 'node:fs/promises'
 import session from "express-session";
 import passport from "passport";
 import { GraphQLLocalStrategy, buildContext } from "graphql-passport";
+=======
+
+const feathers = require('@feathersjs/feathers');
+const express = require('@feathersjs/express');
+
+import { createModule } from 'graphql-modules'
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 
 //import { useGraphQLModules } from '@envelop/graphql-modules';
 import { useGraphQlJit } from '@envelop/graphql-jit';
 import { resolvers } from "../prisma/generated/type-graphql";
 import { useSentry } from '@envelop/sentry';
 import '@sentry/tracing';
+<<<<<<< HEAD
 import { OpenAPI, useSofa } from 'sofa-api';
 import { loadFilesSync } from '@graphql-tools/load-files';
 import { join } from 'path';
@@ -59,13 +72,29 @@ pass.use(session({
 
 pass.use(passport.initialize());
 pass.use(passport.session()); // if session is used
+=======
+import { loadFilesSync } from '@graphql-tools/load-files';
+import { join } from 'path';
+
+// Create an app that is a Feathers AND Express application
+const app = express(feathers());
+
+app.use(express.json())
+// Turn on URL-encoded parser for REST services
+app.use(express.urlencoded({ extended: true }));
+// Set up REST transport
+app.configure(express.rest())
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 
 // Setting cors and logging capabilities
 
 var cors = require('cors')
+<<<<<<< HEAD
 const app = fastify({
   logger: true
 })
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 
 app.options('*', cors())
 
@@ -80,7 +109,10 @@ async function main() {
     resolvers,
     emitSchemaFile: path.resolve(__dirname, "./generated-schema.graphql"),
     validate: false,
+<<<<<<< HEAD
     
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   });
 
   // Graphql Modules implementation using our Graphql File
@@ -95,6 +127,7 @@ async function main() {
 
   const prisma = new PrismaClient();
   await prisma.$connect();
+<<<<<<< HEAD
   
   // Graphql Server main function 
 
@@ -102,11 +135,18 @@ async function main() {
     req: FastifyRequest
     reply: FastifyReply
   } > ({
+=======
+
+  // Graphql Server main function 
+
+  const server = createServer ({
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     schema,
     cors: {
       origin: '*',
       credentials: true,
     },
+<<<<<<< HEAD
     logging: {
       debug: (...args) => args.forEach((arg) => app.log.debug(arg)),
       info: (...args) => args.forEach((arg) => app.log.info(arg)),
@@ -118,6 +158,14 @@ async function main() {
       userId: req && req.headers.authorization ?
         getUserId(req) :
         null
+=======
+    context: ({
+      req
+    }) => ({
+      prisma,
+      userId: req && req.headers.authorization ?
+        getUserId(req) : null
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     }),
     plugins: [
       useParserCache({}),
@@ -133,6 +181,7 @@ async function main() {
     ],
   });
 
+<<<<<<< HEAD
   // Graphql Routes in AlternateCMS
 
   app.route({
@@ -194,3 +243,16 @@ async function main() {
 
 
 main().catch(console.error);
+=======
+  app.use(express.errorHandler())
+
+  app.use('/graphql', server)
+
+  app.listen(4000, () => {
+    console.log('Running a GraphQL API server at http://localhost:4000/graphql')
+  })
+}
+
+
+main().catch(console.error);
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194

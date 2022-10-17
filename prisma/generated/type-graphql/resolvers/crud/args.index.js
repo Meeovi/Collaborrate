@@ -43,6 +43,10 @@ tslib_1.__exportStar(require("./Internalization/args"), exports);
 tslib_1.__exportStar(require("./Invitations/args"), exports);
 tslib_1.__exportStar(require("./Invoices/args"), exports);
 tslib_1.__exportStar(require("./Leads/args"), exports);
+<<<<<<< HEAD
+=======
+tslib_1.__exportStar(require("./LogIn/args"), exports);
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 tslib_1.__exportStar(require("./Manufacturer/args"), exports);
 tslib_1.__exportStar(require("./Mediamanager/args"), exports);
 tslib_1.__exportStar(require("./Meeting/args"), exports);
@@ -76,7 +80,10 @@ tslib_1.__exportStar(require("./Special_discounts/args"), exports);
 tslib_1.__exportStar(require("./States/args"), exports);
 tslib_1.__exportStar(require("./Statistics/args"), exports);
 tslib_1.__exportStar(require("./Stocks/args"), exports);
+<<<<<<< HEAD
 tslib_1.__exportStar(require("./Surveys/args"), exports);
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 tslib_1.__exportStar(require("./Tags/args"), exports);
 tslib_1.__exportStar(require("./Targets/args"), exports);
 tslib_1.__exportStar(require("./Tax_category/args"), exports);
@@ -85,7 +92,10 @@ tslib_1.__exportStar(require("./Tax_rule/args"), exports);
 tslib_1.__exportStar(require("./Templates/args"), exports);
 tslib_1.__exportStar(require("./Themes/args"), exports);
 tslib_1.__exportStar(require("./Ticketing/args"), exports);
+<<<<<<< HEAD
 tslib_1.__exportStar(require("./Trainings/args"), exports);
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 tslib_1.__exportStar(require("./Transactions/args"), exports);
 tslib_1.__exportStar(require("./Upload_file/args"), exports);
 tslib_1.__exportStar(require("./Users/args"), exports);

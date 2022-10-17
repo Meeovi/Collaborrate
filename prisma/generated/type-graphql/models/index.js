@@ -1,7 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+<<<<<<< HEAD
 exports.Orders = exports.Opportunities = exports.Ooto = exports.Newsletters = exports.Messages = exports.Meeting = exports.Mediamanager = exports.Manufacturer = exports.Leads = exports.Invoices = exports.Invitations = exports.Internalization = exports.Integrations = exports.Importm = exports.Glossary = exports.Gift_certificates = exports.Fullfillments = exports.Events = exports.Endofshift = exports.Emails = exports.Digiboard = exports.Deepdive = exports.Dashboards = exports.Customizations = exports.Customers = exports.Customer_group = exports.Currency_symbols = exports.Currency_rates = exports.Currencies = exports.Credit_memos = exports.Coupons = exports.Countries = exports.Contracts = exports.Content_type = exports.Comments = exports.Collections = exports.Cities = exports.Checklist = exports.Channels = exports.Categories = exports.Catalog_price_rule = exports.Cases = exports.Cart_price_rules = exports.Brands = exports.Attributes = exports.Articles = exports.Apitoken = exports.Analytics = exports.Agreements = exports.Accounts = void 0;
 exports.Zones = exports.Workspaces = exports.Wishlists = exports.Websites = exports.Webhooks = exports.Warehouse = exports.Visits = exports.Vendors = exports.Users = exports.Upload_file = exports.Transactions = exports.Trainings = exports.Ticketing = exports.Themes = exports.Templates = exports.Tax_rule = exports.Tax_rate = exports.Tax_category = exports.Targets = exports.Tags = exports.Surveys = exports.Stocks = exports.Statistics = exports.States = exports.Special_discounts = exports.Shipments = exports.Settings = exports.Segments = exports.Scheduler = exports.Roles = exports.Rewards = exports.Reviews = exports.Returns = exports.Reports = exports.Rating = exports.Quotes = exports.Providers = exports.Projects = exports.Products = exports.Product_types = exports.Polls = exports.Plugins = exports.Permissions = exports.Payments = exports.Partners = exports.Pages = void 0;
+=======
+exports.Opportunities = exports.Ooto = exports.Newsletters = exports.Messages = exports.Meeting = exports.Mediamanager = exports.Manufacturer = exports.LogIn = exports.Leads = exports.Invoices = exports.Invitations = exports.Internalization = exports.Integrations = exports.Importm = exports.Glossary = exports.Gift_certificates = exports.Fullfillments = exports.Events = exports.Endofshift = exports.Emails = exports.Digiboard = exports.Deepdive = exports.Dashboards = exports.Customizations = exports.Customers = exports.Customer_group = exports.Currency_symbols = exports.Currency_rates = exports.Currencies = exports.Credit_memos = exports.Coupons = exports.Countries = exports.Contracts = exports.Content_type = exports.Comments = exports.Collections = exports.Cities = exports.Checklist = exports.Channels = exports.Categories = exports.Catalog_price_rule = exports.Cases = exports.Cart_price_rules = exports.Brands = exports.Attributes = exports.Articles = exports.Apitoken = exports.Analytics = exports.Agreements = exports.Accounts = void 0;
+exports.Zones = exports.Workspaces = exports.Wishlists = exports.Websites = exports.Webhooks = exports.Warehouse = exports.Visits = exports.Vendors = exports.Users = exports.Upload_file = exports.Transactions = exports.Ticketing = exports.Themes = exports.Templates = exports.Tax_rule = exports.Tax_rate = exports.Tax_category = exports.Targets = exports.Tags = exports.Stocks = exports.Statistics = exports.States = exports.Special_discounts = exports.Shipments = exports.Settings = exports.Segments = exports.Scheduler = exports.Roles = exports.Rewards = exports.Reviews = exports.Returns = exports.Reports = exports.Rating = exports.Quotes = exports.Providers = exports.Projects = exports.Products = exports.Product_types = exports.Polls = exports.Plugins = exports.Permissions = exports.Payments = exports.Partners = exports.Pages = exports.Orders = void 0;
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 var Accounts_1 = require("./Accounts");
 Object.defineProperty(exports, "Accounts", { enumerable: true, get: function () { return Accounts_1.Accounts; } });
 var Agreements_1 = require("./Agreements");
@@ -86,6 +91,11 @@ var Invoices_1 = require("./Invoices");
 Object.defineProperty(exports, "Invoices", { enumerable: true, get: function () { return Invoices_1.Invoices; } });
 var Leads_1 = require("./Leads");
 Object.defineProperty(exports, "Leads", { enumerable: true, get: function () { return Leads_1.Leads; } });
+<<<<<<< HEAD
+=======
+var LogIn_1 = require("./LogIn");
+Object.defineProperty(exports, "LogIn", { enumerable: true, get: function () { return LogIn_1.LogIn; } });
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 var Manufacturer_1 = require("./Manufacturer");
 Object.defineProperty(exports, "Manufacturer", { enumerable: true, get: function () { return Manufacturer_1.Manufacturer; } });
 var Mediamanager_1 = require("./Mediamanager");
@@ -152,8 +162,11 @@ var Statistics_1 = require("./Statistics");
 Object.defineProperty(exports, "Statistics", { enumerable: true, get: function () { return Statistics_1.Statistics; } });
 var Stocks_1 = require("./Stocks");
 Object.defineProperty(exports, "Stocks", { enumerable: true, get: function () { return Stocks_1.Stocks; } });
+<<<<<<< HEAD
 var Surveys_1 = require("./Surveys");
 Object.defineProperty(exports, "Surveys", { enumerable: true, get: function () { return Surveys_1.Surveys; } });
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 var Tags_1 = require("./Tags");
 Object.defineProperty(exports, "Tags", { enumerable: true, get: function () { return Tags_1.Tags; } });
 var Targets_1 = require("./Targets");
@@ -170,8 +183,11 @@ var Themes_1 = require("./Themes");
 Object.defineProperty(exports, "Themes", { enumerable: true, get: function () { return Themes_1.Themes; } });
 var Ticketing_1 = require("./Ticketing");
 Object.defineProperty(exports, "Ticketing", { enumerable: true, get: function () { return Ticketing_1.Ticketing; } });
+<<<<<<< HEAD
 var Trainings_1 = require("./Trainings");
 Object.defineProperty(exports, "Trainings", { enumerable: true, get: function () { return Trainings_1.Trainings; } });
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 var Transactions_1 = require("./Transactions");
 Object.defineProperty(exports, "Transactions", { enumerable: true, get: function () { return Transactions_1.Transactions; } });
 var Upload_file_1 = require("./Upload_file");

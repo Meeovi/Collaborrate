@@ -6,6 +6,7 @@ const prisma = new PrismaClient();
 require("dotenv").config();
 
 async function main() {
+<<<<<<< HEAD
   const postgresql = await prisma.dashboards.upsert({
     where: {
       name: 'PostgreSQL'
@@ -28,6 +29,8 @@ async function main() {
       content: '',
     },
   })
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   const json = await prisma.dashboards.upsert({
     where: {
       name: 'JSON Schema'
@@ -39,6 +42,7 @@ async function main() {
       content: '',
     },
   })
+<<<<<<< HEAD
   const soap = await prisma.dashboards.upsert({
     where: {
       name: 'SOAP'
@@ -94,6 +98,8 @@ async function main() {
       content: '',
     },
   })
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   const graphql = await prisma.dashboards.upsert({
     where: {
       name: 'GraphQL'
@@ -117,6 +123,7 @@ async function main() {
       content: '',
     },
   })
+<<<<<<< HEAD
   const thrift = await prisma.dashboards.upsert({
     where: {
       name: 'Apache Thrift'
@@ -183,6 +190,8 @@ async function main() {
       content: '',
     },
   })
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   const peopledashboard = await prisma.dashboards.upsert({
     where: {
       name: 'People Dashboard'
@@ -205,6 +214,7 @@ async function main() {
       content: '',
     },
   })
+<<<<<<< HEAD
   const typesense = await prisma.dashboards.upsert({
     where: {
       name: 'Typesense'
@@ -392,6 +402,8 @@ async function main() {
       content: '',
     },
   })
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   const deepdive = await prisma.dashboards.upsert({
     where: {
       name: 'Deep Dive'
@@ -415,6 +427,7 @@ async function main() {
     },
   })
   console.log({
+<<<<<<< HEAD
     postgresql,
     grpc,
     json,
@@ -450,6 +463,13 @@ async function main() {
     dynamodb,
     firestore,
     openapi,
+=======
+    json,
+    graphql,
+    restapi,
+    peopledashboard,
+    metrics,
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     deepdive,
     gemba
   })

@@ -40,6 +40,10 @@ export { InternalizationCrudResolver } from "./Internalization/InternalizationCr
 export { InvitationsCrudResolver } from "./Invitations/InvitationsCrudResolver";
 export { InvoicesCrudResolver } from "./Invoices/InvoicesCrudResolver";
 export { LeadsCrudResolver } from "./Leads/LeadsCrudResolver";
+<<<<<<< HEAD
+=======
+export { LogInCrudResolver } from "./LogIn/LogInCrudResolver";
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { ManufacturerCrudResolver } from "./Manufacturer/ManufacturerCrudResolver";
 export { MediamanagerCrudResolver } from "./Mediamanager/MediamanagerCrudResolver";
 export { MeetingCrudResolver } from "./Meeting/MeetingCrudResolver";
@@ -73,7 +77,10 @@ export { Special_discountsCrudResolver } from "./Special_discounts/Special_disco
 export { StatesCrudResolver } from "./States/StatesCrudResolver";
 export { StatisticsCrudResolver } from "./Statistics/StatisticsCrudResolver";
 export { StocksCrudResolver } from "./Stocks/StocksCrudResolver";
+<<<<<<< HEAD
 export { SurveysCrudResolver } from "./Surveys/SurveysCrudResolver";
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { TagsCrudResolver } from "./Tags/TagsCrudResolver";
 export { TargetsCrudResolver } from "./Targets/TargetsCrudResolver";
 export { Tax_categoryCrudResolver } from "./Tax_category/Tax_categoryCrudResolver";
@@ -82,7 +89,10 @@ export { Tax_ruleCrudResolver } from "./Tax_rule/Tax_ruleCrudResolver";
 export { TemplatesCrudResolver } from "./Templates/TemplatesCrudResolver";
 export { ThemesCrudResolver } from "./Themes/ThemesCrudResolver";
 export { TicketingCrudResolver } from "./Ticketing/TicketingCrudResolver";
+<<<<<<< HEAD
 export { TrainingsCrudResolver } from "./Trainings/TrainingsCrudResolver";
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { TransactionsCrudResolver } from "./Transactions/TransactionsCrudResolver";
 export { Upload_fileCrudResolver } from "./Upload_file/Upload_fileCrudResolver";
 export { UsersCrudResolver } from "./Users/UsersCrudResolver";

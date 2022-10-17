@@ -7,6 +7,7 @@
                                 <th>Product</th>
                                 <th>Price</th>
                                 <th>Quantity</th>
+<<<<<<< HEAD
                             </tr>
                         </thead>
                         <tbody>
@@ -28,12 +29,48 @@
                         </tbody>
                     </table>
                 </div>
+=======
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr v-for="products in findManyProducts" :key="products.id">
+                            <td>{{ products.name }}</td>
+                            <td>{{ products.price }}</td>
+                            <td>{{ products.quantity_per_source }}</td>
+                            <td><a :href="`/admin/edit/product/${products.id}`">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     </div>
 </template>
 
 <script>
+<<<<<<< HEAD
 export default {
     
+=======
+import gql from 'graphql-tag';
+
+const findManyProducts = gql`{
+    aggregateProducts(take: 5) {
+    _count {
+      name
+      price
+      quantity_per_source
+    }
+  }
+}`
+export default {
+  apollo: {
+    findManyProducts: {
+      query: findManyProducts,
+      prefetch: true,
+    },
+  },
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 }
 </script>
 

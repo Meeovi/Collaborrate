@@ -1237,6 +1237,7 @@ model stocks {
   sources     String?
 }
 
+<<<<<<< HEAD
 model surveys {
   id                BigInt    @id @default(autoincrement())
   created_at        DateTime? @default(now())
@@ -1252,6 +1253,8 @@ model surveys {
   dissatisfied_text String?
 }
 
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 model tags {
   id         Int     @id @default(autoincrement())
   name       String
@@ -1360,6 +1363,7 @@ model ticketing {
   projects_projectsToticketing String?
 }
 
+<<<<<<< HEAD
 model trainings {
   id                 BigInt    @id @default(autoincrement())
   created_at         DateTime? @default(now())
@@ -1405,6 +1409,8 @@ model trainings {
   type               String?
 }
 
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 model transactions {
   id                    Int       @id @default(autoincrement())
   order_id              Int
@@ -1702,3 +1708,17 @@ model vendors {
   type              String?
   workspaces        String?
 }
+<<<<<<< HEAD
+=======
+
+model logIn {
+  id         BigInt    @id @default(autoincrement())
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+  email      String?
+  password   String?
+  token      String?
+  expiresIn  String?
+  users      String?
+  username   String?
+}
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194

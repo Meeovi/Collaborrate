@@ -151,7 +151,11 @@ nav .fa-user-circle {
   width: fit-content;
 }
 
+<<<<<<< HEAD
 /******************* Dashboard CSS *********/
+=======
+/******************* Home Dashboard CSS *********/
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 
 .dashboard {
   position: relative;
@@ -161,7 +165,27 @@ nav .fa-user-circle {
   margin-bottom: 15%;
 }
 
+<<<<<<< HEAD
 
+=======
+.welcomebanner {
+  width:100%;
+  height:300px;
+  background-image:url(../assets/images/matrix.jpg);
+  background-size: contain;
+  margin-bottom: 15px;
+}
+
+.welcomebanner p {
+  z-index:99; 
+  width:100%;
+  text-align:center;
+  font-size:50px;
+  color:white;
+  position:relative;
+  top:30%;
+}
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 
 /**********************  Product Pages *****/
 

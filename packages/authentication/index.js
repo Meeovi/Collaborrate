@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require('dotenv').config();
 
 import { GraphQLServer } from 'graphql-yoga';
@@ -62,3 +63,18 @@ passportServer.express.post('/graphql', passport.authenticate(['jwt'], { session
 module.exports = {
   passportServer
 }
+=======
+const feathers = require('@feathersjs/feathers');
+const socketio = require('@feathersjs/socketio-client');
+const io = require('socket.io-client');
+const auth = require('@feathersjs/authentication-client');
+
+const socket = io('http://api.feathersjs.com');
+const app = feathers();
+
+// Setup the transport (Rest, Socket, etc.) here
+app.configure(socketio(socket));
+
+// Available options are listed in the "Options" section
+app.configure(auth())
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194

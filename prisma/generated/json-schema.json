@@ -6069,6 +6069,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "surveys": {
       "type": "object",
       "properties": {
@@ -6144,6 +6145,8 @@
         }
       }
     },
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     "tags": {
       "type": "object",
       "properties": {
@@ -6651,6 +6654,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "trainings": {
       "type": "object",
       "properties": {
@@ -6907,6 +6911,8 @@
         }
       }
     },
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     "transactions": {
       "type": "object",
       "properties": {
@@ -8378,6 +8384,60 @@
           ]
         }
       }
+<<<<<<< HEAD
+=======
+    },
+    "logIn": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "email": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "password": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "token": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "expiresIn": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "users": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "username": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     }
   },
   "type": "object",
@@ -8592,9 +8652,12 @@
     "stocks": {
       "$ref": "#/definitions/stocks"
     },
+<<<<<<< HEAD
     "surveys": {
       "$ref": "#/definitions/surveys"
     },
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     "tags": {
       "$ref": "#/definitions/tags"
     },
@@ -8616,9 +8679,12 @@
     "ticketing": {
       "$ref": "#/definitions/ticketing"
     },
+<<<<<<< HEAD
     "trainings": {
       "$ref": "#/definitions/trainings"
     },
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     "transactions": {
       "$ref": "#/definitions/transactions"
     },
@@ -8669,6 +8735,12 @@
     },
     "vendors": {
       "$ref": "#/definitions/vendors"
+<<<<<<< HEAD
+=======
+    },
+    "logIn": {
+      "$ref": "#/definitions/logIn"
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     }
   }
 }

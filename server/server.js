@@ -3,6 +3,7 @@ let cors = require('cors');
 let app = express();
 
 require('dotenv').config();
+<<<<<<< HEAD
 require('../static/scripts/upload') // For AlternateCMS main upload functionality
 require('./config/alternate.config') // AlternateCMS main settings config file
 require('../packages/authentication/index') // File for authentication used throughout AlternateCMS
@@ -12,6 +13,13 @@ require('../packages/alternate-start/deployments/kubernetes') // File supporting
 require('../packages/search/index') // Supports standard search capabilities
 require('../packages/email/index') // Main email functionality throughout AlternateCMS
 require('../server/codegen') // Codegen File
+=======
+require('./config/alternate.config') // AlternateCMS main settings config file
+require('../packages/authentication/index') // File for authentication used throughout AlternateCMS
+require('../packages/alternate-start/metrics/metric') // Pulls in the Metrics code for application
+require('../packages/search/index') // Supports standard search capabilities
+require('../packages/email/index') // Main email functionality throughout AlternateCMS
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 
 // For Cors functionality across application
 app.use(cors())

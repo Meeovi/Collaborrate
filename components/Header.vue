@@ -95,9 +95,12 @@
               <a class="sidenav-link" style="color: white;" href="/admin/marketing/contracts">Contracts</a>
             </li><br>
             <li class="sidenav-item">
+<<<<<<< HEAD
               <a class="sidenav-link" style="color: white;" href="/admin/marketing/training">Training</a>
             </li><br>
             <li class="sidenav-item">
+=======
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
               <a class="sidenav-link" style="color: white;" href="/admin/marketing/visits">Visits</a>
             </li><br>
           </ul>
@@ -320,16 +323,27 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
               <li>
+<<<<<<< HEAD
                 <a v-if="isAuthenticated" class="dropdown-item" href="/user/my-account">My Profile</a>
+=======
+                <a class="dropdown-item" href="/user/my-account">My Profile</a>
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
               </li>
               <li>
                 <a class="dropdown-item" target="_blank" href="/admin/">Customer View</a>
               </li>
               <li>
+<<<<<<< HEAD
                 <a v-if="isAuthenticated" class="dropdown-item" style="color: white;" href="/admin/system/devcenter">Developer Center</a>
               </li><br>
               <li>
                 <a v-if="isAuthenticated" class="dropdown-item" aria-current="page" @click.prevent="userLogout">Logout</a>
+=======
+                <a class="dropdown-item" style="color: white;" href="/admin/system/devcenter">Developer Center</a>
+              </li><br>
+              <li>
+                <a class="dropdown-item" aria-current="page" @click.prevent="handleLogout">Logout</a>
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
               </li>
             </ul>
           </li>
@@ -347,6 +361,7 @@ import colormode from '~/components/colormode.vue'
 // import { mapGetters } from 'vuex'
 
 export default {
+<<<<<<< HEAD
   /*  computed: {
       ...mapGetters(['isAuthenticated']),
     },
@@ -355,6 +370,16 @@ export default {
         await this.$auth.logout()
       },
     }, */
+=======
+  middleware: 'auth',
+
+  methods: {
+    async handleLogout() {
+      this.$nuxt.$loading.start()
+      await this.$auth.logout()
+    }
+  },
+>>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     components: {
       MainSearch,
       colormode
