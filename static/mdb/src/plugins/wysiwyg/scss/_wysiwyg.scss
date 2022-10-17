@@ -1,0 +1,72 @@
+.wysiwyg {
+  width: 100%;
+  border: 1px solid #ededed;
+
+  &-textarea {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  &-content {
+    min-height: 450px;
+    padding: 0.5rem;
+    &:focus {
+      outline: none;
+    }
+    .wysiwyg-show-html {
+      white-space: pre-line;
+    }
+  }
+
+  &-toolbar {
+    background-color: #fafafa;
+    padding: 0.3rem 0 0.3rem 0;
+  }
+
+  &-toolbar-group {
+    &:not(:first-child):not(.ml-auto):before {
+      content: '';
+      position: absolute;
+      height: 1.2rem;
+      width: 0;
+      border-right: 1px solid #bcbcbc;
+      margin-top: 0.4rem;
+    }
+    .dropdown-menu {
+      min-width: 8rem;
+    }
+  }
+
+  &-color {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  &-toolbar-group.wysiwyg-hide {
+    display: none;
+  }
+
+  &-toolbar-toggler .dropdown-menu {
+    min-width: 0;
+    .mx-1 {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      border-right: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: 0;
+    }
+  }
+}
+
+.btn-group > .btn.wysiwyg-btn {
+  min-width: 32px;
+  min-height: 32px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}

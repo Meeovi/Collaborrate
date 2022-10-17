@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateTrainingsArgs } from "./args/AggregateTrainingsArgs";
+import { CreateManyTrainingsArgs } from "./args/CreateManyTrainingsArgs";
+import { CreateOneTrainingsArgs } from "./args/CreateOneTrainingsArgs";
+import { DeleteManyTrainingsArgs } from "./args/DeleteManyTrainingsArgs";
+import { DeleteOneTrainingsArgs } from "./args/DeleteOneTrainingsArgs";
+import { FindFirstTrainingsArgs } from "./args/FindFirstTrainingsArgs";
+import { FindManyTrainingsArgs } from "./args/FindManyTrainingsArgs";
+import { FindUniqueTrainingsArgs } from "./args/FindUniqueTrainingsArgs";
+import { GroupByTrainingsArgs } from "./args/GroupByTrainingsArgs";
+import { UpdateManyTrainingsArgs } from "./args/UpdateManyTrainingsArgs";
+import { UpdateOneTrainingsArgs } from "./args/UpdateOneTrainingsArgs";
+import { UpsertOneTrainingsArgs } from "./args/UpsertOneTrainingsArgs";
+import { Trainings } from "../../../models/Trainings";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateTrainings } from "../../outputs/AggregateTrainings";
+import { TrainingsGroupBy } from "../../outputs/TrainingsGroupBy";
+export declare class TrainingsCrudResolver {
+    aggregateTrainings(ctx: any, info: GraphQLResolveInfo, args: AggregateTrainingsArgs): Promise<AggregateTrainings>;
+    createManyTrainings(ctx: any, info: GraphQLResolveInfo, args: CreateManyTrainingsArgs): Promise<AffectedRowsOutput>;
+    createOneTrainings(ctx: any, info: GraphQLResolveInfo, args: CreateOneTrainingsArgs): Promise<Trainings>;
+    deleteManyTrainings(ctx: any, info: GraphQLResolveInfo, args: DeleteManyTrainingsArgs): Promise<AffectedRowsOutput>;
+    deleteOneTrainings(ctx: any, info: GraphQLResolveInfo, args: DeleteOneTrainingsArgs): Promise<Trainings | null>;
+    findFirstTrainings(ctx: any, info: GraphQLResolveInfo, args: FindFirstTrainingsArgs): Promise<Trainings | null>;
+    findManyTrainings(ctx: any, info: GraphQLResolveInfo, args: FindManyTrainingsArgs): Promise<Trainings[]>;
+    findUniqueTrainings(ctx: any, info: GraphQLResolveInfo, args: FindUniqueTrainingsArgs): Promise<Trainings | null>;
+    groupByTrainings(ctx: any, info: GraphQLResolveInfo, args: GroupByTrainingsArgs): Promise<TrainingsGroupBy[]>;
+    updateManyTrainings(ctx: any, info: GraphQLResolveInfo, args: UpdateManyTrainingsArgs): Promise<AffectedRowsOutput>;
+    updateOneTrainings(ctx: any, info: GraphQLResolveInfo, args: UpdateOneTrainingsArgs): Promise<Trainings | null>;
+    upsertOneTrainings(ctx: any, info: GraphQLResolveInfo, args: UpsertOneTrainingsArgs): Promise<Trainings>;
+}

@@ -1,0 +1,9 @@
+query MyQuery {
+  findManyGlossary {
+    content
+    id
+    image
+    name
+    published
+  }
+}

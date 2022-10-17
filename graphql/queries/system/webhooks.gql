@@ -1,0 +1,17 @@
+
+query webhooks {
+  findManyWebhooks {
+    create
+    createdAt
+    delete
+    headers
+    id
+    name
+    nodeId
+    publish
+    retrieve
+    unpublish
+    update
+    url
+  }
+}

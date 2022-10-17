@@ -1,0 +1,15 @@
+
+query taxRates {
+  findManyTaxRates {
+    country
+    defaultStoreView
+    nodeId
+    id
+    postcode
+    prodId
+    ratePercent
+    state
+    taxIdentifier
+    zipPostIsRange
+  }
+}

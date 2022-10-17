@@ -1,0 +1,20 @@
+query MyQuery {
+  findManyCategories {
+    workspaces
+    websites
+    thumbnail
+    visibility
+    status
+    name
+    product
+    meta_url
+    meta_title
+    meta_keywords
+    meta_description
+    image
+    id
+    description
+    country
+    content
+  }
+}

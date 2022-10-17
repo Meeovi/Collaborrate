@@ -1,0 +1,31 @@
+
+query contracts {
+  findManyContracts {
+    account
+    companySignedDate
+    contact
+    contractManager
+    contractTitle
+    contractType
+    contractValue
+    createdAt
+    currency
+    customerSignedDate
+    description
+    discount
+    endDate
+    grandTotal
+    id
+    lineItems
+    nodeId
+    opportunity
+    renewalReminder
+    shipping
+    shippingTax
+    startDate
+    status
+    subtotal
+    tax
+    total
+  }
+}

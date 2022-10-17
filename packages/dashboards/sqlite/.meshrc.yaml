@@ -1,0 +1,104 @@
+
+sources:
+  - name: Graphql
+    handler:
+      graphql:
+        endpoint: http://0.0.0.0:3004/graphql
+  - name: SQLite
+    handler:
+      tuql:
+        db: path/to/database.sqlite
+
+cache:
+  redis:
+    host: localhost
+    port: '9876'
+    password: MY_SECRET_PASSWORD
+  file:
+    path: ./my-cache.json
+  localforage:
+    driver: [WEBSQL, INDEXEDDB, LOCALSTORAGE] 
+    
+additionalTypeDefs: |
+  directive @live on QUERY
+plugins:
+  - prometheus:
+      # all optional, and by default, all set to false, please opt-in to the metrics you wish to get
+  
+      # requires `execute` to be true
+      requestCount: true
+      # requires `execute` to be true
+      requestSummary: true
+      parse: true
+      validate: true
+      contextBuilding: true
+      execute: true
+      errors: true
+      resolvers: true
+      # reports metrics also for these resolvers, by default all fields are reported
+      resolversWhiteList:
+        - Mutation.*
+        - Query.user
+      deprecatedFields: true
+      # the path of the endpoint to expose the metrics, default is /metrics
+      endpoint: /metrics
+  - mock:
+      initializeStore: ./myMock#initializeStore
+  - liveQuery:
+      invalidations:
+        - field: Mutation.addTodo
+          invalidate:
+            - Query.todos
+  - responseCache:
+      # cache operations for 1 hour by default
+      ttl: 60
+      ttlPerCoordinate:
+        # cache operation containing Stock object type for 500ms
+        - coordinate: Stock
+          ttl: 500
+        # cache operation containing Query.rocketCoordinates selection for 100ms
+        - coordinate: Query.rocketCoordinates
+          ttl: 100
+      ignoredTypes:
+        # never cache responses that include a RefreshToken object type
+        - RefreshToken
+  - statsd:
+      # Configure `hot-shots`
+      client:
+        port: 8020
+      # results in `gql.operations.count` instead of `graphql.operations.count`
+      prefix: my-graphql-mesh
+      # If you wish to disable introspection logging
+      skipIntrospection: true
+  - newrelic:
+      # default `false`. When set to `true`, includes all the operation variables with their values
+      includeExecuteVariables: false
+      # default: `false`. When set to `true`, includes the execution result
+      includeRawResult: false
+      # default `false`. When set to `true`, track resolvers as segments to monitor their performance
+      trackResolvers: true
+      # default `false`. When set to `true`, includes all the arguments passed to resolvers with their values
+      includeResolverArgs: false
+      # default `false`. When set to `true` append the names of operation root fields to the transaction name
+      rootFieldsNaming: true
+      # Allows to set a custom operation name to be used as transaction name and attribute
+      extractOperationName: "{context.headers['x-operation-name']}"
+  - operationFieldPermissions:
+      permissions:
+        - if: 'context._auth0?.sub != null'
+          allow:
+            - '*'
+  - rateLimit:
+      config:
+      # Add as many rules as you want
+        - type: Query
+          field: foo
+          max: 5 # requests limit for a time period
+          ttl: 5000 # time period
+          identifier: '{context.userId}'
+  - snapshot:
+      if: "process.env.NODE_ENV != 'production'"
+      apply:
+        - https://my-remote-api.com/*
+      outputDir: __snapshots__
+   

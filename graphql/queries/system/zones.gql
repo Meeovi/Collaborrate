@@ -1,0 +1,13 @@
+
+query zones {
+  findManyZones {
+    id
+    created_at
+    name
+    updated_at
+    type
+    scope
+    country
+    code
+  }
+}

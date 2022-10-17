@@ -1,0 +1,11 @@
+
+query ($id: Int){
+  createOneApitoken (where: {id: {_eq: $id}}){
+    name
+    id
+    description
+    created_at
+    token
+    token_type
+  }
+}

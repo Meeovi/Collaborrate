@@ -1,0 +1,10 @@
+query MyQuery {
+  findManyCountries {
+    description
+    id
+    name
+    image
+    region
+    trainings
+  }
+}

@@ -1,0 +1,17 @@
+
+query brands {
+  findManyBrands {
+    city
+    code
+    country
+    createdAt
+    description
+    id
+    isPublic
+    media
+    name
+    nodeId
+    product
+    state
+  }
+}

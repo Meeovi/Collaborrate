@@ -1,0 +1,19 @@
+
+query events {
+  findManyEvents {
+    tickets
+    state
+    postalcode
+    nodeId
+    name
+    image
+    id
+    end
+    createdAt
+    country
+    content
+    start
+    city
+    category
+  }
+}

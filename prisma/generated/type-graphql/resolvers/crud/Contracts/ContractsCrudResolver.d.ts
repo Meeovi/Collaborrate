@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateContractsArgs } from "./args/AggregateContractsArgs";
+import { CreateManyContractsArgs } from "./args/CreateManyContractsArgs";
+import { CreateOneContractsArgs } from "./args/CreateOneContractsArgs";
+import { DeleteManyContractsArgs } from "./args/DeleteManyContractsArgs";
+import { DeleteOneContractsArgs } from "./args/DeleteOneContractsArgs";
+import { FindFirstContractsArgs } from "./args/FindFirstContractsArgs";
+import { FindManyContractsArgs } from "./args/FindManyContractsArgs";
+import { FindUniqueContractsArgs } from "./args/FindUniqueContractsArgs";
+import { GroupByContractsArgs } from "./args/GroupByContractsArgs";
+import { UpdateManyContractsArgs } from "./args/UpdateManyContractsArgs";
+import { UpdateOneContractsArgs } from "./args/UpdateOneContractsArgs";
+import { UpsertOneContractsArgs } from "./args/UpsertOneContractsArgs";
+import { Contracts } from "../../../models/Contracts";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateContracts } from "../../outputs/AggregateContracts";
+import { ContractsGroupBy } from "../../outputs/ContractsGroupBy";
+export declare class ContractsCrudResolver {
+    aggregateContracts(ctx: any, info: GraphQLResolveInfo, args: AggregateContractsArgs): Promise<AggregateContracts>;
+    createManyContracts(ctx: any, info: GraphQLResolveInfo, args: CreateManyContractsArgs): Promise<AffectedRowsOutput>;
+    createOneContracts(ctx: any, info: GraphQLResolveInfo, args: CreateOneContractsArgs): Promise<Contracts>;
+    deleteManyContracts(ctx: any, info: GraphQLResolveInfo, args: DeleteManyContractsArgs): Promise<AffectedRowsOutput>;
+    deleteOneContracts(ctx: any, info: GraphQLResolveInfo, args: DeleteOneContractsArgs): Promise<Contracts | null>;
+    findFirstContracts(ctx: any, info: GraphQLResolveInfo, args: FindFirstContractsArgs): Promise<Contracts | null>;
+    findManyContracts(ctx: any, info: GraphQLResolveInfo, args: FindManyContractsArgs): Promise<Contracts[]>;
+    findUniqueContracts(ctx: any, info: GraphQLResolveInfo, args: FindUniqueContractsArgs): Promise<Contracts | null>;
+    groupByContracts(ctx: any, info: GraphQLResolveInfo, args: GroupByContractsArgs): Promise<ContractsGroupBy[]>;
+    updateManyContracts(ctx: any, info: GraphQLResolveInfo, args: UpdateManyContractsArgs): Promise<AffectedRowsOutput>;
+    updateOneContracts(ctx: any, info: GraphQLResolveInfo, args: UpdateOneContractsArgs): Promise<Contracts | null>;
+    upsertOneContracts(ctx: any, info: GraphQLResolveInfo, args: UpsertOneContractsArgs): Promise<Contracts>;
+}

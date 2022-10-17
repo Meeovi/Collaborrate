@@ -1,0 +1,13 @@
+
+query ($id: Int!) {
+  createOneDeepdive(where: {id: {_eq: $id}}) {
+    id
+    end_date
+    content
+    created_at
+    attendees
+    login
+    start_date
+    whid
+  }
+}

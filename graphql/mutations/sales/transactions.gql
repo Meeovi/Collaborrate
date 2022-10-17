@@ -1,0 +1,12 @@
+
+query ($id: Int){
+  createOneTransactions (where: {id: {_eq: $id}}){
+    id
+    order_id
+    parent_transaction_id
+    payment_method
+    transaction_id
+    created
+    closed
+  }
+}

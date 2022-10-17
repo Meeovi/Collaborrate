@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateCatalog_price_ruleArgs } from "./args/AggregateCatalog_price_ruleArgs";
+import { CreateManyCatalog_price_ruleArgs } from "./args/CreateManyCatalog_price_ruleArgs";
+import { CreateOneCatalog_price_ruleArgs } from "./args/CreateOneCatalog_price_ruleArgs";
+import { DeleteManyCatalog_price_ruleArgs } from "./args/DeleteManyCatalog_price_ruleArgs";
+import { DeleteOneCatalog_price_ruleArgs } from "./args/DeleteOneCatalog_price_ruleArgs";
+import { FindFirstCatalog_price_ruleArgs } from "./args/FindFirstCatalog_price_ruleArgs";
+import { FindManyCatalog_price_ruleArgs } from "./args/FindManyCatalog_price_ruleArgs";
+import { FindUniqueCatalog_price_ruleArgs } from "./args/FindUniqueCatalog_price_ruleArgs";
+import { GroupByCatalog_price_ruleArgs } from "./args/GroupByCatalog_price_ruleArgs";
+import { UpdateManyCatalog_price_ruleArgs } from "./args/UpdateManyCatalog_price_ruleArgs";
+import { UpdateOneCatalog_price_ruleArgs } from "./args/UpdateOneCatalog_price_ruleArgs";
+import { UpsertOneCatalog_price_ruleArgs } from "./args/UpsertOneCatalog_price_ruleArgs";
+import { Catalog_price_rule } from "../../../models/Catalog_price_rule";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateCatalog_price_rule } from "../../outputs/AggregateCatalog_price_rule";
+import { Catalog_price_ruleGroupBy } from "../../outputs/Catalog_price_ruleGroupBy";
+export declare class Catalog_price_ruleCrudResolver {
+    aggregateCatalog_price_rule(ctx: any, info: GraphQLResolveInfo, args: AggregateCatalog_price_ruleArgs): Promise<AggregateCatalog_price_rule>;
+    createManyCatalog_price_rule(ctx: any, info: GraphQLResolveInfo, args: CreateManyCatalog_price_ruleArgs): Promise<AffectedRowsOutput>;
+    createOneCatalog_price_rule(ctx: any, info: GraphQLResolveInfo, args: CreateOneCatalog_price_ruleArgs): Promise<Catalog_price_rule>;
+    deleteManyCatalog_price_rule(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCatalog_price_ruleArgs): Promise<AffectedRowsOutput>;
+    deleteOneCatalog_price_rule(ctx: any, info: GraphQLResolveInfo, args: DeleteOneCatalog_price_ruleArgs): Promise<Catalog_price_rule | null>;
+    findFirstCatalog_price_rule(ctx: any, info: GraphQLResolveInfo, args: FindFirstCatalog_price_ruleArgs): Promise<Catalog_price_rule | null>;
+    catalog_price_rules(ctx: any, info: GraphQLResolveInfo, args: FindManyCatalog_price_ruleArgs): Promise<Catalog_price_rule[]>;
+    catalog_price_rule(ctx: any, info: GraphQLResolveInfo, args: FindUniqueCatalog_price_ruleArgs): Promise<Catalog_price_rule | null>;
+    groupByCatalog_price_rule(ctx: any, info: GraphQLResolveInfo, args: GroupByCatalog_price_ruleArgs): Promise<Catalog_price_ruleGroupBy[]>;
+    updateManyCatalog_price_rule(ctx: any, info: GraphQLResolveInfo, args: UpdateManyCatalog_price_ruleArgs): Promise<AffectedRowsOutput>;
+    updateOneCatalog_price_rule(ctx: any, info: GraphQLResolveInfo, args: UpdateOneCatalog_price_ruleArgs): Promise<Catalog_price_rule | null>;
+    upsertOneCatalog_price_rule(ctx: any, info: GraphQLResolveInfo, args: UpsertOneCatalog_price_ruleArgs): Promise<Catalog_price_rule>;
+}

@@ -1,0 +1,13 @@
+
+query ($id: Int){
+  createOneTags (where: {id: {_eq: $id}}){
+    id
+    name
+    excerpt
+    categories
+    articles
+    customers
+    products
+    users
+  }
+}

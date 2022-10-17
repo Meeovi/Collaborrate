@@ -1,0 +1,12 @@
+
+query importm($id: Int) {
+  createOneImportm(where: {id: {_eq: $id}}) {
+    id
+    file
+    description
+    created_at
+    image
+    name
+    url
+  }
+}

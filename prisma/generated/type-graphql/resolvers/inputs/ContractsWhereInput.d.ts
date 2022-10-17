@@ -1,0 +1,33 @@
+import { BigIntFilter } from "../inputs/BigIntFilter";
+import { DateTimeNullableFilter } from "../inputs/DateTimeNullableFilter";
+import { StringNullableFilter } from "../inputs/StringNullableFilter";
+export declare class ContractsWhereInput {
+    AND?: ContractsWhereInput[] | undefined;
+    OR?: ContractsWhereInput[] | undefined;
+    NOT?: ContractsWhereInput[] | undefined;
+    id?: BigIntFilter | undefined;
+    contract_title?: StringNullableFilter | undefined;
+    contract_value?: StringNullableFilter | undefined;
+    start_date?: StringNullableFilter | undefined;
+    end_date?: StringNullableFilter | undefined;
+    renewal_reminder?: StringNullableFilter | undefined;
+    customer_signed_date?: StringNullableFilter | undefined;
+    company_signed_date?: StringNullableFilter | undefined;
+    status?: StringNullableFilter | undefined;
+    contract_manager?: StringNullableFilter | undefined;
+    account?: StringNullableFilter | undefined;
+    contact?: StringNullableFilter | undefined;
+    description?: StringNullableFilter | undefined;
+    opportunity?: StringNullableFilter | undefined;
+    contract_type?: StringNullableFilter | undefined;
+    currency?: StringNullableFilter | undefined;
+    line_items?: StringNullableFilter | undefined;
+    total?: StringNullableFilter | undefined;
+    discount?: StringNullableFilter | undefined;
+    subtotal?: StringNullableFilter | undefined;
+    shipping?: StringNullableFilter | undefined;
+    shipping_tax?: StringNullableFilter | undefined;
+    tax?: StringNullableFilter | undefined;
+    grand_total?: StringNullableFilter | undefined;
+    created_at?: DateTimeNullableFilter | undefined;
+}

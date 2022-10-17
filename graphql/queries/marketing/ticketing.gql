@@ -1,0 +1,28 @@
+query MyQuery {
+  ticketings {
+    ticket_type
+    team
+    status
+    severity
+    resolution
+    requester_email
+    requester
+    projects_projectsToticketing
+    projects
+    products
+    priority
+    name
+    media
+    location
+    level
+    id
+    department
+    date_modified
+    date
+    created_at
+    content
+    comment
+    assigned_to
+    account_name
+  }
+}

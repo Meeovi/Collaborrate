@@ -1,0 +1,10 @@
+
+query agreements($id: Int) {
+  createOneCurrencies (where: {id: {_eq: $id}}) {
+    id
+    name
+    region
+    created_at
+    code
+  }
+}

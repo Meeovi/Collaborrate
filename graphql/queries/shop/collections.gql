@@ -1,0 +1,15 @@
+
+query collections {
+  findManyCollections {
+    createdAt
+    description
+    id
+    image
+    metaDescription
+    metaKeywords
+    metaTitle
+    name
+    nodeId
+    product
+  }
+}

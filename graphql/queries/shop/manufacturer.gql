@@ -1,0 +1,17 @@
+
+query manufacturers {
+  findManyManufacturers {
+    state
+    product
+    nodeId
+    name
+    media
+    isPublic
+    id
+    description
+    createdAt
+    country
+    code
+    city
+  }
+}

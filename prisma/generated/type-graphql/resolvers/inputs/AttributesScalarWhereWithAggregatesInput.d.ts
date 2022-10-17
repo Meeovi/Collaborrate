@@ -1,0 +1,33 @@
+import { BigIntWithAggregatesFilter } from "../inputs/BigIntWithAggregatesFilter";
+import { BoolNullableWithAggregatesFilter } from "../inputs/BoolNullableWithAggregatesFilter";
+import { IntWithAggregatesFilter } from "../inputs/IntWithAggregatesFilter";
+import { StringNullableWithAggregatesFilter } from "../inputs/StringNullableWithAggregatesFilter";
+export declare class AttributesScalarWhereWithAggregatesInput {
+    AND?: AttributesScalarWhereWithAggregatesInput[] | undefined;
+    OR?: AttributesScalarWhereWithAggregatesInput[] | undefined;
+    NOT?: AttributesScalarWhereWithAggregatesInput[] | undefined;
+    id?: IntWithAggregatesFilter | undefined;
+    default_label?: StringNullableWithAggregatesFilter | undefined;
+    attribute_code?: StringNullableWithAggregatesFilter | undefined;
+    filter_options?: StringNullableWithAggregatesFilter | undefined;
+    use_search?: StringNullableWithAggregatesFilter | undefined;
+    layered_navigation?: BoolNullableWithAggregatesFilter | undefined;
+    search_results_layered_navigation?: BoolNullableWithAggregatesFilter | undefined;
+    position?: StringNullableWithAggregatesFilter | undefined;
+    promo_rule_conditions?: BoolNullableWithAggregatesFilter | undefined;
+    allow_html_tags_storefront?: BoolNullableWithAggregatesFilter | undefined;
+    visible_catalog_pages_storefront?: BoolNullableWithAggregatesFilter | undefined;
+    used_product_listing?: BoolNullableWithAggregatesFilter | undefined;
+    used_sorting_product_listing?: BoolNullableWithAggregatesFilter | undefined;
+    prod_id?: BigIntWithAggregatesFilter | undefined;
+    attribute_class?: StringNullableWithAggregatesFilter | undefined;
+    attribute_value?: StringNullableWithAggregatesFilter | undefined;
+    column_options?: StringNullableWithAggregatesFilter | undefined;
+    faceted_navigation?: BoolNullableWithAggregatesFilter | undefined;
+    isPublic?: StringNullableWithAggregatesFilter | undefined;
+    meta_description?: StringNullableWithAggregatesFilter | undefined;
+    meta_name?: BoolNullableWithAggregatesFilter | undefined;
+    meta_url?: StringNullableWithAggregatesFilter | undefined;
+    product_attribute_set?: StringNullableWithAggregatesFilter | undefined;
+    products?: StringNullableWithAggregatesFilter | undefined;
+}

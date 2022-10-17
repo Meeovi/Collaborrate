@@ -1,0 +1,54 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TrainingsScalarFieldEnum = void 0;
+const tslib_1 = require("tslib");
+const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
+var TrainingsScalarFieldEnum;
+(function (TrainingsScalarFieldEnum) {
+    TrainingsScalarFieldEnum["id"] = "id";
+    TrainingsScalarFieldEnum["created_at"] = "created_at";
+    TrainingsScalarFieldEnum["name"] = "name";
+    TrainingsScalarFieldEnum["subject"] = "subject";
+    TrainingsScalarFieldEnum["content"] = "content";
+    TrainingsScalarFieldEnum["media"] = "media";
+    TrainingsScalarFieldEnum["link"] = "link";
+    TrainingsScalarFieldEnum["steps"] = "steps";
+    TrainingsScalarFieldEnum["updated"] = "updated";
+    TrainingsScalarFieldEnum["analytics"] = "analytics";
+    TrainingsScalarFieldEnum["competency"] = "competency";
+    TrainingsScalarFieldEnum["course"] = "course";
+    TrainingsScalarFieldEnum["grade"] = "grade";
+    TrainingsScalarFieldEnum["school"] = "school";
+    TrainingsScalarFieldEnum["comment"] = "comment";
+    TrainingsScalarFieldEnum["address"] = "address";
+    TrainingsScalarFieldEnum["country"] = "country";
+    TrainingsScalarFieldEnum["state"] = "state";
+    TrainingsScalarFieldEnum["postal"] = "postal";
+    TrainingsScalarFieldEnum["teacher"] = "teacher";
+    TrainingsScalarFieldEnum["student"] = "student";
+    TrainingsScalarFieldEnum["announcement"] = "announcement";
+    TrainingsScalarFieldEnum["resource"] = "resource";
+    TrainingsScalarFieldEnum["badges"] = "badges";
+    TrainingsScalarFieldEnum["isPublic"] = "isPublic";
+    TrainingsScalarFieldEnum["isCompleted"] = "isCompleted";
+    TrainingsScalarFieldEnum["speakers"] = "speakers";
+    TrainingsScalarFieldEnum["fieldTrips"] = "fieldTrips";
+    TrainingsScalarFieldEnum["assignments"] = "assignments";
+    TrainingsScalarFieldEnum["assignmentsDueDate"] = "assignmentsDueDate";
+    TrainingsScalarFieldEnum["origanalityReport"] = "origanalityReport";
+    TrainingsScalarFieldEnum["products"] = "products";
+    TrainingsScalarFieldEnum["faqs"] = "faqs";
+    TrainingsScalarFieldEnum["languages"] = "languages";
+    TrainingsScalarFieldEnum["checklists"] = "checklists";
+    TrainingsScalarFieldEnum["city"] = "city";
+    TrainingsScalarFieldEnum["meetups"] = "meetups";
+    TrainingsScalarFieldEnum["lab"] = "lab";
+    TrainingsScalarFieldEnum["digiboards"] = "digiboards";
+    TrainingsScalarFieldEnum["countries"] = "countries";
+    TrainingsScalarFieldEnum["states"] = "states";
+    TrainingsScalarFieldEnum["type"] = "type";
+})(TrainingsScalarFieldEnum = exports.TrainingsScalarFieldEnum || (exports.TrainingsScalarFieldEnum = {}));
+TypeGraphQL.registerEnumType(TrainingsScalarFieldEnum, {
+    name: "TrainingsScalarFieldEnum",
+    description: undefined,
+});

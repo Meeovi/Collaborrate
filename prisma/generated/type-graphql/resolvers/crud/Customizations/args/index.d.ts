@@ -1,0 +1,12 @@
+export { AggregateCustomizationsArgs } from "./AggregateCustomizationsArgs";
+export { CreateManyCustomizationsArgs } from "./CreateManyCustomizationsArgs";
+export { CreateOneCustomizationsArgs } from "./CreateOneCustomizationsArgs";
+export { DeleteManyCustomizationsArgs } from "./DeleteManyCustomizationsArgs";
+export { DeleteOneCustomizationsArgs } from "./DeleteOneCustomizationsArgs";
+export { FindFirstCustomizationsArgs } from "./FindFirstCustomizationsArgs";
+export { FindManyCustomizationsArgs } from "./FindManyCustomizationsArgs";
+export { FindUniqueCustomizationsArgs } from "./FindUniqueCustomizationsArgs";
+export { GroupByCustomizationsArgs } from "./GroupByCustomizationsArgs";
+export { UpdateManyCustomizationsArgs } from "./UpdateManyCustomizationsArgs";
+export { UpdateOneCustomizationsArgs } from "./UpdateOneCustomizationsArgs";
+export { UpsertOneCustomizationsArgs } from "./UpsertOneCustomizationsArgs";

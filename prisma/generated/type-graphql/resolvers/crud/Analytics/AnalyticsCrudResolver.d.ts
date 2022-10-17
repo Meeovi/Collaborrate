@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateAnalyticsArgs } from "./args/AggregateAnalyticsArgs";
+import { CreateManyAnalyticsArgs } from "./args/CreateManyAnalyticsArgs";
+import { CreateOneAnalyticsArgs } from "./args/CreateOneAnalyticsArgs";
+import { DeleteManyAnalyticsArgs } from "./args/DeleteManyAnalyticsArgs";
+import { DeleteOneAnalyticsArgs } from "./args/DeleteOneAnalyticsArgs";
+import { FindFirstAnalyticsArgs } from "./args/FindFirstAnalyticsArgs";
+import { FindManyAnalyticsArgs } from "./args/FindManyAnalyticsArgs";
+import { FindUniqueAnalyticsArgs } from "./args/FindUniqueAnalyticsArgs";
+import { GroupByAnalyticsArgs } from "./args/GroupByAnalyticsArgs";
+import { UpdateManyAnalyticsArgs } from "./args/UpdateManyAnalyticsArgs";
+import { UpdateOneAnalyticsArgs } from "./args/UpdateOneAnalyticsArgs";
+import { UpsertOneAnalyticsArgs } from "./args/UpsertOneAnalyticsArgs";
+import { Analytics } from "../../../models/Analytics";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateAnalytics } from "../../outputs/AggregateAnalytics";
+import { AnalyticsGroupBy } from "../../outputs/AnalyticsGroupBy";
+export declare class AnalyticsCrudResolver {
+    aggregateAnalytics(ctx: any, info: GraphQLResolveInfo, args: AggregateAnalyticsArgs): Promise<AggregateAnalytics>;
+    createManyAnalytics(ctx: any, info: GraphQLResolveInfo, args: CreateManyAnalyticsArgs): Promise<AffectedRowsOutput>;
+    createOneAnalytics(ctx: any, info: GraphQLResolveInfo, args: CreateOneAnalyticsArgs): Promise<Analytics>;
+    deleteManyAnalytics(ctx: any, info: GraphQLResolveInfo, args: DeleteManyAnalyticsArgs): Promise<AffectedRowsOutput>;
+    deleteOneAnalytics(ctx: any, info: GraphQLResolveInfo, args: DeleteOneAnalyticsArgs): Promise<Analytics | null>;
+    findFirstAnalytics(ctx: any, info: GraphQLResolveInfo, args: FindFirstAnalyticsArgs): Promise<Analytics | null>;
+    findManyAnalytics(ctx: any, info: GraphQLResolveInfo, args: FindManyAnalyticsArgs): Promise<Analytics[]>;
+    findUniqueAnalytics(ctx: any, info: GraphQLResolveInfo, args: FindUniqueAnalyticsArgs): Promise<Analytics | null>;
+    groupByAnalytics(ctx: any, info: GraphQLResolveInfo, args: GroupByAnalyticsArgs): Promise<AnalyticsGroupBy[]>;
+    updateManyAnalytics(ctx: any, info: GraphQLResolveInfo, args: UpdateManyAnalyticsArgs): Promise<AffectedRowsOutput>;
+    updateOneAnalytics(ctx: any, info: GraphQLResolveInfo, args: UpdateOneAnalyticsArgs): Promise<Analytics | null>;
+    upsertOneAnalytics(ctx: any, info: GraphQLResolveInfo, args: UpsertOneAnalyticsArgs): Promise<Analytics>;
+}

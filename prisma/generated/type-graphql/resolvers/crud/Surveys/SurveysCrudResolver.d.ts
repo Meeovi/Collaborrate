@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateSurveysArgs } from "./args/AggregateSurveysArgs";
+import { CreateManySurveysArgs } from "./args/CreateManySurveysArgs";
+import { CreateOneSurveysArgs } from "./args/CreateOneSurveysArgs";
+import { DeleteManySurveysArgs } from "./args/DeleteManySurveysArgs";
+import { DeleteOneSurveysArgs } from "./args/DeleteOneSurveysArgs";
+import { FindFirstSurveysArgs } from "./args/FindFirstSurveysArgs";
+import { FindManySurveysArgs } from "./args/FindManySurveysArgs";
+import { FindUniqueSurveysArgs } from "./args/FindUniqueSurveysArgs";
+import { GroupBySurveysArgs } from "./args/GroupBySurveysArgs";
+import { UpdateManySurveysArgs } from "./args/UpdateManySurveysArgs";
+import { UpdateOneSurveysArgs } from "./args/UpdateOneSurveysArgs";
+import { UpsertOneSurveysArgs } from "./args/UpsertOneSurveysArgs";
+import { Surveys } from "../../../models/Surveys";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateSurveys } from "../../outputs/AggregateSurveys";
+import { SurveysGroupBy } from "../../outputs/SurveysGroupBy";
+export declare class SurveysCrudResolver {
+    aggregateSurveys(ctx: any, info: GraphQLResolveInfo, args: AggregateSurveysArgs): Promise<AggregateSurveys>;
+    createManySurveys(ctx: any, info: GraphQLResolveInfo, args: CreateManySurveysArgs): Promise<AffectedRowsOutput>;
+    createOneSurveys(ctx: any, info: GraphQLResolveInfo, args: CreateOneSurveysArgs): Promise<Surveys>;
+    deleteManySurveys(ctx: any, info: GraphQLResolveInfo, args: DeleteManySurveysArgs): Promise<AffectedRowsOutput>;
+    deleteOneSurveys(ctx: any, info: GraphQLResolveInfo, args: DeleteOneSurveysArgs): Promise<Surveys | null>;
+    findFirstSurveys(ctx: any, info: GraphQLResolveInfo, args: FindFirstSurveysArgs): Promise<Surveys | null>;
+    findManySurveys(ctx: any, info: GraphQLResolveInfo, args: FindManySurveysArgs): Promise<Surveys[]>;
+    findUniqueSurveys(ctx: any, info: GraphQLResolveInfo, args: FindUniqueSurveysArgs): Promise<Surveys | null>;
+    groupBySurveys(ctx: any, info: GraphQLResolveInfo, args: GroupBySurveysArgs): Promise<SurveysGroupBy[]>;
+    updateManySurveys(ctx: any, info: GraphQLResolveInfo, args: UpdateManySurveysArgs): Promise<AffectedRowsOutput>;
+    updateOneSurveys(ctx: any, info: GraphQLResolveInfo, args: UpdateOneSurveysArgs): Promise<Surveys | null>;
+    upsertOneSurveys(ctx: any, info: GraphQLResolveInfo, args: UpsertOneSurveysArgs): Promise<Surveys>;
+}

@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateMessagesArgs } from "./args/AggregateMessagesArgs";
+import { CreateManyMessagesArgs } from "./args/CreateManyMessagesArgs";
+import { CreateOneMessagesArgs } from "./args/CreateOneMessagesArgs";
+import { DeleteManyMessagesArgs } from "./args/DeleteManyMessagesArgs";
+import { DeleteOneMessagesArgs } from "./args/DeleteOneMessagesArgs";
+import { FindFirstMessagesArgs } from "./args/FindFirstMessagesArgs";
+import { FindManyMessagesArgs } from "./args/FindManyMessagesArgs";
+import { FindUniqueMessagesArgs } from "./args/FindUniqueMessagesArgs";
+import { GroupByMessagesArgs } from "./args/GroupByMessagesArgs";
+import { UpdateManyMessagesArgs } from "./args/UpdateManyMessagesArgs";
+import { UpdateOneMessagesArgs } from "./args/UpdateOneMessagesArgs";
+import { UpsertOneMessagesArgs } from "./args/UpsertOneMessagesArgs";
+import { Messages } from "../../../models/Messages";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateMessages } from "../../outputs/AggregateMessages";
+import { MessagesGroupBy } from "../../outputs/MessagesGroupBy";
+export declare class MessagesCrudResolver {
+    aggregateMessages(ctx: any, info: GraphQLResolveInfo, args: AggregateMessagesArgs): Promise<AggregateMessages>;
+    createManyMessages(ctx: any, info: GraphQLResolveInfo, args: CreateManyMessagesArgs): Promise<AffectedRowsOutput>;
+    createOneMessages(ctx: any, info: GraphQLResolveInfo, args: CreateOneMessagesArgs): Promise<Messages>;
+    deleteManyMessages(ctx: any, info: GraphQLResolveInfo, args: DeleteManyMessagesArgs): Promise<AffectedRowsOutput>;
+    deleteOneMessages(ctx: any, info: GraphQLResolveInfo, args: DeleteOneMessagesArgs): Promise<Messages | null>;
+    findFirstMessages(ctx: any, info: GraphQLResolveInfo, args: FindFirstMessagesArgs): Promise<Messages | null>;
+    findManyMessages(ctx: any, info: GraphQLResolveInfo, args: FindManyMessagesArgs): Promise<Messages[]>;
+    findUniqueMessages(ctx: any, info: GraphQLResolveInfo, args: FindUniqueMessagesArgs): Promise<Messages | null>;
+    groupByMessages(ctx: any, info: GraphQLResolveInfo, args: GroupByMessagesArgs): Promise<MessagesGroupBy[]>;
+    updateManyMessages(ctx: any, info: GraphQLResolveInfo, args: UpdateManyMessagesArgs): Promise<AffectedRowsOutput>;
+    updateOneMessages(ctx: any, info: GraphQLResolveInfo, args: UpdateOneMessagesArgs): Promise<Messages | null>;
+    upsertOneMessages(ctx: any, info: GraphQLResolveInfo, args: UpsertOneMessagesArgs): Promise<Messages>;
+}

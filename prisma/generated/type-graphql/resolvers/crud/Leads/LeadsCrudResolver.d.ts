@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateLeadsArgs } from "./args/AggregateLeadsArgs";
+import { CreateManyLeadsArgs } from "./args/CreateManyLeadsArgs";
+import { CreateOneLeadsArgs } from "./args/CreateOneLeadsArgs";
+import { DeleteManyLeadsArgs } from "./args/DeleteManyLeadsArgs";
+import { DeleteOneLeadsArgs } from "./args/DeleteOneLeadsArgs";
+import { FindFirstLeadsArgs } from "./args/FindFirstLeadsArgs";
+import { FindManyLeadsArgs } from "./args/FindManyLeadsArgs";
+import { FindUniqueLeadsArgs } from "./args/FindUniqueLeadsArgs";
+import { GroupByLeadsArgs } from "./args/GroupByLeadsArgs";
+import { UpdateManyLeadsArgs } from "./args/UpdateManyLeadsArgs";
+import { UpdateOneLeadsArgs } from "./args/UpdateOneLeadsArgs";
+import { UpsertOneLeadsArgs } from "./args/UpsertOneLeadsArgs";
+import { Leads } from "../../../models/Leads";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateLeads } from "../../outputs/AggregateLeads";
+import { LeadsGroupBy } from "../../outputs/LeadsGroupBy";
+export declare class LeadsCrudResolver {
+    aggregateLeads(ctx: any, info: GraphQLResolveInfo, args: AggregateLeadsArgs): Promise<AggregateLeads>;
+    createManyLeads(ctx: any, info: GraphQLResolveInfo, args: CreateManyLeadsArgs): Promise<AffectedRowsOutput>;
+    createOneLeads(ctx: any, info: GraphQLResolveInfo, args: CreateOneLeadsArgs): Promise<Leads>;
+    deleteManyLeads(ctx: any, info: GraphQLResolveInfo, args: DeleteManyLeadsArgs): Promise<AffectedRowsOutput>;
+    deleteOneLeads(ctx: any, info: GraphQLResolveInfo, args: DeleteOneLeadsArgs): Promise<Leads | null>;
+    findFirstLeads(ctx: any, info: GraphQLResolveInfo, args: FindFirstLeadsArgs): Promise<Leads | null>;
+    findManyLeads(ctx: any, info: GraphQLResolveInfo, args: FindManyLeadsArgs): Promise<Leads[]>;
+    findUniqueLeads(ctx: any, info: GraphQLResolveInfo, args: FindUniqueLeadsArgs): Promise<Leads | null>;
+    groupByLeads(ctx: any, info: GraphQLResolveInfo, args: GroupByLeadsArgs): Promise<LeadsGroupBy[]>;
+    updateManyLeads(ctx: any, info: GraphQLResolveInfo, args: UpdateManyLeadsArgs): Promise<AffectedRowsOutput>;
+    updateOneLeads(ctx: any, info: GraphQLResolveInfo, args: UpdateOneLeadsArgs): Promise<Leads | null>;
+    upsertOneLeads(ctx: any, info: GraphQLResolveInfo, args: UpsertOneLeadsArgs): Promise<Leads>;
+}

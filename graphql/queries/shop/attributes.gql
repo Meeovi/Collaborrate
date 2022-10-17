@@ -1,0 +1,28 @@
+
+query productAttributes {
+  findManyProductAttributes {
+    allowHtmlTagsStorefront
+    attributeClass
+    attributeCode
+    attributeValue
+    columnOptions
+    defaultLabel
+    facetedNavigation
+    filterOptions
+    id
+    isPublic
+    layeredNavigation
+    metaDescription
+    metaName
+    metaUrl
+    nodeId
+    position
+    prodId
+    promoRuleConditions
+    searchResultsLayeredNavigation
+    useSearch
+    usedProducting
+    usedSortingProducting
+    visibleCatalogPagesStorefront
+  }
+}

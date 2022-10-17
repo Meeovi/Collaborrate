@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateCouponsArgs } from "./args/AggregateCouponsArgs";
+import { CreateManyCouponsArgs } from "./args/CreateManyCouponsArgs";
+import { CreateOneCouponsArgs } from "./args/CreateOneCouponsArgs";
+import { DeleteManyCouponsArgs } from "./args/DeleteManyCouponsArgs";
+import { DeleteOneCouponsArgs } from "./args/DeleteOneCouponsArgs";
+import { FindFirstCouponsArgs } from "./args/FindFirstCouponsArgs";
+import { FindManyCouponsArgs } from "./args/FindManyCouponsArgs";
+import { FindUniqueCouponsArgs } from "./args/FindUniqueCouponsArgs";
+import { GroupByCouponsArgs } from "./args/GroupByCouponsArgs";
+import { UpdateManyCouponsArgs } from "./args/UpdateManyCouponsArgs";
+import { UpdateOneCouponsArgs } from "./args/UpdateOneCouponsArgs";
+import { UpsertOneCouponsArgs } from "./args/UpsertOneCouponsArgs";
+import { Coupons } from "../../../models/Coupons";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateCoupons } from "../../outputs/AggregateCoupons";
+import { CouponsGroupBy } from "../../outputs/CouponsGroupBy";
+export declare class CouponsCrudResolver {
+    aggregateCoupons(ctx: any, info: GraphQLResolveInfo, args: AggregateCouponsArgs): Promise<AggregateCoupons>;
+    createManyCoupons(ctx: any, info: GraphQLResolveInfo, args: CreateManyCouponsArgs): Promise<AffectedRowsOutput>;
+    createOneCoupons(ctx: any, info: GraphQLResolveInfo, args: CreateOneCouponsArgs): Promise<Coupons>;
+    deleteManyCoupons(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCouponsArgs): Promise<AffectedRowsOutput>;
+    deleteOneCoupons(ctx: any, info: GraphQLResolveInfo, args: DeleteOneCouponsArgs): Promise<Coupons | null>;
+    findFirstCoupons(ctx: any, info: GraphQLResolveInfo, args: FindFirstCouponsArgs): Promise<Coupons | null>;
+    findManyCoupons(ctx: any, info: GraphQLResolveInfo, args: FindManyCouponsArgs): Promise<Coupons[]>;
+    findUniqueCoupons(ctx: any, info: GraphQLResolveInfo, args: FindUniqueCouponsArgs): Promise<Coupons | null>;
+    groupByCoupons(ctx: any, info: GraphQLResolveInfo, args: GroupByCouponsArgs): Promise<CouponsGroupBy[]>;
+    updateManyCoupons(ctx: any, info: GraphQLResolveInfo, args: UpdateManyCouponsArgs): Promise<AffectedRowsOutput>;
+    updateOneCoupons(ctx: any, info: GraphQLResolveInfo, args: UpdateOneCouponsArgs): Promise<Coupons | null>;
+    upsertOneCoupons(ctx: any, info: GraphQLResolveInfo, args: UpsertOneCouponsArgs): Promise<Coupons>;
+}

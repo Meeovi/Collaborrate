@@ -1,0 +1,10 @@
+
+query ($id: Int){
+  createOneGlossaries (where: {id: {_eq: $id}}){
+    id
+    name
+    image
+    content
+    published
+  }
+}

@@ -1,0 +1,21 @@
+
+query opportunities {
+  findManyOpportunities {
+    accountName
+    amount
+    assignedTo
+    campaign
+    createdAt
+    currency
+    description
+    expectedCloseDate
+    id
+    leadSource
+    name
+    nextStep
+    nodeId
+    probability
+    salesStage
+    type
+  }
+}

@@ -1,0 +1,11 @@
+
+query {
+  createOneAllreviews(limit: 5) {
+    id
+    first_name
+    last_name
+    content
+    websites
+    created_at
+  }
+}

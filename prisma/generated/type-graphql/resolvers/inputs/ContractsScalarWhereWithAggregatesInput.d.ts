@@ -1,0 +1,33 @@
+import { BigIntWithAggregatesFilter } from "../inputs/BigIntWithAggregatesFilter";
+import { DateTimeNullableWithAggregatesFilter } from "../inputs/DateTimeNullableWithAggregatesFilter";
+import { StringNullableWithAggregatesFilter } from "../inputs/StringNullableWithAggregatesFilter";
+export declare class ContractsScalarWhereWithAggregatesInput {
+    AND?: ContractsScalarWhereWithAggregatesInput[] | undefined;
+    OR?: ContractsScalarWhereWithAggregatesInput[] | undefined;
+    NOT?: ContractsScalarWhereWithAggregatesInput[] | undefined;
+    id?: BigIntWithAggregatesFilter | undefined;
+    contract_title?: StringNullableWithAggregatesFilter | undefined;
+    contract_value?: StringNullableWithAggregatesFilter | undefined;
+    start_date?: StringNullableWithAggregatesFilter | undefined;
+    end_date?: StringNullableWithAggregatesFilter | undefined;
+    renewal_reminder?: StringNullableWithAggregatesFilter | undefined;
+    customer_signed_date?: StringNullableWithAggregatesFilter | undefined;
+    company_signed_date?: StringNullableWithAggregatesFilter | undefined;
+    status?: StringNullableWithAggregatesFilter | undefined;
+    contract_manager?: StringNullableWithAggregatesFilter | undefined;
+    account?: StringNullableWithAggregatesFilter | undefined;
+    contact?: StringNullableWithAggregatesFilter | undefined;
+    description?: StringNullableWithAggregatesFilter | undefined;
+    opportunity?: StringNullableWithAggregatesFilter | undefined;
+    contract_type?: StringNullableWithAggregatesFilter | undefined;
+    currency?: StringNullableWithAggregatesFilter | undefined;
+    line_items?: StringNullableWithAggregatesFilter | undefined;
+    total?: StringNullableWithAggregatesFilter | undefined;
+    discount?: StringNullableWithAggregatesFilter | undefined;
+    subtotal?: StringNullableWithAggregatesFilter | undefined;
+    shipping?: StringNullableWithAggregatesFilter | undefined;
+    shipping_tax?: StringNullableWithAggregatesFilter | undefined;
+    tax?: StringNullableWithAggregatesFilter | undefined;
+    grand_total?: StringNullableWithAggregatesFilter | undefined;
+    created_at?: DateTimeNullableWithAggregatesFilter | undefined;
+}

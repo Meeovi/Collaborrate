@@ -1,0 +1,19 @@
+query MyQuery {
+  findManyUsers {
+    workspaces
+    value
+    username
+    projects
+    permissions
+    password
+    messages
+    mediamanager
+    last_name
+    interface_locale
+    id
+    first_name
+    emails
+    email
+    created_at
+  }
+}

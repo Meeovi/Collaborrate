@@ -1,0 +1,15 @@
+
+query partners {
+  findManyPartners {
+    state
+    nodeId
+    name
+    isPublic
+    id
+    createdAt
+    country
+    city
+    businessType
+    address
+  }
+}

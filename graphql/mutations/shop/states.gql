@@ -1,0 +1,10 @@
+
+query ($id: Int){
+  createOneStates (where: {id: {_eq: $id}}){
+    id
+    name
+    description
+    image
+    country
+  }
+}

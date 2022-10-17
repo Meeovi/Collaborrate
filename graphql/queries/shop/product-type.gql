@@ -1,0 +1,15 @@
+
+query productTypes {
+  findManyProductTypes {
+    filterOptions
+    id
+    isShippable
+    metaDescription
+    metaUrl
+    nodeId
+    prodId
+    productType
+    taxes
+    typeName
+  }
+}

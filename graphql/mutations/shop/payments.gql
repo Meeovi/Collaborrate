@@ -1,0 +1,16 @@
+
+query ($id: Int){
+  createOnePayments (where: {id: {_eq: $id}}){
+    id
+    icon
+    name
+    host_uri
+    created_at
+    country
+    client_secret
+    client_id
+    active
+    redirect_url
+    redirect_url_app
+  }
+}

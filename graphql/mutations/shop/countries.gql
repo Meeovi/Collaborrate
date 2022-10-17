@@ -1,0 +1,10 @@
+
+query ($id: Int){
+  createOneCountries (where: {id: {_eq: $id}}){
+    id
+    name
+    description
+    image
+    region
+  }
+}

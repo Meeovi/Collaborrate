@@ -1,0 +1,32 @@
+import { BigIntWithAggregatesFilter } from "../inputs/BigIntWithAggregatesFilter";
+import { DateTimeNullableWithAggregatesFilter } from "../inputs/DateTimeNullableWithAggregatesFilter";
+import { StringNullableWithAggregatesFilter } from "../inputs/StringNullableWithAggregatesFilter";
+export declare class TicketingScalarWhereWithAggregatesInput {
+    AND?: TicketingScalarWhereWithAggregatesInput[] | undefined;
+    OR?: TicketingScalarWhereWithAggregatesInput[] | undefined;
+    NOT?: TicketingScalarWhereWithAggregatesInput[] | undefined;
+    id?: BigIntWithAggregatesFilter | undefined;
+    created_at?: DateTimeNullableWithAggregatesFilter | undefined;
+    name?: StringNullableWithAggregatesFilter | undefined;
+    location?: StringNullableWithAggregatesFilter | undefined;
+    date?: StringNullableWithAggregatesFilter | undefined;
+    severity?: StringNullableWithAggregatesFilter | undefined;
+    team?: StringNullableWithAggregatesFilter | undefined;
+    requester?: StringNullableWithAggregatesFilter | undefined;
+    requester_email?: StringNullableWithAggregatesFilter | undefined;
+    content?: StringNullableWithAggregatesFilter | undefined;
+    department?: StringNullableWithAggregatesFilter | undefined;
+    media?: StringNullableWithAggregatesFilter | undefined;
+    projects?: StringNullableWithAggregatesFilter | undefined;
+    ticket_type?: StringNullableWithAggregatesFilter | undefined;
+    comment?: StringNullableWithAggregatesFilter | undefined;
+    products?: StringNullableWithAggregatesFilter | undefined;
+    priority?: StringNullableWithAggregatesFilter | undefined;
+    status?: StringNullableWithAggregatesFilter | undefined;
+    resolution?: StringNullableWithAggregatesFilter | undefined;
+    assigned_to?: StringNullableWithAggregatesFilter | undefined;
+    date_modified?: DateTimeNullableWithAggregatesFilter | undefined;
+    account_name?: StringNullableWithAggregatesFilter | undefined;
+    level?: StringNullableWithAggregatesFilter | undefined;
+    projects_projectsToticketing?: StringNullableWithAggregatesFilter | undefined;
+}

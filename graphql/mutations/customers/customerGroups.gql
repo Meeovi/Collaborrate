@@ -1,0 +1,9 @@
+
+query ($id: Int){
+  createOneCustomer_group (where: {id: {_eq: $id}}){
+    id
+    name
+    tax_class
+    created_at
+  }
+}

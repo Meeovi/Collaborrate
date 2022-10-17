@@ -1,0 +1,21 @@
+
+query fullfillments {
+  findManyFullfillments {
+    address
+    addressTwo
+    city
+    company
+    country
+    countryArea
+    createdAt
+    id
+    name
+    nodeId
+    phone
+    pickup
+    shippingZones
+    state
+    stock
+    zipcode
+  }
+}

@@ -1,0 +1,12 @@
+query MyQuery {
+  findManySegments {
+    apply_to
+    created_at
+    customers
+    description
+    id
+    name
+    status
+    website
+  }
+}

@@ -1,0 +1,14 @@
+
+query ($id: Int){
+  createOneCollections (where: {id: {_eq: $id}}){
+    id
+    image
+    meta_description
+    meta_keywords
+    meta_title
+    name
+    product
+    description
+    created_at
+  }
+}

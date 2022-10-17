@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateRatingArgs } from "./args/AggregateRatingArgs";
+import { CreateManyRatingArgs } from "./args/CreateManyRatingArgs";
+import { CreateOneRatingArgs } from "./args/CreateOneRatingArgs";
+import { DeleteManyRatingArgs } from "./args/DeleteManyRatingArgs";
+import { DeleteOneRatingArgs } from "./args/DeleteOneRatingArgs";
+import { FindFirstRatingArgs } from "./args/FindFirstRatingArgs";
+import { FindManyRatingArgs } from "./args/FindManyRatingArgs";
+import { FindUniqueRatingArgs } from "./args/FindUniqueRatingArgs";
+import { GroupByRatingArgs } from "./args/GroupByRatingArgs";
+import { UpdateManyRatingArgs } from "./args/UpdateManyRatingArgs";
+import { UpdateOneRatingArgs } from "./args/UpdateOneRatingArgs";
+import { UpsertOneRatingArgs } from "./args/UpsertOneRatingArgs";
+import { Rating } from "../../../models/Rating";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateRating } from "../../outputs/AggregateRating";
+import { RatingGroupBy } from "../../outputs/RatingGroupBy";
+export declare class RatingCrudResolver {
+    aggregateRating(ctx: any, info: GraphQLResolveInfo, args: AggregateRatingArgs): Promise<AggregateRating>;
+    createManyRating(ctx: any, info: GraphQLResolveInfo, args: CreateManyRatingArgs): Promise<AffectedRowsOutput>;
+    createOneRating(ctx: any, info: GraphQLResolveInfo, args: CreateOneRatingArgs): Promise<Rating>;
+    deleteManyRating(ctx: any, info: GraphQLResolveInfo, args: DeleteManyRatingArgs): Promise<AffectedRowsOutput>;
+    deleteOneRating(ctx: any, info: GraphQLResolveInfo, args: DeleteOneRatingArgs): Promise<Rating | null>;
+    findFirstRating(ctx: any, info: GraphQLResolveInfo, args: FindFirstRatingArgs): Promise<Rating | null>;
+    ratings(ctx: any, info: GraphQLResolveInfo, args: FindManyRatingArgs): Promise<Rating[]>;
+    rating(ctx: any, info: GraphQLResolveInfo, args: FindUniqueRatingArgs): Promise<Rating | null>;
+    groupByRating(ctx: any, info: GraphQLResolveInfo, args: GroupByRatingArgs): Promise<RatingGroupBy[]>;
+    updateManyRating(ctx: any, info: GraphQLResolveInfo, args: UpdateManyRatingArgs): Promise<AffectedRowsOutput>;
+    updateOneRating(ctx: any, info: GraphQLResolveInfo, args: UpdateOneRatingArgs): Promise<Rating | null>;
+    upsertOneRating(ctx: any, info: GraphQLResolveInfo, args: UpsertOneRatingArgs): Promise<Rating>;
+}

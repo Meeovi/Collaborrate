@@ -1,0 +1,10 @@
+
+query currencies {
+  findManyCurrencies {
+    id
+    name
+    region
+    created_at
+    code
+  }
+}

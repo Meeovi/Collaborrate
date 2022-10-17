@@ -1,0 +1,12 @@
+
+query internalizations {
+  findManyInternalizations {
+    id
+    name
+    region
+    website
+    description
+    default
+    created_at
+  }
+}

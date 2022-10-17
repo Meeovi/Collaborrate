@@ -1,0 +1,93 @@
+$gray-50: #fbfbfb;
+$gray-900: #262626;
+
+$theme-colors: (
+  'primary': #1266f1,
+  'secondary': #b23cfd,
+  'success': #00b74a,
+  'info': #39c0ed,
+  'warning': #ffa900,
+  'danger': #f93154,
+  'light': $gray-50,
+  'dark': $gray-900,
+) !default;
+
+.treeview {
+  width: 100%;
+
+  .active,
+  .treeview-category {
+    padding: 0 0.4rem 0 0.4rem;
+    border-radius: 5px;
+  }
+
+  .treeview-line {
+    border-left: 2px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .non-transitions {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
+
+  .treeview-disabled {
+    color: rgba(0, 0, 0, 0.25) !important;
+    cursor: not-allowed;
+  }
+
+  ul {
+    margin-left: 0.8rem;
+    padding-left: 0.8rem;
+
+    ul:not(.collapse):not(.collapsing):not(.show) {
+      display: none;
+    }
+  }
+
+  li {
+    list-style-type: none;
+    margin: 3px 0 3px 0;
+  }
+
+  a {
+    color: #4f4f4f;
+    display: block;
+  }
+
+  a[data-mdb-toggle='collapse'] {
+    color: unset;
+  }
+
+  span[aria-label='toggle'] {
+    i {
+      transition: 0.3s;
+      cursor: pointer;
+    }
+  }
+}
+
+// Color options
+@each $color, $value in $theme-colors {
+  $red: red($value);
+  $green: green($value);
+  $blue: blue($value);
+
+  .treeview-category:hover {
+    background-color: rgba($red, $green, $blue, 0.05);
+  }
+
+  .treeview-#{$color} {
+    .active {
+      color: $value !important;
+      background-color: rgba($red, $green, $blue, 0.05);
+    }
+
+    li:focus,
+    a:focus {
+      outline: none;
+      background-color: rgba($red, $green, $blue, 0.05);
+    }
+  }
+}

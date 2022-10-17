@@ -1,0 +1,15 @@
+
+query agreements($id: Int) {
+  createOneUsers(where: {id: {_eq: $id}}) {
+    id
+    first_name
+    email
+    created_at
+    interface_locale
+    last_name
+    password
+    permissions
+    username
+    value
+  }
+}

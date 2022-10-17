@@ -1,0 +1,17 @@
+
+query customizations {
+  findManyCustomizations {
+    siteUrl
+    siteName
+    notification
+    nodeId
+    navLink
+    id
+    footerLink
+    email
+    createdAt
+    banner
+    announcement
+    allowSignup
+  }
+}

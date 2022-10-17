@@ -1,0 +1,47 @@
+query MyQuery {
+  findManyTrainings {
+    address
+    analytics
+    announcement
+    assignments
+    assignmentsDueDate
+    badges
+    checklist
+    checklists
+    city
+    comment
+    competency
+    content
+    countries
+    country
+    course
+    created_at
+    digiboards
+    faqs
+    fieldTrips
+    grade
+    id
+    isCompleted
+    isPublic
+    lab
+    languages
+    link
+    media
+    meetups
+    name
+    origanalityReport
+    postal
+    products
+    resource
+    school
+    speakers
+    state
+    states
+    steps
+    student
+    subject
+    teacher
+    updated
+    type
+  }
+}
