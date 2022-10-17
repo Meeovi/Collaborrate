@@ -42,13 +42,16 @@
     "@feathersjs/authentication-oauth": "^4.5.15",
     "@feathersjs/configuration": "^4.5.15",
     "@feathersjs/express": "^4.5.15",
+    "@feathersjs/rest-client": "^4.5.15",
     "@feathersjs/socketio": "^4.5.15",
     "compression": "^1.7.4",
+    "cookie-storage": "^6.1.0",
     "cors": "^2.8.5",
     "feathers": "^2.2.4",
     "feathers-prisma": "^0.5.8",
     "helmet": "^6.0.0",
     "serve-favicon": "^2.5.0",
+    "socket.io-client": "^4.5.3",
     "winston": "^3.8.2"
   }
 }

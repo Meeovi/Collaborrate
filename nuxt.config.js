@@ -5,6 +5,9 @@ export default {
   server: {
     port: 8000
   },
+  env: {
+    API_URL: process.env.API_URL || 'http://localhost:8000'
+  },
   head: {
     title: 'AlternateCMS',
     meta: [
@@ -19,7 +22,6 @@ export default {
       { rel: 'stylesheet', href: '/mdb/plugins/css/all.min.css' },
       { rel: 'stylesheet', href: '/mdb/css/mdb.min.css' },
       { rel: 'stylesheet', href: '/styles/styles.css' },
-      { rel: 'stylesheet', href: '/styles/styles.css' },
       { rel: 'stylesheet', href: '/DataTables/datatables.css' }
     ],
     script: [
@@ -27,9 +29,8 @@ export default {
       { src: '/mdb/js/mdb.min.js', mode: 'client' },
       { src: '/DataTables/datatables.js', mode: 'client' },
       { src: '/scripts/main.js', mode: 'client' },
-      { src: '/scripts/upload.js', mode: 'client' },
-      { src: '/packages/search/stopwords.js', mode: 'client' },
-      { src: '/packages/search/index.js', mode: 'client' },
+      { src: '/scripts/core/uploads/index.js' },
+      { src: '/scripts/core/authentication/app.js' },
       { src: '/scripts/media-library.js', mode: 'client' },
     ]
   },
@@ -40,6 +41,8 @@ export default {
   plugins: [
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
     { src: '~/plugins/axios.js' },
+    { src: '@/plugins/plugin-auth-client', ssr: false },
+    { src: '~/plugins/feathers-vuex.js' }
   ],
 
   components: true,
@@ -51,6 +54,7 @@ export default {
 
   modules: [
     '@nuxtjs/axios',
+    'nuxt-client-init-module',
     '@nuxtjs/pwa',
     //'@nuxtjs/proxy',
     '@nuxtjs/sentry',
@@ -141,7 +145,9 @@ export default {
   },
 
   router: {
-    // middleware: ["auth"]
+    middleware: [
+      'feathers'
+    ]
   },
 
   i18n: {
@@ -197,6 +203,6 @@ export default {
 
   
   build: {
-    transpile: ['vue-instantsearch', 'instantsearch.js/es'],
+    transpile: ['vue-instantsearch', 'instantsearch.js/es', 'feathers-vuex'],
   },
 }

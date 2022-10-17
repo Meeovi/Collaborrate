@@ -1,7 +1,7 @@
 import "reflect-metadata";
 export {};
 
-import {  buildSchema, buildTypeDefsAndResolvers } from "type-graphql";
+import {  buildSchema } from "type-graphql";
 import { createServer } from '@graphql-yoga/node';
 import * as path from "path";
 import { prisma, PrismaClient } from "@prisma/client";
@@ -12,7 +12,7 @@ const { getUserId } = require('../server/config/utils');
 const feathers = require('@feathersjs/feathers');
 const express = require('@feathersjs/express');
 
-import { createModule, Scope, InjectionToken } from 'graphql-modules'
+import { createModule } from 'graphql-modules'
 
 //import { useGraphQLModules } from '@envelop/graphql-modules';
 import { useGraphQlJit } from '@envelop/graphql-jit';
@@ -21,8 +21,6 @@ import { useSentry } from '@envelop/sentry';
 import '@sentry/tracing';
 import { loadFilesSync } from '@graphql-tools/load-files';
 import { join } from 'path';
-
-const User = require('../packages/authentication/api/User')
 
 // Create an app that is a Feathers AND Express application
 const app = express(feathers());
