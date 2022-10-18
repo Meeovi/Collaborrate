@@ -6,17 +6,15 @@ https://app.netlify.com/start/deploy?repository=https://github.com/meeovi/altern
 
 ## Features include:
 
-- AlternateCMS supports PostgresSQL, MySQL, SQLite, SQL Server, MongoDB, CockroachDB, Supabase, AWS Aurora, AWS DynamoDB, and AWS DocumentDB
+- AlternateCMS supports PostgresSQL, MySQL, SQLite, SQL Server, MongoDB, CockroachDB
 - Blog Functionality with tags, publishing dates, draft, and enhanced editor support
-- Extendible system that supports Nuxtjs, Vuejs modules, and Fastify extensions
+- Extendible system that supports Nuxtjs, Vuejs modules, and Feathersjs extensions
 - Inventory Management System with support for Unlimited Products with product attributes and product types, categories, multi-channel creation, graphql
 - Per page & entire system SEO
 - Integrated File System Manager
-- Powerful Search capabilities integrates with Algolia, Typesense, Meilisearch, itemsAPI, Elasticsearch, and Lunr
-- User authentication and authorization integrates with over 500+ Passportjs strategies
+- Powerful Search capabilities integrates with Algolia, Typesense, Meilisearch, itemsAPI, Elasticsearch, and Opensearch extensions
 - Graphql support & Rest Apis with Rest Documentation
 - Integrated reporting tools and Sentry integration
-- Paypal & Stripe payment methods
 - Easily deploy with Netlify
 - Enhanced Security with monthly updates
 - Designed with Bootstrap and Fontawesome
@@ -30,7 +28,6 @@ https://app.netlify.com/start/deploy?repository=https://github.com/meeovi/altern
 - PWA Support with push notifications, desktop notifications, and offline caching
 - Mobile, Desktop, and Docker support
 - Built in ERP (Enterprise Resource Planning) includes Project Management, Checklist, Error Reporting, Visits, Team Scheduler, Deep Dives, Dashboard Creations.
-- Built in LMS (Learning Management System) includes Course Creation, Assign instructors, students, different forms of media, create digital schools, badges, announcements, training material, integrates with products, polls, checklists, cities, states, countries, create meetups, Digital Boards (digiboards), and labs
 
 and much more. Take a look at www.alternatecms.com 
 
@@ -68,6 +65,10 @@ AlternateCMS API Documentation is located at: http://localhost:5858
 3. npm install
 4. prisma db pull
 5. npm run all
+
+## To update AlternateCMS
+
+1. npm run alternate-update
 
 AlternateCMS will be at: http://localhost:8000
 
