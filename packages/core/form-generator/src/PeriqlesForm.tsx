@@ -1,11 +1,11 @@
-import * as Vue from 'vue';
-import { render } from 'vue-dom';
-import PeriqlesField from './field';
-import {introspect} from './function';
-import {commitMutation} from 'vue-relay';
-import '../../../../static/styles/styles.css'
+import * as React from 'react';
+import { render } from 'react-dom';
+import PeriqlesField from './PeriqlesField';
+import {introspect} from './functions';
+import {commitMutation} from 'react-relay';
+import '../periqles.css'
 
-const {ref, watch} = Vue;
+const {useState, useEffect} = React;
 
 const PeriqlesForm = ({
   environment,
@@ -16,11 +16,11 @@ const PeriqlesForm = ({
   args = {},
   callbacks,
 }: PeriqlesFormProps): JSX.Element => {
-  const [formState, setFormState] = ref<FormState>({});
-  const [fields, setFields] = ref<PeriqlesFieldInfo[]>([]);
+  const [formState, setFormState] = useState<FormState>({});
+  const [fields, setFields] = useState<PeriqlesFieldInfo[]>([]);
 
   // introspect this project's GraphQL schema on initial render
-  watch(() => {
+  useEffect(() => {
     introspect(mutationName, setFields, args);
   }, [mutationName]);
 
@@ -116,11 +116,11 @@ const PeriqlesForm = ({
     setFormState(newState);
   };
 
-  watch(() => initializeForm(fields), [fields.length, setFormState]);
+  useEffect(() => initializeForm(fields), [fields.length, setFormState]);
 
   return (
     <form
-      class="PeriqlesForm"
+      className="PeriqlesForm"
       aria-labelledby="form"
       onSubmit={(e) => handleSubmit(e, fields)}>
         {specifications && specifications.header && <h2>{specifications.header}</h2>}
@@ -143,7 +143,7 @@ const PeriqlesForm = ({
           : <p>Loading form...</p>
         }
         <button
-          class="periqles-submit"
+          className="periqles-submit"
           onClick={(e) => handleSubmit(e, fields)}>
           Submit
         </button>

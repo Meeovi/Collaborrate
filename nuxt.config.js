@@ -5,12 +5,9 @@ export default {
   server: {
     port: 8000
   },
-<<<<<<< HEAD
-=======
   env: {
     API_URL: process.env.API_URL || 'http://localhost:8000'
   },
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   head: {
     title: 'AlternateCMS',
     meta: [
@@ -25,10 +22,6 @@ export default {
       { rel: 'stylesheet', href: '/mdb/plugins/css/all.min.css' },
       { rel: 'stylesheet', href: '/mdb/css/mdb.min.css' },
       { rel: 'stylesheet', href: '/styles/styles.css' },
-<<<<<<< HEAD
-      { rel: 'stylesheet', href: '/styles/styles.css' },
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
       { rel: 'stylesheet', href: '/DataTables/datatables.css' }
     ],
     script: [
@@ -36,14 +29,8 @@ export default {
       { src: '/mdb/js/mdb.min.js', mode: 'client' },
       { src: '/DataTables/datatables.js', mode: 'client' },
       { src: '/scripts/main.js', mode: 'client' },
-<<<<<<< HEAD
-      { src: '/scripts/upload.js', mode: 'client' },
-      { src: '/packages/search/stopwords.js', mode: 'client' },
-      { src: '/packages/search/index.js', mode: 'client' },
-=======
       { src: '/scripts/core/uploads/index.js' },
       { src: '/scripts/core/authentication/app.js' },
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
       { src: '/scripts/media-library.js', mode: 'client' },
     ]
   },
@@ -54,11 +41,8 @@ export default {
   plugins: [
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
     { src: '~/plugins/axios.js' },
-<<<<<<< HEAD
-=======
     { src: '@/plugins/plugin-auth-client', ssr: false },
     { src: '~/plugins/feathers-vuex.js' }
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   ],
 
   components: true,
@@ -70,10 +54,7 @@ export default {
 
   modules: [
     '@nuxtjs/axios',
-<<<<<<< HEAD
-=======
     'nuxt-client-init-module',
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     '@nuxtjs/pwa',
     //'@nuxtjs/proxy',
     '@nuxtjs/sentry',
@@ -84,11 +65,7 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxtjs/toast',
     "@nuxtjs/axios", 
-<<<<<<< HEAD
-    // "@nuxtjs/auth-next",
-=======
     "@nuxtjs/auth-next",
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     'nuxt-i18n',
     {
       src: '@nuxtjs/lunr-module',
@@ -109,32 +86,6 @@ export default {
       }
     },
   ],
-<<<<<<< HEAD
-  /* auth: {
-        // Options
-        strategies: {
-          local: {
-            token: {
-              property: 'jwt',
-            },
-            user: {
-              property: false,
-            },
-            endpoints: {
-              login: {
-                url: 'auth/local',
-                method: 'post',
-              },
-              user: {
-                url: 'user/my-account',
-                method: 'get',
-              },
-              logout: false,
-            },
-          },
-        },
-      }, */
-=======
   
   auth: {
     strategies: {
@@ -153,7 +104,6 @@ export default {
       home: '/',
     },
   },
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 
   dotenv: {
     path: './' 
@@ -195,13 +145,9 @@ export default {
   },
 
   router: {
-<<<<<<< HEAD
-    // middleware: ["auth"]
-=======
     middleware: [
       'feathers'
     ]
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   },
 
   i18n: {
@@ -257,10 +203,6 @@ export default {
 
   
   build: {
-<<<<<<< HEAD
-    transpile: ['vue-instantsearch', 'instantsearch.js/es'],
-=======
     transpile: ['vue-instantsearch', 'instantsearch.js/es', 'feathers-vuex'],
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   },
 }

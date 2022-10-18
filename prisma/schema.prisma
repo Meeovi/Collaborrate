@@ -1237,24 +1237,6 @@ model stocks {
   sources     String?
 }
 
-<<<<<<< HEAD
-model surveys {
-  id                BigInt    @id @default(autoincrement())
-  created_at        DateTime? @default(now())
-  name              String?
-  assigned_to       String?
-  status            String?
-  description       String?
-  question          String?
-  answer            String?
-  submit_text       String?
-  satisfied_text    String?
-  neither_text      String?
-  dissatisfied_text String?
-}
-
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 model tags {
   id         Int     @id @default(autoincrement())
   name       String
@@ -1363,54 +1345,6 @@ model ticketing {
   projects_projectsToticketing String?
 }
 
-<<<<<<< HEAD
-model trainings {
-  id                 BigInt    @id @default(autoincrement())
-  created_at         DateTime? @default(now())
-  name               String?
-  subject            String?
-  content            String?
-  media              String?
-  link               String?
-  steps              String?
-  updated            DateTime? @default(now())
-  analytics          String?
-  competency         String?
-  course             String?
-  grade              String?
-  school             String?
-  comment            Int?
-  address            String?
-  country            Int?
-  state              Int?
-  postal             String?
-  teacher            String?
-  student            String?
-  announcement       String?
-  resource           String?
-  badges             String?
-  isPublic           String?
-  isCompleted        String?
-  speakers           String?
-  fieldTrips         String?
-  assignments        String?
-  assignmentsDueDate String?
-  origanalityReport  String?
-  products           BigInt?
-  faqs               String?
-  languages          String?
-  checklists         BigInt?
-  city               String?
-  meetups            String?
-  lab                String?
-  digiboards         String?
-  countries          String?
-  states             String?
-  type               String?
-}
-
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 model transactions {
   id                    Int       @id @default(autoincrement())
   order_id              Int
@@ -1708,8 +1642,6 @@ model vendors {
   type              String?
   workspaces        String?
 }
-<<<<<<< HEAD
-=======
 
 model logIn {
   id         BigInt    @id @default(autoincrement())
@@ -1721,4 +1653,3 @@ model logIn {
   users      String?
   username   String?
 }
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194

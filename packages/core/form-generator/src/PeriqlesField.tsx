@@ -1,5 +1,5 @@
-import * as Vue from 'vue';
-import {generateDefaultElement, generateSpecifiedElement} from './function';
+import * as React from 'react';
+import {generateDefaultElement, generateSpecifiedElement} from './functions';
 
 const PeriqlesField = ({
   field,

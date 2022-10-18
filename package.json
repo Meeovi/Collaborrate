@@ -110,6 +110,7 @@
     "graphql-type-json": "^0.3.2",
     "graphql-yoga": "^2.13.5",
     "helmet": "^5.0.1",
+    "iconv-lite": "^0.6.3",
     "instantsearch-itemsjs-adapter": "^1.1.5",
     "instantsearch.css": "^7.4.5",
     "itemsjs": "^2.1.20",
@@ -143,8 +144,9 @@
     "vue-template-compiler": "^2.6.14"
   },
   "devDependencies": {
-    "@prisma/client": "^4.4.0 || ^3.7.0",
+    "@prisma/client": "^4.4.0 || ^3.7.0 || ^4.1.1",
     "@types/node": "^18.8.4",
+    "@vue/babel-plugin-jsx": "^1.1.1",
     "chromedriver": "^96.0.0",
     "express": "^4.18.1",
     "graphql": "^15.8.0 || ^16.6.0 || ^15.3.0",

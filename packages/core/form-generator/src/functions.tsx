@@ -1,5 +1,4 @@
-import * as Vue from 'vue';
-import axios from '@nuxtjs/axios';
+import * as React from 'react';
 
 export const introspect = (mutationName, setFields, args) => {
   const inputTypeName: string = mutationName + 'Input';
