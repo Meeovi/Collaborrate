@@ -47,10 +47,7 @@ export { AggregateInternalization } from "./AggregateInternalization";
 export { AggregateInvitations } from "./AggregateInvitations";
 export { AggregateInvoices } from "./AggregateInvoices";
 export { AggregateLeads } from "./AggregateLeads";
-<<<<<<< HEAD
-=======
 export { AggregateLogIn } from "./AggregateLogIn";
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { AggregateManufacturer } from "./AggregateManufacturer";
 export { AggregateMediamanager } from "./AggregateMediamanager";
 export { AggregateMeeting } from "./AggregateMeeting";
@@ -84,10 +81,6 @@ export { AggregateSpecial_discounts } from "./AggregateSpecial_discounts";
 export { AggregateStates } from "./AggregateStates";
 export { AggregateStatistics } from "./AggregateStatistics";
 export { AggregateStocks } from "./AggregateStocks";
-<<<<<<< HEAD
-export { AggregateSurveys } from "./AggregateSurveys";
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { AggregateTags } from "./AggregateTags";
 export { AggregateTargets } from "./AggregateTargets";
 export { AggregateTax_category } from "./AggregateTax_category";
@@ -96,10 +89,6 @@ export { AggregateTax_rule } from "./AggregateTax_rule";
 export { AggregateTemplates } from "./AggregateTemplates";
 export { AggregateThemes } from "./AggregateThemes";
 export { AggregateTicketing } from "./AggregateTicketing";
-<<<<<<< HEAD
-export { AggregateTrainings } from "./AggregateTrainings";
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { AggregateTransactions } from "./AggregateTransactions";
 export { AggregateUpload_file } from "./AggregateUpload_file";
 export { AggregateUsers } from "./AggregateUsers";
@@ -357,15 +346,12 @@ export { LeadsGroupBy } from "./LeadsGroupBy";
 export { LeadsMaxAggregate } from "./LeadsMaxAggregate";
 export { LeadsMinAggregate } from "./LeadsMinAggregate";
 export { LeadsSumAggregate } from "./LeadsSumAggregate";
-<<<<<<< HEAD
-=======
 export { LogInAvgAggregate } from "./LogInAvgAggregate";
 export { LogInCountAggregate } from "./LogInCountAggregate";
 export { LogInGroupBy } from "./LogInGroupBy";
 export { LogInMaxAggregate } from "./LogInMaxAggregate";
 export { LogInMinAggregate } from "./LogInMinAggregate";
 export { LogInSumAggregate } from "./LogInSumAggregate";
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { ManufacturerAvgAggregate } from "./ManufacturerAvgAggregate";
 export { ManufacturerCountAggregate } from "./ManufacturerCountAggregate";
 export { ManufacturerGroupBy } from "./ManufacturerGroupBy";
@@ -564,15 +550,6 @@ export { StocksGroupBy } from "./StocksGroupBy";
 export { StocksMaxAggregate } from "./StocksMaxAggregate";
 export { StocksMinAggregate } from "./StocksMinAggregate";
 export { StocksSumAggregate } from "./StocksSumAggregate";
-<<<<<<< HEAD
-export { SurveysAvgAggregate } from "./SurveysAvgAggregate";
-export { SurveysCountAggregate } from "./SurveysCountAggregate";
-export { SurveysGroupBy } from "./SurveysGroupBy";
-export { SurveysMaxAggregate } from "./SurveysMaxAggregate";
-export { SurveysMinAggregate } from "./SurveysMinAggregate";
-export { SurveysSumAggregate } from "./SurveysSumAggregate";
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { TagsAvgAggregate } from "./TagsAvgAggregate";
 export { TagsCountAggregate } from "./TagsCountAggregate";
 export { TagsGroupBy } from "./TagsGroupBy";
@@ -621,15 +598,6 @@ export { TicketingGroupBy } from "./TicketingGroupBy";
 export { TicketingMaxAggregate } from "./TicketingMaxAggregate";
 export { TicketingMinAggregate } from "./TicketingMinAggregate";
 export { TicketingSumAggregate } from "./TicketingSumAggregate";
-<<<<<<< HEAD
-export { TrainingsAvgAggregate } from "./TrainingsAvgAggregate";
-export { TrainingsCountAggregate } from "./TrainingsCountAggregate";
-export { TrainingsGroupBy } from "./TrainingsGroupBy";
-export { TrainingsMaxAggregate } from "./TrainingsMaxAggregate";
-export { TrainingsMinAggregate } from "./TrainingsMinAggregate";
-export { TrainingsSumAggregate } from "./TrainingsSumAggregate";
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { TransactionsAvgAggregate } from "./TransactionsAvgAggregate";
 export { TransactionsCountAggregate } from "./TransactionsCountAggregate";
 export { TransactionsGroupBy } from "./TransactionsGroupBy";

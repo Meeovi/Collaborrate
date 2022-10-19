@@ -74,10 +74,6 @@ declare const crudResolversMap: {
     States: typeof crudResolvers.StatesCrudResolver;
     Statistics: typeof crudResolvers.StatisticsCrudResolver;
     Stocks: typeof crudResolvers.StocksCrudResolver;
-<<<<<<< HEAD
-    Surveys: typeof crudResolvers.SurveysCrudResolver;
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     Tags: typeof crudResolvers.TagsCrudResolver;
     Targets: typeof crudResolvers.TargetsCrudResolver;
     Tax_category: typeof crudResolvers.Tax_categoryCrudResolver;
@@ -85,10 +81,6 @@ declare const crudResolversMap: {
     Tax_rule: typeof crudResolvers.Tax_ruleCrudResolver;
     Themes: typeof crudResolvers.ThemesCrudResolver;
     Ticketing: typeof crudResolvers.TicketingCrudResolver;
-<<<<<<< HEAD
-    Trainings: typeof crudResolvers.TrainingsCrudResolver;
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     Transactions: typeof crudResolvers.TransactionsCrudResolver;
     Upload_file: typeof crudResolvers.Upload_fileCrudResolver;
     Users: typeof crudResolvers.UsersCrudResolver;
@@ -106,10 +98,7 @@ declare const crudResolversMap: {
     Attributes: typeof crudResolvers.AttributesCrudResolver;
     Newsletters: typeof crudResolvers.NewslettersCrudResolver;
     Vendors: typeof crudResolvers.VendorsCrudResolver;
-<<<<<<< HEAD
-=======
     LogIn: typeof crudResolvers.LogInCrudResolver;
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 };
 declare type ResolverModelNames = keyof typeof crudResolversMap;
 declare type ModelResolverActionNames<TModel extends ResolverModelNames> = keyof typeof crudResolversMap[TModel]["prototype"];

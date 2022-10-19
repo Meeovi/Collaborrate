@@ -502,8 +502,6 @@ export { GroupByLeadsResolver } from "./Leads/GroupByLeadsResolver";
 export { UpdateManyLeadsResolver } from "./Leads/UpdateManyLeadsResolver";
 export { UpdateOneLeadsResolver } from "./Leads/UpdateOneLeadsResolver";
 export { UpsertOneLeadsResolver } from "./Leads/UpsertOneLeadsResolver";
-<<<<<<< HEAD
-=======
 export { AggregateLogInResolver } from "./LogIn/AggregateLogInResolver";
 export { CreateManyLogInResolver } from "./LogIn/CreateManyLogInResolver";
 export { CreateOneLogInResolver } from "./LogIn/CreateOneLogInResolver";
@@ -516,7 +514,6 @@ export { GroupByLogInResolver } from "./LogIn/GroupByLogInResolver";
 export { UpdateManyLogInResolver } from "./LogIn/UpdateManyLogInResolver";
 export { UpdateOneLogInResolver } from "./LogIn/UpdateOneLogInResolver";
 export { UpsertOneLogInResolver } from "./LogIn/UpsertOneLogInResolver";
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { AggregateManufacturerResolver } from "./Manufacturer/AggregateManufacturerResolver";
 export { CreateManyManufacturerResolver } from "./Manufacturer/CreateManyManufacturerResolver";
 export { CreateOneManufacturerResolver } from "./Manufacturer/CreateOneManufacturerResolver";
@@ -913,21 +910,6 @@ export { GroupByStocksResolver } from "./Stocks/GroupByStocksResolver";
 export { UpdateManyStocksResolver } from "./Stocks/UpdateManyStocksResolver";
 export { UpdateOneStocksResolver } from "./Stocks/UpdateOneStocksResolver";
 export { UpsertOneStocksResolver } from "./Stocks/UpsertOneStocksResolver";
-<<<<<<< HEAD
-export { AggregateSurveysResolver } from "./Surveys/AggregateSurveysResolver";
-export { CreateManySurveysResolver } from "./Surveys/CreateManySurveysResolver";
-export { CreateOneSurveysResolver } from "./Surveys/CreateOneSurveysResolver";
-export { DeleteManySurveysResolver } from "./Surveys/DeleteManySurveysResolver";
-export { DeleteOneSurveysResolver } from "./Surveys/DeleteOneSurveysResolver";
-export { FindFirstSurveysResolver } from "./Surveys/FindFirstSurveysResolver";
-export { FindManySurveysResolver } from "./Surveys/FindManySurveysResolver";
-export { FindUniqueSurveysResolver } from "./Surveys/FindUniqueSurveysResolver";
-export { GroupBySurveysResolver } from "./Surveys/GroupBySurveysResolver";
-export { UpdateManySurveysResolver } from "./Surveys/UpdateManySurveysResolver";
-export { UpdateOneSurveysResolver } from "./Surveys/UpdateOneSurveysResolver";
-export { UpsertOneSurveysResolver } from "./Surveys/UpsertOneSurveysResolver";
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { AggregateTagsResolver } from "./Tags/AggregateTagsResolver";
 export { CreateManyTagsResolver } from "./Tags/CreateManyTagsResolver";
 export { CreateOneTagsResolver } from "./Tags/CreateOneTagsResolver";
@@ -1024,21 +1006,6 @@ export { GroupByTicketingResolver } from "./Ticketing/GroupByTicketingResolver";
 export { UpdateManyTicketingResolver } from "./Ticketing/UpdateManyTicketingResolver";
 export { UpdateOneTicketingResolver } from "./Ticketing/UpdateOneTicketingResolver";
 export { UpsertOneTicketingResolver } from "./Ticketing/UpsertOneTicketingResolver";
-<<<<<<< HEAD
-export { AggregateTrainingsResolver } from "./Trainings/AggregateTrainingsResolver";
-export { CreateManyTrainingsResolver } from "./Trainings/CreateManyTrainingsResolver";
-export { CreateOneTrainingsResolver } from "./Trainings/CreateOneTrainingsResolver";
-export { DeleteManyTrainingsResolver } from "./Trainings/DeleteManyTrainingsResolver";
-export { DeleteOneTrainingsResolver } from "./Trainings/DeleteOneTrainingsResolver";
-export { FindFirstTrainingsResolver } from "./Trainings/FindFirstTrainingsResolver";
-export { FindManyTrainingsResolver } from "./Trainings/FindManyTrainingsResolver";
-export { FindUniqueTrainingsResolver } from "./Trainings/FindUniqueTrainingsResolver";
-export { GroupByTrainingsResolver } from "./Trainings/GroupByTrainingsResolver";
-export { UpdateManyTrainingsResolver } from "./Trainings/UpdateManyTrainingsResolver";
-export { UpdateOneTrainingsResolver } from "./Trainings/UpdateOneTrainingsResolver";
-export { UpsertOneTrainingsResolver } from "./Trainings/UpsertOneTrainingsResolver";
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { AggregateTransactionsResolver } from "./Transactions/AggregateTransactionsResolver";
 export { CreateManyTransactionsResolver } from "./Transactions/CreateManyTransactionsResolver";
 export { CreateOneTransactionsResolver } from "./Transactions/CreateOneTransactionsResolver";

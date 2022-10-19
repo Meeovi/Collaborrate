@@ -40,10 +40,7 @@ export { Internalization } from "./Internalization";
 export { Invitations } from "./Invitations";
 export { Invoices } from "./Invoices";
 export { Leads } from "./Leads";
-<<<<<<< HEAD
-=======
 export { LogIn } from "./LogIn";
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { Manufacturer } from "./Manufacturer";
 export { Mediamanager } from "./Mediamanager";
 export { Meeting } from "./Meeting";
@@ -77,10 +74,6 @@ export { Special_discounts } from "./Special_discounts";
 export { States } from "./States";
 export { Statistics } from "./Statistics";
 export { Stocks } from "./Stocks";
-<<<<<<< HEAD
-export { Surveys } from "./Surveys";
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { Tags } from "./Tags";
 export { Targets } from "./Targets";
 export { Tax_category } from "./Tax_category";
@@ -89,10 +82,6 @@ export { Tax_rule } from "./Tax_rule";
 export { Templates } from "./Templates";
 export { Themes } from "./Themes";
 export { Ticketing } from "./Ticketing";
-<<<<<<< HEAD
-export { Trainings } from "./Trainings";
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export { Transactions } from "./Transactions";
 export { Upload_file } from "./Upload_file";
 export { Users } from "./Users";

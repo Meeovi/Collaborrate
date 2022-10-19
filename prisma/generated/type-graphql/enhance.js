@@ -80,10 +80,6 @@ const crudResolversMap = {
     States: crudResolvers.StatesCrudResolver,
     Statistics: crudResolvers.StatisticsCrudResolver,
     Stocks: crudResolvers.StocksCrudResolver,
-<<<<<<< HEAD
-    Surveys: crudResolvers.SurveysCrudResolver,
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     Tags: crudResolvers.TagsCrudResolver,
     Targets: crudResolvers.TargetsCrudResolver,
     Tax_category: crudResolvers.Tax_categoryCrudResolver,
@@ -91,10 +87,6 @@ const crudResolversMap = {
     Tax_rule: crudResolvers.Tax_ruleCrudResolver,
     Themes: crudResolvers.ThemesCrudResolver,
     Ticketing: crudResolvers.TicketingCrudResolver,
-<<<<<<< HEAD
-    Trainings: crudResolvers.TrainingsCrudResolver,
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     Transactions: crudResolvers.TransactionsCrudResolver,
     Upload_file: crudResolvers.Upload_fileCrudResolver,
     Users: crudResolvers.UsersCrudResolver,
@@ -111,12 +103,8 @@ const crudResolversMap = {
     Settings: crudResolvers.SettingsCrudResolver,
     Attributes: crudResolvers.AttributesCrudResolver,
     Newsletters: crudResolvers.NewslettersCrudResolver,
-<<<<<<< HEAD
-    Vendors: crudResolvers.VendorsCrudResolver
-=======
     Vendors: crudResolvers.VendorsCrudResolver,
     LogIn: crudResolvers.LogInCrudResolver
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 };
 const actionResolversMap = {
     Accounts: {
@@ -1099,23 +1087,6 @@ const actionResolversMap = {
         updateOneStocks: actionResolvers.UpdateOneStocksResolver,
         upsertOneStocks: actionResolvers.UpsertOneStocksResolver
     },
-<<<<<<< HEAD
-    Surveys: {
-        aggregateSurveys: actionResolvers.AggregateSurveysResolver,
-        createManySurveys: actionResolvers.CreateManySurveysResolver,
-        createOneSurveys: actionResolvers.CreateOneSurveysResolver,
-        deleteManySurveys: actionResolvers.DeleteManySurveysResolver,
-        deleteOneSurveys: actionResolvers.DeleteOneSurveysResolver,
-        findFirstSurveys: actionResolvers.FindFirstSurveysResolver,
-        findManySurveys: actionResolvers.FindManySurveysResolver,
-        findUniqueSurveys: actionResolvers.FindUniqueSurveysResolver,
-        groupBySurveys: actionResolvers.GroupBySurveysResolver,
-        updateManySurveys: actionResolvers.UpdateManySurveysResolver,
-        updateOneSurveys: actionResolvers.UpdateOneSurveysResolver,
-        upsertOneSurveys: actionResolvers.UpsertOneSurveysResolver
-    },
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     Tags: {
         aggregateTags: actionResolvers.AggregateTagsResolver,
         createManyTags: actionResolvers.CreateManyTagsResolver,
@@ -1214,23 +1185,6 @@ const actionResolversMap = {
         updateOneTicketing: actionResolvers.UpdateOneTicketingResolver,
         upsertOneTicketing: actionResolvers.UpsertOneTicketingResolver
     },
-<<<<<<< HEAD
-    Trainings: {
-        aggregateTrainings: actionResolvers.AggregateTrainingsResolver,
-        createManyTrainings: actionResolvers.CreateManyTrainingsResolver,
-        createOneTrainings: actionResolvers.CreateOneTrainingsResolver,
-        deleteManyTrainings: actionResolvers.DeleteManyTrainingsResolver,
-        deleteOneTrainings: actionResolvers.DeleteOneTrainingsResolver,
-        findFirstTrainings: actionResolvers.FindFirstTrainingsResolver,
-        findManyTrainings: actionResolvers.FindManyTrainingsResolver,
-        findUniqueTrainings: actionResolvers.FindUniqueTrainingsResolver,
-        groupByTrainings: actionResolvers.GroupByTrainingsResolver,
-        updateManyTrainings: actionResolvers.UpdateManyTrainingsResolver,
-        updateOneTrainings: actionResolvers.UpdateOneTrainingsResolver,
-        upsertOneTrainings: actionResolvers.UpsertOneTrainingsResolver
-    },
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     Transactions: {
         aggregateTransactions: actionResolvers.AggregateTransactionsResolver,
         createManyTransactions: actionResolvers.CreateManyTransactionsResolver,
@@ -1468,8 +1422,6 @@ const actionResolversMap = {
         updateManyVendors: actionResolvers.UpdateManyVendorsResolver,
         updateOneVendors: actionResolvers.UpdateOneVendorsResolver,
         upsertOneVendors: actionResolvers.UpsertOneVendorsResolver
-<<<<<<< HEAD
-=======
     },
     LogIn: {
         aggregateLogIn: actionResolvers.AggregateLogInResolver,
@@ -1484,7 +1436,6 @@ const actionResolversMap = {
         updateManyLogIn: actionResolvers.UpdateManyLogInResolver,
         updateOneLogIn: actionResolvers.UpdateOneLogInResolver,
         upsertOneLogIn: actionResolvers.UpsertOneLogInResolver
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     }
 };
 const crudResolversInfo = {
@@ -1558,10 +1509,6 @@ const crudResolversInfo = {
     States: ["aggregateStates", "createManyStates", "createOneStates", "deleteManyStates", "deleteOneStates", "findFirstStates", "findManyStates", "findUniqueStates", "groupByStates", "updateManyStates", "updateOneStates", "upsertOneStates"],
     Statistics: ["aggregateStatistics", "createManyStatistics", "createOneStatistics", "deleteManyStatistics", "deleteOneStatistics", "findFirstStatistics", "findManyStatistics", "findUniqueStatistics", "groupByStatistics", "updateManyStatistics", "updateOneStatistics", "upsertOneStatistics"],
     Stocks: ["aggregateStocks", "createManyStocks", "createOneStocks", "deleteManyStocks", "deleteOneStocks", "findFirstStocks", "findManyStocks", "findUniqueStocks", "groupByStocks", "updateManyStocks", "updateOneStocks", "upsertOneStocks"],
-<<<<<<< HEAD
-    Surveys: ["aggregateSurveys", "createManySurveys", "createOneSurveys", "deleteManySurveys", "deleteOneSurveys", "findFirstSurveys", "findManySurveys", "findUniqueSurveys", "groupBySurveys", "updateManySurveys", "updateOneSurveys", "upsertOneSurveys"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     Tags: ["aggregateTags", "createManyTags", "createOneTags", "deleteManyTags", "deleteOneTags", "findFirstTags", "findManyTags", "findUniqueTags", "groupByTags", "updateManyTags", "updateOneTags", "upsertOneTags"],
     Targets: ["aggregateTargets", "createManyTargets", "createOneTargets", "deleteManyTargets", "deleteOneTargets", "findFirstTargets", "findManyTargets", "findUniqueTargets", "groupByTargets", "updateManyTargets", "updateOneTargets", "upsertOneTargets"],
     Tax_category: ["aggregateTax_category", "createManyTax_category", "createOneTax_category", "deleteManyTax_category", "deleteOneTax_category", "findFirstTax_category", "tax_categories", "tax_category", "groupByTax_category", "updateManyTax_category", "updateOneTax_category", "upsertOneTax_category"],
@@ -1569,10 +1516,6 @@ const crudResolversInfo = {
     Tax_rule: ["aggregateTax_rule", "createManyTax_rule", "createOneTax_rule", "deleteManyTax_rule", "deleteOneTax_rule", "findFirstTax_rule", "tax_rules", "tax_rule", "groupByTax_rule", "updateManyTax_rule", "updateOneTax_rule", "upsertOneTax_rule"],
     Themes: ["aggregateThemes", "createManyThemes", "createOneThemes", "deleteManyThemes", "deleteOneThemes", "findFirstThemes", "findManyThemes", "findUniqueThemes", "groupByThemes", "updateManyThemes", "updateOneThemes", "upsertOneThemes"],
     Ticketing: ["aggregateTicketing", "createManyTicketing", "createOneTicketing", "deleteManyTicketing", "deleteOneTicketing", "findFirstTicketing", "ticketings", "ticketing", "groupByTicketing", "updateManyTicketing", "updateOneTicketing", "upsertOneTicketing"],
-<<<<<<< HEAD
-    Trainings: ["aggregateTrainings", "createManyTrainings", "createOneTrainings", "deleteManyTrainings", "deleteOneTrainings", "findFirstTrainings", "findManyTrainings", "findUniqueTrainings", "groupByTrainings", "updateManyTrainings", "updateOneTrainings", "upsertOneTrainings"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     Transactions: ["aggregateTransactions", "createManyTransactions", "createOneTransactions", "deleteManyTransactions", "deleteOneTransactions", "findFirstTransactions", "findManyTransactions", "findUniqueTransactions", "groupByTransactions", "updateManyTransactions", "updateOneTransactions", "upsertOneTransactions"],
     Upload_file: ["aggregateUpload_file", "createManyUpload_file", "createOneUpload_file", "deleteManyUpload_file", "deleteOneUpload_file", "findFirstUpload_file", "upload_files", "upload_file", "groupByUpload_file", "updateManyUpload_file", "updateOneUpload_file", "upsertOneUpload_file"],
     Users: ["aggregateUsers", "createManyUsers", "createOneUsers", "deleteManyUsers", "deleteOneUsers", "findFirstUsers", "findManyUsers", "findUniqueUsers", "groupByUsers", "updateManyUsers", "updateOneUsers", "upsertOneUsers"],
@@ -1589,12 +1532,8 @@ const crudResolversInfo = {
     Settings: ["aggregateSettings", "createManySettings", "createOneSettings", "deleteManySettings", "deleteOneSettings", "findFirstSettings", "findManySettings", "findUniqueSettings", "groupBySettings", "updateManySettings", "updateOneSettings", "upsertOneSettings"],
     Attributes: ["aggregateAttributes", "createManyAttributes", "createOneAttributes", "deleteManyAttributes", "deleteOneAttributes", "findFirstAttributes", "findManyAttributes", "findUniqueAttributes", "groupByAttributes", "updateManyAttributes", "updateOneAttributes", "upsertOneAttributes"],
     Newsletters: ["aggregateNewsletters", "createManyNewsletters", "createOneNewsletters", "deleteManyNewsletters", "deleteOneNewsletters", "findFirstNewsletters", "findManyNewsletters", "findUniqueNewsletters", "groupByNewsletters", "updateManyNewsletters", "updateOneNewsletters", "upsertOneNewsletters"],
-<<<<<<< HEAD
-    Vendors: ["aggregateVendors", "createManyVendors", "createOneVendors", "deleteManyVendors", "deleteOneVendors", "findFirstVendors", "findManyVendors", "findUniqueVendors", "groupByVendors", "updateManyVendors", "updateOneVendors", "upsertOneVendors"]
-=======
     Vendors: ["aggregateVendors", "createManyVendors", "createOneVendors", "deleteManyVendors", "deleteOneVendors", "findFirstVendors", "findManyVendors", "findUniqueVendors", "groupByVendors", "updateManyVendors", "updateOneVendors", "upsertOneVendors"],
     LogIn: ["aggregateLogIn", "createManyLogIn", "createOneLogIn", "deleteManyLogIn", "deleteOneLogIn", "findFirstLogIn", "logIns", "logIn", "groupByLogIn", "updateManyLogIn", "updateOneLogIn", "upsertOneLogIn"]
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 };
 const argsInfo = {
     AggregateAccountsArgs: ["where", "orderBy", "cursor", "take", "skip"],
@@ -2437,21 +2376,6 @@ const argsInfo = {
     UpdateManyStocksArgs: ["data", "where"],
     UpdateOneStocksArgs: ["data", "where"],
     UpsertOneStocksArgs: ["where", "create", "update"],
-<<<<<<< HEAD
-    AggregateSurveysArgs: ["where", "orderBy", "cursor", "take", "skip"],
-    CreateManySurveysArgs: ["data", "skipDuplicates"],
-    CreateOneSurveysArgs: ["data"],
-    DeleteManySurveysArgs: ["where"],
-    DeleteOneSurveysArgs: ["where"],
-    FindFirstSurveysArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
-    FindManySurveysArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
-    FindUniqueSurveysArgs: ["where"],
-    GroupBySurveysArgs: ["where", "orderBy", "by", "having", "take", "skip"],
-    UpdateManySurveysArgs: ["data", "where"],
-    UpdateOneSurveysArgs: ["data", "where"],
-    UpsertOneSurveysArgs: ["where", "create", "update"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     AggregateTagsArgs: ["where", "orderBy", "cursor", "take", "skip"],
     CreateManyTagsArgs: ["data", "skipDuplicates"],
     CreateOneTagsArgs: ["data"],
@@ -2536,21 +2460,6 @@ const argsInfo = {
     UpdateManyTicketingArgs: ["data", "where"],
     UpdateOneTicketingArgs: ["data", "where"],
     UpsertOneTicketingArgs: ["where", "create", "update"],
-<<<<<<< HEAD
-    AggregateTrainingsArgs: ["where", "orderBy", "cursor", "take", "skip"],
-    CreateManyTrainingsArgs: ["data", "skipDuplicates"],
-    CreateOneTrainingsArgs: ["data"],
-    DeleteManyTrainingsArgs: ["where"],
-    DeleteOneTrainingsArgs: ["where"],
-    FindFirstTrainingsArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
-    FindManyTrainingsArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
-    FindUniqueTrainingsArgs: ["where"],
-    GroupByTrainingsArgs: ["where", "orderBy", "by", "having", "take", "skip"],
-    UpdateManyTrainingsArgs: ["data", "where"],
-    UpdateOneTrainingsArgs: ["data", "where"],
-    UpsertOneTrainingsArgs: ["where", "create", "update"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     AggregateTransactionsArgs: ["where", "orderBy", "cursor", "take", "skip"],
     CreateManyTransactionsArgs: ["data", "skipDuplicates"],
     CreateOneTransactionsArgs: ["data"],
@@ -2754,9 +2663,6 @@ const argsInfo = {
     GroupByVendorsArgs: ["where", "orderBy", "by", "having", "take", "skip"],
     UpdateManyVendorsArgs: ["data", "where"],
     UpdateOneVendorsArgs: ["data", "where"],
-<<<<<<< HEAD
-    UpsertOneVendorsArgs: ["where", "create", "update"]
-=======
     UpsertOneVendorsArgs: ["where", "create", "update"],
     AggregateLogInArgs: ["where", "orderBy", "cursor", "take", "skip"],
     CreateManyLogInArgs: ["data", "skipDuplicates"],
@@ -2770,7 +2676,6 @@ const argsInfo = {
     UpdateManyLogInArgs: ["data", "where"],
     UpdateOneLogInArgs: ["data", "where"],
     UpsertOneLogInArgs: ["where", "create", "update"]
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 };
 function applyResolversEnhanceMap(resolversEnhanceMap) {
     for (const resolversEnhanceMapKey of Object.keys(resolversEnhanceMap)) {
@@ -2896,10 +2801,6 @@ const modelsInfo = {
     States: ["id", "name", "description", "country", "image", "trainings"],
     Statistics: ["id", "name", "excerpt", "description", "image", "published", "special_offers", "reports", "rewards", "coupons", "expiration", "categories", "articles", "products", "customers", "users"],
     Stocks: ["id", "name", "enabled", "description", "website", "sources"],
-<<<<<<< HEAD
-    Surveys: ["id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     Tags: ["id", "name", "excerpt", "categories", "articles", "products", "customers", "users"],
     Targets: ["id", "created_at", "Prefix", "first_name", "last_name", "department", "account_name", "address", "postalcode", "city", "state", "country", "email", "description", "fax", "website", "mobile", "job_title", "alt_address", "alt_postalcode", "alt_city", "alt_state", "alt_country", "office_phone", "customer_name", "email_opt_out", "donotcall"],
     Tax_category: ["id", "created_at", "name", "default"],
@@ -2907,10 +2808,6 @@ const modelsInfo = {
     Tax_rule: ["id", "name", "tax_rate", "prod_id", "products"],
     Themes: ["id", "title", "parent_theme", "theme_path", "action", "website_id", "websites"],
     Ticketing: ["id", "created_at", "name", "location", "date", "severity", "team", "requester", "requester_email", "content", "department", "media", "projects", "ticket_type", "comment", "products", "priority", "status", "resolution", "assigned_to", "date_modified", "account_name", "level", "projects_projectsToticketing"],
-<<<<<<< HEAD
-    Trainings: ["id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     Transactions: ["id", "order_id", "transaction_id", "parent_transaction_id", "created", "payment_method", "closed", "customer_payment", "orders"],
     Upload_file: ["id", "name", "alternativeText", "caption", "width", "height", "formats", "hash", "ext", "mime", "size", "url", "previewUrl", "provider", "provider_metadata", "created_by", "updated_by", "created_at", "updated_at"],
     Users: ["id", "username", "first_name", "last_name", "email", "password", "interface_locale", "value", "permissions", "created_at", "emails", "mediamanager", "messages", "projects", "workspaces"],
@@ -2927,12 +2824,8 @@ const modelsInfo = {
     Settings: ["id", "created_at", "store_name", "store_phone", "store_hours", "country", "region", "zipcode", "city", "address", "address_two", "vat_number", "allow_state", "state_required_for", "allow_countries", "default_country", "optional_zip", "european_union_countries", "top_destinations", "base_currency", "default_currency", "allowed_currency", "siteName", "siteWebsite", "sentryDsn", "awsS3", "databaseUrl", "isPublic", "type", "googleAnalytics", "searchSetting", "mailServer", "youtubeVideos", "siteTagline", "googleDrive", "disqusKey"],
     Attributes: ["id", "default_label", "attribute_code", "filter_options", "use_search", "layered_navigation", "search_results_layered_navigation", "position", "promo_rule_conditions", "allow_html_tags_storefront", "visible_catalog_pages_storefront", "used_product_listing", "used_sorting_product_listing", "prod_id", "attribute_class", "attribute_value", "column_options", "faceted_navigation", "isPublic", "meta_description", "meta_name", "meta_url", "product_attribute_set", "products"],
     Newsletters: ["id", "email", "customer_first_name", "customer_last_name", "store", "status", "websites", "created_at", "cust_id", "customers"],
-<<<<<<< HEAD
-    Vendors: ["id", "name", "description", "image", "website", "products", "articles", "customers", "comments", "coupons", "categories", "polls", "quotes", "reviews", "gift_certificates", "rating", "tags", "users", "invoices", "reports", "reward_points", "special_discounts", "statistics", "stocks", "country", "physical_store", "type", "workspaces"]
-=======
     Vendors: ["id", "name", "description", "image", "website", "products", "articles", "customers", "comments", "coupons", "categories", "polls", "quotes", "reviews", "gift_certificates", "rating", "tags", "users", "invoices", "reports", "reward_points", "special_discounts", "statistics", "stocks", "country", "physical_store", "type", "workspaces"],
     LogIn: ["id", "created_at", "email", "password", "token", "expiresIn", "users", "username"]
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 };
 function applyModelsEnhanceMap(modelsEnhanceMap) {
     for (const modelsEnhanceMapKey of Object.keys(modelsEnhanceMap)) {
@@ -3085,11 +2978,6 @@ const outputsInfo = {
     StatisticsGroupBy: ["id", "name", "excerpt", "description", "image", "published", "special_offers", "reports", "rewards", "coupons", "expiration", "categories", "articles", "products", "customers", "users", "_count", "_avg", "_sum", "_min", "_max"],
     AggregateStocks: ["_count", "_avg", "_sum", "_min", "_max"],
     StocksGroupBy: ["id", "name", "enabled", "description", "website", "sources", "_count", "_avg", "_sum", "_min", "_max"],
-<<<<<<< HEAD
-    AggregateSurveys: ["_count", "_avg", "_sum", "_min", "_max"],
-    SurveysGroupBy: ["id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text", "_count", "_avg", "_sum", "_min", "_max"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     AggregateTags: ["_count", "_avg", "_sum", "_min", "_max"],
     TagsGroupBy: ["id", "name", "excerpt", "categories", "articles", "products", "customers", "users", "_count", "_avg", "_sum", "_min", "_max"],
     AggregateTargets: ["_count", "_avg", "_sum", "_min", "_max"],
@@ -3104,11 +2992,6 @@ const outputsInfo = {
     ThemesGroupBy: ["id", "title", "parent_theme", "theme_path", "action", "website_id", "websites", "_count", "_avg", "_sum", "_min", "_max"],
     AggregateTicketing: ["_count", "_avg", "_sum", "_min", "_max"],
     TicketingGroupBy: ["id", "created_at", "name", "location", "date", "severity", "team", "requester", "requester_email", "content", "department", "media", "projects", "ticket_type", "comment", "products", "priority", "status", "resolution", "assigned_to", "date_modified", "account_name", "level", "projects_projectsToticketing", "_count", "_avg", "_sum", "_min", "_max"],
-<<<<<<< HEAD
-    AggregateTrainings: ["_count", "_avg", "_sum", "_min", "_max"],
-    TrainingsGroupBy: ["id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type", "_count", "_avg", "_sum", "_min", "_max"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     AggregateTransactions: ["_count", "_avg", "_sum", "_min", "_max"],
     TransactionsGroupBy: ["id", "order_id", "transaction_id", "parent_transaction_id", "created", "payment_method", "closed", "customer_payment", "orders", "_count", "_avg", "_sum", "_min", "_max"],
     AggregateUpload_file: ["_count", "_avg", "_sum", "_min", "_max"],
@@ -3143,11 +3026,8 @@ const outputsInfo = {
     NewslettersGroupBy: ["id", "email", "customer_first_name", "customer_last_name", "store", "status", "websites", "created_at", "cust_id", "customers", "_count", "_avg", "_sum", "_min", "_max"],
     AggregateVendors: ["_count", "_avg", "_sum", "_min", "_max"],
     VendorsGroupBy: ["id", "name", "description", "image", "website", "products", "articles", "customers", "comments", "coupons", "categories", "polls", "quotes", "reviews", "gift_certificates", "rating", "tags", "users", "invoices", "reports", "reward_points", "special_discounts", "statistics", "stocks", "country", "physical_store", "type", "workspaces", "_count", "_avg", "_sum", "_min", "_max"],
-<<<<<<< HEAD
-=======
     AggregateLogIn: ["_count", "_avg", "_sum", "_min", "_max"],
     LogInGroupBy: ["id", "created_at", "email", "password", "token", "expiresIn", "users", "username", "_count", "_avg", "_sum", "_min", "_max"],
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     AffectedRowsOutput: ["count"],
     AccountsCountAggregate: ["id", "created_at", "name", "website", "office_phone", "fax", "email", "address", "postalcode", "city", "state", "country", "assigned_to", "alt_address", "alt_postalcode", "alt_city", "alt_state", "alt_country", "type", "industry", "employees", "annual_revenue", "member_of", "campaign", "_all"],
     AccountsAvgAggregate: ["id"],
@@ -3499,14 +3379,6 @@ const outputsInfo = {
     StocksSumAggregate: ["id"],
     StocksMinAggregate: ["id", "name", "enabled", "description", "website", "sources"],
     StocksMaxAggregate: ["id", "name", "enabled", "description", "website", "sources"],
-<<<<<<< HEAD
-    SurveysCountAggregate: ["id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text", "_all"],
-    SurveysAvgAggregate: ["id"],
-    SurveysSumAggregate: ["id"],
-    SurveysMinAggregate: ["id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text"],
-    SurveysMaxAggregate: ["id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     TagsCountAggregate: ["id", "name", "excerpt", "categories", "articles", "products", "customers", "users", "_all"],
     TagsAvgAggregate: ["id"],
     TagsSumAggregate: ["id"],
@@ -3542,14 +3414,6 @@ const outputsInfo = {
     TicketingSumAggregate: ["id"],
     TicketingMinAggregate: ["id", "created_at", "name", "location", "date", "severity", "team", "requester", "requester_email", "content", "department", "media", "projects", "ticket_type", "comment", "products", "priority", "status", "resolution", "assigned_to", "date_modified", "account_name", "level", "projects_projectsToticketing"],
     TicketingMaxAggregate: ["id", "created_at", "name", "location", "date", "severity", "team", "requester", "requester_email", "content", "department", "media", "projects", "ticket_type", "comment", "products", "priority", "status", "resolution", "assigned_to", "date_modified", "account_name", "level", "projects_projectsToticketing"],
-<<<<<<< HEAD
-    TrainingsCountAggregate: ["id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type", "_all"],
-    TrainingsAvgAggregate: ["id", "comment", "country", "state", "products", "checklists"],
-    TrainingsSumAggregate: ["id", "comment", "country", "state", "products", "checklists"],
-    TrainingsMinAggregate: ["id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type"],
-    TrainingsMaxAggregate: ["id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     TransactionsCountAggregate: ["id", "order_id", "transaction_id", "parent_transaction_id", "created", "payment_method", "closed", "customer_payment", "orders", "_all"],
     TransactionsAvgAggregate: ["id", "order_id", "transaction_id", "parent_transaction_id", "payment_method"],
     TransactionsSumAggregate: ["id", "order_id", "transaction_id", "parent_transaction_id", "payment_method"],
@@ -3634,16 +3498,12 @@ const outputsInfo = {
     VendorsAvgAggregate: ["id"],
     VendorsSumAggregate: ["id"],
     VendorsMinAggregate: ["id", "name", "description", "image", "website", "products", "articles", "customers", "comments", "coupons", "categories", "polls", "quotes", "reviews", "gift_certificates", "rating", "tags", "users", "invoices", "reports", "reward_points", "special_discounts", "statistics", "stocks", "country", "physical_store", "type", "workspaces"],
-<<<<<<< HEAD
-    VendorsMaxAggregate: ["id", "name", "description", "image", "website", "products", "articles", "customers", "comments", "coupons", "categories", "polls", "quotes", "reviews", "gift_certificates", "rating", "tags", "users", "invoices", "reports", "reward_points", "special_discounts", "statistics", "stocks", "country", "physical_store", "type", "workspaces"]
-=======
     VendorsMaxAggregate: ["id", "name", "description", "image", "website", "products", "articles", "customers", "comments", "coupons", "categories", "polls", "quotes", "reviews", "gift_certificates", "rating", "tags", "users", "invoices", "reports", "reward_points", "special_discounts", "statistics", "stocks", "country", "physical_store", "type", "workspaces"],
     LogInCountAggregate: ["id", "created_at", "email", "password", "token", "expiresIn", "users", "username", "_all"],
     LogInAvgAggregate: ["id"],
     LogInSumAggregate: ["id"],
     LogInMinAggregate: ["id", "created_at", "email", "password", "token", "expiresIn", "users", "username"],
     LogInMaxAggregate: ["id", "created_at", "email", "password", "token", "expiresIn", "users", "username"]
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 };
 function applyOutputTypesEnhanceMap(outputTypesEnhanceMap) {
     for (const outputTypeEnhanceMapKey of Object.keys(outputTypesEnhanceMap)) {
@@ -4006,14 +3866,6 @@ const inputsInfo = {
     StocksWhereUniqueInput: ["id"],
     StocksOrderByWithAggregationInput: ["id", "name", "enabled", "description", "website", "sources", "_count", "_avg", "_max", "_min", "_sum"],
     StocksScalarWhereWithAggregatesInput: ["AND", "OR", "NOT", "id", "name", "enabled", "description", "website", "sources"],
-<<<<<<< HEAD
-    SurveysWhereInput: ["AND", "OR", "NOT", "id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text"],
-    SurveysOrderByWithRelationAndSearchRelevanceInput: ["id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text", "_relevance"],
-    SurveysWhereUniqueInput: ["id"],
-    SurveysOrderByWithAggregationInput: ["id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text", "_count", "_avg", "_max", "_min", "_sum"],
-    SurveysScalarWhereWithAggregatesInput: ["AND", "OR", "NOT", "id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     TagsWhereInput: ["AND", "OR", "NOT", "id", "name", "excerpt", "categories", "articles", "products", "customers", "users"],
     TagsOrderByWithRelationAndSearchRelevanceInput: ["id", "name", "excerpt", "categories", "articles", "products", "customers", "users", "_relevance"],
     TagsWhereUniqueInput: ["id"],
@@ -4049,14 +3901,6 @@ const inputsInfo = {
     TicketingWhereUniqueInput: ["id"],
     TicketingOrderByWithAggregationInput: ["id", "created_at", "name", "location", "date", "severity", "team", "requester", "requester_email", "content", "department", "media", "projects", "ticket_type", "comment", "products", "priority", "status", "resolution", "assigned_to", "date_modified", "account_name", "level", "projects_projectsToticketing", "_count", "_avg", "_max", "_min", "_sum"],
     TicketingScalarWhereWithAggregatesInput: ["AND", "OR", "NOT", "id", "created_at", "name", "location", "date", "severity", "team", "requester", "requester_email", "content", "department", "media", "projects", "ticket_type", "comment", "products", "priority", "status", "resolution", "assigned_to", "date_modified", "account_name", "level", "projects_projectsToticketing"],
-<<<<<<< HEAD
-    TrainingsWhereInput: ["AND", "OR", "NOT", "id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type"],
-    TrainingsOrderByWithRelationAndSearchRelevanceInput: ["id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type", "_relevance"],
-    TrainingsWhereUniqueInput: ["id"],
-    TrainingsOrderByWithAggregationInput: ["id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type", "_count", "_avg", "_max", "_min", "_sum"],
-    TrainingsScalarWhereWithAggregatesInput: ["AND", "OR", "NOT", "id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     TransactionsWhereInput: ["AND", "OR", "NOT", "id", "order_id", "transaction_id", "parent_transaction_id", "created", "payment_method", "closed", "customer_payment", "orders"],
     TransactionsOrderByWithRelationAndSearchRelevanceInput: ["id", "order_id", "transaction_id", "parent_transaction_id", "created", "payment_method", "closed", "customer_payment", "orders", "_relevance"],
     TransactionsWhereUniqueInput: ["id"],
@@ -4142,14 +3986,11 @@ const inputsInfo = {
     VendorsWhereUniqueInput: ["id"],
     VendorsOrderByWithAggregationInput: ["id", "name", "description", "image", "website", "products", "articles", "customers", "comments", "coupons", "categories", "polls", "quotes", "reviews", "gift_certificates", "rating", "tags", "users", "invoices", "reports", "reward_points", "special_discounts", "statistics", "stocks", "country", "physical_store", "type", "workspaces", "_count", "_avg", "_max", "_min", "_sum"],
     VendorsScalarWhereWithAggregatesInput: ["AND", "OR", "NOT", "id", "name", "description", "image", "website", "products", "articles", "customers", "comments", "coupons", "categories", "polls", "quotes", "reviews", "gift_certificates", "rating", "tags", "users", "invoices", "reports", "reward_points", "special_discounts", "statistics", "stocks", "country", "physical_store", "type", "workspaces"],
-<<<<<<< HEAD
-=======
     LogInWhereInput: ["AND", "OR", "NOT", "id", "created_at", "email", "password", "token", "expiresIn", "users", "username"],
     LogInOrderByWithRelationAndSearchRelevanceInput: ["id", "created_at", "email", "password", "token", "expiresIn", "users", "username", "_relevance"],
     LogInWhereUniqueInput: ["id"],
     LogInOrderByWithAggregationInput: ["id", "created_at", "email", "password", "token", "expiresIn", "users", "username", "_count", "_avg", "_max", "_min", "_sum"],
     LogInScalarWhereWithAggregatesInput: ["AND", "OR", "NOT", "id", "created_at", "email", "password", "token", "expiresIn", "users", "username"],
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     AccountsCreateInput: ["id", "created_at", "name", "website", "office_phone", "fax", "email", "address", "postalcode", "city", "state", "country", "assigned_to", "alt_address", "alt_postalcode", "alt_city", "alt_state", "alt_country", "type", "industry", "employees", "annual_revenue", "member_of", "campaign"],
     AccountsUpdateInput: ["id", "created_at", "name", "website", "office_phone", "fax", "email", "address", "postalcode", "city", "state", "country", "assigned_to", "alt_address", "alt_postalcode", "alt_city", "alt_state", "alt_country", "type", "industry", "employees", "annual_revenue", "member_of", "campaign"],
     AccountsCreateManyInput: ["id", "created_at", "name", "website", "office_phone", "fax", "email", "address", "postalcode", "city", "state", "country", "assigned_to", "alt_address", "alt_postalcode", "alt_city", "alt_state", "alt_country", "type", "industry", "employees", "annual_revenue", "member_of", "campaign"],
@@ -4430,13 +4271,6 @@ const inputsInfo = {
     StocksUpdateInput: ["name", "enabled", "description", "website", "sources"],
     StocksCreateManyInput: ["id", "name", "enabled", "description", "website", "sources"],
     StocksUpdateManyMutationInput: ["name", "enabled", "description", "website", "sources"],
-<<<<<<< HEAD
-    SurveysCreateInput: ["id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text"],
-    SurveysUpdateInput: ["id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text"],
-    SurveysCreateManyInput: ["id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text"],
-    SurveysUpdateManyMutationInput: ["id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     TagsCreateInput: ["name", "excerpt", "categories", "articles", "products", "customers", "users"],
     TagsUpdateInput: ["name", "excerpt", "categories", "articles", "products", "customers", "users"],
     TagsCreateManyInput: ["id", "name", "excerpt", "categories", "articles", "products", "customers", "users"],
@@ -4465,13 +4299,6 @@ const inputsInfo = {
     TicketingUpdateInput: ["id", "created_at", "name", "location", "date", "severity", "team", "requester", "requester_email", "content", "department", "media", "projects", "ticket_type", "comment", "products", "priority", "status", "resolution", "assigned_to", "date_modified", "account_name", "level", "projects_projectsToticketing"],
     TicketingCreateManyInput: ["id", "created_at", "name", "location", "date", "severity", "team", "requester", "requester_email", "content", "department", "media", "projects", "ticket_type", "comment", "products", "priority", "status", "resolution", "assigned_to", "date_modified", "account_name", "level", "projects_projectsToticketing"],
     TicketingUpdateManyMutationInput: ["id", "created_at", "name", "location", "date", "severity", "team", "requester", "requester_email", "content", "department", "media", "projects", "ticket_type", "comment", "products", "priority", "status", "resolution", "assigned_to", "date_modified", "account_name", "level", "projects_projectsToticketing"],
-<<<<<<< HEAD
-    TrainingsCreateInput: ["id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type"],
-    TrainingsUpdateInput: ["id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type"],
-    TrainingsCreateManyInput: ["id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type"],
-    TrainingsUpdateManyMutationInput: ["id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     TransactionsCreateInput: ["order_id", "transaction_id", "parent_transaction_id", "created", "payment_method", "closed", "customer_payment", "orders"],
     TransactionsUpdateInput: ["order_id", "transaction_id", "parent_transaction_id", "created", "payment_method", "closed", "customer_payment", "orders"],
     TransactionsCreateManyInput: ["id", "order_id", "transaction_id", "parent_transaction_id", "created", "payment_method", "closed", "customer_payment", "orders"],
@@ -4540,13 +4367,10 @@ const inputsInfo = {
     VendorsUpdateInput: ["name", "description", "image", "website", "products", "articles", "customers", "comments", "coupons", "categories", "polls", "quotes", "reviews", "gift_certificates", "rating", "tags", "users", "invoices", "reports", "reward_points", "special_discounts", "statistics", "stocks", "country", "physical_store", "type", "workspaces"],
     VendorsCreateManyInput: ["id", "name", "description", "image", "website", "products", "articles", "customers", "comments", "coupons", "categories", "polls", "quotes", "reviews", "gift_certificates", "rating", "tags", "users", "invoices", "reports", "reward_points", "special_discounts", "statistics", "stocks", "country", "physical_store", "type", "workspaces"],
     VendorsUpdateManyMutationInput: ["name", "description", "image", "website", "products", "articles", "customers", "comments", "coupons", "categories", "polls", "quotes", "reviews", "gift_certificates", "rating", "tags", "users", "invoices", "reports", "reward_points", "special_discounts", "statistics", "stocks", "country", "physical_store", "type", "workspaces"],
-<<<<<<< HEAD
-=======
     LogInCreateInput: ["id", "created_at", "email", "password", "token", "expiresIn", "users", "username"],
     LogInUpdateInput: ["id", "created_at", "email", "password", "token", "expiresIn", "users", "username"],
     LogInCreateManyInput: ["id", "created_at", "email", "password", "token", "expiresIn", "users", "username"],
     LogInUpdateManyMutationInput: ["id", "created_at", "email", "password", "token", "expiresIn", "users", "username"],
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     BigIntFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "not"],
     DateTimeNullableFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "not"],
     StringNullableFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "contains", "startsWith", "endsWith", "search", "mode", "not"],
@@ -4988,15 +4812,6 @@ const inputsInfo = {
     StocksMaxOrderByAggregateInput: ["id", "name", "enabled", "description", "website", "sources"],
     StocksMinOrderByAggregateInput: ["id", "name", "enabled", "description", "website", "sources"],
     StocksSumOrderByAggregateInput: ["id"],
-<<<<<<< HEAD
-    SurveysOrderByRelevanceInput: ["fields", "sort", "search"],
-    SurveysCountOrderByAggregateInput: ["id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text"],
-    SurveysAvgOrderByAggregateInput: ["id"],
-    SurveysMaxOrderByAggregateInput: ["id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text"],
-    SurveysMinOrderByAggregateInput: ["id", "created_at", "name", "assigned_to", "status", "description", "question", "answer", "submit_text", "satisfied_text", "neither_text", "dissatisfied_text"],
-    SurveysSumOrderByAggregateInput: ["id"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     TagsOrderByRelevanceInput: ["fields", "sort", "search"],
     TagsCountOrderByAggregateInput: ["id", "name", "excerpt", "categories", "articles", "products", "customers", "users"],
     TagsAvgOrderByAggregateInput: ["id"],
@@ -5039,15 +4854,6 @@ const inputsInfo = {
     TicketingMaxOrderByAggregateInput: ["id", "created_at", "name", "location", "date", "severity", "team", "requester", "requester_email", "content", "department", "media", "projects", "ticket_type", "comment", "products", "priority", "status", "resolution", "assigned_to", "date_modified", "account_name", "level", "projects_projectsToticketing"],
     TicketingMinOrderByAggregateInput: ["id", "created_at", "name", "location", "date", "severity", "team", "requester", "requester_email", "content", "department", "media", "projects", "ticket_type", "comment", "products", "priority", "status", "resolution", "assigned_to", "date_modified", "account_name", "level", "projects_projectsToticketing"],
     TicketingSumOrderByAggregateInput: ["id"],
-<<<<<<< HEAD
-    TrainingsOrderByRelevanceInput: ["fields", "sort", "search"],
-    TrainingsCountOrderByAggregateInput: ["id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type"],
-    TrainingsAvgOrderByAggregateInput: ["id", "comment", "country", "state", "products", "checklists"],
-    TrainingsMaxOrderByAggregateInput: ["id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type"],
-    TrainingsMinOrderByAggregateInput: ["id", "created_at", "name", "subject", "content", "media", "link", "steps", "updated", "analytics", "competency", "course", "grade", "school", "comment", "address", "country", "state", "postal", "teacher", "student", "announcement", "resource", "badges", "isPublic", "isCompleted", "speakers", "fieldTrips", "assignments", "assignmentsDueDate", "origanalityReport", "products", "faqs", "languages", "checklists", "city", "meetups", "lab", "digiboards", "countries", "states", "type"],
-    TrainingsSumOrderByAggregateInput: ["id", "comment", "country", "state", "products", "checklists"],
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     TransactionsOrderByRelevanceInput: ["fields", "sort", "search"],
     TransactionsCountOrderByAggregateInput: ["id", "order_id", "transaction_id", "parent_transaction_id", "created", "payment_method", "closed", "customer_payment", "orders"],
     TransactionsAvgOrderByAggregateInput: ["id", "order_id", "transaction_id", "parent_transaction_id", "payment_method"],
@@ -5154,15 +4960,12 @@ const inputsInfo = {
     VendorsMaxOrderByAggregateInput: ["id", "name", "description", "image", "website", "products", "articles", "customers", "comments", "coupons", "categories", "polls", "quotes", "reviews", "gift_certificates", "rating", "tags", "users", "invoices", "reports", "reward_points", "special_discounts", "statistics", "stocks", "country", "physical_store", "type", "workspaces"],
     VendorsMinOrderByAggregateInput: ["id", "name", "description", "image", "website", "products", "articles", "customers", "comments", "coupons", "categories", "polls", "quotes", "reviews", "gift_certificates", "rating", "tags", "users", "invoices", "reports", "reward_points", "special_discounts", "statistics", "stocks", "country", "physical_store", "type", "workspaces"],
     VendorsSumOrderByAggregateInput: ["id"],
-<<<<<<< HEAD
-=======
     LogInOrderByRelevanceInput: ["fields", "sort", "search"],
     LogInCountOrderByAggregateInput: ["id", "created_at", "email", "password", "token", "expiresIn", "users", "username"],
     LogInAvgOrderByAggregateInput: ["id"],
     LogInMaxOrderByAggregateInput: ["id", "created_at", "email", "password", "token", "expiresIn", "users", "username"],
     LogInMinOrderByAggregateInput: ["id", "created_at", "email", "password", "token", "expiresIn", "users", "username"],
     LogInSumOrderByAggregateInput: ["id"],
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     BigIntFieldUpdateOperationsInput: ["set", "increment", "decrement", "multiply", "divide"],
     NullableDateTimeFieldUpdateOperationsInput: ["set"],
     NullableStringFieldUpdateOperationsInput: ["set"],

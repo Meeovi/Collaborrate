@@ -6069,84 +6069,6 @@
         }
       }
     },
-<<<<<<< HEAD
-    "surveys": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "integer"
-        },
-        "created_at": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time"
-        },
-        "name": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "assigned_to": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "status": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "description": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "question": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "answer": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "submit_text": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "satisfied_text": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "neither_text": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "dissatisfied_text": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
-      }
-    },
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     "tags": {
       "type": "object",
       "properties": {
@@ -6654,265 +6576,6 @@
         }
       }
     },
-<<<<<<< HEAD
-    "trainings": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "integer"
-        },
-        "created_at": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time"
-        },
-        "name": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "subject": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "content": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "media": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "link": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "steps": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "updated": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time"
-        },
-        "analytics": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "competency": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "course": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "grade": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "school": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "comment": {
-          "type": [
-            "integer",
-            "null"
-          ]
-        },
-        "address": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "country": {
-          "type": [
-            "integer",
-            "null"
-          ]
-        },
-        "state": {
-          "type": [
-            "integer",
-            "null"
-          ]
-        },
-        "postal": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "teacher": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "student": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "announcement": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "resource": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "badges": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "isPublic": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "isCompleted": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "speakers": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "fieldTrips": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "assignments": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "assignmentsDueDate": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "origanalityReport": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "products": {
-          "type": [
-            "integer",
-            "null"
-          ]
-        },
-        "faqs": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "languages": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "checklists": {
-          "type": [
-            "integer",
-            "null"
-          ]
-        },
-        "city": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "meetups": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "lab": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "digiboards": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "countries": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "states": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "type": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
-      }
-    },
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     "transactions": {
       "type": "object",
       "properties": {
@@ -8384,8 +8047,6 @@
           ]
         }
       }
-<<<<<<< HEAD
-=======
     },
     "logIn": {
       "type": "object",
@@ -8437,7 +8098,6 @@
           ]
         }
       }
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     }
   },
   "type": "object",
@@ -8652,12 +8312,6 @@
     "stocks": {
       "$ref": "#/definitions/stocks"
     },
-<<<<<<< HEAD
-    "surveys": {
-      "$ref": "#/definitions/surveys"
-    },
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     "tags": {
       "$ref": "#/definitions/tags"
     },
@@ -8679,12 +8333,6 @@
     "ticketing": {
       "$ref": "#/definitions/ticketing"
     },
-<<<<<<< HEAD
-    "trainings": {
-      "$ref": "#/definitions/trainings"
-    },
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     "transactions": {
       "$ref": "#/definitions/transactions"
     },
@@ -8735,12 +8383,9 @@
     },
     "vendors": {
       "$ref": "#/definitions/vendors"
-<<<<<<< HEAD
-=======
     },
     "logIn": {
       "$ref": "#/definitions/logIn"
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     }
   }
 }

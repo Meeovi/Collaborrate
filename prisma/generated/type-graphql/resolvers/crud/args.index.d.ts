@@ -40,10 +40,7 @@ export * from "./Internalization/args";
 export * from "./Invitations/args";
 export * from "./Invoices/args";
 export * from "./Leads/args";
-<<<<<<< HEAD
-=======
 export * from "./LogIn/args";
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export * from "./Manufacturer/args";
 export * from "./Mediamanager/args";
 export * from "./Meeting/args";
@@ -77,10 +74,6 @@ export * from "./Special_discounts/args";
 export * from "./States/args";
 export * from "./Statistics/args";
 export * from "./Stocks/args";
-<<<<<<< HEAD
-export * from "./Surveys/args";
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export * from "./Tags/args";
 export * from "./Targets/args";
 export * from "./Tax_category/args";
@@ -89,10 +82,6 @@ export * from "./Tax_rule/args";
 export * from "./Templates/args";
 export * from "./Themes/args";
 export * from "./Ticketing/args";
-<<<<<<< HEAD
-export * from "./Trainings/args";
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 export * from "./Transactions/args";
 export * from "./Upload_file/args";
 export * from "./Users/args";

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { PeriqlesFieldInfo, FieldsArrayGenerator, EnumValue, PeriqlesFieldOption, GenerateSpecifiedElement, GenerateDefaultElement } from '../types';
 
 export const introspect = (mutationName, setFields, args) => {
   const inputTypeName: string = mutationName + 'Input';
