@@ -5,9 +5,6 @@ export default {
   server: {
     port: 8000
   },
-  env: {
-    API_URL: process.env.API_URL || 'http://localhost:8000'
-  },
   head: {
     title: 'AlternateCMS',
     meta: [
@@ -30,7 +27,6 @@ export default {
       { src: '/DataTables/datatables.js', mode: 'client' },
       { src: '/scripts/main.js', mode: 'client' },
       { src: '/scripts/core/uploads/index.js' },
-      { src: '/scripts/core/authentication/app.js' },
       { src: '/scripts/media-library.js', mode: 'client' },
     ]
   },
@@ -41,8 +37,6 @@ export default {
   plugins: [
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
     { src: '~/plugins/axios.js' },
-    { src: '@/plugins/plugin-auth-client', ssr: false },
-    { src: '~/plugins/feathers-vuex.js' }
   ],
 
   components: true,
@@ -144,11 +138,11 @@ export default {
     /* module options */
   },
 
-  router: {
+ /* router: {
     middleware: [
       'feathers'
     ]
-  },
+  }, */
 
   i18n: {
     detectBrowserLanguage: false,
@@ -203,6 +197,6 @@ export default {
 
   
   build: {
-    transpile: ['vue-instantsearch', 'instantsearch.js/es', 'feathers-vuex'],
+    transpile: ['vue-instantsearch', 'instantsearch.js/es'],
   },
 }
