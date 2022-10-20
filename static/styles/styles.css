@@ -151,11 +151,7 @@ nav .fa-user-circle {
   width: fit-content;
 }
 
-<<<<<<< HEAD
-/******************* Dashboard CSS *********/
-=======
 /******************* Home Dashboard CSS *********/
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 
 .dashboard {
   position: relative;
@@ -165,9 +161,6 @@ nav .fa-user-circle {
   margin-bottom: 15%;
 }
 
-<<<<<<< HEAD
-
-=======
 .welcomebanner {
   width:100%;
   height:300px;
@@ -185,7 +178,6 @@ nav .fa-user-circle {
   position:relative;
   top:30%;
 }
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 
 /**********************  Product Pages *****/
 
