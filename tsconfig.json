@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-      "jsx": "react",
+      "jsx": "preserve",
       "target": "es2018",
       "module": "commonjs",
       "lib": ["es2018", "esnext.asynciterable", "DOM"],
