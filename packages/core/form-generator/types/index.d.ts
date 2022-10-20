@@ -1,7 +1,5 @@
 // Type definitions for periqles v2.x
 
-import JSX from '@vue/babel-plugin-jsx'
-
 // Externally available types
 type PeriqlesForm = (props: PeriqlesFormProps) => JSX.Element;
 

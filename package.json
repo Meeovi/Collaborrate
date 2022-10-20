@@ -100,7 +100,6 @@
     "dotenv": "^16.0.1",
     "dotenv-cli": "^5.1.0",
     "express-session": "^1.17.3",
-    "feathers-hooks-common": "^6.1.5",
     "feathers-mailer": "^3.1.0",
     "feathers-vuex": "^3.16.0",
     "formidable": "^2.0.1",

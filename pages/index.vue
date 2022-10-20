@@ -2,19 +2,10 @@
 <template>
   <div>
     <div class="row">
-<<<<<<< HEAD
-      <div class="welcomebanner"
-        style="width:100%;height:300px;background-image:url(../assets/images/matrix.jpg);background-size: contain;">
-        <p style="z-index:99; width:100%;text-align:center;font-size:50px;color:white;position:relative;top:30%;">
-          Welcome to AlternateCMS</p>
-      </div>
-      <charts />
-=======
       <div class="welcomebanner">
         <p>Welcome to AlternateCMS</p>
       </div><br>
       <!--<charts />--> <br>
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
       <sales />
       <orders />
       <posts />
@@ -46,17 +37,10 @@
     <!--Pills content-->
     <div id="ex2-content" class="tab-content">
       <div id="ex2-pills-1" class="tab-pane fade show active" role="tabpanel" aria-labelledby="ex2-tab-1">
-<<<<<<< HEAD
-        <mostviewed />
-      </div>
-      <div id="ex2-pills-2" class="tab-pane fade" role="tabpanel" aria-labelledby="ex2-tab-2">
-        <bestsellers />
-=======
       <!--  <bestsellers /> -->
       </div>
       <div id="ex2-pills-2" class="tab-pane fade" role="tabpanel" aria-labelledby="ex2-tab-2">
       <mostviewed />
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
       </div>
       <div id="ex2-pills-3" class="tab-pane fade" role="tabpanel" aria-labelledby="ex2-tab-3">
         <Newcustomers />
@@ -84,15 +68,9 @@
   import { mapGetters } from 'vuex'
   
 export default {
-<<<<<<< HEAD
-  computed: {
-    ...mapGetters(['loggedInUser']),
-  },
-=======
  /* computed: {
     ...mapGetters(['loggedInUser']),
   }, */
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     components: {
       Newcustomers,
       Customerslimit,
@@ -101,14 +79,8 @@ export default {
       sales,
       orders,
       mostviewed,
-<<<<<<< HEAD
-      bestsellers,
-      charts,
-      // chat
-=======
       //bestsellers,
       charts,
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     },
 
     layout: 'dashboard',
