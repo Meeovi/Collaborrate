@@ -1,3 +1,5 @@
+## NOT READY FOR PRODUCTION ##
+
 # AlternateCMS
 
 A powerful, consistent, and flexible headless content management framework. Built using the Nuxtjs framework, AlternateCMS provides headless content management system capabilities for sites of all types. 

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-export const getters = {
-  isAuthenticated(state) {
-    return state.auth.loggedIn
-  },
-  loggedInUser(state) {
-    return state.auth.user
-  },
-}
-=======
 import { makeAuthPlugin, initAuth, hydrateApi, models } from '~/plugins/feathers'
 const auth = makeAuthPlugin({
   userService: 'users',
@@ -84,4 +74,3 @@ export const getters = {
 }
 
 export const plugins = [ ...servicePlugins, auth ]
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194

@@ -7,29 +7,6 @@
                                 <th>Product</th>
                                 <th>Price</th>
                                 <th>How Many Times Viewed</th>
-<<<<<<< HEAD
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-=======
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -43,15 +20,10 @@
                     </tbody>
                 </table>
             </div>
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
     </div>
 </template>
 
 <script>
-<<<<<<< HEAD
-export default {
-    
-=======
 import gql from 'graphql-tag';
 
 const findManyProducts = gql`{
@@ -68,7 +40,6 @@ export default {
       prefetch: true,
     },
   },
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 }
 </script>
 

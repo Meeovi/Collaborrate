@@ -4,7 +4,7 @@ export {};
 import {  buildSchema } from "type-graphql";
 import { createServer } from '@graphql-yoga/node';
 import * as path from "path";
-import { prisma, PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 import { useParserCache } from '@envelop/parser-cache';
 import { useValidationCache } from '@envelop/validation-cache';
 const { getUserId } = require('../server/config/utils');

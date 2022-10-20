@@ -871,8 +871,6 @@ type AggregateLeads {
   _sum: LeadsSumAggregate
 }
 
-<<<<<<< HEAD
-=======
 type AggregateLogIn {
   _avg: LogInAvgAggregate
   _count: LogInCountAggregate
@@ -881,7 +879,6 @@ type AggregateLogIn {
   _sum: LogInSumAggregate
 }
 
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 type AggregateManufacturer {
   _avg: ManufacturerAvgAggregate
   _count: ManufacturerCountAggregate
@@ -1146,17 +1143,6 @@ type AggregateStocks {
   _sum: StocksSumAggregate
 }
 
-<<<<<<< HEAD
-type AggregateSurveys {
-  _avg: SurveysAvgAggregate
-  _count: SurveysCountAggregate
-  _max: SurveysMaxAggregate
-  _min: SurveysMinAggregate
-  _sum: SurveysSumAggregate
-}
-
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 type AggregateTags {
   _avg: TagsAvgAggregate
   _count: TagsCountAggregate
@@ -1221,17 +1207,6 @@ type AggregateTicketing {
   _sum: TicketingSumAggregate
 }
 
-<<<<<<< HEAD
-type AggregateTrainings {
-  _avg: TrainingsAvgAggregate
-  _count: TrainingsCountAggregate
-  _max: TrainingsMaxAggregate
-  _min: TrainingsMinAggregate
-  _sum: TrainingsSumAggregate
-}
-
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 type AggregateTransactions {
   _avg: TransactionsAvgAggregate
   _count: TransactionsCountAggregate
@@ -15195,8 +15170,6 @@ input LeadsWhereUniqueInput {
   id: BigInt
 }
 
-<<<<<<< HEAD
-=======
 type LogIn {
   created_at: DateTime
   email: String
@@ -15437,7 +15410,6 @@ input LogInWhereUniqueInput {
   id: BigInt
 }
 
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 type Manufacturer {
   city: String
   code: String
@@ -17149,10 +17121,7 @@ type Mutation {
   createManyInvitations(data: [InvitationsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyInvoices(data: [InvoicesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyLeads(data: [LeadsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-<<<<<<< HEAD
-=======
   createManyLogIn(data: [LogInCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   createManyManufacturer(data: [ManufacturerCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyMediamanager(data: [MediamanagerCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyMeeting(data: [MeetingCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
@@ -17186,10 +17155,6 @@ type Mutation {
   createManyStates(data: [StatesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyStatistics(data: [StatisticsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyStocks(data: [StocksCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-<<<<<<< HEAD
-  createManySurveys(data: [SurveysCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   createManyTags(data: [TagsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyTargets(data: [TargetsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyTax_category(data: [Tax_categoryCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
@@ -17198,10 +17163,6 @@ type Mutation {
   createManyTemplates(data: [TemplatesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyThemes(data: [ThemesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyTicketing(data: [TicketingCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-<<<<<<< HEAD
-  createManyTrainings(data: [TrainingsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   createManyTransactions(data: [TransactionsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyUpload_file(data: [Upload_fileCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyUsers(data: [UsersCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
@@ -17255,10 +17216,7 @@ type Mutation {
   createOneInvitations(data: InvitationsCreateInput!): Invitations!
   createOneInvoices(data: InvoicesCreateInput!): Invoices!
   createOneLeads(data: LeadsCreateInput!): Leads!
-<<<<<<< HEAD
-=======
   createOneLogIn(data: LogInCreateInput!): LogIn!
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   createOneManufacturer(data: ManufacturerCreateInput!): Manufacturer!
   createOneMediamanager(data: MediamanagerCreateInput!): Mediamanager!
   createOneMeeting(data: MeetingCreateInput!): Meeting!
@@ -17292,10 +17250,6 @@ type Mutation {
   createOneStates(data: StatesCreateInput!): States!
   createOneStatistics(data: StatisticsCreateInput!): Statistics!
   createOneStocks(data: StocksCreateInput!): Stocks!
-<<<<<<< HEAD
-  createOneSurveys(data: SurveysCreateInput!): Surveys!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   createOneTags(data: TagsCreateInput!): Tags!
   createOneTargets(data: TargetsCreateInput!): Targets!
   createOneTax_category(data: Tax_categoryCreateInput!): Tax_category!
@@ -17304,10 +17258,6 @@ type Mutation {
   createOneTemplates(data: TemplatesCreateInput!): Templates!
   createOneThemes(data: ThemesCreateInput!): Themes!
   createOneTicketing(data: TicketingCreateInput!): Ticketing!
-<<<<<<< HEAD
-  createOneTrainings(data: TrainingsCreateInput!): Trainings!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   createOneTransactions(data: TransactionsCreateInput!): Transactions!
   createOneUpload_file(data: Upload_fileCreateInput!): Upload_file!
   createOneUsers(data: UsersCreateInput!): Users!
@@ -17361,10 +17311,7 @@ type Mutation {
   deleteManyInvitations(where: InvitationsWhereInput): AffectedRowsOutput!
   deleteManyInvoices(where: InvoicesWhereInput): AffectedRowsOutput!
   deleteManyLeads(where: LeadsWhereInput): AffectedRowsOutput!
-<<<<<<< HEAD
-=======
   deleteManyLogIn(where: LogInWhereInput): AffectedRowsOutput!
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   deleteManyManufacturer(where: ManufacturerWhereInput): AffectedRowsOutput!
   deleteManyMediamanager(where: MediamanagerWhereInput): AffectedRowsOutput!
   deleteManyMeeting(where: MeetingWhereInput): AffectedRowsOutput!
@@ -17398,10 +17345,6 @@ type Mutation {
   deleteManyStates(where: StatesWhereInput): AffectedRowsOutput!
   deleteManyStatistics(where: StatisticsWhereInput): AffectedRowsOutput!
   deleteManyStocks(where: StocksWhereInput): AffectedRowsOutput!
-<<<<<<< HEAD
-  deleteManySurveys(where: SurveysWhereInput): AffectedRowsOutput!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   deleteManyTags(where: TagsWhereInput): AffectedRowsOutput!
   deleteManyTargets(where: TargetsWhereInput): AffectedRowsOutput!
   deleteManyTax_category(where: Tax_categoryWhereInput): AffectedRowsOutput!
@@ -17410,10 +17353,6 @@ type Mutation {
   deleteManyTemplates(where: TemplatesWhereInput): AffectedRowsOutput!
   deleteManyThemes(where: ThemesWhereInput): AffectedRowsOutput!
   deleteManyTicketing(where: TicketingWhereInput): AffectedRowsOutput!
-<<<<<<< HEAD
-  deleteManyTrainings(where: TrainingsWhereInput): AffectedRowsOutput!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   deleteManyTransactions(where: TransactionsWhereInput): AffectedRowsOutput!
   deleteManyUpload_file(where: Upload_fileWhereInput): AffectedRowsOutput!
   deleteManyUsers(where: UsersWhereInput): AffectedRowsOutput!
@@ -17467,10 +17406,7 @@ type Mutation {
   deleteOneInvitations(where: InvitationsWhereUniqueInput!): Invitations
   deleteOneInvoices(where: InvoicesWhereUniqueInput!): Invoices
   deleteOneLeads(where: LeadsWhereUniqueInput!): Leads
-<<<<<<< HEAD
-=======
   deleteOneLogIn(where: LogInWhereUniqueInput!): LogIn
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   deleteOneManufacturer(where: ManufacturerWhereUniqueInput!): Manufacturer
   deleteOneMediamanager(where: MediamanagerWhereUniqueInput!): Mediamanager
   deleteOneMeeting(where: MeetingWhereUniqueInput!): Meeting
@@ -17504,10 +17440,6 @@ type Mutation {
   deleteOneStates(where: StatesWhereUniqueInput!): States
   deleteOneStatistics(where: StatisticsWhereUniqueInput!): Statistics
   deleteOneStocks(where: StocksWhereUniqueInput!): Stocks
-<<<<<<< HEAD
-  deleteOneSurveys(where: SurveysWhereUniqueInput!): Surveys
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   deleteOneTags(where: TagsWhereUniqueInput!): Tags
   deleteOneTargets(where: TargetsWhereUniqueInput!): Targets
   deleteOneTax_category(where: Tax_categoryWhereUniqueInput!): Tax_category
@@ -17516,10 +17448,6 @@ type Mutation {
   deleteOneTemplates(where: TemplatesWhereUniqueInput!): Templates
   deleteOneThemes(where: ThemesWhereUniqueInput!): Themes
   deleteOneTicketing(where: TicketingWhereUniqueInput!): Ticketing
-<<<<<<< HEAD
-  deleteOneTrainings(where: TrainingsWhereUniqueInput!): Trainings
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   deleteOneTransactions(where: TransactionsWhereUniqueInput!): Transactions
   deleteOneUpload_file(where: Upload_fileWhereUniqueInput!): Upload_file
   deleteOneUsers(where: UsersWhereUniqueInput!): Users
@@ -17573,10 +17501,7 @@ type Mutation {
   updateManyInvitations(data: InvitationsUpdateManyMutationInput!, where: InvitationsWhereInput): AffectedRowsOutput!
   updateManyInvoices(data: InvoicesUpdateManyMutationInput!, where: InvoicesWhereInput): AffectedRowsOutput!
   updateManyLeads(data: LeadsUpdateManyMutationInput!, where: LeadsWhereInput): AffectedRowsOutput!
-<<<<<<< HEAD
-=======
   updateManyLogIn(data: LogInUpdateManyMutationInput!, where: LogInWhereInput): AffectedRowsOutput!
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   updateManyManufacturer(data: ManufacturerUpdateManyMutationInput!, where: ManufacturerWhereInput): AffectedRowsOutput!
   updateManyMediamanager(data: MediamanagerUpdateManyMutationInput!, where: MediamanagerWhereInput): AffectedRowsOutput!
   updateManyMeeting(data: MeetingUpdateManyMutationInput!, where: MeetingWhereInput): AffectedRowsOutput!
@@ -17610,10 +17535,6 @@ type Mutation {
   updateManyStates(data: StatesUpdateManyMutationInput!, where: StatesWhereInput): AffectedRowsOutput!
   updateManyStatistics(data: StatisticsUpdateManyMutationInput!, where: StatisticsWhereInput): AffectedRowsOutput!
   updateManyStocks(data: StocksUpdateManyMutationInput!, where: StocksWhereInput): AffectedRowsOutput!
-<<<<<<< HEAD
-  updateManySurveys(data: SurveysUpdateManyMutationInput!, where: SurveysWhereInput): AffectedRowsOutput!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   updateManyTags(data: TagsUpdateManyMutationInput!, where: TagsWhereInput): AffectedRowsOutput!
   updateManyTargets(data: TargetsUpdateManyMutationInput!, where: TargetsWhereInput): AffectedRowsOutput!
   updateManyTax_category(data: Tax_categoryUpdateManyMutationInput!, where: Tax_categoryWhereInput): AffectedRowsOutput!
@@ -17622,10 +17543,6 @@ type Mutation {
   updateManyTemplates(data: TemplatesUpdateManyMutationInput!, where: TemplatesWhereInput): AffectedRowsOutput!
   updateManyThemes(data: ThemesUpdateManyMutationInput!, where: ThemesWhereInput): AffectedRowsOutput!
   updateManyTicketing(data: TicketingUpdateManyMutationInput!, where: TicketingWhereInput): AffectedRowsOutput!
-<<<<<<< HEAD
-  updateManyTrainings(data: TrainingsUpdateManyMutationInput!, where: TrainingsWhereInput): AffectedRowsOutput!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   updateManyTransactions(data: TransactionsUpdateManyMutationInput!, where: TransactionsWhereInput): AffectedRowsOutput!
   updateManyUpload_file(data: Upload_fileUpdateManyMutationInput!, where: Upload_fileWhereInput): AffectedRowsOutput!
   updateManyUsers(data: UsersUpdateManyMutationInput!, where: UsersWhereInput): AffectedRowsOutput!
@@ -17679,10 +17596,7 @@ type Mutation {
   updateOneInvitations(data: InvitationsUpdateInput!, where: InvitationsWhereUniqueInput!): Invitations
   updateOneInvoices(data: InvoicesUpdateInput!, where: InvoicesWhereUniqueInput!): Invoices
   updateOneLeads(data: LeadsUpdateInput!, where: LeadsWhereUniqueInput!): Leads
-<<<<<<< HEAD
-=======
   updateOneLogIn(data: LogInUpdateInput!, where: LogInWhereUniqueInput!): LogIn
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   updateOneManufacturer(data: ManufacturerUpdateInput!, where: ManufacturerWhereUniqueInput!): Manufacturer
   updateOneMediamanager(data: MediamanagerUpdateInput!, where: MediamanagerWhereUniqueInput!): Mediamanager
   updateOneMeeting(data: MeetingUpdateInput!, where: MeetingWhereUniqueInput!): Meeting
@@ -17716,10 +17630,6 @@ type Mutation {
   updateOneStates(data: StatesUpdateInput!, where: StatesWhereUniqueInput!): States
   updateOneStatistics(data: StatisticsUpdateInput!, where: StatisticsWhereUniqueInput!): Statistics
   updateOneStocks(data: StocksUpdateInput!, where: StocksWhereUniqueInput!): Stocks
-<<<<<<< HEAD
-  updateOneSurveys(data: SurveysUpdateInput!, where: SurveysWhereUniqueInput!): Surveys
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   updateOneTags(data: TagsUpdateInput!, where: TagsWhereUniqueInput!): Tags
   updateOneTargets(data: TargetsUpdateInput!, where: TargetsWhereUniqueInput!): Targets
   updateOneTax_category(data: Tax_categoryUpdateInput!, where: Tax_categoryWhereUniqueInput!): Tax_category
@@ -17728,10 +17638,6 @@ type Mutation {
   updateOneTemplates(data: TemplatesUpdateInput!, where: TemplatesWhereUniqueInput!): Templates
   updateOneThemes(data: ThemesUpdateInput!, where: ThemesWhereUniqueInput!): Themes
   updateOneTicketing(data: TicketingUpdateInput!, where: TicketingWhereUniqueInput!): Ticketing
-<<<<<<< HEAD
-  updateOneTrainings(data: TrainingsUpdateInput!, where: TrainingsWhereUniqueInput!): Trainings
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   updateOneTransactions(data: TransactionsUpdateInput!, where: TransactionsWhereUniqueInput!): Transactions
   updateOneUpload_file(data: Upload_fileUpdateInput!, where: Upload_fileWhereUniqueInput!): Upload_file
   updateOneUsers(data: UsersUpdateInput!, where: UsersWhereUniqueInput!): Users
@@ -17785,10 +17691,7 @@ type Mutation {
   upsertOneInvitations(create: InvitationsCreateInput!, update: InvitationsUpdateInput!, where: InvitationsWhereUniqueInput!): Invitations!
   upsertOneInvoices(create: InvoicesCreateInput!, update: InvoicesUpdateInput!, where: InvoicesWhereUniqueInput!): Invoices!
   upsertOneLeads(create: LeadsCreateInput!, update: LeadsUpdateInput!, where: LeadsWhereUniqueInput!): Leads!
-<<<<<<< HEAD
-=======
   upsertOneLogIn(create: LogInCreateInput!, update: LogInUpdateInput!, where: LogInWhereUniqueInput!): LogIn!
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   upsertOneManufacturer(create: ManufacturerCreateInput!, update: ManufacturerUpdateInput!, where: ManufacturerWhereUniqueInput!): Manufacturer!
   upsertOneMediamanager(create: MediamanagerCreateInput!, update: MediamanagerUpdateInput!, where: MediamanagerWhereUniqueInput!): Mediamanager!
   upsertOneMeeting(create: MeetingCreateInput!, update: MeetingUpdateInput!, where: MeetingWhereUniqueInput!): Meeting!
@@ -17822,10 +17725,6 @@ type Mutation {
   upsertOneStates(create: StatesCreateInput!, update: StatesUpdateInput!, where: StatesWhereUniqueInput!): States!
   upsertOneStatistics(create: StatisticsCreateInput!, update: StatisticsUpdateInput!, where: StatisticsWhereUniqueInput!): Statistics!
   upsertOneStocks(create: StocksCreateInput!, update: StocksUpdateInput!, where: StocksWhereUniqueInput!): Stocks!
-<<<<<<< HEAD
-  upsertOneSurveys(create: SurveysCreateInput!, update: SurveysUpdateInput!, where: SurveysWhereUniqueInput!): Surveys!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   upsertOneTags(create: TagsCreateInput!, update: TagsUpdateInput!, where: TagsWhereUniqueInput!): Tags!
   upsertOneTargets(create: TargetsCreateInput!, update: TargetsUpdateInput!, where: TargetsWhereUniqueInput!): Targets!
   upsertOneTax_category(create: Tax_categoryCreateInput!, update: Tax_categoryUpdateInput!, where: Tax_categoryWhereUniqueInput!): Tax_category!
@@ -17834,10 +17733,6 @@ type Mutation {
   upsertOneTemplates(create: TemplatesCreateInput!, update: TemplatesUpdateInput!, where: TemplatesWhereUniqueInput!): Templates!
   upsertOneThemes(create: ThemesCreateInput!, update: ThemesUpdateInput!, where: ThemesWhereUniqueInput!): Themes!
   upsertOneTicketing(create: TicketingCreateInput!, update: TicketingUpdateInput!, where: TicketingWhereUniqueInput!): Ticketing!
-<<<<<<< HEAD
-  upsertOneTrainings(create: TrainingsCreateInput!, update: TrainingsUpdateInput!, where: TrainingsWhereUniqueInput!): Trainings!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   upsertOneTransactions(create: TransactionsCreateInput!, update: TransactionsUpdateInput!, where: TransactionsWhereUniqueInput!): Transactions!
   upsertOneUpload_file(create: Upload_fileCreateInput!, update: Upload_fileUpdateInput!, where: Upload_fileWhereUniqueInput!): Upload_file!
   upsertOneUsers(create: UsersCreateInput!, update: UsersUpdateInput!, where: UsersWhereUniqueInput!): Users!
@@ -23875,10 +23770,7 @@ type Query {
   aggregateInvitations(cursor: InvitationsWhereUniqueInput, orderBy: [InvitationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvitationsWhereInput): AggregateInvitations!
   aggregateInvoices(cursor: InvoicesWhereUniqueInput, orderBy: [InvoicesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvoicesWhereInput): AggregateInvoices!
   aggregateLeads(cursor: LeadsWhereUniqueInput, orderBy: [LeadsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LeadsWhereInput): AggregateLeads!
-<<<<<<< HEAD
-=======
   aggregateLogIn(cursor: LogInWhereUniqueInput, orderBy: [LogInOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LogInWhereInput): AggregateLogIn!
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   aggregateManufacturer(cursor: ManufacturerWhereUniqueInput, orderBy: [ManufacturerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ManufacturerWhereInput): AggregateManufacturer!
   aggregateMediamanager(cursor: MediamanagerWhereUniqueInput, orderBy: [MediamanagerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: MediamanagerWhereInput): AggregateMediamanager!
   aggregateMeeting(cursor: MeetingWhereUniqueInput, orderBy: [MeetingOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: MeetingWhereInput): AggregateMeeting!
@@ -23912,10 +23804,6 @@ type Query {
   aggregateStates(cursor: StatesWhereUniqueInput, orderBy: [StatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StatesWhereInput): AggregateStates!
   aggregateStatistics(cursor: StatisticsWhereUniqueInput, orderBy: [StatisticsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StatisticsWhereInput): AggregateStatistics!
   aggregateStocks(cursor: StocksWhereUniqueInput, orderBy: [StocksOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StocksWhereInput): AggregateStocks!
-<<<<<<< HEAD
-  aggregateSurveys(cursor: SurveysWhereUniqueInput, orderBy: [SurveysOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SurveysWhereInput): AggregateSurveys!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   aggregateTags(cursor: TagsWhereUniqueInput, orderBy: [TagsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TagsWhereInput): AggregateTags!
   aggregateTargets(cursor: TargetsWhereUniqueInput, orderBy: [TargetsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TargetsWhereInput): AggregateTargets!
   aggregateTax_category(cursor: Tax_categoryWhereUniqueInput, orderBy: [Tax_categoryOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Tax_categoryWhereInput): AggregateTax_category!
@@ -23924,10 +23812,6 @@ type Query {
   aggregateTemplates(cursor: TemplatesWhereUniqueInput, orderBy: [TemplatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TemplatesWhereInput): AggregateTemplates!
   aggregateThemes(cursor: ThemesWhereUniqueInput, orderBy: [ThemesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ThemesWhereInput): AggregateThemes!
   aggregateTicketing(cursor: TicketingWhereUniqueInput, orderBy: [TicketingOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TicketingWhereInput): AggregateTicketing!
-<<<<<<< HEAD
-  aggregateTrainings(cursor: TrainingsWhereUniqueInput, orderBy: [TrainingsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TrainingsWhereInput): AggregateTrainings!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   aggregateTransactions(cursor: TransactionsWhereUniqueInput, orderBy: [TransactionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TransactionsWhereInput): AggregateTransactions!
   aggregateUpload_file(cursor: Upload_fileWhereUniqueInput, orderBy: [Upload_fileOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Upload_fileWhereInput): AggregateUpload_file!
   aggregateUsers(cursor: UsersWhereUniqueInput, orderBy: [UsersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: UsersWhereInput): AggregateUsers!
@@ -23997,10 +23881,7 @@ type Query {
   findFirstInvitations(cursor: InvitationsWhereUniqueInput, distinct: [InvitationsScalarFieldEnum!], orderBy: [InvitationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvitationsWhereInput): Invitations
   findFirstInvoices(cursor: InvoicesWhereUniqueInput, distinct: [InvoicesScalarFieldEnum!], orderBy: [InvoicesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvoicesWhereInput): Invoices
   findFirstLeads(cursor: LeadsWhereUniqueInput, distinct: [LeadsScalarFieldEnum!], orderBy: [LeadsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LeadsWhereInput): Leads
-<<<<<<< HEAD
-=======
   findFirstLogIn(cursor: LogInWhereUniqueInput, distinct: [LogInScalarFieldEnum!], orderBy: [LogInOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LogInWhereInput): LogIn
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   findFirstManufacturer(cursor: ManufacturerWhereUniqueInput, distinct: [ManufacturerScalarFieldEnum!], orderBy: [ManufacturerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ManufacturerWhereInput): Manufacturer
   findFirstMediamanager(cursor: MediamanagerWhereUniqueInput, distinct: [MediamanagerScalarFieldEnum!], orderBy: [MediamanagerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: MediamanagerWhereInput): Mediamanager
   findFirstMeeting(cursor: MeetingWhereUniqueInput, distinct: [MeetingScalarFieldEnum!], orderBy: [MeetingOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: MeetingWhereInput): Meeting
@@ -24034,10 +23915,6 @@ type Query {
   findFirstStates(cursor: StatesWhereUniqueInput, distinct: [StatesScalarFieldEnum!], orderBy: [StatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StatesWhereInput): States
   findFirstStatistics(cursor: StatisticsWhereUniqueInput, distinct: [StatisticsScalarFieldEnum!], orderBy: [StatisticsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StatisticsWhereInput): Statistics
   findFirstStocks(cursor: StocksWhereUniqueInput, distinct: [StocksScalarFieldEnum!], orderBy: [StocksOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StocksWhereInput): Stocks
-<<<<<<< HEAD
-  findFirstSurveys(cursor: SurveysWhereUniqueInput, distinct: [SurveysScalarFieldEnum!], orderBy: [SurveysOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SurveysWhereInput): Surveys
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   findFirstTags(cursor: TagsWhereUniqueInput, distinct: [TagsScalarFieldEnum!], orderBy: [TagsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TagsWhereInput): Tags
   findFirstTargets(cursor: TargetsWhereUniqueInput, distinct: [TargetsScalarFieldEnum!], orderBy: [TargetsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TargetsWhereInput): Targets
   findFirstTax_category(cursor: Tax_categoryWhereUniqueInput, distinct: [Tax_categoryScalarFieldEnum!], orderBy: [Tax_categoryOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Tax_categoryWhereInput): Tax_category
@@ -24046,10 +23923,6 @@ type Query {
   findFirstTemplates(cursor: TemplatesWhereUniqueInput, distinct: [TemplatesScalarFieldEnum!], orderBy: [TemplatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TemplatesWhereInput): Templates
   findFirstThemes(cursor: ThemesWhereUniqueInput, distinct: [ThemesScalarFieldEnum!], orderBy: [ThemesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ThemesWhereInput): Themes
   findFirstTicketing(cursor: TicketingWhereUniqueInput, distinct: [TicketingScalarFieldEnum!], orderBy: [TicketingOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TicketingWhereInput): Ticketing
-<<<<<<< HEAD
-  findFirstTrainings(cursor: TrainingsWhereUniqueInput, distinct: [TrainingsScalarFieldEnum!], orderBy: [TrainingsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TrainingsWhereInput): Trainings
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   findFirstTransactions(cursor: TransactionsWhereUniqueInput, distinct: [TransactionsScalarFieldEnum!], orderBy: [TransactionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TransactionsWhereInput): Transactions
   findFirstUpload_file(cursor: Upload_fileWhereUniqueInput, distinct: [Upload_fileScalarFieldEnum!], orderBy: [Upload_fileOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Upload_fileWhereInput): Upload_file
   findFirstUsers(cursor: UsersWhereUniqueInput, distinct: [UsersScalarFieldEnum!], orderBy: [UsersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: UsersWhereInput): Users
@@ -24119,18 +23992,10 @@ type Query {
   findManyStates(cursor: StatesWhereUniqueInput, distinct: [StatesScalarFieldEnum!], orderBy: [StatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StatesWhereInput): [States!]!
   findManyStatistics(cursor: StatisticsWhereUniqueInput, distinct: [StatisticsScalarFieldEnum!], orderBy: [StatisticsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StatisticsWhereInput): [Statistics!]!
   findManyStocks(cursor: StocksWhereUniqueInput, distinct: [StocksScalarFieldEnum!], orderBy: [StocksOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StocksWhereInput): [Stocks!]!
-<<<<<<< HEAD
-  findManySurveys(cursor: SurveysWhereUniqueInput, distinct: [SurveysScalarFieldEnum!], orderBy: [SurveysOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SurveysWhereInput): [Surveys!]!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   findManyTags(cursor: TagsWhereUniqueInput, distinct: [TagsScalarFieldEnum!], orderBy: [TagsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TagsWhereInput): [Tags!]!
   findManyTargets(cursor: TargetsWhereUniqueInput, distinct: [TargetsScalarFieldEnum!], orderBy: [TargetsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TargetsWhereInput): [Targets!]!
   findManyTemplates(cursor: TemplatesWhereUniqueInput, distinct: [TemplatesScalarFieldEnum!], orderBy: [TemplatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TemplatesWhereInput): [Templates!]!
   findManyThemes(cursor: ThemesWhereUniqueInput, distinct: [ThemesScalarFieldEnum!], orderBy: [ThemesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ThemesWhereInput): [Themes!]!
-<<<<<<< HEAD
-  findManyTrainings(cursor: TrainingsWhereUniqueInput, distinct: [TrainingsScalarFieldEnum!], orderBy: [TrainingsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TrainingsWhereInput): [Trainings!]!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   findManyTransactions(cursor: TransactionsWhereUniqueInput, distinct: [TransactionsScalarFieldEnum!], orderBy: [TransactionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TransactionsWhereInput): [Transactions!]!
   findManyUsers(cursor: UsersWhereUniqueInput, distinct: [UsersScalarFieldEnum!], orderBy: [UsersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: UsersWhereInput): [Users!]!
   findManyVendors(cursor: VendorsWhereUniqueInput, distinct: [VendorsScalarFieldEnum!], orderBy: [VendorsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: VendorsWhereInput): [Vendors!]!
@@ -24198,18 +24063,10 @@ type Query {
   findUniqueStates(where: StatesWhereUniqueInput!): States
   findUniqueStatistics(where: StatisticsWhereUniqueInput!): Statistics
   findUniqueStocks(where: StocksWhereUniqueInput!): Stocks
-<<<<<<< HEAD
-  findUniqueSurveys(where: SurveysWhereUniqueInput!): Surveys
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   findUniqueTags(where: TagsWhereUniqueInput!): Tags
   findUniqueTargets(where: TargetsWhereUniqueInput!): Targets
   findUniqueTemplates(where: TemplatesWhereUniqueInput!): Templates
   findUniqueThemes(where: ThemesWhereUniqueInput!): Themes
-<<<<<<< HEAD
-  findUniqueTrainings(where: TrainingsWhereUniqueInput!): Trainings
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   findUniqueTransactions(where: TransactionsWhereUniqueInput!): Transactions
   findUniqueUsers(where: UsersWhereUniqueInput!): Users
   findUniqueVendors(where: VendorsWhereUniqueInput!): Vendors
@@ -24263,10 +24120,7 @@ type Query {
   groupByInvitations(by: [InvitationsScalarFieldEnum!]!, having: InvitationsScalarWhereWithAggregatesInput, orderBy: [InvitationsOrderByWithAggregationInput!], skip: Int, take: Int, where: InvitationsWhereInput): [InvitationsGroupBy!]!
   groupByInvoices(by: [InvoicesScalarFieldEnum!]!, having: InvoicesScalarWhereWithAggregatesInput, orderBy: [InvoicesOrderByWithAggregationInput!], skip: Int, take: Int, where: InvoicesWhereInput): [InvoicesGroupBy!]!
   groupByLeads(by: [LeadsScalarFieldEnum!]!, having: LeadsScalarWhereWithAggregatesInput, orderBy: [LeadsOrderByWithAggregationInput!], skip: Int, take: Int, where: LeadsWhereInput): [LeadsGroupBy!]!
-<<<<<<< HEAD
-=======
   groupByLogIn(by: [LogInScalarFieldEnum!]!, having: LogInScalarWhereWithAggregatesInput, orderBy: [LogInOrderByWithAggregationInput!], skip: Int, take: Int, where: LogInWhereInput): [LogInGroupBy!]!
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   groupByManufacturer(by: [ManufacturerScalarFieldEnum!]!, having: ManufacturerScalarWhereWithAggregatesInput, orderBy: [ManufacturerOrderByWithAggregationInput!], skip: Int, take: Int, where: ManufacturerWhereInput): [ManufacturerGroupBy!]!
   groupByMediamanager(by: [MediamanagerScalarFieldEnum!]!, having: MediamanagerScalarWhereWithAggregatesInput, orderBy: [MediamanagerOrderByWithAggregationInput!], skip: Int, take: Int, where: MediamanagerWhereInput): [MediamanagerGroupBy!]!
   groupByMeeting(by: [MeetingScalarFieldEnum!]!, having: MeetingScalarWhereWithAggregatesInput, orderBy: [MeetingOrderByWithAggregationInput!], skip: Int, take: Int, where: MeetingWhereInput): [MeetingGroupBy!]!
@@ -24300,10 +24154,6 @@ type Query {
   groupByStates(by: [StatesScalarFieldEnum!]!, having: StatesScalarWhereWithAggregatesInput, orderBy: [StatesOrderByWithAggregationInput!], skip: Int, take: Int, where: StatesWhereInput): [StatesGroupBy!]!
   groupByStatistics(by: [StatisticsScalarFieldEnum!]!, having: StatisticsScalarWhereWithAggregatesInput, orderBy: [StatisticsOrderByWithAggregationInput!], skip: Int, take: Int, where: StatisticsWhereInput): [StatisticsGroupBy!]!
   groupByStocks(by: [StocksScalarFieldEnum!]!, having: StocksScalarWhereWithAggregatesInput, orderBy: [StocksOrderByWithAggregationInput!], skip: Int, take: Int, where: StocksWhereInput): [StocksGroupBy!]!
-<<<<<<< HEAD
-  groupBySurveys(by: [SurveysScalarFieldEnum!]!, having: SurveysScalarWhereWithAggregatesInput, orderBy: [SurveysOrderByWithAggregationInput!], skip: Int, take: Int, where: SurveysWhereInput): [SurveysGroupBy!]!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   groupByTags(by: [TagsScalarFieldEnum!]!, having: TagsScalarWhereWithAggregatesInput, orderBy: [TagsOrderByWithAggregationInput!], skip: Int, take: Int, where: TagsWhereInput): [TagsGroupBy!]!
   groupByTargets(by: [TargetsScalarFieldEnum!]!, having: TargetsScalarWhereWithAggregatesInput, orderBy: [TargetsOrderByWithAggregationInput!], skip: Int, take: Int, where: TargetsWhereInput): [TargetsGroupBy!]!
   groupByTax_category(by: [Tax_categoryScalarFieldEnum!]!, having: Tax_categoryScalarWhereWithAggregatesInput, orderBy: [Tax_categoryOrderByWithAggregationInput!], skip: Int, take: Int, where: Tax_categoryWhereInput): [Tax_categoryGroupBy!]!
@@ -24312,10 +24162,6 @@ type Query {
   groupByTemplates(by: [TemplatesScalarFieldEnum!]!, having: TemplatesScalarWhereWithAggregatesInput, orderBy: [TemplatesOrderByWithAggregationInput!], skip: Int, take: Int, where: TemplatesWhereInput): [TemplatesGroupBy!]!
   groupByThemes(by: [ThemesScalarFieldEnum!]!, having: ThemesScalarWhereWithAggregatesInput, orderBy: [ThemesOrderByWithAggregationInput!], skip: Int, take: Int, where: ThemesWhereInput): [ThemesGroupBy!]!
   groupByTicketing(by: [TicketingScalarFieldEnum!]!, having: TicketingScalarWhereWithAggregatesInput, orderBy: [TicketingOrderByWithAggregationInput!], skip: Int, take: Int, where: TicketingWhereInput): [TicketingGroupBy!]!
-<<<<<<< HEAD
-  groupByTrainings(by: [TrainingsScalarFieldEnum!]!, having: TrainingsScalarWhereWithAggregatesInput, orderBy: [TrainingsOrderByWithAggregationInput!], skip: Int, take: Int, where: TrainingsWhereInput): [TrainingsGroupBy!]!
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   groupByTransactions(by: [TransactionsScalarFieldEnum!]!, having: TransactionsScalarWhereWithAggregatesInput, orderBy: [TransactionsOrderByWithAggregationInput!], skip: Int, take: Int, where: TransactionsWhereInput): [TransactionsGroupBy!]!
   groupByUpload_file(by: [Upload_fileScalarFieldEnum!]!, having: Upload_fileScalarWhereWithAggregatesInput, orderBy: [Upload_fileOrderByWithAggregationInput!], skip: Int, take: Int, where: Upload_fileWhereInput): [Upload_fileGroupBy!]!
   groupByUsers(by: [UsersScalarFieldEnum!]!, having: UsersScalarWhereWithAggregatesInput, orderBy: [UsersOrderByWithAggregationInput!], skip: Int, take: Int, where: UsersWhereInput): [UsersGroupBy!]!
@@ -24331,11 +24177,8 @@ type Query {
   importms(cursor: ImportmWhereUniqueInput, distinct: [ImportmScalarFieldEnum!], orderBy: [ImportmOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ImportmWhereInput): [Importm!]!
   internalization(where: InternalizationWhereUniqueInput!): Internalization
   internalizations(cursor: InternalizationWhereUniqueInput, distinct: [InternalizationScalarFieldEnum!], orderBy: [InternalizationOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InternalizationWhereInput): [Internalization!]!
-<<<<<<< HEAD
-=======
   logIn(where: LogInWhereUniqueInput!): LogIn
   logIns(cursor: LogInWhereUniqueInput, distinct: [LogInScalarFieldEnum!], orderBy: [LogInOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LogInWhereInput): [LogIn!]!
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
   manufacturer(where: ManufacturerWhereUniqueInput!): Manufacturer
   manufacturers(cursor: ManufacturerWhereUniqueInput, distinct: [ManufacturerScalarFieldEnum!], orderBy: [ManufacturerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ManufacturerWhereInput): [Manufacturer!]!
   mediamanager(where: MediamanagerWhereUniqueInput!): Mediamanager
@@ -29697,321 +29540,6 @@ input StringWithAggregatesFilter {
   startsWith: String
 }
 
-<<<<<<< HEAD
-type Surveys {
-  answer: String
-  assigned_to: String
-  created_at: DateTime
-  description: String
-  dissatisfied_text: String
-  id: BigInt!
-  name: String
-  neither_text: String
-  question: String
-  satisfied_text: String
-  status: String
-  submit_text: String
-}
-
-type SurveysAvgAggregate {
-  id: Float
-}
-
-input SurveysAvgOrderByAggregateInput {
-  id: SortOrder
-}
-
-type SurveysCountAggregate {
-  _all: Int!
-  answer: Int!
-  assigned_to: Int!
-  created_at: Int!
-  description: Int!
-  dissatisfied_text: Int!
-  id: Int!
-  name: Int!
-  neither_text: Int!
-  question: Int!
-  satisfied_text: Int!
-  status: Int!
-  submit_text: Int!
-}
-
-input SurveysCountOrderByAggregateInput {
-  answer: SortOrder
-  assigned_to: SortOrder
-  created_at: SortOrder
-  description: SortOrder
-  dissatisfied_text: SortOrder
-  id: SortOrder
-  name: SortOrder
-  neither_text: SortOrder
-  question: SortOrder
-  satisfied_text: SortOrder
-  status: SortOrder
-  submit_text: SortOrder
-}
-
-input SurveysCreateInput {
-  answer: String
-  assigned_to: String
-  created_at: DateTime
-  description: String
-  dissatisfied_text: String
-  id: BigInt
-  name: String
-  neither_text: String
-  question: String
-  satisfied_text: String
-  status: String
-  submit_text: String
-}
-
-input SurveysCreateManyInput {
-  answer: String
-  assigned_to: String
-  created_at: DateTime
-  description: String
-  dissatisfied_text: String
-  id: BigInt
-  name: String
-  neither_text: String
-  question: String
-  satisfied_text: String
-  status: String
-  submit_text: String
-}
-
-type SurveysGroupBy {
-  _avg: SurveysAvgAggregate
-  _count: SurveysCountAggregate
-  _max: SurveysMaxAggregate
-  _min: SurveysMinAggregate
-  _sum: SurveysSumAggregate
-  answer: String
-  assigned_to: String
-  created_at: DateTime
-  description: String
-  dissatisfied_text: String
-  id: BigInt!
-  name: String
-  neither_text: String
-  question: String
-  satisfied_text: String
-  status: String
-  submit_text: String
-}
-
-type SurveysMaxAggregate {
-  answer: String
-  assigned_to: String
-  created_at: DateTime
-  description: String
-  dissatisfied_text: String
-  id: BigInt
-  name: String
-  neither_text: String
-  question: String
-  satisfied_text: String
-  status: String
-  submit_text: String
-}
-
-input SurveysMaxOrderByAggregateInput {
-  answer: SortOrder
-  assigned_to: SortOrder
-  created_at: SortOrder
-  description: SortOrder
-  dissatisfied_text: SortOrder
-  id: SortOrder
-  name: SortOrder
-  neither_text: SortOrder
-  question: SortOrder
-  satisfied_text: SortOrder
-  status: SortOrder
-  submit_text: SortOrder
-}
-
-type SurveysMinAggregate {
-  answer: String
-  assigned_to: String
-  created_at: DateTime
-  description: String
-  dissatisfied_text: String
-  id: BigInt
-  name: String
-  neither_text: String
-  question: String
-  satisfied_text: String
-  status: String
-  submit_text: String
-}
-
-input SurveysMinOrderByAggregateInput {
-  answer: SortOrder
-  assigned_to: SortOrder
-  created_at: SortOrder
-  description: SortOrder
-  dissatisfied_text: SortOrder
-  id: SortOrder
-  name: SortOrder
-  neither_text: SortOrder
-  question: SortOrder
-  satisfied_text: SortOrder
-  status: SortOrder
-  submit_text: SortOrder
-}
-
-enum SurveysOrderByRelevanceFieldEnum {
-  answer
-  assigned_to
-  description
-  dissatisfied_text
-  name
-  neither_text
-  question
-  satisfied_text
-  status
-  submit_text
-}
-
-input SurveysOrderByRelevanceInput {
-  fields: [SurveysOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
-input SurveysOrderByWithAggregationInput {
-  _avg: SurveysAvgOrderByAggregateInput
-  _count: SurveysCountOrderByAggregateInput
-  _max: SurveysMaxOrderByAggregateInput
-  _min: SurveysMinOrderByAggregateInput
-  _sum: SurveysSumOrderByAggregateInput
-  answer: SortOrder
-  assigned_to: SortOrder
-  created_at: SortOrder
-  description: SortOrder
-  dissatisfied_text: SortOrder
-  id: SortOrder
-  name: SortOrder
-  neither_text: SortOrder
-  question: SortOrder
-  satisfied_text: SortOrder
-  status: SortOrder
-  submit_text: SortOrder
-}
-
-input SurveysOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: SurveysOrderByRelevanceInput
-  answer: SortOrder
-  assigned_to: SortOrder
-  created_at: SortOrder
-  description: SortOrder
-  dissatisfied_text: SortOrder
-  id: SortOrder
-  name: SortOrder
-  neither_text: SortOrder
-  question: SortOrder
-  satisfied_text: SortOrder
-  status: SortOrder
-  submit_text: SortOrder
-}
-
-enum SurveysScalarFieldEnum {
-  answer
-  assigned_to
-  created_at
-  description
-  dissatisfied_text
-  id
-  name
-  neither_text
-  question
-  satisfied_text
-  status
-  submit_text
-}
-
-input SurveysScalarWhereWithAggregatesInput {
-  AND: [SurveysScalarWhereWithAggregatesInput!]
-  NOT: [SurveysScalarWhereWithAggregatesInput!]
-  OR: [SurveysScalarWhereWithAggregatesInput!]
-  answer: StringNullableWithAggregatesFilter
-  assigned_to: StringNullableWithAggregatesFilter
-  created_at: DateTimeNullableWithAggregatesFilter
-  description: StringNullableWithAggregatesFilter
-  dissatisfied_text: StringNullableWithAggregatesFilter
-  id: BigIntWithAggregatesFilter
-  name: StringNullableWithAggregatesFilter
-  neither_text: StringNullableWithAggregatesFilter
-  question: StringNullableWithAggregatesFilter
-  satisfied_text: StringNullableWithAggregatesFilter
-  status: StringNullableWithAggregatesFilter
-  submit_text: StringNullableWithAggregatesFilter
-}
-
-type SurveysSumAggregate {
-  id: BigInt
-}
-
-input SurveysSumOrderByAggregateInput {
-  id: SortOrder
-}
-
-input SurveysUpdateInput {
-  answer: NullableStringFieldUpdateOperationsInput
-  assigned_to: NullableStringFieldUpdateOperationsInput
-  created_at: NullableDateTimeFieldUpdateOperationsInput
-  description: NullableStringFieldUpdateOperationsInput
-  dissatisfied_text: NullableStringFieldUpdateOperationsInput
-  id: BigIntFieldUpdateOperationsInput
-  name: NullableStringFieldUpdateOperationsInput
-  neither_text: NullableStringFieldUpdateOperationsInput
-  question: NullableStringFieldUpdateOperationsInput
-  satisfied_text: NullableStringFieldUpdateOperationsInput
-  status: NullableStringFieldUpdateOperationsInput
-  submit_text: NullableStringFieldUpdateOperationsInput
-}
-
-input SurveysUpdateManyMutationInput {
-  answer: NullableStringFieldUpdateOperationsInput
-  assigned_to: NullableStringFieldUpdateOperationsInput
-  created_at: NullableDateTimeFieldUpdateOperationsInput
-  description: NullableStringFieldUpdateOperationsInput
-  dissatisfied_text: NullableStringFieldUpdateOperationsInput
-  id: BigIntFieldUpdateOperationsInput
-  name: NullableStringFieldUpdateOperationsInput
-  neither_text: NullableStringFieldUpdateOperationsInput
-  question: NullableStringFieldUpdateOperationsInput
-  satisfied_text: NullableStringFieldUpdateOperationsInput
-  status: NullableStringFieldUpdateOperationsInput
-  submit_text: NullableStringFieldUpdateOperationsInput
-}
-
-input SurveysWhereInput {
-  AND: [SurveysWhereInput!]
-  NOT: [SurveysWhereInput!]
-  OR: [SurveysWhereInput!]
-  answer: StringNullableFilter
-  assigned_to: StringNullableFilter
-  created_at: DateTimeNullableFilter
-  description: StringNullableFilter
-  dissatisfied_text: StringNullableFilter
-  id: BigIntFilter
-  name: StringNullableFilter
-  neither_text: StringNullableFilter
-  question: StringNullableFilter
-  satisfied_text: StringNullableFilter
-  status: StringNullableFilter
-  submit_text: StringNullableFilter
-}
-
-input SurveysWhereUniqueInput {
-  id: BigInt
-}
-
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 type Tags {
   articles: String
   categories: String
@@ -32615,875 +32143,6 @@ input TicketingWhereUniqueInput {
   id: BigInt
 }
 
-<<<<<<< HEAD
-type Trainings {
-  address: String
-  analytics: String
-  announcement: String
-  assignments: String
-  assignmentsDueDate: String
-  badges: String
-  checklists: BigInt
-  city: String
-  comment: Int
-  competency: String
-  content: String
-  countries: String
-  country: Int
-  course: String
-  created_at: DateTime
-  digiboards: String
-  faqs: String
-  fieldTrips: String
-  grade: String
-  id: BigInt!
-  isCompleted: String
-  isPublic: String
-  lab: String
-  languages: String
-  link: String
-  media: String
-  meetups: String
-  name: String
-  origanalityReport: String
-  postal: String
-  products: BigInt
-  resource: String
-  school: String
-  speakers: String
-  state: Int
-  states: String
-  steps: String
-  student: String
-  subject: String
-  teacher: String
-  type: String
-  updated: DateTime
-}
-
-type TrainingsAvgAggregate {
-  checklists: Float
-  comment: Float
-  country: Float
-  id: Float
-  products: Float
-  state: Float
-}
-
-input TrainingsAvgOrderByAggregateInput {
-  checklists: SortOrder
-  comment: SortOrder
-  country: SortOrder
-  id: SortOrder
-  products: SortOrder
-  state: SortOrder
-}
-
-type TrainingsCountAggregate {
-  _all: Int!
-  address: Int!
-  analytics: Int!
-  announcement: Int!
-  assignments: Int!
-  assignmentsDueDate: Int!
-  badges: Int!
-  checklists: Int!
-  city: Int!
-  comment: Int!
-  competency: Int!
-  content: Int!
-  countries: Int!
-  country: Int!
-  course: Int!
-  created_at: Int!
-  digiboards: Int!
-  faqs: Int!
-  fieldTrips: Int!
-  grade: Int!
-  id: Int!
-  isCompleted: Int!
-  isPublic: Int!
-  lab: Int!
-  languages: Int!
-  link: Int!
-  media: Int!
-  meetups: Int!
-  name: Int!
-  origanalityReport: Int!
-  postal: Int!
-  products: Int!
-  resource: Int!
-  school: Int!
-  speakers: Int!
-  state: Int!
-  states: Int!
-  steps: Int!
-  student: Int!
-  subject: Int!
-  teacher: Int!
-  type: Int!
-  updated: Int!
-}
-
-input TrainingsCountOrderByAggregateInput {
-  address: SortOrder
-  analytics: SortOrder
-  announcement: SortOrder
-  assignments: SortOrder
-  assignmentsDueDate: SortOrder
-  badges: SortOrder
-  checklists: SortOrder
-  city: SortOrder
-  comment: SortOrder
-  competency: SortOrder
-  content: SortOrder
-  countries: SortOrder
-  country: SortOrder
-  course: SortOrder
-  created_at: SortOrder
-  digiboards: SortOrder
-  faqs: SortOrder
-  fieldTrips: SortOrder
-  grade: SortOrder
-  id: SortOrder
-  isCompleted: SortOrder
-  isPublic: SortOrder
-  lab: SortOrder
-  languages: SortOrder
-  link: SortOrder
-  media: SortOrder
-  meetups: SortOrder
-  name: SortOrder
-  origanalityReport: SortOrder
-  postal: SortOrder
-  products: SortOrder
-  resource: SortOrder
-  school: SortOrder
-  speakers: SortOrder
-  state: SortOrder
-  states: SortOrder
-  steps: SortOrder
-  student: SortOrder
-  subject: SortOrder
-  teacher: SortOrder
-  type: SortOrder
-  updated: SortOrder
-}
-
-input TrainingsCreateInput {
-  address: String
-  analytics: String
-  announcement: String
-  assignments: String
-  assignmentsDueDate: String
-  badges: String
-  checklists: BigInt
-  city: String
-  comment: Int
-  competency: String
-  content: String
-  countries: String
-  country: Int
-  course: String
-  created_at: DateTime
-  digiboards: String
-  faqs: String
-  fieldTrips: String
-  grade: String
-  id: BigInt
-  isCompleted: String
-  isPublic: String
-  lab: String
-  languages: String
-  link: String
-  media: String
-  meetups: String
-  name: String
-  origanalityReport: String
-  postal: String
-  products: BigInt
-  resource: String
-  school: String
-  speakers: String
-  state: Int
-  states: String
-  steps: String
-  student: String
-  subject: String
-  teacher: String
-  type: String
-  updated: DateTime
-}
-
-input TrainingsCreateManyInput {
-  address: String
-  analytics: String
-  announcement: String
-  assignments: String
-  assignmentsDueDate: String
-  badges: String
-  checklists: BigInt
-  city: String
-  comment: Int
-  competency: String
-  content: String
-  countries: String
-  country: Int
-  course: String
-  created_at: DateTime
-  digiboards: String
-  faqs: String
-  fieldTrips: String
-  grade: String
-  id: BigInt
-  isCompleted: String
-  isPublic: String
-  lab: String
-  languages: String
-  link: String
-  media: String
-  meetups: String
-  name: String
-  origanalityReport: String
-  postal: String
-  products: BigInt
-  resource: String
-  school: String
-  speakers: String
-  state: Int
-  states: String
-  steps: String
-  student: String
-  subject: String
-  teacher: String
-  type: String
-  updated: DateTime
-}
-
-type TrainingsGroupBy {
-  _avg: TrainingsAvgAggregate
-  _count: TrainingsCountAggregate
-  _max: TrainingsMaxAggregate
-  _min: TrainingsMinAggregate
-  _sum: TrainingsSumAggregate
-  address: String
-  analytics: String
-  announcement: String
-  assignments: String
-  assignmentsDueDate: String
-  badges: String
-  checklists: BigInt
-  city: String
-  comment: Int
-  competency: String
-  content: String
-  countries: String
-  country: Int
-  course: String
-  created_at: DateTime
-  digiboards: String
-  faqs: String
-  fieldTrips: String
-  grade: String
-  id: BigInt!
-  isCompleted: String
-  isPublic: String
-  lab: String
-  languages: String
-  link: String
-  media: String
-  meetups: String
-  name: String
-  origanalityReport: String
-  postal: String
-  products: BigInt
-  resource: String
-  school: String
-  speakers: String
-  state: Int
-  states: String
-  steps: String
-  student: String
-  subject: String
-  teacher: String
-  type: String
-  updated: DateTime
-}
-
-type TrainingsMaxAggregate {
-  address: String
-  analytics: String
-  announcement: String
-  assignments: String
-  assignmentsDueDate: String
-  badges: String
-  checklists: BigInt
-  city: String
-  comment: Int
-  competency: String
-  content: String
-  countries: String
-  country: Int
-  course: String
-  created_at: DateTime
-  digiboards: String
-  faqs: String
-  fieldTrips: String
-  grade: String
-  id: BigInt
-  isCompleted: String
-  isPublic: String
-  lab: String
-  languages: String
-  link: String
-  media: String
-  meetups: String
-  name: String
-  origanalityReport: String
-  postal: String
-  products: BigInt
-  resource: String
-  school: String
-  speakers: String
-  state: Int
-  states: String
-  steps: String
-  student: String
-  subject: String
-  teacher: String
-  type: String
-  updated: DateTime
-}
-
-input TrainingsMaxOrderByAggregateInput {
-  address: SortOrder
-  analytics: SortOrder
-  announcement: SortOrder
-  assignments: SortOrder
-  assignmentsDueDate: SortOrder
-  badges: SortOrder
-  checklists: SortOrder
-  city: SortOrder
-  comment: SortOrder
-  competency: SortOrder
-  content: SortOrder
-  countries: SortOrder
-  country: SortOrder
-  course: SortOrder
-  created_at: SortOrder
-  digiboards: SortOrder
-  faqs: SortOrder
-  fieldTrips: SortOrder
-  grade: SortOrder
-  id: SortOrder
-  isCompleted: SortOrder
-  isPublic: SortOrder
-  lab: SortOrder
-  languages: SortOrder
-  link: SortOrder
-  media: SortOrder
-  meetups: SortOrder
-  name: SortOrder
-  origanalityReport: SortOrder
-  postal: SortOrder
-  products: SortOrder
-  resource: SortOrder
-  school: SortOrder
-  speakers: SortOrder
-  state: SortOrder
-  states: SortOrder
-  steps: SortOrder
-  student: SortOrder
-  subject: SortOrder
-  teacher: SortOrder
-  type: SortOrder
-  updated: SortOrder
-}
-
-type TrainingsMinAggregate {
-  address: String
-  analytics: String
-  announcement: String
-  assignments: String
-  assignmentsDueDate: String
-  badges: String
-  checklists: BigInt
-  city: String
-  comment: Int
-  competency: String
-  content: String
-  countries: String
-  country: Int
-  course: String
-  created_at: DateTime
-  digiboards: String
-  faqs: String
-  fieldTrips: String
-  grade: String
-  id: BigInt
-  isCompleted: String
-  isPublic: String
-  lab: String
-  languages: String
-  link: String
-  media: String
-  meetups: String
-  name: String
-  origanalityReport: String
-  postal: String
-  products: BigInt
-  resource: String
-  school: String
-  speakers: String
-  state: Int
-  states: String
-  steps: String
-  student: String
-  subject: String
-  teacher: String
-  type: String
-  updated: DateTime
-}
-
-input TrainingsMinOrderByAggregateInput {
-  address: SortOrder
-  analytics: SortOrder
-  announcement: SortOrder
-  assignments: SortOrder
-  assignmentsDueDate: SortOrder
-  badges: SortOrder
-  checklists: SortOrder
-  city: SortOrder
-  comment: SortOrder
-  competency: SortOrder
-  content: SortOrder
-  countries: SortOrder
-  country: SortOrder
-  course: SortOrder
-  created_at: SortOrder
-  digiboards: SortOrder
-  faqs: SortOrder
-  fieldTrips: SortOrder
-  grade: SortOrder
-  id: SortOrder
-  isCompleted: SortOrder
-  isPublic: SortOrder
-  lab: SortOrder
-  languages: SortOrder
-  link: SortOrder
-  media: SortOrder
-  meetups: SortOrder
-  name: SortOrder
-  origanalityReport: SortOrder
-  postal: SortOrder
-  products: SortOrder
-  resource: SortOrder
-  school: SortOrder
-  speakers: SortOrder
-  state: SortOrder
-  states: SortOrder
-  steps: SortOrder
-  student: SortOrder
-  subject: SortOrder
-  teacher: SortOrder
-  type: SortOrder
-  updated: SortOrder
-}
-
-enum TrainingsOrderByRelevanceFieldEnum {
-  address
-  analytics
-  announcement
-  assignments
-  assignmentsDueDate
-  badges
-  city
-  competency
-  content
-  countries
-  course
-  digiboards
-  faqs
-  fieldTrips
-  grade
-  isCompleted
-  isPublic
-  lab
-  languages
-  link
-  media
-  meetups
-  name
-  origanalityReport
-  postal
-  resource
-  school
-  speakers
-  states
-  steps
-  student
-  subject
-  teacher
-  type
-}
-
-input TrainingsOrderByRelevanceInput {
-  fields: [TrainingsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
-input TrainingsOrderByWithAggregationInput {
-  _avg: TrainingsAvgOrderByAggregateInput
-  _count: TrainingsCountOrderByAggregateInput
-  _max: TrainingsMaxOrderByAggregateInput
-  _min: TrainingsMinOrderByAggregateInput
-  _sum: TrainingsSumOrderByAggregateInput
-  address: SortOrder
-  analytics: SortOrder
-  announcement: SortOrder
-  assignments: SortOrder
-  assignmentsDueDate: SortOrder
-  badges: SortOrder
-  checklists: SortOrder
-  city: SortOrder
-  comment: SortOrder
-  competency: SortOrder
-  content: SortOrder
-  countries: SortOrder
-  country: SortOrder
-  course: SortOrder
-  created_at: SortOrder
-  digiboards: SortOrder
-  faqs: SortOrder
-  fieldTrips: SortOrder
-  grade: SortOrder
-  id: SortOrder
-  isCompleted: SortOrder
-  isPublic: SortOrder
-  lab: SortOrder
-  languages: SortOrder
-  link: SortOrder
-  media: SortOrder
-  meetups: SortOrder
-  name: SortOrder
-  origanalityReport: SortOrder
-  postal: SortOrder
-  products: SortOrder
-  resource: SortOrder
-  school: SortOrder
-  speakers: SortOrder
-  state: SortOrder
-  states: SortOrder
-  steps: SortOrder
-  student: SortOrder
-  subject: SortOrder
-  teacher: SortOrder
-  type: SortOrder
-  updated: SortOrder
-}
-
-input TrainingsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: TrainingsOrderByRelevanceInput
-  address: SortOrder
-  analytics: SortOrder
-  announcement: SortOrder
-  assignments: SortOrder
-  assignmentsDueDate: SortOrder
-  badges: SortOrder
-  checklists: SortOrder
-  city: SortOrder
-  comment: SortOrder
-  competency: SortOrder
-  content: SortOrder
-  countries: SortOrder
-  country: SortOrder
-  course: SortOrder
-  created_at: SortOrder
-  digiboards: SortOrder
-  faqs: SortOrder
-  fieldTrips: SortOrder
-  grade: SortOrder
-  id: SortOrder
-  isCompleted: SortOrder
-  isPublic: SortOrder
-  lab: SortOrder
-  languages: SortOrder
-  link: SortOrder
-  media: SortOrder
-  meetups: SortOrder
-  name: SortOrder
-  origanalityReport: SortOrder
-  postal: SortOrder
-  products: SortOrder
-  resource: SortOrder
-  school: SortOrder
-  speakers: SortOrder
-  state: SortOrder
-  states: SortOrder
-  steps: SortOrder
-  student: SortOrder
-  subject: SortOrder
-  teacher: SortOrder
-  type: SortOrder
-  updated: SortOrder
-}
-
-enum TrainingsScalarFieldEnum {
-  address
-  analytics
-  announcement
-  assignments
-  assignmentsDueDate
-  badges
-  checklists
-  city
-  comment
-  competency
-  content
-  countries
-  country
-  course
-  created_at
-  digiboards
-  faqs
-  fieldTrips
-  grade
-  id
-  isCompleted
-  isPublic
-  lab
-  languages
-  link
-  media
-  meetups
-  name
-  origanalityReport
-  postal
-  products
-  resource
-  school
-  speakers
-  state
-  states
-  steps
-  student
-  subject
-  teacher
-  type
-  updated
-}
-
-input TrainingsScalarWhereWithAggregatesInput {
-  AND: [TrainingsScalarWhereWithAggregatesInput!]
-  NOT: [TrainingsScalarWhereWithAggregatesInput!]
-  OR: [TrainingsScalarWhereWithAggregatesInput!]
-  address: StringNullableWithAggregatesFilter
-  analytics: StringNullableWithAggregatesFilter
-  announcement: StringNullableWithAggregatesFilter
-  assignments: StringNullableWithAggregatesFilter
-  assignmentsDueDate: StringNullableWithAggregatesFilter
-  badges: StringNullableWithAggregatesFilter
-  checklists: BigIntNullableWithAggregatesFilter
-  city: StringNullableWithAggregatesFilter
-  comment: IntNullableWithAggregatesFilter
-  competency: StringNullableWithAggregatesFilter
-  content: StringNullableWithAggregatesFilter
-  countries: StringNullableWithAggregatesFilter
-  country: IntNullableWithAggregatesFilter
-  course: StringNullableWithAggregatesFilter
-  created_at: DateTimeNullableWithAggregatesFilter
-  digiboards: StringNullableWithAggregatesFilter
-  faqs: StringNullableWithAggregatesFilter
-  fieldTrips: StringNullableWithAggregatesFilter
-  grade: StringNullableWithAggregatesFilter
-  id: BigIntWithAggregatesFilter
-  isCompleted: StringNullableWithAggregatesFilter
-  isPublic: StringNullableWithAggregatesFilter
-  lab: StringNullableWithAggregatesFilter
-  languages: StringNullableWithAggregatesFilter
-  link: StringNullableWithAggregatesFilter
-  media: StringNullableWithAggregatesFilter
-  meetups: StringNullableWithAggregatesFilter
-  name: StringNullableWithAggregatesFilter
-  origanalityReport: StringNullableWithAggregatesFilter
-  postal: StringNullableWithAggregatesFilter
-  products: BigIntNullableWithAggregatesFilter
-  resource: StringNullableWithAggregatesFilter
-  school: StringNullableWithAggregatesFilter
-  speakers: StringNullableWithAggregatesFilter
-  state: IntNullableWithAggregatesFilter
-  states: StringNullableWithAggregatesFilter
-  steps: StringNullableWithAggregatesFilter
-  student: StringNullableWithAggregatesFilter
-  subject: StringNullableWithAggregatesFilter
-  teacher: StringNullableWithAggregatesFilter
-  type: StringNullableWithAggregatesFilter
-  updated: DateTimeNullableWithAggregatesFilter
-}
-
-type TrainingsSumAggregate {
-  checklists: BigInt
-  comment: Int
-  country: Int
-  id: BigInt
-  products: BigInt
-  state: Int
-}
-
-input TrainingsSumOrderByAggregateInput {
-  checklists: SortOrder
-  comment: SortOrder
-  country: SortOrder
-  id: SortOrder
-  products: SortOrder
-  state: SortOrder
-}
-
-input TrainingsUpdateInput {
-  address: NullableStringFieldUpdateOperationsInput
-  analytics: NullableStringFieldUpdateOperationsInput
-  announcement: NullableStringFieldUpdateOperationsInput
-  assignments: NullableStringFieldUpdateOperationsInput
-  assignmentsDueDate: NullableStringFieldUpdateOperationsInput
-  badges: NullableStringFieldUpdateOperationsInput
-  checklists: NullableBigIntFieldUpdateOperationsInput
-  city: NullableStringFieldUpdateOperationsInput
-  comment: NullableIntFieldUpdateOperationsInput
-  competency: NullableStringFieldUpdateOperationsInput
-  content: NullableStringFieldUpdateOperationsInput
-  countries: NullableStringFieldUpdateOperationsInput
-  country: NullableIntFieldUpdateOperationsInput
-  course: NullableStringFieldUpdateOperationsInput
-  created_at: NullableDateTimeFieldUpdateOperationsInput
-  digiboards: NullableStringFieldUpdateOperationsInput
-  faqs: NullableStringFieldUpdateOperationsInput
-  fieldTrips: NullableStringFieldUpdateOperationsInput
-  grade: NullableStringFieldUpdateOperationsInput
-  id: BigIntFieldUpdateOperationsInput
-  isCompleted: NullableStringFieldUpdateOperationsInput
-  isPublic: NullableStringFieldUpdateOperationsInput
-  lab: NullableStringFieldUpdateOperationsInput
-  languages: NullableStringFieldUpdateOperationsInput
-  link: NullableStringFieldUpdateOperationsInput
-  media: NullableStringFieldUpdateOperationsInput
-  meetups: NullableStringFieldUpdateOperationsInput
-  name: NullableStringFieldUpdateOperationsInput
-  origanalityReport: NullableStringFieldUpdateOperationsInput
-  postal: NullableStringFieldUpdateOperationsInput
-  products: NullableBigIntFieldUpdateOperationsInput
-  resource: NullableStringFieldUpdateOperationsInput
-  school: NullableStringFieldUpdateOperationsInput
-  speakers: NullableStringFieldUpdateOperationsInput
-  state: NullableIntFieldUpdateOperationsInput
-  states: NullableStringFieldUpdateOperationsInput
-  steps: NullableStringFieldUpdateOperationsInput
-  student: NullableStringFieldUpdateOperationsInput
-  subject: NullableStringFieldUpdateOperationsInput
-  teacher: NullableStringFieldUpdateOperationsInput
-  type: NullableStringFieldUpdateOperationsInput
-  updated: NullableDateTimeFieldUpdateOperationsInput
-}
-
-input TrainingsUpdateManyMutationInput {
-  address: NullableStringFieldUpdateOperationsInput
-  analytics: NullableStringFieldUpdateOperationsInput
-  announcement: NullableStringFieldUpdateOperationsInput
-  assignments: NullableStringFieldUpdateOperationsInput
-  assignmentsDueDate: NullableStringFieldUpdateOperationsInput
-  badges: NullableStringFieldUpdateOperationsInput
-  checklists: NullableBigIntFieldUpdateOperationsInput
-  city: NullableStringFieldUpdateOperationsInput
-  comment: NullableIntFieldUpdateOperationsInput
-  competency: NullableStringFieldUpdateOperationsInput
-  content: NullableStringFieldUpdateOperationsInput
-  countries: NullableStringFieldUpdateOperationsInput
-  country: NullableIntFieldUpdateOperationsInput
-  course: NullableStringFieldUpdateOperationsInput
-  created_at: NullableDateTimeFieldUpdateOperationsInput
-  digiboards: NullableStringFieldUpdateOperationsInput
-  faqs: NullableStringFieldUpdateOperationsInput
-  fieldTrips: NullableStringFieldUpdateOperationsInput
-  grade: NullableStringFieldUpdateOperationsInput
-  id: BigIntFieldUpdateOperationsInput
-  isCompleted: NullableStringFieldUpdateOperationsInput
-  isPublic: NullableStringFieldUpdateOperationsInput
-  lab: NullableStringFieldUpdateOperationsInput
-  languages: NullableStringFieldUpdateOperationsInput
-  link: NullableStringFieldUpdateOperationsInput
-  media: NullableStringFieldUpdateOperationsInput
-  meetups: NullableStringFieldUpdateOperationsInput
-  name: NullableStringFieldUpdateOperationsInput
-  origanalityReport: NullableStringFieldUpdateOperationsInput
-  postal: NullableStringFieldUpdateOperationsInput
-  products: NullableBigIntFieldUpdateOperationsInput
-  resource: NullableStringFieldUpdateOperationsInput
-  school: NullableStringFieldUpdateOperationsInput
-  speakers: NullableStringFieldUpdateOperationsInput
-  state: NullableIntFieldUpdateOperationsInput
-  states: NullableStringFieldUpdateOperationsInput
-  steps: NullableStringFieldUpdateOperationsInput
-  student: NullableStringFieldUpdateOperationsInput
-  subject: NullableStringFieldUpdateOperationsInput
-  teacher: NullableStringFieldUpdateOperationsInput
-  type: NullableStringFieldUpdateOperationsInput
-  updated: NullableDateTimeFieldUpdateOperationsInput
-}
-
-input TrainingsWhereInput {
-  AND: [TrainingsWhereInput!]
-  NOT: [TrainingsWhereInput!]
-  OR: [TrainingsWhereInput!]
-  address: StringNullableFilter
-  analytics: StringNullableFilter
-  announcement: StringNullableFilter
-  assignments: StringNullableFilter
-  assignmentsDueDate: StringNullableFilter
-  badges: StringNullableFilter
-  checklists: BigIntNullableFilter
-  city: StringNullableFilter
-  comment: IntNullableFilter
-  competency: StringNullableFilter
-  content: StringNullableFilter
-  countries: StringNullableFilter
-  country: IntNullableFilter
-  course: StringNullableFilter
-  created_at: DateTimeNullableFilter
-  digiboards: StringNullableFilter
-  faqs: StringNullableFilter
-  fieldTrips: StringNullableFilter
-  grade: StringNullableFilter
-  id: BigIntFilter
-  isCompleted: StringNullableFilter
-  isPublic: StringNullableFilter
-  lab: StringNullableFilter
-  languages: StringNullableFilter
-  link: StringNullableFilter
-  media: StringNullableFilter
-  meetups: StringNullableFilter
-  name: StringNullableFilter
-  origanalityReport: StringNullableFilter
-  postal: StringNullableFilter
-  products: BigIntNullableFilter
-  resource: StringNullableFilter
-  school: StringNullableFilter
-  speakers: StringNullableFilter
-  state: IntNullableFilter
-  states: StringNullableFilter
-  steps: StringNullableFilter
-  student: StringNullableFilter
-  subject: StringNullableFilter
-  teacher: StringNullableFilter
-  type: StringNullableFilter
-  updated: DateTimeNullableFilter
-}
-
-input TrainingsWhereUniqueInput {
-  id: BigInt
-}
-
-=======
->>>>>>> b83d1c369a927637e8b7afa7b4a8ab7c58d3d194
 type Transactions {
   closed: String
   created: DateTime

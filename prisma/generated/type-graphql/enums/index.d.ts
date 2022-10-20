@@ -170,6 +170,7 @@ export { ThemesOrderByRelevanceFieldEnum } from "./ThemesOrderByRelevanceFieldEn
 export { ThemesScalarFieldEnum } from "./ThemesScalarFieldEnum";
 export { TicketingOrderByRelevanceFieldEnum } from "./TicketingOrderByRelevanceFieldEnum";
 export { TicketingScalarFieldEnum } from "./TicketingScalarFieldEnum";
+export { TransactionIsolationLevel } from "./TransactionIsolationLevel";
 export { TransactionsOrderByRelevanceFieldEnum } from "./TransactionsOrderByRelevanceFieldEnum";
 export { TransactionsScalarFieldEnum } from "./TransactionsScalarFieldEnum";
 export { Upload_fileOrderByRelevanceFieldEnum } from "./Upload_fileOrderByRelevanceFieldEnum";

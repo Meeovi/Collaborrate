@@ -65,7 +65,7 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxtjs/toast',
     "@nuxtjs/axios", 
-    "@nuxtjs/auth-next",
+    //"@nuxtjs/auth-next",
     'nuxt-i18n',
     {
       src: '@nuxtjs/lunr-module',
@@ -87,10 +87,10 @@ export default {
     },
   ],
   
-  auth: {
+ /* auth: {
     strategies: {
       /* graphql: {
-          scheme: '~/schemes/graphqlScheme.js',}, */
+          scheme: '~/schemes/graphqlScheme.js',},
        github: {
         clientId: '79fea712757bda3742da',
         clientSecret: '8234f74e969e5679478f6639fd9247182ac23a2d'
@@ -103,7 +103,7 @@ export default {
       callback: false,
       home: '/',
     },
-  },
+  }, */
 
   dotenv: {
     path: './' 
