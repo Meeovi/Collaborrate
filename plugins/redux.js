@@ -1,14 +1,14 @@
-import Vue from "vue";
+/* import Vue from "vue";
 import { createStore } from "redux";
 import { connect } from "redux-vuex";
 
-import { reducers, actions } from "./store";
+import { reducers, actions } from "../store";
 
-const store = createStore(reducers);
+const store = createStore();
 
 connect({
   Vue,
   store,
-  actions, // optional
+ // actions,  optional
   binding // optional: public store binding on vue instance (by default 'store')
-});
+}); */

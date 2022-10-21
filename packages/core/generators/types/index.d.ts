@@ -1,4 +1,3 @@
-import commit from 'feathers-vuex';
 // Type definitions for periqles v2.x
 
 // Externally available types
@@ -38,7 +37,7 @@ interface PeriqlesFieldSpecs {
   options?: PeriqlesOptionSpec[];
   render?: (params: {
     formState: FormState,
-    setFormState: Vue.Dispatch<Vue.SetStateAction<FormState>>,
+    setFormState: React.Dispatch<React.SetStateAction<FormState>>,
     handleChange: (e) => void,
   }) => JSX.Element;
   src?: string;
@@ -63,7 +62,7 @@ interface PeriqlesFieldProps {
   formState: FormState;
   handleChange: (e) => void;
   specs?: PeriqlesFieldSpecs;
-  setFormState: Vue.Dispatch<Vue.SetStateAction<FormState>>;
+  setFormState: React.Dispatch<React.SetStateAction<FormState>>;
 }
 
 // input field info introspected from schema
@@ -103,7 +102,7 @@ type GenerateSpecifiedElement = (params: {
   specs: PeriqlesFieldSpecs,
   formState: FormState,
   handleChange: (e) => void,
-  setFormState: Vue.Dispatch<Vue.SetStateAction<FormState>>,
+  setFormState: React.Dispatch<React.SetStateAction<FormState>>,
 }) => JSX.Element;
 
 
