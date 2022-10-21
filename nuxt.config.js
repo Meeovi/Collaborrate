@@ -1,4 +1,3 @@
-// import webpack from 'webpack'
 
 export default {
   target: 'static',
@@ -51,19 +50,15 @@ export default {
     '@nuxtjs/axios',
     'nuxt-client-init-module',
     '@nuxtjs/pwa',
-    //'@nuxtjs/proxy',
     '@nuxtjs/sentry',
-    // '@nuxtjs/recaptcha',
     'nuxt-stripe-module',
     'nuxt-highcharts',
     '@nuxtjs/apollo',
     '@nuxtjs/dotenv',
-    '@nuxtjs/toast',
     "@nuxtjs/axios", 
     //"@nuxtjs/auth-next",
     'nuxt-i18n',
     {
-      src: '@nuxtjs/lunr-module',
       options: {
         includeComponent: true,
         globalComponent: false,
@@ -104,31 +99,13 @@ export default {
     path: './' 
   },
 
-  //proxy: ['http://localhost:4000/graphql'],
-
   // Apollo config
   apollo: {
     clientConfigs: {
-      default: {
-        httpEndpoint: 'http://localhost:4000/graphql',
-      }
+      default: '~/graphql/clientConfig.js'
     },
     watchLoading: '~/plugins/apollo-watch-loading-handler.js',
     errorHandler: '~/plugins/apollo-error-handler.js'
-  },
-
-  toast: {
-    position: 'top-right',
-    duration: 5000,
-    action: {
-      text: 'X',
-      onClick : (e, toastObject) => {
-        toastObject.goAway(0);
-      },
-      class: 'notification'
-    },
-    containerClass: 'theme-light',
-    className: 'notification'
   },
 
   stripe: {
@@ -139,33 +116,20 @@ export default {
     /* module options */
   },
 
- /* router: {
-    middleware: [
-      'feathers'
-    ]
-  }, */
-
   i18n: {
-    detectBrowserLanguage: false,
-    locales: ['en', 'fr', 'af'],
+    locales: ['en', 'fr', 'es'],
     defaultLocale: 'en',
-    strategy: 'prefix_and_default',
     vueI18n: {
+      fallbackLocale: 'en',
       messages: {
         en: {
-          'lunr-module': {
-            placeholderText: 'search'
-          }
+          welcome: 'Welcome'
         },
         fr: {
-          'lunr-module': {
-            placeholderText: 'chercher'
-          }
+          welcome: 'Bienvenue'
         },
-        af: {
-          'lunr-module': {
-            placeholderText: 'zoek'
-          }
+        es: {
+          welcome: 'Bienvenido'
         }
       }
     }
@@ -187,16 +151,6 @@ export default {
     }
   },
 
-  /* recaptcha: {
-          siteKey: process.env.RECAPTCHA_SITE_KEY,
-          version: 3
-        } 
-
-  serverMiddleware: [
-    { path: '/server', handler:'~/server/server' }
-  ],*/
-
-  
   build: {
     transpile: ['vue-instantsearch', 'instantsearch.js/es'],
   },
