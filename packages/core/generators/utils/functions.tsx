@@ -1,5 +1,5 @@
-import * as Vue from 'vue';
-const { PeriqlesFieldInfo, FieldsArrayGenerator, EnumValue, PeriqlesFieldOption, GenerateSpecifiedElement, GenerateDefaultElement } = require('../types/index');
+import * as React from 'react';
+import { PeriqlesFieldInfo, FieldsArrayGenerator, EnumValue, PeriqlesFieldOption, GenerateSpecifiedElement, GenerateDefaultElement } from '../types';
 
 export const introspect = (mutationName, setFields, args) => {
   const inputTypeName: string = mutationName + 'Input';
@@ -180,7 +180,7 @@ export const generateSpecifiedElement: GenerateSpecifiedElement = ({
           {specs.label}
           <input
             type="range"
-            class={field.name + '-range periqles-range'}
+            className={field.name + '-range periqles-range'}
             name={field.name}
             min={specs.min || 0}
             max={specs.max || Infinity}
@@ -196,7 +196,7 @@ export const generateSpecifiedElement: GenerateSpecifiedElement = ({
           {specs.label}
           <input
             type="image"
-            class={field.name + '-image periqles-image'}
+            className={field.name + '-image periqles-image'}
             name={field.name}
             src={specs.src}
             alt={specs.label}
@@ -212,7 +212,7 @@ export const generateSpecifiedElement: GenerateSpecifiedElement = ({
             {specs.label}
             <input
               type="text"
-              class={`${field.name}-radio periqles-radio`}
+              className={`${field.name}-radio periqles-radio`}
               name={field.name}
               value={formState[field.name] as string | number | readonly string[]}
               onChange={handleChange}></input>
@@ -247,22 +247,22 @@ export const generateSpecifiedElement: GenerateSpecifiedElement = ({
           });
       } else {
         // specs didn't provide options
-        radioOptions = field.options!;
+        radioOptions = field.options;
       }
 
       return (
-        <div class={field.name + '-radio periqles-radio'}>
-          <label class="periqles-radio-div-label">{specs.label}</label>
+        <div className={field.name + '-radio periqles-radio'}>
+          <label className="periqles-radio-div-label">{specs.label}</label>
           {radioOptions.map((option, index) => {
             return (
               <label
                 key={`${field.name}radio-label${index}`}
-                class="periqles-radio-option-label">
+                className="periqles-radio-option-label">
                 <input
                   key={`${field.name}radio-btn${index}`}
                   type="radio"
                   name={field.name}
-                  class={field.name + '-radio-option periqles-radio-option'}
+                  className={field.name + '-radio-option periqles-radio-option'}
                   value={option.value as string | number | readonly string[]}
                   onChange={handleChange}
                   // dynamically set initial "checked" attribute based on whether this option's value matches the div's value
@@ -281,7 +281,7 @@ export const generateSpecifiedElement: GenerateSpecifiedElement = ({
             {specs.label}
             <input
               type="text"
-              class={`${field.name}-select periqles-select`}
+              className={`${field.name}-select periqles-select`}
               name={field.name}
               value={formState[field.name] as string | number | readonly string[]}
               onChange={handleChange}></input>
@@ -316,14 +316,14 @@ export const generateSpecifiedElement: GenerateSpecifiedElement = ({
         });
     } else {
       // specs didn't provide options
-      selectOptions = field.options!;
+      selectOptions = field.options;
     }
 
       return (
         <label>
           {specs.label}
           <select
-            class={field.name + '-select periqles-select'}
+            className={field.name + '-select periqles-select'}
             name={field.name}
             // defaultValue={selectOptions[0].value}
             defaultValue={''}
@@ -331,7 +331,7 @@ export const generateSpecifiedElement: GenerateSpecifiedElement = ({
             <option
                 key={`${field.name}selectnulloption`}
                 value={''}
-                class={
+                className={
                   field.name + '-select-option periqles-select-option'
                 }>
                 Choose one...
@@ -341,7 +341,7 @@ export const generateSpecifiedElement: GenerateSpecifiedElement = ({
                 <option
                   key={`${field.name}select${option.name}option${index}`}
                   value={option.value as string | number | readonly string[]}
-                  class={
+                  className={
                     field.name + '-select-option periqles-select-option'
                   }>
                   {option.label}
@@ -357,7 +357,7 @@ export const generateSpecifiedElement: GenerateSpecifiedElement = ({
         <label>
           {specs.label}
           <textarea
-            class={field.name + '-textarea periqles-textarea'}
+            className={field.name + '-textarea periqles-textarea'}
             name={field.name}
             value={formState[field.name] as string | number | readonly string[]}
             onChange={handleChange}
@@ -371,7 +371,7 @@ export const generateSpecifiedElement: GenerateSpecifiedElement = ({
           {specs.label}
           <input
             type="text"
-            class={`${field.name}-text periqles-text`}
+            className={`${field.name}-text periqles-text`}
             name={field.name}
             value={formState[field.name] as string | number | readonly string[]}
             onChange={handleChange}></input>
@@ -399,7 +399,7 @@ export const generateDefaultElement: GenerateDefaultElement = ({field, formState
           {field.label}
           <input
             type="number"
-            class={field.name + '-number periqles-number'}
+            className={field.name + '-number periqles-number'}
             name={field.name}
             value={formState[field.name] as string | number | readonly string[]}
             onChange={handleChange}></input>
@@ -413,7 +413,7 @@ export const generateDefaultElement: GenerateDefaultElement = ({field, formState
           {field.label}
           <input
             type="checkbox"
-            class={field.name + '-checkbox periqles-checkbox'}
+            className={field.name + '-checkbox periqles-checkbox'}
             name={field.name}
             value={formState[field.name] as string | number | readonly string[]}
             onChange={handleChange}></input>
@@ -426,7 +426,7 @@ export const generateDefaultElement: GenerateDefaultElement = ({field, formState
             {field.label}
             <input
               type="text"
-              class={`${field.name}-select periqles-select`}
+              className={`${field.name}-select periqles-select`}
               name={field.name}
               value={formState[field.name] as string | number | readonly string[]}
               onChange={handleChange}></input>
@@ -439,7 +439,7 @@ export const generateDefaultElement: GenerateDefaultElement = ({field, formState
         <label>
           {field.label}
           <select
-            class={field.name + '-select periqles-select'}
+            className={field.name + '-select periqles-select'}
             name={field.name}
             // defaultValue={selectOptions[0].value}
             defaultValue={''}
@@ -447,7 +447,7 @@ export const generateDefaultElement: GenerateDefaultElement = ({field, formState
               <option
                 key={`${field.name}selectnulloption`}
                 value={''}
-                class={
+                className={
                   field.name + '-select-option periqles-select-option'
                 }>
                 Choose one...
@@ -457,7 +457,7 @@ export const generateDefaultElement: GenerateDefaultElement = ({field, formState
                   <option
                     key={`${field.name}select${option.name}option${index}`}
                     value={option.value as string | number | readonly string[]}
-                    class={
+                    className={
                       field.name + '-select-option periqles-select-option'
                     }>
                     {option.label}
@@ -495,7 +495,7 @@ export const generateDefaultElement: GenerateDefaultElement = ({field, formState
           {field.label}
           <input
             type={elementType}
-            class={`${field.name}-${elementType} periqles-${elementType}`}
+            className={`${field.name}-${elementType} periqles-${elementType}`}
             name={field.name}
             value={formState[field.name] as string | number | readonly string[]}
             onChange={handleChange}></input>

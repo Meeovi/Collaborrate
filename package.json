@@ -113,6 +113,7 @@
     "nuxt-stripe-module": "^3.2.0",
     "passport": "^0.6.0",
     "prisma-docs-generator": "^0.5.0",
+    "redux": "^4.2.0",
     "redux-vuex": "^0.3.2",
     "reflect-metadata": "^0.1.13",
     "sass": "^1.54.5",
