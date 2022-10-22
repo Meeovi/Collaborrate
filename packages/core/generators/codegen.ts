@@ -4,10 +4,10 @@ import type { CodegenConfig } from '@graphql-codegen/cli';
 const config: CodegenConfig = {
   overwrite: true,
   schema: "http://localhost:4000/graphql",
-  documents: "../graphql/**/*.gql",
+  documents: "./../graphql/**/*.gql",
   ignoreNoDocuments: true, // for better experience with the watcher
   generates: {
-    "./src/gql": {
+    "./../graphql/generated/": {
       preset: "client",
       config: {
         useTypeImports: true

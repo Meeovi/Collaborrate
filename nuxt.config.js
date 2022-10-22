@@ -1,3 +1,5 @@
+const MAIN_ENDPOINT = 'http://localhost:4000/graphql'
+const WS_ENDPOINT = 'ws://localhost:4000/graphql'
 
 export default {
   target: 'static',
@@ -58,23 +60,6 @@ export default {
     "@nuxtjs/axios", 
     //"@nuxtjs/auth-next",
     'nuxt-i18n',
-    {
-      options: {
-        includeComponent: true,
-        globalComponent: false,
-        css: true,
-        defaultLanguage: 'en',
-        languages: false,
-        path: 'search-index',
-        ref: 'id',
-        fields: [
-          'title',
-          'name',
-          'content',
-          'description'
-        ]
-      }
-    },
   ],
   
  /* auth: {
@@ -102,7 +87,10 @@ export default {
   // Apollo config
   apollo: {
     clientConfigs: {
-      default: '~/graphql/clientConfig.js'
+      default:{
+        httpEndpoint: MAIN_ENDPOINT,
+        wsEndpoint: WS_ENDPOINT
+      }
     },
     watchLoading: '~/plugins/apollo-watch-loading-handler.js',
     errorHandler: '~/plugins/apollo-error-handler.js'
