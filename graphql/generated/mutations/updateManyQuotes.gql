@@ -1,0 +1,5 @@
+mutation updateManyQuotes($data: QuotesUpdateManyMutationInput!, $where: QuotesWhereInput){
+    updateManyQuotes(data: $data, where: $where){
+        count
+    }
+}

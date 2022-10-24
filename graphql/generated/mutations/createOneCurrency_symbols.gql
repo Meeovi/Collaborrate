@@ -1,0 +1,7 @@
+mutation createOneCurrency_symbols($data: Currency_symbolsCreateInput!){
+    createOneCurrency_symbols(data: $data){
+        id
+        symbol
+        use_standard
+    }
+}

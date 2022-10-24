@@ -1,0 +1,47 @@
+query groupByThemes($by: [ThemesScalarFieldEnum!]!, $having: ThemesScalarWhereWithAggregatesInput, $orderBy: [ThemesOrderByWithAggregationInput!], $skip: Int, $take: Int, $where: ThemesWhereInput){
+    groupByThemes(by: $by, having: $having, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+            website_id
+        }
+        _count{
+            _all
+            action
+            id
+            parent_theme
+            theme_path
+            title
+            website_id
+            websites
+        }
+        _max{
+            action
+            id
+            parent_theme
+            theme_path
+            title
+            website_id
+            websites
+        }
+        _min{
+            action
+            id
+            parent_theme
+            theme_path
+            title
+            website_id
+            websites
+        }
+        _sum{
+            id
+            website_id
+        }
+        action
+        id
+        parent_theme
+        theme_path
+        title
+        website_id
+        websites
+    }
+}

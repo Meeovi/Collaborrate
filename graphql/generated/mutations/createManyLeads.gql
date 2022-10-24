@@ -1,0 +1,5 @@
+mutation createManyLeads($data: [LeadsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyLeads(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

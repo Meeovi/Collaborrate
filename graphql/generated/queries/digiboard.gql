@@ -1,0 +1,10 @@
+query digiboard($where: DigiboardWhereUniqueInput!){
+    digiboard(where: $where){
+        board
+        course
+        created_at
+        id
+        name
+        student
+    }
+}

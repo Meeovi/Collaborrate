@@ -1,0 +1,16 @@
+mutation updateOneRewards($data: RewardsUpdateInput!, $where: RewardsWhereUniqueInput!){
+    updateOneRewards(data: $data, where: $where){
+        articles
+        categories
+        coupons
+        created_at
+        customers
+        expiration
+        id
+        level
+        name
+        products
+        slug
+        users
+    }
+}

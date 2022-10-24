@@ -39,7 +39,7 @@
 </template>
 
 <script>
- import  allQuotes from '~/graphql/queries/sales/quotes'
+ import  allQuotes from '~/graphql/generated/queries/findManyQuotes'
 
 export default {
   data() {

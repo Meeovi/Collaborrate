@@ -42,7 +42,7 @@
 </template>
 
 <script>
- import  projects from '~/graphql/queries/content/projects'
+ import  projects from '~/graphql/generated/queries/findManyProjects'
 
 export default {
   data() {

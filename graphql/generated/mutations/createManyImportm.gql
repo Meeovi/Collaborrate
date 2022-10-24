@@ -1,0 +1,5 @@
+mutation createManyImportm($data: [ImportmCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyImportm(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

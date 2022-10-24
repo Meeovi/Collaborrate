@@ -1,0 +1,10 @@
+query apitoken($where: ApitokenWhereUniqueInput!){
+    apitoken(where: $where){
+        created_at
+        description
+        id
+        name
+        token
+        token_type
+    }
+}

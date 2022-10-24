@@ -1,0 +1,15 @@
+mutation upsertOneCustomizations($create: CustomizationsCreateInput!, $update: CustomizationsUpdateInput!, $where: CustomizationsWhereUniqueInput!){
+    upsertOneCustomizations(create: $create, update: $update, where: $where){
+        allow_signup
+        announcement
+        banner
+        created_at
+        email
+        footer_link
+        id
+        nav_link
+        notification
+        site_name
+        site_url
+    }
+}

@@ -1,0 +1,12 @@
+mutation createOneDeepdive($data: DeepdiveCreateInput!){
+    createOneDeepdive(data: $data){
+        attendees
+        content
+        created_at
+        end_date
+        id
+        login
+        start_date
+        whid
+    }
+}

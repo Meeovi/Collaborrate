@@ -1,0 +1,9 @@
+mutation upsertOneCurrencies($create: CurrenciesCreateInput!, $update: CurrenciesUpdateInput!, $where: CurrenciesWhereUniqueInput!){
+    upsertOneCurrencies(create: $create, update: $update, where: $where){
+        code
+        created_at
+        id
+        name
+        region
+    }
+}

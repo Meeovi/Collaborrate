@@ -1,0 +1,5 @@
+mutation deleteManyAgreements($where: AgreementsWhereInput){
+    deleteManyAgreements(where: $where){
+        count
+    }
+}

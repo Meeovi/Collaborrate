@@ -1,0 +1,5 @@
+mutation deleteManyProduct_types($where: Product_typesWhereInput){
+    deleteManyProduct_types(where: $where){
+        count
+    }
+}

@@ -1,0 +1,41 @@
+query aggregateDeepdive($cursor: DeepdiveWhereUniqueInput, $orderBy: [DeepdiveOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: DeepdiveWhereInput){
+    aggregateDeepdive(cursor: $cursor, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+        }
+        _count{
+            _all
+            attendees
+            content
+            created_at
+            end_date
+            id
+            login
+            start_date
+            whid
+        }
+        _max{
+            attendees
+            content
+            created_at
+            end_date
+            id
+            login
+            start_date
+            whid
+        }
+        _min{
+            attendees
+            content
+            created_at
+            end_date
+            id
+            login
+            start_date
+            whid
+        }
+        _sum{
+            id
+        }
+    }
+}

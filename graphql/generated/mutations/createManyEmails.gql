@@ -1,0 +1,5 @@
+mutation createManyEmails($data: [EmailsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyEmails(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

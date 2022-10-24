@@ -50,7 +50,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  ticketings from '~/graphql/queries/marketing/ticketing'
+ import  ticketings from '~/graphql/generated/queries/ticketing'
 
 export default {
   data() {

@@ -1,0 +1,18 @@
+mutation upsertOneBrands($create: BrandsCreateInput!, $update: BrandsUpdateInput!, $where: BrandsWhereUniqueInput!){
+    upsertOneBrands(create: $create, update: $update, where: $where){
+        city
+        code
+        country
+        created_at
+        description
+        id
+        isPublic
+        media
+        mediamanager
+        name
+        product
+        products
+        state
+        workspaces
+    }
+}

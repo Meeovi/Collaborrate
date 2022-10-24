@@ -1,0 +1,5 @@
+mutation deleteManyCountries($where: CountriesWhereInput){
+    deleteManyCountries(where: $where){
+        count
+    }
+}

@@ -1,0 +1,12 @@
+mutation deleteOneSegments($where: SegmentsWhereUniqueInput!){
+    deleteOneSegments(where: $where){
+        apply_to
+        created_at
+        customers
+        description
+        id
+        name
+        status
+        website
+    }
+}

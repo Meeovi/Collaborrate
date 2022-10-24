@@ -1,0 +1,13 @@
+query findUniquePages($where: PagesWhereUniqueInput!){
+    findUniquePages(where: $where){
+        content
+        content_title
+        enable_page
+        id
+        meta_description
+        meta_keywords
+        meta_title
+        title
+        url_key
+    }
+}

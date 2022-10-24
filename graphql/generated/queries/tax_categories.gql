@@ -1,0 +1,8 @@
+query tax_categories($cursor: Tax_categoryWhereUniqueInput, $distinct: [Tax_categoryScalarFieldEnum!], $orderBy: [Tax_categoryOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Tax_categoryWhereInput){
+    tax_categories(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        created_at
+        default
+        id
+        name
+    }
+}

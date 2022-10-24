@@ -1,0 +1,5 @@
+mutation createManyContent_type($data: [Content_typeCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyContent_type(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

@@ -1,0 +1,5 @@
+mutation createManyTemplates($data: [TemplatesCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyTemplates(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

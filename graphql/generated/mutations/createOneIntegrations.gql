@@ -1,0 +1,11 @@
+mutation createOneIntegrations($data: IntegrationsCreateInput!){
+    createOneIntegrations(data: $data){
+        category
+        content
+        created_at
+        id
+        location
+        media
+        name
+    }
+}

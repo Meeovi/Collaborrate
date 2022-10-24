@@ -1,0 +1,5 @@
+mutation updateManyChecklist($data: ChecklistUpdateManyMutationInput!, $where: ChecklistWhereInput){
+    updateManyChecklist(data: $data, where: $where){
+        count
+    }
+}

@@ -1,0 +1,10 @@
+mutation upsertOneStocks($create: StocksCreateInput!, $update: StocksUpdateInput!, $where: StocksWhereUniqueInput!){
+    upsertOneStocks(create: $create, update: $update, where: $where){
+        description
+        enabled
+        id
+        name
+        sources
+        website
+    }
+}

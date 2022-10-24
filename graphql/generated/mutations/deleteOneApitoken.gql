@@ -1,0 +1,10 @@
+mutation deleteOneApitoken($where: ApitokenWhereUniqueInput!){
+    deleteOneApitoken(where: $where){
+        created_at
+        description
+        id
+        name
+        token
+        token_type
+    }
+}

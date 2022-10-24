@@ -1,0 +1,5 @@
+mutation deleteManyChecklist($where: ChecklistWhereInput){
+    deleteManyChecklist(where: $where){
+        count
+    }
+}

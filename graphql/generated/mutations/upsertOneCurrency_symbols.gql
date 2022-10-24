@@ -1,0 +1,7 @@
+mutation upsertOneCurrency_symbols($create: Currency_symbolsCreateInput!, $update: Currency_symbolsUpdateInput!, $where: Currency_symbolsWhereUniqueInput!){
+    upsertOneCurrency_symbols(create: $create, update: $update, where: $where){
+        id
+        symbol
+        use_standard
+    }
+}

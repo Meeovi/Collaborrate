@@ -1,0 +1,5 @@
+mutation deleteManyQuotes($where: QuotesWhereInput){
+    deleteManyQuotes(where: $where){
+        count
+    }
+}

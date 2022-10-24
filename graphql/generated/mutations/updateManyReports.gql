@@ -1,0 +1,5 @@
+mutation updateManyReports($data: ReportsUpdateManyMutationInput!, $where: ReportsWhereInput){
+    updateManyReports(data: $data, where: $where){
+        count
+    }
+}

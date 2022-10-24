@@ -1,0 +1,20 @@
+query findManyArticles($cursor: ArticlesWhereUniqueInput, $distinct: [ArticlesScalarFieldEnum!], $orderBy: [ArticlesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ArticlesWhereInput){
+    findManyArticles(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        categories
+        content
+        cust_id
+        customers
+        excerpt
+        id
+        image
+        isPublic
+        meta_description
+        meta_name
+        meta_url
+        name
+        published
+        tags
+        type
+        users
+    }
+}

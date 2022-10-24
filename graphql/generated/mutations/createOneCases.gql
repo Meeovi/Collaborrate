@@ -1,0 +1,17 @@
+mutation createOneCases($data: CasesCreateInput!){
+    createOneCases(data: $data){
+        account_name
+        assigned_to
+        case_number
+        created_at
+        date_modified
+        description
+        id
+        priority
+        resolution
+        state
+        status
+        subject
+        type
+    }
+}

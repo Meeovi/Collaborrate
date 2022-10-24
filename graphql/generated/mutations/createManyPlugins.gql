@@ -1,0 +1,5 @@
+mutation createManyPlugins($data: [PluginsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyPlugins(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

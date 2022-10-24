@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import findManyAgreements from '~/graphql/queries/sales/agreements'
+import findManyAgreements from '~/graphql/generated/queries/findManyAgreements' 
 
 export default {
   data () {

@@ -1,0 +1,12 @@
+mutation updateOneOoto($data: OotoUpdateInput!, $where: OotoWhereUniqueInput!){
+    updateOneOoto(data: $data, where: $where){
+        created_at
+        end_date
+        id
+        location
+        login
+        note
+        start_date
+        using_time
+    }
+}

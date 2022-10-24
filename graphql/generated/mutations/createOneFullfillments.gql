@@ -1,0 +1,19 @@
+mutation createOneFullfillments($data: FullfillmentsCreateInput!){
+    createOneFullfillments(data: $data){
+        address
+        address_two
+        city
+        company
+        country
+        country_area
+        created_at
+        id
+        name
+        phone
+        pickup
+        shipping_zones
+        state
+        stock
+        zipcode
+    }
+}

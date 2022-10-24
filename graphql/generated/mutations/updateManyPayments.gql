@@ -1,0 +1,5 @@
+mutation updateManyPayments($data: PaymentsUpdateManyMutationInput!, $where: PaymentsWhereInput){
+    updateManyPayments(data: $data, where: $where){
+        count
+    }
+}

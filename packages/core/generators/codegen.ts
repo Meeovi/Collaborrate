@@ -6,6 +6,7 @@ const config: CodegenConfig = {
   schema: "http://localhost:4000/graphql",
   documents: "./../graphql/**/*.gql",
   ignoreNoDocuments: true, // for better experience with the watcher
+  watch: true,
   generates: {
     "./../graphql/generated/": {
       preset: "client",

@@ -1,0 +1,5 @@
+mutation createManyShipments($data: [ShipmentsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyShipments(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

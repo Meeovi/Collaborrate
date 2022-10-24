@@ -1,0 +1,14 @@
+mutation updateOneProduct_types($data: Product_typesUpdateInput!, $where: Product_typesWhereUniqueInput!){
+    updateOneProduct_types(data: $data, where: $where){
+        filter_options
+        id
+        isShippable
+        meta_description
+        meta_url
+        prod_id
+        product_type
+        products
+        taxes
+        type_name
+    }
+}

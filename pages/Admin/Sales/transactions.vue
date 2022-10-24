@@ -31,7 +31,7 @@
 </template>
 
 <script>
- import  findManyTransactions from '~/graphql/queries/sales/transactions'
+ import  findManyTransactions from '~/graphql/generated/queries/findManyTransactions'
 
 export default {
   data() {

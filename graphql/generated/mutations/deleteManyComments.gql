@@ -1,0 +1,5 @@
+mutation deleteManyComments($where: CommentsWhereInput){
+    deleteManyComments(where: $where){
+        count
+    }
+}

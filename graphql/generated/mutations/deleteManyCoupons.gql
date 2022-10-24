@@ -1,0 +1,5 @@
+mutation deleteManyCoupons($where: CouponsWhereInput){
+    deleteManyCoupons(where: $where){
+        count
+    }
+}

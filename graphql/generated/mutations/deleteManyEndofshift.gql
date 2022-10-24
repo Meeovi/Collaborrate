@@ -1,0 +1,5 @@
+mutation deleteManyEndofshift($where: EndofshiftWhereInput){
+    deleteManyEndofshift(where: $where){
+        count
+    }
+}

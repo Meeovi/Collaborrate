@@ -1,0 +1,17 @@
+mutation createOneMeeting($data: MeetingCreateInput!){
+    createOneMeeting(data: $data){
+        assigned_to
+        content
+        created_at
+        duration
+        end_date
+        id
+        invitees
+        related_to
+        reminders
+        scheduling
+        start_date
+        status
+        subject
+    }
+}

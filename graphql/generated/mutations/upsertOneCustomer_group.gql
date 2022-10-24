@@ -1,0 +1,13 @@
+mutation upsertOneCustomer_group($create: Customer_groupCreateInput!, $update: Customer_groupUpdateInput!, $where: Customer_groupWhereUniqueInput!){
+    upsertOneCustomer_group(create: $create, update: $update, where: $where){
+        content
+        coverPhoto
+        created_at
+        cust_id
+        customers
+        id
+        image
+        name
+        tax_class
+    }
+}

@@ -1,0 +1,5 @@
+mutation createManyCategories($data: [CategoriesCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyCategories(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

@@ -1,0 +1,13 @@
+mutation createOneCollections($data: CollectionsCreateInput!){
+    createOneCollections(data: $data){
+        created_at
+        description
+        id
+        image
+        meta_description
+        meta_keywords
+        meta_title
+        name
+        product
+    }
+}

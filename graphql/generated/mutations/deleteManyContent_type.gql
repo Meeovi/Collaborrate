@@ -1,0 +1,5 @@
+mutation deleteManyContent_type($where: Content_typeWhereInput){
+    deleteManyContent_type(where: $where){
+        count
+    }
+}

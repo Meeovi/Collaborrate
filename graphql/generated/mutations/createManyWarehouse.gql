@@ -1,0 +1,5 @@
+mutation createManyWarehouse($data: [WarehouseCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyWarehouse(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

@@ -1,0 +1,16 @@
+mutation deleteOneEmails($where: EmailsWhereUniqueInput!){
+    deleteOneEmails(where: $where){
+        bcc
+        cc
+        content
+        created_at
+        cust_id
+        customers
+        from
+        id
+        media
+        staff_id
+        subject
+        users
+    }
+}

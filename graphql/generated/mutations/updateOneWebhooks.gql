@@ -1,0 +1,15 @@
+mutation updateOneWebhooks($data: WebhooksUpdateInput!, $where: WebhooksWhereUniqueInput!){
+    updateOneWebhooks(data: $data, where: $where){
+        create
+        created_at
+        delete
+        headers
+        id
+        name
+        publish
+        retrieve
+        unpublish
+        update
+        url
+    }
+}

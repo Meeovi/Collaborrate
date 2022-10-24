@@ -1,0 +1,13 @@
+mutation updateOnePages($data: PagesUpdateInput!, $where: PagesWhereUniqueInput!){
+    updateOnePages(data: $data, where: $where){
+        content
+        content_title
+        enable_page
+        id
+        meta_description
+        meta_keywords
+        meta_title
+        title
+        url_key
+    }
+}

@@ -1,0 +1,5 @@
+mutation deleteManyProjects($where: ProjectsWhereInput){
+    deleteManyProjects(where: $where){
+        count
+    }
+}

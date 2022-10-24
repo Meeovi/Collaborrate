@@ -1,0 +1,5 @@
+mutation deleteManyAttributes($where: AttributesWhereInput){
+    deleteManyAttributes(where: $where){
+        count
+    }
+}

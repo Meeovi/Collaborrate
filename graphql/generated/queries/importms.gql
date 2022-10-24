@@ -1,0 +1,11 @@
+query importms($cursor: ImportmWhereUniqueInput, $distinct: [ImportmScalarFieldEnum!], $orderBy: [ImportmOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ImportmWhereInput){
+    importms(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        created_at
+        description
+        file
+        id
+        image
+        name
+        url
+    }
+}

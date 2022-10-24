@@ -1,0 +1,5 @@
+mutation updateManyWorkspaces($data: WorkspacesUpdateManyMutationInput!, $where: WorkspacesWhereInput){
+    updateManyWorkspaces(data: $data, where: $where){
+        count
+    }
+}

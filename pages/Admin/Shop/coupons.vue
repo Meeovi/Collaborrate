@@ -36,7 +36,7 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import  coupons from '~/graphql/queries/shop/coupons'
+import  coupons from '~/graphql/generated/queries/findManyCoupons'
 
 export default {
   data() {

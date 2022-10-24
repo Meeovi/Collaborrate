@@ -1,0 +1,5 @@
+mutation updateManyIntegrations($data: IntegrationsUpdateManyMutationInput!, $where: IntegrationsWhereInput){
+    updateManyIntegrations(data: $data, where: $where){
+        count
+    }
+}

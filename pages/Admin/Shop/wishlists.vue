@@ -37,7 +37,7 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import  wishlists from '~/graphql/queries/shop/wishlists'
+import  wishlists from '~/graphql/generated/queries/findManyWishlists'
 
 export default {
   data() {

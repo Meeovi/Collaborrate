@@ -1,0 +1,15 @@
+query findUniqueVisits($where: VisitsWhereUniqueInput!){
+    findUniqueVisits(where: $where){
+        content
+        created_at
+        emergency
+        end_date
+        id
+        location
+        meeting
+        reason
+        start_date
+        task
+        username
+    }
+}

@@ -1,0 +1,12 @@
+query ootos($cursor: OotoWhereUniqueInput, $distinct: [OotoScalarFieldEnum!], $orderBy: [OotoOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: OotoWhereInput){
+    ootos(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        created_at
+        end_date
+        id
+        location
+        login
+        note
+        start_date
+        using_time
+    }
+}

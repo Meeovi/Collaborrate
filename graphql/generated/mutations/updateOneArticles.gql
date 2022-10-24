@@ -1,0 +1,20 @@
+mutation updateOneArticles($data: ArticlesUpdateInput!, $where: ArticlesWhereUniqueInput!){
+    updateOneArticles(data: $data, where: $where){
+        categories
+        content
+        cust_id
+        customers
+        excerpt
+        id
+        image
+        isPublic
+        meta_description
+        meta_name
+        meta_url
+        name
+        published
+        tags
+        type
+        users
+    }
+}

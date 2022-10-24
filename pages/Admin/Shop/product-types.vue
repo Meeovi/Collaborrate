@@ -34,7 +34,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  product_types from '~/graphql/queries/shop/product-type'
+ import  product_types from '~/graphql/generated/queries/findManyProduct_types'
 
 export default {
   data() {

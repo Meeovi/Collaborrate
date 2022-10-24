@@ -34,7 +34,7 @@
 
 <script>
 
- import  findManySegments from '~/graphql/queries/customers/segments'
+ import  findManySegments from '~/graphql/generated/queries/findManySegments'
 
 export default {
    data() {

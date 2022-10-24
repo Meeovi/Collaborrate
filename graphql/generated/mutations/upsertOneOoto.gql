@@ -1,0 +1,12 @@
+mutation upsertOneOoto($create: OotoCreateInput!, $update: OotoUpdateInput!, $where: OotoWhereUniqueInput!){
+    upsertOneOoto(create: $create, update: $update, where: $where){
+        created_at
+        end_date
+        id
+        location
+        login
+        note
+        start_date
+        using_time
+    }
+}

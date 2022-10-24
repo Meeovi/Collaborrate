@@ -1,0 +1,5 @@
+mutation deleteManyCustomer_group($where: Customer_groupWhereInput){
+    deleteManyCustomer_group(where: $where){
+        count
+    }
+}

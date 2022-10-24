@@ -1,0 +1,22 @@
+mutation deleteOneAnalytics($where: AnalyticsWhereUniqueInput!){
+    deleteOneAnalytics(where: $where){
+        category
+        client_id
+        client_secret
+        country
+        created_at
+        data_collection
+        data_retention
+        default_view
+        id
+        name
+        property_hit
+        property_name
+        search_analytics
+        share_data
+        tracking_code
+        tracking_id
+        url
+        website_name
+    }
+}

@@ -1,0 +1,44 @@
+query aggregatePages($cursor: PagesWhereUniqueInput, $orderBy: [PagesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: PagesWhereInput){
+    aggregatePages(cursor: $cursor, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+        }
+        _count{
+            _all
+            content
+            content_title
+            enable_page
+            id
+            meta_description
+            meta_keywords
+            meta_title
+            title
+            url_key
+        }
+        _max{
+            content
+            content_title
+            enable_page
+            id
+            meta_description
+            meta_keywords
+            meta_title
+            title
+            url_key
+        }
+        _min{
+            content
+            content_title
+            enable_page
+            id
+            meta_description
+            meta_keywords
+            meta_title
+            title
+            url_key
+        }
+        _sum{
+            id
+        }
+    }
+}

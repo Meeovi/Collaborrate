@@ -1,0 +1,5 @@
+mutation createManyOrders($data: [OrdersCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyOrders(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

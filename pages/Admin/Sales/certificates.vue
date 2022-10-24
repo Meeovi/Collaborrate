@@ -38,7 +38,7 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import  gift_certificates from '~/graphql/queries/sales/gift_certificates'
+import  gift_certificates from '~/graphql/generated/queries/findManyGift_certificates'
 
 export default {
   data() {

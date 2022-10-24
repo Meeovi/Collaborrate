@@ -1,0 +1,15 @@
+mutation upsertOneVisits($create: VisitsCreateInput!, $update: VisitsUpdateInput!, $where: VisitsWhereUniqueInput!){
+    upsertOneVisits(create: $create, update: $update, where: $where){
+        content
+        created_at
+        emergency
+        end_date
+        id
+        location
+        meeting
+        reason
+        start_date
+        task
+        username
+    }
+}

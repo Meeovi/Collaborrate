@@ -1,0 +1,20 @@
+mutation deleteOneGift_certificates($where: Gift_certificatesWhereUniqueInput!){
+    deleteOneGift_certificates(where: $where){
+        articles
+        categories
+        coupons
+        customers
+        discount
+        excerpt
+        expiration
+        id
+        image
+        name
+        products
+        published
+        rewards
+        special_offers
+        type
+        users
+    }
+}

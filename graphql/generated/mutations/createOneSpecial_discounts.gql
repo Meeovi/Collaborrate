@@ -1,0 +1,18 @@
+mutation createOneSpecial_discounts($data: Special_discountsCreateInput!){
+    createOneSpecial_discounts(data: $data){
+        articles
+        categories
+        coupons
+        customers
+        discount
+        excerpt
+        expiration
+        id
+        image
+        name
+        products
+        published
+        rewards
+        users
+    }
+}

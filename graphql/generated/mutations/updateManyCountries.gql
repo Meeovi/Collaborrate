@@ -1,0 +1,5 @@
+mutation updateManyCountries($data: CountriesUpdateManyMutationInput!, $where: CountriesWhereInput){
+    updateManyCountries(data: $data, where: $where){
+        count
+    }
+}

@@ -1,0 +1,12 @@
+mutation updateOneWebsites($data: WebsitesUpdateInput!, $where: WebsitesWhereUniqueInput!){
+    updateOneWebsites(data: $data, where: $where){
+        category
+        created_at
+        id
+        name
+        shop
+        store
+        themes
+        url
+    }
+}

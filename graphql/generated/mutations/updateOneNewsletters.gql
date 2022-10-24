@@ -1,0 +1,14 @@
+mutation updateOneNewsletters($data: NewslettersUpdateInput!, $where: NewslettersWhereUniqueInput!){
+    updateOneNewsletters(data: $data, where: $where){
+        created_at
+        cust_id
+        customer_first_name
+        customer_last_name
+        customers
+        email
+        id
+        status
+        store
+        websites
+    }
+}

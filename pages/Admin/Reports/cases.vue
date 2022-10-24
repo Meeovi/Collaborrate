@@ -39,7 +39,7 @@
 </template>
 
 <script>
- import  cases from '~/graphql/queries/reports/cases'
+ import  cases from '~/graphql/generated/queries/findManyCases'
 
 export default {
   data() {

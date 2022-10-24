@@ -1,0 +1,10 @@
+mutation createOneCountries($data: CountriesCreateInput!){
+    createOneCountries(data: $data){
+        description
+        id
+        image
+        name
+        region
+        trainings
+    }
+}

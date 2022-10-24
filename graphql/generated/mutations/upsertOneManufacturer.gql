@@ -1,0 +1,16 @@
+mutation upsertOneManufacturer($create: ManufacturerCreateInput!, $update: ManufacturerUpdateInput!, $where: ManufacturerWhereUniqueInput!){
+    upsertOneManufacturer(create: $create, update: $update, where: $where){
+        city
+        code
+        country
+        created_at
+        description
+        id
+        isPublic
+        media
+        name
+        product
+        products
+        state
+    }
+}

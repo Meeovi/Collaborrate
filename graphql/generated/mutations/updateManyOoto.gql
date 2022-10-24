@@ -1,0 +1,5 @@
+mutation updateManyOoto($data: OotoUpdateManyMutationInput!, $where: OotoWhereInput){
+    updateManyOoto(data: $data, where: $where){
+        count
+    }
+}

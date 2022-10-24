@@ -1,0 +1,5 @@
+mutation updateManyGlossary($data: GlossaryUpdateManyMutationInput!, $where: GlossaryWhereInput){
+    updateManyGlossary(data: $data, where: $where){
+        count
+    }
+}

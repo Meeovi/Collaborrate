@@ -1,0 +1,9 @@
+mutation deleteOneCurrencies($where: CurrenciesWhereUniqueInput!){
+    deleteOneCurrencies(where: $where){
+        code
+        created_at
+        id
+        name
+        region
+    }
+}

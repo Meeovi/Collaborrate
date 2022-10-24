@@ -1,0 +1,11 @@
+mutation upsertOneCities($create: CitiesCreateInput!, $update: CitiesUpdateInput!, $where: CitiesWhereUniqueInput!){
+    upsertOneCities(create: $create, update: $update, where: $where){
+        country
+        description
+        id
+        image
+        name
+        postalCode
+        state
+    }
+}

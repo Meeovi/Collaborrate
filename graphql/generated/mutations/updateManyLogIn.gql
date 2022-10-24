@@ -1,0 +1,5 @@
+mutation updateManyLogIn($data: LogInUpdateManyMutationInput!, $where: LogInWhereInput){
+    updateManyLogIn(data: $data, where: $where){
+        count
+    }
+}

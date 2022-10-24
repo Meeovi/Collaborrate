@@ -38,7 +38,7 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import  allOrders from '~/graphql/queries/sales/orders'
+import  allOrders from '~/graphql/generated/queries/findManyOrders'
 
 export default {
   data() {

@@ -1,0 +1,17 @@
+mutation upsertOneCatalog_price_rule($create: Catalog_price_ruleCreateInput!, $update: Catalog_price_ruleUpdateInput!, $where: Catalog_price_ruleWhereUniqueInput!){
+    upsertOneCatalog_price_rule(create: $create, update: $update, where: $where){
+        actions_apply
+        actions_discard_subsequent_rules
+        actions_discount_amount
+        active
+        customer_groups
+        description
+        end_date
+        id
+        priority
+        rule
+        start_date
+        status
+        website
+    }
+}

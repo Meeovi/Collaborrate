@@ -1,0 +1,5 @@
+mutation createManyCollections($data: [CollectionsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyCollections(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

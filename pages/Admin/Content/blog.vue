@@ -37,7 +37,7 @@
 </template>
 
 <script>
- import findManyArticles from '~/graphql/queries/content/articles'
+ import findManyArticles from '~/graphql/generated/queries/findManyArticles'
 
 export default {
   data() {

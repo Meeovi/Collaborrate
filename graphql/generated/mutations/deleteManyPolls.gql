@@ -1,0 +1,5 @@
+mutation deleteManyPolls($where: PollsWhereInput){
+    deleteManyPolls(where: $where){
+        count
+    }
+}

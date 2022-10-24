@@ -1,0 +1,41 @@
+query aggregateZones($cursor: ZonesWhereUniqueInput, $orderBy: [ZonesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ZonesWhereInput){
+    aggregateZones(cursor: $cursor, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+        }
+        _count{
+            _all
+            code
+            country
+            created_at
+            id
+            name
+            scope
+            type
+            updated_at
+        }
+        _max{
+            code
+            country
+            created_at
+            id
+            name
+            scope
+            type
+            updated_at
+        }
+        _min{
+            code
+            country
+            created_at
+            id
+            name
+            scope
+            type
+            updated_at
+        }
+        _sum{
+            id
+        }
+    }
+}

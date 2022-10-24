@@ -1,0 +1,5 @@
+mutation updateManyStatistics($data: StatisticsUpdateManyMutationInput!, $where: StatisticsWhereInput){
+    updateManyStatistics(data: $data, where: $where){
+        count
+    }
+}

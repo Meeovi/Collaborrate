@@ -1,0 +1,5 @@
+mutation updateManyAnalytics($data: AnalyticsUpdateManyMutationInput!, $where: AnalyticsWhereInput){
+    updateManyAnalytics(data: $data, where: $where){
+        count
+    }
+}

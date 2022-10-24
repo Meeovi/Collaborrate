@@ -1,0 +1,35 @@
+query aggregateStocks($cursor: StocksWhereUniqueInput, $orderBy: [StocksOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: StocksWhereInput){
+    aggregateStocks(cursor: $cursor, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+        }
+        _count{
+            _all
+            description
+            enabled
+            id
+            name
+            sources
+            website
+        }
+        _max{
+            description
+            enabled
+            id
+            name
+            sources
+            website
+        }
+        _min{
+            description
+            enabled
+            id
+            name
+            sources
+            website
+        }
+        _sum{
+            id
+        }
+    }
+}

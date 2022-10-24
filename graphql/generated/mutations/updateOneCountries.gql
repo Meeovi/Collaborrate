@@ -1,0 +1,10 @@
+mutation updateOneCountries($data: CountriesUpdateInput!, $where: CountriesWhereUniqueInput!){
+    updateOneCountries(data: $data, where: $where){
+        description
+        id
+        image
+        name
+        region
+        trainings
+    }
+}

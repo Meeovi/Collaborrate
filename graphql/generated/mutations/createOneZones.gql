@@ -1,0 +1,12 @@
+mutation createOneZones($data: ZonesCreateInput!){
+    createOneZones(data: $data){
+        code
+        country
+        created_at
+        id
+        name
+        scope
+        type
+        updated_at
+    }
+}

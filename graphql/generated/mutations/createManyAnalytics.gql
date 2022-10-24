@@ -1,0 +1,5 @@
+mutation createManyAnalytics($data: [AnalyticsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyAnalytics(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

@@ -1,0 +1,23 @@
+mutation deleteOneUpload_file($where: Upload_fileWhereUniqueInput!){
+    deleteOneUpload_file(where: $where){
+        alternativeText
+        caption
+        created_at
+        created_by
+        ext
+        formats
+        hash
+        height
+        id
+        mime
+        name
+        previewUrl
+        provider
+        provider_metadata
+        size
+        updated_at
+        updated_by
+        url
+        width
+    }
+}

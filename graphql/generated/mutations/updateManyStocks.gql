@@ -1,0 +1,5 @@
+mutation updateManyStocks($data: StocksUpdateManyMutationInput!, $where: StocksWhereInput){
+    updateManyStocks(data: $data, where: $where){
+        count
+    }
+}

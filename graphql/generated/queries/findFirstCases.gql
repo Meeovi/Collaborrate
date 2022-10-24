@@ -1,0 +1,17 @@
+query findFirstCases($cursor: CasesWhereUniqueInput, $distinct: [CasesScalarFieldEnum!], $orderBy: [CasesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CasesWhereInput){
+    findFirstCases(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        account_name
+        assigned_to
+        case_number
+        created_at
+        date_modified
+        description
+        id
+        priority
+        resolution
+        state
+        status
+        subject
+        type
+    }
+}

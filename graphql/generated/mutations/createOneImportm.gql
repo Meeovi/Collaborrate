@@ -1,0 +1,11 @@
+mutation createOneImportm($data: ImportmCreateInput!){
+    createOneImportm(data: $data){
+        created_at
+        description
+        file
+        id
+        image
+        name
+        url
+    }
+}

@@ -1,0 +1,10 @@
+mutation deleteOneStocks($where: StocksWhereUniqueInput!){
+    deleteOneStocks(where: $where){
+        description
+        enabled
+        id
+        name
+        sources
+        website
+    }
+}

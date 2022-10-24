@@ -1,0 +1,5 @@
+mutation updateManyRoles($data: RolesUpdateManyMutationInput!, $where: RolesWhereInput){
+    updateManyRoles(data: $data, where: $where){
+        count
+    }
+}

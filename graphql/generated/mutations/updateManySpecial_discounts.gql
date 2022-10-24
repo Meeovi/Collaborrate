@@ -1,0 +1,5 @@
+mutation updateManySpecial_discounts($data: Special_discountsUpdateManyMutationInput!, $where: Special_discountsWhereInput){
+    updateManySpecial_discounts(data: $data, where: $where){
+        count
+    }
+}

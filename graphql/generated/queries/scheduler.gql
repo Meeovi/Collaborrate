@@ -1,0 +1,12 @@
+query scheduler($where: SchedulerWhereUniqueInput!){
+    scheduler(where: $where){
+        created_at
+        end_date
+        id
+        level
+        login
+        notes
+        start_date
+        whid
+    }
+}

@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import  findManyPages from '~/graphql/queries/content/pages'
+import  findManyPages from '~/graphql/generated/queries/findManyPages'
 
 export default {
   data() {

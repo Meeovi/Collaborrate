@@ -1,0 +1,44 @@
+query aggregateCollections($cursor: CollectionsWhereUniqueInput, $orderBy: [CollectionsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CollectionsWhereInput){
+    aggregateCollections(cursor: $cursor, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+        }
+        _count{
+            _all
+            created_at
+            description
+            id
+            image
+            meta_description
+            meta_keywords
+            meta_title
+            name
+            product
+        }
+        _max{
+            created_at
+            description
+            id
+            image
+            meta_description
+            meta_keywords
+            meta_title
+            name
+            product
+        }
+        _min{
+            created_at
+            description
+            id
+            image
+            meta_description
+            meta_keywords
+            meta_title
+            name
+            product
+        }
+        _sum{
+            id
+        }
+    }
+}

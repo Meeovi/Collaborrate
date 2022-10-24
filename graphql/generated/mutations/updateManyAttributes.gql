@@ -1,0 +1,5 @@
+mutation updateManyAttributes($data: AttributesUpdateManyMutationInput!, $where: AttributesWhereInput){
+    updateManyAttributes(data: $data, where: $where){
+        count
+    }
+}

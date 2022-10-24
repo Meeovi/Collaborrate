@@ -32,7 +32,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import reviews from '~/graphql/queries/marketing/reviews'
+ import reviews from '~/graphql/generated/queries/findManyReviews'
 
 export default {
   data() {

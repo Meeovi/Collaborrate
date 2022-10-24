@@ -1,0 +1,31 @@
+query groupByCurrency_rates($by: [Currency_ratesScalarFieldEnum!]!, $having: Currency_ratesScalarWhereWithAggregatesInput, $orderBy: [Currency_ratesOrderByWithAggregationInput!], $skip: Int, $take: Int, $where: Currency_ratesWhereInput){
+    groupByCurrency_rates(by: $by, having: $having, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+            usd
+        }
+        _count{
+            _all
+            id
+            import_service
+            usd
+        }
+        _max{
+            id
+            import_service
+            usd
+        }
+        _min{
+            id
+            import_service
+            usd
+        }
+        _sum{
+            id
+            usd
+        }
+        id
+        import_service
+        usd
+    }
+}

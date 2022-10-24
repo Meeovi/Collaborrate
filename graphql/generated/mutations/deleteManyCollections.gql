@@ -1,0 +1,5 @@
+mutation deleteManyCollections($where: CollectionsWhereInput){
+    deleteManyCollections(where: $where){
+        count
+    }
+}

@@ -1,0 +1,11 @@
+mutation upsertOneThemes($create: ThemesCreateInput!, $update: ThemesUpdateInput!, $where: ThemesWhereUniqueInput!){
+    upsertOneThemes(create: $create, update: $update, where: $where){
+        action
+        id
+        parent_theme
+        theme_path
+        title
+        website_id
+        websites
+    }
+}

@@ -1,0 +1,5 @@
+mutation updateManyContent_type($data: Content_typeUpdateManyMutationInput!, $where: Content_typeWhereInput){
+    updateManyContent_type(data: $data, where: $where){
+        count
+    }
+}

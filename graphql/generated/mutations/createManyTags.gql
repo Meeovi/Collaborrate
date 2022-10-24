@@ -1,0 +1,5 @@
+mutation createManyTags($data: [TagsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyTags(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

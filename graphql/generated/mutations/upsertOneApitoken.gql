@@ -1,0 +1,10 @@
+mutation upsertOneApitoken($create: ApitokenCreateInput!, $update: ApitokenUpdateInput!, $where: ApitokenWhereUniqueInput!){
+    upsertOneApitoken(create: $create, update: $update, where: $where){
+        created_at
+        description
+        id
+        name
+        token
+        token_type
+    }
+}

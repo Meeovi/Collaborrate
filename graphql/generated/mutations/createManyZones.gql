@@ -1,0 +1,5 @@
+mutation createManyZones($data: [ZonesCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyZones(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

@@ -1,0 +1,20 @@
+query content_types($cursor: Content_typeWhereUniqueInput, $distinct: [Content_typeScalarFieldEnum!], $orderBy: [Content_typeOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Content_typeWhereInput){
+    content_types(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        boolean
+        created_at
+        database_name
+        date
+        email
+        id
+        json
+        link
+        media
+        number
+        password
+        rich_text
+        text
+        time
+        timestamp
+        uid
+    }
+}

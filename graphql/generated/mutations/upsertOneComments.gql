@@ -1,0 +1,14 @@
+mutation upsertOneComments($create: CommentsCreateInput!, $update: CommentsUpdateInput!, $where: CommentsWhereUniqueInput!){
+    upsertOneComments(create: $create, update: $update, where: $where){
+        cust_id
+        customer_name
+        customers
+        description
+        id
+        image
+        mediamanager
+        published
+        response
+        trainings
+    }
+}

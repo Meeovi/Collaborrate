@@ -1,0 +1,11 @@
+query findUniqueCities($where: CitiesWhereUniqueInput!){
+    findUniqueCities(where: $where){
+        country
+        description
+        id
+        image
+        name
+        postalCode
+        state
+    }
+}

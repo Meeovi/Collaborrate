@@ -1,0 +1,5 @@
+mutation createManyCountries($data: [CountriesCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyCountries(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

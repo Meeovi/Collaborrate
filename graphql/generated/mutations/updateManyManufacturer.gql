@@ -1,0 +1,5 @@
+mutation updateManyManufacturer($data: ManufacturerUpdateManyMutationInput!, $where: ManufacturerWhereInput){
+    updateManyManufacturer(data: $data, where: $where){
+        count
+    }
+}

@@ -1,0 +1,5 @@
+mutation deleteManyTargets($where: TargetsWhereInput){
+    deleteManyTargets(where: $where){
+        count
+    }
+}

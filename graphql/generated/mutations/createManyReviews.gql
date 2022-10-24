@@ -1,0 +1,5 @@
+mutation createManyReviews($data: [ReviewsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyReviews(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

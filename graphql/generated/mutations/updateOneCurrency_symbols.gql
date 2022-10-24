@@ -1,0 +1,7 @@
+mutation updateOneCurrency_symbols($data: Currency_symbolsUpdateInput!, $where: Currency_symbolsWhereUniqueInput!){
+    updateOneCurrency_symbols(data: $data, where: $where){
+        id
+        symbol
+        use_standard
+    }
+}

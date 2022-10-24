@@ -1,0 +1,5 @@
+mutation deleteManyGift_certificates($where: Gift_certificatesWhereInput){
+    deleteManyGift_certificates(where: $where){
+        count
+    }
+}

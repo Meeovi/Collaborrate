@@ -1,0 +1,14 @@
+mutation upsertOneNewsletters($create: NewslettersCreateInput!, $update: NewslettersUpdateInput!, $where: NewslettersWhereUniqueInput!){
+    upsertOneNewsletters(create: $create, update: $update, where: $where){
+        created_at
+        cust_id
+        customer_first_name
+        customer_last_name
+        customers
+        email
+        id
+        status
+        store
+        websites
+    }
+}

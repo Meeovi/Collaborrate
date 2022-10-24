@@ -1,0 +1,12 @@
+mutation upsertOneReviews($create: ReviewsCreateInput!, $update: ReviewsUpdateInput!, $where: ReviewsWhereUniqueInput!){
+    upsertOneReviews(create: $create, update: $update, where: $where){
+        comment_id
+        content
+        created_at
+        first_name
+        id
+        last_name
+        shop_id
+        websites
+    }
+}

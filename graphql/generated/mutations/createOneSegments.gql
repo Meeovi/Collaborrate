@@ -1,0 +1,12 @@
+mutation createOneSegments($data: SegmentsCreateInput!){
+    createOneSegments(data: $data){
+        apply_to
+        created_at
+        customers
+        description
+        id
+        name
+        status
+        website
+    }
+}

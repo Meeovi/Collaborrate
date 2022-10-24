@@ -1,0 +1,17 @@
+mutation updateOnePolls($data: PollsUpdateInput!, $where: PollsWhereUniqueInput!){
+    updateOnePolls(data: $data, where: $where){
+        articles
+        categories
+        customers
+        description
+        excerpt
+        id
+        image
+        name
+        products
+        published
+        question
+        response
+        users
+    }
+}

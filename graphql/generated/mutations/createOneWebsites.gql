@@ -1,0 +1,12 @@
+mutation createOneWebsites($data: WebsitesCreateInput!){
+    createOneWebsites(data: $data){
+        category
+        created_at
+        id
+        name
+        shop
+        store
+        themes
+        url
+    }
+}

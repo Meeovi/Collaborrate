@@ -1,0 +1,11 @@
+mutation updateOneThemes($data: ThemesUpdateInput!, $where: ThemesWhereUniqueInput!){
+    updateOneThemes(data: $data, where: $where){
+        action
+        id
+        parent_theme
+        theme_path
+        title
+        website_id
+        websites
+    }
+}

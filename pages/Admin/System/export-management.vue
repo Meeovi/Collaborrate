@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import  importm from '~/graphql/queries/system/importm'
+import  importm from '~/graphql/generated/queries/importm'
 
 export default {
   data() {

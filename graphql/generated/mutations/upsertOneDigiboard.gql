@@ -1,0 +1,10 @@
+mutation upsertOneDigiboard($create: DigiboardCreateInput!, $update: DigiboardUpdateInput!, $where: DigiboardWhereUniqueInput!){
+    upsertOneDigiboard(create: $create, update: $update, where: $where){
+        board
+        course
+        created_at
+        id
+        name
+        student
+    }
+}

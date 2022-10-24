@@ -1,0 +1,5 @@
+mutation deleteManyScheduler($where: SchedulerWhereInput){
+    deleteManyScheduler(where: $where){
+        count
+    }
+}

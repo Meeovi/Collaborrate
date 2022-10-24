@@ -1,0 +1,12 @@
+mutation updateOneWishlists($data: WishlistsUpdateInput!, $where: WishlistsWhereUniqueInput!){
+    updateOneWishlists(data: $data, where: $where){
+        created_at
+        customers
+        id
+        name
+        occassions
+        products
+        quantity
+        visibility
+    }
+}

@@ -1,0 +1,5 @@
+mutation createManyApitoken($data: [ApitokenCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyApitoken(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

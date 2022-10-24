@@ -1,0 +1,5 @@
+mutation createManyProjects($data: [ProjectsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyProjects(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

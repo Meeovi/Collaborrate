@@ -1,0 +1,5 @@
+mutation deleteManyRoles($where: RolesWhereInput){
+    deleteManyRoles(where: $where){
+        count
+    }
+}

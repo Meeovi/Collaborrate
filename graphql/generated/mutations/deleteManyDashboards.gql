@@ -1,0 +1,5 @@
+mutation deleteManyDashboards($where: DashboardsWhereInput){
+    deleteManyDashboards(where: $where){
+        count
+    }
+}

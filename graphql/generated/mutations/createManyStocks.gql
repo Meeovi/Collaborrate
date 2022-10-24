@@ -1,0 +1,5 @@
+mutation createManyStocks($data: [StocksCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyStocks(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

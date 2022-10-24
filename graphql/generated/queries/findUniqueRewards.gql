@@ -1,0 +1,16 @@
+query findUniqueRewards($where: RewardsWhereUniqueInput!){
+    findUniqueRewards(where: $where){
+        articles
+        categories
+        coupons
+        created_at
+        customers
+        expiration
+        id
+        level
+        name
+        products
+        slug
+        users
+    }
+}

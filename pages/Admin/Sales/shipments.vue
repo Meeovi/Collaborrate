@@ -36,7 +36,7 @@
 </template>
 
 <script>
- import  findManyShipments from '~/graphql/queries/sales/shipments'
+ import  findManyShipments from '~/graphql/generated/queries/findManyShipments'
 
 export default {
   data() {

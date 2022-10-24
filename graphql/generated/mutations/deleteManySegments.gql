@@ -1,0 +1,5 @@
+mutation deleteManySegments($where: SegmentsWhereInput){
+    deleteManySegments(where: $where){
+        count
+    }
+}

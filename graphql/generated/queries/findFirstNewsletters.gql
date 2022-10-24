@@ -1,0 +1,14 @@
+query findFirstNewsletters($cursor: NewslettersWhereUniqueInput, $distinct: [NewslettersScalarFieldEnum!], $orderBy: [NewslettersOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: NewslettersWhereInput){
+    findFirstNewsletters(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        created_at
+        cust_id
+        customer_first_name
+        customer_last_name
+        customers
+        email
+        id
+        status
+        store
+        websites
+    }
+}

@@ -1,0 +1,20 @@
+mutation upsertOneStatistics($create: StatisticsCreateInput!, $update: StatisticsUpdateInput!, $where: StatisticsWhereUniqueInput!){
+    upsertOneStatistics(create: $create, update: $update, where: $where){
+        articles
+        categories
+        coupons
+        customers
+        description
+        excerpt
+        expiration
+        id
+        image
+        name
+        products
+        published
+        reports
+        rewards
+        special_offers
+        users
+    }
+}

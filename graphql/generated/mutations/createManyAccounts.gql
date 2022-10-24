@@ -1,0 +1,5 @@
+mutation createManyAccounts($data: [AccountsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyAccounts(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

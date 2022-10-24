@@ -1,0 +1,12 @@
+mutation deleteOneWebsites($where: WebsitesWhereUniqueInput!){
+    deleteOneWebsites(where: $where){
+        category
+        created_at
+        id
+        name
+        shop
+        store
+        themes
+        url
+    }
+}

@@ -1,0 +1,12 @@
+mutation updateOneSegments($data: SegmentsUpdateInput!, $where: SegmentsWhereUniqueInput!){
+    updateOneSegments(data: $data, where: $where){
+        apply_to
+        created_at
+        customers
+        description
+        id
+        name
+        status
+        website
+    }
+}

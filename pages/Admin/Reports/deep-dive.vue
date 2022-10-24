@@ -40,7 +40,7 @@
 </template>
 
 <script>
- import  deepdives from '~/graphql/queries/reports/deepdive'
+ import  deepdives from '~/graphql/generated/queries/deepdive'
 
 export default {
   data() {

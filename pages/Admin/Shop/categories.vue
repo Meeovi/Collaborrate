@@ -36,7 +36,7 @@
 </template>
 
 <script>
- import  findManyCategories from '~/graphql/queries/shop/categories'
+ import  findManyCategories from '~/graphql/generated/queries/findManyCategories'
 
 export default {
   data() {

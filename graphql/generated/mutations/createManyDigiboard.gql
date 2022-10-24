@@ -1,0 +1,5 @@
+mutation createManyDigiboard($data: [DigiboardCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyDigiboard(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

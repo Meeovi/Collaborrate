@@ -1,0 +1,10 @@
+query findManyCountries($cursor: CountriesWhereUniqueInput, $distinct: [CountriesScalarFieldEnum!], $orderBy: [CountriesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CountriesWhereInput){
+    findManyCountries(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        description
+        id
+        image
+        name
+        region
+        trainings
+    }
+}

@@ -1,0 +1,5 @@
+mutation createManyThemes($data: [ThemesCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyThemes(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

@@ -1,0 +1,9 @@
+mutation upsertOneGlossary($create: GlossaryCreateInput!, $update: GlossaryUpdateInput!, $where: GlossaryWhereUniqueInput!){
+    upsertOneGlossary(create: $create, update: $update, where: $where){
+        content
+        id
+        image
+        name
+        published
+    }
+}

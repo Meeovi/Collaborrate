@@ -1,0 +1,10 @@
+query findFirstDigiboard($cursor: DigiboardWhereUniqueInput, $distinct: [DigiboardScalarFieldEnum!], $orderBy: [DigiboardOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: DigiboardWhereInput){
+    findFirstDigiboard(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        board
+        course
+        created_at
+        id
+        name
+        student
+    }
+}

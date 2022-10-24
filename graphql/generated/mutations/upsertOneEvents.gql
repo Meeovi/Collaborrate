@@ -1,0 +1,17 @@
+mutation upsertOneEvents($create: EventsCreateInput!, $update: EventsUpdateInput!, $where: EventsWhereUniqueInput!){
+    upsertOneEvents(create: $create, update: $update, where: $where){
+        category
+        city
+        content
+        country
+        created_at
+        end
+        id
+        image
+        name
+        postalcode
+        start
+        state
+        tickets
+    }
+}

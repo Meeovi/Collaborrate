@@ -1,0 +1,14 @@
+query findManyPermissions($cursor: PermissionsWhereUniqueInput, $distinct: [PermissionsScalarFieldEnum!], $orderBy: [PermissionsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: PermissionsWhereInput){
+    findManyPermissions(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        content
+        create
+        created_at
+        delete
+        id
+        name
+        read
+        role
+        update
+        users
+    }
+}

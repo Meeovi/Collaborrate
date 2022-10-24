@@ -1,0 +1,5 @@
+mutation deleteManyOoto($where: OotoWhereInput){
+    deleteManyOoto(where: $where){
+        count
+    }
+}

@@ -1,0 +1,15 @@
+mutation createOneWebhooks($data: WebhooksCreateInput!){
+    createOneWebhooks(data: $data){
+        create
+        created_at
+        delete
+        headers
+        id
+        name
+        publish
+        retrieve
+        unpublish
+        update
+        url
+    }
+}

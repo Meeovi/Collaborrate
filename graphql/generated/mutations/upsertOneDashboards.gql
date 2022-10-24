@@ -1,0 +1,27 @@
+mutation upsertOneDashboards($create: DashboardsCreateInput!, $update: DashboardsUpdateInput!, $where: DashboardsWhereUniqueInput!){
+    upsertOneDashboards(create: $create, update: $update, where: $where){
+        articles
+        category
+        checklists
+        client_id
+        client_secret
+        content
+        created_at
+        customers
+        id
+        logo
+        media
+        name
+        privacy
+        products
+        projects
+        published
+        reports
+        sales
+        tasks
+        tickets
+        url
+        users
+        visits
+    }
+}

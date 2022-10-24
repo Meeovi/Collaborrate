@@ -1,0 +1,10 @@
+mutation createOneApitoken($data: ApitokenCreateInput!){
+    createOneApitoken(data: $data){
+        created_at
+        description
+        id
+        name
+        token
+        token_type
+    }
+}

@@ -1,0 +1,10 @@
+mutation updateOneDigiboard($data: DigiboardUpdateInput!, $where: DigiboardWhereUniqueInput!){
+    updateOneDigiboard(data: $data, where: $where){
+        board
+        course
+        created_at
+        id
+        name
+        student
+    }
+}

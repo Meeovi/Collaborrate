@@ -1,0 +1,41 @@
+query groupByCountries($by: [CountriesScalarFieldEnum!]!, $having: CountriesScalarWhereWithAggregatesInput, $orderBy: [CountriesOrderByWithAggregationInput!], $skip: Int, $take: Int, $where: CountriesWhereInput){
+    groupByCountries(by: $by, having: $having, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+        }
+        _count{
+            _all
+            description
+            id
+            image
+            name
+            region
+            trainings
+        }
+        _max{
+            description
+            id
+            image
+            name
+            region
+            trainings
+        }
+        _min{
+            description
+            id
+            image
+            name
+            region
+            trainings
+        }
+        _sum{
+            id
+        }
+        description
+        id
+        image
+        name
+        region
+        trainings
+    }
+}

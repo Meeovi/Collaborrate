@@ -1,0 +1,5 @@
+mutation deleteManyDigiboard($where: DigiboardWhereInput){
+    deleteManyDigiboard(where: $where){
+        count
+    }
+}

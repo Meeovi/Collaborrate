@@ -1,0 +1,5 @@
+mutation createManyStates($data: [StatesCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyStates(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

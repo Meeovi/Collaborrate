@@ -1,0 +1,12 @@
+mutation upsertOneRating($create: RatingCreateInput!, $update: RatingUpdateInput!, $where: RatingWhereUniqueInput!){
+    upsertOneRating(create: $create, update: $update, where: $where){
+        active
+        default_store_view
+        default_value
+        id
+        prod_id
+        products
+        rating_visibility
+        sort_order
+    }
+}

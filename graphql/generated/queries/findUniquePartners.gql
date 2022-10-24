@@ -1,0 +1,13 @@
+query findUniquePartners($where: PartnersWhereUniqueInput!){
+    findUniquePartners(where: $where){
+        address
+        business_type
+        city
+        country
+        created_at
+        id
+        isPublic
+        name
+        state
+    }
+}

@@ -1,0 +1,5 @@
+mutation createManyMessages($data: [MessagesCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyMessages(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

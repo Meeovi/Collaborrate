@@ -1,0 +1,19 @@
+mutation updateOneUsers($data: UsersUpdateInput!, $where: UsersWhereUniqueInput!){
+    updateOneUsers(data: $data, where: $where){
+        created_at
+        email
+        emails
+        first_name
+        id
+        interface_locale
+        last_name
+        mediamanager
+        messages
+        password
+        permissions
+        projects
+        username
+        value
+        workspaces
+    }
+}

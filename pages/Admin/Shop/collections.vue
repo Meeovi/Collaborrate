@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import  collections from '~/graphql/queries/shop/collections'
+import  collections from '~/graphql/generated/queries/findManyCollections'
 
 export default {
   data() {

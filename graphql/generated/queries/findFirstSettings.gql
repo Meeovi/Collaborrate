@@ -1,0 +1,40 @@
+query findFirstSettings($cursor: SettingsWhereUniqueInput, $distinct: [SettingsScalarFieldEnum!], $orderBy: [SettingsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: SettingsWhereInput){
+    findFirstSettings(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        address
+        address_two
+        allow_countries
+        allow_state
+        allowed_currency
+        awsS3
+        base_currency
+        city
+        country
+        created_at
+        databaseUrl
+        default_country
+        default_currency
+        disqusKey
+        european_union_countries
+        googleAnalytics
+        googleDrive
+        id
+        isPublic
+        mailServer
+        optional_zip
+        region
+        searchSetting
+        sentryDsn
+        siteName
+        siteTagline
+        siteWebsite
+        state_required_for
+        store_hours
+        store_name
+        store_phone
+        top_destinations
+        type
+        vat_number
+        youtubeVideos
+        zipcode
+    }
+}

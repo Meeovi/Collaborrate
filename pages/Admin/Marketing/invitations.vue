@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import  invoices from '~/graphql/queries/marketing/invitations'
+import  invoices from '~/graphql/generated/queries/findManyInvitations'
 
 export default {
   data() {

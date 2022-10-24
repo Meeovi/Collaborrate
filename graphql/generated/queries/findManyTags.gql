@@ -1,0 +1,12 @@
+query findManyTags($cursor: TagsWhereUniqueInput, $distinct: [TagsScalarFieldEnum!], $orderBy: [TagsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: TagsWhereInput){
+    findManyTags(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        articles
+        categories
+        customers
+        excerpt
+        id
+        name
+        products
+        users
+    }
+}

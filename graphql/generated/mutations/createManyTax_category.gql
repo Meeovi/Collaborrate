@@ -1,0 +1,5 @@
+mutation createManyTax_category($data: [Tax_categoryCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyTax_category(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

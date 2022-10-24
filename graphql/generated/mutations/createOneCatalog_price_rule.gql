@@ -1,0 +1,17 @@
+mutation createOneCatalog_price_rule($data: Catalog_price_ruleCreateInput!){
+    createOneCatalog_price_rule(data: $data){
+        actions_apply
+        actions_discard_subsequent_rules
+        actions_discount_amount
+        active
+        customer_groups
+        description
+        end_date
+        id
+        priority
+        rule
+        start_date
+        status
+        website
+    }
+}

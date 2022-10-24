@@ -1,0 +1,13 @@
+mutation updateOneCollections($data: CollectionsUpdateInput!, $where: CollectionsWhereUniqueInput!){
+    updateOneCollections(data: $data, where: $where){
+        created_at
+        description
+        id
+        image
+        meta_description
+        meta_keywords
+        meta_title
+        name
+        product
+    }
+}

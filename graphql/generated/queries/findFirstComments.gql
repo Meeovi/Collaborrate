@@ -1,0 +1,14 @@
+query findFirstComments($cursor: CommentsWhereUniqueInput, $distinct: [CommentsScalarFieldEnum!], $orderBy: [CommentsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CommentsWhereInput){
+    findFirstComments(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        cust_id
+        customer_name
+        customers
+        description
+        id
+        image
+        mediamanager
+        published
+        response
+        trainings
+    }
+}

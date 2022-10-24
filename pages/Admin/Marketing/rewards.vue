@@ -38,7 +38,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  findManyRewards from '~/graphql/queries/marketing/rewards'
+ import  findManyRewards from '~/graphql/generated/queries/findManyRewards'
 
 export default {
   data() {

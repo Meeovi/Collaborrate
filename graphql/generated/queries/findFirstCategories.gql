@@ -1,0 +1,20 @@
+query findFirstCategories($cursor: CategoriesWhereUniqueInput, $distinct: [CategoriesScalarFieldEnum!], $orderBy: [CategoriesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CategoriesWhereInput){
+    findFirstCategories(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        content
+        country
+        description
+        id
+        image
+        meta_description
+        meta_keywords
+        meta_title
+        meta_url
+        name
+        product
+        status
+        thumbnail
+        visibility
+        websites
+        workspaces
+    }
+}

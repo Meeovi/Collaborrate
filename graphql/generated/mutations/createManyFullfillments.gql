@@ -1,0 +1,5 @@
+mutation createManyFullfillments($data: [FullfillmentsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyFullfillments(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

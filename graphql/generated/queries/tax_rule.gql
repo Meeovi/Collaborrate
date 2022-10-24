@@ -1,0 +1,9 @@
+query tax_rule($where: Tax_ruleWhereUniqueInput!){
+    tax_rule(where: $where){
+        id
+        name
+        prod_id
+        products
+        tax_rate
+    }
+}

@@ -1,0 +1,20 @@
+mutation updateOneGift_certificates($data: Gift_certificatesUpdateInput!, $where: Gift_certificatesWhereUniqueInput!){
+    updateOneGift_certificates(data: $data, where: $where){
+        articles
+        categories
+        coupons
+        customers
+        discount
+        excerpt
+        expiration
+        id
+        image
+        name
+        products
+        published
+        rewards
+        special_offers
+        type
+        users
+    }
+}

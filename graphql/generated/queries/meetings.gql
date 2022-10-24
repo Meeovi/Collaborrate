@@ -1,0 +1,17 @@
+query meetings($cursor: MeetingWhereUniqueInput, $distinct: [MeetingScalarFieldEnum!], $orderBy: [MeetingOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: MeetingWhereInput){
+    meetings(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        assigned_to
+        content
+        created_at
+        duration
+        end_date
+        id
+        invitees
+        related_to
+        reminders
+        scheduling
+        start_date
+        status
+        subject
+    }
+}

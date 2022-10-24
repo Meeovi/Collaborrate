@@ -1,0 +1,5 @@
+mutation updateManyCredit_memos($data: Credit_memosUpdateManyMutationInput!, $where: Credit_memosWhereInput){
+    updateManyCredit_memos(data: $data, where: $where){
+        count
+    }
+}

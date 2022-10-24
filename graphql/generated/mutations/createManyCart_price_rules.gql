@@ -1,0 +1,5 @@
+mutation createManyCart_price_rules($data: [Cart_price_rulesCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyCart_price_rules(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

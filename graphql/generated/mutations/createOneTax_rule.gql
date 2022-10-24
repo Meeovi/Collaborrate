@@ -1,0 +1,9 @@
+mutation createOneTax_rule($data: Tax_ruleCreateInput!){
+    createOneTax_rule(data: $data){
+        id
+        name
+        prod_id
+        products
+        tax_rate
+    }
+}

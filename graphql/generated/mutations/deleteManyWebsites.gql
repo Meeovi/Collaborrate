@@ -1,0 +1,5 @@
+mutation deleteManyWebsites($where: WebsitesWhereInput){
+    deleteManyWebsites(where: $where){
+        count
+    }
+}

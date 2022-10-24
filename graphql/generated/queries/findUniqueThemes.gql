@@ -1,0 +1,11 @@
+query findUniqueThemes($where: ThemesWhereUniqueInput!){
+    findUniqueThemes(where: $where){
+        action
+        id
+        parent_theme
+        theme_path
+        title
+        website_id
+        websites
+    }
+}

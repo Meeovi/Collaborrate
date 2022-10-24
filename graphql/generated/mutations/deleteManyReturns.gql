@@ -1,0 +1,5 @@
+mutation deleteManyReturns($where: ReturnsWhereInput){
+    deleteManyReturns(where: $where){
+        count
+    }
+}

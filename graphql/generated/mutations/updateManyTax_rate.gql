@@ -1,0 +1,5 @@
+mutation updateManyTax_rate($data: Tax_rateUpdateManyMutationInput!, $where: Tax_rateWhereInput){
+    updateManyTax_rate(data: $data, where: $where){
+        count
+    }
+}

@@ -1,0 +1,5 @@
+mutation createManyDeepdive($data: [DeepdiveCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyDeepdive(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

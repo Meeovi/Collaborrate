@@ -1,0 +1,5 @@
+mutation createManyOpportunities($data: [OpportunitiesCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyOpportunities(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

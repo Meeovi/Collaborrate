@@ -43,7 +43,7 @@
 </template>
 
 <script>
- import  meetings from '~/graphql/queries/customers/meetings'
+ import  meetings from '~/graphql/generated/queries/meetings'
 
 export default {
    data() {

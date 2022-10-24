@@ -1,0 +1,15 @@
+mutation updateOneVisits($data: VisitsUpdateInput!, $where: VisitsWhereUniqueInput!){
+    updateOneVisits(data: $data, where: $where){
+        content
+        created_at
+        emergency
+        end_date
+        id
+        location
+        meeting
+        reason
+        start_date
+        task
+        username
+    }
+}

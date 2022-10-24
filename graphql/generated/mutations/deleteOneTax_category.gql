@@ -1,0 +1,8 @@
+mutation deleteOneTax_category($where: Tax_categoryWhereUniqueInput!){
+    deleteOneTax_category(where: $where){
+        created_at
+        default
+        id
+        name
+    }
+}

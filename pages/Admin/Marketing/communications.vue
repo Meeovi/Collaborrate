@@ -35,7 +35,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  emails from '~/graphql/queries/marketing/emails'
+ import  emails from '~/graphql/generated/queries/findManyEmails'
 
 export default {
   data() {

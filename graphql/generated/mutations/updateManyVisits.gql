@@ -1,0 +1,5 @@
+mutation updateManyVisits($data: VisitsUpdateManyMutationInput!, $where: VisitsWhereInput){
+    updateManyVisits(data: $data, where: $where){
+        count
+    }
+}

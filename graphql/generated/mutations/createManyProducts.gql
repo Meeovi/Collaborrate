@@ -1,0 +1,5 @@
+mutation createManyProducts($data: [ProductsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyProducts(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

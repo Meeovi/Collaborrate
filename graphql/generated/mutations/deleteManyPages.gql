@@ -1,0 +1,5 @@
+mutation deleteManyPages($where: PagesWhereInput){
+    deleteManyPages(where: $where){
+        count
+    }
+}

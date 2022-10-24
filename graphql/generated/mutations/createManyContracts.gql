@@ -1,0 +1,5 @@
+mutation createManyContracts($data: [ContractsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyContracts(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

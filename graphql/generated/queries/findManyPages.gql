@@ -1,0 +1,13 @@
+query findManyPages($cursor: PagesWhereUniqueInput, $distinct: [PagesScalarFieldEnum!], $orderBy: [PagesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: PagesWhereInput){
+    findManyPages(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        content
+        content_title
+        enable_page
+        id
+        meta_description
+        meta_keywords
+        meta_title
+        title
+        url_key
+    }
+}

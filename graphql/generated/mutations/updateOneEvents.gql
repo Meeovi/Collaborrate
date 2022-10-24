@@ -1,0 +1,17 @@
+mutation updateOneEvents($data: EventsUpdateInput!, $where: EventsWhereUniqueInput!){
+    updateOneEvents(data: $data, where: $where){
+        category
+        city
+        content
+        country
+        created_at
+        end
+        id
+        image
+        name
+        postalcode
+        start
+        state
+        tickets
+    }
+}

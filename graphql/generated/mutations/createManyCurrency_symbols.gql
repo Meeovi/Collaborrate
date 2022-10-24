@@ -1,0 +1,5 @@
+mutation createManyCurrency_symbols($data: [Currency_symbolsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyCurrency_symbols(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

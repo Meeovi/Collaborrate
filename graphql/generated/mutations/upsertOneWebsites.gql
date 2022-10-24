@@ -1,0 +1,12 @@
+mutation upsertOneWebsites($create: WebsitesCreateInput!, $update: WebsitesUpdateInput!, $where: WebsitesWhereUniqueInput!){
+    upsertOneWebsites(create: $create, update: $update, where: $where){
+        category
+        created_at
+        id
+        name
+        shop
+        store
+        themes
+        url
+    }
+}

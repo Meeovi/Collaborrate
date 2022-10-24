@@ -1,0 +1,5 @@
+mutation updateManyTags($data: TagsUpdateManyMutationInput!, $where: TagsWhereInput){
+    updateManyTags(data: $data, where: $where){
+        count
+    }
+}

@@ -34,7 +34,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  product_attribute from '~/graphql/queries/shop/attributes'
+ import  product_attribute from '~/graphql/generated/queries/findManyAttributes'
 
 export default {
   data() {

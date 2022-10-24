@@ -1,0 +1,10 @@
+mutation createOneStocks($data: StocksCreateInput!){
+    createOneStocks(data: $data){
+        description
+        enabled
+        id
+        name
+        sources
+        website
+    }
+}

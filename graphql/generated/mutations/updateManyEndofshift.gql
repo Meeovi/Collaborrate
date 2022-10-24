@@ -1,0 +1,5 @@
+mutation updateManyEndofshift($data: EndofshiftUpdateManyMutationInput!, $where: EndofshiftWhereInput){
+    updateManyEndofshift(data: $data, where: $where){
+        count
+    }
+}

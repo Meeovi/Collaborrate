@@ -1,0 +1,12 @@
+query findManyReviews($cursor: ReviewsWhereUniqueInput, $distinct: [ReviewsScalarFieldEnum!], $orderBy: [ReviewsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ReviewsWhereInput){
+    findManyReviews(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        comment_id
+        content
+        created_at
+        first_name
+        id
+        last_name
+        shop_id
+        websites
+    }
+}

@@ -1,0 +1,5 @@
+mutation deleteManyEvents($where: EventsWhereInput){
+    deleteManyEvents(where: $where){
+        count
+    }
+}

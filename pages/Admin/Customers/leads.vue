@@ -41,7 +41,7 @@
 </template>
 
 <script>
- import  leads from '~/graphql/queries/customers/leads'
+ import  leads from '~/graphql/generated/queries/findManyLeads'
 
 export default {
    data() {

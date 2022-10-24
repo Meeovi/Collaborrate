@@ -1,0 +1,35 @@
+query aggregateDigiboard($cursor: DigiboardWhereUniqueInput, $orderBy: [DigiboardOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: DigiboardWhereInput){
+    aggregateDigiboard(cursor: $cursor, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+        }
+        _count{
+            _all
+            board
+            course
+            created_at
+            id
+            name
+            student
+        }
+        _max{
+            board
+            course
+            created_at
+            id
+            name
+            student
+        }
+        _min{
+            board
+            course
+            created_at
+            id
+            name
+            student
+        }
+        _sum{
+            id
+        }
+    }
+}

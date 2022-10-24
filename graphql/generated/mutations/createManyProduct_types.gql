@@ -1,0 +1,5 @@
+mutation createManyProduct_types($data: [Product_typesCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyProduct_types(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

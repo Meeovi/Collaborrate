@@ -1,0 +1,16 @@
+mutation updateOneInvitations($data: InvitationsUpdateInput!, $where: InvitationsWhereUniqueInput!){
+    updateOneInvitations(data: $data, where: $where){
+        billingAddress
+        content
+        created_at
+        email
+        grandTotalPurchased
+        id
+        invoiceDate
+        media
+        orderNumber
+        paymentMethod
+        shippingAddress
+        status
+    }
+}

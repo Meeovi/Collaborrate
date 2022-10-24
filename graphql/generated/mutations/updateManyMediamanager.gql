@@ -1,0 +1,5 @@
+mutation updateManyMediamanager($data: MediamanagerUpdateManyMutationInput!, $where: MediamanagerWhereInput){
+    updateManyMediamanager(data: $data, where: $where){
+        count
+    }
+}

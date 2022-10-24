@@ -30,7 +30,7 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import  credit_memos from '~/graphql/queries/sales/credit_memos'
+import  credit_memos from '~/graphql/generated/queries/findManyCredit_memos'
 
 export default {
   data() {

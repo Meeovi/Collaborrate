@@ -1,0 +1,10 @@
+query findFirstStates($cursor: StatesWhereUniqueInput, $distinct: [StatesScalarFieldEnum!], $orderBy: [StatesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: StatesWhereInput){
+    findFirstStates(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        country
+        description
+        id
+        image
+        name
+        trainings
+    }
+}

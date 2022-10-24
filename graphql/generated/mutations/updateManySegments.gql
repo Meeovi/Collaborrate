@@ -1,0 +1,5 @@
+mutation updateManySegments($data: SegmentsUpdateManyMutationInput!, $where: SegmentsWhereInput){
+    updateManySegments(data: $data, where: $where){
+        count
+    }
+}

@@ -1,0 +1,16 @@
+mutation createOneInvitations($data: InvitationsCreateInput!){
+    createOneInvitations(data: $data){
+        billingAddress
+        content
+        created_at
+        email
+        grandTotalPurchased
+        id
+        invoiceDate
+        media
+        orderNumber
+        paymentMethod
+        shippingAddress
+        status
+    }
+}

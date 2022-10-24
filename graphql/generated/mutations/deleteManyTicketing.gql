@@ -1,0 +1,5 @@
+mutation deleteManyTicketing($where: TicketingWhereInput){
+    deleteManyTicketing(where: $where){
+        count
+    }
+}

@@ -1,0 +1,5 @@
+mutation deleteManyCurrencies($where: CurrenciesWhereInput){
+    deleteManyCurrencies(where: $where){
+        count
+    }
+}

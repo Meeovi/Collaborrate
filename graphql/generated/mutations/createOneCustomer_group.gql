@@ -1,0 +1,13 @@
+mutation createOneCustomer_group($data: Customer_groupCreateInput!){
+    createOneCustomer_group(data: $data){
+        content
+        coverPhoto
+        created_at
+        cust_id
+        customers
+        id
+        image
+        name
+        tax_class
+    }
+}

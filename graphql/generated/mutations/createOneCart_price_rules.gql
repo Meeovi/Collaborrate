@@ -1,0 +1,21 @@
+mutation createOneCart_price_rules($data: Cart_price_rulesCreateInput!){
+    createOneCart_price_rules(data: $data){
+        actions_apply
+        actions_apply_shipping_amount
+        actions_discard_subsequent_rules
+        actions_discount_amount
+        actions_discount_qty_step
+        actions_max_qty_discount_is_applied_to
+        active
+        coupon
+        description
+        end_date
+        id
+        priority
+        rule
+        start_date
+        status
+        uses_per_customer
+        website
+    }
+}

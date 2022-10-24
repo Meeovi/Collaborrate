@@ -1,0 +1,5 @@
+mutation updateManyUpload_file($data: Upload_fileUpdateManyMutationInput!, $where: Upload_fileWhereInput){
+    updateManyUpload_file(data: $data, where: $where){
+        count
+    }
+}

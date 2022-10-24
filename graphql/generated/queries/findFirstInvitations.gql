@@ -1,0 +1,16 @@
+query findFirstInvitations($cursor: InvitationsWhereUniqueInput, $distinct: [InvitationsScalarFieldEnum!], $orderBy: [InvitationsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: InvitationsWhereInput){
+    findFirstInvitations(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        billingAddress
+        content
+        created_at
+        email
+        grandTotalPurchased
+        id
+        invoiceDate
+        media
+        orderNumber
+        paymentMethod
+        shippingAddress
+        status
+    }
+}

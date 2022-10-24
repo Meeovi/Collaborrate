@@ -1,0 +1,5 @@
+mutation updateManyThemes($data: ThemesUpdateManyMutationInput!, $where: ThemesWhereInput){
+    updateManyThemes(data: $data, where: $where){
+        count
+    }
+}

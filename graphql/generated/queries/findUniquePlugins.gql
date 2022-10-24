@@ -1,0 +1,16 @@
+query findUniquePlugins($where: PluginsWhereUniqueInput!){
+    findUniquePlugins(where: $where){
+        agree_terms
+        created_at
+        description
+        github_link
+        id
+        last_updated
+        logo
+        name
+        publisher_email
+        publisher_name
+        screenshots
+        url
+    }
+}

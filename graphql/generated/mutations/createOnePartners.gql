@@ -1,0 +1,13 @@
+mutation createOnePartners($data: PartnersCreateInput!){
+    createOnePartners(data: $data){
+        address
+        business_type
+        city
+        country
+        created_at
+        id
+        isPublic
+        name
+        state
+    }
+}

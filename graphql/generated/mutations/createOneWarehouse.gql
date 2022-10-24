@@ -1,0 +1,17 @@
+mutation createOneWarehouse($data: WarehouseCreateInput!){
+    createOneWarehouse(data: $data){
+        category
+        city
+        country
+        created_at
+        description
+        id
+        image
+        isPublic
+        name
+        postal
+        products
+        state
+        status
+    }
+}

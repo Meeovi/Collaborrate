@@ -1,0 +1,5 @@
+mutation createManyCatalog_price_rule($data: [Catalog_price_ruleCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyCatalog_price_rule(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

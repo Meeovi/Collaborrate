@@ -1,0 +1,10 @@
+mutation updateOneApitoken($data: ApitokenUpdateInput!, $where: ApitokenWhereUniqueInput!){
+    updateOneApitoken(data: $data, where: $where){
+        created_at
+        description
+        id
+        name
+        token
+        token_type
+    }
+}

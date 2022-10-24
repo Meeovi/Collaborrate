@@ -1,0 +1,16 @@
+query findUniqueAgreements($where: AgreementsWhereUniqueInput!){
+    findUniqueAgreements(where: $where){
+        content
+        created
+        excerpt
+        id
+        image
+        mediamanager
+        name
+        reference_id
+        shop_id
+        type
+        updated
+        user_id
+    }
+}

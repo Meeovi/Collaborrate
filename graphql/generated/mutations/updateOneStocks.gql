@@ -1,0 +1,10 @@
+mutation updateOneStocks($data: StocksUpdateInput!, $where: StocksWhereUniqueInput!){
+    updateOneStocks(data: $data, where: $where){
+        description
+        enabled
+        id
+        name
+        sources
+        website
+    }
+}

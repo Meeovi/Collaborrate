@@ -1,0 +1,17 @@
+mutation createOneEvents($data: EventsCreateInput!){
+    createOneEvents(data: $data){
+        category
+        city
+        content
+        country
+        created_at
+        end
+        id
+        image
+        name
+        postalcode
+        start
+        state
+        tickets
+    }
+}

@@ -1,0 +1,15 @@
+query findFirstChannels($cursor: ChannelsWhereUniqueInput, $distinct: [ChannelsScalarFieldEnum!], $orderBy: [ChannelsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ChannelsWhereInput){
+    findFirstChannels(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        client_id
+        client_secret
+        code
+        created_at
+        currency
+        default_lang
+        default_shipping
+        default_zone
+        id
+        include_tax
+        name
+    }
+}

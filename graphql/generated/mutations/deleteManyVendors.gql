@@ -1,0 +1,5 @@
+mutation deleteManyVendors($where: VendorsWhereInput){
+    deleteManyVendors(where: $where){
+        count
+    }
+}

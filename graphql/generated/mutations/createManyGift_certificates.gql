@@ -1,0 +1,5 @@
+mutation createManyGift_certificates($data: [Gift_certificatesCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyGift_certificates(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

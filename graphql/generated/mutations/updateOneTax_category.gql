@@ -1,0 +1,8 @@
+mutation updateOneTax_category($data: Tax_categoryUpdateInput!, $where: Tax_categoryWhereUniqueInput!){
+    updateOneTax_category(data: $data, where: $where){
+        created_at
+        default
+        id
+        name
+    }
+}

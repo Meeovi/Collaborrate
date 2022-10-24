@@ -1,0 +1,5 @@
+mutation deleteManyInvoices($where: InvoicesWhereInput){
+    deleteManyInvoices(where: $where){
+        count
+    }
+}

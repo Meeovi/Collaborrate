@@ -1,0 +1,12 @@
+mutation upsertOneScheduler($create: SchedulerCreateInput!, $update: SchedulerUpdateInput!, $where: SchedulerWhereUniqueInput!){
+    upsertOneScheduler(create: $create, update: $update, where: $where){
+        created_at
+        end_date
+        id
+        level
+        login
+        notes
+        start_date
+        whid
+    }
+}

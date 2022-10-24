@@ -1,0 +1,5 @@
+mutation createManyCurrency_rates($data: [Currency_ratesCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyCurrency_rates(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

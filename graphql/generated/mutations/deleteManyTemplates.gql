@@ -1,0 +1,5 @@
+mutation deleteManyTemplates($where: TemplatesWhereInput){
+    deleteManyTemplates(where: $where){
+        count
+    }
+}

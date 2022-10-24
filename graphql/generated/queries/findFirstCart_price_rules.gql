@@ -1,0 +1,21 @@
+query findFirstCart_price_rules($cursor: Cart_price_rulesWhereUniqueInput, $distinct: [Cart_price_rulesScalarFieldEnum!], $orderBy: [Cart_price_rulesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Cart_price_rulesWhereInput){
+    findFirstCart_price_rules(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        actions_apply
+        actions_apply_shipping_amount
+        actions_discard_subsequent_rules
+        actions_discount_amount
+        actions_discount_qty_step
+        actions_max_qty_discount_is_applied_to
+        active
+        coupon
+        description
+        end_date
+        id
+        priority
+        rule
+        start_date
+        status
+        uses_per_customer
+        website
+    }
+}

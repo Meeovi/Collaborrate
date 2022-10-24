@@ -1,0 +1,13 @@
+mutation upsertOnePartners($create: PartnersCreateInput!, $update: PartnersUpdateInput!, $where: PartnersWhereUniqueInput!){
+    upsertOnePartners(create: $create, update: $update, where: $where){
+        address
+        business_type
+        city
+        country
+        created_at
+        id
+        isPublic
+        name
+        state
+    }
+}

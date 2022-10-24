@@ -1,0 +1,10 @@
+mutation deleteOneCountries($where: CountriesWhereUniqueInput!){
+    deleteOneCountries(where: $where){
+        description
+        id
+        image
+        name
+        region
+        trainings
+    }
+}

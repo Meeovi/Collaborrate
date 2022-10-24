@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import  events from '~/graphql/queries/marketing/events'
+import  events from '~/graphql/generated/queries/findManyEvents'
 
 export default {
   data() {

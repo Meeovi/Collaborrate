@@ -1,0 +1,16 @@
+mutation updateOneEmails($data: EmailsUpdateInput!, $where: EmailsWhereUniqueInput!){
+    updateOneEmails(data: $data, where: $where){
+        bcc
+        cc
+        content
+        created_at
+        cust_id
+        customers
+        from
+        id
+        media
+        staff_id
+        subject
+        users
+    }
+}

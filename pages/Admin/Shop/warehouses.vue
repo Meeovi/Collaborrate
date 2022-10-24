@@ -31,7 +31,7 @@
 </template>
 
 <script>
- import  warehouses from '~/graphql/queries/shop/warehouses'
+ import  warehouses from '~/graphql/generated/queries/warehouses'
 
 export default {
   data() {

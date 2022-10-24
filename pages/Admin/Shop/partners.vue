@@ -38,7 +38,7 @@
 </template>
 
 <script>
- import  partners from '~/graphql/queries/shop/partners'
+ import  partners from '~/graphql/generated/queries/findManyPartners'
 
 export default {
   data() {

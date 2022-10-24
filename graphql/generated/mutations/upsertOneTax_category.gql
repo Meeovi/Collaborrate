@@ -1,0 +1,8 @@
+mutation upsertOneTax_category($create: Tax_categoryCreateInput!, $update: Tax_categoryUpdateInput!, $where: Tax_categoryWhereUniqueInput!){
+    upsertOneTax_category(create: $create, update: $update, where: $where){
+        created_at
+        default
+        id
+        name
+    }
+}

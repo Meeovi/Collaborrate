@@ -1,0 +1,5 @@
+mutation deleteManyStocks($where: StocksWhereInput){
+    deleteManyStocks(where: $where){
+        count
+    }
+}

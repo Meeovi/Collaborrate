@@ -1,0 +1,23 @@
+mutation updateOneUpload_file($data: Upload_fileUpdateInput!, $where: Upload_fileWhereUniqueInput!){
+    updateOneUpload_file(data: $data, where: $where){
+        alternativeText
+        caption
+        created_at
+        created_by
+        ext
+        formats
+        hash
+        height
+        id
+        mime
+        name
+        previewUrl
+        provider
+        provider_metadata
+        size
+        updated_at
+        updated_by
+        url
+        width
+    }
+}

@@ -1,0 +1,12 @@
+mutation deleteOneZones($where: ZonesWhereUniqueInput!){
+    deleteOneZones(where: $where){
+        code
+        country
+        created_at
+        id
+        name
+        scope
+        type
+        updated_at
+    }
+}

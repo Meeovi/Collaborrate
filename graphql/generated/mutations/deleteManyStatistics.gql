@@ -1,0 +1,5 @@
+mutation deleteManyStatistics($where: StatisticsWhereInput){
+    deleteManyStatistics(where: $where){
+        count
+    }
+}

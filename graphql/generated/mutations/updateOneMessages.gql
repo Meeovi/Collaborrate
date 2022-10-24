@@ -1,0 +1,15 @@
+mutation updateOneMessages($data: MessagesUpdateInput!, $where: MessagesWhereUniqueInput!){
+    updateOneMessages(data: $data, where: $where){
+        content
+        created_at
+        cust_id
+        customers
+        from
+        id
+        media
+        sender
+        staff_id
+        subject
+        users
+    }
+}

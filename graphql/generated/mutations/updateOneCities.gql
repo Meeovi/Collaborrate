@@ -1,0 +1,11 @@
+mutation updateOneCities($data: CitiesUpdateInput!, $where: CitiesWhereUniqueInput!){
+    updateOneCities(data: $data, where: $where){
+        country
+        description
+        id
+        image
+        name
+        postalCode
+        state
+    }
+}

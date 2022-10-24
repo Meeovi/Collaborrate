@@ -1,0 +1,12 @@
+mutation upsertOneLogIn($create: LogInCreateInput!, $update: LogInUpdateInput!, $where: LogInWhereUniqueInput!){
+    upsertOneLogIn(create: $create, update: $update, where: $where){
+        created_at
+        email
+        expiresIn
+        id
+        password
+        token
+        username
+        users
+    }
+}

@@ -1,0 +1,10 @@
+mutation createOneStates($data: StatesCreateInput!){
+    createOneStates(data: $data){
+        country
+        description
+        id
+        image
+        name
+        trainings
+    }
+}

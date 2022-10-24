@@ -25,7 +25,7 @@
 </template>
 
 <script>
-  import findManyWebsites from '~/graphql/queries/content/website'
+  import findManyWebsites from '~/graphql/generated/queries/findManyWebsites'
 
   export default {
     data() {

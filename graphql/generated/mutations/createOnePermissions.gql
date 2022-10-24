@@ -1,0 +1,14 @@
+mutation createOnePermissions($data: PermissionsCreateInput!){
+    createOnePermissions(data: $data){
+        content
+        create
+        created_at
+        delete
+        id
+        name
+        read
+        role
+        update
+        users
+    }
+}

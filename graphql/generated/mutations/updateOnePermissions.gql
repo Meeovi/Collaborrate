@@ -1,0 +1,14 @@
+mutation updateOnePermissions($data: PermissionsUpdateInput!, $where: PermissionsWhereUniqueInput!){
+    updateOnePermissions(data: $data, where: $where){
+        content
+        create
+        created_at
+        delete
+        id
+        name
+        read
+        role
+        update
+        users
+    }
+}

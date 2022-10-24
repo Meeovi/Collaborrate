@@ -1,0 +1,12 @@
+query findUniqueTags($where: TagsWhereUniqueInput!){
+    findUniqueTags(where: $where){
+        articles
+        categories
+        customers
+        excerpt
+        id
+        name
+        products
+        users
+    }
+}

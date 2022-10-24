@@ -1,0 +1,5 @@
+mutation updateManyAgreements($data: AgreementsUpdateManyMutationInput!, $where: AgreementsWhereInput){
+    updateManyAgreements(data: $data, where: $where){
+        count
+    }
+}

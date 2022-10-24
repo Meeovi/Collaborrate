@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import  manufacturer from '~/graphql/queries/shop/manufacturer'
+import  manufacturer from '~/graphql/generated/queries/manufacturer'
 
 export default {
   data() {

@@ -1,0 +1,11 @@
+mutation updateOneImportm($data: ImportmUpdateInput!, $where: ImportmWhereUniqueInput!){
+    updateOneImportm(data: $data, where: $where){
+        created_at
+        description
+        file
+        id
+        image
+        name
+        url
+    }
+}

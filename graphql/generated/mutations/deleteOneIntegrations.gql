@@ -1,0 +1,11 @@
+mutation deleteOneIntegrations($where: IntegrationsWhereUniqueInput!){
+    deleteOneIntegrations(where: $where){
+        category
+        content
+        created_at
+        id
+        location
+        media
+        name
+    }
+}

@@ -1,0 +1,15 @@
+mutation upsertOneWebhooks($create: WebhooksCreateInput!, $update: WebhooksUpdateInput!, $where: WebhooksWhereUniqueInput!){
+    upsertOneWebhooks(create: $create, update: $update, where: $where){
+        create
+        created_at
+        delete
+        headers
+        id
+        name
+        publish
+        retrieve
+        unpublish
+        update
+        url
+    }
+}

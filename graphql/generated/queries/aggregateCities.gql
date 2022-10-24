@@ -1,0 +1,38 @@
+query aggregateCities($cursor: CitiesWhereUniqueInput, $orderBy: [CitiesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CitiesWhereInput){
+    aggregateCities(cursor: $cursor, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+        }
+        _count{
+            _all
+            country
+            description
+            id
+            image
+            name
+            postalCode
+            state
+        }
+        _max{
+            country
+            description
+            id
+            image
+            name
+            postalCode
+            state
+        }
+        _min{
+            country
+            description
+            id
+            image
+            name
+            postalCode
+            state
+        }
+        _sum{
+            id
+        }
+    }
+}

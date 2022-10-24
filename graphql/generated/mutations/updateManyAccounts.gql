@@ -1,0 +1,5 @@
+mutation updateManyAccounts($data: AccountsUpdateManyMutationInput!, $where: AccountsWhereInput){
+    updateManyAccounts(data: $data, where: $where){
+        count
+    }
+}

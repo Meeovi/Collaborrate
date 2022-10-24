@@ -1,0 +1,5 @@
+mutation createManyInternalization($data: [InternalizationCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyInternalization(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

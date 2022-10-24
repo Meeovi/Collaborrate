@@ -1,0 +1,5 @@
+mutation updateManyShipments($data: ShipmentsUpdateManyMutationInput!, $where: ShipmentsWhereInput){
+    updateManyShipments(data: $data, where: $where){
+        count
+    }
+}

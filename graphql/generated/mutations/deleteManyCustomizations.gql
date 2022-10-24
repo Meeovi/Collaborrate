@@ -1,0 +1,5 @@
+mutation deleteManyCustomizations($where: CustomizationsWhereInput){
+    deleteManyCustomizations(where: $where){
+        count
+    }
+}

@@ -1,0 +1,5 @@
+mutation updateManyPermissions($data: PermissionsUpdateManyMutationInput!, $where: PermissionsWhereInput){
+    updateManyPermissions(data: $data, where: $where){
+        count
+    }
+}

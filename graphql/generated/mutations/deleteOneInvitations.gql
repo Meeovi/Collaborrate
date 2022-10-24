@@ -1,0 +1,16 @@
+mutation deleteOneInvitations($where: InvitationsWhereUniqueInput!){
+    deleteOneInvitations(where: $where){
+        billingAddress
+        content
+        created_at
+        email
+        grandTotalPurchased
+        id
+        invoiceDate
+        media
+        orderNumber
+        paymentMethod
+        shippingAddress
+        status
+    }
+}

@@ -1,0 +1,15 @@
+query findUniqueMessages($where: MessagesWhereUniqueInput!){
+    findUniqueMessages(where: $where){
+        content
+        created_at
+        cust_id
+        customers
+        from
+        id
+        media
+        sender
+        staff_id
+        subject
+        users
+    }
+}

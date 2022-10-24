@@ -1,0 +1,9 @@
+query findUniqueCurrencies($where: CurrenciesWhereUniqueInput!){
+    findUniqueCurrencies(where: $where){
+        code
+        created_at
+        id
+        name
+        region
+    }
+}

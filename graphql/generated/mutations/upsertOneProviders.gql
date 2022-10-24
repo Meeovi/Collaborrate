@@ -1,0 +1,14 @@
+mutation upsertOneProviders($create: ProvidersCreateInput!, $update: ProvidersUpdateInput!, $where: ProvidersWhereUniqueInput!){
+    upsertOneProviders(create: $create, update: $update, where: $where){
+        active
+        client_id
+        client_secret
+        created_at
+        host_uri
+        icon
+        id
+        name
+        redirect_url
+        redirect_url_app
+    }
+}

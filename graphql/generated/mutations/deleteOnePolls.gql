@@ -1,0 +1,17 @@
+mutation deleteOnePolls($where: PollsWhereUniqueInput!){
+    deleteOnePolls(where: $where){
+        articles
+        categories
+        customers
+        description
+        excerpt
+        id
+        image
+        name
+        products
+        published
+        question
+        response
+        users
+    }
+}

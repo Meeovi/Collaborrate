@@ -1,0 +1,15 @@
+mutation upsertOneChannels($create: ChannelsCreateInput!, $update: ChannelsUpdateInput!, $where: ChannelsWhereUniqueInput!){
+    upsertOneChannels(create: $create, update: $update, where: $where){
+        client_id
+        client_secret
+        code
+        created_at
+        currency
+        default_lang
+        default_shipping
+        default_zone
+        id
+        include_tax
+        name
+    }
+}

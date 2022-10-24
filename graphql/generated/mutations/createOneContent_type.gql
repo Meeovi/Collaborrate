@@ -1,0 +1,20 @@
+mutation createOneContent_type($data: Content_typeCreateInput!){
+    createOneContent_type(data: $data){
+        boolean
+        created_at
+        database_name
+        date
+        email
+        id
+        json
+        link
+        media
+        number
+        password
+        rich_text
+        text
+        time
+        timestamp
+        uid
+    }
+}

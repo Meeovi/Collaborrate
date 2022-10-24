@@ -1,0 +1,12 @@
+mutation updateOneScheduler($data: SchedulerUpdateInput!, $where: SchedulerWhereUniqueInput!){
+    updateOneScheduler(data: $data, where: $where){
+        created_at
+        end_date
+        id
+        level
+        login
+        notes
+        start_date
+        whid
+    }
+}

@@ -1,0 +1,9 @@
+mutation createOneCurrencies($data: CurrenciesCreateInput!){
+    createOneCurrencies(data: $data){
+        code
+        created_at
+        id
+        name
+        region
+    }
+}

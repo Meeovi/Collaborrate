@@ -1,0 +1,26 @@
+query aggregateCurrency_symbols($cursor: Currency_symbolsWhereUniqueInput, $orderBy: [Currency_symbolsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Currency_symbolsWhereInput){
+    aggregateCurrency_symbols(cursor: $cursor, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+        }
+        _count{
+            _all
+            id
+            symbol
+            use_standard
+        }
+        _max{
+            id
+            symbol
+            use_standard
+        }
+        _min{
+            id
+            symbol
+            use_standard
+        }
+        _sum{
+            id
+        }
+    }
+}

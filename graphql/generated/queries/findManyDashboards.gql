@@ -1,0 +1,27 @@
+query findManyDashboards($cursor: DashboardsWhereUniqueInput, $distinct: [DashboardsScalarFieldEnum!], $orderBy: [DashboardsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: DashboardsWhereInput){
+    findManyDashboards(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        articles
+        category
+        checklists
+        client_id
+        client_secret
+        content
+        created_at
+        customers
+        id
+        logo
+        media
+        name
+        privacy
+        products
+        projects
+        published
+        reports
+        sales
+        tasks
+        tickets
+        url
+        users
+        visits
+    }
+}

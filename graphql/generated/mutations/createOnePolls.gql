@@ -1,0 +1,17 @@
+mutation createOnePolls($data: PollsCreateInput!){
+    createOnePolls(data: $data){
+        articles
+        categories
+        customers
+        description
+        excerpt
+        id
+        image
+        name
+        products
+        published
+        question
+        response
+        users
+    }
+}

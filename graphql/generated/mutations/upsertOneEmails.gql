@@ -1,0 +1,16 @@
+mutation upsertOneEmails($create: EmailsCreateInput!, $update: EmailsUpdateInput!, $where: EmailsWhereUniqueInput!){
+    upsertOneEmails(create: $create, update: $update, where: $where){
+        bcc
+        cc
+        content
+        created_at
+        cust_id
+        customers
+        from
+        id
+        media
+        staff_id
+        subject
+        users
+    }
+}

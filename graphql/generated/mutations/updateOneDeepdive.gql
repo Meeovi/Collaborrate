@@ -1,0 +1,12 @@
+mutation updateOneDeepdive($data: DeepdiveUpdateInput!, $where: DeepdiveWhereUniqueInput!){
+    updateOneDeepdive(data: $data, where: $where){
+        attendees
+        content
+        created_at
+        end_date
+        id
+        login
+        start_date
+        whid
+    }
+}

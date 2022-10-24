@@ -1,0 +1,5 @@
+mutation updateManyScheduler($data: SchedulerUpdateManyMutationInput!, $where: SchedulerWhereInput){
+    updateManyScheduler(data: $data, where: $where){
+        count
+    }
+}

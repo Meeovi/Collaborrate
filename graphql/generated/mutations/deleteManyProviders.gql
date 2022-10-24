@@ -1,0 +1,5 @@
+mutation deleteManyProviders($where: ProvidersWhereInput){
+    deleteManyProviders(where: $where){
+        count
+    }
+}

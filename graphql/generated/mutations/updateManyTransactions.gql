@@ -1,0 +1,5 @@
+mutation updateManyTransactions($data: TransactionsUpdateManyMutationInput!, $where: TransactionsWhereInput){
+    updateManyTransactions(data: $data, where: $where){
+        count
+    }
+}

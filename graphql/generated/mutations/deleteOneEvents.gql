@@ -1,0 +1,17 @@
+mutation deleteOneEvents($where: EventsWhereUniqueInput!){
+    deleteOneEvents(where: $where){
+        category
+        city
+        content
+        country
+        created_at
+        end
+        id
+        image
+        name
+        postalcode
+        start
+        state
+        tickets
+    }
+}

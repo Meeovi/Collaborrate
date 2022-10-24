@@ -1,0 +1,14 @@
+mutation createOneTax_rate($data: Tax_rateCreateInput!){
+    createOneTax_rate(data: $data){
+        country
+        default_store_view
+        id
+        postcode
+        prod_id
+        products
+        rate_percent
+        state
+        tax_identifier
+        zip_post_is_range
+    }
+}

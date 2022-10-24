@@ -1,0 +1,5 @@
+mutation createManyEndofshift($data: [EndofshiftCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyEndofshift(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

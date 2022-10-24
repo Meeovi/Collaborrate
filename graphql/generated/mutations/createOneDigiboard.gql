@@ -1,0 +1,10 @@
+mutation createOneDigiboard($data: DigiboardCreateInput!){
+    createOneDigiboard(data: $data){
+        board
+        course
+        created_at
+        id
+        name
+        student
+    }
+}

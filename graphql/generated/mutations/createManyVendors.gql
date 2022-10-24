@@ -1,0 +1,5 @@
+mutation createManyVendors($data: [VendorsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyVendors(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

@@ -1,0 +1,5 @@
+mutation createManyComments($data: [CommentsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyComments(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

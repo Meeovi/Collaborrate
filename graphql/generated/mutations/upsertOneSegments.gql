@@ -1,0 +1,12 @@
+mutation upsertOneSegments($create: SegmentsCreateInput!, $update: SegmentsUpdateInput!, $where: SegmentsWhereUniqueInput!){
+    upsertOneSegments(create: $create, update: $update, where: $where){
+        apply_to
+        created_at
+        customers
+        description
+        id
+        name
+        status
+        website
+    }
+}

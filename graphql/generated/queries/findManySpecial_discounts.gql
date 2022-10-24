@@ -1,0 +1,18 @@
+query findManySpecial_discounts($cursor: Special_discountsWhereUniqueInput, $distinct: [Special_discountsScalarFieldEnum!], $orderBy: [Special_discountsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Special_discountsWhereInput){
+    findManySpecial_discounts(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        articles
+        categories
+        coupons
+        customers
+        discount
+        excerpt
+        expiration
+        id
+        image
+        name
+        products
+        published
+        rewards
+        users
+    }
+}

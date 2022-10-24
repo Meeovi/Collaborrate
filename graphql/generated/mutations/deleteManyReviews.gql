@@ -1,0 +1,5 @@
+mutation deleteManyReviews($where: ReviewsWhereInput){
+    deleteManyReviews(where: $where){
+        count
+    }
+}

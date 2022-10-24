@@ -1,0 +1,12 @@
+mutation deleteOneTags($where: TagsWhereUniqueInput!){
+    deleteOneTags(where: $where){
+        articles
+        categories
+        customers
+        excerpt
+        id
+        name
+        products
+        users
+    }
+}

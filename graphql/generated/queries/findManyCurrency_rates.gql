@@ -1,0 +1,7 @@
+query findManyCurrency_rates($cursor: Currency_ratesWhereUniqueInput, $distinct: [Currency_ratesScalarFieldEnum!], $orderBy: [Currency_ratesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Currency_ratesWhereInput){
+    findManyCurrency_rates(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        id
+        import_service
+        usd
+    }
+}

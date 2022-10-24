@@ -1,0 +1,45 @@
+query groupByImportm($by: [ImportmScalarFieldEnum!]!, $having: ImportmScalarWhereWithAggregatesInput, $orderBy: [ImportmOrderByWithAggregationInput!], $skip: Int, $take: Int, $where: ImportmWhereInput){
+    groupByImportm(by: $by, having: $having, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+        }
+        _count{
+            _all
+            created_at
+            description
+            file
+            id
+            image
+            name
+            url
+        }
+        _max{
+            created_at
+            description
+            file
+            id
+            image
+            name
+            url
+        }
+        _min{
+            created_at
+            description
+            file
+            id
+            image
+            name
+            url
+        }
+        _sum{
+            id
+        }
+        created_at
+        description
+        file
+        id
+        image
+        name
+        url
+    }
+}

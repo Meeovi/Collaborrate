@@ -1,0 +1,13 @@
+mutation deleteOneTransactions($where: TransactionsWhereUniqueInput!){
+    deleteOneTransactions(where: $where){
+        closed
+        created
+        customer_payment
+        id
+        order_id
+        orders
+        parent_transaction_id
+        payment_method
+        transaction_id
+    }
+}

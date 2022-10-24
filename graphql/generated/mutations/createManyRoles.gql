@@ -1,0 +1,5 @@
+mutation createManyRoles($data: [RolesCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyRoles(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

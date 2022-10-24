@@ -1,0 +1,13 @@
+mutation upsertOneCollections($create: CollectionsCreateInput!, $update: CollectionsUpdateInput!, $where: CollectionsWhereUniqueInput!){
+    upsertOneCollections(create: $create, update: $update, where: $where){
+        created_at
+        description
+        id
+        image
+        meta_description
+        meta_keywords
+        meta_title
+        name
+        product
+    }
+}

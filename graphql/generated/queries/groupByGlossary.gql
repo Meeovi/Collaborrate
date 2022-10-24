@@ -1,0 +1,37 @@
+query groupByGlossary($by: [GlossaryScalarFieldEnum!]!, $having: GlossaryScalarWhereWithAggregatesInput, $orderBy: [GlossaryOrderByWithAggregationInput!], $skip: Int, $take: Int, $where: GlossaryWhereInput){
+    groupByGlossary(by: $by, having: $having, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+        }
+        _count{
+            _all
+            content
+            id
+            image
+            name
+            published
+        }
+        _max{
+            content
+            id
+            image
+            name
+            published
+        }
+        _min{
+            content
+            id
+            image
+            name
+            published
+        }
+        _sum{
+            id
+        }
+        content
+        id
+        image
+        name
+        published
+    }
+}

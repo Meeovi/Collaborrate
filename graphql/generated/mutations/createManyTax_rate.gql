@@ -1,0 +1,5 @@
+mutation createManyTax_rate($data: [Tax_rateCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyTax_rate(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

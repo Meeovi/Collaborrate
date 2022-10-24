@@ -1,0 +1,5 @@
+mutation updateManyDeepdive($data: DeepdiveUpdateManyMutationInput!, $where: DeepdiveWhereInput){
+    updateManyDeepdive(data: $data, where: $where){
+        count
+    }
+}

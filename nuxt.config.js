@@ -38,7 +38,6 @@ export default {
   plugins: [
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
     { src: '~/plugins/axios.js' },
-    { src: '~/plugins/redux.js' },
   ],
 
   components: true,
@@ -89,7 +88,7 @@ export default {
     clientConfigs: {
       default:{
         httpEndpoint: MAIN_ENDPOINT,
-        wsEndpoint: WS_ENDPOINT
+       // wsEndpoint: WS_ENDPOINT
       }
     },
     watchLoading: '~/plugins/apollo-watch-loading-handler.js',

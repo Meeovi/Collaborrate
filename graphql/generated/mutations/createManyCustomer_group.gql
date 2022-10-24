@@ -1,0 +1,5 @@
+mutation createManyCustomer_group($data: [Customer_groupCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyCustomer_group(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

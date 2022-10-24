@@ -1,0 +1,12 @@
+mutation updateOneLogIn($data: LogInUpdateInput!, $where: LogInWhereUniqueInput!){
+    updateOneLogIn(data: $data, where: $where){
+        created_at
+        email
+        expiresIn
+        id
+        password
+        token
+        username
+        users
+    }
+}

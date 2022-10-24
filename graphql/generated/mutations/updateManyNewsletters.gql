@@ -1,0 +1,5 @@
+mutation updateManyNewsletters($data: NewslettersUpdateManyMutationInput!, $where: NewslettersWhereInput){
+    updateManyNewsletters(data: $data, where: $where){
+        count
+    }
+}

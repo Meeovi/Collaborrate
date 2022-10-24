@@ -1,0 +1,41 @@
+query aggregateWebsites($cursor: WebsitesWhereUniqueInput, $orderBy: [WebsitesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: WebsitesWhereInput){
+    aggregateWebsites(cursor: $cursor, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+        }
+        _count{
+            _all
+            category
+            created_at
+            id
+            name
+            shop
+            store
+            themes
+            url
+        }
+        _max{
+            category
+            created_at
+            id
+            name
+            shop
+            store
+            themes
+            url
+        }
+        _min{
+            category
+            created_at
+            id
+            name
+            shop
+            store
+            themes
+            url
+        }
+        _sum{
+            id
+        }
+    }
+}

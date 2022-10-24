@@ -1,0 +1,5 @@
+mutation updateManyImportm($data: ImportmUpdateManyMutationInput!, $where: ImportmWhereInput){
+    updateManyImportm(data: $data, where: $where){
+        count
+    }
+}

@@ -1,0 +1,19 @@
+mutation updateOneFullfillments($data: FullfillmentsUpdateInput!, $where: FullfillmentsWhereUniqueInput!){
+    updateOneFullfillments(data: $data, where: $where){
+        address
+        address_two
+        city
+        company
+        country
+        country_area
+        created_at
+        id
+        name
+        phone
+        pickup
+        shipping_zones
+        state
+        stock
+        zipcode
+    }
+}

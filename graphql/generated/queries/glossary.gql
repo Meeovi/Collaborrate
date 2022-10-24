@@ -1,0 +1,9 @@
+query glossary($where: GlossaryWhereUniqueInput!){
+    glossary(where: $where){
+        content
+        id
+        image
+        name
+        published
+    }
+}

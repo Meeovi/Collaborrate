@@ -1,0 +1,5 @@
+mutation updateManyReturns($data: ReturnsUpdateManyMutationInput!, $where: ReturnsWhereInput){
+    updateManyReturns(data: $data, where: $where){
+        count
+    }
+}

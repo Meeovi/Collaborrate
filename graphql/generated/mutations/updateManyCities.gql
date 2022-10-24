@@ -1,0 +1,5 @@
+mutation updateManyCities($data: CitiesUpdateManyMutationInput!, $where: CitiesWhereInput){
+    updateManyCities(data: $data, where: $where){
+        count
+    }
+}

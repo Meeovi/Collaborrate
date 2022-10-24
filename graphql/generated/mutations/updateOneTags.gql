@@ -1,0 +1,12 @@
+mutation updateOneTags($data: TagsUpdateInput!, $where: TagsWhereUniqueInput!){
+    updateOneTags(data: $data, where: $where){
+        articles
+        categories
+        customers
+        excerpt
+        id
+        name
+        products
+        users
+    }
+}

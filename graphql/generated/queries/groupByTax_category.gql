@@ -1,0 +1,33 @@
+query groupByTax_category($by: [Tax_categoryScalarFieldEnum!]!, $having: Tax_categoryScalarWhereWithAggregatesInput, $orderBy: [Tax_categoryOrderByWithAggregationInput!], $skip: Int, $take: Int, $where: Tax_categoryWhereInput){
+    groupByTax_category(by: $by, having: $having, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+        }
+        _count{
+            _all
+            created_at
+            default
+            id
+            name
+        }
+        _max{
+            created_at
+            default
+            id
+            name
+        }
+        _min{
+            created_at
+            default
+            id
+            name
+        }
+        _sum{
+            id
+        }
+        created_at
+        default
+        id
+        name
+    }
+}

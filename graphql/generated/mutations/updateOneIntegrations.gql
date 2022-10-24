@@ -1,0 +1,11 @@
+mutation updateOneIntegrations($data: IntegrationsUpdateInput!, $where: IntegrationsWhereUniqueInput!){
+    updateOneIntegrations(data: $data, where: $where){
+        category
+        content
+        created_at
+        id
+        location
+        media
+        name
+    }
+}

@@ -1,0 +1,17 @@
+mutation upsertOneMeeting($create: MeetingCreateInput!, $update: MeetingUpdateInput!, $where: MeetingWhereUniqueInput!){
+    upsertOneMeeting(create: $create, update: $update, where: $where){
+        assigned_to
+        content
+        created_at
+        duration
+        end_date
+        id
+        invitees
+        related_to
+        reminders
+        scheduling
+        start_date
+        status
+        subject
+    }
+}

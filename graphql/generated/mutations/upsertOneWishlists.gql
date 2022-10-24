@@ -1,0 +1,12 @@
+mutation upsertOneWishlists($create: WishlistsCreateInput!, $update: WishlistsUpdateInput!, $where: WishlistsWhereUniqueInput!){
+    upsertOneWishlists(create: $create, update: $update, where: $where){
+        created_at
+        customers
+        id
+        name
+        occassions
+        products
+        quantity
+        visibility
+    }
+}

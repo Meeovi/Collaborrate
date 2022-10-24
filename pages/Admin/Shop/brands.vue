@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import  allBrands from '~/graphql/queries/shop/brands'
+import  allBrands from '~/graphql/generated/queries/findManyBrands'
 
 export default {
   data() {

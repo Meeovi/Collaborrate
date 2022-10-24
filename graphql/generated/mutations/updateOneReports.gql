@@ -1,0 +1,14 @@
+mutation updateOneReports($data: ReportsUpdateInput!, $where: ReportsWhereUniqueInput!){
+    updateOneReports(data: $data, where: $where){
+        applied_coupon
+        created
+        customer
+        email
+        id
+        ip_address
+        products
+        quantity
+        subtotal
+        updated
+    }
+}

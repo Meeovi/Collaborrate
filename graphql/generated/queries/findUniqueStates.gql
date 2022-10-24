@@ -1,0 +1,10 @@
+query findUniqueStates($where: StatesWhereUniqueInput!){
+    findUniqueStates(where: $where){
+        country
+        description
+        id
+        image
+        name
+        trainings
+    }
+}

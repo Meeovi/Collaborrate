@@ -1,0 +1,5 @@
+mutation updateManyCollections($data: CollectionsUpdateManyMutationInput!, $where: CollectionsWhereInput){
+    updateManyCollections(data: $data, where: $where){
+        count
+    }
+}

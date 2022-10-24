@@ -1,0 +1,14 @@
+query findUniqueReports($where: ReportsWhereUniqueInput!){
+    findUniqueReports(where: $where){
+        applied_coupon
+        created
+        customer
+        email
+        id
+        ip_address
+        products
+        quantity
+        subtotal
+        updated
+    }
+}

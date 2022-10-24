@@ -1,0 +1,5 @@
+mutation updateManyInternalization($data: InternalizationUpdateManyMutationInput!, $where: InternalizationWhereInput){
+    updateManyInternalization(data: $data, where: $where){
+        count
+    }
+}

@@ -38,7 +38,7 @@
 </template>
 
 <script>
- import  findManyProducts from '~/graphql/queries/shop/products'
+ import  findManyProducts from '~/graphql/generated/queries/findManyProducts'
 
 export default {
   data() {

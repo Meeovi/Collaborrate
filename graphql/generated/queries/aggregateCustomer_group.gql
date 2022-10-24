@@ -1,0 +1,46 @@
+query aggregateCustomer_group($cursor: Customer_groupWhereUniqueInput, $orderBy: [Customer_groupOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Customer_groupWhereInput){
+    aggregateCustomer_group(cursor: $cursor, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            cust_id
+            id
+        }
+        _count{
+            _all
+            content
+            coverPhoto
+            created_at
+            cust_id
+            customers
+            id
+            image
+            name
+            tax_class
+        }
+        _max{
+            content
+            coverPhoto
+            created_at
+            cust_id
+            customers
+            id
+            image
+            name
+            tax_class
+        }
+        _min{
+            content
+            coverPhoto
+            created_at
+            cust_id
+            customers
+            id
+            image
+            name
+            tax_class
+        }
+        _sum{
+            cust_id
+            id
+        }
+    }
+}

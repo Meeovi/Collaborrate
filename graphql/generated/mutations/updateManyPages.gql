@@ -1,0 +1,5 @@
+mutation updateManyPages($data: PagesUpdateManyMutationInput!, $where: PagesWhereInput){
+    updateManyPages(data: $data, where: $where){
+        count
+    }
+}

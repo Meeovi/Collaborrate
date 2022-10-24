@@ -1,0 +1,5 @@
+mutation updateManyOpportunities($data: OpportunitiesUpdateManyMutationInput!, $where: OpportunitiesWhereInput){
+    updateManyOpportunities(data: $data, where: $where){
+        count
+    }
+}

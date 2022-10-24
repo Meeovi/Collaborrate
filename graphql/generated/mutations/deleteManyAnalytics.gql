@@ -1,0 +1,5 @@
+mutation deleteManyAnalytics($where: AnalyticsWhereInput){
+    deleteManyAnalytics(where: $where){
+        count
+    }
+}

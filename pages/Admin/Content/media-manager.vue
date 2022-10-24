@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import  mediamanager from '~/graphql/queries/content/mediamanager'
+import  mediamanager from '~/graphql/generated/queries/mediamanager'
 import  mediasettings from '~/components/dashboard/media/mediasettings'
 import  mediadetails from '~/components/dashboard/media/mediadetails'
   export default {

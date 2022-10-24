@@ -1,0 +1,7 @@
+mutation createOneCurrency_rates($data: Currency_ratesCreateInput!){
+    createOneCurrency_rates(data: $data){
+        id
+        import_service
+        usd
+    }
+}

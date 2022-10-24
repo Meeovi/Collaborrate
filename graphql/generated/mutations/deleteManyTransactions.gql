@@ -1,0 +1,5 @@
+mutation deleteManyTransactions($where: TransactionsWhereInput){
+    deleteManyTransactions(where: $where){
+        count
+    }
+}

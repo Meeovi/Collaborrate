@@ -1,0 +1,7 @@
+query findUniqueCurrency_rates($where: Currency_ratesWhereUniqueInput!){
+    findUniqueCurrency_rates(where: $where){
+        id
+        import_service
+        usd
+    }
+}

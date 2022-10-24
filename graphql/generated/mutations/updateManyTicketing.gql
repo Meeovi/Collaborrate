@@ -1,0 +1,5 @@
+mutation updateManyTicketing($data: TicketingUpdateManyMutationInput!, $where: TicketingWhereInput){
+    updateManyTicketing(data: $data, where: $where){
+        count
+    }
+}

@@ -1,0 +1,5 @@
+mutation updateManyProviders($data: ProvidersUpdateManyMutationInput!, $where: ProvidersWhereInput){
+    updateManyProviders(data: $data, where: $where){
+        count
+    }
+}

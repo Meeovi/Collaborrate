@@ -1,0 +1,7 @@
+mutation upsertOneCurrency_rates($create: Currency_ratesCreateInput!, $update: Currency_ratesUpdateInput!, $where: Currency_ratesWhereUniqueInput!){
+    upsertOneCurrency_rates(create: $create, update: $update, where: $where){
+        id
+        import_service
+        usd
+    }
+}

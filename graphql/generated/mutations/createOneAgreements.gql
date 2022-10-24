@@ -1,0 +1,16 @@
+mutation createOneAgreements($data: AgreementsCreateInput!){
+    createOneAgreements(data: $data){
+        content
+        created
+        excerpt
+        id
+        image
+        mediamanager
+        name
+        reference_id
+        shop_id
+        type
+        updated
+        user_id
+    }
+}

@@ -1,0 +1,11 @@
+query internalization($where: InternalizationWhereUniqueInput!){
+    internalization(where: $where){
+        created_at
+        default
+        description
+        id
+        name
+        region
+        website
+    }
+}

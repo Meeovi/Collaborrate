@@ -1,0 +1,18 @@
+mutation deleteOneSpecial_discounts($where: Special_discountsWhereUniqueInput!){
+    deleteOneSpecial_discounts(where: $where){
+        articles
+        categories
+        coupons
+        customers
+        discount
+        excerpt
+        expiration
+        id
+        image
+        name
+        products
+        published
+        rewards
+        users
+    }
+}

@@ -1,0 +1,5 @@
+mutation createManyReturns($data: [ReturnsCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyReturns(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

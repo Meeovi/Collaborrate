@@ -46,7 +46,7 @@
 
 <script>
 // eslint-disable-next-line camelcase
-import  invoices from '~/graphql/queries/sales/invoices'
+import  invoices from '~/graphql/generated/queries/findManyInvoices'
 
 export default {
   data() {

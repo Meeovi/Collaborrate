@@ -1,0 +1,5 @@
+mutation deleteManyCases($where: CasesWhereInput){
+    deleteManyCases(where: $where){
+        count
+    }
+}

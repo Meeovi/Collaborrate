@@ -1,0 +1,5 @@
+mutation createManyProviders($data: [ProvidersCreateManyInput!]!, $skipDuplicates: Boolean){
+    createManyProviders(data: $data, skipDuplicates: $skipDuplicates){
+        count
+    }
+}

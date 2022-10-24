@@ -1,0 +1,18 @@
+mutation createOneBrands($data: BrandsCreateInput!){
+    createOneBrands(data: $data){
+        city
+        code
+        country
+        created_at
+        description
+        id
+        isPublic
+        media
+        mediamanager
+        name
+        product
+        products
+        state
+        workspaces
+    }
+}

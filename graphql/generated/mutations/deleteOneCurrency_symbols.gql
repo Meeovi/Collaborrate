@@ -1,0 +1,7 @@
+mutation deleteOneCurrency_symbols($where: Currency_symbolsWhereUniqueInput!){
+    deleteOneCurrency_symbols(where: $where){
+        id
+        symbol
+        use_standard
+    }
+}

@@ -1,0 +1,20 @@
+mutation createOneStatistics($data: StatisticsCreateInput!){
+    createOneStatistics(data: $data){
+        articles
+        categories
+        coupons
+        customers
+        description
+        excerpt
+        expiration
+        id
+        image
+        name
+        products
+        published
+        reports
+        rewards
+        special_offers
+        users
+    }
+}

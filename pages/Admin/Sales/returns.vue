@@ -38,7 +38,7 @@
 </template>
 
 <script>
- import  findManyReturns from '~/graphql/queries/sales/returns'
+ import  findManyReturns from '~/graphql/generated/queries/findManyReturns'
 
 export default {
   data() {

@@ -1,0 +1,11 @@
+query findUniqueIntegrations($where: IntegrationsWhereUniqueInput!){
+    findUniqueIntegrations(where: $where){
+        category
+        content
+        created_at
+        id
+        location
+        media
+        name
+    }
+}

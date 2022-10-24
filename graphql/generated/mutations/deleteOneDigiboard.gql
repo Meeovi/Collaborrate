@@ -1,0 +1,10 @@
+mutation deleteOneDigiboard($where: DigiboardWhereUniqueInput!){
+    deleteOneDigiboard(where: $where){
+        board
+        course
+        created_at
+        id
+        name
+        student
+    }
+}

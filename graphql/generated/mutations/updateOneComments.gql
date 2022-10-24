@@ -1,0 +1,14 @@
+mutation updateOneComments($data: CommentsUpdateInput!, $where: CommentsWhereUniqueInput!){
+    updateOneComments(data: $data, where: $where){
+        cust_id
+        customer_name
+        customers
+        description
+        id
+        image
+        mediamanager
+        published
+        response
+        trainings
+    }
+}

@@ -1,0 +1,17 @@
+mutation updateOneMeeting($data: MeetingUpdateInput!, $where: MeetingWhereUniqueInput!){
+    updateOneMeeting(data: $data, where: $where){
+        assigned_to
+        content
+        created_at
+        duration
+        end_date
+        id
+        invitees
+        related_to
+        reminders
+        scheduling
+        start_date
+        status
+        subject
+    }
+}

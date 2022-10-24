@@ -1,0 +1,11 @@
+mutation createOneInternalization($data: InternalizationCreateInput!){
+    createOneInternalization(data: $data){
+        created_at
+        default
+        description
+        id
+        name
+        region
+        website
+    }
+}

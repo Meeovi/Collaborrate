@@ -1,0 +1,20 @@
+mutation upsertOneGift_certificates($create: Gift_certificatesCreateInput!, $update: Gift_certificatesUpdateInput!, $where: Gift_certificatesWhereUniqueInput!){
+    upsertOneGift_certificates(create: $create, update: $update, where: $where){
+        articles
+        categories
+        coupons
+        customers
+        discount
+        excerpt
+        expiration
+        id
+        image
+        name
+        products
+        published
+        rewards
+        special_offers
+        type
+        users
+    }
+}

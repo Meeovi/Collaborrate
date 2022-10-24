@@ -1,0 +1,12 @@
+query findFirstWishlists($cursor: WishlistsWhereUniqueInput, $distinct: [WishlistsScalarFieldEnum!], $orderBy: [WishlistsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: WishlistsWhereInput){
+    findFirstWishlists(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        created_at
+        customers
+        id
+        name
+        occassions
+        products
+        quantity
+        visibility
+    }
+}

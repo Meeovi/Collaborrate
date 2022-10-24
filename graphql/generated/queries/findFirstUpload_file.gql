@@ -1,0 +1,23 @@
+query findFirstUpload_file($cursor: Upload_fileWhereUniqueInput, $distinct: [Upload_fileScalarFieldEnum!], $orderBy: [Upload_fileOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Upload_fileWhereInput){
+    findFirstUpload_file(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        alternativeText
+        caption
+        created_at
+        created_by
+        ext
+        formats
+        hash
+        height
+        id
+        mime
+        name
+        previewUrl
+        provider
+        provider_metadata
+        size
+        updated_at
+        updated_by
+        url
+        width
+    }
+}

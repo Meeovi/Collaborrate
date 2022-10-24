@@ -1,0 +1,5 @@
+mutation updateManyCurrencies($data: CurrenciesUpdateManyMutationInput!, $where: CurrenciesWhereInput){
+    updateManyCurrencies(data: $data, where: $where){
+        count
+    }
+}

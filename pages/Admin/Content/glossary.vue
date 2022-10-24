@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import  glossaries from '~/graphql/queries/content/glossaries'
+import  glossaries from '~/graphql/generated/queries/glossaries'
 
 export default {
   data() {

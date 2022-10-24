@@ -1,0 +1,5 @@
+mutation deleteManyTags($where: TagsWhereInput){
+    deleteManyTags(where: $where){
+        count
+    }
+}

@@ -1,0 +1,11 @@
+mutation deleteOneCities($where: CitiesWhereUniqueInput!){
+    deleteOneCities(where: $where){
+        country
+        description
+        id
+        image
+        name
+        postalCode
+        state
+    }
+}

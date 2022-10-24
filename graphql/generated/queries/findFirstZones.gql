@@ -1,0 +1,12 @@
+query findFirstZones($cursor: ZonesWhereUniqueInput, $distinct: [ZonesScalarFieldEnum!], $orderBy: [ZonesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ZonesWhereInput){
+    findFirstZones(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        code
+        country
+        created_at
+        id
+        name
+        scope
+        type
+        updated_at
+    }
+}

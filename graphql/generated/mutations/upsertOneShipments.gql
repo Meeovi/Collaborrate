@@ -1,0 +1,16 @@
+mutation upsertOneShipments($create: ShipmentsCreateInput!, $update: ShipmentsUpdateInput!, $where: ShipmentsWhereUniqueInput!){
+    upsertOneShipments(create: $create, update: $update, where: $where){
+        carrier_name
+        client_id
+        client_secret
+        country
+        id
+        image
+        product
+        ship_date
+        speed_grade
+        tracking_url
+        transit_time
+        website
+    }
+}

@@ -1,0 +1,16 @@
+mutation createOneCredit_memos($data: Credit_memosCreateInput!){
+    createOneCredit_memos(data: $data){
+        action
+        bill_to_name
+        created
+        credit_memo
+        cust_id
+        customers
+        id
+        order_number
+        prod_id
+        products
+        refunded
+        status
+    }
+}

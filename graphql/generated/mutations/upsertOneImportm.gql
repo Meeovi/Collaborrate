@@ -1,0 +1,11 @@
+mutation upsertOneImportm($create: ImportmCreateInput!, $update: ImportmUpdateInput!, $where: ImportmWhereUniqueInput!){
+    upsertOneImportm(create: $create, update: $update, where: $where){
+        created_at
+        description
+        file
+        id
+        image
+        name
+        url
+    }
+}

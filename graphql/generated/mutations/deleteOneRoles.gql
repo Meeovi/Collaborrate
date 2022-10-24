@@ -1,0 +1,8 @@
+mutation deleteOneRoles($where: RolesWhereUniqueInput!){
+    deleteOneRoles(where: $where){
+        content
+        created_at
+        id
+        role_name
+    }
+}

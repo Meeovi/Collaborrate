@@ -1,0 +1,35 @@
+query aggregateCountries($cursor: CountriesWhereUniqueInput, $orderBy: [CountriesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CountriesWhereInput){
+    aggregateCountries(cursor: $cursor, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        _avg{
+            id
+        }
+        _count{
+            _all
+            description
+            id
+            image
+            name
+            region
+            trainings
+        }
+        _max{
+            description
+            id
+            image
+            name
+            region
+            trainings
+        }
+        _min{
+            description
+            id
+            image
+            name
+            region
+            trainings
+        }
+        _sum{
+            id
+        }
+    }
+}

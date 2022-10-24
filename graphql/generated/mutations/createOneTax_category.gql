@@ -1,0 +1,8 @@
+mutation createOneTax_category($data: Tax_categoryCreateInput!){
+    createOneTax_category(data: $data){
+        created_at
+        default
+        id
+        name
+    }
+}

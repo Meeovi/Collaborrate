@@ -1,0 +1,5 @@
+mutation updateManyArticles($data: ArticlesUpdateManyMutationInput!, $where: ArticlesWhereInput){
+    updateManyArticles(data: $data, where: $where){
+        count
+    }
+}

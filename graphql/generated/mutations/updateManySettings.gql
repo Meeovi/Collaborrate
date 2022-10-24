@@ -1,0 +1,5 @@
+mutation updateManySettings($data: SettingsUpdateManyMutationInput!, $where: SettingsWhereInput){
+    updateManySettings(data: $data, where: $where){
+        count
+    }
+}

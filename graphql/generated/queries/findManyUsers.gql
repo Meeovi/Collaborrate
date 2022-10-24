@@ -1,0 +1,19 @@
+query findManyUsers($cursor: UsersWhereUniqueInput, $distinct: [UsersScalarFieldEnum!], $orderBy: [UsersOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: UsersWhereInput){
+    findManyUsers(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+        created_at
+        email
+        emails
+        first_name
+        id
+        interface_locale
+        last_name
+        mediamanager
+        messages
+        password
+        permissions
+        projects
+        username
+        value
+        workspaces
+    }
+}

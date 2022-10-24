@@ -1,0 +1,12 @@
+mutation deleteOneRating($where: RatingWhereUniqueInput!){
+    deleteOneRating(where: $where){
+        active
+        default_store_view
+        default_value
+        id
+        prod_id
+        products
+        rating_visibility
+        sort_order
+    }
+}

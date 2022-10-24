@@ -41,7 +41,7 @@
 </template>
 
 <script>
- import  contracts from '~/graphql/queries/marketing/contracts'
+ import  contracts from '~/graphql/generated/queries/findManyContracts'
 
 export default {
    data() {

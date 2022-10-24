@@ -1,0 +1,11 @@
+mutation deleteOneInternalization($where: InternalizationWhereUniqueInput!){
+    deleteOneInternalization(where: $where){
+        created_at
+        default
+        description
+        id
+        name
+        region
+        website
+    }
+}

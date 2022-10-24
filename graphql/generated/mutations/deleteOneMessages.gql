@@ -1,0 +1,15 @@
+mutation deleteOneMessages($where: MessagesWhereUniqueInput!){
+    deleteOneMessages(where: $where){
+        content
+        created_at
+        cust_id
+        customers
+        from
+        id
+        media
+        sender
+        staff_id
+        subject
+        users
+    }
+}
