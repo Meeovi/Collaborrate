@@ -60,6 +60,30 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], SchedulerOrderByWithAggregationInput.prototype, "whid", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerOrderByWithAggregationInput.prototype, "label", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerOrderByWithAggregationInput.prototype, "public", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerOrderByWithAggregationInput.prototype, "permission", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerOrderByWithAggregationInput.prototype, "name", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => SchedulerCountOrderByAggregateInput_1.SchedulerCountOrderByAggregateInput, {
         nullable: true
     }),

@@ -687,14 +687,6 @@ type AggregateCountries {
   _sum: CountriesSumAggregate
 }
 
-type AggregateCoupons {
-  _avg: CouponsAvgAggregate
-  _count: CouponsCountAggregate
-  _max: CouponsMaxAggregate
-  _min: CouponsMinAggregate
-  _sum: CouponsSumAggregate
-}
-
 type AggregateCredit_memos {
   _avg: Credit_memosAvgAggregate
   _count: Credit_memosCountAggregate
@@ -775,6 +767,14 @@ type AggregateDigiboard {
   _sum: DigiboardSumAggregate
 }
 
+type AggregateDiscounts {
+  _avg: DiscountsAvgAggregate
+  _count: DiscountsCountAggregate
+  _max: DiscountsMaxAggregate
+  _min: DiscountsMinAggregate
+  _sum: DiscountsSumAggregate
+}
+
 type AggregateEmails {
   _avg: EmailsAvgAggregate
   _count: EmailsCountAggregate
@@ -805,14 +805,6 @@ type AggregateFullfillments {
   _max: FullfillmentsMaxAggregate
   _min: FullfillmentsMinAggregate
   _sum: FullfillmentsSumAggregate
-}
-
-type AggregateGift_certificates {
-  _avg: Gift_certificatesAvgAggregate
-  _count: Gift_certificatesCountAggregate
-  _max: Gift_certificatesMaxAggregate
-  _min: Gift_certificatesMinAggregate
-  _sum: Gift_certificatesSumAggregate
 }
 
 type AggregateGlossary {
@@ -7568,357 +7560,6 @@ input CountriesWhereUniqueInput {
   id: Int
 }
 
-type Coupons {
-  articles: String
-  categories: String
-  customers: String
-  discount: String
-  excerpt: String
-  expiration: String
-  id: BigInt!
-  image: String
-  name: String!
-  prod_id: BigInt!
-  products: String
-  products_couponsToproducts: String
-  published: DateTime
-  users: String
-}
-
-type CouponsAvgAggregate {
-  id: Float
-  prod_id: Float
-}
-
-input CouponsAvgOrderByAggregateInput {
-  id: SortOrder
-  prod_id: SortOrder
-}
-
-type CouponsCountAggregate {
-  _all: Int!
-  articles: Int!
-  categories: Int!
-  customers: Int!
-  discount: Int!
-  excerpt: Int!
-  expiration: Int!
-  id: Int!
-  image: Int!
-  name: Int!
-  prod_id: Int!
-  products: Int!
-  products_couponsToproducts: Int!
-  published: Int!
-  users: Int!
-}
-
-input CouponsCountOrderByAggregateInput {
-  articles: SortOrder
-  categories: SortOrder
-  customers: SortOrder
-  discount: SortOrder
-  excerpt: SortOrder
-  expiration: SortOrder
-  id: SortOrder
-  image: SortOrder
-  name: SortOrder
-  prod_id: SortOrder
-  products: SortOrder
-  products_couponsToproducts: SortOrder
-  published: SortOrder
-  users: SortOrder
-}
-
-input CouponsCreateInput {
-  articles: String
-  categories: String
-  customers: String
-  discount: String
-  excerpt: String
-  expiration: String
-  id: BigInt
-  image: String
-  name: String!
-  prod_id: BigInt!
-  products: String
-  products_couponsToproducts: String
-  published: DateTime
-  users: String
-}
-
-input CouponsCreateManyInput {
-  articles: String
-  categories: String
-  customers: String
-  discount: String
-  excerpt: String
-  expiration: String
-  id: BigInt
-  image: String
-  name: String!
-  prod_id: BigInt!
-  products: String
-  products_couponsToproducts: String
-  published: DateTime
-  users: String
-}
-
-type CouponsGroupBy {
-  _avg: CouponsAvgAggregate
-  _count: CouponsCountAggregate
-  _max: CouponsMaxAggregate
-  _min: CouponsMinAggregate
-  _sum: CouponsSumAggregate
-  articles: String
-  categories: String
-  customers: String
-  discount: String
-  excerpt: String
-  expiration: String
-  id: BigInt!
-  image: String
-  name: String!
-  prod_id: BigInt!
-  products: String
-  products_couponsToproducts: String
-  published: DateTime
-  users: String
-}
-
-type CouponsMaxAggregate {
-  articles: String
-  categories: String
-  customers: String
-  discount: String
-  excerpt: String
-  expiration: String
-  id: BigInt
-  image: String
-  name: String
-  prod_id: BigInt
-  products: String
-  products_couponsToproducts: String
-  published: DateTime
-  users: String
-}
-
-input CouponsMaxOrderByAggregateInput {
-  articles: SortOrder
-  categories: SortOrder
-  customers: SortOrder
-  discount: SortOrder
-  excerpt: SortOrder
-  expiration: SortOrder
-  id: SortOrder
-  image: SortOrder
-  name: SortOrder
-  prod_id: SortOrder
-  products: SortOrder
-  products_couponsToproducts: SortOrder
-  published: SortOrder
-  users: SortOrder
-}
-
-type CouponsMinAggregate {
-  articles: String
-  categories: String
-  customers: String
-  discount: String
-  excerpt: String
-  expiration: String
-  id: BigInt
-  image: String
-  name: String
-  prod_id: BigInt
-  products: String
-  products_couponsToproducts: String
-  published: DateTime
-  users: String
-}
-
-input CouponsMinOrderByAggregateInput {
-  articles: SortOrder
-  categories: SortOrder
-  customers: SortOrder
-  discount: SortOrder
-  excerpt: SortOrder
-  expiration: SortOrder
-  id: SortOrder
-  image: SortOrder
-  name: SortOrder
-  prod_id: SortOrder
-  products: SortOrder
-  products_couponsToproducts: SortOrder
-  published: SortOrder
-  users: SortOrder
-}
-
-enum CouponsOrderByRelevanceFieldEnum {
-  articles
-  categories
-  customers
-  discount
-  excerpt
-  expiration
-  image
-  name
-  products
-  products_couponsToproducts
-  users
-}
-
-input CouponsOrderByRelevanceInput {
-  fields: [CouponsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
-input CouponsOrderByWithAggregationInput {
-  _avg: CouponsAvgOrderByAggregateInput
-  _count: CouponsCountOrderByAggregateInput
-  _max: CouponsMaxOrderByAggregateInput
-  _min: CouponsMinOrderByAggregateInput
-  _sum: CouponsSumOrderByAggregateInput
-  articles: SortOrder
-  categories: SortOrder
-  customers: SortOrder
-  discount: SortOrder
-  excerpt: SortOrder
-  expiration: SortOrder
-  id: SortOrder
-  image: SortOrder
-  name: SortOrder
-  prod_id: SortOrder
-  products: SortOrder
-  products_couponsToproducts: SortOrder
-  published: SortOrder
-  users: SortOrder
-}
-
-input CouponsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: CouponsOrderByRelevanceInput
-  articles: SortOrder
-  categories: SortOrder
-  customers: SortOrder
-  discount: SortOrder
-  excerpt: SortOrder
-  expiration: SortOrder
-  id: SortOrder
-  image: SortOrder
-  name: SortOrder
-  prod_id: SortOrder
-  products: SortOrder
-  products_couponsToproducts: SortOrder
-  published: SortOrder
-  users: SortOrder
-}
-
-enum CouponsScalarFieldEnum {
-  articles
-  categories
-  customers
-  discount
-  excerpt
-  expiration
-  id
-  image
-  name
-  prod_id
-  products
-  products_couponsToproducts
-  published
-  users
-}
-
-input CouponsScalarWhereWithAggregatesInput {
-  AND: [CouponsScalarWhereWithAggregatesInput!]
-  NOT: [CouponsScalarWhereWithAggregatesInput!]
-  OR: [CouponsScalarWhereWithAggregatesInput!]
-  articles: StringNullableWithAggregatesFilter
-  categories: StringNullableWithAggregatesFilter
-  customers: StringNullableWithAggregatesFilter
-  discount: StringNullableWithAggregatesFilter
-  excerpt: StringNullableWithAggregatesFilter
-  expiration: StringNullableWithAggregatesFilter
-  id: BigIntWithAggregatesFilter
-  image: StringNullableWithAggregatesFilter
-  name: StringWithAggregatesFilter
-  prod_id: BigIntWithAggregatesFilter
-  products: StringNullableWithAggregatesFilter
-  products_couponsToproducts: StringNullableWithAggregatesFilter
-  published: DateTimeNullableWithAggregatesFilter
-  users: StringNullableWithAggregatesFilter
-}
-
-type CouponsSumAggregate {
-  id: BigInt
-  prod_id: BigInt
-}
-
-input CouponsSumOrderByAggregateInput {
-  id: SortOrder
-  prod_id: SortOrder
-}
-
-input CouponsUpdateInput {
-  articles: NullableStringFieldUpdateOperationsInput
-  categories: NullableStringFieldUpdateOperationsInput
-  customers: NullableStringFieldUpdateOperationsInput
-  discount: NullableStringFieldUpdateOperationsInput
-  excerpt: NullableStringFieldUpdateOperationsInput
-  expiration: NullableStringFieldUpdateOperationsInput
-  id: BigIntFieldUpdateOperationsInput
-  image: NullableStringFieldUpdateOperationsInput
-  name: StringFieldUpdateOperationsInput
-  prod_id: BigIntFieldUpdateOperationsInput
-  products: NullableStringFieldUpdateOperationsInput
-  products_couponsToproducts: NullableStringFieldUpdateOperationsInput
-  published: NullableDateTimeFieldUpdateOperationsInput
-  users: NullableStringFieldUpdateOperationsInput
-}
-
-input CouponsUpdateManyMutationInput {
-  articles: NullableStringFieldUpdateOperationsInput
-  categories: NullableStringFieldUpdateOperationsInput
-  customers: NullableStringFieldUpdateOperationsInput
-  discount: NullableStringFieldUpdateOperationsInput
-  excerpt: NullableStringFieldUpdateOperationsInput
-  expiration: NullableStringFieldUpdateOperationsInput
-  id: BigIntFieldUpdateOperationsInput
-  image: NullableStringFieldUpdateOperationsInput
-  name: StringFieldUpdateOperationsInput
-  prod_id: BigIntFieldUpdateOperationsInput
-  products: NullableStringFieldUpdateOperationsInput
-  products_couponsToproducts: NullableStringFieldUpdateOperationsInput
-  published: NullableDateTimeFieldUpdateOperationsInput
-  users: NullableStringFieldUpdateOperationsInput
-}
-
-input CouponsWhereInput {
-  AND: [CouponsWhereInput!]
-  NOT: [CouponsWhereInput!]
-  OR: [CouponsWhereInput!]
-  articles: StringNullableFilter
-  categories: StringNullableFilter
-  customers: StringNullableFilter
-  discount: StringNullableFilter
-  excerpt: StringNullableFilter
-  expiration: StringNullableFilter
-  id: BigIntFilter
-  image: StringNullableFilter
-  name: StringFilter
-  prod_id: BigIntFilter
-  products: StringNullableFilter
-  products_couponsToproducts: StringNullableFilter
-  published: DateTimeNullableFilter
-  users: StringNullableFilter
-}
-
-input CouponsWhereUniqueInput {
-  id: BigInt
-}
-
 type Credit_memos {
   action: String
   bill_to_name: String!
@@ -11175,6 +10816,390 @@ input DigiboardWhereUniqueInput {
   id: Int
 }
 
+type Discounts {
+  articles: String
+  categories: String
+  coupons: String
+  customers: String
+  discount: String
+  excerpt: String
+  expiration: String
+  id: BigInt!
+  image: String
+  name: String!
+  products: String
+  published: DateTime
+  rewards: String
+  special_offers: String
+  type: String
+  users: String
+}
+
+type DiscountsAvgAggregate {
+  id: Float
+}
+
+input DiscountsAvgOrderByAggregateInput {
+  id: SortOrder
+}
+
+type DiscountsCountAggregate {
+  _all: Int!
+  articles: Int!
+  categories: Int!
+  coupons: Int!
+  customers: Int!
+  discount: Int!
+  excerpt: Int!
+  expiration: Int!
+  id: Int!
+  image: Int!
+  name: Int!
+  products: Int!
+  published: Int!
+  rewards: Int!
+  special_offers: Int!
+  type: Int!
+  users: Int!
+}
+
+input DiscountsCountOrderByAggregateInput {
+  articles: SortOrder
+  categories: SortOrder
+  coupons: SortOrder
+  customers: SortOrder
+  discount: SortOrder
+  excerpt: SortOrder
+  expiration: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  products: SortOrder
+  published: SortOrder
+  rewards: SortOrder
+  special_offers: SortOrder
+  type: SortOrder
+  users: SortOrder
+}
+
+input DiscountsCreateInput {
+  articles: String
+  categories: String
+  coupons: String
+  customers: String
+  discount: String
+  excerpt: String
+  expiration: String
+  id: BigInt
+  image: String
+  name: String!
+  products: String
+  published: DateTime
+  rewards: String
+  special_offers: String
+  type: String
+  users: String
+}
+
+input DiscountsCreateManyInput {
+  articles: String
+  categories: String
+  coupons: String
+  customers: String
+  discount: String
+  excerpt: String
+  expiration: String
+  id: BigInt
+  image: String
+  name: String!
+  products: String
+  published: DateTime
+  rewards: String
+  special_offers: String
+  type: String
+  users: String
+}
+
+type DiscountsGroupBy {
+  _avg: DiscountsAvgAggregate
+  _count: DiscountsCountAggregate
+  _max: DiscountsMaxAggregate
+  _min: DiscountsMinAggregate
+  _sum: DiscountsSumAggregate
+  articles: String
+  categories: String
+  coupons: String
+  customers: String
+  discount: String
+  excerpt: String
+  expiration: String
+  id: BigInt!
+  image: String
+  name: String!
+  products: String
+  published: DateTime
+  rewards: String
+  special_offers: String
+  type: String
+  users: String
+}
+
+type DiscountsMaxAggregate {
+  articles: String
+  categories: String
+  coupons: String
+  customers: String
+  discount: String
+  excerpt: String
+  expiration: String
+  id: BigInt
+  image: String
+  name: String
+  products: String
+  published: DateTime
+  rewards: String
+  special_offers: String
+  type: String
+  users: String
+}
+
+input DiscountsMaxOrderByAggregateInput {
+  articles: SortOrder
+  categories: SortOrder
+  coupons: SortOrder
+  customers: SortOrder
+  discount: SortOrder
+  excerpt: SortOrder
+  expiration: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  products: SortOrder
+  published: SortOrder
+  rewards: SortOrder
+  special_offers: SortOrder
+  type: SortOrder
+  users: SortOrder
+}
+
+type DiscountsMinAggregate {
+  articles: String
+  categories: String
+  coupons: String
+  customers: String
+  discount: String
+  excerpt: String
+  expiration: String
+  id: BigInt
+  image: String
+  name: String
+  products: String
+  published: DateTime
+  rewards: String
+  special_offers: String
+  type: String
+  users: String
+}
+
+input DiscountsMinOrderByAggregateInput {
+  articles: SortOrder
+  categories: SortOrder
+  coupons: SortOrder
+  customers: SortOrder
+  discount: SortOrder
+  excerpt: SortOrder
+  expiration: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  products: SortOrder
+  published: SortOrder
+  rewards: SortOrder
+  special_offers: SortOrder
+  type: SortOrder
+  users: SortOrder
+}
+
+enum DiscountsOrderByRelevanceFieldEnum {
+  articles
+  categories
+  coupons
+  customers
+  discount
+  excerpt
+  expiration
+  image
+  name
+  products
+  rewards
+  special_offers
+  type
+  users
+}
+
+input DiscountsOrderByRelevanceInput {
+  fields: [DiscountsOrderByRelevanceFieldEnum!]!
+  search: String!
+  sort: SortOrder!
+}
+
+input DiscountsOrderByWithAggregationInput {
+  _avg: DiscountsAvgOrderByAggregateInput
+  _count: DiscountsCountOrderByAggregateInput
+  _max: DiscountsMaxOrderByAggregateInput
+  _min: DiscountsMinOrderByAggregateInput
+  _sum: DiscountsSumOrderByAggregateInput
+  articles: SortOrder
+  categories: SortOrder
+  coupons: SortOrder
+  customers: SortOrder
+  discount: SortOrder
+  excerpt: SortOrder
+  expiration: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  products: SortOrder
+  published: SortOrder
+  rewards: SortOrder
+  special_offers: SortOrder
+  type: SortOrder
+  users: SortOrder
+}
+
+input DiscountsOrderByWithRelationAndSearchRelevanceInput {
+  _relevance: DiscountsOrderByRelevanceInput
+  articles: SortOrder
+  categories: SortOrder
+  coupons: SortOrder
+  customers: SortOrder
+  discount: SortOrder
+  excerpt: SortOrder
+  expiration: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  products: SortOrder
+  published: SortOrder
+  rewards: SortOrder
+  special_offers: SortOrder
+  type: SortOrder
+  users: SortOrder
+}
+
+enum DiscountsScalarFieldEnum {
+  articles
+  categories
+  coupons
+  customers
+  discount
+  excerpt
+  expiration
+  id
+  image
+  name
+  products
+  published
+  rewards
+  special_offers
+  type
+  users
+}
+
+input DiscountsScalarWhereWithAggregatesInput {
+  AND: [DiscountsScalarWhereWithAggregatesInput!]
+  NOT: [DiscountsScalarWhereWithAggregatesInput!]
+  OR: [DiscountsScalarWhereWithAggregatesInput!]
+  articles: StringNullableWithAggregatesFilter
+  categories: StringNullableWithAggregatesFilter
+  coupons: StringNullableWithAggregatesFilter
+  customers: StringNullableWithAggregatesFilter
+  discount: StringNullableWithAggregatesFilter
+  excerpt: StringNullableWithAggregatesFilter
+  expiration: StringNullableWithAggregatesFilter
+  id: BigIntWithAggregatesFilter
+  image: StringNullableWithAggregatesFilter
+  name: StringWithAggregatesFilter
+  products: StringNullableWithAggregatesFilter
+  published: DateTimeNullableWithAggregatesFilter
+  rewards: StringNullableWithAggregatesFilter
+  special_offers: StringNullableWithAggregatesFilter
+  type: StringNullableWithAggregatesFilter
+  users: StringNullableWithAggregatesFilter
+}
+
+type DiscountsSumAggregate {
+  id: BigInt
+}
+
+input DiscountsSumOrderByAggregateInput {
+  id: SortOrder
+}
+
+input DiscountsUpdateInput {
+  articles: NullableStringFieldUpdateOperationsInput
+  categories: NullableStringFieldUpdateOperationsInput
+  coupons: NullableStringFieldUpdateOperationsInput
+  customers: NullableStringFieldUpdateOperationsInput
+  discount: NullableStringFieldUpdateOperationsInput
+  excerpt: NullableStringFieldUpdateOperationsInput
+  expiration: NullableStringFieldUpdateOperationsInput
+  id: BigIntFieldUpdateOperationsInput
+  image: NullableStringFieldUpdateOperationsInput
+  name: StringFieldUpdateOperationsInput
+  products: NullableStringFieldUpdateOperationsInput
+  published: NullableDateTimeFieldUpdateOperationsInput
+  rewards: NullableStringFieldUpdateOperationsInput
+  special_offers: NullableStringFieldUpdateOperationsInput
+  type: NullableStringFieldUpdateOperationsInput
+  users: NullableStringFieldUpdateOperationsInput
+}
+
+input DiscountsUpdateManyMutationInput {
+  articles: NullableStringFieldUpdateOperationsInput
+  categories: NullableStringFieldUpdateOperationsInput
+  coupons: NullableStringFieldUpdateOperationsInput
+  customers: NullableStringFieldUpdateOperationsInput
+  discount: NullableStringFieldUpdateOperationsInput
+  excerpt: NullableStringFieldUpdateOperationsInput
+  expiration: NullableStringFieldUpdateOperationsInput
+  id: BigIntFieldUpdateOperationsInput
+  image: NullableStringFieldUpdateOperationsInput
+  name: StringFieldUpdateOperationsInput
+  products: NullableStringFieldUpdateOperationsInput
+  published: NullableDateTimeFieldUpdateOperationsInput
+  rewards: NullableStringFieldUpdateOperationsInput
+  special_offers: NullableStringFieldUpdateOperationsInput
+  type: NullableStringFieldUpdateOperationsInput
+  users: NullableStringFieldUpdateOperationsInput
+}
+
+input DiscountsWhereInput {
+  AND: [DiscountsWhereInput!]
+  NOT: [DiscountsWhereInput!]
+  OR: [DiscountsWhereInput!]
+  articles: StringNullableFilter
+  categories: StringNullableFilter
+  coupons: StringNullableFilter
+  customers: StringNullableFilter
+  discount: StringNullableFilter
+  excerpt: StringNullableFilter
+  expiration: StringNullableFilter
+  id: BigIntFilter
+  image: StringNullableFilter
+  name: StringFilter
+  products: StringNullableFilter
+  published: DateTimeNullableFilter
+  rewards: StringNullableFilter
+  special_offers: StringNullableFilter
+  type: StringNullableFilter
+  users: StringNullableFilter
+}
+
+input DiscountsWhereUniqueInput {
+  id: BigInt
+}
+
 type Emails {
   bcc: String
   cc: String
@@ -12441,390 +12466,6 @@ input FullfillmentsWhereInput {
 }
 
 input FullfillmentsWhereUniqueInput {
-  id: BigInt
-}
-
-type Gift_certificates {
-  articles: String
-  categories: String
-  coupons: String
-  customers: String
-  discount: String
-  excerpt: String
-  expiration: String
-  id: BigInt!
-  image: String
-  name: String!
-  products: String
-  published: DateTime
-  rewards: String
-  special_offers: String
-  type: String
-  users: String
-}
-
-type Gift_certificatesAvgAggregate {
-  id: Float
-}
-
-input Gift_certificatesAvgOrderByAggregateInput {
-  id: SortOrder
-}
-
-type Gift_certificatesCountAggregate {
-  _all: Int!
-  articles: Int!
-  categories: Int!
-  coupons: Int!
-  customers: Int!
-  discount: Int!
-  excerpt: Int!
-  expiration: Int!
-  id: Int!
-  image: Int!
-  name: Int!
-  products: Int!
-  published: Int!
-  rewards: Int!
-  special_offers: Int!
-  type: Int!
-  users: Int!
-}
-
-input Gift_certificatesCountOrderByAggregateInput {
-  articles: SortOrder
-  categories: SortOrder
-  coupons: SortOrder
-  customers: SortOrder
-  discount: SortOrder
-  excerpt: SortOrder
-  expiration: SortOrder
-  id: SortOrder
-  image: SortOrder
-  name: SortOrder
-  products: SortOrder
-  published: SortOrder
-  rewards: SortOrder
-  special_offers: SortOrder
-  type: SortOrder
-  users: SortOrder
-}
-
-input Gift_certificatesCreateInput {
-  articles: String
-  categories: String
-  coupons: String
-  customers: String
-  discount: String
-  excerpt: String
-  expiration: String
-  id: BigInt
-  image: String
-  name: String!
-  products: String
-  published: DateTime
-  rewards: String
-  special_offers: String
-  type: String
-  users: String
-}
-
-input Gift_certificatesCreateManyInput {
-  articles: String
-  categories: String
-  coupons: String
-  customers: String
-  discount: String
-  excerpt: String
-  expiration: String
-  id: BigInt
-  image: String
-  name: String!
-  products: String
-  published: DateTime
-  rewards: String
-  special_offers: String
-  type: String
-  users: String
-}
-
-type Gift_certificatesGroupBy {
-  _avg: Gift_certificatesAvgAggregate
-  _count: Gift_certificatesCountAggregate
-  _max: Gift_certificatesMaxAggregate
-  _min: Gift_certificatesMinAggregate
-  _sum: Gift_certificatesSumAggregate
-  articles: String
-  categories: String
-  coupons: String
-  customers: String
-  discount: String
-  excerpt: String
-  expiration: String
-  id: BigInt!
-  image: String
-  name: String!
-  products: String
-  published: DateTime
-  rewards: String
-  special_offers: String
-  type: String
-  users: String
-}
-
-type Gift_certificatesMaxAggregate {
-  articles: String
-  categories: String
-  coupons: String
-  customers: String
-  discount: String
-  excerpt: String
-  expiration: String
-  id: BigInt
-  image: String
-  name: String
-  products: String
-  published: DateTime
-  rewards: String
-  special_offers: String
-  type: String
-  users: String
-}
-
-input Gift_certificatesMaxOrderByAggregateInput {
-  articles: SortOrder
-  categories: SortOrder
-  coupons: SortOrder
-  customers: SortOrder
-  discount: SortOrder
-  excerpt: SortOrder
-  expiration: SortOrder
-  id: SortOrder
-  image: SortOrder
-  name: SortOrder
-  products: SortOrder
-  published: SortOrder
-  rewards: SortOrder
-  special_offers: SortOrder
-  type: SortOrder
-  users: SortOrder
-}
-
-type Gift_certificatesMinAggregate {
-  articles: String
-  categories: String
-  coupons: String
-  customers: String
-  discount: String
-  excerpt: String
-  expiration: String
-  id: BigInt
-  image: String
-  name: String
-  products: String
-  published: DateTime
-  rewards: String
-  special_offers: String
-  type: String
-  users: String
-}
-
-input Gift_certificatesMinOrderByAggregateInput {
-  articles: SortOrder
-  categories: SortOrder
-  coupons: SortOrder
-  customers: SortOrder
-  discount: SortOrder
-  excerpt: SortOrder
-  expiration: SortOrder
-  id: SortOrder
-  image: SortOrder
-  name: SortOrder
-  products: SortOrder
-  published: SortOrder
-  rewards: SortOrder
-  special_offers: SortOrder
-  type: SortOrder
-  users: SortOrder
-}
-
-enum Gift_certificatesOrderByRelevanceFieldEnum {
-  articles
-  categories
-  coupons
-  customers
-  discount
-  excerpt
-  expiration
-  image
-  name
-  products
-  rewards
-  special_offers
-  type
-  users
-}
-
-input Gift_certificatesOrderByRelevanceInput {
-  fields: [Gift_certificatesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
-input Gift_certificatesOrderByWithAggregationInput {
-  _avg: Gift_certificatesAvgOrderByAggregateInput
-  _count: Gift_certificatesCountOrderByAggregateInput
-  _max: Gift_certificatesMaxOrderByAggregateInput
-  _min: Gift_certificatesMinOrderByAggregateInput
-  _sum: Gift_certificatesSumOrderByAggregateInput
-  articles: SortOrder
-  categories: SortOrder
-  coupons: SortOrder
-  customers: SortOrder
-  discount: SortOrder
-  excerpt: SortOrder
-  expiration: SortOrder
-  id: SortOrder
-  image: SortOrder
-  name: SortOrder
-  products: SortOrder
-  published: SortOrder
-  rewards: SortOrder
-  special_offers: SortOrder
-  type: SortOrder
-  users: SortOrder
-}
-
-input Gift_certificatesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: Gift_certificatesOrderByRelevanceInput
-  articles: SortOrder
-  categories: SortOrder
-  coupons: SortOrder
-  customers: SortOrder
-  discount: SortOrder
-  excerpt: SortOrder
-  expiration: SortOrder
-  id: SortOrder
-  image: SortOrder
-  name: SortOrder
-  products: SortOrder
-  published: SortOrder
-  rewards: SortOrder
-  special_offers: SortOrder
-  type: SortOrder
-  users: SortOrder
-}
-
-enum Gift_certificatesScalarFieldEnum {
-  articles
-  categories
-  coupons
-  customers
-  discount
-  excerpt
-  expiration
-  id
-  image
-  name
-  products
-  published
-  rewards
-  special_offers
-  type
-  users
-}
-
-input Gift_certificatesScalarWhereWithAggregatesInput {
-  AND: [Gift_certificatesScalarWhereWithAggregatesInput!]
-  NOT: [Gift_certificatesScalarWhereWithAggregatesInput!]
-  OR: [Gift_certificatesScalarWhereWithAggregatesInput!]
-  articles: StringNullableWithAggregatesFilter
-  categories: StringNullableWithAggregatesFilter
-  coupons: StringNullableWithAggregatesFilter
-  customers: StringNullableWithAggregatesFilter
-  discount: StringNullableWithAggregatesFilter
-  excerpt: StringNullableWithAggregatesFilter
-  expiration: StringNullableWithAggregatesFilter
-  id: BigIntWithAggregatesFilter
-  image: StringNullableWithAggregatesFilter
-  name: StringWithAggregatesFilter
-  products: StringNullableWithAggregatesFilter
-  published: DateTimeNullableWithAggregatesFilter
-  rewards: StringNullableWithAggregatesFilter
-  special_offers: StringNullableWithAggregatesFilter
-  type: StringNullableWithAggregatesFilter
-  users: StringNullableWithAggregatesFilter
-}
-
-type Gift_certificatesSumAggregate {
-  id: BigInt
-}
-
-input Gift_certificatesSumOrderByAggregateInput {
-  id: SortOrder
-}
-
-input Gift_certificatesUpdateInput {
-  articles: NullableStringFieldUpdateOperationsInput
-  categories: NullableStringFieldUpdateOperationsInput
-  coupons: NullableStringFieldUpdateOperationsInput
-  customers: NullableStringFieldUpdateOperationsInput
-  discount: NullableStringFieldUpdateOperationsInput
-  excerpt: NullableStringFieldUpdateOperationsInput
-  expiration: NullableStringFieldUpdateOperationsInput
-  id: BigIntFieldUpdateOperationsInput
-  image: NullableStringFieldUpdateOperationsInput
-  name: StringFieldUpdateOperationsInput
-  products: NullableStringFieldUpdateOperationsInput
-  published: NullableDateTimeFieldUpdateOperationsInput
-  rewards: NullableStringFieldUpdateOperationsInput
-  special_offers: NullableStringFieldUpdateOperationsInput
-  type: NullableStringFieldUpdateOperationsInput
-  users: NullableStringFieldUpdateOperationsInput
-}
-
-input Gift_certificatesUpdateManyMutationInput {
-  articles: NullableStringFieldUpdateOperationsInput
-  categories: NullableStringFieldUpdateOperationsInput
-  coupons: NullableStringFieldUpdateOperationsInput
-  customers: NullableStringFieldUpdateOperationsInput
-  discount: NullableStringFieldUpdateOperationsInput
-  excerpt: NullableStringFieldUpdateOperationsInput
-  expiration: NullableStringFieldUpdateOperationsInput
-  id: BigIntFieldUpdateOperationsInput
-  image: NullableStringFieldUpdateOperationsInput
-  name: StringFieldUpdateOperationsInput
-  products: NullableStringFieldUpdateOperationsInput
-  published: NullableDateTimeFieldUpdateOperationsInput
-  rewards: NullableStringFieldUpdateOperationsInput
-  special_offers: NullableStringFieldUpdateOperationsInput
-  type: NullableStringFieldUpdateOperationsInput
-  users: NullableStringFieldUpdateOperationsInput
-}
-
-input Gift_certificatesWhereInput {
-  AND: [Gift_certificatesWhereInput!]
-  NOT: [Gift_certificatesWhereInput!]
-  OR: [Gift_certificatesWhereInput!]
-  articles: StringNullableFilter
-  categories: StringNullableFilter
-  coupons: StringNullableFilter
-  customers: StringNullableFilter
-  discount: StringNullableFilter
-  excerpt: StringNullableFilter
-  expiration: StringNullableFilter
-  id: BigIntFilter
-  image: StringNullableFilter
-  name: StringFilter
-  products: StringNullableFilter
-  published: DateTimeNullableFilter
-  rewards: StringNullableFilter
-  special_offers: StringNullableFilter
-  type: StringNullableFilter
-  users: StringNullableFilter
-}
-
-input Gift_certificatesWhereUniqueInput {
   id: BigInt
 }
 
@@ -17098,7 +16739,6 @@ type Mutation {
   createManyContent_type(data: [Content_typeCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyContracts(data: [ContractsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyCountries(data: [CountriesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyCoupons(data: [CouponsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyCredit_memos(data: [Credit_memosCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyCurrencies(data: [CurrenciesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyCurrency_rates(data: [Currency_ratesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
@@ -17109,11 +16749,11 @@ type Mutation {
   createManyDashboards(data: [DashboardsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyDeepdive(data: [DeepdiveCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyDigiboard(data: [DigiboardCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
+  createManyDiscounts(data: [DiscountsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyEmails(data: [EmailsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyEndofshift(data: [EndofshiftCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyEvents(data: [EventsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyFullfillments(data: [FullfillmentsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyGift_certificates(data: [Gift_certificatesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyGlossary(data: [GlossaryCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyImportm(data: [ImportmCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyIntegrations(data: [IntegrationsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
@@ -17193,7 +16833,6 @@ type Mutation {
   createOneContent_type(data: Content_typeCreateInput!): Content_type!
   createOneContracts(data: ContractsCreateInput!): Contracts!
   createOneCountries(data: CountriesCreateInput!): Countries!
-  createOneCoupons(data: CouponsCreateInput!): Coupons!
   createOneCredit_memos(data: Credit_memosCreateInput!): Credit_memos!
   createOneCurrencies(data: CurrenciesCreateInput!): Currencies!
   createOneCurrency_rates(data: Currency_ratesCreateInput!): Currency_rates!
@@ -17204,11 +16843,11 @@ type Mutation {
   createOneDashboards(data: DashboardsCreateInput!): Dashboards!
   createOneDeepdive(data: DeepdiveCreateInput!): Deepdive!
   createOneDigiboard(data: DigiboardCreateInput!): Digiboard!
+  createOneDiscounts(data: DiscountsCreateInput!): Discounts!
   createOneEmails(data: EmailsCreateInput!): Emails!
   createOneEndofshift(data: EndofshiftCreateInput!): Endofshift!
   createOneEvents(data: EventsCreateInput!): Events!
   createOneFullfillments(data: FullfillmentsCreateInput!): Fullfillments!
-  createOneGift_certificates(data: Gift_certificatesCreateInput!): Gift_certificates!
   createOneGlossary(data: GlossaryCreateInput!): Glossary!
   createOneImportm(data: ImportmCreateInput!): Importm!
   createOneIntegrations(data: IntegrationsCreateInput!): Integrations!
@@ -17288,7 +16927,6 @@ type Mutation {
   deleteManyContent_type(where: Content_typeWhereInput): AffectedRowsOutput!
   deleteManyContracts(where: ContractsWhereInput): AffectedRowsOutput!
   deleteManyCountries(where: CountriesWhereInput): AffectedRowsOutput!
-  deleteManyCoupons(where: CouponsWhereInput): AffectedRowsOutput!
   deleteManyCredit_memos(where: Credit_memosWhereInput): AffectedRowsOutput!
   deleteManyCurrencies(where: CurrenciesWhereInput): AffectedRowsOutput!
   deleteManyCurrency_rates(where: Currency_ratesWhereInput): AffectedRowsOutput!
@@ -17299,11 +16937,11 @@ type Mutation {
   deleteManyDashboards(where: DashboardsWhereInput): AffectedRowsOutput!
   deleteManyDeepdive(where: DeepdiveWhereInput): AffectedRowsOutput!
   deleteManyDigiboard(where: DigiboardWhereInput): AffectedRowsOutput!
+  deleteManyDiscounts(where: DiscountsWhereInput): AffectedRowsOutput!
   deleteManyEmails(where: EmailsWhereInput): AffectedRowsOutput!
   deleteManyEndofshift(where: EndofshiftWhereInput): AffectedRowsOutput!
   deleteManyEvents(where: EventsWhereInput): AffectedRowsOutput!
   deleteManyFullfillments(where: FullfillmentsWhereInput): AffectedRowsOutput!
-  deleteManyGift_certificates(where: Gift_certificatesWhereInput): AffectedRowsOutput!
   deleteManyGlossary(where: GlossaryWhereInput): AffectedRowsOutput!
   deleteManyImportm(where: ImportmWhereInput): AffectedRowsOutput!
   deleteManyIntegrations(where: IntegrationsWhereInput): AffectedRowsOutput!
@@ -17383,7 +17021,6 @@ type Mutation {
   deleteOneContent_type(where: Content_typeWhereUniqueInput!): Content_type
   deleteOneContracts(where: ContractsWhereUniqueInput!): Contracts
   deleteOneCountries(where: CountriesWhereUniqueInput!): Countries
-  deleteOneCoupons(where: CouponsWhereUniqueInput!): Coupons
   deleteOneCredit_memos(where: Credit_memosWhereUniqueInput!): Credit_memos
   deleteOneCurrencies(where: CurrenciesWhereUniqueInput!): Currencies
   deleteOneCurrency_rates(where: Currency_ratesWhereUniqueInput!): Currency_rates
@@ -17394,11 +17031,11 @@ type Mutation {
   deleteOneDashboards(where: DashboardsWhereUniqueInput!): Dashboards
   deleteOneDeepdive(where: DeepdiveWhereUniqueInput!): Deepdive
   deleteOneDigiboard(where: DigiboardWhereUniqueInput!): Digiboard
+  deleteOneDiscounts(where: DiscountsWhereUniqueInput!): Discounts
   deleteOneEmails(where: EmailsWhereUniqueInput!): Emails
   deleteOneEndofshift(where: EndofshiftWhereUniqueInput!): Endofshift
   deleteOneEvents(where: EventsWhereUniqueInput!): Events
   deleteOneFullfillments(where: FullfillmentsWhereUniqueInput!): Fullfillments
-  deleteOneGift_certificates(where: Gift_certificatesWhereUniqueInput!): Gift_certificates
   deleteOneGlossary(where: GlossaryWhereUniqueInput!): Glossary
   deleteOneImportm(where: ImportmWhereUniqueInput!): Importm
   deleteOneIntegrations(where: IntegrationsWhereUniqueInput!): Integrations
@@ -17478,7 +17115,6 @@ type Mutation {
   updateManyContent_type(data: Content_typeUpdateManyMutationInput!, where: Content_typeWhereInput): AffectedRowsOutput!
   updateManyContracts(data: ContractsUpdateManyMutationInput!, where: ContractsWhereInput): AffectedRowsOutput!
   updateManyCountries(data: CountriesUpdateManyMutationInput!, where: CountriesWhereInput): AffectedRowsOutput!
-  updateManyCoupons(data: CouponsUpdateManyMutationInput!, where: CouponsWhereInput): AffectedRowsOutput!
   updateManyCredit_memos(data: Credit_memosUpdateManyMutationInput!, where: Credit_memosWhereInput): AffectedRowsOutput!
   updateManyCurrencies(data: CurrenciesUpdateManyMutationInput!, where: CurrenciesWhereInput): AffectedRowsOutput!
   updateManyCurrency_rates(data: Currency_ratesUpdateManyMutationInput!, where: Currency_ratesWhereInput): AffectedRowsOutput!
@@ -17489,11 +17125,11 @@ type Mutation {
   updateManyDashboards(data: DashboardsUpdateManyMutationInput!, where: DashboardsWhereInput): AffectedRowsOutput!
   updateManyDeepdive(data: DeepdiveUpdateManyMutationInput!, where: DeepdiveWhereInput): AffectedRowsOutput!
   updateManyDigiboard(data: DigiboardUpdateManyMutationInput!, where: DigiboardWhereInput): AffectedRowsOutput!
+  updateManyDiscounts(data: DiscountsUpdateManyMutationInput!, where: DiscountsWhereInput): AffectedRowsOutput!
   updateManyEmails(data: EmailsUpdateManyMutationInput!, where: EmailsWhereInput): AffectedRowsOutput!
   updateManyEndofshift(data: EndofshiftUpdateManyMutationInput!, where: EndofshiftWhereInput): AffectedRowsOutput!
   updateManyEvents(data: EventsUpdateManyMutationInput!, where: EventsWhereInput): AffectedRowsOutput!
   updateManyFullfillments(data: FullfillmentsUpdateManyMutationInput!, where: FullfillmentsWhereInput): AffectedRowsOutput!
-  updateManyGift_certificates(data: Gift_certificatesUpdateManyMutationInput!, where: Gift_certificatesWhereInput): AffectedRowsOutput!
   updateManyGlossary(data: GlossaryUpdateManyMutationInput!, where: GlossaryWhereInput): AffectedRowsOutput!
   updateManyImportm(data: ImportmUpdateManyMutationInput!, where: ImportmWhereInput): AffectedRowsOutput!
   updateManyIntegrations(data: IntegrationsUpdateManyMutationInput!, where: IntegrationsWhereInput): AffectedRowsOutput!
@@ -17573,7 +17209,6 @@ type Mutation {
   updateOneContent_type(data: Content_typeUpdateInput!, where: Content_typeWhereUniqueInput!): Content_type
   updateOneContracts(data: ContractsUpdateInput!, where: ContractsWhereUniqueInput!): Contracts
   updateOneCountries(data: CountriesUpdateInput!, where: CountriesWhereUniqueInput!): Countries
-  updateOneCoupons(data: CouponsUpdateInput!, where: CouponsWhereUniqueInput!): Coupons
   updateOneCredit_memos(data: Credit_memosUpdateInput!, where: Credit_memosWhereUniqueInput!): Credit_memos
   updateOneCurrencies(data: CurrenciesUpdateInput!, where: CurrenciesWhereUniqueInput!): Currencies
   updateOneCurrency_rates(data: Currency_ratesUpdateInput!, where: Currency_ratesWhereUniqueInput!): Currency_rates
@@ -17584,11 +17219,11 @@ type Mutation {
   updateOneDashboards(data: DashboardsUpdateInput!, where: DashboardsWhereUniqueInput!): Dashboards
   updateOneDeepdive(data: DeepdiveUpdateInput!, where: DeepdiveWhereUniqueInput!): Deepdive
   updateOneDigiboard(data: DigiboardUpdateInput!, where: DigiboardWhereUniqueInput!): Digiboard
+  updateOneDiscounts(data: DiscountsUpdateInput!, where: DiscountsWhereUniqueInput!): Discounts
   updateOneEmails(data: EmailsUpdateInput!, where: EmailsWhereUniqueInput!): Emails
   updateOneEndofshift(data: EndofshiftUpdateInput!, where: EndofshiftWhereUniqueInput!): Endofshift
   updateOneEvents(data: EventsUpdateInput!, where: EventsWhereUniqueInput!): Events
   updateOneFullfillments(data: FullfillmentsUpdateInput!, where: FullfillmentsWhereUniqueInput!): Fullfillments
-  updateOneGift_certificates(data: Gift_certificatesUpdateInput!, where: Gift_certificatesWhereUniqueInput!): Gift_certificates
   updateOneGlossary(data: GlossaryUpdateInput!, where: GlossaryWhereUniqueInput!): Glossary
   updateOneImportm(data: ImportmUpdateInput!, where: ImportmWhereUniqueInput!): Importm
   updateOneIntegrations(data: IntegrationsUpdateInput!, where: IntegrationsWhereUniqueInput!): Integrations
@@ -17668,7 +17303,6 @@ type Mutation {
   upsertOneContent_type(create: Content_typeCreateInput!, update: Content_typeUpdateInput!, where: Content_typeWhereUniqueInput!): Content_type!
   upsertOneContracts(create: ContractsCreateInput!, update: ContractsUpdateInput!, where: ContractsWhereUniqueInput!): Contracts!
   upsertOneCountries(create: CountriesCreateInput!, update: CountriesUpdateInput!, where: CountriesWhereUniqueInput!): Countries!
-  upsertOneCoupons(create: CouponsCreateInput!, update: CouponsUpdateInput!, where: CouponsWhereUniqueInput!): Coupons!
   upsertOneCredit_memos(create: Credit_memosCreateInput!, update: Credit_memosUpdateInput!, where: Credit_memosWhereUniqueInput!): Credit_memos!
   upsertOneCurrencies(create: CurrenciesCreateInput!, update: CurrenciesUpdateInput!, where: CurrenciesWhereUniqueInput!): Currencies!
   upsertOneCurrency_rates(create: Currency_ratesCreateInput!, update: Currency_ratesUpdateInput!, where: Currency_ratesWhereUniqueInput!): Currency_rates!
@@ -17679,11 +17313,11 @@ type Mutation {
   upsertOneDashboards(create: DashboardsCreateInput!, update: DashboardsUpdateInput!, where: DashboardsWhereUniqueInput!): Dashboards!
   upsertOneDeepdive(create: DeepdiveCreateInput!, update: DeepdiveUpdateInput!, where: DeepdiveWhereUniqueInput!): Deepdive!
   upsertOneDigiboard(create: DigiboardCreateInput!, update: DigiboardUpdateInput!, where: DigiboardWhereUniqueInput!): Digiboard!
+  upsertOneDiscounts(create: DiscountsCreateInput!, update: DiscountsUpdateInput!, where: DiscountsWhereUniqueInput!): Discounts!
   upsertOneEmails(create: EmailsCreateInput!, update: EmailsUpdateInput!, where: EmailsWhereUniqueInput!): Emails!
   upsertOneEndofshift(create: EndofshiftCreateInput!, update: EndofshiftUpdateInput!, where: EndofshiftWhereUniqueInput!): Endofshift!
   upsertOneEvents(create: EventsCreateInput!, update: EventsUpdateInput!, where: EventsWhereUniqueInput!): Events!
   upsertOneFullfillments(create: FullfillmentsCreateInput!, update: FullfillmentsUpdateInput!, where: FullfillmentsWhereUniqueInput!): Fullfillments!
-  upsertOneGift_certificates(create: Gift_certificatesCreateInput!, update: Gift_certificatesUpdateInput!, where: Gift_certificatesWhereUniqueInput!): Gift_certificates!
   upsertOneGlossary(create: GlossaryCreateInput!, update: GlossaryUpdateInput!, where: GlossaryWhereUniqueInput!): Glossary!
   upsertOneImportm(create: ImportmCreateInput!, update: ImportmUpdateInput!, where: ImportmWhereUniqueInput!): Importm!
   upsertOneIntegrations(create: IntegrationsCreateInput!, update: IntegrationsUpdateInput!, where: IntegrationsWhereUniqueInput!): Integrations!
@@ -23747,7 +23381,6 @@ type Query {
   aggregateContent_type(cursor: Content_typeWhereUniqueInput, orderBy: [Content_typeOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Content_typeWhereInput): AggregateContent_type!
   aggregateContracts(cursor: ContractsWhereUniqueInput, orderBy: [ContractsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ContractsWhereInput): AggregateContracts!
   aggregateCountries(cursor: CountriesWhereUniqueInput, orderBy: [CountriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CountriesWhereInput): AggregateCountries!
-  aggregateCoupons(cursor: CouponsWhereUniqueInput, orderBy: [CouponsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CouponsWhereInput): AggregateCoupons!
   aggregateCredit_memos(cursor: Credit_memosWhereUniqueInput, orderBy: [Credit_memosOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Credit_memosWhereInput): AggregateCredit_memos!
   aggregateCurrencies(cursor: CurrenciesWhereUniqueInput, orderBy: [CurrenciesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CurrenciesWhereInput): AggregateCurrencies!
   aggregateCurrency_rates(cursor: Currency_ratesWhereUniqueInput, orderBy: [Currency_ratesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Currency_ratesWhereInput): AggregateCurrency_rates!
@@ -23758,11 +23391,11 @@ type Query {
   aggregateDashboards(cursor: DashboardsWhereUniqueInput, orderBy: [DashboardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardsWhereInput): AggregateDashboards!
   aggregateDeepdive(cursor: DeepdiveWhereUniqueInput, orderBy: [DeepdiveOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DeepdiveWhereInput): AggregateDeepdive!
   aggregateDigiboard(cursor: DigiboardWhereUniqueInput, orderBy: [DigiboardOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DigiboardWhereInput): AggregateDigiboard!
+  aggregateDiscounts(cursor: DiscountsWhereUniqueInput, orderBy: [DiscountsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DiscountsWhereInput): AggregateDiscounts!
   aggregateEmails(cursor: EmailsWhereUniqueInput, orderBy: [EmailsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EmailsWhereInput): AggregateEmails!
   aggregateEndofshift(cursor: EndofshiftWhereUniqueInput, orderBy: [EndofshiftOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EndofshiftWhereInput): AggregateEndofshift!
   aggregateEvents(cursor: EventsWhereUniqueInput, orderBy: [EventsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EventsWhereInput): AggregateEvents!
   aggregateFullfillments(cursor: FullfillmentsWhereUniqueInput, orderBy: [FullfillmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): AggregateFullfillments!
-  aggregateGift_certificates(cursor: Gift_certificatesWhereUniqueInput, orderBy: [Gift_certificatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Gift_certificatesWhereInput): AggregateGift_certificates!
   aggregateGlossary(cursor: GlossaryWhereUniqueInput, orderBy: [GlossaryOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: GlossaryWhereInput): AggregateGlossary!
   aggregateImportm(cursor: ImportmWhereUniqueInput, orderBy: [ImportmOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ImportmWhereInput): AggregateImportm!
   aggregateIntegrations(cursor: IntegrationsWhereUniqueInput, orderBy: [IntegrationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: IntegrationsWhereInput): AggregateIntegrations!
@@ -23858,7 +23491,6 @@ type Query {
   findFirstContent_type(cursor: Content_typeWhereUniqueInput, distinct: [Content_typeScalarFieldEnum!], orderBy: [Content_typeOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Content_typeWhereInput): Content_type
   findFirstContracts(cursor: ContractsWhereUniqueInput, distinct: [ContractsScalarFieldEnum!], orderBy: [ContractsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ContractsWhereInput): Contracts
   findFirstCountries(cursor: CountriesWhereUniqueInput, distinct: [CountriesScalarFieldEnum!], orderBy: [CountriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CountriesWhereInput): Countries
-  findFirstCoupons(cursor: CouponsWhereUniqueInput, distinct: [CouponsScalarFieldEnum!], orderBy: [CouponsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CouponsWhereInput): Coupons
   findFirstCredit_memos(cursor: Credit_memosWhereUniqueInput, distinct: [Credit_memosScalarFieldEnum!], orderBy: [Credit_memosOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Credit_memosWhereInput): Credit_memos
   findFirstCurrencies(cursor: CurrenciesWhereUniqueInput, distinct: [CurrenciesScalarFieldEnum!], orderBy: [CurrenciesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CurrenciesWhereInput): Currencies
   findFirstCurrency_rates(cursor: Currency_ratesWhereUniqueInput, distinct: [Currency_ratesScalarFieldEnum!], orderBy: [Currency_ratesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Currency_ratesWhereInput): Currency_rates
@@ -23869,11 +23501,11 @@ type Query {
   findFirstDashboards(cursor: DashboardsWhereUniqueInput, distinct: [DashboardsScalarFieldEnum!], orderBy: [DashboardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardsWhereInput): Dashboards
   findFirstDeepdive(cursor: DeepdiveWhereUniqueInput, distinct: [DeepdiveScalarFieldEnum!], orderBy: [DeepdiveOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DeepdiveWhereInput): Deepdive
   findFirstDigiboard(cursor: DigiboardWhereUniqueInput, distinct: [DigiboardScalarFieldEnum!], orderBy: [DigiboardOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DigiboardWhereInput): Digiboard
+  findFirstDiscounts(cursor: DiscountsWhereUniqueInput, distinct: [DiscountsScalarFieldEnum!], orderBy: [DiscountsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DiscountsWhereInput): Discounts
   findFirstEmails(cursor: EmailsWhereUniqueInput, distinct: [EmailsScalarFieldEnum!], orderBy: [EmailsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EmailsWhereInput): Emails
   findFirstEndofshift(cursor: EndofshiftWhereUniqueInput, distinct: [EndofshiftScalarFieldEnum!], orderBy: [EndofshiftOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EndofshiftWhereInput): Endofshift
   findFirstEvents(cursor: EventsWhereUniqueInput, distinct: [EventsScalarFieldEnum!], orderBy: [EventsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EventsWhereInput): Events
   findFirstFullfillments(cursor: FullfillmentsWhereUniqueInput, distinct: [FullfillmentsScalarFieldEnum!], orderBy: [FullfillmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): Fullfillments
-  findFirstGift_certificates(cursor: Gift_certificatesWhereUniqueInput, distinct: [Gift_certificatesScalarFieldEnum!], orderBy: [Gift_certificatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Gift_certificatesWhereInput): Gift_certificates
   findFirstGlossary(cursor: GlossaryWhereUniqueInput, distinct: [GlossaryScalarFieldEnum!], orderBy: [GlossaryOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: GlossaryWhereInput): Glossary
   findFirstImportm(cursor: ImportmWhereUniqueInput, distinct: [ImportmScalarFieldEnum!], orderBy: [ImportmOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ImportmWhereInput): Importm
   findFirstIntegrations(cursor: IntegrationsWhereUniqueInput, distinct: [IntegrationsScalarFieldEnum!], orderBy: [IntegrationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: IntegrationsWhereInput): Integrations
@@ -23949,7 +23581,6 @@ type Query {
   findManyComments(cursor: CommentsWhereUniqueInput, distinct: [CommentsScalarFieldEnum!], orderBy: [CommentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CommentsWhereInput): [Comments!]!
   findManyContracts(cursor: ContractsWhereUniqueInput, distinct: [ContractsScalarFieldEnum!], orderBy: [ContractsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ContractsWhereInput): [Contracts!]!
   findManyCountries(cursor: CountriesWhereUniqueInput, distinct: [CountriesScalarFieldEnum!], orderBy: [CountriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CountriesWhereInput): [Countries!]!
-  findManyCoupons(cursor: CouponsWhereUniqueInput, distinct: [CouponsScalarFieldEnum!], orderBy: [CouponsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CouponsWhereInput): [Coupons!]!
   findManyCredit_memos(cursor: Credit_memosWhereUniqueInput, distinct: [Credit_memosScalarFieldEnum!], orderBy: [Credit_memosOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Credit_memosWhereInput): [Credit_memos!]!
   findManyCurrencies(cursor: CurrenciesWhereUniqueInput, distinct: [CurrenciesScalarFieldEnum!], orderBy: [CurrenciesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CurrenciesWhereInput): [Currencies!]!
   findManyCurrency_rates(cursor: Currency_ratesWhereUniqueInput, distinct: [Currency_ratesScalarFieldEnum!], orderBy: [Currency_ratesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Currency_ratesWhereInput): [Currency_rates!]!
@@ -23957,10 +23588,10 @@ type Query {
   findManyCustomers(cursor: CustomersWhereUniqueInput, distinct: [CustomersScalarFieldEnum!], orderBy: [CustomersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CustomersWhereInput): [Customers!]!
   findManyCustomizations(cursor: CustomizationsWhereUniqueInput, distinct: [CustomizationsScalarFieldEnum!], orderBy: [CustomizationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CustomizationsWhereInput): [Customizations!]!
   findManyDashboards(cursor: DashboardsWhereUniqueInput, distinct: [DashboardsScalarFieldEnum!], orderBy: [DashboardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardsWhereInput): [Dashboards!]!
+  findManyDiscounts(cursor: DiscountsWhereUniqueInput, distinct: [DiscountsScalarFieldEnum!], orderBy: [DiscountsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DiscountsWhereInput): [Discounts!]!
   findManyEmails(cursor: EmailsWhereUniqueInput, distinct: [EmailsScalarFieldEnum!], orderBy: [EmailsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EmailsWhereInput): [Emails!]!
   findManyEvents(cursor: EventsWhereUniqueInput, distinct: [EventsScalarFieldEnum!], orderBy: [EventsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EventsWhereInput): [Events!]!
   findManyFullfillments(cursor: FullfillmentsWhereUniqueInput, distinct: [FullfillmentsScalarFieldEnum!], orderBy: [FullfillmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): [Fullfillments!]!
-  findManyGift_certificates(cursor: Gift_certificatesWhereUniqueInput, distinct: [Gift_certificatesScalarFieldEnum!], orderBy: [Gift_certificatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Gift_certificatesWhereInput): [Gift_certificates!]!
   findManyIntegrations(cursor: IntegrationsWhereUniqueInput, distinct: [IntegrationsScalarFieldEnum!], orderBy: [IntegrationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: IntegrationsWhereInput): [Integrations!]!
   findManyInvitations(cursor: InvitationsWhereUniqueInput, distinct: [InvitationsScalarFieldEnum!], orderBy: [InvitationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvitationsWhereInput): [Invitations!]!
   findManyInvoices(cursor: InvoicesWhereUniqueInput, distinct: [InvoicesScalarFieldEnum!], orderBy: [InvoicesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvoicesWhereInput): [Invoices!]!
@@ -24020,7 +23651,6 @@ type Query {
   findUniqueComments(where: CommentsWhereUniqueInput!): Comments
   findUniqueContracts(where: ContractsWhereUniqueInput!): Contracts
   findUniqueCountries(where: CountriesWhereUniqueInput!): Countries
-  findUniqueCoupons(where: CouponsWhereUniqueInput!): Coupons
   findUniqueCredit_memos(where: Credit_memosWhereUniqueInput!): Credit_memos
   findUniqueCurrencies(where: CurrenciesWhereUniqueInput!): Currencies
   findUniqueCurrency_rates(where: Currency_ratesWhereUniqueInput!): Currency_rates
@@ -24028,10 +23658,10 @@ type Query {
   findUniqueCustomers(where: CustomersWhereUniqueInput!): Customers
   findUniqueCustomizations(where: CustomizationsWhereUniqueInput!): Customizations
   findUniqueDashboards(where: DashboardsWhereUniqueInput!): Dashboards
+  findUniqueDiscounts(where: DiscountsWhereUniqueInput!): Discounts
   findUniqueEmails(where: EmailsWhereUniqueInput!): Emails
   findUniqueEvents(where: EventsWhereUniqueInput!): Events
   findUniqueFullfillments(where: FullfillmentsWhereUniqueInput!): Fullfillments
-  findUniqueGift_certificates(where: Gift_certificatesWhereUniqueInput!): Gift_certificates
   findUniqueIntegrations(where: IntegrationsWhereUniqueInput!): Integrations
   findUniqueInvitations(where: InvitationsWhereUniqueInput!): Invitations
   findUniqueInvoices(where: InvoicesWhereUniqueInput!): Invoices
@@ -24097,7 +23727,6 @@ type Query {
   groupByContent_type(by: [Content_typeScalarFieldEnum!]!, having: Content_typeScalarWhereWithAggregatesInput, orderBy: [Content_typeOrderByWithAggregationInput!], skip: Int, take: Int, where: Content_typeWhereInput): [Content_typeGroupBy!]!
   groupByContracts(by: [ContractsScalarFieldEnum!]!, having: ContractsScalarWhereWithAggregatesInput, orderBy: [ContractsOrderByWithAggregationInput!], skip: Int, take: Int, where: ContractsWhereInput): [ContractsGroupBy!]!
   groupByCountries(by: [CountriesScalarFieldEnum!]!, having: CountriesScalarWhereWithAggregatesInput, orderBy: [CountriesOrderByWithAggregationInput!], skip: Int, take: Int, where: CountriesWhereInput): [CountriesGroupBy!]!
-  groupByCoupons(by: [CouponsScalarFieldEnum!]!, having: CouponsScalarWhereWithAggregatesInput, orderBy: [CouponsOrderByWithAggregationInput!], skip: Int, take: Int, where: CouponsWhereInput): [CouponsGroupBy!]!
   groupByCredit_memos(by: [Credit_memosScalarFieldEnum!]!, having: Credit_memosScalarWhereWithAggregatesInput, orderBy: [Credit_memosOrderByWithAggregationInput!], skip: Int, take: Int, where: Credit_memosWhereInput): [Credit_memosGroupBy!]!
   groupByCurrencies(by: [CurrenciesScalarFieldEnum!]!, having: CurrenciesScalarWhereWithAggregatesInput, orderBy: [CurrenciesOrderByWithAggregationInput!], skip: Int, take: Int, where: CurrenciesWhereInput): [CurrenciesGroupBy!]!
   groupByCurrency_rates(by: [Currency_ratesScalarFieldEnum!]!, having: Currency_ratesScalarWhereWithAggregatesInput, orderBy: [Currency_ratesOrderByWithAggregationInput!], skip: Int, take: Int, where: Currency_ratesWhereInput): [Currency_ratesGroupBy!]!
@@ -24108,11 +23737,11 @@ type Query {
   groupByDashboards(by: [DashboardsScalarFieldEnum!]!, having: DashboardsScalarWhereWithAggregatesInput, orderBy: [DashboardsOrderByWithAggregationInput!], skip: Int, take: Int, where: DashboardsWhereInput): [DashboardsGroupBy!]!
   groupByDeepdive(by: [DeepdiveScalarFieldEnum!]!, having: DeepdiveScalarWhereWithAggregatesInput, orderBy: [DeepdiveOrderByWithAggregationInput!], skip: Int, take: Int, where: DeepdiveWhereInput): [DeepdiveGroupBy!]!
   groupByDigiboard(by: [DigiboardScalarFieldEnum!]!, having: DigiboardScalarWhereWithAggregatesInput, orderBy: [DigiboardOrderByWithAggregationInput!], skip: Int, take: Int, where: DigiboardWhereInput): [DigiboardGroupBy!]!
+  groupByDiscounts(by: [DiscountsScalarFieldEnum!]!, having: DiscountsScalarWhereWithAggregatesInput, orderBy: [DiscountsOrderByWithAggregationInput!], skip: Int, take: Int, where: DiscountsWhereInput): [DiscountsGroupBy!]!
   groupByEmails(by: [EmailsScalarFieldEnum!]!, having: EmailsScalarWhereWithAggregatesInput, orderBy: [EmailsOrderByWithAggregationInput!], skip: Int, take: Int, where: EmailsWhereInput): [EmailsGroupBy!]!
   groupByEndofshift(by: [EndofshiftScalarFieldEnum!]!, having: EndofshiftScalarWhereWithAggregatesInput, orderBy: [EndofshiftOrderByWithAggregationInput!], skip: Int, take: Int, where: EndofshiftWhereInput): [EndofshiftGroupBy!]!
   groupByEvents(by: [EventsScalarFieldEnum!]!, having: EventsScalarWhereWithAggregatesInput, orderBy: [EventsOrderByWithAggregationInput!], skip: Int, take: Int, where: EventsWhereInput): [EventsGroupBy!]!
   groupByFullfillments(by: [FullfillmentsScalarFieldEnum!]!, having: FullfillmentsScalarWhereWithAggregatesInput, orderBy: [FullfillmentsOrderByWithAggregationInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): [FullfillmentsGroupBy!]!
-  groupByGift_certificates(by: [Gift_certificatesScalarFieldEnum!]!, having: Gift_certificatesScalarWhereWithAggregatesInput, orderBy: [Gift_certificatesOrderByWithAggregationInput!], skip: Int, take: Int, where: Gift_certificatesWhereInput): [Gift_certificatesGroupBy!]!
   groupByGlossary(by: [GlossaryScalarFieldEnum!]!, having: GlossaryScalarWhereWithAggregatesInput, orderBy: [GlossaryOrderByWithAggregationInput!], skip: Int, take: Int, where: GlossaryWhereInput): [GlossaryGroupBy!]!
   groupByImportm(by: [ImportmScalarFieldEnum!]!, having: ImportmScalarWhereWithAggregatesInput, orderBy: [ImportmOrderByWithAggregationInput!], skip: Int, take: Int, where: ImportmWhereInput): [ImportmGroupBy!]!
   groupByIntegrations(by: [IntegrationsScalarFieldEnum!]!, having: IntegrationsScalarWhereWithAggregatesInput, orderBy: [IntegrationsOrderByWithAggregationInput!], skip: Int, take: Int, where: IntegrationsWhereInput): [IntegrationsGroupBy!]!
@@ -26799,9 +26428,13 @@ type Scheduler {
   created_at: DateTime
   end_date: String
   id: BigInt!
+  label: String
   level: String
   login: String
+  name: String
   notes: String
+  permission: String
+  public: String
   start_date: String
   whid: String
 }
@@ -26819,9 +26452,13 @@ type SchedulerCountAggregate {
   created_at: Int!
   end_date: Int!
   id: Int!
+  label: Int!
   level: Int!
   login: Int!
+  name: Int!
   notes: Int!
+  permission: Int!
+  public: Int!
   start_date: Int!
   whid: Int!
 }
@@ -26830,9 +26467,13 @@ input SchedulerCountOrderByAggregateInput {
   created_at: SortOrder
   end_date: SortOrder
   id: SortOrder
+  label: SortOrder
   level: SortOrder
   login: SortOrder
+  name: SortOrder
   notes: SortOrder
+  permission: SortOrder
+  public: SortOrder
   start_date: SortOrder
   whid: SortOrder
 }
@@ -26841,9 +26482,13 @@ input SchedulerCreateInput {
   created_at: DateTime
   end_date: String
   id: BigInt
+  label: String
   level: String
   login: String
+  name: String
   notes: String
+  permission: String
+  public: String
   start_date: String
   whid: String
 }
@@ -26852,9 +26497,13 @@ input SchedulerCreateManyInput {
   created_at: DateTime
   end_date: String
   id: BigInt
+  label: String
   level: String
   login: String
+  name: String
   notes: String
+  permission: String
+  public: String
   start_date: String
   whid: String
 }
@@ -26868,9 +26517,13 @@ type SchedulerGroupBy {
   created_at: DateTime
   end_date: String
   id: BigInt!
+  label: String
   level: String
   login: String
+  name: String
   notes: String
+  permission: String
+  public: String
   start_date: String
   whid: String
 }
@@ -26879,9 +26532,13 @@ type SchedulerMaxAggregate {
   created_at: DateTime
   end_date: String
   id: BigInt
+  label: String
   level: String
   login: String
+  name: String
   notes: String
+  permission: String
+  public: String
   start_date: String
   whid: String
 }
@@ -26890,9 +26547,13 @@ input SchedulerMaxOrderByAggregateInput {
   created_at: SortOrder
   end_date: SortOrder
   id: SortOrder
+  label: SortOrder
   level: SortOrder
   login: SortOrder
+  name: SortOrder
   notes: SortOrder
+  permission: SortOrder
+  public: SortOrder
   start_date: SortOrder
   whid: SortOrder
 }
@@ -26901,9 +26562,13 @@ type SchedulerMinAggregate {
   created_at: DateTime
   end_date: String
   id: BigInt
+  label: String
   level: String
   login: String
+  name: String
   notes: String
+  permission: String
+  public: String
   start_date: String
   whid: String
 }
@@ -26912,18 +26577,26 @@ input SchedulerMinOrderByAggregateInput {
   created_at: SortOrder
   end_date: SortOrder
   id: SortOrder
+  label: SortOrder
   level: SortOrder
   login: SortOrder
+  name: SortOrder
   notes: SortOrder
+  permission: SortOrder
+  public: SortOrder
   start_date: SortOrder
   whid: SortOrder
 }
 
 enum SchedulerOrderByRelevanceFieldEnum {
   end_date
+  label
   level
   login
+  name
   notes
+  permission
+  public
   start_date
   whid
 }
@@ -26943,9 +26616,13 @@ input SchedulerOrderByWithAggregationInput {
   created_at: SortOrder
   end_date: SortOrder
   id: SortOrder
+  label: SortOrder
   level: SortOrder
   login: SortOrder
+  name: SortOrder
   notes: SortOrder
+  permission: SortOrder
+  public: SortOrder
   start_date: SortOrder
   whid: SortOrder
 }
@@ -26955,9 +26632,13 @@ input SchedulerOrderByWithRelationAndSearchRelevanceInput {
   created_at: SortOrder
   end_date: SortOrder
   id: SortOrder
+  label: SortOrder
   level: SortOrder
   login: SortOrder
+  name: SortOrder
   notes: SortOrder
+  permission: SortOrder
+  public: SortOrder
   start_date: SortOrder
   whid: SortOrder
 }
@@ -26966,9 +26647,13 @@ enum SchedulerScalarFieldEnum {
   created_at
   end_date
   id
+  label
   level
   login
+  name
   notes
+  permission
+  public
   start_date
   whid
 }
@@ -26980,9 +26665,13 @@ input SchedulerScalarWhereWithAggregatesInput {
   created_at: DateTimeNullableWithAggregatesFilter
   end_date: StringNullableWithAggregatesFilter
   id: BigIntWithAggregatesFilter
+  label: StringNullableWithAggregatesFilter
   level: StringNullableWithAggregatesFilter
   login: StringNullableWithAggregatesFilter
+  name: StringNullableWithAggregatesFilter
   notes: StringNullableWithAggregatesFilter
+  permission: StringNullableWithAggregatesFilter
+  public: StringNullableWithAggregatesFilter
   start_date: StringNullableWithAggregatesFilter
   whid: StringNullableWithAggregatesFilter
 }
@@ -26999,9 +26688,13 @@ input SchedulerUpdateInput {
   created_at: NullableDateTimeFieldUpdateOperationsInput
   end_date: NullableStringFieldUpdateOperationsInput
   id: BigIntFieldUpdateOperationsInput
+  label: NullableStringFieldUpdateOperationsInput
   level: NullableStringFieldUpdateOperationsInput
   login: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
   notes: NullableStringFieldUpdateOperationsInput
+  permission: NullableStringFieldUpdateOperationsInput
+  public: NullableStringFieldUpdateOperationsInput
   start_date: NullableStringFieldUpdateOperationsInput
   whid: NullableStringFieldUpdateOperationsInput
 }
@@ -27010,9 +26703,13 @@ input SchedulerUpdateManyMutationInput {
   created_at: NullableDateTimeFieldUpdateOperationsInput
   end_date: NullableStringFieldUpdateOperationsInput
   id: BigIntFieldUpdateOperationsInput
+  label: NullableStringFieldUpdateOperationsInput
   level: NullableStringFieldUpdateOperationsInput
   login: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
   notes: NullableStringFieldUpdateOperationsInput
+  permission: NullableStringFieldUpdateOperationsInput
+  public: NullableStringFieldUpdateOperationsInput
   start_date: NullableStringFieldUpdateOperationsInput
   whid: NullableStringFieldUpdateOperationsInput
 }
@@ -27024,9 +26721,13 @@ input SchedulerWhereInput {
   created_at: DateTimeNullableFilter
   end_date: StringNullableFilter
   id: BigIntFilter
+  label: StringNullableFilter
   level: StringNullableFilter
   login: StringNullableFilter
+  name: StringNullableFilter
   notes: StringNullableFilter
+  permission: StringNullableFilter
+  public: StringNullableFilter
   start_date: StringNullableFilter
   whid: StringNullableFilter
 }

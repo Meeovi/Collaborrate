@@ -14,11 +14,6 @@ generator typegraphql {
   emitTranspiledCode = "true"
 }
 
-generator jsonSchema {
-  provider = "prisma-json-schema-generator"
-  output   = "../prisma/generated"
-}
-
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
@@ -327,23 +322,6 @@ model countries {
   trainings   String?
 }
 
-model coupons {
-  id                         BigInt    @id @default(autoincrement())
-  name                       String
-  excerpt                    String?
-  discount                   String?
-  image                      String?
-  published                  DateTime? @default(now())
-  expiration                 String?
-  categories                 String?
-  articles                   String?
-  products                   String?
-  customers                  String?
-  users                      String?
-  prod_id                    BigInt
-  products_couponsToproducts String?
-}
-
 model credit_memos {
   credit_memo  String
   order_number Int
@@ -554,25 +532,6 @@ model fullfillments {
   phone          String?
   pickup         String?
   stock          String?
-}
-
-model gift_certificates {
-  id             BigInt    @id @default(autoincrement())
-  name           String
-  excerpt        String?
-  discount       String?
-  image          String?
-  published      DateTime? @default(now())
-  special_offers String?
-  rewards        String?
-  coupons        String?
-  expiration     String?
-  categories     String?
-  articles       String?
-  products       String?
-  customers      String?
-  users          String?
-  type           String?
 }
 
 model glossary {
@@ -1522,6 +1481,10 @@ model scheduler {
   notes      String?
   start_date String?
   whid       String?
+  label      String?
+  public     String?
+  permission String?
+  name       String?
 }
 
 model digiboard {
@@ -1652,4 +1615,23 @@ model logIn {
   expiresIn  String?
   users      String?
   username   String?
+}
+
+model discounts {
+  id             BigInt    @id(map: "gift_certificates_pkey") @default(autoincrement())
+  name           String
+  excerpt        String?
+  discount       String?
+  image          String?
+  published      DateTime? @default(now())
+  special_offers String?
+  rewards        String?
+  coupons        String?
+  expiration     String?
+  categories     String?
+  articles       String?
+  products       String?
+  customers      String?
+  users          String?
+  type           String?
 }

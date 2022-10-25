@@ -33,8 +33,7 @@
               <a class="sidenav-link" style="color: white;" href="/admin/sales/transactions">Transactions</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/sales/certificates">Gift Certificates & Gift
-                Cards</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/sales/discounts">Discounts</a>
             </li><br>
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/sales/quotes">Quotes</a>
@@ -103,12 +102,6 @@
           <a class="sidenav-link" style="color: white;" href="">
             <i class="fas fa-chart-pie fa-fw me-3" style="color: white;"></i><span>Reports</span></a>
           <ul class="sidenav-collapse">
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/reports/reports">Reports</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/reports/deep-dive">Deep Dive</a>
-            </li><br>
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/reports/eosr">End of Shift Reports</a>
             </li><br>
@@ -193,9 +186,6 @@
             </li><br>
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/shop/partners">Partners</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/shop/coupons">Coupons</a>
             </li><br>
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/shop/warehouses">Warehouses</a>

@@ -36,8 +36,6 @@ export { ContractsOrderByRelevanceFieldEnum } from "./ContractsOrderByRelevanceF
 export { ContractsScalarFieldEnum } from "./ContractsScalarFieldEnum";
 export { CountriesOrderByRelevanceFieldEnum } from "./CountriesOrderByRelevanceFieldEnum";
 export { CountriesScalarFieldEnum } from "./CountriesScalarFieldEnum";
-export { CouponsOrderByRelevanceFieldEnum } from "./CouponsOrderByRelevanceFieldEnum";
-export { CouponsScalarFieldEnum } from "./CouponsScalarFieldEnum";
 export { Credit_memosOrderByRelevanceFieldEnum } from "./Credit_memosOrderByRelevanceFieldEnum";
 export { Credit_memosScalarFieldEnum } from "./Credit_memosScalarFieldEnum";
 export { CurrenciesOrderByRelevanceFieldEnum } from "./CurrenciesOrderByRelevanceFieldEnum";
@@ -58,6 +56,8 @@ export { DeepdiveOrderByRelevanceFieldEnum } from "./DeepdiveOrderByRelevanceFie
 export { DeepdiveScalarFieldEnum } from "./DeepdiveScalarFieldEnum";
 export { DigiboardOrderByRelevanceFieldEnum } from "./DigiboardOrderByRelevanceFieldEnum";
 export { DigiboardScalarFieldEnum } from "./DigiboardScalarFieldEnum";
+export { DiscountsOrderByRelevanceFieldEnum } from "./DiscountsOrderByRelevanceFieldEnum";
+export { DiscountsScalarFieldEnum } from "./DiscountsScalarFieldEnum";
 export { EmailsOrderByRelevanceFieldEnum } from "./EmailsOrderByRelevanceFieldEnum";
 export { EmailsScalarFieldEnum } from "./EmailsScalarFieldEnum";
 export { EndofshiftOrderByRelevanceFieldEnum } from "./EndofshiftOrderByRelevanceFieldEnum";
@@ -66,8 +66,6 @@ export { EventsOrderByRelevanceFieldEnum } from "./EventsOrderByRelevanceFieldEn
 export { EventsScalarFieldEnum } from "./EventsScalarFieldEnum";
 export { FullfillmentsOrderByRelevanceFieldEnum } from "./FullfillmentsOrderByRelevanceFieldEnum";
 export { FullfillmentsScalarFieldEnum } from "./FullfillmentsScalarFieldEnum";
-export { Gift_certificatesOrderByRelevanceFieldEnum } from "./Gift_certificatesOrderByRelevanceFieldEnum";
-export { Gift_certificatesScalarFieldEnum } from "./Gift_certificatesScalarFieldEnum";
 export { GlossaryOrderByRelevanceFieldEnum } from "./GlossaryOrderByRelevanceFieldEnum";
 export { GlossaryScalarFieldEnum } from "./GlossaryScalarFieldEnum";
 export { ImportmOrderByRelevanceFieldEnum } from "./ImportmOrderByRelevanceFieldEnum";

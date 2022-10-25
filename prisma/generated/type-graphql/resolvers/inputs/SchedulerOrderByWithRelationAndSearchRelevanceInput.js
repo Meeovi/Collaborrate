@@ -56,6 +56,30 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], SchedulerOrderByWithRelationAndSearchRelevanceInput.prototype, "whid", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerOrderByWithRelationAndSearchRelevanceInput.prototype, "label", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerOrderByWithRelationAndSearchRelevanceInput.prototype, "public", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerOrderByWithRelationAndSearchRelevanceInput.prototype, "permission", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerOrderByWithRelationAndSearchRelevanceInput.prototype, "name", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => SchedulerOrderByRelevanceInput_1.SchedulerOrderByRelevanceInput, {
         nullable: true
     }),

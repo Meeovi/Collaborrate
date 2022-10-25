@@ -1,0 +1,60 @@
+<template>
+  <div>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/admin/add-new/add-new-discounts"><input type="submit" class="btn btn-warning" value="Create New Discount"></a>
+        
+      </div>
+    </nav>
+    
+    <br>
+    <div class="table table-responsive">
+      <table id="table" data-toggle="table" class="table">
+        <thead class="table table-dark">
+          <tr>
+            <th>Name</th>
+            <th>Percentage</th>
+            <th>Expiration</th>
+            <th>Description</th>
+            <th>Gift Type</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody v-for="discounts in discounts" :key="discounts.id">
+          <tr>
+            <td>{{ discounts.name }}</td>
+            <td>{{ discounts.discount }}</td>
+            <td>{{ discounts.expiration }}</td>
+            <td>{{ discounts.excerpt }}</td>
+            <td>{{ discounts.type }}</td>
+            <td><a :href="`/admin/edit/gift-certificate/${discounts.id}`">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</template>
+
+<script>
+// eslint-disable-next-line camelcase
+import  discounts from '~/graphql/generated/queries/findManyDiscounts'
+
+export default {
+  data() {
+    return {
+      discounts: [],
+    }
+  },
+  apollo: {
+    discounts: {
+      prefetch: true,
+      query: discounts
+    }
+  },
+    head: {
+      title: 'Discounts'
+    }
+  }
+
+</script>

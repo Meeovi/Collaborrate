@@ -7,5 +7,9 @@ export declare class SchedulerCountAggregate {
     notes: number;
     start_date: number;
     whid: number;
+    label: number;
+    public: number;
+    permission: number;
+    name: number;
     _all: number;
 }

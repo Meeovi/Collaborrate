@@ -13,6 +13,10 @@ var SchedulerScalarFieldEnum;
     SchedulerScalarFieldEnum["notes"] = "notes";
     SchedulerScalarFieldEnum["start_date"] = "start_date";
     SchedulerScalarFieldEnum["whid"] = "whid";
+    SchedulerScalarFieldEnum["label"] = "label";
+    SchedulerScalarFieldEnum["public"] = "public";
+    SchedulerScalarFieldEnum["permission"] = "permission";
+    SchedulerScalarFieldEnum["name"] = "name";
 })(SchedulerScalarFieldEnum = exports.SchedulerScalarFieldEnum || (exports.SchedulerScalarFieldEnum = {}));
 TypeGraphQL.registerEnumType(SchedulerScalarFieldEnum, {
     name: "SchedulerScalarFieldEnum",

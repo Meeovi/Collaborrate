@@ -22,7 +22,6 @@ declare const crudResolversMap: {
     Content_type: typeof crudResolvers.Content_typeCrudResolver;
     Contracts: typeof crudResolvers.ContractsCrudResolver;
     Countries: typeof crudResolvers.CountriesCrudResolver;
-    Coupons: typeof crudResolvers.CouponsCrudResolver;
     Credit_memos: typeof crudResolvers.Credit_memosCrudResolver;
     Currencies: typeof crudResolvers.CurrenciesCrudResolver;
     Currency_rates: typeof crudResolvers.Currency_ratesCrudResolver;
@@ -36,7 +35,6 @@ declare const crudResolversMap: {
     Emails: typeof crudResolvers.EmailsCrudResolver;
     Events: typeof crudResolvers.EventsCrudResolver;
     Fullfillments: typeof crudResolvers.FullfillmentsCrudResolver;
-    Gift_certificates: typeof crudResolvers.Gift_certificatesCrudResolver;
     Glossary: typeof crudResolvers.GlossaryCrudResolver;
     Importm: typeof crudResolvers.ImportmCrudResolver;
     Integrations: typeof crudResolvers.IntegrationsCrudResolver;
@@ -99,6 +97,7 @@ declare const crudResolversMap: {
     Newsletters: typeof crudResolvers.NewslettersCrudResolver;
     Vendors: typeof crudResolvers.VendorsCrudResolver;
     LogIn: typeof crudResolvers.LogInCrudResolver;
+    Discounts: typeof crudResolvers.DiscountsCrudResolver;
 };
 declare type ResolverModelNames = keyof typeof crudResolversMap;
 declare type ModelResolverActionNames<TModel extends ResolverModelNames> = keyof typeof crudResolversMap[TModel]["prototype"];

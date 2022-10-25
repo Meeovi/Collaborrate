@@ -7,4 +7,8 @@ export declare class SchedulerCreateInput {
     notes?: string | undefined;
     start_date?: string | undefined;
     whid?: string | undefined;
+    label?: string | undefined;
+    public?: string | undefined;
+    permission?: string | undefined;
+    name?: string | undefined;
 }

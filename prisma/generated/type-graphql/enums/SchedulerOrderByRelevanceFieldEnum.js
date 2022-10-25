@@ -11,6 +11,10 @@ var SchedulerOrderByRelevanceFieldEnum;
     SchedulerOrderByRelevanceFieldEnum["notes"] = "notes";
     SchedulerOrderByRelevanceFieldEnum["start_date"] = "start_date";
     SchedulerOrderByRelevanceFieldEnum["whid"] = "whid";
+    SchedulerOrderByRelevanceFieldEnum["label"] = "label";
+    SchedulerOrderByRelevanceFieldEnum["public"] = "public";
+    SchedulerOrderByRelevanceFieldEnum["permission"] = "permission";
+    SchedulerOrderByRelevanceFieldEnum["name"] = "name";
 })(SchedulerOrderByRelevanceFieldEnum = exports.SchedulerOrderByRelevanceFieldEnum || (exports.SchedulerOrderByRelevanceFieldEnum = {}));
 TypeGraphQL.registerEnumType(SchedulerOrderByRelevanceFieldEnum, {
     name: "SchedulerOrderByRelevanceFieldEnum",

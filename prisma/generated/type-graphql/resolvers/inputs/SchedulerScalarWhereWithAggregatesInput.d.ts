@@ -13,4 +13,8 @@ export declare class SchedulerScalarWhereWithAggregatesInput {
     notes?: StringNullableWithAggregatesFilter | undefined;
     start_date?: StringNullableWithAggregatesFilter | undefined;
     whid?: StringNullableWithAggregatesFilter | undefined;
+    label?: StringNullableWithAggregatesFilter | undefined;
+    public?: StringNullableWithAggregatesFilter | undefined;
+    permission?: StringNullableWithAggregatesFilter | undefined;
+    name?: StringNullableWithAggregatesFilter | undefined;
 }

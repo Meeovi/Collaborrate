@@ -54,6 +54,30 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], Scheduler.prototype, "whid", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], Scheduler.prototype, "label", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], Scheduler.prototype, "public", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], Scheduler.prototype, "permission", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], Scheduler.prototype, "name", void 0);
 Scheduler = tslib_1.__decorate([
     TypeGraphQL.ObjectType("Scheduler", {
         isAbstract: true

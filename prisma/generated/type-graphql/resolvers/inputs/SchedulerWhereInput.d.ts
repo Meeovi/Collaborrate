@@ -13,4 +13,8 @@ export declare class SchedulerWhereInput {
     notes?: StringNullableFilter | undefined;
     start_date?: StringNullableFilter | undefined;
     whid?: StringNullableFilter | undefined;
+    label?: StringNullableFilter | undefined;
+    public?: StringNullableFilter | undefined;
+    permission?: StringNullableFilter | undefined;
+    name?: StringNullableFilter | undefined;
 }

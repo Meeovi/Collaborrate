@@ -54,6 +54,30 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], SchedulerMinOrderByAggregateInput.prototype, "whid", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerMinOrderByAggregateInput.prototype, "label", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerMinOrderByAggregateInput.prototype, "public", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerMinOrderByAggregateInput.prototype, "permission", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerMinOrderByAggregateInput.prototype, "name", void 0);
 SchedulerMinOrderByAggregateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("SchedulerMinOrderByAggregateInput", {
         isAbstract: true
