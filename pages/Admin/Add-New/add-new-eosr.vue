@@ -117,9 +117,9 @@
   
   <script>
     import gql from "graphql-tag";
-    import endofshifts from "~/graphql/queries/reports/eosr";
-    import findManyProjects from '~/graphql/queries/content/projects'
-    import ticketings from '~/graphql/queries/marketing/ticketing'
+    import endofshifts from "~/graphql/generated/queries/endofshifts";
+    import findManyProjects from '~/graphql/generated/queries/findManyProjects'
+    import ticketings from '~/graphql/generated/queries/ticketings'
     /* eslint-disable camelcase */
   
     const ADD_EOSR = gql`

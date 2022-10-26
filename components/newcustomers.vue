@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import findFirstCustomers from '~/graphql/queries/customers/newcustomers'
+import findFirstCustomers from '~/graphql/generated/queries/findManyCustomers'
 
 export default {
   data() {

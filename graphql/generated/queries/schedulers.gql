@@ -3,9 +3,13 @@ query schedulers($cursor: SchedulerWhereUniqueInput, $distinct: [SchedulerScalar
         created_at
         end_date
         id
+        label
         level
         login
+        name
         notes
+        permission
+        public
         start_date
         whid
     }

@@ -55,7 +55,7 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManySegments from "~/graphql/queries/customers/segments";
+  import findManySegments from "~/graphql/generated/queries/findManySegments";
 
   const ADD_SEGMENTS = gql `
     mutation ($name:String!,$description:String,$website:String,$status:String,$apply_to:String){

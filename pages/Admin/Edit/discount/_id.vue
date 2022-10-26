@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-for="certificates in findManyGift_certificates" :key="certificates.id" @submit.prevent="addGift_Certificate">
+    <form v-for="certificates in findManyDiscounts" :key="certificates.id" @submit.prevent="addGift_Certificate">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
@@ -65,7 +65,7 @@
 <script>
   import gql from "graphql-tag";
   // eslint-disable-next-line camelcase
-  import findManyGift_certificates from "~/graphql/queries/sales/gift_certificates"
+  import findManyDiscounts from "~/graphql/generated/queries/findManyDiscounts"
 
   const DELETE_GIFT_CERTIFICATE = gql `
     mutation ($name:String!,$discount:String!$expiration:String!,$excerpt:String!,$type:String){
@@ -108,7 +108,7 @@ export default {
         },
         refetchQueries: [
           {
-            query: findManyGift_certificates
+            query: findManyDiscounts
           }       
           
         ]
@@ -124,7 +124,7 @@ export default {
         },
         refetchQueries: [
           {
-            query: findManyGift_certificates
+            query: findManyDiscounts
           }       
           
         ]
@@ -135,8 +135,8 @@ export default {
     }
   },
   apollo: {
-    findManyGift_certificates: {
-      query: findManyGift_certificates,
+    findManyDiscounts: {
+      query: findManyDiscounts,
       prefetch: ({ route }) => ({ id: route.params.id }),
       variables() {
         return { id: this.$route.params.id }

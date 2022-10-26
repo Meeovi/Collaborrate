@@ -220,11 +220,11 @@
 
   import
   findManyContracts
-  from "~/graphql/queries/marketing/contracts";
-  import findManyOpportunies from '~/graphql/queries/customers/opportunities'
-  import findManyAccounts from '~/graphql/queries/customers/accounts'
-  import findManyCurrencies from '~/graphql/queries/system/currencies'
-  import findManyCustomers from '~/graphql/queries/customers/customers'
+  from "~/graphql/generated/queries/findManyContracts";
+  import findManyOpportunies from '~/graphql/generated/queries/findManyOpportunities'
+  import findManyAccounts from '~/graphql/generated/queries/findManyAccounts'
+  import findManyCurrencies from '~/graphql/generated/queries/findManyCurrencies'
+  import findManyCustomers from '~/graphql/generated/queries/findManyCustomers'
   /* eslint-disable camelcase */
   const DELETE_CONTRACT = gql`
     mutation ($account: String!, $company_signed_date: String!, $contact: String!, $contract_manager: String!, $contract_title: String!, $contract_type: String!, $contract_value: String!, $currency: String!, $customer_signed_date: String!, $description: String!, $discount: String!, $end_date: String!, $grand_total: String!, $line_items: String!, $opportunity: String!, $renewal_reminder: String!, $shipping: String!, $shipping_tax: String!, $start_date: String!, $status: String!, $total: String!, $tax: String!, $subtotal: String){

@@ -84,9 +84,9 @@
 <script>
   import gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import findManyChannels from "~/graphql/queries/system/channels";
-  import findManyZones from "~/graphql/queries/system/zones";
-  import findManyCurrencies from "~/graphql/queries/system/currencies";
+  import findManyChannels from "~/graphql/generated/queries/findManyChannels";
+  import findManyZones from "~/graphql/generated/queries/findManyZones";
+  import findManyCurrencies from "~/graphql/generated/queries/findManyCurrencies";
 
   const ADD_CHANNELS = gql `
     mutation ($client_id:String!,$client_secret:String,$default_shipping:String,$default_zone:String,$code:String!,$include_tax:String!,$name:String!,$currency:String!,$default_lang:String!){

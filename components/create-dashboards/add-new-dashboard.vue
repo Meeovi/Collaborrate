@@ -34,7 +34,7 @@
 </template>
 
 <script>
-  import findManyDashboards from '~/graphql/queries/reports/dashboards'
+  import findManyDashboards from '~/graphql/generated/queries/findManyDashboards'
 
   export default {
     data() {

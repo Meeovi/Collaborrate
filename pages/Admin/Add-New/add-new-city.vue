@@ -94,9 +94,9 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyCities from "~/graphql/queries/shop/cities";
-  import findManyStates from '~/graphql/queries/shop/states'
-  import findManyCountries from '~/graphql/queries/shop/countries'
+  import findManyCities from "~/graphql/generated/queries/findManyCities";
+  import findManyStates from '~/graphql/generated/queries/findManyStates'
+  import findManyCountries from '~/graphql/generated/queries/findManyCountries'
 
   const ADD_CITIES = gql `
     mutation ($name:String!,$state:String,$country:String,$postalCode:String,$description:String){

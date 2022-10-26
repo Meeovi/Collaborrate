@@ -31,6 +31,10 @@
                       <td><input v-model="name" name="eventName" type="text" value="Name of the Event" required /></td>
                     </tr>
                     <tr>
+                      <td style="text-align: right;">Event Type</td>
+                      <td><input v-model="type" name="eventType" type="text" value="Type of Event" required /></td>
+                    </tr>
+                    <tr>
                       <td style="text-align: right;">Amount of Tickets Available</td>
                       <td><input v-model="tickets" name="eventTickets" type="number"
                           value="Enter amount of tickets for event" required /></td>
@@ -76,54 +80,58 @@
                             {{ category.name }}</option>
                         </select></td>
                     </tr>
+                    <tr>
+                      <div class="file-upload-wrapper">
+                        <input type="file" id="input-file-now" class="file-upload-input"
+                          data-mdb-file-upload="file-upload" data-mdb-accepted-extensions="image/*" />
+                      </div>
+                    </tr>
+                    <tr>
+                      <td style="text-align: right;">Description</td>
+                      <td>
+                        <div class="form-check form-switch">
+                          <textarea v-model="description" cols="40" rows="10"></textarea>
+                        </div>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
               <br><br>
               <div id="accordionExample" class="accordion">
                 <div class="accordion-item">
-                  <h2 id="headingOne" class="accordion-header">
+                  <h2 id="headingTwo" class="accordion-header">
                     <button class="accordion-button" type="button" data-mdb-toggle="collapse"
-                      data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Content
+                      data-mdb-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Create Invitations
                     </button>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
-                      <div class="table table-responsive">
-                        <table class="table">
-                          <tbody>
-                            <tr>
-                              <td style="text-align: right;">Description</td>
-                              <td>
-                                <div class="form-check form-switch">
-                                  <textarea v-model="description" cols="40" rows="10"></textarea>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 id="headingThree" class="accordion-header">
-                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
-                      data-mdb-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Images and Videos
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                    data-mdb-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <td>
-                        <div class="file-upload-wrapper">
-                          <input type="file" id="input-file-now" class="file-upload-input"
-                            data-mdb-file-upload="file-upload" data-mdb-accepted-extensions="image/*" />
-                        </div>
-                      </td>
+                      <tr>
+                        <td style="text-align: right;">Invitation Customer Name</td>
+                        <td><input v-model="name" name="eventName" type="text" value="Name of the Invitation"
+                             /></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: right;">Invitation Customer Billing Address</td>
+                        <td><input v-model="name" name="eventName" type="text" value="Billing Address" /></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: right;">Invitation Payment</td>
+                        <td><input v-model="name" name="eventName" type="text" value="Payment for the Invitation"
+                             /></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: right;">Invitation Grand Total Purchased</td>
+                        <td><input v-model="name" name="eventName" type="text"
+                            value="Grand Total Purchased of the Invitation"  /></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: right;">Invitation Customer Shipping Address</td>
+                        <td><input v-model="name" name="eventName" type="text" value="Shipping Address"  /></td>
+                      </tr>
                     </div>
                   </div>
                 </div>
@@ -139,13 +147,13 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyEvents from "~/graphql/queries/marketing/events";
-  import findManyStates from '~/graphql/queries/shop/states'
-  import findManyCountries from '~/graphql/queries/shop/countries'
-  import findManyCities from '~/graphql/queries/shop/cities'
-  import findManyCategories from '~/graphql/queries/shop/categories'
+  import findManyEvents from "~/graphql/generated/queries/findManyEvents";
+  import findManyStates from '~/graphql/generated/queries/findManyStates'
+  import findManyCountries from '~/graphql/generated/queries/findManyCountries'
+  import findManyCities from '~/graphql/generated/queries/findManyCities'
+  import findManyCategories from '~/graphql/generated/queries/findManyCategories'
 
-  const ADD_EVENTS = gql`
+  const ADD_EVENTS = gql `
     mutation ($image: Upload!,$name: String!,$postalcode: String!,$start: String!,$end: String!,$tickets: String!,$content: String!,$country: String!,$city: String!,$state: String!,$category: String){
     createOneEvents(data: {image: $image,name: $name,postalcode: $postalcode,start: $start,end: $end,tickets: $tickets,country: $country,content: $content,category: $category,city: $city,state: $state}) {
         category

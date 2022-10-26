@@ -74,7 +74,7 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyTags from "~/graphql/queries/content/tags";
+  import findManyTags from "~/graphql/generated/queries/findManyTags";
 
   const ADD_TAGS = gql `
     mutation ($name:String!,$excerpt:String){

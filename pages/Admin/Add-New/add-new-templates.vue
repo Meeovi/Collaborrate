@@ -110,7 +110,7 @@
 <script>
   import gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import findManyTemplates from "~/graphql/queries/marketing/templates";
+  import findManyTemplates from "~/graphql/generated/queries/findManyTemplates";
 
   const ADD_TEMPLATES = gql `
     mutation ($name: String!,$margin_header: String!,$margin_bottom: String!,$margin_footer: String!,$content: String!,$margin_left: String!,$margin_right: String!,$orientation: String!,$type: String!,$assigned_to: String!,$active: String!,$margin_top: String!,$page_size: String){

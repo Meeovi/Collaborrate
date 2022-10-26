@@ -310,13 +310,13 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyLeads from "~/graphql/queries/customers/leads";
-  import findManyAccounts from "~/graphql/queries/customers/accounts";
-  import findManyUsers from '~/graphql/queries/system/users'
-  import findManyCities from '~/graphql/queries/shop/cities'
-  import findManyCountries from '~/graphql/queries/shop/countries'
-  import findManyStates from '~/graphql/queries/shop/states'
-  import findManyCampaigns from '~/graphql/queries/marketing/campaigns'
+  import findManyLeads from "~/graphql/generated/queries/findManyLeads";
+  import findManyAccounts from "~/graphql/generated/queries/findManyAccounts";
+  import findManyUsers from '~/graphql/generated/queries/findManyUsers'
+  import findManyCities from '~/graphql/generated/queries/findManyCities'
+  import findManyCountries from '~/graphql/generated/queries/findManyCountries'
+  import findManyStates from '~/graphql/generated/queries/findManyStates'
+  
 
   /* eslint-disable camelcase */
   const DELETE_LEAD = gql `
@@ -424,10 +424,7 @@ export default {
         prefetch: true,
         query: findManyStates
       },
-      findManyCampaigns: {
-        prefetch: true,
-        query: findManyCampaigns
-      },
+
       findManyUsers: {
         prefetch: true,
         query: findManyUsers

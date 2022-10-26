@@ -1,0 +1,20 @@
+query findUniqueDiscounts($where: DiscountsWhereUniqueInput!){
+    findUniqueDiscounts(where: $where){
+        articles
+        categories
+        coupons
+        customers
+        discount
+        excerpt
+        expiration
+        id
+        image
+        name
+        products
+        published
+        rewards
+        special_offers
+        type
+        users
+    }
+}

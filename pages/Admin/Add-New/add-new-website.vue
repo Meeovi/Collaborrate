@@ -87,9 +87,9 @@
 
 <script>
 import gql from "graphql-tag";
-import findManyWebsites from "~/graphql/queries/content/website";
-import findManyCategories from "~/graphql/queries/shop/categories"
-import findManyShops from "~/graphql/queries/shop/vendors"
+import findManyWebsites from "~/graphql/generated/queries/findManyWebsites";
+import findManyCategories from "~/graphql/generated/queries/findManyCategories"
+import findManyShops from "~/graphql/generated/queries/findManyVendors"
 
   const ADD_WEBSITES = gql`
     mutation ($name: String!, $shop: String!, $category: String!, $url: String!) {

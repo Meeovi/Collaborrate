@@ -39,7 +39,6 @@ declare const crudResolversMap: {
     Importm: typeof crudResolvers.ImportmCrudResolver;
     Integrations: typeof crudResolvers.IntegrationsCrudResolver;
     Internalization: typeof crudResolvers.InternalizationCrudResolver;
-    Invitations: typeof crudResolvers.InvitationsCrudResolver;
     Invoices: typeof crudResolvers.InvoicesCrudResolver;
     Leads: typeof crudResolvers.LeadsCrudResolver;
     Manufacturer: typeof crudResolvers.ManufacturerCrudResolver;
@@ -91,7 +90,6 @@ declare const crudResolversMap: {
     Zones: typeof crudResolvers.ZonesCrudResolver;
     Endofshift: typeof crudResolvers.EndofshiftCrudResolver;
     Scheduler: typeof crudResolvers.SchedulerCrudResolver;
-    Digiboard: typeof crudResolvers.DigiboardCrudResolver;
     Settings: typeof crudResolvers.SettingsCrudResolver;
     Attributes: typeof crudResolvers.AttributesCrudResolver;
     Newsletters: typeof crudResolvers.NewslettersCrudResolver;

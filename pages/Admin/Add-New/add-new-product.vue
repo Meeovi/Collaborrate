@@ -116,7 +116,7 @@
                       <td>
                         <label for="manufacture">manufacturer</label><br>
                         <select id="category" v-model="manufacture">
-                          <option v-for="manufacture in findManyManufacturers" :key="manufacture.id" :value="manufacture">
+                          <option v-for="manufacture in manufacturerss" :key="manufacture.id" :value="manufacture">
                             {{ manufacture.name }}</option>
                         </select>
                       </td>
@@ -339,17 +339,17 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyProducts from "~/graphql/queries/shop/products"
-  import findManyCategories from "~/graphql/queries/shop/categories"
-  import findManyCountries from "~/graphql/queries/shop/countries"
-  import attributes from "~/graphql/queries/shop/attributes"
-  import findManyProduct_types from "~/graphql/queries/shop/product-type"
-  import findManyBrands from "~/graphql/queries/shop/brands"
-  import findManyContracts from "~/graphql/queries/marketing/contracts"
-  import findManyEvents from "~/graphql/queries/marketing/events"
-  import findManyManufacturers from "~/graphql/queries/shop/manufacturer"
-  import findManyTags from "~/graphql/queries/content/tags"
-  import findManyZones from "~/graphql/queries/system/zones"
+  import findManyProducts from "~/graphql/generated/queries/findManyProducts"
+  import findManyCategories from "~/graphql/generated/queries/findManyCategories"
+  import findManyCountries from "~/graphql/generated/queries/findManyCountries"
+  import attributes from "~/graphql/generated/queries/findManyAttributes"
+  import findManyProduct_types from "~/graphql/generated/queries/findManyProduct_types"
+  import findManyBrands from "~/graphql/generated/queries/findManyBrands"
+  import findManyContracts from "~/graphql/generated/queries/findManyContracts"
+  import findManyEvents from "~/graphql/generated/queries/findManyEvents"
+  import manufacturerss from "~/graphql/generated/queries/manufacturers"
+  import findManyTags from "~/graphql/generated/queries/findManyTags"
+  import findManyZones from "~/graphql/generated/queries/findManyZones"
 
   const ADD_PRODUCTS = gql`
     mutation ($attributes: String!, $brand: String!, $categories: String!, $content: String!, $contract: String!, $cost_string: String!, $country: String!, $created_at: String!, $customer_type: String!, $family: String!, $file: String!, $format: String!, $height: String!, $id: String!, $image: String!, $manufacture: String!, $manufacturer_part_number: String!, $occassions: String!, $name: String!, $meta_url: String!, $meta_title: String!, $meta_keywords: String!, $meta_description: String!, $part_number: String!, $price: String!, $product: String!, $quantity_per_source: String!, $related_product: String!, $salable_quantity: String!, $short_description: String!, $size: String!, $sku: String!, $status: String!, $stock_status: String!, $tags: String!, $tax_class: String!, $thumbnail: String!, $types: String!, $variants: String!, $visibility: String!, $websites: String!, $weight: String!, $zone: String!){
@@ -661,9 +661,9 @@
         prefetch: true,
         query: findManyContracts
       },
-      findManyManufacturers: {
+      manufacturerss: {
         prefetch: true,
-        query: findManyManufacturers
+        query: manufacturerss
       },
       findManyEvents: {
         prefetch: true,

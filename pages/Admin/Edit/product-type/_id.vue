@@ -94,7 +94,7 @@
 <script>
 /* eslint-disable camelcase */
   import  gql from "graphql-tag";
-  import findManyProduct_types from "~/graphql/queries/shop/product-type";
+  import findManyProduct_types from "~/graphql/generated/queries/findManyProduct_types";
 
   const DELETE_PRODUCT_TYPE = gql`
     mutation ($type_name:String!,$taxes:String!, $filter_options:String!, $id:String!, $isShippable:String!, $meta_description:String!, $meta_name:String!, $meta_url:String!, $position:String!, $prod_id:String!,){

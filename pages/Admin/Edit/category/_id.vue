@@ -106,7 +106,7 @@
 <script>
 // eslint-disable-next-line camelcase
 import  gql from 'graphql-tag'
-import findManyCategories from '~/graphql/mutations/shop/categories'
+import findManyCategories from '~/graphql/generated/queries/findManyCategories'
 
 const DELETE_CATEGORY = gql`
   mutation deleteOneCategories($id: Int!){

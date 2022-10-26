@@ -759,14 +759,6 @@ type AggregateDeepdive {
   _sum: DeepdiveSumAggregate
 }
 
-type AggregateDigiboard {
-  _avg: DigiboardAvgAggregate
-  _count: DigiboardCountAggregate
-  _max: DigiboardMaxAggregate
-  _min: DigiboardMinAggregate
-  _sum: DigiboardSumAggregate
-}
-
 type AggregateDiscounts {
   _avg: DiscountsAvgAggregate
   _count: DiscountsCountAggregate
@@ -837,14 +829,6 @@ type AggregateInternalization {
   _max: InternalizationMaxAggregate
   _min: InternalizationMinAggregate
   _sum: InternalizationSumAggregate
-}
-
-type AggregateInvitations {
-  _avg: InvitationsAvgAggregate
-  _count: InvitationsCountAggregate
-  _max: InvitationsMaxAggregate
-  _min: InvitationsMinAggregate
-  _sum: InvitationsSumAggregate
 }
 
 type AggregateInvoices {
@@ -10254,21 +10238,6 @@ The javascript `Date` as string. Type represents date and time as the ISO Date s
 """
 scalar DateTime
 
-input DateTimeFieldUpdateOperationsInput {
-  set: DateTime
-}
-
-input DateTimeFilter {
-  equals: DateTime
-  gt: DateTime
-  gte: DateTime
-  in: [DateTime!]
-  lt: DateTime
-  lte: DateTime
-  not: NestedDateTimeFilter
-  notIn: [DateTime!]
-}
-
 input DateTimeNullableFilter {
   equals: DateTime
   gt: DateTime
@@ -10291,20 +10260,6 @@ input DateTimeNullableWithAggregatesFilter {
   lt: DateTime
   lte: DateTime
   not: NestedDateTimeNullableWithAggregatesFilter
-  notIn: [DateTime!]
-}
-
-input DateTimeWithAggregatesFilter {
-  _count: NestedIntFilter
-  _max: NestedDateTimeFilter
-  _min: NestedDateTimeFilter
-  equals: DateTime
-  gt: DateTime
-  gte: DateTime
-  in: [DateTime!]
-  lt: DateTime
-  lte: DateTime
-  not: NestedDateTimeWithAggregatesFilter
   notIn: [DateTime!]
 }
 
@@ -10613,207 +10568,6 @@ input DeepdiveWhereInput {
 
 input DeepdiveWhereUniqueInput {
   id: BigInt
-}
-
-type Digiboard {
-  board: String
-  course: String
-  created_at: DateTime!
-  id: Int!
-  name: String!
-  student: String
-}
-
-type DigiboardAvgAggregate {
-  id: Float
-}
-
-input DigiboardAvgOrderByAggregateInput {
-  id: SortOrder
-}
-
-type DigiboardCountAggregate {
-  _all: Int!
-  board: Int!
-  course: Int!
-  created_at: Int!
-  id: Int!
-  name: Int!
-  student: Int!
-}
-
-input DigiboardCountOrderByAggregateInput {
-  board: SortOrder
-  course: SortOrder
-  created_at: SortOrder
-  id: SortOrder
-  name: SortOrder
-  student: SortOrder
-}
-
-input DigiboardCreateInput {
-  board: String
-  course: String
-  created_at: DateTime
-  name: String!
-  student: String
-}
-
-input DigiboardCreateManyInput {
-  board: String
-  course: String
-  created_at: DateTime
-  id: Int
-  name: String!
-  student: String
-}
-
-type DigiboardGroupBy {
-  _avg: DigiboardAvgAggregate
-  _count: DigiboardCountAggregate
-  _max: DigiboardMaxAggregate
-  _min: DigiboardMinAggregate
-  _sum: DigiboardSumAggregate
-  board: String
-  course: String
-  created_at: DateTime!
-  id: Int!
-  name: String!
-  student: String
-}
-
-type DigiboardMaxAggregate {
-  board: String
-  course: String
-  created_at: DateTime
-  id: Int
-  name: String
-  student: String
-}
-
-input DigiboardMaxOrderByAggregateInput {
-  board: SortOrder
-  course: SortOrder
-  created_at: SortOrder
-  id: SortOrder
-  name: SortOrder
-  student: SortOrder
-}
-
-type DigiboardMinAggregate {
-  board: String
-  course: String
-  created_at: DateTime
-  id: Int
-  name: String
-  student: String
-}
-
-input DigiboardMinOrderByAggregateInput {
-  board: SortOrder
-  course: SortOrder
-  created_at: SortOrder
-  id: SortOrder
-  name: SortOrder
-  student: SortOrder
-}
-
-enum DigiboardOrderByRelevanceFieldEnum {
-  board
-  course
-  name
-  student
-}
-
-input DigiboardOrderByRelevanceInput {
-  fields: [DigiboardOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
-input DigiboardOrderByWithAggregationInput {
-  _avg: DigiboardAvgOrderByAggregateInput
-  _count: DigiboardCountOrderByAggregateInput
-  _max: DigiboardMaxOrderByAggregateInput
-  _min: DigiboardMinOrderByAggregateInput
-  _sum: DigiboardSumOrderByAggregateInput
-  board: SortOrder
-  course: SortOrder
-  created_at: SortOrder
-  id: SortOrder
-  name: SortOrder
-  student: SortOrder
-}
-
-input DigiboardOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: DigiboardOrderByRelevanceInput
-  board: SortOrder
-  course: SortOrder
-  created_at: SortOrder
-  id: SortOrder
-  name: SortOrder
-  student: SortOrder
-}
-
-enum DigiboardScalarFieldEnum {
-  board
-  course
-  created_at
-  id
-  name
-  student
-}
-
-input DigiboardScalarWhereWithAggregatesInput {
-  AND: [DigiboardScalarWhereWithAggregatesInput!]
-  NOT: [DigiboardScalarWhereWithAggregatesInput!]
-  OR: [DigiboardScalarWhereWithAggregatesInput!]
-  board: StringNullableWithAggregatesFilter
-  course: StringNullableWithAggregatesFilter
-  created_at: DateTimeWithAggregatesFilter
-  id: IntWithAggregatesFilter
-  name: StringWithAggregatesFilter
-  student: StringNullableWithAggregatesFilter
-}
-
-type DigiboardSumAggregate {
-  id: Int
-}
-
-input DigiboardSumOrderByAggregateInput {
-  id: SortOrder
-}
-
-input DigiboardUpdateInput {
-  board: NullableStringFieldUpdateOperationsInput
-  course: NullableStringFieldUpdateOperationsInput
-  created_at: DateTimeFieldUpdateOperationsInput
-  name: StringFieldUpdateOperationsInput
-  student: NullableStringFieldUpdateOperationsInput
-}
-
-input DigiboardUpdateManyMutationInput {
-  board: NullableStringFieldUpdateOperationsInput
-  course: NullableStringFieldUpdateOperationsInput
-  created_at: DateTimeFieldUpdateOperationsInput
-  name: StringFieldUpdateOperationsInput
-  student: NullableStringFieldUpdateOperationsInput
-}
-
-input DigiboardWhereInput {
-  AND: [DigiboardWhereInput!]
-  NOT: [DigiboardWhereInput!]
-  OR: [DigiboardWhereInput!]
-  board: StringNullableFilter
-  course: StringNullableFilter
-  created_at: DateTimeFilter
-  id: IntFilter
-  name: StringFilter
-  student: StringNullableFilter
-}
-
-input DigiboardWhereUniqueInput {
-  id: Int
 }
 
 type Discounts {
@@ -11782,11 +11536,22 @@ type Events {
   end: String
   id: BigInt!
   image: String
+  invitationBillingAddress: String
+  invitationCustomerName: String
+  invitationEmail: String
+  invitationGrandTotalPurchased: String
+  invitationInvoiceDate: String
+  invitationOrderNumber: String
+  invitationPaymentMethod: String
+  invitationShippingAddress: String
+  invitationStatus: String
+  media: String
   name: String
   postalcode: String
   start: String
   state: String
   tickets: String
+  type: String
 }
 
 type EventsAvgAggregate {
@@ -11807,11 +11572,22 @@ type EventsCountAggregate {
   end: Int!
   id: Int!
   image: Int!
+  invitationBillingAddress: Int!
+  invitationCustomerName: Int!
+  invitationEmail: Int!
+  invitationGrandTotalPurchased: Int!
+  invitationInvoiceDate: Int!
+  invitationOrderNumber: Int!
+  invitationPaymentMethod: Int!
+  invitationShippingAddress: Int!
+  invitationStatus: Int!
+  media: Int!
   name: Int!
   postalcode: Int!
   start: Int!
   state: Int!
   tickets: Int!
+  type: Int!
 }
 
 input EventsCountOrderByAggregateInput {
@@ -11823,11 +11599,22 @@ input EventsCountOrderByAggregateInput {
   end: SortOrder
   id: SortOrder
   image: SortOrder
+  invitationBillingAddress: SortOrder
+  invitationCustomerName: SortOrder
+  invitationEmail: SortOrder
+  invitationGrandTotalPurchased: SortOrder
+  invitationInvoiceDate: SortOrder
+  invitationOrderNumber: SortOrder
+  invitationPaymentMethod: SortOrder
+  invitationShippingAddress: SortOrder
+  invitationStatus: SortOrder
+  media: SortOrder
   name: SortOrder
   postalcode: SortOrder
   start: SortOrder
   state: SortOrder
   tickets: SortOrder
+  type: SortOrder
 }
 
 input EventsCreateInput {
@@ -11839,11 +11626,22 @@ input EventsCreateInput {
   end: String
   id: BigInt
   image: String
+  invitationBillingAddress: String
+  invitationCustomerName: String
+  invitationEmail: String
+  invitationGrandTotalPurchased: String
+  invitationInvoiceDate: String
+  invitationOrderNumber: String
+  invitationPaymentMethod: String
+  invitationShippingAddress: String
+  invitationStatus: String
+  media: String
   name: String
   postalcode: String
   start: String
   state: String
   tickets: String
+  type: String
 }
 
 input EventsCreateManyInput {
@@ -11855,11 +11653,22 @@ input EventsCreateManyInput {
   end: String
   id: BigInt
   image: String
+  invitationBillingAddress: String
+  invitationCustomerName: String
+  invitationEmail: String
+  invitationGrandTotalPurchased: String
+  invitationInvoiceDate: String
+  invitationOrderNumber: String
+  invitationPaymentMethod: String
+  invitationShippingAddress: String
+  invitationStatus: String
+  media: String
   name: String
   postalcode: String
   start: String
   state: String
   tickets: String
+  type: String
 }
 
 type EventsGroupBy {
@@ -11876,11 +11685,22 @@ type EventsGroupBy {
   end: String
   id: BigInt!
   image: String
+  invitationBillingAddress: String
+  invitationCustomerName: String
+  invitationEmail: String
+  invitationGrandTotalPurchased: String
+  invitationInvoiceDate: String
+  invitationOrderNumber: String
+  invitationPaymentMethod: String
+  invitationShippingAddress: String
+  invitationStatus: String
+  media: String
   name: String
   postalcode: String
   start: String
   state: String
   tickets: String
+  type: String
 }
 
 type EventsMaxAggregate {
@@ -11892,11 +11712,22 @@ type EventsMaxAggregate {
   end: String
   id: BigInt
   image: String
+  invitationBillingAddress: String
+  invitationCustomerName: String
+  invitationEmail: String
+  invitationGrandTotalPurchased: String
+  invitationInvoiceDate: String
+  invitationOrderNumber: String
+  invitationPaymentMethod: String
+  invitationShippingAddress: String
+  invitationStatus: String
+  media: String
   name: String
   postalcode: String
   start: String
   state: String
   tickets: String
+  type: String
 }
 
 input EventsMaxOrderByAggregateInput {
@@ -11908,11 +11739,22 @@ input EventsMaxOrderByAggregateInput {
   end: SortOrder
   id: SortOrder
   image: SortOrder
+  invitationBillingAddress: SortOrder
+  invitationCustomerName: SortOrder
+  invitationEmail: SortOrder
+  invitationGrandTotalPurchased: SortOrder
+  invitationInvoiceDate: SortOrder
+  invitationOrderNumber: SortOrder
+  invitationPaymentMethod: SortOrder
+  invitationShippingAddress: SortOrder
+  invitationStatus: SortOrder
+  media: SortOrder
   name: SortOrder
   postalcode: SortOrder
   start: SortOrder
   state: SortOrder
   tickets: SortOrder
+  type: SortOrder
 }
 
 type EventsMinAggregate {
@@ -11924,11 +11766,22 @@ type EventsMinAggregate {
   end: String
   id: BigInt
   image: String
+  invitationBillingAddress: String
+  invitationCustomerName: String
+  invitationEmail: String
+  invitationGrandTotalPurchased: String
+  invitationInvoiceDate: String
+  invitationOrderNumber: String
+  invitationPaymentMethod: String
+  invitationShippingAddress: String
+  invitationStatus: String
+  media: String
   name: String
   postalcode: String
   start: String
   state: String
   tickets: String
+  type: String
 }
 
 input EventsMinOrderByAggregateInput {
@@ -11940,11 +11793,22 @@ input EventsMinOrderByAggregateInput {
   end: SortOrder
   id: SortOrder
   image: SortOrder
+  invitationBillingAddress: SortOrder
+  invitationCustomerName: SortOrder
+  invitationEmail: SortOrder
+  invitationGrandTotalPurchased: SortOrder
+  invitationInvoiceDate: SortOrder
+  invitationOrderNumber: SortOrder
+  invitationPaymentMethod: SortOrder
+  invitationShippingAddress: SortOrder
+  invitationStatus: SortOrder
+  media: SortOrder
   name: SortOrder
   postalcode: SortOrder
   start: SortOrder
   state: SortOrder
   tickets: SortOrder
+  type: SortOrder
 }
 
 enum EventsOrderByRelevanceFieldEnum {
@@ -11954,11 +11818,22 @@ enum EventsOrderByRelevanceFieldEnum {
   country
   end
   image
+  invitationBillingAddress
+  invitationCustomerName
+  invitationEmail
+  invitationGrandTotalPurchased
+  invitationInvoiceDate
+  invitationOrderNumber
+  invitationPaymentMethod
+  invitationShippingAddress
+  invitationStatus
+  media
   name
   postalcode
   start
   state
   tickets
+  type
 }
 
 input EventsOrderByRelevanceInput {
@@ -11981,11 +11856,22 @@ input EventsOrderByWithAggregationInput {
   end: SortOrder
   id: SortOrder
   image: SortOrder
+  invitationBillingAddress: SortOrder
+  invitationCustomerName: SortOrder
+  invitationEmail: SortOrder
+  invitationGrandTotalPurchased: SortOrder
+  invitationInvoiceDate: SortOrder
+  invitationOrderNumber: SortOrder
+  invitationPaymentMethod: SortOrder
+  invitationShippingAddress: SortOrder
+  invitationStatus: SortOrder
+  media: SortOrder
   name: SortOrder
   postalcode: SortOrder
   start: SortOrder
   state: SortOrder
   tickets: SortOrder
+  type: SortOrder
 }
 
 input EventsOrderByWithRelationAndSearchRelevanceInput {
@@ -11998,11 +11884,22 @@ input EventsOrderByWithRelationAndSearchRelevanceInput {
   end: SortOrder
   id: SortOrder
   image: SortOrder
+  invitationBillingAddress: SortOrder
+  invitationCustomerName: SortOrder
+  invitationEmail: SortOrder
+  invitationGrandTotalPurchased: SortOrder
+  invitationInvoiceDate: SortOrder
+  invitationOrderNumber: SortOrder
+  invitationPaymentMethod: SortOrder
+  invitationShippingAddress: SortOrder
+  invitationStatus: SortOrder
+  media: SortOrder
   name: SortOrder
   postalcode: SortOrder
   start: SortOrder
   state: SortOrder
   tickets: SortOrder
+  type: SortOrder
 }
 
 enum EventsScalarFieldEnum {
@@ -12014,11 +11911,22 @@ enum EventsScalarFieldEnum {
   end
   id
   image
+  invitationBillingAddress
+  invitationCustomerName
+  invitationEmail
+  invitationGrandTotalPurchased
+  invitationInvoiceDate
+  invitationOrderNumber
+  invitationPaymentMethod
+  invitationShippingAddress
+  invitationStatus
+  media
   name
   postalcode
   start
   state
   tickets
+  type
 }
 
 input EventsScalarWhereWithAggregatesInput {
@@ -12033,11 +11941,22 @@ input EventsScalarWhereWithAggregatesInput {
   end: StringNullableWithAggregatesFilter
   id: BigIntWithAggregatesFilter
   image: StringNullableWithAggregatesFilter
+  invitationBillingAddress: StringNullableWithAggregatesFilter
+  invitationCustomerName: StringNullableWithAggregatesFilter
+  invitationEmail: StringNullableWithAggregatesFilter
+  invitationGrandTotalPurchased: StringNullableWithAggregatesFilter
+  invitationInvoiceDate: StringNullableWithAggregatesFilter
+  invitationOrderNumber: StringNullableWithAggregatesFilter
+  invitationPaymentMethod: StringNullableWithAggregatesFilter
+  invitationShippingAddress: StringNullableWithAggregatesFilter
+  invitationStatus: StringNullableWithAggregatesFilter
+  media: StringNullableWithAggregatesFilter
   name: StringNullableWithAggregatesFilter
   postalcode: StringNullableWithAggregatesFilter
   start: StringNullableWithAggregatesFilter
   state: StringNullableWithAggregatesFilter
   tickets: StringNullableWithAggregatesFilter
+  type: StringNullableWithAggregatesFilter
 }
 
 type EventsSumAggregate {
@@ -12057,11 +11976,22 @@ input EventsUpdateInput {
   end: NullableStringFieldUpdateOperationsInput
   id: BigIntFieldUpdateOperationsInput
   image: NullableStringFieldUpdateOperationsInput
+  invitationBillingAddress: NullableStringFieldUpdateOperationsInput
+  invitationCustomerName: NullableStringFieldUpdateOperationsInput
+  invitationEmail: NullableStringFieldUpdateOperationsInput
+  invitationGrandTotalPurchased: NullableStringFieldUpdateOperationsInput
+  invitationInvoiceDate: NullableStringFieldUpdateOperationsInput
+  invitationOrderNumber: NullableStringFieldUpdateOperationsInput
+  invitationPaymentMethod: NullableStringFieldUpdateOperationsInput
+  invitationShippingAddress: NullableStringFieldUpdateOperationsInput
+  invitationStatus: NullableStringFieldUpdateOperationsInput
+  media: NullableStringFieldUpdateOperationsInput
   name: NullableStringFieldUpdateOperationsInput
   postalcode: NullableStringFieldUpdateOperationsInput
   start: NullableStringFieldUpdateOperationsInput
   state: NullableStringFieldUpdateOperationsInput
   tickets: NullableStringFieldUpdateOperationsInput
+  type: NullableStringFieldUpdateOperationsInput
 }
 
 input EventsUpdateManyMutationInput {
@@ -12073,11 +12003,22 @@ input EventsUpdateManyMutationInput {
   end: NullableStringFieldUpdateOperationsInput
   id: BigIntFieldUpdateOperationsInput
   image: NullableStringFieldUpdateOperationsInput
+  invitationBillingAddress: NullableStringFieldUpdateOperationsInput
+  invitationCustomerName: NullableStringFieldUpdateOperationsInput
+  invitationEmail: NullableStringFieldUpdateOperationsInput
+  invitationGrandTotalPurchased: NullableStringFieldUpdateOperationsInput
+  invitationInvoiceDate: NullableStringFieldUpdateOperationsInput
+  invitationOrderNumber: NullableStringFieldUpdateOperationsInput
+  invitationPaymentMethod: NullableStringFieldUpdateOperationsInput
+  invitationShippingAddress: NullableStringFieldUpdateOperationsInput
+  invitationStatus: NullableStringFieldUpdateOperationsInput
+  media: NullableStringFieldUpdateOperationsInput
   name: NullableStringFieldUpdateOperationsInput
   postalcode: NullableStringFieldUpdateOperationsInput
   start: NullableStringFieldUpdateOperationsInput
   state: NullableStringFieldUpdateOperationsInput
   tickets: NullableStringFieldUpdateOperationsInput
+  type: NullableStringFieldUpdateOperationsInput
 }
 
 input EventsWhereInput {
@@ -12092,11 +12033,22 @@ input EventsWhereInput {
   end: StringNullableFilter
   id: BigIntFilter
   image: StringNullableFilter
+  invitationBillingAddress: StringNullableFilter
+  invitationCustomerName: StringNullableFilter
+  invitationEmail: StringNullableFilter
+  invitationGrandTotalPurchased: StringNullableFilter
+  invitationInvoiceDate: StringNullableFilter
+  invitationOrderNumber: StringNullableFilter
+  invitationPaymentMethod: StringNullableFilter
+  invitationShippingAddress: StringNullableFilter
+  invitationStatus: StringNullableFilter
+  media: StringNullableFilter
   name: StringNullableFilter
   postalcode: StringNullableFilter
   start: StringNullableFilter
   state: StringNullableFilter
   tickets: StringNullableFilter
+  type: StringNullableFilter
 }
 
 input EventsWhereUniqueInput {
@@ -13377,317 +13329,6 @@ input InternalizationWhereInput {
 }
 
 input InternalizationWhereUniqueInput {
-  id: BigInt
-}
-
-type Invitations {
-  billingAddress: String
-  content: String
-  created_at: DateTime
-  email: String
-  grandTotalPurchased: String
-  id: BigInt!
-  invoiceDate: DateTime
-  media: String
-  orderNumber: String
-  paymentMethod: String
-  shippingAddress: String
-  status: String
-}
-
-type InvitationsAvgAggregate {
-  id: Float
-}
-
-input InvitationsAvgOrderByAggregateInput {
-  id: SortOrder
-}
-
-type InvitationsCountAggregate {
-  _all: Int!
-  billingAddress: Int!
-  content: Int!
-  created_at: Int!
-  email: Int!
-  grandTotalPurchased: Int!
-  id: Int!
-  invoiceDate: Int!
-  media: Int!
-  orderNumber: Int!
-  paymentMethod: Int!
-  shippingAddress: Int!
-  status: Int!
-}
-
-input InvitationsCountOrderByAggregateInput {
-  billingAddress: SortOrder
-  content: SortOrder
-  created_at: SortOrder
-  email: SortOrder
-  grandTotalPurchased: SortOrder
-  id: SortOrder
-  invoiceDate: SortOrder
-  media: SortOrder
-  orderNumber: SortOrder
-  paymentMethod: SortOrder
-  shippingAddress: SortOrder
-  status: SortOrder
-}
-
-input InvitationsCreateInput {
-  billingAddress: String
-  content: String
-  created_at: DateTime
-  email: String
-  grandTotalPurchased: String
-  id: BigInt
-  invoiceDate: DateTime
-  media: String
-  orderNumber: String
-  paymentMethod: String
-  shippingAddress: String
-  status: String
-}
-
-input InvitationsCreateManyInput {
-  billingAddress: String
-  content: String
-  created_at: DateTime
-  email: String
-  grandTotalPurchased: String
-  id: BigInt
-  invoiceDate: DateTime
-  media: String
-  orderNumber: String
-  paymentMethod: String
-  shippingAddress: String
-  status: String
-}
-
-type InvitationsGroupBy {
-  _avg: InvitationsAvgAggregate
-  _count: InvitationsCountAggregate
-  _max: InvitationsMaxAggregate
-  _min: InvitationsMinAggregate
-  _sum: InvitationsSumAggregate
-  billingAddress: String
-  content: String
-  created_at: DateTime
-  email: String
-  grandTotalPurchased: String
-  id: BigInt!
-  invoiceDate: DateTime
-  media: String
-  orderNumber: String
-  paymentMethod: String
-  shippingAddress: String
-  status: String
-}
-
-type InvitationsMaxAggregate {
-  billingAddress: String
-  content: String
-  created_at: DateTime
-  email: String
-  grandTotalPurchased: String
-  id: BigInt
-  invoiceDate: DateTime
-  media: String
-  orderNumber: String
-  paymentMethod: String
-  shippingAddress: String
-  status: String
-}
-
-input InvitationsMaxOrderByAggregateInput {
-  billingAddress: SortOrder
-  content: SortOrder
-  created_at: SortOrder
-  email: SortOrder
-  grandTotalPurchased: SortOrder
-  id: SortOrder
-  invoiceDate: SortOrder
-  media: SortOrder
-  orderNumber: SortOrder
-  paymentMethod: SortOrder
-  shippingAddress: SortOrder
-  status: SortOrder
-}
-
-type InvitationsMinAggregate {
-  billingAddress: String
-  content: String
-  created_at: DateTime
-  email: String
-  grandTotalPurchased: String
-  id: BigInt
-  invoiceDate: DateTime
-  media: String
-  orderNumber: String
-  paymentMethod: String
-  shippingAddress: String
-  status: String
-}
-
-input InvitationsMinOrderByAggregateInput {
-  billingAddress: SortOrder
-  content: SortOrder
-  created_at: SortOrder
-  email: SortOrder
-  grandTotalPurchased: SortOrder
-  id: SortOrder
-  invoiceDate: SortOrder
-  media: SortOrder
-  orderNumber: SortOrder
-  paymentMethod: SortOrder
-  shippingAddress: SortOrder
-  status: SortOrder
-}
-
-enum InvitationsOrderByRelevanceFieldEnum {
-  billingAddress
-  content
-  email
-  grandTotalPurchased
-  media
-  orderNumber
-  paymentMethod
-  shippingAddress
-  status
-}
-
-input InvitationsOrderByRelevanceInput {
-  fields: [InvitationsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
-input InvitationsOrderByWithAggregationInput {
-  _avg: InvitationsAvgOrderByAggregateInput
-  _count: InvitationsCountOrderByAggregateInput
-  _max: InvitationsMaxOrderByAggregateInput
-  _min: InvitationsMinOrderByAggregateInput
-  _sum: InvitationsSumOrderByAggregateInput
-  billingAddress: SortOrder
-  content: SortOrder
-  created_at: SortOrder
-  email: SortOrder
-  grandTotalPurchased: SortOrder
-  id: SortOrder
-  invoiceDate: SortOrder
-  media: SortOrder
-  orderNumber: SortOrder
-  paymentMethod: SortOrder
-  shippingAddress: SortOrder
-  status: SortOrder
-}
-
-input InvitationsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: InvitationsOrderByRelevanceInput
-  billingAddress: SortOrder
-  content: SortOrder
-  created_at: SortOrder
-  email: SortOrder
-  grandTotalPurchased: SortOrder
-  id: SortOrder
-  invoiceDate: SortOrder
-  media: SortOrder
-  orderNumber: SortOrder
-  paymentMethod: SortOrder
-  shippingAddress: SortOrder
-  status: SortOrder
-}
-
-enum InvitationsScalarFieldEnum {
-  billingAddress
-  content
-  created_at
-  email
-  grandTotalPurchased
-  id
-  invoiceDate
-  media
-  orderNumber
-  paymentMethod
-  shippingAddress
-  status
-}
-
-input InvitationsScalarWhereWithAggregatesInput {
-  AND: [InvitationsScalarWhereWithAggregatesInput!]
-  NOT: [InvitationsScalarWhereWithAggregatesInput!]
-  OR: [InvitationsScalarWhereWithAggregatesInput!]
-  billingAddress: StringNullableWithAggregatesFilter
-  content: StringNullableWithAggregatesFilter
-  created_at: DateTimeNullableWithAggregatesFilter
-  email: StringNullableWithAggregatesFilter
-  grandTotalPurchased: StringNullableWithAggregatesFilter
-  id: BigIntWithAggregatesFilter
-  invoiceDate: DateTimeNullableWithAggregatesFilter
-  media: StringNullableWithAggregatesFilter
-  orderNumber: StringNullableWithAggregatesFilter
-  paymentMethod: StringNullableWithAggregatesFilter
-  shippingAddress: StringNullableWithAggregatesFilter
-  status: StringNullableWithAggregatesFilter
-}
-
-type InvitationsSumAggregate {
-  id: BigInt
-}
-
-input InvitationsSumOrderByAggregateInput {
-  id: SortOrder
-}
-
-input InvitationsUpdateInput {
-  billingAddress: NullableStringFieldUpdateOperationsInput
-  content: NullableStringFieldUpdateOperationsInput
-  created_at: NullableDateTimeFieldUpdateOperationsInput
-  email: NullableStringFieldUpdateOperationsInput
-  grandTotalPurchased: NullableStringFieldUpdateOperationsInput
-  id: BigIntFieldUpdateOperationsInput
-  invoiceDate: NullableDateTimeFieldUpdateOperationsInput
-  media: NullableStringFieldUpdateOperationsInput
-  orderNumber: NullableStringFieldUpdateOperationsInput
-  paymentMethod: NullableStringFieldUpdateOperationsInput
-  shippingAddress: NullableStringFieldUpdateOperationsInput
-  status: NullableStringFieldUpdateOperationsInput
-}
-
-input InvitationsUpdateManyMutationInput {
-  billingAddress: NullableStringFieldUpdateOperationsInput
-  content: NullableStringFieldUpdateOperationsInput
-  created_at: NullableDateTimeFieldUpdateOperationsInput
-  email: NullableStringFieldUpdateOperationsInput
-  grandTotalPurchased: NullableStringFieldUpdateOperationsInput
-  id: BigIntFieldUpdateOperationsInput
-  invoiceDate: NullableDateTimeFieldUpdateOperationsInput
-  media: NullableStringFieldUpdateOperationsInput
-  orderNumber: NullableStringFieldUpdateOperationsInput
-  paymentMethod: NullableStringFieldUpdateOperationsInput
-  shippingAddress: NullableStringFieldUpdateOperationsInput
-  status: NullableStringFieldUpdateOperationsInput
-}
-
-input InvitationsWhereInput {
-  AND: [InvitationsWhereInput!]
-  NOT: [InvitationsWhereInput!]
-  OR: [InvitationsWhereInput!]
-  billingAddress: StringNullableFilter
-  content: StringNullableFilter
-  created_at: DateTimeNullableFilter
-  email: StringNullableFilter
-  grandTotalPurchased: StringNullableFilter
-  id: BigIntFilter
-  invoiceDate: DateTimeNullableFilter
-  media: StringNullableFilter
-  orderNumber: StringNullableFilter
-  paymentMethod: StringNullableFilter
-  shippingAddress: StringNullableFilter
-  status: StringNullableFilter
-}
-
-input InvitationsWhereUniqueInput {
   id: BigInt
 }
 
@@ -16748,7 +16389,6 @@ type Mutation {
   createManyCustomizations(data: [CustomizationsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyDashboards(data: [DashboardsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyDeepdive(data: [DeepdiveCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyDigiboard(data: [DigiboardCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyDiscounts(data: [DiscountsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyEmails(data: [EmailsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyEndofshift(data: [EndofshiftCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
@@ -16758,7 +16398,6 @@ type Mutation {
   createManyImportm(data: [ImportmCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyIntegrations(data: [IntegrationsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyInternalization(data: [InternalizationCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyInvitations(data: [InvitationsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyInvoices(data: [InvoicesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyLeads(data: [LeadsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createManyLogIn(data: [LogInCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
@@ -16842,7 +16481,6 @@ type Mutation {
   createOneCustomizations(data: CustomizationsCreateInput!): Customizations!
   createOneDashboards(data: DashboardsCreateInput!): Dashboards!
   createOneDeepdive(data: DeepdiveCreateInput!): Deepdive!
-  createOneDigiboard(data: DigiboardCreateInput!): Digiboard!
   createOneDiscounts(data: DiscountsCreateInput!): Discounts!
   createOneEmails(data: EmailsCreateInput!): Emails!
   createOneEndofshift(data: EndofshiftCreateInput!): Endofshift!
@@ -16852,7 +16490,6 @@ type Mutation {
   createOneImportm(data: ImportmCreateInput!): Importm!
   createOneIntegrations(data: IntegrationsCreateInput!): Integrations!
   createOneInternalization(data: InternalizationCreateInput!): Internalization!
-  createOneInvitations(data: InvitationsCreateInput!): Invitations!
   createOneInvoices(data: InvoicesCreateInput!): Invoices!
   createOneLeads(data: LeadsCreateInput!): Leads!
   createOneLogIn(data: LogInCreateInput!): LogIn!
@@ -16936,7 +16573,6 @@ type Mutation {
   deleteManyCustomizations(where: CustomizationsWhereInput): AffectedRowsOutput!
   deleteManyDashboards(where: DashboardsWhereInput): AffectedRowsOutput!
   deleteManyDeepdive(where: DeepdiveWhereInput): AffectedRowsOutput!
-  deleteManyDigiboard(where: DigiboardWhereInput): AffectedRowsOutput!
   deleteManyDiscounts(where: DiscountsWhereInput): AffectedRowsOutput!
   deleteManyEmails(where: EmailsWhereInput): AffectedRowsOutput!
   deleteManyEndofshift(where: EndofshiftWhereInput): AffectedRowsOutput!
@@ -16946,7 +16582,6 @@ type Mutation {
   deleteManyImportm(where: ImportmWhereInput): AffectedRowsOutput!
   deleteManyIntegrations(where: IntegrationsWhereInput): AffectedRowsOutput!
   deleteManyInternalization(where: InternalizationWhereInput): AffectedRowsOutput!
-  deleteManyInvitations(where: InvitationsWhereInput): AffectedRowsOutput!
   deleteManyInvoices(where: InvoicesWhereInput): AffectedRowsOutput!
   deleteManyLeads(where: LeadsWhereInput): AffectedRowsOutput!
   deleteManyLogIn(where: LogInWhereInput): AffectedRowsOutput!
@@ -17030,7 +16665,6 @@ type Mutation {
   deleteOneCustomizations(where: CustomizationsWhereUniqueInput!): Customizations
   deleteOneDashboards(where: DashboardsWhereUniqueInput!): Dashboards
   deleteOneDeepdive(where: DeepdiveWhereUniqueInput!): Deepdive
-  deleteOneDigiboard(where: DigiboardWhereUniqueInput!): Digiboard
   deleteOneDiscounts(where: DiscountsWhereUniqueInput!): Discounts
   deleteOneEmails(where: EmailsWhereUniqueInput!): Emails
   deleteOneEndofshift(where: EndofshiftWhereUniqueInput!): Endofshift
@@ -17040,7 +16674,6 @@ type Mutation {
   deleteOneImportm(where: ImportmWhereUniqueInput!): Importm
   deleteOneIntegrations(where: IntegrationsWhereUniqueInput!): Integrations
   deleteOneInternalization(where: InternalizationWhereUniqueInput!): Internalization
-  deleteOneInvitations(where: InvitationsWhereUniqueInput!): Invitations
   deleteOneInvoices(where: InvoicesWhereUniqueInput!): Invoices
   deleteOneLeads(where: LeadsWhereUniqueInput!): Leads
   deleteOneLogIn(where: LogInWhereUniqueInput!): LogIn
@@ -17124,7 +16757,6 @@ type Mutation {
   updateManyCustomizations(data: CustomizationsUpdateManyMutationInput!, where: CustomizationsWhereInput): AffectedRowsOutput!
   updateManyDashboards(data: DashboardsUpdateManyMutationInput!, where: DashboardsWhereInput): AffectedRowsOutput!
   updateManyDeepdive(data: DeepdiveUpdateManyMutationInput!, where: DeepdiveWhereInput): AffectedRowsOutput!
-  updateManyDigiboard(data: DigiboardUpdateManyMutationInput!, where: DigiboardWhereInput): AffectedRowsOutput!
   updateManyDiscounts(data: DiscountsUpdateManyMutationInput!, where: DiscountsWhereInput): AffectedRowsOutput!
   updateManyEmails(data: EmailsUpdateManyMutationInput!, where: EmailsWhereInput): AffectedRowsOutput!
   updateManyEndofshift(data: EndofshiftUpdateManyMutationInput!, where: EndofshiftWhereInput): AffectedRowsOutput!
@@ -17134,7 +16766,6 @@ type Mutation {
   updateManyImportm(data: ImportmUpdateManyMutationInput!, where: ImportmWhereInput): AffectedRowsOutput!
   updateManyIntegrations(data: IntegrationsUpdateManyMutationInput!, where: IntegrationsWhereInput): AffectedRowsOutput!
   updateManyInternalization(data: InternalizationUpdateManyMutationInput!, where: InternalizationWhereInput): AffectedRowsOutput!
-  updateManyInvitations(data: InvitationsUpdateManyMutationInput!, where: InvitationsWhereInput): AffectedRowsOutput!
   updateManyInvoices(data: InvoicesUpdateManyMutationInput!, where: InvoicesWhereInput): AffectedRowsOutput!
   updateManyLeads(data: LeadsUpdateManyMutationInput!, where: LeadsWhereInput): AffectedRowsOutput!
   updateManyLogIn(data: LogInUpdateManyMutationInput!, where: LogInWhereInput): AffectedRowsOutput!
@@ -17218,7 +16849,6 @@ type Mutation {
   updateOneCustomizations(data: CustomizationsUpdateInput!, where: CustomizationsWhereUniqueInput!): Customizations
   updateOneDashboards(data: DashboardsUpdateInput!, where: DashboardsWhereUniqueInput!): Dashboards
   updateOneDeepdive(data: DeepdiveUpdateInput!, where: DeepdiveWhereUniqueInput!): Deepdive
-  updateOneDigiboard(data: DigiboardUpdateInput!, where: DigiboardWhereUniqueInput!): Digiboard
   updateOneDiscounts(data: DiscountsUpdateInput!, where: DiscountsWhereUniqueInput!): Discounts
   updateOneEmails(data: EmailsUpdateInput!, where: EmailsWhereUniqueInput!): Emails
   updateOneEndofshift(data: EndofshiftUpdateInput!, where: EndofshiftWhereUniqueInput!): Endofshift
@@ -17228,7 +16858,6 @@ type Mutation {
   updateOneImportm(data: ImportmUpdateInput!, where: ImportmWhereUniqueInput!): Importm
   updateOneIntegrations(data: IntegrationsUpdateInput!, where: IntegrationsWhereUniqueInput!): Integrations
   updateOneInternalization(data: InternalizationUpdateInput!, where: InternalizationWhereUniqueInput!): Internalization
-  updateOneInvitations(data: InvitationsUpdateInput!, where: InvitationsWhereUniqueInput!): Invitations
   updateOneInvoices(data: InvoicesUpdateInput!, where: InvoicesWhereUniqueInput!): Invoices
   updateOneLeads(data: LeadsUpdateInput!, where: LeadsWhereUniqueInput!): Leads
   updateOneLogIn(data: LogInUpdateInput!, where: LogInWhereUniqueInput!): LogIn
@@ -17312,7 +16941,6 @@ type Mutation {
   upsertOneCustomizations(create: CustomizationsCreateInput!, update: CustomizationsUpdateInput!, where: CustomizationsWhereUniqueInput!): Customizations!
   upsertOneDashboards(create: DashboardsCreateInput!, update: DashboardsUpdateInput!, where: DashboardsWhereUniqueInput!): Dashboards!
   upsertOneDeepdive(create: DeepdiveCreateInput!, update: DeepdiveUpdateInput!, where: DeepdiveWhereUniqueInput!): Deepdive!
-  upsertOneDigiboard(create: DigiboardCreateInput!, update: DigiboardUpdateInput!, where: DigiboardWhereUniqueInput!): Digiboard!
   upsertOneDiscounts(create: DiscountsCreateInput!, update: DiscountsUpdateInput!, where: DiscountsWhereUniqueInput!): Discounts!
   upsertOneEmails(create: EmailsCreateInput!, update: EmailsUpdateInput!, where: EmailsWhereUniqueInput!): Emails!
   upsertOneEndofshift(create: EndofshiftCreateInput!, update: EndofshiftUpdateInput!, where: EndofshiftWhereUniqueInput!): Endofshift!
@@ -17322,7 +16950,6 @@ type Mutation {
   upsertOneImportm(create: ImportmCreateInput!, update: ImportmUpdateInput!, where: ImportmWhereUniqueInput!): Importm!
   upsertOneIntegrations(create: IntegrationsCreateInput!, update: IntegrationsUpdateInput!, where: IntegrationsWhereUniqueInput!): Integrations!
   upsertOneInternalization(create: InternalizationCreateInput!, update: InternalizationUpdateInput!, where: InternalizationWhereUniqueInput!): Internalization!
-  upsertOneInvitations(create: InvitationsCreateInput!, update: InvitationsUpdateInput!, where: InvitationsWhereUniqueInput!): Invitations!
   upsertOneInvoices(create: InvoicesCreateInput!, update: InvoicesUpdateInput!, where: InvoicesWhereUniqueInput!): Invoices!
   upsertOneLeads(create: LeadsCreateInput!, update: LeadsUpdateInput!, where: LeadsWhereUniqueInput!): Leads!
   upsertOneLogIn(create: LogInCreateInput!, update: LogInUpdateInput!, where: LogInWhereUniqueInput!): LogIn!
@@ -17447,17 +17074,6 @@ input NestedBoolNullableWithAggregatesFilter {
   not: NestedBoolNullableWithAggregatesFilter
 }
 
-input NestedDateTimeFilter {
-  equals: DateTime
-  gt: DateTime
-  gte: DateTime
-  in: [DateTime!]
-  lt: DateTime
-  lte: DateTime
-  not: NestedDateTimeFilter
-  notIn: [DateTime!]
-}
-
 input NestedDateTimeNullableFilter {
   equals: DateTime
   gt: DateTime
@@ -17480,20 +17096,6 @@ input NestedDateTimeNullableWithAggregatesFilter {
   lt: DateTime
   lte: DateTime
   not: NestedDateTimeNullableWithAggregatesFilter
-  notIn: [DateTime!]
-}
-
-input NestedDateTimeWithAggregatesFilter {
-  _count: NestedIntFilter
-  _max: NestedDateTimeFilter
-  _min: NestedDateTimeFilter
-  equals: DateTime
-  gt: DateTime
-  gte: DateTime
-  in: [DateTime!]
-  lt: DateTime
-  lte: DateTime
-  not: NestedDateTimeWithAggregatesFilter
   notIn: [DateTime!]
 }
 
@@ -23390,7 +22992,6 @@ type Query {
   aggregateCustomizations(cursor: CustomizationsWhereUniqueInput, orderBy: [CustomizationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CustomizationsWhereInput): AggregateCustomizations!
   aggregateDashboards(cursor: DashboardsWhereUniqueInput, orderBy: [DashboardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardsWhereInput): AggregateDashboards!
   aggregateDeepdive(cursor: DeepdiveWhereUniqueInput, orderBy: [DeepdiveOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DeepdiveWhereInput): AggregateDeepdive!
-  aggregateDigiboard(cursor: DigiboardWhereUniqueInput, orderBy: [DigiboardOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DigiboardWhereInput): AggregateDigiboard!
   aggregateDiscounts(cursor: DiscountsWhereUniqueInput, orderBy: [DiscountsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DiscountsWhereInput): AggregateDiscounts!
   aggregateEmails(cursor: EmailsWhereUniqueInput, orderBy: [EmailsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EmailsWhereInput): AggregateEmails!
   aggregateEndofshift(cursor: EndofshiftWhereUniqueInput, orderBy: [EndofshiftOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EndofshiftWhereInput): AggregateEndofshift!
@@ -23400,7 +23001,6 @@ type Query {
   aggregateImportm(cursor: ImportmWhereUniqueInput, orderBy: [ImportmOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ImportmWhereInput): AggregateImportm!
   aggregateIntegrations(cursor: IntegrationsWhereUniqueInput, orderBy: [IntegrationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: IntegrationsWhereInput): AggregateIntegrations!
   aggregateInternalization(cursor: InternalizationWhereUniqueInput, orderBy: [InternalizationOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InternalizationWhereInput): AggregateInternalization!
-  aggregateInvitations(cursor: InvitationsWhereUniqueInput, orderBy: [InvitationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvitationsWhereInput): AggregateInvitations!
   aggregateInvoices(cursor: InvoicesWhereUniqueInput, orderBy: [InvoicesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvoicesWhereInput): AggregateInvoices!
   aggregateLeads(cursor: LeadsWhereUniqueInput, orderBy: [LeadsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LeadsWhereInput): AggregateLeads!
   aggregateLogIn(cursor: LogInWhereUniqueInput, orderBy: [LogInOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LogInWhereInput): AggregateLogIn!
@@ -23468,8 +23068,6 @@ type Query {
   customer_groups(cursor: Customer_groupWhereUniqueInput, distinct: [Customer_groupScalarFieldEnum!], orderBy: [Customer_groupOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Customer_groupWhereInput): [Customer_group!]!
   deepdive(where: DeepdiveWhereUniqueInput!): Deepdive
   deepdives(cursor: DeepdiveWhereUniqueInput, distinct: [DeepdiveScalarFieldEnum!], orderBy: [DeepdiveOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DeepdiveWhereInput): [Deepdive!]!
-  digiboard(where: DigiboardWhereUniqueInput!): Digiboard
-  digiboards(cursor: DigiboardWhereUniqueInput, distinct: [DigiboardScalarFieldEnum!], orderBy: [DigiboardOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DigiboardWhereInput): [Digiboard!]!
   endofshift(where: EndofshiftWhereUniqueInput!): Endofshift
   endofshifts(cursor: EndofshiftWhereUniqueInput, distinct: [EndofshiftScalarFieldEnum!], orderBy: [EndofshiftOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EndofshiftWhereInput): [Endofshift!]!
   findFirstAccounts(cursor: AccountsWhereUniqueInput, distinct: [AccountsScalarFieldEnum!], orderBy: [AccountsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AccountsWhereInput): Accounts
@@ -23500,7 +23098,6 @@ type Query {
   findFirstCustomizations(cursor: CustomizationsWhereUniqueInput, distinct: [CustomizationsScalarFieldEnum!], orderBy: [CustomizationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CustomizationsWhereInput): Customizations
   findFirstDashboards(cursor: DashboardsWhereUniqueInput, distinct: [DashboardsScalarFieldEnum!], orderBy: [DashboardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardsWhereInput): Dashboards
   findFirstDeepdive(cursor: DeepdiveWhereUniqueInput, distinct: [DeepdiveScalarFieldEnum!], orderBy: [DeepdiveOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DeepdiveWhereInput): Deepdive
-  findFirstDigiboard(cursor: DigiboardWhereUniqueInput, distinct: [DigiboardScalarFieldEnum!], orderBy: [DigiboardOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DigiboardWhereInput): Digiboard
   findFirstDiscounts(cursor: DiscountsWhereUniqueInput, distinct: [DiscountsScalarFieldEnum!], orderBy: [DiscountsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DiscountsWhereInput): Discounts
   findFirstEmails(cursor: EmailsWhereUniqueInput, distinct: [EmailsScalarFieldEnum!], orderBy: [EmailsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EmailsWhereInput): Emails
   findFirstEndofshift(cursor: EndofshiftWhereUniqueInput, distinct: [EndofshiftScalarFieldEnum!], orderBy: [EndofshiftOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EndofshiftWhereInput): Endofshift
@@ -23510,7 +23107,6 @@ type Query {
   findFirstImportm(cursor: ImportmWhereUniqueInput, distinct: [ImportmScalarFieldEnum!], orderBy: [ImportmOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ImportmWhereInput): Importm
   findFirstIntegrations(cursor: IntegrationsWhereUniqueInput, distinct: [IntegrationsScalarFieldEnum!], orderBy: [IntegrationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: IntegrationsWhereInput): Integrations
   findFirstInternalization(cursor: InternalizationWhereUniqueInput, distinct: [InternalizationScalarFieldEnum!], orderBy: [InternalizationOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InternalizationWhereInput): Internalization
-  findFirstInvitations(cursor: InvitationsWhereUniqueInput, distinct: [InvitationsScalarFieldEnum!], orderBy: [InvitationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvitationsWhereInput): Invitations
   findFirstInvoices(cursor: InvoicesWhereUniqueInput, distinct: [InvoicesScalarFieldEnum!], orderBy: [InvoicesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvoicesWhereInput): Invoices
   findFirstLeads(cursor: LeadsWhereUniqueInput, distinct: [LeadsScalarFieldEnum!], orderBy: [LeadsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LeadsWhereInput): Leads
   findFirstLogIn(cursor: LogInWhereUniqueInput, distinct: [LogInScalarFieldEnum!], orderBy: [LogInOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LogInWhereInput): LogIn
@@ -23593,7 +23189,6 @@ type Query {
   findManyEvents(cursor: EventsWhereUniqueInput, distinct: [EventsScalarFieldEnum!], orderBy: [EventsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EventsWhereInput): [Events!]!
   findManyFullfillments(cursor: FullfillmentsWhereUniqueInput, distinct: [FullfillmentsScalarFieldEnum!], orderBy: [FullfillmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): [Fullfillments!]!
   findManyIntegrations(cursor: IntegrationsWhereUniqueInput, distinct: [IntegrationsScalarFieldEnum!], orderBy: [IntegrationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: IntegrationsWhereInput): [Integrations!]!
-  findManyInvitations(cursor: InvitationsWhereUniqueInput, distinct: [InvitationsScalarFieldEnum!], orderBy: [InvitationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvitationsWhereInput): [Invitations!]!
   findManyInvoices(cursor: InvoicesWhereUniqueInput, distinct: [InvoicesScalarFieldEnum!], orderBy: [InvoicesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvoicesWhereInput): [Invoices!]!
   findManyLeads(cursor: LeadsWhereUniqueInput, distinct: [LeadsScalarFieldEnum!], orderBy: [LeadsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LeadsWhereInput): [Leads!]!
   findManyMessages(cursor: MessagesWhereUniqueInput, distinct: [MessagesScalarFieldEnum!], orderBy: [MessagesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: MessagesWhereInput): [Messages!]!
@@ -23663,7 +23258,6 @@ type Query {
   findUniqueEvents(where: EventsWhereUniqueInput!): Events
   findUniqueFullfillments(where: FullfillmentsWhereUniqueInput!): Fullfillments
   findUniqueIntegrations(where: IntegrationsWhereUniqueInput!): Integrations
-  findUniqueInvitations(where: InvitationsWhereUniqueInput!): Invitations
   findUniqueInvoices(where: InvoicesWhereUniqueInput!): Invoices
   findUniqueLeads(where: LeadsWhereUniqueInput!): Leads
   findUniqueMessages(where: MessagesWhereUniqueInput!): Messages
@@ -23736,7 +23330,6 @@ type Query {
   groupByCustomizations(by: [CustomizationsScalarFieldEnum!]!, having: CustomizationsScalarWhereWithAggregatesInput, orderBy: [CustomizationsOrderByWithAggregationInput!], skip: Int, take: Int, where: CustomizationsWhereInput): [CustomizationsGroupBy!]!
   groupByDashboards(by: [DashboardsScalarFieldEnum!]!, having: DashboardsScalarWhereWithAggregatesInput, orderBy: [DashboardsOrderByWithAggregationInput!], skip: Int, take: Int, where: DashboardsWhereInput): [DashboardsGroupBy!]!
   groupByDeepdive(by: [DeepdiveScalarFieldEnum!]!, having: DeepdiveScalarWhereWithAggregatesInput, orderBy: [DeepdiveOrderByWithAggregationInput!], skip: Int, take: Int, where: DeepdiveWhereInput): [DeepdiveGroupBy!]!
-  groupByDigiboard(by: [DigiboardScalarFieldEnum!]!, having: DigiboardScalarWhereWithAggregatesInput, orderBy: [DigiboardOrderByWithAggregationInput!], skip: Int, take: Int, where: DigiboardWhereInput): [DigiboardGroupBy!]!
   groupByDiscounts(by: [DiscountsScalarFieldEnum!]!, having: DiscountsScalarWhereWithAggregatesInput, orderBy: [DiscountsOrderByWithAggregationInput!], skip: Int, take: Int, where: DiscountsWhereInput): [DiscountsGroupBy!]!
   groupByEmails(by: [EmailsScalarFieldEnum!]!, having: EmailsScalarWhereWithAggregatesInput, orderBy: [EmailsOrderByWithAggregationInput!], skip: Int, take: Int, where: EmailsWhereInput): [EmailsGroupBy!]!
   groupByEndofshift(by: [EndofshiftScalarFieldEnum!]!, having: EndofshiftScalarWhereWithAggregatesInput, orderBy: [EndofshiftOrderByWithAggregationInput!], skip: Int, take: Int, where: EndofshiftWhereInput): [EndofshiftGroupBy!]!
@@ -23746,7 +23339,6 @@ type Query {
   groupByImportm(by: [ImportmScalarFieldEnum!]!, having: ImportmScalarWhereWithAggregatesInput, orderBy: [ImportmOrderByWithAggregationInput!], skip: Int, take: Int, where: ImportmWhereInput): [ImportmGroupBy!]!
   groupByIntegrations(by: [IntegrationsScalarFieldEnum!]!, having: IntegrationsScalarWhereWithAggregatesInput, orderBy: [IntegrationsOrderByWithAggregationInput!], skip: Int, take: Int, where: IntegrationsWhereInput): [IntegrationsGroupBy!]!
   groupByInternalization(by: [InternalizationScalarFieldEnum!]!, having: InternalizationScalarWhereWithAggregatesInput, orderBy: [InternalizationOrderByWithAggregationInput!], skip: Int, take: Int, where: InternalizationWhereInput): [InternalizationGroupBy!]!
-  groupByInvitations(by: [InvitationsScalarFieldEnum!]!, having: InvitationsScalarWhereWithAggregatesInput, orderBy: [InvitationsOrderByWithAggregationInput!], skip: Int, take: Int, where: InvitationsWhereInput): [InvitationsGroupBy!]!
   groupByInvoices(by: [InvoicesScalarFieldEnum!]!, having: InvoicesScalarWhereWithAggregatesInput, orderBy: [InvoicesOrderByWithAggregationInput!], skip: Int, take: Int, where: InvoicesWhereInput): [InvoicesGroupBy!]!
   groupByLeads(by: [LeadsScalarFieldEnum!]!, having: LeadsScalarWhereWithAggregatesInput, orderBy: [LeadsOrderByWithAggregationInput!], skip: Int, take: Int, where: LeadsWhereInput): [LeadsGroupBy!]!
   groupByLogIn(by: [LogInScalarFieldEnum!]!, having: LogInScalarWhereWithAggregatesInput, orderBy: [LogInOrderByWithAggregationInput!], skip: Int, take: Int, where: LogInWhereInput): [LogInGroupBy!]!

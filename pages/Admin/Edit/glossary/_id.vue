@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 <template>
     <div>
-        <form v-for="glossary in findManyGlossaries" :key="glossary.id" @submit.prevent="addGlossary">
+        <form v-for="glossary in glossaries" :key="glossary.id" @submit.prevent="addGlossary">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
@@ -94,7 +94,7 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyGlossaries from "~/graphql/queries/content/glossaries";
+  import glossaries from "~/graphql/generated/queries/glossaries";
 
   const DELETE_GLOSSARY = gql `
     mutation ($name:String!,$content:String!,$image:String!){
@@ -135,7 +135,7 @@ export default {
         },
         refetchQueries: [
           {
-            query: findManyGlossaries
+            query: glossaries
           }       
           
         ]
@@ -151,7 +151,7 @@ export default {
         },
         refetchQueries: [
           {
-            query: findManyGlossaries
+            query: glossaries
           }       
           
         ]
@@ -162,8 +162,8 @@ export default {
     }
   },
   apollo: {
-    findManyGlossaries: {
-      query: findManyGlossaries,
+    glossaries: {
+      query: glossaries,
       prefetch: ({ route }) => ({ id: route.params.id }),
       variables() {
         return { id: this.$route.params.id }

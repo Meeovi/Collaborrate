@@ -52,7 +52,7 @@
 <script>
 /* eslint-disable camelcase */
 import gql from "graphql-tag";
-import findManyRoles from "~/graphql/queries/system/roles";
+import findManyRoles from "~/graphql/generated/queries/findManyRoles";
 
 const DELETE_ROLE = gql`
 mutation ($role_name:String!,$content:String!){

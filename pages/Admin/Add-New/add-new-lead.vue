@@ -245,16 +245,6 @@
                               </td>
                             </tr>
                             <tr>
-                              <td style="text-align: right;">Campaign</td>
-                              <td>
-                                <select id="campaign" v-model="campaign">
-                                  <option v-for="campaign in findManyCampaigns" :key="campaign.id" :value="campaign">
-                                    {{ campaign.name }}
-                                  </option>
-                                </select>
-                              </td>
-                            </tr>
-                            <tr>
                               <td style="text-align: right;">Lead Source</td>
                               <td>
                                 <select id="leadSource" v-model="lead_source">
@@ -309,16 +299,16 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyLeads from "~/graphql/queries/customers/leads";
-  import findManyAccounts from "~/graphql/queries/customers/accounts";
-  import findManyUsers from '~/graphql/queries/system/users'
-  import findManyCities from '~/graphql/queries/shop/cities'
-  import findManyCountries from '~/graphql/queries/shop/countries'
-  import findManyStates from '~/graphql/queries/shop/states'
-  import findManyCampaigns from '~/graphql/queries/marketing/campaigns'
+  import findManyLeads from "~/graphql/generated/queries/findManyLeads";
+  import findManyAccounts from "~/graphql/generated/queries/findManyAccounts";
+  import findManyUsers from '~/graphql/generated/queries/findManyUsers'
+  import findManyCities from '~/graphql/generated/queries/findManyCities'
+  import findManyCountries from '~/graphql/generated/queries/findManyCountries'
+  import findManyStates from '~/graphql/generated/queries/findManyStates'
+  
 
   /* eslint-disable camelcase */
-  const ADD_LEADS = gql `
+  const ADD_LEADS = gql`
     mutation ($prefix: String!, $account_name: String!, $address: String!, $address: String!, $city: String!, $country: String!, $postalcode: String!, $campaign: String!, $customer_name: String!, $description: String!, $department: String!, $email: String!, $fax: String!, $first_name: String!, $last_name: String!, $job_title: String!, $lead_source: String!, $lead_source_description: String!, $mobile: String!, $status: String!, $status_description: String!, $office_phone: String!, $opportunity_amount: String!, $state: String!, $website: String!, $assigned_to: String){
     createOneLeads(data: {prefix: $prefix, account_name: $account_name, address: $address, address: $address, city: $city, country: $country, postalcode: $postalcode, campaign: $campaign, customer_name: $customer_name, description: $description, department: $department, email: $email, fax: $fax, first_name: $first_name, last_name: $last_name, job_title: $job_title, lead_source: $lead_source, lead_source_description: $lead_source_description, mobile: $mobile, status: $status, status_description: $status_description, office_phone: $office_phone, opportunity_amount: $opportunity_amount, state: $state, website: $website, assigned_to: $assigned_to}) {
         prefix
@@ -520,10 +510,6 @@
       findManyStates: {
         prefetch: true,
         query: findManyStates
-      },
-      findManyCampaigns: {
-        prefetch: true,
-        query: findManyCampaigns
       },
       findManyUsers: {
         prefetch: true,

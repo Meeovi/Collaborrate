@@ -501,19 +501,30 @@ model emails {
 }
 
 model events {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now())
-  name       String?
-  content    String?
-  tickets    String?
-  image      String?
-  start      String?
-  end        String?
-  category   String?
-  city       String?
-  state      String?
-  country    String?
-  postalcode String?
+  id                            BigInt    @id @default(autoincrement())
+  created_at                    DateTime? @default(now())
+  name                          String?
+  content                       String?
+  tickets                       String?
+  image                         String?
+  start                         String?
+  end                           String?
+  category                      String?
+  city                          String?
+  state                         String?
+  country                       String?
+  postalcode                    String?
+  type                          String?
+  invitationEmail               String?
+  invitationBillingAddress      String?
+  invitationGrandTotalPurchased String?
+  invitationInvoiceDate         String?
+  invitationOrderNumber         String?
+  invitationPaymentMethod       String?
+  invitationShippingAddress     String?
+  invitationCustomerName        String?
+  invitationStatus              String?
+  media                         String?
 }
 
 model fullfillments {
@@ -570,21 +581,6 @@ model internalization {
   description String?
   default     String?
   website     String?
-}
-
-model invitations {
-  id                  BigInt    @id @default(autoincrement())
-  created_at          DateTime? @default(now())
-  invoiceDate         DateTime? @default(now())
-  email               String?
-  billingAddress      String?
-  shippingAddress     String?
-  orderNumber         String?
-  grandTotalPurchased String?
-  paymentMethod       String?
-  status              String?
-  media               String?
-  content             String?
 }
 
 model invoices {
@@ -1485,15 +1481,6 @@ model scheduler {
   public     String?
   permission String?
   name       String?
-}
-
-model digiboard {
-  id         Int      @id(map: "product_attribute_set_pkey") @default(autoincrement())
-  name       String
-  board      String?
-  created_at DateTime @default(now()) @db.Timestamptz(6)
-  student    String?
-  course     String?
 }
 
 model settings {

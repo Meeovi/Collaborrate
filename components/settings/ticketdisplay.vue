@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import findManyCustomers from '~/graphql/queries/customers/customerslimit'
+  import findManyCustomers from '~/graphql/generated/queries/findManyCustomers'
 
   export default {
     data() {

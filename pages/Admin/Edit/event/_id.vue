@@ -139,11 +139,11 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyEvents from "~/graphql/queries/marketing/events";
-  import findManyStates from '~/graphql/queries/shop/states'
-  import findManyCountries from '~/graphql/queries/shop/countries'
-  import findManyCities from '~/graphql/queries/shop/cities'
-  import findManyCategories from '~/graphql/queries/shop/categories'
+  import findManyEvents from "~/graphql/generated/queries/findManyEvents";
+  import findManyStates from '~/graphql/generated/queries/findManyStates'
+  import findManyCountries from '~/graphql/generated/queries/findManyCountries'
+  import findManyCities from '~/graphql/generated/queries/findManyCities'
+  import findManyCategories from '~/graphql/generated/queries/findManyCategories'
 
   const DELETE_EVENT = gql`
     mutation ($image: Upload!,$name: String!,$postalcode: String!,$start: String!,$end: String!,$tickets: String!,$content: String!,$country: String!,$city: String!,$state: String!,$category: String){

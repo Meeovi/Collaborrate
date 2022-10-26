@@ -104,7 +104,7 @@
 </template>
 
 <script>
-require('../../../graphql/mutations/sales/agreement.js');
+//require('../../../graphql/generated/mutations/createManyAgreements');
 import Editor from '~/components/Editor.vue'
 
 export default {

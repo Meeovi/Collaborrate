@@ -16,6 +16,8 @@
             <th>Event Dates</th>
             <th>Event Ticket Count</th>
             <th>Event Location</th>
+            <th>Invitation Customer Name</th>
+            <th>Invitation Grand Total Purchased</th>
             <th>Event Created</th>
             <th>Action</th>
           </tr>
@@ -27,6 +29,8 @@
             <td>{{ events.start }} - {{ events.end }}</td>
             <td>{{ events.tickets }}</td>
             <td>{{ events.city }} {{ events.state }} {{ events.country }}</td>
+            <td>{{ events.invitationCustomerName }}</td>
+            <td>{{ events.invitationGrandTotalPurchased }}</td>
             <td>{{ events.created_at }}</td>
             <td><a :href="`/admin/edit/event/${events.id}`">View</a></td>
           </tr>

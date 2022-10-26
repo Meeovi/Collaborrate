@@ -17,6 +17,17 @@ export declare class EventsGroupBy {
     state: string | null;
     country: string | null;
     postalcode: string | null;
+    type: string | null;
+    invitationEmail: string | null;
+    invitationBillingAddress: string | null;
+    invitationGrandTotalPurchased: string | null;
+    invitationInvoiceDate: string | null;
+    invitationOrderNumber: string | null;
+    invitationPaymentMethod: string | null;
+    invitationShippingAddress: string | null;
+    invitationCustomerName: string | null;
+    invitationStatus: string | null;
+    media: string | null;
     _count: EventsCountAggregate | null;
     _avg: EventsAvgAggregate | null;
     _sum: EventsSumAggregate | null;

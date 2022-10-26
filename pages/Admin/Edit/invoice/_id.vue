@@ -93,10 +93,10 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyInvoices from "~/graphql/queries/sales/invoices";
-  // import  grand_total_base from "~/graphql/queries/shop/grand_total_base"
-  // import  findManyCountries from "~/graphql/queries/shop/countries"
-  // import  attributes from "~/graphql/queries/shop/attributes"
+  import findManyInvoices from "~/graphql/generated/queries/findManyInvoices";
+  // import  grand_total_base from "~/graphql/generated/queries/findManyGrand_total_base"
+  // import  findManyCountries from "~/graphql/generated/queries/findManyCountries"
+  // import  attributes from "~/graphql/generated/queries/findManyAttributes"
 
   const DELETE_INVOICE = gql `
     mutation ($subtotal: String!,$customer_name: String!,$shipping_information: String!,$shipping_address: String!,$shipping_and_handling: String!,$payment_method: String!,$bill_to_name: String!,$grand_total_purchased: String!,$customer_group: String!,$email: String!,$billing_address: String!,$grand_total_base: String){

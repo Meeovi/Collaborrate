@@ -28272,7 +28272,7 @@ export type Query = {
   findManyComments: Array<Comments>;
   findManyContracts: Array<Contracts>;
   findManyCountries: Array<Countries>;
-  findManyCoupons: Array<Coupons>;
+  findManyDiscounts: Array<Coupons>;
   findManyCredit_memos: Array<Credit_Memos>;
   findManyCurrencies: Array<Currencies>;
   findManyCurrency_rates: Array<Currency_Rates>;
@@ -28283,7 +28283,7 @@ export type Query = {
   findManyEmails: Array<Emails>;
   findManyEvents: Array<Events>;
   findManyFullfillments: Array<Fullfillments>;
-  findManyGift_certificates: Array<Gift_Certificates>;
+  findManyDiscounts: Array<Gift_Certificates>;
   findManyIntegrations: Array<Integrations>;
   findManyInvitations: Array<Invitations>;
   findManyInvoices: Array<Invoices>;

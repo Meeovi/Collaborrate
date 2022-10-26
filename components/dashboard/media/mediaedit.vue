@@ -245,7 +245,7 @@
 <script>
 // eslint-disable-next-line camelcase
 import gql from 'graphql-tag'
-import findManyMediamanager from '~/graphql/mutations/content/mediamanager'
+import findManyMediamanager from '~/graphql/generated/mutations/createOneMediamanager'
 
 const DELETE_MEDIAMANAGER = gql`
   mutation delete_mediamanager($id: Int!){

@@ -129,8 +129,8 @@
                     <tr>
                       <td style="text-align: right;">Customer Group</td>
                       <td>
-                        <select id="customerGroup" v-model="customer" name="template" class="form-category">
-                          <option v-for="customerGroup in findManyCustomer_group" :key="customerGroup" :value="customerGroup">{{ customerGroup.name }}
+                        <select id="segments" v-model="customer" name="template" class="form-category">
+                          <option v-for="segments in findManySegments" :key="segments" :value="segments">{{ segments.name }}
                           </option>
                         </select>
                       </td>
@@ -163,12 +163,12 @@
 <script>
   /* eslint-disable camelcase */
   import gql from "graphql-tag";
-  import findManyCustomers from "~/graphql/queries/customers/customers";
-  import  findManyStates from '~/graphql/queries/shop/states'
-  import  findManyCountries from '~/graphql/queries/shop/countries'
-  import  findManyWorkspaces from '~/graphql/queries/content/workspaces'
-  import findManyCustomer_group from '~/graphql/queries/customers/customerGroups'
-  // import  tax from '~/graphql/queries/shop/tax'
+  import findManyCustomers from "~/graphql/generated/queries/findManyCustomers";
+  import  findManyStates from '~/graphql/generated/queries/findManyStates'
+  import  findManyCountries from '~/graphql/generated/queries/findManyCountries'
+  import  findManyWorkspaces from '~/graphql/generated/queries/findManyWorkspaces'
+  import findManySegments from '~/graphql/generated/queries/findManySegments'
+  // import  tax from '~/graphql/generated/queries/findManyTax'
 
   const DELETE_CUSTOMER = gql`
     mutation ($Address: String!, $address_two: String!, $comments: String!, $confirmed_email: String!, $country: String!, $credit_memos: String!, $customer: String!, $customer_customerTocustomers: String!, $customer_payment: String!, $customer_since: String!, $date_of_birth: String!, $description: String!, $email: String!, $emails: String!, $first_name: String!, $gender: String!, $id: String!, $image: String!, $last_name: String!, $mediamanager: String!, $messages: String!, $middle_name: String!, $name_prefix: String!, $name_suffix: String!, $newsletter_subscribers: String!, $orders: String!, $password: String!, $payment_type: String!, $phone: String!, $product: String!, $projects: String!, $quotes: String!, $returns: String!, $short_description: String!, $state: String!, $tax_vat_number: String!, $thumbnail: String!, $username: String!, $websites: String!, $workspaces: String!, $zipcode: String!){

@@ -16,6 +16,17 @@ var EventsOrderByRelevanceFieldEnum;
     EventsOrderByRelevanceFieldEnum["state"] = "state";
     EventsOrderByRelevanceFieldEnum["country"] = "country";
     EventsOrderByRelevanceFieldEnum["postalcode"] = "postalcode";
+    EventsOrderByRelevanceFieldEnum["type"] = "type";
+    EventsOrderByRelevanceFieldEnum["invitationEmail"] = "invitationEmail";
+    EventsOrderByRelevanceFieldEnum["invitationBillingAddress"] = "invitationBillingAddress";
+    EventsOrderByRelevanceFieldEnum["invitationGrandTotalPurchased"] = "invitationGrandTotalPurchased";
+    EventsOrderByRelevanceFieldEnum["invitationInvoiceDate"] = "invitationInvoiceDate";
+    EventsOrderByRelevanceFieldEnum["invitationOrderNumber"] = "invitationOrderNumber";
+    EventsOrderByRelevanceFieldEnum["invitationPaymentMethod"] = "invitationPaymentMethod";
+    EventsOrderByRelevanceFieldEnum["invitationShippingAddress"] = "invitationShippingAddress";
+    EventsOrderByRelevanceFieldEnum["invitationCustomerName"] = "invitationCustomerName";
+    EventsOrderByRelevanceFieldEnum["invitationStatus"] = "invitationStatus";
+    EventsOrderByRelevanceFieldEnum["media"] = "media";
 })(EventsOrderByRelevanceFieldEnum = exports.EventsOrderByRelevanceFieldEnum || (exports.EventsOrderByRelevanceFieldEnum = {}));
 TypeGraphQL.registerEnumType(EventsOrderByRelevanceFieldEnum, {
     name: "EventsOrderByRelevanceFieldEnum",

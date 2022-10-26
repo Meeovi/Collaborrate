@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form  v-for="meeting in findManyMeetings" :key="meeting.id" @submit.prevent="addMeeting">
+        <form  v-for="meeting in meetings" :key="meeting.id" @submit.prevent="addMeeting">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
@@ -108,8 +108,8 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyMeetings from "~/graphql/queries/customers/meetings";
-  import findManyUsers from '~/graphql/queries/system/users'
+  import meetings from "~/graphql/generated/queries/meetings";
+  import findManyUsers from '~/graphql/generated/queries/findManyUsers'
   /* eslint-disable camelcase */
 
   const DELETE_MEETING = gql `
@@ -157,7 +157,7 @@ export default {
         },
         refetchQueries: [
           {
-            query: findManyMeetings
+            query: meetings
           }       
           
         ]
@@ -173,7 +173,7 @@ export default {
         },
         refetchQueries: [
           {
-            query: findManyMeetings
+            query: meetings
           }       
           
         ]
@@ -184,8 +184,8 @@ export default {
     }
   },
   apollo: {
-    findManyMeetings: {
-      query: findManyMeetings,
+    meetings: {
+      query: meetings,
       prefetch: ({ route }) => ({ id: route.params.id }),
       variables() {
         return { id: this.$route.params.id }

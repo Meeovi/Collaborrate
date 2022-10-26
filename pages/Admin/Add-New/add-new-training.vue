@@ -282,14 +282,14 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyProducts from "~/graphql/queries/shop/products"
-  import findManyCategories from "~/graphql/queries/shop/categories"
-  import findManyCountries from "~/graphql/queries/shop/countries"
-  import findManyAgreements from "~/graphql/queries/sales/agreements"
-  import findManyCustomers from "~/graphql/queries/customers/customers"
-  import findManyReviews from "~/graphql/queries/marketing/reviews"
-  import findManyStates from "~/graphql/queries/shop/states"
-  import findManyCities from "~/graphql/queries/shop/cities"
+  import findManyProducts from "~/graphql/generated/queries/findManyProducts"
+  import findManyCategories from "~/graphql/generated/queries/findManyCategories"
+  import findManyCountries from "~/graphql/generated/queries/findManyCountries"
+  import findManyAgreements from "~/graphql/generated/queries/findManyAgreements"
+  import findManyCustomers from "~/graphql/generated/queries/findManyCustomers"
+  import findManyReviews from "~/graphql/generated/queries/findManyReviews"
+  import findManyStates from "~/graphql/generated/queries/findManyStates"
+  import findManyCities from "~/graphql/generated/queries/findManyCities"
 
   const ADD_TRAININGS = gql`
     mutation ($announcement: String!, $teacher: String!, $content: String!, $comment: String!, $analytics: String!, $country: String!, $created_at: String!, $address: String!, $competency: String!, $media: String!, $grade: String!, $badges: String!, $id: String!, $link: String!, $city: String!, $course: String!, $states: String!, $name: String!, $fieldTrips: String!, $isCompleted: String!, $isPublic: String!, $lab: String!, $languages: String!, $faqs: String!, $meetups: String!, $origanalityReport: String!, $resource: String!, $subject: String!, $steps: String!, $digiboards: String!, $type: String!, $student: String!, $speakers: String!, $products: String!){

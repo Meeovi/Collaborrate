@@ -96,7 +96,7 @@
   import  gql from "graphql-tag";
   import 
     findManyProduct_types
-  from "~/graphql/queries/shop/product-type";
+  from "~/graphql/generated/queries/findManyProduct_types";
 
   const ADD_PRODUCT_TYPES = gql`
     mutation ($type_name:String!,$taxes:String!, $filter_options:String!, $id:String!, $isShippable:String!, $meta_description:String!, $meta_name:String!, $meta_url:String!, $position:String!, $prod_id:String!,){

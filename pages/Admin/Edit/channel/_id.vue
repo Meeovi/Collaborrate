@@ -61,8 +61,8 @@
 <script>
 /* eslint-disable camelcase */
 import  gql from 'graphql-tag'
-import  findManyChannels from '~/graphql/mutations/system/channels'
-import  findManyCurrencies from "~/graphql/queries/system/currencies"
+import  findManyChannels from '~/graphql/generated/mutations/createOneChannels'
+import  findManyCurrencies from "~/graphql/generated/queries/findManyCurrencies"
 
 const DELETE_CHANNEL = gql`
   mutation deleteOneZones($id: Int!){

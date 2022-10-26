@@ -48,7 +48,7 @@
 
 <script>
   import gql from 'graphql-tag';
-  import ticketings from '~/graphql/queries/marketing/ticketing'
+  import ticketings from '~/graphql/generated/queries/ticketings'
 
   export default {
     apollo: {

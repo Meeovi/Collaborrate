@@ -140,12 +140,12 @@
 
   import 
     findManyFullfillments
-  from "~/graphql/queries/shop/fullfillments";
-  import  findManyStates from '~/graphql/queries/shop/states'
-  import  findManyCountries from '~/graphql/queries/shop/countries'
-  import  findManyCities from '~/graphql/queries/shop/cities'
-  import  findManyZones from "~/graphql/queries/system/zones"
-  // import  companys from "~/graphql/queries/shop/companys"
+  from "~/graphql/generated/queries/findManyFullfillments";
+  import  findManyStates from '~/graphql/generated/queries/findManyStates'
+  import  findManyCountries from '~/graphql/generated/queries/findManyCountries'
+  import  findManyCities from '~/graphql/generated/queries/findManyCities'
+  import  findManyZones from "~/graphql/generated/queries/findManyZones"
+  // import  companys from "~/graphql/generated/queries/findManyCompanys"
 
   const ADD_FULLFILLMENTS = gql`
     mutation ($name: String!,$company: String!,$phone: String!,$address: String!,$country_area: String!,$stock: String!,$shipping_zones: String!,$address_two: String!,$state: String!,$zipcode: String!,$country: String!,$pickup: String!,$city: String!,$pickup: String!){

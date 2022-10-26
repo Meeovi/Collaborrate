@@ -123,7 +123,7 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyCategories from "~/graphql/queries/shop/categories";
+  import findManyCategories from "~/graphql/generated/queries/findManyCategories";
 
   const ADD_CATEGORIES = gql `
     mutation createOneCategories($name: String!, $content: String, $image: String, $meta_title: String, $meta_keywords: String, $meta_description:String){

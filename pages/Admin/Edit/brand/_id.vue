@@ -106,7 +106,7 @@
 <script>
 // eslint-disable-next-line camelcase
 import  gql from 'graphql-tag'
-import  findManyBrands from '~/graphql/mutations/shop/brands'
+import  findManyBrands from '~/graphql/generated/queries/findManyBrands'
 
 const DELETE_BRAND = gql`
   mutation deleteOnebrands($id: Int!){

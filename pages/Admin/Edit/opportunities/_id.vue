@@ -130,10 +130,10 @@
   import gql from "graphql-tag";
   /* eslint-disable camelcase */
 
-  import findManyOpportunities from "~/graphql/queries/customers/opportunities";
-  import findManyUsers from '~/graphql/queries/system/users'
-  import findManyCategories from '~/graphql/queries/shop/categories'
-  import findManyCampaigns from '~/graphql/queries/marketing/campaigns'
+  import findManyOpportunities from "~/graphql/generated/queries/findManyOpportunities";
+  import findManyUsers from '~/graphql/generated/queries/findManyUsers'
+  import findManyCategories from '~/graphql/generated/queries/findManyCategories'
+  
 
   const DELETE_OPPORTUNITY = gql`
     mutation ($name: String!, $next_step: String!, $name: String!, $grand_total: String!, $categories: String!, $quote_stage: String!, $valid_until: String!, $lead_source: String!, $expected_close_date: String!, $assigned_to: String!, $description: String!, $currency: String!, $campaign: String!, $amount: String!, $account_name: String!, $next_step: String!, $created_at: String!, $probability: String!, $sales_stage: String!, $type: String!){

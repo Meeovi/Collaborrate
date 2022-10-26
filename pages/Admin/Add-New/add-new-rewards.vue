@@ -63,7 +63,7 @@
                       <td style="text-align: right;">Coupons</td>
                       <td>
                         <select id="coupon" v-model="coupons" name="template" class="form-coupon">
-                          <option v-for="coupon in findManyCoupons" :key="coupon.id" :value="coupon">{{ coupon.name }}
+                          <option v-for="coupon in findManyDiscounts" :key="coupon.id" :value="coupon">{{ coupon.name }}
                           </option>
                         </select>
                       </td>
@@ -119,13 +119,13 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyRewards from "~/graphql/queries/marketing/rewards";
-  import findManyArticles from "~/graphql/queries/content/articles";
-  import findManyCustomers from '~/graphql/queries/customers/customers';
-  import findManyUsers from '~/graphql/queries/system/users';
-  import findManyProducts from '~/graphql/queries/shop/products';
-  import findManyCategories from '~/graphql/queries/shop/categories';
-  import findManyCoupons from '~/graphql/queries/shop/coupons';
+  import findManyRewards from "~/graphql/generated/queries/findManyRewards";
+  import findManyArticles from "~/graphql/generated/queries/findManyArticles";
+  import findManyCustomers from '~/graphql/generated/queries/findManyCustomers';
+  import findManyUsers from '~/graphql/generated/queries/findManyUsers';
+  import findManyProducts from '~/graphql/generated/queries/findManyProducts';
+  import findManyCategories from '~/graphql/generated/queries/findManyCategories';
+  import findManyDiscounts from '~/graphql/generated/queries/findManyDiscounts';
 
   const ADD_REWARDS = gql`
     mutation ($name: String!,$expiration: String!,$customers: String!,$coupons: String!,$categories: String!,$products: String!,$users: String!,$articles: String!,$level: String!){
@@ -233,9 +233,9 @@
         prefetch: true,
         query: findManyCustomers
       },
-      findManyCoupons: {
+      findManyDiscounts: {
         prefetch: true,
-        query: findManyCoupons
+        query: findManyDiscounts
       },
       findManyCategories: {
         prefetch: true,

@@ -54,8 +54,6 @@ export { DashboardsOrderByRelevanceFieldEnum } from "./DashboardsOrderByRelevanc
 export { DashboardsScalarFieldEnum } from "./DashboardsScalarFieldEnum";
 export { DeepdiveOrderByRelevanceFieldEnum } from "./DeepdiveOrderByRelevanceFieldEnum";
 export { DeepdiveScalarFieldEnum } from "./DeepdiveScalarFieldEnum";
-export { DigiboardOrderByRelevanceFieldEnum } from "./DigiboardOrderByRelevanceFieldEnum";
-export { DigiboardScalarFieldEnum } from "./DigiboardScalarFieldEnum";
 export { DiscountsOrderByRelevanceFieldEnum } from "./DiscountsOrderByRelevanceFieldEnum";
 export { DiscountsScalarFieldEnum } from "./DiscountsScalarFieldEnum";
 export { EmailsOrderByRelevanceFieldEnum } from "./EmailsOrderByRelevanceFieldEnum";
@@ -74,8 +72,6 @@ export { IntegrationsOrderByRelevanceFieldEnum } from "./IntegrationsOrderByRele
 export { IntegrationsScalarFieldEnum } from "./IntegrationsScalarFieldEnum";
 export { InternalizationOrderByRelevanceFieldEnum } from "./InternalizationOrderByRelevanceFieldEnum";
 export { InternalizationScalarFieldEnum } from "./InternalizationScalarFieldEnum";
-export { InvitationsOrderByRelevanceFieldEnum } from "./InvitationsOrderByRelevanceFieldEnum";
-export { InvitationsScalarFieldEnum } from "./InvitationsScalarFieldEnum";
 export { InvoicesOrderByRelevanceFieldEnum } from "./InvoicesOrderByRelevanceFieldEnum";
 export { InvoicesScalarFieldEnum } from "./InvoicesScalarFieldEnum";
 export { JsonNullValueFilter } from "./JsonNullValueFilter";

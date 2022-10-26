@@ -291,14 +291,14 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyQuotes from "~/graphql/queries/sales/quotes";
-  import findManyCategories from '~/graphql/queries/shop/categories'
-  import findManyStates from '~/graphql/queries/shop/states'
-  import findManyCountries from '~/graphql/queries/shop/countries'
-  import findManyCities from '~/graphql/queries/shop/cities'
-  import findManyCurrencies from '~/graphql/queries/system/currencies'
-  import findManyCustomers from '~/graphql/queries/customers/customers'
-  import findManyUsers from '~/graphql/queries/system/users'
+  import findManyQuotes from "~/graphql/generated/queries/findManyQuotes";
+  import findManyCategories from '~/graphql/generated/queries/findManyCategories'
+  import findManyStates from '~/graphql/generated/queries/findManyStates'
+  import findManyCountries from '~/graphql/generated/queries/findManyCountries'
+  import findManyCities from '~/graphql/generated/queries/findManyCities'
+  import findManyCurrencies from '~/graphql/generated/queries/findManyCurrencies'
+  import findManyCustomers from '~/graphql/generated/queries/findManyCustomers'
+  import findManyUsers from '~/graphql/generated/queries/findManyUsers'
   /* eslint-disable camelcase */
 
   const ADD_QUOTES = gql `

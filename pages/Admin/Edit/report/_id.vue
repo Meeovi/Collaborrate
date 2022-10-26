@@ -63,7 +63,7 @@
 
 <script>
 import  gql from "graphql-tag";
-import  findManyReports from "~/graphql/queries/reports/reports"
+import  findManyReports from "~/graphql/generated/queries/findManyReports"
 
 const DELETE_REPORT = gql`
     mutation ($applied_coupon:String!,$customer:String!,$quantity:String!,$subtotal:String!,$email:String!,$ip_address:String!){

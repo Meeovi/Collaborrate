@@ -59,7 +59,7 @@
 <script>
 // eslint-disable-next-line camelcase
 import  gql from 'graphql-tag'
-import  findManyCases from '~/graphql/mutations/reports/cases'
+import  findManyCases from '~/graphql/generated/queries/findManyCases'
 
 const DELETE_CASE = gql`
   mutation deleteOneCases($id: Int!){

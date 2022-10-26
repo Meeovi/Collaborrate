@@ -208,7 +208,7 @@ import gql from "graphql-tag";
 import providersettings from '~/components/settings/providersettings';
 import apitokensettings from '~/components/settings/apitokensettings';
 import webhooks from '~/components/settings/webhooks'
-import { generalSettings } from "~/graphql/queries/system/settings";
+import { generalSettings } from "~/graphql/generated/queries/findManySettings";
 
 const ADD_GENERAL_SETTINGS = gql `
     mutation ($siteTitle:String!,$tagline:String,$siteUrl:String,$siteAdminEmail:String,$languages:String,$value:String){

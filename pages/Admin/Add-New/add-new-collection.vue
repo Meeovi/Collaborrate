@@ -104,7 +104,7 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyCollections from "~/graphql/queries/shop/collections";
+  import findManyCollections from "~/graphql/generated/queries/findManyCollections";
 
   const ADD_COLLECTIONS = gql`
     mutation ($name:String!,$description:String!,$image:String!,$meta_description:String!,$meta_keywords:String!,$meta_title:String!){

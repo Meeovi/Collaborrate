@@ -108,8 +108,8 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyMeetings from "~/graphql/queries/customers/meetings";
-  import findManyUsers from '~/graphql/queries/system/users'
+  import meetings from "~/graphql/generated/queries/meetings";
+  import findManyUsers from '~/graphql/generated/queries/findManyUsers'
   /* eslint-disable camelcase */
 
   const ADD_MEETINGS = gql `
@@ -178,7 +178,7 @@
               const insertedMeeting = insertMeetings.returning;
               console.log(insertedMeeting)
               cache.writeQuery({
-                query: findManyMeetings
+                query: meetings
               })
             } catch (err) {
               console.error(err)

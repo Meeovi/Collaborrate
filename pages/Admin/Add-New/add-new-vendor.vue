@@ -113,10 +113,10 @@
 <script>
   import gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import findManyVendors from "~/graphql/queries/shop/vendors";
-  import findManyCategories from "~/graphql/queries/shop/categories"
-  import findManyCountries from "~/graphql/queries/shop/countries"
-  import findManyProducts from "~/graphql/queries/shop/products"
+  import findManyVendors from "~/graphql/generated/queries/findManyVendors";
+  import findManyCategories from "~/graphql/generated/queries/findManyCategories"
+  import findManyCountries from "~/graphql/generated/queries/findManyCountries"
+  import findManyProducts from "~/graphql/generated/queries/findManyProducts"
 
   const ADD_VENDORS = gql `
     mutation ($name: String!,$products: String!,$website: String!,$categories: String!,$country: String!,$description: String!,$image: String!,$tags: String!,$physical_store: String!,$type: String!){

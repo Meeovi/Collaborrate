@@ -1,5 +1,0 @@
-mutation updateManyGift_certificates($data: Gift_certificatesUpdateManyMutationInput!, $where: Gift_certificatesWhereInput){
-    updateManyGift_certificates(data: $data, where: $where){
-        count
-    }
-}

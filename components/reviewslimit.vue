@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import findFirstReviews from '~/graphql/queries/marketing/reviewslimit'
+import findFirstReviews from '~/graphql/generated/queries/findManyReviews'
 
 export default {
   data() {

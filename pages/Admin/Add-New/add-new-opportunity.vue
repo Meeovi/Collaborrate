@@ -92,14 +92,6 @@
                         </select></td>
                     </tr>
                     <tr>
-                      <td style="text-align: right;">Campaign</td>
-                      <td><select id="campaign" v-model="campaign">
-                          <option v-for="campaign in findManyCampaigns" :key="campaign.id" :value="campaign">
-                            {{ campaign.name }}
-                          </option>
-                        </select></td>
-                    </tr>
-                    <tr>
                       <td style="text-align: right;">Assigned To</td>
                       <td><select id="assignedTo" v-model="assigned_to">
                           <option v-for="users in findManyUsers" :key="users.id" :value="users">
@@ -130,10 +122,9 @@
   import gql from "graphql-tag";
   /* eslint-disable camelcase */
 
-  import findManyOpportunities from "~/graphql/queries/customers/opportunities";
-  import findManyUsers from '~/graphql/queries/system/users'
-  import findManyCategories from '~/graphql/queries/shop/categories'
-  import findManyCampaigns from '~/graphql/queries/marketing/campaigns'
+  import findManyOpportunities from "~/graphql/generated/queries/findManyOpportunities";
+  import findManyUsers from '~/graphql/generated/queries/findManyUsers'
+  import findManyCategories from '~/graphql/generated/queries/findManyCategories'
 
   const ADD_OPPORTUNITIES = gql`
     mutation ($name: String!, $next_step: String!, $name: String!, $grand_total: String!, $categories: String!, $quote_stage: String!, $valid_until: String!, $lead_source: String!, $expected_close_date: String!, $assigned_to: String!, $description: String!, $currency: String!, $campaign: String!, $amount: String!, $account_name: String!, $next_step: String!, $created_at: String!, $probability: String!, $sales_stage: String!, $type: String!){
@@ -276,10 +267,6 @@
       findManyCategories: {
         prefetch: true,
         query: findManyCategories
-      },
-      findManyCampaigns: {
-        prefetch: true,
-        query: findManyCampaigns
       },
       findManyUsers: {
         prefetch: true,

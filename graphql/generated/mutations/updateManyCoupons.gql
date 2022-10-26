@@ -1,5 +1,0 @@
-mutation updateManyCoupons($data: CouponsUpdateManyMutationInput!, $where: CouponsWhereInput){
-    updateManyCoupons(data: $data, where: $where){
-        count
-    }
-}

@@ -94,8 +94,8 @@
 <script>
   import gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import findManyCases from "~/graphql/queries/reports/cases";
-  import findManyUsers from "~/graphql/queries/shop/countries"
+  import findManyCases from "~/graphql/generated/queries/findManyCases";
+  import findManyUsers from "~/graphql/generated/queries/findManyCountries"
 
   const ADD_CASES = gql `
     mutation ($status:String!,$state:String,$assigned_to:String,$description:String,$resolution:String!,$subject:String!,$type:String!,$priority:String!,$account_name:String){

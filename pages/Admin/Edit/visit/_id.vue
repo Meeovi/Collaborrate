@@ -113,8 +113,8 @@
 <script>
   import  gql from "graphql-tag";
 
-  import findManyVisits from "~/graphql/queries/marketing/visits";
-  import meetings from "~/graphql/queries/customers/meetings";
+  import findManyVisits from "~/graphql/generated/queries/findManyVisits";
+  import meetings from "~/graphql/generated/queries/meetings";
   /* eslint-disable camelcase */
 
   const DELETE_VISIT = gql`

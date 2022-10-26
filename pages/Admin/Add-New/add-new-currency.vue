@@ -54,8 +54,8 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyCurrencies from "~/graphql/queries/system/currencies"
-  import findManyCountries from "~/graphql/queries/shop/countries"
+  import findManyCurrencies from "~/graphql/generated/queries/findManyCurrencies"
+  import findManyCountries from "~/graphql/generated/queries/findManyCountries"
 
   const ADD_CURRENCIES = gql `
     mutation ($code:String!,$name:String!$region:String!){

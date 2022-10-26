@@ -8,9 +8,13 @@ query aggregateScheduler($cursor: SchedulerWhereUniqueInput, $orderBy: [Schedule
             created_at
             end_date
             id
+            label
             level
             login
+            name
             notes
+            permission
+            public
             start_date
             whid
         }
@@ -18,9 +22,13 @@ query aggregateScheduler($cursor: SchedulerWhereUniqueInput, $orderBy: [Schedule
             created_at
             end_date
             id
+            label
             level
             login
+            name
             notes
+            permission
+            public
             start_date
             whid
         }
@@ -28,9 +36,13 @@ query aggregateScheduler($cursor: SchedulerWhereUniqueInput, $orderBy: [Schedule
             created_at
             end_date
             id
+            label
             level
             login
+            name
             notes
+            permission
+            public
             start_date
             whid
         }

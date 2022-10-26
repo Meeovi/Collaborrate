@@ -78,8 +78,8 @@
 
 <script>
   import  gql from "graphql-tag";
-  import  findManyZones from "~/graphql/queries/system/zones"
-  import  findManyCountries from "~/graphql/queries/shop/countries"
+  import  findManyZones from "~/graphql/generated/queries/findManyZones"
+  import  findManyCountries from "~/graphql/generated/queries/findManyCountries"
 
   const ADD_ZONES = gql`
     mutation ($code:String!,$name:String!$type:String!,$scope:String!,$country:String!){

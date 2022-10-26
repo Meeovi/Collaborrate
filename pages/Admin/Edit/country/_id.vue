@@ -62,7 +62,7 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyCountries from "~/graphql/queries/shop/countries";
+  import findManyCountries from "~/graphql/generated/queries/findManyCountries";
 
   const DELETE_COUNTRY = gql `
     mutation ($name:String!,$description:String,$image:String,$region:String){

@@ -60,7 +60,7 @@
 <script>
   import gql from "graphql-tag";
 
-  import ootos from "~/graphql/queries/reports/ooto";
+  import ootos from "~/graphql/generated/queries/ootos";
 
   const DELETE_OOTO = gql`
     mutation ($login:String!,$description:String!,$whid:String!,$start_date:String!,$end_date:String){

@@ -169,7 +169,7 @@
                       <td>
                         <label for="tickets">Tickets</label><br>
                         <select id="category" v-model="ticketing">
-                          <option v-for="tickets in findManyTicketing" :key="tickets.id" :value="tickets">
+                          <option v-for="tickets in ticketings" :key="tickets.id" :value="tickets">
                             {{ tickets.name }}</option>
                         </select>
                       </td>
@@ -335,15 +335,15 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyProducts from "~/graphql/queries/shop/products"
-  import findManyProjects from "~/graphql/queries/content/projects"
-  import findManyCategories from "~/graphql/queries/shop/categories"
-  import findManyWorkspaces from "~/graphql/queries/content/workspaces"
-  import findManyCustomers from "~/graphql/queries/customers/customers"
-  import findManyTicketing from "~/graphql/queries/marketing/ticketing"
-  import findManyUsers from "~/graphql/queries/system/users"
-  import findManyTags from "~/graphql/queries/content/tags"
-  import findManyZones from "~/graphql/queries/system/zones"
+  import findManyProducts from "~/graphql/generated/queries/findManyProducts"
+  import findManyProjects from "~/graphql/generated/queries/findManyProjects"
+  import findManyCategories from "~/graphql/generated/queries/findManyCategories"
+  import findManyWorkspaces from "~/graphql/generated/queries/findManyWorkspaces"
+  import findManyCustomers from "~/graphql/generated/queries/findManyCustomers"
+  import ticketings from "~/graphql/generated/queries/ticketings"
+  import findManyUsers from "~/graphql/generated/queries/findManyUsers"
+  import findManyTags from "~/graphql/generated/queries/findManyTags"
+  import findManyZones from "~/graphql/generated/queries/findManyZones"
 
   const ADD_PROJECTS = gql `
     mutation ($assignee: String!, $customers: String!, $categories: String!, $tasks: String!, $users: String!, $doing: String!, $workspaces: String!, $created_at: String!, $done: String!, $end_date: String!, $file: String!, $format: String!, $height: String!, $id: String!, $image: String!, $goal_collaborators: String!, $goal_measurement: String!, $ticketing: String!, $name: String!, $goal_name: String!, $goal_privacy: String!, $goal_progress_source: String!, $goal_timeperiod: String!, $goal_updatemethod: String!, $priority: String!, $product: String!, $project_manager: String!, $resource: String!, $section_rule: String!, $staff_id: String!, $start_date: String!, $task_id: String!, $status: String!, $ticket_id: String!, $tags: String!, $considerworkingdays: String!, $method: String!, $type: String!, $team: String!, $visibility: String!, $websites: String!, $company: String!, $zone: String!){
@@ -646,9 +646,9 @@
         prefetch: true,
         query: findManyUsers
       },
-      findManyTicketing: {
+      ticketings: {
         prefetch: true,
-        query: findManyTicketing
+        query: ticketings
       },
       findManyTags: {
         prefetch: true,

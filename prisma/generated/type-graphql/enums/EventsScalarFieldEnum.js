@@ -18,6 +18,17 @@ var EventsScalarFieldEnum;
     EventsScalarFieldEnum["state"] = "state";
     EventsScalarFieldEnum["country"] = "country";
     EventsScalarFieldEnum["postalcode"] = "postalcode";
+    EventsScalarFieldEnum["type"] = "type";
+    EventsScalarFieldEnum["invitationEmail"] = "invitationEmail";
+    EventsScalarFieldEnum["invitationBillingAddress"] = "invitationBillingAddress";
+    EventsScalarFieldEnum["invitationGrandTotalPurchased"] = "invitationGrandTotalPurchased";
+    EventsScalarFieldEnum["invitationInvoiceDate"] = "invitationInvoiceDate";
+    EventsScalarFieldEnum["invitationOrderNumber"] = "invitationOrderNumber";
+    EventsScalarFieldEnum["invitationPaymentMethod"] = "invitationPaymentMethod";
+    EventsScalarFieldEnum["invitationShippingAddress"] = "invitationShippingAddress";
+    EventsScalarFieldEnum["invitationCustomerName"] = "invitationCustomerName";
+    EventsScalarFieldEnum["invitationStatus"] = "invitationStatus";
+    EventsScalarFieldEnum["media"] = "media";
 })(EventsScalarFieldEnum = exports.EventsScalarFieldEnum || (exports.EventsScalarFieldEnum = {}));
 TypeGraphQL.registerEnumType(EventsScalarFieldEnum, {
     name: "EventsScalarFieldEnum",

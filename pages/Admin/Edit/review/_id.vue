@@ -67,7 +67,7 @@
 
 <script>
 import  gql from "graphql-tag";
-import  findManyReviews from "~/graphql/queries/marketing/reviews"
+import  findManyReviews from "~/graphql/generated/queries/findManyReviews"
 
 const DELETE_REVIEW = gql`
     mutation ($first_name:String!,$last_name:String!$websites:String!,$content:String!,$comment_id:Int!,$shop_id:Int!){

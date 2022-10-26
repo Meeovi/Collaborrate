@@ -39,6 +39,7 @@
     "yoga": "ts-node server/index.ts",
     "build": "nuxt build && tsc -p tsconfig.json",
     "generate": "nuxt generate",
+    "gql-generate": "gqlg --schemaFilePath ./server/generated-schema.graphql --destDirPath ./graphql/generated",
     "prisma-dev": "npx prisma generate",
     "docs": "npx prisma-docs-generator serve",
     "db-dev": "prisma migrate dev",
@@ -47,7 +48,7 @@
     "lintfix": "npm run lint:js -- --fix",
     "test:e2e": "nightwatch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "all": "npm-run-all --parallel docs dev yoga"
+    "all": "npm-run-all --parallel docs dev yoga gql-generate"
   },
   "dependencies": {
     "@babel/runtime": "^7.19.0",

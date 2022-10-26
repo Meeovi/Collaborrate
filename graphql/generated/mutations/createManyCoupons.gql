@@ -1,5 +1,0 @@
-mutation createManyCoupons($data: [CouponsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyCoupons(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

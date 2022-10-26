@@ -17,6 +17,17 @@ export declare class EventsOrderByWithAggregationInput {
     state?: "asc" | "desc" | undefined;
     country?: "asc" | "desc" | undefined;
     postalcode?: "asc" | "desc" | undefined;
+    type?: "asc" | "desc" | undefined;
+    invitationEmail?: "asc" | "desc" | undefined;
+    invitationBillingAddress?: "asc" | "desc" | undefined;
+    invitationGrandTotalPurchased?: "asc" | "desc" | undefined;
+    invitationInvoiceDate?: "asc" | "desc" | undefined;
+    invitationOrderNumber?: "asc" | "desc" | undefined;
+    invitationPaymentMethod?: "asc" | "desc" | undefined;
+    invitationShippingAddress?: "asc" | "desc" | undefined;
+    invitationCustomerName?: "asc" | "desc" | undefined;
+    invitationStatus?: "asc" | "desc" | undefined;
+    media?: "asc" | "desc" | undefined;
     _count?: EventsCountOrderByAggregateInput | undefined;
     _avg?: EventsAvgOrderByAggregateInput | undefined;
     _max?: EventsMaxOrderByAggregateInput | undefined;

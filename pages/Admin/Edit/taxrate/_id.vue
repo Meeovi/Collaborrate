@@ -72,9 +72,9 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyTax_rates from "~/graphql/queries/shop/taxrate";
-  import findManyCountries from "~/graphql/queries/shop/countries";
-  import findManyStates from "~/graphql/queries/shop/states";
+  import findManyTax_rates from "~/graphql/generated/queries/tax_rates";
+  import findManyCountries from "~/graphql/generated/queries/findManyCountries";
+  import findManyStates from "~/graphql/generated/queries/findManyStates";
 
   const DELETE_TAX_RATE = gql `
     mutation ($country:String! $default_store_view:String! $zip_post_is_range:Boolean! $tax_identifier:String! $state:String! $rate_percent:String! $postcode:String){

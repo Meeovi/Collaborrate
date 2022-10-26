@@ -18,4 +18,15 @@ export declare class EventsScalarWhereWithAggregatesInput {
     state?: StringNullableWithAggregatesFilter | undefined;
     country?: StringNullableWithAggregatesFilter | undefined;
     postalcode?: StringNullableWithAggregatesFilter | undefined;
+    type?: StringNullableWithAggregatesFilter | undefined;
+    invitationEmail?: StringNullableWithAggregatesFilter | undefined;
+    invitationBillingAddress?: StringNullableWithAggregatesFilter | undefined;
+    invitationGrandTotalPurchased?: StringNullableWithAggregatesFilter | undefined;
+    invitationInvoiceDate?: StringNullableWithAggregatesFilter | undefined;
+    invitationOrderNumber?: StringNullableWithAggregatesFilter | undefined;
+    invitationPaymentMethod?: StringNullableWithAggregatesFilter | undefined;
+    invitationShippingAddress?: StringNullableWithAggregatesFilter | undefined;
+    invitationCustomerName?: StringNullableWithAggregatesFilter | undefined;
+    invitationStatus?: StringNullableWithAggregatesFilter | undefined;
+    media?: StringNullableWithAggregatesFilter | undefined;
 }

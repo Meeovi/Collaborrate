@@ -125,11 +125,11 @@
 <script>
   import  gql from "graphql-tag";
 
-  import warehouses from "~/graphql/queries/shop/warehouses";
-  import  findManyStates from '~/graphql/queries/shop/states'
-  import  findManyCountries from '~/graphql/queries/shop/countries'
-  import  findManyCities from '~/graphql/queries/shop/cities'
-  import findManyCategories from '~/graphql/queries/shop/categories'
+  import warehouses from "~/graphql/generated/queries/warehouses";
+  import  findManyStates from '~/graphql/generated/queries/findManyStates'
+  import  findManyCountries from '~/graphql/generated/queries/findManyCountries'
+  import  findManyCities from '~/graphql/generated/queries/findManyCities'
+  import findManyCategories from '~/graphql/generated/queries/findManyCategories'
 
   const DELETE_WAREHOUSE = gql`
     mutation ($name: String!,$description: String!,$image: String!,$products: String!,$status: String!,$state: String!,$postal: String!,$country: String!,$isPublic: String!,$city: String!, $category: String!){

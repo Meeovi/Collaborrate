@@ -192,8 +192,8 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyReturns from "~/graphql/queries/sales/returns";
-  import findManyProducts from "~/graphql/queries/shop/products";
+  import findManyReturns from "~/graphql/generated/queries/findManyReturns";
+  import findManyProducts from "~/graphql/generated/queries/findManyProducts";
 
   const DELETE_RETURN = gql`
     mutation ($name:String!,$validity:String!,$return_prefix:String!, $description:String!, $shippingNumber:String!, $shippingDescription:String!, $status:String!, $liquidationReason:String!, $media:String!, $weight:String!, $height:String!, $howShipped:String!, $type:String!, $location:String!, $shipTo:String!, $products:String!, $case_id:String!){

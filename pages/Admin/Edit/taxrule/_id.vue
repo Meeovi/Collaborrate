@@ -48,7 +48,7 @@
 <script>
 import  gql from "graphql-tag";
 // eslint-disable-next-line camelcase
-import tax_rule from "~/graphql/queries/shop/taxrule";
+import tax_rule from "~/graphql/generated/queries/tax_rules";
 
 const DELETE_TAX_RULE = gql`
     mutation ($name:String!,$tax_rate:String){
