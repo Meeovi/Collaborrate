@@ -1,5 +1,5 @@
 query findFirstMessages($cursor: MessagesWhereUniqueInput, $distinct: [MessagesScalarFieldEnum!], $orderBy: [MessagesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: MessagesWhereInput){
-    findFirstMessages(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstMessages{
         content
         created_at
         cust_id

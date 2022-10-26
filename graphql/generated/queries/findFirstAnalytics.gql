@@ -1,5 +1,5 @@
 query findFirstAnalytics($cursor: AnalyticsWhereUniqueInput, $distinct: [AnalyticsScalarFieldEnum!], $orderBy: [AnalyticsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: AnalyticsWhereInput){
-    findFirstAnalytics(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstAnalytics{
         category
         client_id
         client_secret

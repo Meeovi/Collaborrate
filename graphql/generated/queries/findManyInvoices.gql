@@ -1,5 +1,5 @@
 query findManyInvoices($cursor: InvoicesWhereUniqueInput, $distinct: [InvoicesScalarFieldEnum!], $orderBy: [InvoicesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: InvoicesWhereInput){
-    findManyInvoices(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyInvoices{
         bill_to_name
         billing_address
         customer_group

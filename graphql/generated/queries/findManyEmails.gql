@@ -1,5 +1,5 @@
 query findManyEmails($cursor: EmailsWhereUniqueInput, $distinct: [EmailsScalarFieldEnum!], $orderBy: [EmailsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: EmailsWhereInput){
-    findManyEmails(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyEmails{
         bcc
         cc
         content

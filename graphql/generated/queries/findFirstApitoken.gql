@@ -1,5 +1,5 @@
 query findFirstApitoken($cursor: ApitokenWhereUniqueInput, $distinct: [ApitokenScalarFieldEnum!], $orderBy: [ApitokenOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ApitokenWhereInput){
-    findFirstApitoken(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstApitoken{
         created_at
         description
         id

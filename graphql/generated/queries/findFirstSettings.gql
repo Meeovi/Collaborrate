@@ -1,5 +1,5 @@
 query findFirstSettings($cursor: SettingsWhereUniqueInput, $distinct: [SettingsScalarFieldEnum!], $orderBy: [SettingsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: SettingsWhereInput){
-    findFirstSettings(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstSettings{
         address
         address_two
         allow_countries

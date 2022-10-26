@@ -1,5 +1,5 @@
 query findManyPayments($cursor: PaymentsWhereUniqueInput, $distinct: [PaymentsScalarFieldEnum!], $orderBy: [PaymentsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: PaymentsWhereInput){
-    findManyPayments(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyPayments{
         active
         client_id
         client_secret

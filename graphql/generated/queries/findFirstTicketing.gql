@@ -1,5 +1,5 @@
 query findFirstTicketing($cursor: TicketingWhereUniqueInput, $distinct: [TicketingScalarFieldEnum!], $orderBy: [TicketingOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: TicketingWhereInput){
-    findFirstTicketing(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstTicketing{
         account_name
         assigned_to
         comment

@@ -1,5 +1,5 @@
 query findManyInvitations($cursor: InvitationsWhereUniqueInput, $distinct: [InvitationsScalarFieldEnum!], $orderBy: [InvitationsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: InvitationsWhereInput){
-    findManyInvitations(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyInvitations{
         billingAddress
         content
         created_at

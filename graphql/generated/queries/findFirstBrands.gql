@@ -1,5 +1,5 @@
 query findFirstBrands($cursor: BrandsWhereUniqueInput, $distinct: [BrandsScalarFieldEnum!], $orderBy: [BrandsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: BrandsWhereInput){
-    findFirstBrands(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstBrands{
         city
         code
         country

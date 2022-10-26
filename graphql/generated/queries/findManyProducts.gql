@@ -1,5 +1,5 @@
 query findManyProducts($cursor: ProductsWhereUniqueInput, $distinct: [ProductsScalarFieldEnum!], $orderBy: [ProductsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ProductsWhereInput){
-    findManyProducts(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyProducts{
         attributes
         brand
         brands

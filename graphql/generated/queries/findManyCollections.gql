@@ -1,5 +1,5 @@
 query findManyCollections($cursor: CollectionsWhereUniqueInput, $distinct: [CollectionsScalarFieldEnum!], $orderBy: [CollectionsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CollectionsWhereInput){
-    findManyCollections(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyCollections{
         created_at
         description
         id

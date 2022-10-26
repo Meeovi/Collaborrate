@@ -1,5 +1,5 @@
 query findFirstEmails($cursor: EmailsWhereUniqueInput, $distinct: [EmailsScalarFieldEnum!], $orderBy: [EmailsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: EmailsWhereInput){
-    findFirstEmails(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstEmails{
         bcc
         cc
         content

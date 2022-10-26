@@ -1,5 +1,5 @@
 query findManyContracts($cursor: ContractsWhereUniqueInput, $distinct: [ContractsScalarFieldEnum!], $orderBy: [ContractsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ContractsWhereInput){
-    findManyContracts(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyContracts{
         account
         company_signed_date
         contact

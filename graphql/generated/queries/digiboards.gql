@@ -1,5 +1,5 @@
 query digiboards($cursor: DigiboardWhereUniqueInput, $distinct: [DigiboardScalarFieldEnum!], $orderBy: [DigiboardOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: DigiboardWhereInput){
-    digiboards(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    digiboards{
         board
         course
         created_at

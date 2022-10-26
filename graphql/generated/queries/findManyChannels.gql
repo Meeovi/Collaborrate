@@ -1,5 +1,5 @@
 query findManyChannels($cursor: ChannelsWhereUniqueInput, $distinct: [ChannelsScalarFieldEnum!], $orderBy: [ChannelsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ChannelsWhereInput){
-    findManyChannels(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyChannels{
         client_id
         client_secret
         code

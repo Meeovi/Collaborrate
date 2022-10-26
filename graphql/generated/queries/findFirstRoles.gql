@@ -1,5 +1,5 @@
 query findFirstRoles($cursor: RolesWhereUniqueInput, $distinct: [RolesScalarFieldEnum!], $orderBy: [RolesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: RolesWhereInput){
-    findFirstRoles(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstRoles{
         content
         created_at
         id

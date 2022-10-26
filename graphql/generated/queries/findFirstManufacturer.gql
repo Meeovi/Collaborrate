@@ -1,5 +1,5 @@
 query findFirstManufacturer($cursor: ManufacturerWhereUniqueInput, $distinct: [ManufacturerScalarFieldEnum!], $orderBy: [ManufacturerOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ManufacturerWhereInput){
-    findFirstManufacturer(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstManufacturer{
         city
         code
         country

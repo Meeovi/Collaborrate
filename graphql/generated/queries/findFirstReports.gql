@@ -1,5 +1,5 @@
 query findFirstReports($cursor: ReportsWhereUniqueInput, $distinct: [ReportsScalarFieldEnum!], $orderBy: [ReportsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ReportsWhereInput){
-    findFirstReports(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstReports{
         applied_coupon
         created
         customer

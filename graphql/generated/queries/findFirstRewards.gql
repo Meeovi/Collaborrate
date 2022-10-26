@@ -1,5 +1,5 @@
 query findFirstRewards($cursor: RewardsWhereUniqueInput, $distinct: [RewardsScalarFieldEnum!], $orderBy: [RewardsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: RewardsWhereInput){
-    findFirstRewards(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstRewards{
         articles
         categories
         coupons

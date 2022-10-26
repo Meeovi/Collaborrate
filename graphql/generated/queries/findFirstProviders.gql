@@ -1,5 +1,5 @@
 query findFirstProviders($cursor: ProvidersWhereUniqueInput, $distinct: [ProvidersScalarFieldEnum!], $orderBy: [ProvidersOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ProvidersWhereInput){
-    findFirstProviders(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstProviders{
         active
         client_id
         client_secret

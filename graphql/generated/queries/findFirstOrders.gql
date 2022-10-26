@@ -1,5 +1,5 @@
 query findFirstOrders($cursor: OrdersWhereUniqueInput, $distinct: [OrdersScalarFieldEnum!], $orderBy: [OrdersOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: OrdersWhereInput){
-    findFirstOrders(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstOrders{
         action
         allocated_sources
         bill_to_name

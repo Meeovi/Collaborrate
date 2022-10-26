@@ -1,5 +1,5 @@
 query findFirstRating($cursor: RatingWhereUniqueInput, $distinct: [RatingScalarFieldEnum!], $orderBy: [RatingOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: RatingWhereInput){
-    findFirstRating(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstRating{
         active
         default_store_view
         default_value

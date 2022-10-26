@@ -1,5 +1,5 @@
 query findManyProviders($cursor: ProvidersWhereUniqueInput, $distinct: [ProvidersScalarFieldEnum!], $orderBy: [ProvidersOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ProvidersWhereInput){
-    findManyProviders(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyProviders{
         active
         client_id
         client_secret

@@ -1,5 +1,5 @@
 query findFirstStatistics($cursor: StatisticsWhereUniqueInput, $distinct: [StatisticsScalarFieldEnum!], $orderBy: [StatisticsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: StatisticsWhereInput){
-    findFirstStatistics(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstStatistics{
         articles
         categories
         coupons

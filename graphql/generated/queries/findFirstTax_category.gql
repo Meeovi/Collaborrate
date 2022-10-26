@@ -1,5 +1,5 @@
 query findFirstTax_category($cursor: Tax_categoryWhereUniqueInput, $distinct: [Tax_categoryScalarFieldEnum!], $orderBy: [Tax_categoryOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Tax_categoryWhereInput){
-    findFirstTax_category(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstTax_category{
         created_at
         default
         id

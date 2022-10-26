@@ -1,5 +1,5 @@
 query findManyThemes($cursor: ThemesWhereUniqueInput, $distinct: [ThemesScalarFieldEnum!], $orderBy: [ThemesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ThemesWhereInput){
-    findManyThemes(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyThemes{
         action
         id
         parent_theme

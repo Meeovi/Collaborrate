@@ -1,5 +1,5 @@
 query findFirstPayments($cursor: PaymentsWhereUniqueInput, $distinct: [PaymentsScalarFieldEnum!], $orderBy: [PaymentsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: PaymentsWhereInput){
-    findFirstPayments(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstPayments{
         active
         client_id
         client_secret

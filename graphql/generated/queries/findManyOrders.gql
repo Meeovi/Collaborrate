@@ -1,5 +1,5 @@
 query findManyOrders($cursor: OrdersWhereUniqueInput, $distinct: [OrdersScalarFieldEnum!], $orderBy: [OrdersOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: OrdersWhereInput){
-    findManyOrders(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyOrders{
         action
         allocated_sources
         bill_to_name

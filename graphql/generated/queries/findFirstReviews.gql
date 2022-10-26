@@ -1,5 +1,5 @@
 query findFirstReviews($cursor: ReviewsWhereUniqueInput, $distinct: [ReviewsScalarFieldEnum!], $orderBy: [ReviewsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ReviewsWhereInput){
-    findFirstReviews(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstReviews{
         comment_id
         content
         created_at

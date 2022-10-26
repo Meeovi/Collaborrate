@@ -1,5 +1,5 @@
 query findFirstEndofshift($cursor: EndofshiftWhereUniqueInput, $distinct: [EndofshiftScalarFieldEnum!], $orderBy: [EndofshiftOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: EndofshiftWhereInput){
-    findFirstEndofshift(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstEndofshift{
         content
         created_at
         id

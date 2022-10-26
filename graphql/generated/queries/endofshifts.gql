@@ -1,5 +1,5 @@
 query endofshifts($cursor: EndofshiftWhereUniqueInput, $distinct: [EndofshiftScalarFieldEnum!], $orderBy: [EndofshiftOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: EndofshiftWhereInput){
-    endofshifts(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    endofshifts{
         content
         created_at
         id

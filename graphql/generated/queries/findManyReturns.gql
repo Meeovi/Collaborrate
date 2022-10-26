@@ -1,5 +1,5 @@
 query findManyReturns($cursor: ReturnsWhereUniqueInput, $distinct: [ReturnsScalarFieldEnum!], $orderBy: [ReturnsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ReturnsWhereInput){
-    findManyReturns(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyReturns{
         case_id
         created_at
         customers

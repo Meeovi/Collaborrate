@@ -1,5 +1,5 @@
 query findManyDiscounts($cursor: DiscountsWhereUniqueInput, $distinct: [DiscountsScalarFieldEnum!], $orderBy: [DiscountsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: DiscountsWhereInput){
-    findManyDiscounts(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyDiscounts{
         articles
         categories
         coupons

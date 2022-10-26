@@ -1,5 +1,5 @@
 query findFirstIntegrations($cursor: IntegrationsWhereUniqueInput, $distinct: [IntegrationsScalarFieldEnum!], $orderBy: [IntegrationsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: IntegrationsWhereInput){
-    findFirstIntegrations(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstIntegrations{
         category
         content
         created_at

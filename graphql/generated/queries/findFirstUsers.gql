@@ -1,5 +1,5 @@
 query findFirstUsers($cursor: UsersWhereUniqueInput, $distinct: [UsersScalarFieldEnum!], $orderBy: [UsersOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: UsersWhereInput){
-    findFirstUsers(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstUsers{
         created_at
         email
         emails

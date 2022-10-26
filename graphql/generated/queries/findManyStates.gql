@@ -1,5 +1,5 @@
 query findManyStates($cursor: StatesWhereUniqueInput, $distinct: [StatesScalarFieldEnum!], $orderBy: [StatesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: StatesWhereInput){
-    findManyStates(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyStates{
         country
         description
         id

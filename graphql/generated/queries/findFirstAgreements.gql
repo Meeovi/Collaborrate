@@ -1,5 +1,5 @@
 query findFirstAgreements($cursor: AgreementsWhereUniqueInput, $distinct: [AgreementsScalarFieldEnum!], $orderBy: [AgreementsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: AgreementsWhereInput){
-    findFirstAgreements(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstAgreements{
         content
         created
         excerpt

@@ -1,5 +1,5 @@
 query findManyMessages($cursor: MessagesWhereUniqueInput, $distinct: [MessagesScalarFieldEnum!], $orderBy: [MessagesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: MessagesWhereInput){
-    findManyMessages(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyMessages{
         content
         created_at
         cust_id

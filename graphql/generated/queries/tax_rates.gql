@@ -1,5 +1,5 @@
 query tax_rates($cursor: Tax_rateWhereUniqueInput, $distinct: [Tax_rateScalarFieldEnum!], $orderBy: [Tax_rateOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Tax_rateWhereInput){
-    tax_rates(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    tax_rates{
         country
         default_store_view
         id

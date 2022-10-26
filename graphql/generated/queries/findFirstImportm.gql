@@ -1,5 +1,5 @@
 query findFirstImportm($cursor: ImportmWhereUniqueInput, $distinct: [ImportmScalarFieldEnum!], $orderBy: [ImportmOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ImportmWhereInput){
-    findFirstImportm(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstImportm{
         created_at
         description
         file

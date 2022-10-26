@@ -1,5 +1,5 @@
 query findFirstScheduler($cursor: SchedulerWhereUniqueInput, $distinct: [SchedulerScalarFieldEnum!], $orderBy: [SchedulerOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: SchedulerWhereInput){
-    findFirstScheduler(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstScheduler{
         created_at
         end_date
         id

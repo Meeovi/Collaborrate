@@ -1,5 +1,5 @@
 query findFirstStocks($cursor: StocksWhereUniqueInput, $distinct: [StocksScalarFieldEnum!], $orderBy: [StocksOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: StocksWhereInput){
-    findFirstStocks(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstStocks{
         description
         enabled
         id

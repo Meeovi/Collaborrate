@@ -1,5 +1,5 @@
-query findManyCustomers($cursor: CustomersWhereUniqueInput, $distinct: [CustomersScalarFieldEnum!], $orderBy: [CustomersOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CustomersWhereInput){
-    findManyCustomers(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+query findManyCustomers{
+    findManyCustomers{
         Address
         address_two
         comments

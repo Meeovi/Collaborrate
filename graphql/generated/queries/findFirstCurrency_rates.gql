@@ -1,5 +1,5 @@
 query findFirstCurrency_rates($cursor: Currency_ratesWhereUniqueInput, $distinct: [Currency_ratesScalarFieldEnum!], $orderBy: [Currency_ratesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Currency_ratesWhereInput){
-    findFirstCurrency_rates(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstCurrency_rates{
         id
         import_service
         usd

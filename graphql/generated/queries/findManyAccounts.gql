@@ -1,5 +1,5 @@
 query findManyAccounts($cursor: AccountsWhereUniqueInput, $distinct: [AccountsScalarFieldEnum!], $orderBy: [AccountsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: AccountsWhereInput){
-    findManyAccounts(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyAccounts{
         address
         alt_address
         alt_city

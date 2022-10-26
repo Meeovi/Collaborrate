@@ -1,5 +1,5 @@
 query ticketings($cursor: TicketingWhereUniqueInput, $distinct: [TicketingScalarFieldEnum!], $orderBy: [TicketingOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: TicketingWhereInput){
-    ticketings(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    ticketings{
         account_name
         assigned_to
         comment

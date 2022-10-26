@@ -1,5 +1,5 @@
 query findManyComments($cursor: CommentsWhereUniqueInput, $distinct: [CommentsScalarFieldEnum!], $orderBy: [CommentsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CommentsWhereInput){
-    findManyComments(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyComments{
         cust_id
         customer_name
         customers

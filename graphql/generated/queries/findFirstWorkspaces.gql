@@ -1,5 +1,5 @@
 query findFirstWorkspaces($cursor: WorkspacesWhereUniqueInput, $distinct: [WorkspacesScalarFieldEnum!], $orderBy: [WorkspacesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: WorkspacesWhereInput){
-    findFirstWorkspaces(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstWorkspaces{
         author
         brands
         brands_brandsToworkspaces

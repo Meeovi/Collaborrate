@@ -1,5 +1,5 @@
 query findFirstChecklist($cursor: ChecklistWhereUniqueInput, $distinct: [ChecklistScalarFieldEnum!], $orderBy: [ChecklistOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ChecklistWhereInput){
-    findFirstChecklist(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstChecklist{
         country
         created_at
         description

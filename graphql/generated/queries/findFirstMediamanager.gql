@@ -1,5 +1,5 @@
 query findFirstMediamanager($cursor: MediamanagerWhereUniqueInput, $distinct: [MediamanagerScalarFieldEnum!], $orderBy: [MediamanagerOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: MediamanagerWhereInput){
-    findFirstMediamanager(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstMediamanager{
         agreements
         agreements_agreementsTomediamanager
         albums

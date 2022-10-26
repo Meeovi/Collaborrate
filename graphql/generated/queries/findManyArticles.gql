@@ -1,5 +1,5 @@
 query findManyArticles($cursor: ArticlesWhereUniqueInput, $distinct: [ArticlesScalarFieldEnum!], $orderBy: [ArticlesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ArticlesWhereInput){
-    findManyArticles(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyArticles{
         categories
         content
         cust_id

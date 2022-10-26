@@ -1,5 +1,5 @@
 query glossaries($cursor: GlossaryWhereUniqueInput, $distinct: [GlossaryScalarFieldEnum!], $orderBy: [GlossaryOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: GlossaryWhereInput){
-    glossaries(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    glossaries{
         content
         id
         image

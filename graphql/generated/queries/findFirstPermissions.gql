@@ -1,5 +1,5 @@
 query findFirstPermissions($cursor: PermissionsWhereUniqueInput, $distinct: [PermissionsScalarFieldEnum!], $orderBy: [PermissionsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: PermissionsWhereInput){
-    findFirstPermissions(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstPermissions{
         content
         create
         created_at

@@ -1,5 +1,5 @@
 query findManyCart_price_rules($cursor: Cart_price_rulesWhereUniqueInput, $distinct: [Cart_price_rulesScalarFieldEnum!], $orderBy: [Cart_price_rulesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Cart_price_rulesWhereInput){
-    findManyCart_price_rules(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyCart_price_rules{
         actions_apply
         actions_apply_shipping_amount
         actions_discard_subsequent_rules

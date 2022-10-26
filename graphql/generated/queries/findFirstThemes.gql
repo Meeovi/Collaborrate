@@ -1,5 +1,5 @@
 query findFirstThemes($cursor: ThemesWhereUniqueInput, $distinct: [ThemesScalarFieldEnum!], $orderBy: [ThemesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ThemesWhereInput){
-    findFirstThemes(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstThemes{
         action
         id
         parent_theme

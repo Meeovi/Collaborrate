@@ -1,5 +1,5 @@
 query findFirstPolls($cursor: PollsWhereUniqueInput, $distinct: [PollsScalarFieldEnum!], $orderBy: [PollsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: PollsWhereInput){
-    findFirstPolls(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstPolls{
         articles
         categories
         customers

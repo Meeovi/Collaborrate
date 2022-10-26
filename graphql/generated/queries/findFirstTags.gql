@@ -1,5 +1,5 @@
 query findFirstTags($cursor: TagsWhereUniqueInput, $distinct: [TagsScalarFieldEnum!], $orderBy: [TagsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: TagsWhereInput){
-    findFirstTags(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstTags{
         articles
         categories
         customers

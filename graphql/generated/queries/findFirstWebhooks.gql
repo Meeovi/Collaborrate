@@ -1,5 +1,5 @@
 query findFirstWebhooks($cursor: WebhooksWhereUniqueInput, $distinct: [WebhooksScalarFieldEnum!], $orderBy: [WebhooksOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: WebhooksWhereInput){
-    findFirstWebhooks(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstWebhooks{
         create
         created_at
         delete

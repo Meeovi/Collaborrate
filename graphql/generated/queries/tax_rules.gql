@@ -1,5 +1,5 @@
 query tax_rules($cursor: Tax_ruleWhereUniqueInput, $distinct: [Tax_ruleScalarFieldEnum!], $orderBy: [Tax_ruleOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Tax_ruleWhereInput){
-    tax_rules(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    tax_rules{
         id
         name
         prod_id

@@ -1,5 +1,5 @@
 query findFirstPlugins($cursor: PluginsWhereUniqueInput, $distinct: [PluginsScalarFieldEnum!], $orderBy: [PluginsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: PluginsWhereInput){
-    findFirstPlugins(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstPlugins{
         agree_terms
         created_at
         description

@@ -1,5 +1,5 @@
 query findFirstVendors($cursor: VendorsWhereUniqueInput, $distinct: [VendorsScalarFieldEnum!], $orderBy: [VendorsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: VendorsWhereInput){
-    findFirstVendors(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstVendors{
         articles
         categories
         comments

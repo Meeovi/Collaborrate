@@ -1,5 +1,5 @@
 query findManyCases($cursor: CasesWhereUniqueInput, $distinct: [CasesScalarFieldEnum!], $orderBy: [CasesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CasesWhereInput){
-    findManyCases(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyCases{
         account_name
         assigned_to
         case_number

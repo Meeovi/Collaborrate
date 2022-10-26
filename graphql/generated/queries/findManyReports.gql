@@ -1,5 +1,5 @@
 query findManyReports($cursor: ReportsWhereUniqueInput, $distinct: [ReportsScalarFieldEnum!], $orderBy: [ReportsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ReportsWhereInput){
-    findManyReports(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyReports{
         applied_coupon
         created
         customer

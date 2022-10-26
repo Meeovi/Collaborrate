@@ -1,5 +1,5 @@
 query findFirstEvents($cursor: EventsWhereUniqueInput, $distinct: [EventsScalarFieldEnum!], $orderBy: [EventsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: EventsWhereInput){
-    findFirstEvents(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstEvents{
         category
         city
         content

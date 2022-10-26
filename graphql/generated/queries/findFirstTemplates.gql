@@ -1,5 +1,5 @@
 query findFirstTemplates($cursor: TemplatesWhereUniqueInput, $distinct: [TemplatesScalarFieldEnum!], $orderBy: [TemplatesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: TemplatesWhereInput){
-    findFirstTemplates(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstTemplates{
         active
         assigned_to
         content

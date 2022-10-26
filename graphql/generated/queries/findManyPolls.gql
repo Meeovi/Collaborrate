@@ -1,5 +1,5 @@
 query findManyPolls($cursor: PollsWhereUniqueInput, $distinct: [PollsScalarFieldEnum!], $orderBy: [PollsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: PollsWhereInput){
-    findManyPolls(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyPolls{
         articles
         categories
         customers

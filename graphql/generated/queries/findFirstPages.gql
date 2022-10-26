@@ -1,5 +1,5 @@
 query findFirstPages($cursor: PagesWhereUniqueInput, $distinct: [PagesScalarFieldEnum!], $orderBy: [PagesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: PagesWhereInput){
-    findFirstPages(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstPages{
         content
         content_title
         enable_page

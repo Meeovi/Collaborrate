@@ -1,5 +1,5 @@
 query findManyVisits($cursor: VisitsWhereUniqueInput, $distinct: [VisitsScalarFieldEnum!], $orderBy: [VisitsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: VisitsWhereInput){
-    findManyVisits(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyVisits{
         content
         created_at
         emergency

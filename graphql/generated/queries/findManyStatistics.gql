@@ -1,5 +1,5 @@
 query findManyStatistics($cursor: StatisticsWhereUniqueInput, $distinct: [StatisticsScalarFieldEnum!], $orderBy: [StatisticsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: StatisticsWhereInput){
-    findManyStatistics(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyStatistics{
         articles
         categories
         coupons

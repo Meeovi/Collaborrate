@@ -1,5 +1,5 @@
 query findFirstTax_rate($cursor: Tax_rateWhereUniqueInput, $distinct: [Tax_rateScalarFieldEnum!], $orderBy: [Tax_rateOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Tax_rateWhereInput){
-    findFirstTax_rate(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findFirstTax_rate{
         country
         default_store_view
         id

@@ -1,5 +1,5 @@
 query schedulers($cursor: SchedulerWhereUniqueInput, $distinct: [SchedulerScalarFieldEnum!], $orderBy: [SchedulerOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: SchedulerWhereInput){
-    schedulers(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    schedulers{
         created_at
         end_date
         id

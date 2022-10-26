@@ -1,5 +1,5 @@
 query findManyPages($cursor: PagesWhereUniqueInput, $distinct: [PagesScalarFieldEnum!], $orderBy: [PagesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: PagesWhereInput){
-    findManyPages(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyPages{
         content
         content_title
         enable_page

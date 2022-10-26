@@ -1,5 +1,5 @@
 query findManyCurrencies($cursor: CurrenciesWhereUniqueInput, $distinct: [CurrenciesScalarFieldEnum!], $orderBy: [CurrenciesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CurrenciesWhereInput){
-    findManyCurrencies(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyCurrencies{
         code
         created_at
         id

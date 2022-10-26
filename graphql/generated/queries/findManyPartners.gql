@@ -1,5 +1,5 @@
 query findManyPartners($cursor: PartnersWhereUniqueInput, $distinct: [PartnersScalarFieldEnum!], $orderBy: [PartnersOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: PartnersWhereInput){
-    findManyPartners(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
+    findManyPartners{
         address
         business_type
         city
