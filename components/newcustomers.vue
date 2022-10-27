@@ -26,20 +26,22 @@
 </template>
 
 <script>
-  import findFirstCustomers from '~/graphql/generated/queries/findFirstCustomers'
+import gql from 'graphql-tag';
 
-  export default {
-    data() {
-      return {
-        findFirstCustomers: [],
-      }
+const findManyCustomers = gql`{
+    findManyCustomers(take: 5, orderBy: {customer_since: desc}) {
+      email
+      first_name
+      last_name
+      customer_since
+    }
+}`
+export default {
+  apollo: {
+    findManyCustomers: {
+      query: findManyCustomers,
+      prefetch: true,
     },
-    apollo: {
-      findFirstCustomers: {
-        prefetch: true,
-        query: findFirstCustomers
-      },
-    },
-  }
-
+  },
+}
 </script>

@@ -1,4 +1,4 @@
-query findManyReviews($cursor: ReviewsWhereUniqueInput, $distinct: [ReviewsScalarFieldEnum!], $orderBy: [ReviewsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ReviewsWhereInput){
+query findManyReviews{
     findManyReviews{
         comment_id
         content

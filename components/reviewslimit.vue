@@ -4,17 +4,19 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Customer ID</th>
+            <th>Review ID</th>
             <th>Customer First Name</th>
             <th>Customer Last Name</th>
+            <th>Review</th>
             <th>Created On</th>
             <th>Websites</th>
           </tr>
         </thead>
-        <tbody v-for="reviews in findFirstReviews" :key="reviews.id">
+        <tbody v-for="reviews in findManyReviews" :key="reviews.id">
           <tr>
             <th scope="row">{{reviews.id}}</th>
-            <td>{{reviews.first_name}} {{reviews.last_name}}</td>
+            <td>{{reviews.first_name}}</td>
+            <td>{{reviews.last_name}}</td>
             <td>{{reviews.content}}</td>
             <td>{{reviews.created_at}}</td>
             <td>{{reviews.websites}}</td>
@@ -26,20 +28,24 @@
 </template>
 
 <script>
-  import findFirstReviews from '~/graphql/generated/queries/findFirstReviews'
+import gql from 'graphql-tag';
 
-  export default {
-    data() {
-      return {
-        findFirstReviews: [],
-      }
+const findManyReviews = gql`{
+    findManyReviews(take: 5) {
+        content
+        created_at
+        first_name
+        id
+        last_name
+        websites
+    }
+}`
+export default {
+  apollo: {
+    findManyReviews: {
+      query: findManyReviews,
+      prefetch: true,
     },
-    apollo: {
-      findFirstReviews: {
-        prefetch: true,
-        query: findFirstReviews
-      },
-    },
-  }
-
+  },
+}
 </script>
