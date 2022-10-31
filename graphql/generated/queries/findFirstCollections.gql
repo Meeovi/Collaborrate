@@ -1,5 +1,5 @@
 query findFirstCollections($cursor: CollectionsWhereUniqueInput, $distinct: [CollectionsScalarFieldEnum!], $orderBy: [CollectionsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CollectionsWhereInput){
-    findFirstCollections{
+    findFirstCollections(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         created_at
         description
         id

@@ -1,5 +1,5 @@
 query findManyZones($cursor: ZonesWhereUniqueInput, $distinct: [ZonesScalarFieldEnum!], $orderBy: [ZonesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ZonesWhereInput){
-    findManyZones{
+    findManyZones(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         code
         country
         created_at

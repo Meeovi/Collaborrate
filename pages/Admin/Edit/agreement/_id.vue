@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form method="POST" @submit.prevent="updateAgreement()">
+    <form v-for="agreement in findManyAgreements" :key="agreement.id" method="POST" @submit.prevent="updateAgreement()">
 
       <br>
       <div class="row">
@@ -28,29 +28,11 @@
                     <tr>
                       <td style="text-align: right;">Agreement Type</td>
                       <td>
-                        <select name="agreementType" id="agreementType" v-model="type" :value="agreement.type">{{ agreement.type }}
+                        <select name="agreementType" id="agreementType" :value="agreement.type">
                           <option value="policies">Policies</option>
                           <option value="agreements">Agreements</option>
                           <option value="announcements">Announcements</option>
                         </select>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">User ID</td>
-                      <td>
-                        <input type="text" id="name" disabled :value="agreement.user_id" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">Reference ID</td>
-                      <td>
-                        <input type="text" id="name" disabled :value="agreement.reference_id" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">Shop ID</td>
-                      <td>
-                        <input v-model="shop_id" type="text" id="name" disabled />{{ agreement.shop_id }}
                       </td>
                     </tr>
                     <tr>
@@ -63,15 +45,13 @@
                       <td style="text-align: right;">Detail</td>
                       <td>
                         <client-only>
-                          <Editor v-model="content" />
-                        </client-only><br>{{ agreement.content }}
+                          <Editor :value="agreement.content" />
+                        </client-only><br>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <input v-model="image" type="image" name="headshot" value="Select an image to upload"
-                          help="Select a png, jpg or gif to upload."
-                          validation="mime:image/jpeg,image/png,image/gif" />{{ agreement.image }}
+                        <input :value="agreement.image" type="image" name="headshot" />
                       </td>
                     </tr>
                   </tbody>

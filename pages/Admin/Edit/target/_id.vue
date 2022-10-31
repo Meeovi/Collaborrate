@@ -30,7 +30,7 @@
                     <tr>
                       <td style="text-align: right;">Prefix</td>
                       <td>
-                        <select id="status" v-model="Prefix" name="template" class="form-category">
+                        <select id="status" :value="target.Prefix" name="template" class="form-category">
                           <option value="mr">Mr.</option>
                           <option value="ms">Ms.</option>
                           <option value="miss">Miss</option>
@@ -43,73 +43,73 @@
                     <tr>
                       <td style="text-align: right;">First Name</td>
                       <td>
-                        <input v-model="first_name" type="text" />
+                        <input :value="target.first_name" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Last Name</td>
                       <td>
-                        <input v-model="last_name" type="text" />
+                        <input :value="target.last_name" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Job Title</td>
                       <td>
-                        <input v-model="job_title" type="text" />
+                        <input :value="target.job_title" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Department</td>
                       <td>
-                        <input v-model="department" type="text" />
+                        <input :value="target.department" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Account Name</td>
                       <td>
-                        <input v-model="account_name" type="text" />
+                        <input :value="target.account_name" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Office Phone</td>
                       <td>
-                        <input v-model="office_phone" type="phone" />
+                        <input :value="target.office_phone" type="phone" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Mobile</td>
                       <td>
-                        <input v-model="mobile" type="phone" />
+                        <input :value="target.mobile" type="phone" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Fax</td>
                       <td>
-                        <input v-model="fax" type="phone" />
+                        <input :value="target.fax" type="phone" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Website</td>
                       <td>
-                        <input v-model="website" type="url" />
+                        <input :value="target.website" type="url" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Primary Address Street</td>
                       <td>
-                        <input v-model="address" type="text" />
+                        <input :value="target.address" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Primary Address Postalcode</td>
                       <td>
-                        <input v-model="postalcode" type="text" />
+                        <input :value="target.postalcode" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Primary Address City</td>
                       <td>
-                        <select id="city" v-model="city" name="template" class="form-category">
+                        <select id="city" :value="target.city" name="template" class="form-category">
                           <option v-for="city in findManyCities" :key="city" :value="city">{{ city.name }}
                           </option>
                         </select>
@@ -118,7 +118,7 @@
                     <tr>
                       <td style="text-align: right;">Primary Address State</td>
                       <td>
-                        <select id="state" v-model="state" name="template" class="form-category">
+                        <select id="state" :value="target.state" name="template" class="form-category">
                           <option v-for="states in findManyStates" :key="states" :value="states">{{ states.name }}
                           </option>
                         </select>
@@ -127,7 +127,7 @@
                     <tr>
                       <td style="text-align: right;">Primary Address Country</td>
                       <td>
-                        <select id="country" v-model="country" name="template" class="form-category">
+                        <select id="country" :value="target.country" name="template" class="form-category">
                           <option v-for="countries in findManyCountries" :key="countries" :value="countries">
                             {{ countries.name }}
                           </option>
@@ -137,19 +137,19 @@
                     <tr>
                       <td style="text-align: right;">Alternate Address Street</td>
                       <td>
-                        <input v-model="alt_address" type="text" value="Other Address" />
+                        <input :value="target.alt_address" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Alternate Address Postalcode</td>
                       <td>
-                        <input v-model="alt_postalcode" type="text" value="Other Address Postalcode" />
+                        <input :value="target.alt_postalcode" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Alternate Address City</td>
                       <td>
-                        <select id="city" v-model="alt_city" name="template" class="form-category">
+                        <select id="city" :value="target.alt_city" name="template" class="form-category">
                           <option v-for="city in findManyCities" :key="city" :value="city">{{ city.name }}
                           </option>
                         </select>
@@ -158,7 +158,7 @@
                     <tr>
                       <td style="text-align: right;">Alternate Address State</td>
                       <td>
-                        <select id="state" v-model="alt_state" name="template" class="form-category">
+                        <select id="state" :value="target.alt_state" name="template" class="form-category">
                           <option v-for="states in findManyStates" :key="states" :value="states">{{ states.name }}
                           </option>
                         </select>
@@ -167,7 +167,7 @@
                     <tr>
                       <td style="text-align: right;">Alternate Address Country</td>
                       <td>
-                        <select id="country" v-model="alt_country" name="template" class="form-category">
+                        <select id="country" :value="target.alt_country" name="template" class="form-category">
                           <option v-for="countries in findManyCountries" :key="countries" :value="countries">
                             {{ countries.name }}
                           </option>
@@ -177,13 +177,13 @@
                     <tr>
                       <td style="text-align: right;">Email Address</td>
                       <td>
-                        <input v-model="email" type="email" />
+                        <input :value="target.email" type="email" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <textarea v-model="description" cols="40" rows="10"></textarea>
+                        <textarea :value="target.description" cols="40" rows="10"></textarea>
                       </td>
                     </tr>
                   </tbody>
@@ -207,7 +207,7 @@
                             <tr>
                               <td style="text-align: right;">Email Opt Out</td>
                               <td>
-                                <select id="status" v-model="email_opt_out" name="template" class="form-category">
+                                <select id="status" :value="target.email_opt_out" name="template" class="form-category">
                                   <option value="optIn">Opt In</option>
                                   <option value="OptOut">Opt Out</option>
                                 </select>
@@ -216,7 +216,7 @@
                             <tr>
                               <td style="text-align: right;">Do Not Call</td>
                               <td>
-                                <select id="status" v-model="donotcall" name="template" class="form-category">
+                                <select id="status" :value="target.donotcall" name="template" class="form-category">
                                   <option value="call">Call</option>
                                   <option value="doNotCall">Do Not Call</option>
                                 </select>

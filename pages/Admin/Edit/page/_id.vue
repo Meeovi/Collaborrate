@@ -28,11 +28,11 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Page Name</td>
-                      <td><input v-model="title" type="text" id="pageName" required /></td>
+                      <td><input :value="page.title" type="text" id="pageName" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Page Url</td>
-                      <td><input v-model="url_key" type="url" id="pageName" /></td>
+                      <td><input :value="page.url_key" type="url" id="pageName" /></td>
                     </tr>
                   </tbody>
                 </table>
@@ -55,7 +55,7 @@
                             <tr>
                               <td style="text-align: right;">Content</td>
                               <td>
-                                <client-only><Editor v-model="content" /></client-only>
+                                <client-only><Editor :value="page.content" /></client-only>
                               </td>
                             </tr>
                           </tbody>
@@ -83,15 +83,15 @@
                           </tr>
                           <tr>
                             <td style="text-align: right;">Meta Title</td>
-                            <td><input v-model="meta_title" type="text" value="Product Url" required /></td>
+                            <td><input :value="page.meta_title" id="pageName" type="text" required /></td>
                           </tr>
                           <tr>
                             <td style="text-align: right;">Meta Keywords</td>
-                            <td><input v-model="meta_keywords" type="text" value="Product Keywords" /></td>
+                            <td><input :value="page.meta_keywords" type="text" /></td>
                           </tr>
                           <tr>
                             <td style="text-align: right;">Meta Description</td>
-                            <td><textarea v-model="meta_description" cols="40" rows="10"></textarea></td>
+                            <td><textarea :value="page.meta_description" cols="40" rows="10"></textarea></td>
                           </tr>
                         </tbody>
                       </table>

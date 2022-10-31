@@ -1,5 +1,5 @@
 query findManyTemplates($cursor: TemplatesWhereUniqueInput, $distinct: [TemplatesScalarFieldEnum!], $orderBy: [TemplatesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: TemplatesWhereInput){
-    findManyTemplates{
+    findManyTemplates(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         active
         assigned_to
         content

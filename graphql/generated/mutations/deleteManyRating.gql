@@ -1,5 +1,0 @@
-mutation deleteManyRating($where: RatingWhereInput){
-    deleteManyRating(where: $where){
-        count
-    }
-}

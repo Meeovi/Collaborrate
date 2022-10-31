@@ -1,0 +1,5 @@
+mutation updateManyTaxes($data: TaxesUpdateManyMutationInput!, $where: TaxesWhereInput){
+    updateManyTaxes(data: $data, where: $where){
+        count
+    }
+}

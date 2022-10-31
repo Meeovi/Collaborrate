@@ -1,5 +1,0 @@
-mutation deleteManyCurrency_symbols($where: Currency_symbolsWhereInput){
-    deleteManyCurrency_symbols(where: $where){
-        count
-    }
-}

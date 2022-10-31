@@ -29,7 +29,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="type">Product Types</label><br>
-                        <select id="productType" v-model="types" name="template" class="form-attribute">
+                        <select id="productType" :value="products.types" name="template" class="form-attribute">
                           <option v-for="types in findManyProduct_types" :key="types.id" :value="product_types">
                             {{ types.name }}
                           </option>
@@ -39,7 +39,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="attributes">Attributes</label><br>
-                        <select id="productAttribute" v-model="attributes" name="template" class="form-attribute">
+                        <select id="productAttribute" :value="products.attributes" name="template" class="form-attribute">
                           <option v-for="attributes in findManyAttributes" :key="attributes.id" :value="product_attribute">
                             {{ attributes.name }}</option>
                         </select>
@@ -47,27 +47,27 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="name" type="text" required value="Product Name" />
+                        <input :value="products.name" type="text" required />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="price" type="number" placeholder="$" value="Product Price" required />
+                        <input :value="products.price" type="number" placeholder="$" required />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="tax_class" name="productTax" value="Tax Class" type="text" />
+                        <input :value="products.tax_class" name="productTax" type="text" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="quantity_per_source" type="number" value="Quantity" />
+                        <input :value="products.quantity_per_source" type="number" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <select id="stockStatus" v-model="stock_status">
+                        <select id="stockStatus" :value="products.stock_status">
                           <option value="inStock">In Stock</option>
                           <option value="outStock">Out of Stock</option>
                           <option value="backorder">Backorder</option>
@@ -77,17 +77,17 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="height" type="number" value="Product Height" />
+                        <input :value="products.height" type="number" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="weight" type="number" value="Product Weight" />
+                        <input :value="products.weight" type="number" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <select id="visibility" v-model="visibility">
+                        <select id="visibility" :value="products.visibility">
                           <option value="public">Public</option>
                           <option value="private">Private</option>
                           <option value="draft">Draft</option>
@@ -98,7 +98,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="categories">Categories</label><br>
-                        <select id="category" v-model="categories">
+                        <select id="category" :value="products.categories">
                           <option v-for="categories in categories" :key="categories.id" :value="categories">
                             {{ categories.name }}</option>
                         </select>
@@ -107,7 +107,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="brand">Brands</label><br>
-                        <select id="category" v-model="brand">
+                        <select id="category" :value="products.brand">
                           <option v-for="brand in findManyBrands" :key="brand.id" :value="brand">
                             {{ brand.name }}</option>
                         </select>
@@ -116,7 +116,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="manufacture">manufacturer</label><br>
-                        <select id="category" v-model="manufacture">
+                        <select id="category" :value="products.manufacture">
                           <option v-for="manufacture in manufacturerss" :key="manufacture.id"
                             :value="manufacture">
                             {{ manufacture.name }}</option>
@@ -126,7 +126,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="events">Occassions</label><br>
-                        <select id="category" v-model="occassions">
+                        <select id="category" :value="products.occassions">
                           <option v-for="events in findManyEvents" :key="events.id" :value="events">
                             {{ events.name }}</option>
                         </select>
@@ -135,7 +135,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="tags">Tags</label><br>
-                        <select id="category" v-model="tags">
+                        <select id="category" :value="products.tags">
                           <option v-for="tags in tags" :key="tags.id" :value="tags">
                             {{ tags.name }}</option>
                         </select>
@@ -144,7 +144,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="countries">Countries</label><br>
-                        <select id="category" v-model="country">
+                        <select id="category" :value="products.country">
                           <option v-for="countries in findManyCountries" :key="countries.id" :value="countries">
                             {{ countries.name }}</option>
                         </select>
@@ -153,7 +153,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="contract">Contracts</label><br>
-                        <select id="contract" v-model="contract">
+                        <select id="contract" :value="products.contract">
                           <option v-for="contract in findManyContracts" :key="contract.id" :value="contract">
                             {{ contract.name }}</option>
                         </select>
@@ -162,7 +162,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="zone">Zones</label><br>
-                        <select id="zone" v-model="zone">
+                        <select id="zone" :value="products.zone">
                           <option v-for="zone in findManyZones" :key="zone.id" :value="zone">
                             {{ zone.name }}</option>
                         </select>
@@ -170,7 +170,7 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <select id="size" v-model="size">
+                        <select id="size" :value="products.size">
                           <option value="petite">Petite</option>
                           <option value="xs">Extra Small</option>
                           <option value="small">Small</option>
@@ -184,7 +184,7 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <select id="format" v-model="format">
+                        <select id="format" :value="products.format">
                           <option value="digital">Digital</option>
                           <option value="physical">Physical</option>
                           <option value="service">Service</option>
@@ -195,7 +195,7 @@
                     <tr class="col-lg-12">
                       <td>
                         <label for="product">Related Products</label><br>
-                        <select id="product" v-model="product">
+                        <select id="product" :value="products.product">
                           <option v-for="product in findManyProducts" :key="product.id" :value="product">
                             {{ product.name }}</option>
                         </select>
@@ -223,8 +223,7 @@
                               <td style="text-align: right;">Short Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <textarea v-model="short_description" cols="50" rows="10"
-                                    value="Add a short Description"></textarea>
+                                  <textarea :value="products.short_description" cols="50" rows="10"></textarea>
                                 </div>
                               </td>
                             </tr>
@@ -232,8 +231,7 @@
                               <td style="text-align: right;">Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <textarea v-model="description" cols="50" rows="10"
-                                    value="Add a longer Description"></textarea>
+                                  <textarea :value="products.description" cols="50" rows="10"></textarea>
                                 </div>
                               </td>
                             </tr>
@@ -280,23 +278,22 @@
                             </tr>
                             <tr class="col-lg-6">
                               <td>
-                                <input v-model="meta_title" type="text" value="Meta Title" required />
+                                <input :value="products.meta_title" type="text" required />
                               </td>
                             </tr>
                             <tr class="col-lg-6">
                               <td>
-                                <input v-model="meta_keywords" type="text" value="Meta Keywords" />
+                                <input :value="products.meta_keywords" type="text" />
                               </td>
                             </tr>
                             <tr class="col-lg-6">
                               <td>
-                                <textarea v-model="meta_description" cols="50" rows="10"
-                                  value="Add a Meta Description"></textarea>
+                                <textarea :value="products.meta_description" cols="50" rows="10"></textarea>
                               </td>
                             </tr>
                             <tr class="col-lg-6">
                               <td>
-                                <input v-model="meta_url" type="url" value="Meta URL" />
+                                <input :value="products.meta_url" type="url" />
                               </td>
                             </tr>
                           </tbody>
@@ -331,11 +328,11 @@
       </div>
     </form>
     <div class="product-footer">
-      <li><a href="/admin/add-new/add-new-category" target="_blank">
+      <li><a href="/admin/edit/add-new-category" target="_blank">
           <input type="submit" class="btn btn-warning" value="Add New Category" /></a></li>
-      <li><a href="/admin/add-new/add-new-attribute" target="_blank">
+      <li><a href="/admin/edit/add-new-attribute" target="_blank">
           <input type="submit" class="btn btn-warning" value="Add New Product Attribute" /></a></li>
-      <li><a href="/admin/add-new/add-new-producttype" target="_blank">
+      <li><a href="/admin/edit/add-new-producttype" target="_blank">
           <input type="submit" class="btn btn-warning" value="Add New Product Type" /></a></li>
     </div>
   </div>

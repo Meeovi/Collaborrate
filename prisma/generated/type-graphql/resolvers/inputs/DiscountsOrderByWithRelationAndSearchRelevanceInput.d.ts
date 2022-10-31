@@ -16,5 +16,10 @@ export declare class DiscountsOrderByWithRelationAndSearchRelevanceInput {
     customers?: "asc" | "desc" | undefined;
     users?: "asc" | "desc" | undefined;
     type?: "asc" | "desc" | undefined;
+    creditMemo?: "asc" | "desc" | undefined;
+    billToName?: "asc" | "desc" | undefined;
+    orderNumber?: "asc" | "desc" | undefined;
+    refunded?: "asc" | "desc" | undefined;
+    status?: "asc" | "desc" | undefined;
     _relevance?: DiscountsOrderByRelevanceInput | undefined;
 }

@@ -21,9 +21,6 @@
               <a class="sidenav-link" style="color: white;" href="/admin/sales/shipments">Shipments</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/sales/credit-receipts">Credit Receipts</a>
-            </li><br>
-            <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/sales/returns">Returns</a>
             </li><br>
             <li class="sidenav-item">
@@ -49,9 +46,6 @@
             </li><br>
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/customers/segments">Segments</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/customers/social-groups">Social Groups</a>
             </li><br>
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/customers/opportunities">Opportunities</a>

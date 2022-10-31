@@ -1,5 +1,0 @@
-mutation updateManyCatalog_price_rule($data: Catalog_price_ruleUpdateManyMutationInput!, $where: Catalog_price_ruleWhereInput){
-    updateManyCatalog_price_rule(data: $data, where: $where){
-        count
-    }
-}

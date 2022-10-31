@@ -1,5 +1,5 @@
 query findManyVendors($cursor: VendorsWhereUniqueInput, $distinct: [VendorsScalarFieldEnum!], $orderBy: [VendorsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: VendorsWhereInput){
-    findManyVendors{
+    findManyVendors(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         articles
         categories
         comments

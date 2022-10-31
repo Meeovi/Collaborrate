@@ -38,13 +38,13 @@
                     <tr>
                       <td style="text-align: right;">Warehouse Name</td>
                       <td>
-                        <input v-model="name" type="text" required />
+                        <input type="text" :value="warehouse.name" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <textarea v-model="description" cols="40" rows="10"></textarea>
+                        <textarea :value="warehouse.description" cols="40" rows="10"></textarea>
                       </td>
                     </tr>
                     <tr>
@@ -86,13 +86,13 @@
                     <tr>
                       <td style="text-align: right;">Postal Code</td>
                       <td>
-                        <input v-model="postal" type="text" />
+                        <input :value="warehouse.postal" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Products</td>
                       <td>
-                        <input v-model="products" type="text" />
+                        <input :value="warehouse.products" type="text" />
                       </td>
                     </tr>
                     <tr>

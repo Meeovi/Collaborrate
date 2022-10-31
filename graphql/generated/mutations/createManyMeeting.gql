@@ -1,5 +1,0 @@
-mutation createManyMeeting($data: [MeetingCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyMeeting(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

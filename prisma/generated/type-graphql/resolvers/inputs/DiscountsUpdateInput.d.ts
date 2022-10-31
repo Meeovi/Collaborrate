@@ -19,4 +19,9 @@ export declare class DiscountsUpdateInput {
     customers?: NullableStringFieldUpdateOperationsInput | undefined;
     users?: NullableStringFieldUpdateOperationsInput | undefined;
     type?: NullableStringFieldUpdateOperationsInput | undefined;
+    creditMemo?: NullableStringFieldUpdateOperationsInput | undefined;
+    billToName?: NullableStringFieldUpdateOperationsInput | undefined;
+    orderNumber?: NullableStringFieldUpdateOperationsInput | undefined;
+    refunded?: NullableStringFieldUpdateOperationsInput | undefined;
+    status?: NullableStringFieldUpdateOperationsInput | undefined;
 }

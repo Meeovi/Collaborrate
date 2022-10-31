@@ -1,5 +1,0 @@
-mutation deleteManyCart_price_rules($where: Cart_price_rulesWhereInput){
-    deleteManyCart_price_rules(where: $where){
-        count
-    }
-}

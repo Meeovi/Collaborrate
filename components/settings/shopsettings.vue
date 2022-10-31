@@ -80,7 +80,7 @@
             <div>
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="/admin/add-new/add-new-currency">
+                  <a class="navbar-brand" href="/admin/edit/currency/add-new-currency">
                     <button type="button" class="btn btn-danger">Create Currency</button>
                   </a>
                 </div>
@@ -261,7 +261,7 @@
             <div>
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="/admin/add-new/add-new-zone">
+                  <a class="navbar-brand" href="/admin/edit/zone/add-new-zone">
                     <button type="button" class="btn btn-danger">Create Zone</button>
                   </a>
                 </div>
@@ -305,7 +305,7 @@
             <div>
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="/admin/add-new/add-new-channel">
+                  <a class="navbar-brand" href="/admin/edit/channel/add-new-channel">
                     <button type="button" class="btn btn-danger">Create Channel</button>
                   </a>
                 </div>
@@ -354,7 +354,7 @@
             <div>
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="/admin/add-new/add-new-city">
+                  <a class="navbar-brand" href="/admin/edit/city/add-new-city">
                     <button type="button" class="btn btn-danger">Add New City</button>
                   </a>
 
@@ -403,7 +403,7 @@
             <div>
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="/admin/add-new/add-new-state">
+                  <a class="navbar-brand" href="/admin/edit/state/add-new-state">
                     <button type="button" class="btn btn-danger">Add New State</button>
                   </a>
 
@@ -450,7 +450,7 @@
             <div>
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="/admin/add-new/add-new-country">
+                  <a class="navbar-brand" href="/admin/edit/country/add-new-country">
                     <button type="button" class="btn btn-danger">Add New Country</button>
                   </a>
 
@@ -490,7 +490,7 @@
         <h2 id="flush-headingTen" class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
             data-mdb-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
-            Tax Rules
+            Taxes
           </button>
         </h2>
         <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen"
@@ -499,8 +499,8 @@
             <div>
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="/admin/add-new/add-new-taxrule">
-                    <button type="button" class="btn btn-danger">Add New Tax Rule</button>
+                  <a class="navbar-brand" href="/admin/edit/tax/add-new-tax">
+                    <button type="button" class="btn btn-danger">Add New Tax</button>
                   </a>
 
                 </div>
@@ -516,12 +516,12 @@
                       <th>Action</th>
                     </tr>
                   </thead>
-                  <tbody v-for="tax_rule in tax_rules" :key="tax_rule.id">
+                  <tbody v-for="tax in findManyTaxes" :key="tax.id">
                     <tr>
-                      <td>{{ tax_rule.id }}</td>
-                      <td>{{ tax_rule.name }}</td>
-                      <td>{{ tax_rule.tax_rates }}</td>
-                      <td><a :href="`/admin/edit/taxrule/${tax_rule.id}`">View</a></td>
+                      <td>{{ tax.id }}</td>
+                      <td>{{ tax.name }}</td>
+                      <td>{{ tax.tax_rates }}</td>
+                      <td><a :href="`/admin/edit/tax/${tax.id}`">View</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -531,57 +531,7 @@
           </div>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 id="flush-headingEleven" class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
-            data-mdb-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-            Tax Rates
-          </button>
-        </h2>
-        <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven"
-          data-mdb-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <div>
-              <nav class="navbar navbar-dark bg-dark">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="/admin/add-new/add-new-taxrate">
-                    <button type="button" class="btn btn-danger">Add New Tax Rate</button>
-                  </a>
-
-                </div>
-              </nav>
-              <br>
-              <div class="table table-responsive">
-                <table id="table" data-toggle="table" class="table">
-                  <thead class="table table-dark">
-                    <tr>
-                      <th>Tax Identifier</th>
-                      <th>Country</th>
-                      <th>State/Region</th>
-                      <th>Zip/Post Code</th>
-                      <th>Rate</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody v-for="tax_rates in tax_rates" :key="tax_rates.id">
-                    <tr>
-                      <td>{{ tax_rates.tax_identifier }}</td>
-                      <td>{{ tax_rates.country }}</td>
-                      <td>{{ tax_rates.state }}</td>
-                      <td>{{ tax_rates.postcode }}</td>
-                      <td>{{ tax_rates.rate_percent }}</td>
-                      <td><a :href="`/admin/edit/taxrate/${tax_rates.id}`">View</a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--End of Settings Tabs-->
-    </div>
+  </div>
   </div>
 </template>
 
@@ -598,8 +548,7 @@
   import findManyCountries from '~/graphql/generated/queries/findManyCountries'
   import findManyChannels from '~/graphql/generated/queries/findManyChannels'
   import findManyZones from '~/graphql/generated/queries/findManyZones'
-  import taxRates from '~/graphql/generated/queries/tax_rates'
-  import tax_rules from '~/graphql/generated/queries/tax_rules'
+  import findManyTaxes from '~/graphql/generated/queries/findManyTaxes'
 
   const ADD_GENERAL_SETTINGS = gql `
     mutation ($siteTitle:String!,$tagline:String,$siteUrl:String,$siteAdminEmail:String,$value:String){
@@ -628,7 +577,7 @@
         currencies: [],
         channels: [],
         tax_rates: [],
-        tax_rule: [],
+        tax: [],
         siteUrl: [],
         siteTitle: " ",
         tagline: " ",
@@ -707,13 +656,9 @@
         prefetch: true,
         query: findManyChannels
       },
-      taxRates: {
+      findManyTaxes: {
         prefetch: true,
-        query: taxRates
-      },
-      tax_rules: {
-        prefetch: true,
-        query: tax_rules
+        query: findManyTaxes
       },
     }, 
     // eslint-disable-next-line vue/order-in-components

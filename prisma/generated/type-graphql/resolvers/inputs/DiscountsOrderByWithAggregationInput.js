@@ -108,6 +108,36 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], DiscountsOrderByWithAggregationInput.prototype, "type", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsOrderByWithAggregationInput.prototype, "creditMemo", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsOrderByWithAggregationInput.prototype, "billToName", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsOrderByWithAggregationInput.prototype, "orderNumber", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsOrderByWithAggregationInput.prototype, "refunded", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsOrderByWithAggregationInput.prototype, "status", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => DiscountsCountOrderByAggregateInput_1.DiscountsCountOrderByAggregateInput, {
         nullable: true
     }),

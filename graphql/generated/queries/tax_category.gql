@@ -1,8 +1,0 @@
-query tax_category($where: Tax_categoryWhereUniqueInput!){
-    tax_category(where: $where){
-        created_at
-        default
-        id
-        name
-    }
-}

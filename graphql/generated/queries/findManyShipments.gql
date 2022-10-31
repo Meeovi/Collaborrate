@@ -1,5 +1,5 @@
 query findManyShipments($cursor: ShipmentsWhereUniqueInput, $distinct: [ShipmentsScalarFieldEnum!], $orderBy: [ShipmentsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ShipmentsWhereInput){
-    findManyShipments{
+    findManyShipments(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         carrier_name
         client_id
         client_secret

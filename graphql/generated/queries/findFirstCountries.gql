@@ -1,5 +1,5 @@
 query findFirstCountries($cursor: CountriesWhereUniqueInput, $distinct: [CountriesScalarFieldEnum!], $orderBy: [CountriesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CountriesWhereInput){
-    findFirstCountries{
+    findFirstCountries(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         description
         id
         image

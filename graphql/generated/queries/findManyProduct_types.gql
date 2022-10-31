@@ -1,5 +1,5 @@
 query findManyProduct_types($cursor: Product_typesWhereUniqueInput, $distinct: [Product_typesScalarFieldEnum!], $orderBy: [Product_typesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Product_typesWhereInput){
-    findManyProduct_types{
+    findManyProduct_types(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         filter_options
         id
         isShippable

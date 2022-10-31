@@ -18,49 +18,49 @@
             <tr>
               <td style="text-align: right;">Username</td>
               <td>
-                <input v-model="username" type="textarea" />{{ checklist.username }}
+                <input :value="checklist.username" type="textarea" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Regional Manager</td>
               <td>
-                <input v-model="regional_manager" type="text" />{{ checklist.regional_manager }}
+                <input :value="checklist.regional_manager" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Manager</td>
               <td>
-                <input v-model="manager" type="text" />{{ checklist.manager }}
+                <input :value="checklist.manager" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Start Date</td>
               <td>
-                <input v-model="start_date" type="text" />{{ checklist.start_date }}
+                <input :value="checklist.start_date" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">End Date</td>
               <td>
-                <input v-model="end_date" type="text" />{{ checklist.end_date }}
+                <input :value="checklist.end_date" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Region</td>
               <td>
-                <input v-model="region" type="text" />{{ checklist.region }}
+                <input :value="checklist.region" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Location</td>
               <td>
-                <input v-model="location" type="text" />{{ checklist.location }}
+                <input :value="checklist.location" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Country</td>
               <td>
-                <input v-model="country" type="text" />{{ checklist.country }}
+                <input :value="checklist.country" type="text" />
               </td>
             </tr>
             <tr>
@@ -71,7 +71,7 @@
                     <button type="group" name="description" :repeatable="true" value="Add Notes"
                       add-value="+ Add Description">
                       <div class="description">
-                        <input v-model="description" name="name" type="text" value="Description" />{{ checklist.description }}
+                        <input :value="checklist.description" name="name" type="text" value="Description" />
                       </div>
                     </button>
                   </form>
@@ -81,7 +81,7 @@
             <tr>
               <td style="text-align: right;">Media</td>
               <td>
-                <FormulateInput v-model="media" type="image" name="headshot" label="Select an image to upload" validation="mime:image/jpeg,image/png,image/gif" />{{ checklist.media }}
+                <FormulateInput :value="checklist.media" type="image" name="headshot" label="Select an image to upload" validation="mime:image/jpeg,image/png,image/gif" />{{ checklist.media }}
               </td>
             </tr>
           </tbody>

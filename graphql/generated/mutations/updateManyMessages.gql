@@ -1,5 +1,0 @@
-mutation updateManyMessages($data: MessagesUpdateManyMutationInput!, $where: MessagesWhereInput){
-    updateManyMessages(data: $data, where: $where){
-        count
-    }
-}

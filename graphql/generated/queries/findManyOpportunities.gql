@@ -1,5 +1,5 @@
 query findManyOpportunities($cursor: OpportunitiesWhereUniqueInput, $distinct: [OpportunitiesScalarFieldEnum!], $orderBy: [OpportunitiesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: OpportunitiesWhereInput){
-    findManyOpportunities{
+    findManyOpportunities(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         account_name
         amount
         assigned_to

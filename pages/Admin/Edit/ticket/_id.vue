@@ -29,7 +29,7 @@
                     <tr>
                       <td style="text-align: right;">Severity</td>
                       <td>
-                        <select id="severity" v-model="severity" name="template" class="form-category">
+                        <select id="severity" :value="ticket.severity" name="template" class="form-category">
                           <option value="5">5</option>
                           <option value="4">4</option>
                           <option value="3">3</option>
@@ -41,7 +41,7 @@
                     <tr>
                       <td style="text-align: right;">Stage of Ticket</td>
                       <td>
-                        <select id="level" v-model="level" name="template" class="form-category">
+                        <select id="level" :value="ticket.level" name="template" class="form-category">
                           <option value="Assigned">Assigned</option>
                           <option value="Pending">Pending</option>
                           <option value="WorkInProgress">Work in Progress</option>
@@ -53,13 +53,13 @@
                     <tr>
                       <td style="text-align: right;">Ticket Name</td>
                       <td>
-                        <input v-model="name" name="ticketingName" type="text" required />
+                        <input :value="ticket.name" name="ticketingName" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Ticket Type</td>
                       <td>
-                        <select id="ticketType" v-model="ticket_type" name="template" class="form-category">
+                        <select id="ticketType" :value="ticket.ticket_type" name="template" class="form-category">
                           <option value="troubleTicket">Trouble Ticket</option>
                           <option value="actionItem">Action Item</option>
                           <option value="audit">Audit</option>
@@ -71,55 +71,55 @@
                     <tr>
                       <td style="text-align: right;">Ticket Department</td>
                       <td>
-                        <input v-model="department" type="text" required />
+                        <input :value="ticket.department" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Account Name</td>
                       <td>
-                        <input v-model="account_name" type="text" required />
+                        <input :value="ticket.account_name" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Priority</td>
                       <td>
-                        <input v-model="priority" type="text" />
+                        <input :value="ticket.priority" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Requester</td>
                       <td>
-                        <input v-model="requester" type="text" />
+                        <input :value="ticket.requester" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Requester Email</td>
                       <td>
-                        <input v-model="requester_email" type="text" required />
+                        <input :value="ticket.requester_email" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Date</td>
                       <td>
-                        <input v-model="date" type="datetime-local" />
+                        <input :value="ticket.date" type="datetime-local" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <textarea v-model="content" type="text" required cols="40" rows="10"></textarea>
+                        <textarea :value="ticket.content" type="text" required cols="40" rows="10"></textarea>
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Team</td>
                       <td>
-                        <input v-model="team" type="text" />
+                        <input :value="ticket.team" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Assigned To</td>
                       <td>
-                        <select id="assigned_to" v-model="assigned_to" name="template" class="form-category">
+                        <select id="assigned_to" :value="ticket.assigned_to" name="template" class="form-category">
                           <option v-for="users in findManyUsers" :key="users" :value="users">{{ users.name }}</option>
                         </select>
                       </td>
@@ -127,7 +127,7 @@
                     <tr>
                       <td style="text-align: right;">Media</td>
                       <td>
-                        <input v-model="media" type="image" value="Upload an Image, Video, PDF, or other file" />
+                        <input :value="ticket.media" type="image" help="Upload an Image, Video, PDF, or other file" />
                       </td>
                     </tr>
                   </tbody>

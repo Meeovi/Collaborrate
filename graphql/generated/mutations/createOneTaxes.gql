@@ -1,0 +1,14 @@
+mutation createOneTaxes($data: TaxesCreateInput!){
+    createOneTaxes(data: $data){
+        country
+        id
+        postcode
+        products
+        rate_percent
+        state
+        taxCategory
+        taxDefault
+        taxRuleName
+        tax_identifier
+    }
+}

@@ -5,5 +5,7 @@ mutation createOneCurrencies($data: CurrenciesCreateInput!){
         id
         name
         region
+        symbol
+        useStandard
     }
 }

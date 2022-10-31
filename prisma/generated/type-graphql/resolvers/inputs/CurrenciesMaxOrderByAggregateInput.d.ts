@@ -4,4 +4,6 @@ export declare class CurrenciesMaxOrderByAggregateInput {
     code?: "asc" | "desc" | undefined;
     name?: "asc" | "desc" | undefined;
     region?: "asc" | "desc" | undefined;
+    symbol?: "asc" | "desc" | undefined;
+    useStandard?: "asc" | "desc" | undefined;
 }

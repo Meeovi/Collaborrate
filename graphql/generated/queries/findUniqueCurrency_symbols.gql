@@ -1,7 +1,0 @@
-query findUniqueCurrency_symbols($where: Currency_symbolsWhereUniqueInput!){
-    findUniqueCurrency_symbols(where: $where){
-        id
-        symbol
-        use_standard
-    }
-}

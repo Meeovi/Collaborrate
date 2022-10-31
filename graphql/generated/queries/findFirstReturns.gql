@@ -1,5 +1,5 @@
 query findFirstReturns($cursor: ReturnsWhereUniqueInput, $distinct: [ReturnsScalarFieldEnum!], $orderBy: [ReturnsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ReturnsWhereInput){
-    findFirstReturns{
+    findFirstReturns(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         case_id
         created_at
         customers

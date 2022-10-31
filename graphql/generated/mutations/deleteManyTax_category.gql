@@ -1,5 +1,0 @@
-mutation deleteManyTax_category($where: Tax_categoryWhereInput){
-    deleteManyTax_category(where: $where){
-        count
-    }
-}

@@ -8,10 +8,21 @@ query findUniqueEvents($where: EventsWhereUniqueInput!){
         end
         id
         image
+        invitationBillingAddress
+        invitationCustomerName
+        invitationEmail
+        invitationGrandTotalPurchased
+        invitationInvoiceDate
+        invitationOrderNumber
+        invitationPaymentMethod
+        invitationShippingAddress
+        invitationStatus
+        media
         name
         postalcode
         start
         state
         tickets
+        type
     }
 }

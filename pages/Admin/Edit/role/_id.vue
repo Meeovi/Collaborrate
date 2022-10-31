@@ -32,11 +32,11 @@
             <tbody>
               <tr>
                 <td style="text-align: right;">Role Name</td>
-                <td><input v-model="role_name" type="text" required /></td>
+                <td><input :value="role.role_name" type="text" required /></td>
               </tr>
               <tr>
                 <td style="text-align: right;">Description</td>
-                <td><client-only><Editor v-model="content" /></client-only></td>
+                <td><client-only><Editor :value="role.content" /></client-only></td>
               </tr>
             </tbody>
           </table>

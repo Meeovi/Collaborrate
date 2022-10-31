@@ -1,8 +1,10 @@
 mutation updateOneDiscounts($data: DiscountsUpdateInput!, $where: DiscountsWhereUniqueInput!){
     updateOneDiscounts(data: $data, where: $where){
         articles
+        billToName
         categories
         coupons
+        creditMemo
         customers
         discount
         excerpt
@@ -10,10 +12,13 @@ mutation updateOneDiscounts($data: DiscountsUpdateInput!, $where: DiscountsWhere
         id
         image
         name
+        orderNumber
         products
         published
+        refunded
         rewards
         special_offers
+        status
         type
         users
     }

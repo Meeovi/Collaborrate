@@ -30,61 +30,61 @@
                     <tr>
                       <td style="text-align: right;">Contract Title</td>
                       <td>
-                        <input v-model="contract_title" type="text" required />
+                        <input :value="contract.contract_title" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Contract Value</td>
                       <td>
-                        <input v-model="contract_value" type="text" required />
+                        <input :value="contract.contract_value" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Start Date</td>
                       <td>
-                        <input v-model="start_date" type="datetime-local" required />
+                        <input :value="contract.start_date" type="datetime-local" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">End Date</td>
                       <td>
-                        <input v-model="end_date" type="datetime-local" required />
+                        <input :value="contract.end_date" type="datetime-local" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Renewal Reminder Date</td>
                       <td>
-                        <input v-model="renewal_reminder" type="datetime-local" required />
+                        <input :value="contract.renewal_reminder" type="datetime-local" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Customer Signed Date</td>
                       <td>
-                        <input v-model="company_signed_date" type="datetime-local" required />
+                        <input :value="contract.company_signed_date" type="datetime-local" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Company Signed Date</td>
                       <td>
-                        <input v-model="company_signed_date" type="datetime-local" required />
+                        <input :value="contract.company_signed_date" type="datetime-local" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <textarea v-model="description" cols="40" rows="10"></textarea>
+                        <textarea :value="contract.description" cols="40" rows="10"></textarea>
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Contract Manager</td>
                       <td>
-                        <input v-model="contract_manager" type="text" required />
+                        <input :value="contract.contract_manager" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Status</td>
                       <td>
-                        <select name="contractStatus" id="contractStatus" v-model="status">
+                        <select name="contractStatus" id="contractStatus" :value="contract.status">
                           <option value="not started">Not Started</option>
                           <option value="signed">Signed</option>
                         </select>
@@ -93,7 +93,7 @@
                     <tr>
                       <td style="text-align: right;">Account</td>
                       <td>
-                        <select id="country" v-model="account" name="template" class="form-category">
+                        <select id="country" :value="contract.account" name="template" class="form-category">
                           <option v-for="accounts in findManyAccounts" :key="accounts" :value="accounts">
                             {{ accounts.name }}
                           </option>
@@ -103,7 +103,7 @@
                     <tr>
                       <td style="text-align: right;">Contact</td>
                       <td>
-                        <select id="country" v-model="contact" name="template" class="form-category">
+                        <select id="country" :value="contract.contact" name="template" class="form-category">
                           <option v-for="contacts in findManyCustomers" :key="contacts" :value="contacts">
                             {{ contacts.name }}
                           </option>
@@ -113,7 +113,7 @@
                     <tr>
                       <td style="text-align: right;">Opportunity</td>
                       <td>
-                        <select id="country" v-model="opportunity" name="template" class="form-category">
+                        <select id="country" :value="contract.opportunity" name="template" class="form-category">
                           <option v-for="opportunities in findManyOpportunies" :key="opportunities"
                             :value="opportunities">
                             {{ opportunities.name }}
@@ -124,7 +124,7 @@
                     <tr>
                       <td style="text-align: right;">Contract Type</td>
                       <td>
-                        <select name="contractType" id="contractType" v-model="type">
+                        <select name="contractType" id="contractType" :value="contract.type">
                           <option value="type">Type</option>
                         </select>
                       </td>
@@ -150,7 +150,7 @@
                             <tr>
                               <td style="text-align: right;">Currency</td>
                               <td>
-                                <select id="country" v-model="currency" name="template" class="form-category">
+                                <select id="country" :value="contract.currency" name="template" class="form-category">
                                   <option v-for="currencies in findManyCurrencies" :key="currencies"
                                     :value="currencies">
                                     {{ currencies.name }}
@@ -161,43 +161,43 @@
                             <tr>
                               <td style="text-align: right;">Total</td>
                               <td>
-                                <input v-model="total" type="number" required />
+                                <input :value="contract.total" type="number" required />
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Discount</td>
                               <td>
-                                <input v-model="discount" type="text" required />
+                                <input :value="contract.discount" type="text" required />
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Subtotal</td>
                               <td>
-                                <input v-model="subtotal" type="number" required />
+                                <input :value="contract.subtotal" type="number" required />
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Shipping</td>
                               <td>
-                                <input v-model="shipping" type="number" required />
+                                <input :value="contract.shipping" type="number" required />
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Shipping Tax</td>
                               <td>
-                                <input v-model="shipping_tax" type="number" required />
+                                <input :value="contract.shipping_tax" type="number" required />
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Tax</td>
                               <td>
-                                <input v-model="tax" type="number" required />
+                                <input :value="contract.tax" type="number" required />
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Grand Total</td>
                               <td>
-                                <input v-model="grand_total" type="number" required />
+                                <input :value="contract.grand_total" type="number" required />
                               </td>
                             </tr>
                           </tbody>

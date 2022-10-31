@@ -29,12 +29,12 @@
                 <tbody>
                     <tr>
                         <td style="text-align: right;">State Name</td>
-                        <td><input id="statesName" v-model="name" type="statesName" required /></td>
+                        <td><input id="statesName" :value="state.name" type="statesName" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">State Country</td>
                       <td>
-                        <select id="country" v-model="country" name="template" class="form-category">
+                        <select id="country" :value="state.country" name="template" class="form-category">
                           <option v-for="countries in findManyCountries" :key="countries" :value="countries">
                             {{ countries.name }}
                           </option>
@@ -44,7 +44,7 @@
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <textarea v-model="description" cols="40" rows="10"></textarea>
+                        <textarea :value="state.description" cols="40" rows="10"></textarea>
                       </td>
                     </tr>
                   </tbody>

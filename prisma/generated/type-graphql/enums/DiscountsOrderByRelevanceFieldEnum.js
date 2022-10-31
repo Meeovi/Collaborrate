@@ -19,6 +19,11 @@ var DiscountsOrderByRelevanceFieldEnum;
     DiscountsOrderByRelevanceFieldEnum["customers"] = "customers";
     DiscountsOrderByRelevanceFieldEnum["users"] = "users";
     DiscountsOrderByRelevanceFieldEnum["type"] = "type";
+    DiscountsOrderByRelevanceFieldEnum["creditMemo"] = "creditMemo";
+    DiscountsOrderByRelevanceFieldEnum["billToName"] = "billToName";
+    DiscountsOrderByRelevanceFieldEnum["orderNumber"] = "orderNumber";
+    DiscountsOrderByRelevanceFieldEnum["refunded"] = "refunded";
+    DiscountsOrderByRelevanceFieldEnum["status"] = "status";
 })(DiscountsOrderByRelevanceFieldEnum = exports.DiscountsOrderByRelevanceFieldEnum || (exports.DiscountsOrderByRelevanceFieldEnum = {}));
 TypeGraphQL.registerEnumType(DiscountsOrderByRelevanceFieldEnum, {
     name: "DiscountsOrderByRelevanceFieldEnum",

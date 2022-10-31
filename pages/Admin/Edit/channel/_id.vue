@@ -15,41 +15,41 @@
                 <tbody>
                     <tr>
                         <td style="text-align: right;">Code</td>
-                        <td><input v-model="code" type="text" value="Example is FASHION_WEB"  />{{ channel.code }}</td>
+                        <td><input :value="channel.code" type="text"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Channel Name</td>
-                        <td><input v-model="name" type="text" value="Example is eBay, Fashion Web Store, etc" />{{ channel.name }}</td>
+                        <td><input :value="channel.name" type="text" /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Client ID</td>
-                        <td><input v-model="client_id" type="password"  />{{ channel.client_id }}</td>
+                        <td><input :value="channel.client_id" type="password"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Client Secret</td>
-                        <td><input v-model="client_secret" type="password"  />{{ channel.client_secret }}</td>
+                        <td><input :value="channel.client_secret" type="password"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Default Channel</td>
-                        <td><input v-model="default_zone" type="text"  />{{ channel.default_zone }}</td>
+                        <td><input :value="channel.default_zone" type="text"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Default Shipping</td>
-                        <td><input v-model="default_shipping" type="text"  />{{ channel.default_shipping }}</td>
+                        <td><input :value="channel.default_shipping" type="text"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Default Language</td>
-                        <td><input v-model="default_lang" type="text"  />{{ channel.default_lang }}</td>
+                        <td><input :value="channel.default_lang" type="text"  /></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Currency</td>
-                        <select v-model="currencies" name="template" class="form-category">
-                            <option v-for="currencies in findManyCurrencies" :key="currencies" :value="currencies">{{ currencies.name }}</option>
+                        <select :value="channel.currencies" name="template" class="form-category">
+                            <option v-for="currencies in findManyCurrencies" :key="currencies" :value="currencies"></option>
                         </select>
                     </tr>
                     <tr>
                         <td style="text-align: right;">Include Tax</td>
-                        <td><input v-model="include_tax" type="checkbox"  />{{ channel.include_tax }}</td>
+                        <td><input :value="channel.include_tax" type="checkbox"  /></td>
                     </tr>
                 </tbody>
             </table>

@@ -13,11 +13,22 @@ query aggregateEvents($cursor: EventsWhereUniqueInput, $orderBy: [EventsOrderByW
             end
             id
             image
+            invitationBillingAddress
+            invitationCustomerName
+            invitationEmail
+            invitationGrandTotalPurchased
+            invitationInvoiceDate
+            invitationOrderNumber
+            invitationPaymentMethod
+            invitationShippingAddress
+            invitationStatus
+            media
             name
             postalcode
             start
             state
             tickets
+            type
         }
         _max{
             category
@@ -28,11 +39,22 @@ query aggregateEvents($cursor: EventsWhereUniqueInput, $orderBy: [EventsOrderByW
             end
             id
             image
+            invitationBillingAddress
+            invitationCustomerName
+            invitationEmail
+            invitationGrandTotalPurchased
+            invitationInvoiceDate
+            invitationOrderNumber
+            invitationPaymentMethod
+            invitationShippingAddress
+            invitationStatus
+            media
             name
             postalcode
             start
             state
             tickets
+            type
         }
         _min{
             category
@@ -43,11 +65,22 @@ query aggregateEvents($cursor: EventsWhereUniqueInput, $orderBy: [EventsOrderByW
             end
             id
             image
+            invitationBillingAddress
+            invitationCustomerName
+            invitationEmail
+            invitationGrandTotalPurchased
+            invitationInvoiceDate
+            invitationOrderNumber
+            invitationPaymentMethod
+            invitationShippingAddress
+            invitationStatus
+            media
             name
             postalcode
             start
             state
             tickets
+            type
         }
         _sum{
             id

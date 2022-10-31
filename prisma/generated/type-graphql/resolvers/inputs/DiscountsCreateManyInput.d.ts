@@ -15,4 +15,9 @@ export declare class DiscountsCreateManyInput {
     customers?: string | undefined;
     users?: string | undefined;
     type?: string | undefined;
+    creditMemo?: string | undefined;
+    billToName?: string | undefined;
+    orderNumber?: string | undefined;
+    refunded?: string | undefined;
+    status?: string | undefined;
 }

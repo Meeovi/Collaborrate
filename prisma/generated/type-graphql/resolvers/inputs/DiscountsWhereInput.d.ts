@@ -22,4 +22,9 @@ export declare class DiscountsWhereInput {
     customers?: StringNullableFilter | undefined;
     users?: StringNullableFilter | undefined;
     type?: StringNullableFilter | undefined;
+    creditMemo?: StringNullableFilter | undefined;
+    billToName?: StringNullableFilter | undefined;
+    orderNumber?: StringNullableFilter | undefined;
+    refunded?: StringNullableFilter | undefined;
+    status?: StringNullableFilter | undefined;
 }

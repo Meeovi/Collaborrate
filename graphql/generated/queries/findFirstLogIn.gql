@@ -1,5 +1,5 @@
 query findFirstLogIn($cursor: LogInWhereUniqueInput, $distinct: [LogInScalarFieldEnum!], $orderBy: [LogInOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: LogInWhereInput){
-    findFirstLogIn{
+    findFirstLogIn(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         created_at
         email
         expiresIn

@@ -1,5 +1,5 @@
 query findManyIntegrations($cursor: IntegrationsWhereUniqueInput, $distinct: [IntegrationsScalarFieldEnum!], $orderBy: [IntegrationsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: IntegrationsWhereInput){
-    findManyIntegrations{
+    findManyIntegrations(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         category
         content
         created_at

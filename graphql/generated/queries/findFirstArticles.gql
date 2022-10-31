@@ -1,5 +1,5 @@
 query findFirstArticles($cursor: ArticlesWhereUniqueInput, $distinct: [ArticlesScalarFieldEnum!], $orderBy: [ArticlesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ArticlesWhereInput){
-    findFirstArticles{
+    findFirstArticles(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         categories
         content
         cust_id

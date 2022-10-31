@@ -28,23 +28,23 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Login</td>
-                      <td><input v-model="login" type="text" required /></td>
+                      <td><input :value="ooto.login" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Location</td>
-                      <td><input v-model="whid" type="text" /></td>
+                      <td><input :value="ooto.whid" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Start Date</td>
-                      <td><input v-model="start_date" type="datetime-local" required /></td>
+                      <td><input :value="ooto.start_date" type="datetime-local" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">End Date</td>
-                      <td><input v-model="end_date" type="datetime-local" required /></td>
+                      <td><input :value="ooto.end_date" type="datetime-local" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
-                      <td><textarea v-model="description" cols="40" rows="10"></textarea></td>
+                      <td><textarea :value="ooto.description" cols="40" rows="10"></textarea></td>
                     </tr>
                   </tbody>
                 </table>

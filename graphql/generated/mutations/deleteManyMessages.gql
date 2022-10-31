@@ -1,5 +1,0 @@
-mutation deleteManyMessages($where: MessagesWhereInput){
-    deleteManyMessages(where: $where){
-        count
-    }
-}

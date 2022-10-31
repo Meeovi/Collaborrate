@@ -1,5 +1,5 @@
 query findManyStocks($cursor: StocksWhereUniqueInput, $distinct: [StocksScalarFieldEnum!], $orderBy: [StocksOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: StocksWhereInput){
-    findManyStocks{
+    findManyStocks(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         description
         enabled
         id

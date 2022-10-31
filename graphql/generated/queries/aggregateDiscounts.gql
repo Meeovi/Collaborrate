@@ -6,8 +6,10 @@ query aggregateDiscounts($cursor: DiscountsWhereUniqueInput, $orderBy: [Discount
         _count{
             _all
             articles
+            billToName
             categories
             coupons
+            creditMemo
             customers
             discount
             excerpt
@@ -15,17 +17,22 @@ query aggregateDiscounts($cursor: DiscountsWhereUniqueInput, $orderBy: [Discount
             id
             image
             name
+            orderNumber
             products
             published
+            refunded
             rewards
             special_offers
+            status
             type
             users
         }
         _max{
             articles
+            billToName
             categories
             coupons
+            creditMemo
             customers
             discount
             excerpt
@@ -33,17 +40,22 @@ query aggregateDiscounts($cursor: DiscountsWhereUniqueInput, $orderBy: [Discount
             id
             image
             name
+            orderNumber
             products
             published
+            refunded
             rewards
             special_offers
+            status
             type
             users
         }
         _min{
             articles
+            billToName
             categories
             coupons
+            creditMemo
             customers
             discount
             excerpt
@@ -51,10 +63,13 @@ query aggregateDiscounts($cursor: DiscountsWhereUniqueInput, $orderBy: [Discount
             id
             image
             name
+            orderNumber
             products
             published
+            refunded
             rewards
             special_offers
+            status
             type
             users
         }

@@ -1,5 +1,0 @@
-mutation deleteManyCurrency_rates($where: Currency_ratesWhereInput){
-    deleteManyCurrency_rates(where: $where){
-        count
-    }
-}

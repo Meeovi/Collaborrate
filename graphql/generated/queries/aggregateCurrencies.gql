@@ -10,6 +10,8 @@ query aggregateCurrencies($cursor: CurrenciesWhereUniqueInput, $orderBy: [Curren
             id
             name
             region
+            symbol
+            useStandard
         }
         _max{
             code
@@ -17,6 +19,8 @@ query aggregateCurrencies($cursor: CurrenciesWhereUniqueInput, $orderBy: [Curren
             id
             name
             region
+            symbol
+            useStandard
         }
         _min{
             code
@@ -24,6 +28,8 @@ query aggregateCurrencies($cursor: CurrenciesWhereUniqueInput, $orderBy: [Curren
             id
             name
             region
+            symbol
+            useStandard
         }
         _sum{
             id

@@ -1,5 +1,0 @@
-mutation updateManyMeeting($data: MeetingUpdateManyMutationInput!, $where: MeetingWhereInput){
-    updateManyMeeting(data: $data, where: $where){
-        count
-    }
-}

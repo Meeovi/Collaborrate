@@ -1,5 +1,0 @@
-mutation createManyReports($data: [ReportsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyReports(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

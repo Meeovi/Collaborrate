@@ -1,5 +1,0 @@
-mutation createManyPolls($data: [PollsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyPolls(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

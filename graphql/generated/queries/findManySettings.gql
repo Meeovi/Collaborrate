@@ -1,5 +1,5 @@
 query findManySettings($cursor: SettingsWhereUniqueInput, $distinct: [SettingsScalarFieldEnum!], $orderBy: [SettingsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: SettingsWhereInput){
-    findManySettings{
+    findManySettings(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         address
         address_two
         allow_countries

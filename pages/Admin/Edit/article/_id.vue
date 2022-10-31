@@ -29,13 +29,13 @@
                     <tr>
                       <td style="text-align: right;">Article Name</td>
                       <td>
-                        <input v-model="name" type="text" required />{{ article.name }}
+                        <input :value="article.name" type="text" required />{{ article.name }}
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Categories</td>
                       <td>
-                        <select id="category" v-model="categories" name="template" class="form-category">
+                        <select id="category" :value="article.categories" name="template" class="form-category">
                           <option v-for="categories in findManyCategories" :key="categories.id" :value="categories">
                             {{ categories.name }}
                           </option>
@@ -45,7 +45,7 @@
                     <tr>
                       <td style="text-align: right;">Tags</td>
                       <td>
-                        <select id="category" v-model="tags" name="template" class="form-category">
+                        <select id="category" :value="article.tags" name="template" class="form-category">
                           <option v-for="tags in findManyTags" :key="tags.id" :value="tags">{{ tags.name }}</option>
                         </select>
                       </td>
@@ -53,7 +53,7 @@
                     <tr>
                       <td style="text-align: right;">Article Availibility</td>
                       <td>
-                        <select name="articleType" id="articleType" v-model="isPublic">
+                        <select name="articleType" id="articleType" :value="article.isPublic">
                           <option value="public">Public</option>
                           <option value="private">Private</option>
                           <option value="draft">Draft</option>
@@ -63,12 +63,12 @@
                     <tr>
                       <td style="text-align: right;">Published Date</td>
                       <td>
-                        <input v-model="published" type="datetime-local" placeholder="Default is published immediately" />{{ article.name }}
+                        <input :value="article.published" type="datetime-local" placeholder="Default is published immediately" />{{ article.name }}
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <select id="articleType" v-model="type">
+                        <select id="articleType" :value="article.type">
                           <option value="course">Blog Post</option>
                           <option value="material">Note</option>
                           <option value="school">Knowledgebase Article</option>
@@ -78,7 +78,7 @@
                     <tr>
                       <td style="text-align: right;">Author(s)</td>
                       <td>
-                        <select id="category" v-model="customers" name="template" class="form-category">
+                        <select id="category" :value="article.customers" name="template" class="form-category">
                           <option v-for="customers in findManyCustomers" :key="customers.id" :value="customers">
                             {{ customers.name }}</option>
                         </select>
@@ -105,13 +105,13 @@
                             <tr>
                               <td style="text-align: right;">Excerpt</td>
                               <td>
-                                <textarea id="excerpt" v-model="excerpt" cols="50" rows="10" placeholder="Add a short Description"></textarea>{{ article.excerpt }}
+                                <textarea id="excerpt" :value="article.excerpt" cols="50" rows="10" placeholder="Add a short Description"></textarea>{{ article.excerpt }}
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Description</td>
                               <td>
-                                <client-only><Editor v-model="content" /></client-only>{{ article.content }}
+                                <client-only><Editor :value="article.content" /></client-only>{{ article.content }}
                               </td>
                             </tr>
                           </tbody>
@@ -131,7 +131,7 @@
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
                       <td>
-                        <input v-model="image" type="image" />{{ article.image }}
+                        <input :value="article.image" type="image" />{{ article.image }}
                       </td>
                     </div>
                   </div>
@@ -156,19 +156,19 @@
                           <tr>
                             <td style="text-align: right;">Meta Title</td>
                             <td>
-                              <input v-model="meta_name" type="text" />{{ article.meta_name }}
+                              <input :value="article.meta_name" type="text" />
                             </td>
                           </tr>
                           <tr>
                             <td style="text-align: right;">Meta Description</td>
                             <td>
-                              <textarea v-model="meta_description" rows="10" cols="50"></textarea>{{ article.meta_description }}
+                              <textarea :value="article.meta_description" rows="10" cols="50"></textarea>
                             </td>
                           </tr>
                           <tr>
                             <td style="text-align: right;">Meta Url</td>
                             <td>
-                              <input v-model="meta_url" type="url" />{{ article.meta_url }}
+                              <input :value="article.meta_url" type="url" />
                             </td>
                           </tr>
                         </tbody>

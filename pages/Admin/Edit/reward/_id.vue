@@ -31,19 +31,19 @@
               <tr>
                 <td style="text-align: right;">Expiration</td>
                 <td>
-                  <input v-model="expiration" type="datetime-local" />
+                  <input :value="reward.expiration" type="datetime-local" />
                 </td>
               </tr>
               <tr>
                 <td style="text-align: right;">Reward Name</td>
                 <td>
-                  <input v-model="name" type="text" required />
+                  <input :value="reward.name" type="text" required />
                 </td>
               </tr>
               <tr>
                 <td style="text-align: right;">Customers</td>
                 <td>
-                  <select id="customers" v-model="customers" name="template" class="form-customers">
+                  <select id="customers" :value="reward.customers" name="template" class="form-customers">
                     <option v-for="customers in findManyCustomers" :key="customers.id" :value="customers">
                       {{ customers.name }}</option>
                   </select>
@@ -52,7 +52,7 @@
               <tr>
                 <td style="text-align: right;">Products</td>
                 <td>
-                  <select id="products" v-model="products" name="template" class="form-products">
+                  <select id="products" :value="reward.products" name="template" class="form-products">
                     <option v-for="products in findManyProducts" :key="products.id" :value="products">
                       {{ products.name }}</option>
                   </select>
@@ -61,7 +61,7 @@
               <tr>
                 <td style="text-align: right;">Coupons</td>
                 <td>
-                  <select id="coupon" v-model="coupons" name="template" class="form-coupon">
+                  <select id="coupon" :value="reward.coupons" name="template" class="form-coupon">
                     <option v-for="coupon in findManyDiscounts" :key="coupon.id" :value="coupon">{{ coupon.name }}
                     </option>
                   </select>
@@ -70,7 +70,7 @@
               <tr>
                 <td style="text-align: right;">Users</td>
                 <td>
-                  <select id="user" v-model="users" name="template" class="form-user">
+                  <select id="user" :value="reward.users" name="template" class="form-user">
                     <option v-for="user in findManyUsers" :key="user.id" :value="user">{{ user.name }}</option>
                   </select>
                 </td>
@@ -78,7 +78,7 @@
               <tr>
                 <td style="text-align: right;">Category</td>
                 <td>
-                  <select id="category" v-model="categories" name="template" class="form-category">
+                  <select id="category" :value="reward.categories" name="template" class="form-category">
                     <option v-for="category in findManyCategories" :key="category.id" :value="category">
                       {{ category.name }}</option>
                   </select>
@@ -87,7 +87,7 @@
               <tr>
                 <td style="text-align: right;">Level</td>
                 <td>
-                  <select id="level" v-model="level" name="template" class="form-category">
+                  <select id="level" :value="reward.level" name="template" class="form-category">
                     <option value="normal">Normal</option>
                     <option value="great">Great</option>
                     <option value="greatest">Greatest</option>
@@ -98,7 +98,7 @@
               <tr>
                 <td style="text-align: right;">Articles</td>
                 <td>
-                  <select id="articles" v-model="articles" name="template" class="form-articles">
+                  <select id="articles" :value="reward.articles" name="template" class="form-articles">
                     <option v-for="articles in findManyArticles" :key="articles.id" :value="articles">
                       {{ articles.name }}</option>
                   </select>

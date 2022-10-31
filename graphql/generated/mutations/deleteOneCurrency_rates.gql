@@ -1,7 +1,0 @@
-mutation deleteOneCurrency_rates($where: Currency_ratesWhereUniqueInput!){
-    deleteOneCurrency_rates(where: $where){
-        id
-        import_service
-        usd
-    }
-}

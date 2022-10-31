@@ -1,5 +1,5 @@
 query findFirstContent_type($cursor: Content_typeWhereUniqueInput, $distinct: [Content_typeScalarFieldEnum!], $orderBy: [Content_typeOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Content_typeWhereInput){
-    findFirstContent_type{
+    findFirstContent_type(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         boolean
         created_at
         database_name

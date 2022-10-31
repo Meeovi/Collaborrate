@@ -1,5 +1,0 @@
-mutation updateManyPolls($data: PollsUpdateManyMutationInput!, $where: PollsWhereInput){
-    updateManyPolls(data: $data, where: $where){
-        count
-    }
-}

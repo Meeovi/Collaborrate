@@ -1,5 +1,5 @@
 query findFirstTransactions($cursor: TransactionsWhereUniqueInput, $distinct: [TransactionsScalarFieldEnum!], $orderBy: [TransactionsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: TransactionsWhereInput){
-    findFirstTransactions{
+    findFirstTransactions(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         closed
         created
         customer_payment

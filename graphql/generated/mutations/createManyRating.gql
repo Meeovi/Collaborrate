@@ -1,5 +1,0 @@
-mutation createManyRating($data: [RatingCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyRating(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

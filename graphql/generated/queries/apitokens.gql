@@ -1,5 +1,5 @@
 query apitokens($cursor: ApitokenWhereUniqueInput, $distinct: [ApitokenScalarFieldEnum!], $orderBy: [ApitokenOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ApitokenWhereInput){
-    apitokens{
+    apitokens(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         created_at
         description
         id

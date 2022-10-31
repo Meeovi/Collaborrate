@@ -29,7 +29,7 @@
                     <tr>
                       <td style="text-align: right;">Code</td>
                       <td>
-                        <input v-model="code" type="text" required value="Example would be US, WORLD, etc." />
+                        <input type="text" :value="zone.code" required  />
                       </td>
                     </tr>
                     <tr>
@@ -45,7 +45,7 @@
                     <tr>
                       <td style="text-align: right;">Name</td>
                       <td>
-                        <input v-model="name" type="text" required />
+                        <input type="text" :value="zone.name" required />
                       </td>
                     </tr>
                     <tr>

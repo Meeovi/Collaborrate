@@ -30,24 +30,24 @@
             <tbody>
               <tr>
                 <td style="text-align: right;">Carrier Name</td>
-                <td><input id="shipmentsName" v-model="carrier_name" type="text" required /></td>
+                <td><input id="shipmentsName" :value="shipment.carrier_name" type="text" required /></td>
               </tr>
               <tr>
                 <td style="text-align: right;">Transit Time</td>
-                <td><input id="shipmentsTime" v-model="transit_time" type="number" required /></td>
+                <td><input id="shipmentsTime" :value="shipment.transit_time" type="number" required /></td>
               </tr>
               <tr>
                 <td style="text-align: right;">Speed grade</td>
-                <td><input id="shipmentsSpeed" v-model="speed_grade" type="number" /></td>
+                <td><input id="shipmentsSpeed" :value="shipment.speed_grade" type="number" /></td>
               </tr>
               <tr>
                 <td style="text-align: right;">Tracking URL</td>
-                <td><input id="shipmentsTracking" v-model="tracking_url" type="url" /></td>
+                <td><input id="shipmentsTracking" :value="shipment.tracking_url" type="url" /></td>
               </tr>
               <tr>
                 <td style="text-align: right;">Logo</td>
                 <td>
-                  <input type="image" v-model="image" />
+                  <input type="image" :value="shipment.image" />
                 </td>
               </tr>
             </tbody>

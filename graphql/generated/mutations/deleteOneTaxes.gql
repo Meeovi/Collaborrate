@@ -1,0 +1,14 @@
+mutation deleteOneTaxes($where: TaxesWhereUniqueInput!){
+    deleteOneTaxes(where: $where){
+        country
+        id
+        postcode
+        products
+        rate_percent
+        state
+        taxCategory
+        taxDefault
+        taxRuleName
+        tax_identifier
+    }
+}

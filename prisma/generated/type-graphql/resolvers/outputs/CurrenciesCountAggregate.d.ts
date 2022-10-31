@@ -4,5 +4,7 @@ export declare class CurrenciesCountAggregate {
     code: number;
     name: number;
     region: number;
+    symbol: number;
+    useStandard: number;
     _all: number;
 }

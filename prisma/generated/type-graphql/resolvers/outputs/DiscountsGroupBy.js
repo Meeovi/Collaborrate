@@ -108,6 +108,36 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], DiscountsGroupBy.prototype, "type", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsGroupBy.prototype, "creditMemo", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsGroupBy.prototype, "billToName", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsGroupBy.prototype, "orderNumber", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsGroupBy.prototype, "refunded", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsGroupBy.prototype, "status", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => DiscountsCountAggregate_1.DiscountsCountAggregate, {
         nullable: true
     }),

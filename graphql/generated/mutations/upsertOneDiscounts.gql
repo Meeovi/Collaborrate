@@ -1,8 +1,10 @@
 mutation upsertOneDiscounts($create: DiscountsCreateInput!, $update: DiscountsUpdateInput!, $where: DiscountsWhereUniqueInput!){
     upsertOneDiscounts(create: $create, update: $update, where: $where){
         articles
+        billToName
         categories
         coupons
+        creditMemo
         customers
         discount
         excerpt
@@ -10,10 +12,13 @@ mutation upsertOneDiscounts($create: DiscountsCreateInput!, $update: DiscountsUp
         id
         image
         name
+        orderNumber
         products
         published
+        refunded
         rewards
         special_offers
+        status
         type
         users
     }

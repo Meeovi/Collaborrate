@@ -1,5 +1,0 @@
-mutation deleteManyTax_rule($where: Tax_ruleWhereInput){
-    deleteManyTax_rule(where: $where){
-        count
-    }
-}

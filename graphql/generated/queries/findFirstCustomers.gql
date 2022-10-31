@@ -1,5 +1,5 @@
-query findFirstCustomers{
-    findFirstCustomers{
+query findFirstCustomers($cursor: CustomersWhereUniqueInput, $distinct: [CustomersScalarFieldEnum!], $orderBy: [CustomersOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CustomersWhereInput){
+    findFirstCustomers(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         Address
         address_two
         comments

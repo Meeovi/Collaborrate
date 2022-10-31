@@ -1,5 +1,5 @@
 query findManyCities($cursor: CitiesWhereUniqueInput, $distinct: [CitiesScalarFieldEnum!], $orderBy: [CitiesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CitiesWhereInput){
-    findManyCities{
+    findManyCities(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         country
         description
         id

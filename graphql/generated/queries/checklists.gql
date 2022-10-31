@@ -1,5 +1,5 @@
 query checklists($cursor: ChecklistWhereUniqueInput, $distinct: [ChecklistScalarFieldEnum!], $orderBy: [ChecklistOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ChecklistWhereInput){
-    checklists{
+    checklists(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         country
         created_at
         description

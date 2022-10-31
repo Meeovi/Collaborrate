@@ -28,15 +28,15 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Currency</td>
-                      <td><input v-model="currency" type="text" required /></td>
+                      <td><input :value="opportunities.currency" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Opportunity Amount</td>
-                      <td><input v-model="amount" type="text" required /></td>
+                      <td><input :value="opportunities.amount" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Sales Stage</td>
-                      <td><select id="salesStage" v-model="sales_stage">
+                      <td><select id="salesStage" :value="opportunities.sales_stage">
                           <option value="prospecting">Prospecting</option>
                           <option value="qualification">Qualification</option>
                           <option value="needAnalysis">Need Analysis</option>
@@ -51,30 +51,30 @@
                     </tr>
                     <tr>
                       <td style="text-align: right;">Probability (%)</td>
-                      <td><input v-model="probability" type="text" required /></td>
+                      <td><input :value="opportunities.probability" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Next Step</td>
-                      <td><input v-model="next_step" type="text" required /></td>
+                      <td><input :value="opportunities.next_step" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
-                      <td><textarea v-model="description" cols="40" rows="10"></textarea></td>
+                      <td><textarea :value="opportunities.description" cols="40" rows="10"></textarea></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Expected Close Date</td>
-                      <td><input v-model="expected_close_date" type="datetime-local" required /></td>
+                      <td><input :value="opportunities.expected_close_date" type="datetime-local" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Type</td>
-                      <td><select id="opportunityType" v-model="type">
+                      <td><select id="opportunityType" :value="opportunities.type">
                           <option value="exBusiness">Existing Business</option>
                           <option value="newBusiness">New Business</option>
                         </select></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Lead Source</td>
-                      <td><select id="leadSource" v-model="lead_source">
+                      <td><select id="leadSource" :value="opportunities.lead_source">
                           <option value="coldCall">Cold Call</option>
                           <option value="exCustomer">Existing Customer</option>
                           <option value="website">Website</option>
@@ -93,7 +93,7 @@
                     </tr>
                     <tr>
                       <td style="text-align: right;">Campaign</td>
-                      <td><select id="campaign" v-model="campaign">
+                      <td><select id="campaign" :value="opportunities.campaign">
                           <option v-for="campaign in findManyCampaigns" :key="campaign.id" :value="campaign">
                             {{ campaign.name }}
                           </option>
@@ -101,7 +101,7 @@
                     </tr>
                     <tr>
                       <td style="text-align: right;">Assigned To</td>
-                      <td><select id="assignedTo" v-model="assigned_to">
+                      <td><select id="assignedTo" :value="opportunities.assigned_to">
                           <option v-for="users in findManyUsers" :key="users.id" :value="users">
                             {{ users.name }}
                           </option>
@@ -109,7 +109,7 @@
                     </tr>
                     <tr>
                       <td style="text-align: right;">Categories</td>
-                      <td><select id="categories" v-model="categories">
+                      <td><select id="categories" :value="opportunities.categories">
                           <option v-for="categories in findManyCategories" :key="categories.id" :value="categories">
                             {{ categories.name }}
                           </option>

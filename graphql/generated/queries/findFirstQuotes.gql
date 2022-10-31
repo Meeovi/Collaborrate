@@ -1,5 +1,5 @@
 query findFirstQuotes($cursor: QuotesWhereUniqueInput, $distinct: [QuotesScalarFieldEnum!], $orderBy: [QuotesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: QuotesWhereInput){
-    findFirstQuotes{
+    findFirstQuotes(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         account
         approval_issues
         approval_status

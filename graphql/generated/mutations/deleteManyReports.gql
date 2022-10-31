@@ -1,5 +1,0 @@
-mutation deleteManyReports($where: ReportsWhereInput){
-    deleteManyReports(where: $where){
-        count
-    }
-}

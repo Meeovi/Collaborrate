@@ -57,6 +57,18 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], CurrenciesWhereInput.prototype, "region", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
+], CurrenciesWhereInput.prototype, "symbol", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
+], CurrenciesWhereInput.prototype, "useStandard", void 0);
 CurrenciesWhereInput = CurrenciesWhereInput_1 = tslib_1.__decorate([
     TypeGraphQL.InputType("CurrenciesWhereInput", {
         isAbstract: true

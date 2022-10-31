@@ -1,5 +1,0 @@
-mutation createManyCredit_memos($data: [Credit_memosCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyCredit_memos(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

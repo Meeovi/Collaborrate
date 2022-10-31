@@ -36,6 +36,18 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], CurrenciesMaxOrderByAggregateInput.prototype, "region", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], CurrenciesMaxOrderByAggregateInput.prototype, "symbol", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], CurrenciesMaxOrderByAggregateInput.prototype, "useStandard", void 0);
 CurrenciesMaxOrderByAggregateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("CurrenciesMaxOrderByAggregateInput", {
         isAbstract: true

@@ -1,5 +1,5 @@
 query findFirstProducts($cursor: ProductsWhereUniqueInput, $distinct: [ProductsScalarFieldEnum!], $orderBy: [ProductsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ProductsWhereInput){
-    findFirstProducts{
+    findFirstProducts(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         attributes
         brand
         brands

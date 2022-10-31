@@ -28,30 +28,29 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Event Name</td>
-                      <td><input v-model="name" name="eventName" type="text" value="Name of the Event" required /></td>
+                      <td><input :value="event.name" name="eventName" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Amount of Tickets Available</td>
-                      <td><input v-model="tickets" name="eventTickets" type="number"
-                          value="Enter amount of tickets for event" required /></td>
+                      <td><input :value="event.tickets" name="eventTickets" type="number" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Event City</td>
-                      <td><select id="city" v-model="city" name="template" class="form-category">
+                      <td><select id="city" :value="event.city" name="template" class="form-category">
                           <option v-for="city in findManyCities" :key="city" :value="city">{{ city.name }}
                           </option>
                         </select></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Event State</td>
-                      <td><select id="state" v-model="state" name="template" class="form-category">
+                      <td><select id="state" :value="event.state" name="template" class="form-category">
                           <option v-for="states in findManyStates" :key="states" :value="states">{{ states.name }}
                           </option>
                         </select></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Event Country</td>
-                      <td><select id="country" v-model="country" name="template" class="form-category">
+                      <td><select id="country" :value="event.country" name="template" class="form-category">
                           <option v-for="countries in findManyCountries" :key="countries" :value="countries">
                             {{ countries.name }}
                           </option>
@@ -59,19 +58,19 @@
                     </tr>
                     <tr>
                       <td style="text-align: right;">Event Postal Code</td>
-                      <td><input v-model="postalcode" name="eventPostalCode" type="text" /></td>
+                      <td><input :value="event.postalcode" name="eventPostalCode" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Event Start Date</td>
-                      <td><input v-model="start" name="eventStart" type="datetime-local" /></td>
+                      <td><input :value="event.start" name="eventStart" type="datetime-local" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Event End Date</td>
-                      <td><input v-model="end" name="eventEnd" type="datetime-local" /></td>
+                      <td><input :value="event.end" name="eventEnd" type="datetime-local" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Category</td>
-                      <td><select id="category" v-model="category" name="template" class="form-category">
+                      <td><select id="category" :value="event.category" name="template" class="form-category">
                           <option v-for="category in findManyCategories" :key="category" :value="category">
                             {{ category.name }}</option>
                         </select></td>
@@ -98,7 +97,7 @@
                               <td style="text-align: right;">Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <textarea v-model="description" cols="40" rows="10"></textarea>
+                                  <textarea :value="event.description" cols="40" rows="10"></textarea>
                                 </div>
                               </td>
                             </tr>

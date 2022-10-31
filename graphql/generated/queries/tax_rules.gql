@@ -1,9 +1,0 @@
-query tax_rules($cursor: Tax_ruleWhereUniqueInput, $distinct: [Tax_ruleScalarFieldEnum!], $orderBy: [Tax_ruleOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Tax_ruleWhereInput){
-    tax_rules{
-        id
-        name
-        prod_id
-        products
-        tax_rate
-    }
-}

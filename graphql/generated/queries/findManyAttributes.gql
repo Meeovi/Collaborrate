@@ -1,5 +1,5 @@
 query findManyAttributes($cursor: AttributesWhereUniqueInput, $distinct: [AttributesScalarFieldEnum!], $orderBy: [AttributesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: AttributesWhereInput){
-    findManyAttributes{
+    findManyAttributes(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         allow_html_tags_storefront
         attribute_class
         attribute_code

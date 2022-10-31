@@ -1,5 +1,5 @@
 query findManyCustomizations($cursor: CustomizationsWhereUniqueInput, $distinct: [CustomizationsScalarFieldEnum!], $orderBy: [CustomizationsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CustomizationsWhereInput){
-    findManyCustomizations{
+    findManyCustomizations(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         allow_signup
         announcement
         banner

@@ -22,4 +22,9 @@ export declare class DiscountsScalarWhereWithAggregatesInput {
     customers?: StringNullableWithAggregatesFilter | undefined;
     users?: StringNullableWithAggregatesFilter | undefined;
     type?: StringNullableWithAggregatesFilter | undefined;
+    creditMemo?: StringNullableWithAggregatesFilter | undefined;
+    billToName?: StringNullableWithAggregatesFilter | undefined;
+    orderNumber?: StringNullableWithAggregatesFilter | undefined;
+    refunded?: StringNullableWithAggregatesFilter | undefined;
+    status?: StringNullableWithAggregatesFilter | undefined;
 }

@@ -29,7 +29,7 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Prefix</td>
-                      <td><select id="name_prefix" v-model="prefix" name="template" class="form-category">
+                      <td><select id="name_prefix" :value="lead.prefix" name="template" class="form-category">
                           <option value="mr">Mr.</option>
                           <option value="ms">Ms.</option>
                           <option value="miss">Miss</option>
@@ -43,31 +43,31 @@
                     <tr>
                       <td style="text-align: right;">First Name</td>
                       <td>
-                        <input v-model="first_name" type="text" />
+                        <input :value="lead.first_name" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Last Name</td>
                       <td>
-                        <input v-model="last_name" type="text" />
+                        <input :value="lead.last_name" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Job Title</td>
                       <td>
-                        <input v-model="job_title" type="text" />
+                        <input :value="lead.job_title" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Department</td>
                       <td>
-                        <input v-model="department" type="text" />
+                        <input :value="lead.department" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Account Name</td>
                       <td>
-                        <select id="accountName" v-model="account_name" name="template" class="form-category">
+                        <select id="accountName" :value="lead.account_name" name="template" class="form-category">
                             <option v-for="accounts in findManyAccounts" :key="accounts.id" :value="accounts">
                               {{ accounts.name }}
                             </option>
@@ -77,44 +77,44 @@
                     <tr>
                       <td style="text-align: right;">Office Phone</td>
                       <td>
-                        <input v-model="office_phone" type="phone" />
+                        <input :value="lead.office_phone" type="phone" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Mobile</td>
                       <td>
-                        <input v-model="mobile" type="phone" />
+                        <input :value="lead.mobile" type="phone" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Fax</td>
                       <td>
-                        <input v-model="fax" type="phone" />
+                        <input :value="lead.fax" type="phone" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Website</td>
                       <td>
-                        <input v-model="website" type="url" />
+                        <input :value="lead.website" type="url" />
                       </td>
                     </tr>
                     <div class="col">
                       <tr>
                         <td style="text-align: right;">Primary Address Street</td>
                         <td>
-                          <input v-model="address" type="text" />
+                          <input :value="lead.address" type="text" />
                         </td>
                       </tr>
                       <tr>
                         <td style="text-align: right;">Primary Address Postalcode</td>
                         <td>
-                          <input v-model="postalcode" type="text" />
+                          <input :value="lead.postalcode" type="text" />
                         </td>
                       </tr>
                       <tr>
                         <td style="text-align: right;">Primary Address City</td>
                         <td>
-                          <select id="city" v-model="city" name="template" class="form-category">
+                          <select id="city" :value="lead.city" name="template" class="form-category">
                             <option v-for="cities in findManyCities" :key="cities.id" :value="cities">
                               {{ cities.name }}
                             </option>
@@ -124,7 +124,7 @@
                       <tr>
                         <td style="text-align: right;">Primary Address State</td>
                         <td>
-                          <select id="state" v-model="state" name="template" class="form-category">
+                          <select id="state" :value="lead.state" name="template" class="form-category">
                             <option v-for="states in findManyStates" :key="states.id" :value="states">{{ states.name }}
                             </option>
                           </select>
@@ -133,7 +133,7 @@
                       <tr>
                         <td style="text-align: right;">Primary Address Country</td>
                         <td>
-                          <select id="country" v-model="country" name="template" class="form-category">
+                          <select id="country" :value="lead.country" name="template" class="form-category">
                             <option v-for="countries in findManyCountries" :key="countries.id" :value="countries">
                               {{ countries.name }}
                             </option>
@@ -145,19 +145,19 @@
                       <tr>
                         <td style="text-align: right;">Alternate Address Street</td>
                         <td>
-                          <input v-model="alt_address" type="text" value="Other Address" />
+                          <input :value="lead.alt_address" type="text" />
                         </td>
                       </tr>
                       <tr>
                         <td style="text-align: right;">Alternate Address Postalcode</td>
                         <td>
-                          <input v-model="alt_postalcode" type="text" value="Other Address Postalcode" />
+                          <input :value="lead.alt_postalcode" type="text" />
                         </td>
                       </tr>
                       <tr>
                         <td style="text-align: right;">Alternate Address City</td>
                         <td>
-                          <select id="city" v-model="alt_city" name="template" class="form-category">
+                          <select id="city" :value="lead.alt_city" name="template" class="form-category">
                             <option v-for="cities in findManyCities" :key="cities.id" :value="cities">
                               {{ cities.name }}
                             </option>
@@ -167,7 +167,7 @@
                       <tr>
                         <td style="text-align: right;">Alternate Address State</td>
                         <td>
-                          <select id="state" v-model="alt_state" name="template" class="form-category">
+                          <select id="state" :value="lead.alt_state" name="template" class="form-category">
                             <option v-for="states in findManyStates" :key="states" :value="states">{{ states.name }}
                             </option>
                           </select>
@@ -176,7 +176,7 @@
                       <tr>
                         <td style="text-align: right;">Alternate Address Country</td>
                         <td>
-                          <select id="country" v-model="alt_country" name="template" class="form-category">
+                          <select id="country" :value="lead.alt_country" name="template" class="form-category">
                             <option v-for="countries in findManyCountries" :key="countries" :value="countries">
                               {{ countries.name }}
                             </option>
@@ -186,19 +186,19 @@
                       <tr>
                         <td style="text-align: right;">Email Address</td>
                         <td>
-                          <input v-model="email" type="email" />
+                          <input :value="lead.email" type="email" />
                         </td>
                       </tr>
                       <tr>
                         <td style="text-align: right;">Description</td>
                         <td>
-                          <textarea v-model="description" col="40" rows="10"></textarea>
+                          <textarea :value="lead.description" col="40" rows="10"></textarea>
                         </td>
                       </tr>
                       <tr>
                         <td style="text-align: right;">Assigned To</td>
                         <td>
-                          <select id="assignedTo" v-model="assigned_to">
+                          <select id="assignedTo" :value="lead.assigned_to">
                             <option v-for="users in findManyUsers" :key="users.id" :value="users">
                               {{ users.name }}
                             </option>
@@ -227,7 +227,7 @@
                             <tr>
                               <td style="text-align: right;">Status</td>
                               <td>
-                                <select id="status" v-model="status" name="template" class="form-category">
+                                <select id="status" :value="lead.status" name="template" class="form-category">
                                   <option value="active">Active Lead</option>
                                   <option value="noLongerActive">No Longer Active</option>
                                 </select>
@@ -236,19 +236,19 @@
                             <tr>
                               <td style="text-align: right;">Status Description</td>
                               <td>
-                                <textarea v-model="status_description" cols="40" rows="10"></textarea>
+                                <textarea :value="lead.status_description" cols="40" rows="10"></textarea>
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Opportunity Amount</td>
                               <td>
-                                <input v-model="opportunity_amount" type="number" />
+                                <input :value="lead.opportunity_amount" type="number" />
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Campaign</td>
                               <td>
-                                <select id="campaign" v-model="campaign">
+                                <select id="campaign" :value="lead.campaign">
                                   <option v-for="campaign in findManyCampaigns" :key="campaign.id" :value="campaign">
                                     {{ campaign.name }}
                                   </option>
@@ -258,7 +258,7 @@
                             <tr>
                               <td style="text-align: right;">Lead Source</td>
                               <td>
-                                <select id="leadSource" v-model="lead_source">
+                                <select id="leadSource" :value="lead.lead_source">
                                   <option value="coldCall">Cold Call</option>
                                   <option value="exCustomer">Existing Customer</option>
                                   <option value="website">Website</option>
@@ -279,13 +279,13 @@
                             <tr>
                               <td style="text-align: right;">Lead Source Description</td>
                               <td>
-                                <textarea v-model="lead_source_description" cols="40" rows="10"></textarea>
+                                <textarea :value="lead.lead_source_description" cols="40" rows="10"></textarea>
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Referred By</td>
                               <td>
-                                <select id="assignedTo" v-model="referred_by">
+                                <select id="assignedTo" :value="lead.referred_by">
                                   <option v-for="users in findManyUsers" :key="users.id" :value="users">
                                     {{ users.name }}
                                   </option>

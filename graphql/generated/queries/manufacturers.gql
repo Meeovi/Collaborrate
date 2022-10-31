@@ -1,5 +1,5 @@
 query manufacturers($cursor: ManufacturerWhereUniqueInput, $distinct: [ManufacturerScalarFieldEnum!], $orderBy: [ManufacturerOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ManufacturerWhereInput){
-    manufacturers{
+    manufacturers(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         city
         code
         country

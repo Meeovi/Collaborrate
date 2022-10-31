@@ -4,4 +4,6 @@ export declare class CurrenciesCreateManyInput {
     code?: string | undefined;
     name?: string | undefined;
     region?: string | undefined;
+    symbol?: string | undefined;
+    useStandard?: string | undefined;
 }

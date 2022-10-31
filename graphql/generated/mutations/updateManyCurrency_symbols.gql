@@ -1,5 +1,0 @@
-mutation updateManyCurrency_symbols($data: Currency_symbolsUpdateManyMutationInput!, $where: Currency_symbolsWhereInput){
-    updateManyCurrency_symbols(data: $data, where: $where){
-        count
-    }
-}

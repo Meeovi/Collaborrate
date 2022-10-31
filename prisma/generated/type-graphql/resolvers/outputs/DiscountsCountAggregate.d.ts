@@ -15,5 +15,10 @@ export declare class DiscountsCountAggregate {
     customers: number;
     users: number;
     type: number;
+    creditMemo: number;
+    billToName: number;
+    orderNumber: number;
+    refunded: number;
+    status: number;
     _all: number;
 }

@@ -1,8 +1,10 @@
 query findUniqueDiscounts($where: DiscountsWhereUniqueInput!){
     findUniqueDiscounts(where: $where){
         articles
+        billToName
         categories
         coupons
+        creditMemo
         customers
         discount
         excerpt
@@ -10,10 +12,13 @@ query findUniqueDiscounts($where: DiscountsWhereUniqueInput!){
         id
         image
         name
+        orderNumber
         products
         published
+        refunded
         rewards
         special_offers
+        status
         type
         users
     }

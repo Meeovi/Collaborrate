@@ -20,6 +20,11 @@ export declare class DiscountsGroupBy {
     customers: string | null;
     users: string | null;
     type: string | null;
+    creditMemo: string | null;
+    billToName: string | null;
+    orderNumber: string | null;
+    refunded: string | null;
+    status: string | null;
     _count: DiscountsCountAggregate | null;
     _avg: DiscountsAvgAggregate | null;
     _sum: DiscountsSumAggregate | null;

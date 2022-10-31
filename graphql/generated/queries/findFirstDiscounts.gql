@@ -1,8 +1,10 @@
 query findFirstDiscounts($cursor: DiscountsWhereUniqueInput, $distinct: [DiscountsScalarFieldEnum!], $orderBy: [DiscountsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: DiscountsWhereInput){
-    findFirstDiscounts{
+    findFirstDiscounts(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         articles
+        billToName
         categories
         coupons
+        creditMemo
         customers
         discount
         excerpt
@@ -10,10 +12,13 @@ query findFirstDiscounts($cursor: DiscountsWhereUniqueInput, $distinct: [Discoun
         id
         image
         name
+        orderNumber
         products
         published
+        refunded
         rewards
         special_offers
+        status
         type
         users
     }

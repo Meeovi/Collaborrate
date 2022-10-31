@@ -1,5 +1,5 @@
 query upload_files($cursor: Upload_fileWhereUniqueInput, $distinct: [Upload_fileScalarFieldEnum!], $orderBy: [Upload_fileOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Upload_fileWhereInput){
-    upload_files{
+    upload_files(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         alternativeText
         caption
         created_at

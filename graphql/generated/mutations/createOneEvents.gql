@@ -8,10 +8,21 @@ mutation createOneEvents($data: EventsCreateInput!){
         end
         id
         image
+        invitationBillingAddress
+        invitationCustomerName
+        invitationEmail
+        invitationGrandTotalPurchased
+        invitationInvoiceDate
+        invitationOrderNumber
+        invitationPaymentMethod
+        invitationShippingAddress
+        invitationStatus
+        media
         name
         postalcode
         start
         state
         tickets
+        type
     }
 }

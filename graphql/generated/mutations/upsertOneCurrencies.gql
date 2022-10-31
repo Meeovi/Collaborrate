@@ -5,5 +5,7 @@ mutation upsertOneCurrencies($create: CurrenciesCreateInput!, $update: Currencie
         id
         name
         region
+        symbol
+        useStandard
     }
 }

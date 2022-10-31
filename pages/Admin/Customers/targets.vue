@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-target"><input type="submit" class="btn btn-warning" value="Add A Target"></a>
+        <a class="navbar-brand" href="/admin/edit/target/add-new-target"><input type="submit" class="btn btn-warning" value="Add A Target"></a>
         
       </div>
     </nav>

@@ -1,5 +1,5 @@
 query findManyUsers($cursor: UsersWhereUniqueInput, $distinct: [UsersScalarFieldEnum!], $orderBy: [UsersOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: UsersWhereInput){
-    findManyUsers{
+    findManyUsers(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         created_at
         email
         emails

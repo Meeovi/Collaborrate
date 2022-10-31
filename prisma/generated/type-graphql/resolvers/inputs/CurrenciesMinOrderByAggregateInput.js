@@ -36,6 +36,18 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], CurrenciesMinOrderByAggregateInput.prototype, "region", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], CurrenciesMinOrderByAggregateInput.prototype, "symbol", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], CurrenciesMinOrderByAggregateInput.prototype, "useStandard", void 0);
 CurrenciesMinOrderByAggregateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("CurrenciesMinOrderByAggregateInput", {
         isAbstract: true

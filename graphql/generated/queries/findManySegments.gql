@@ -1,5 +1,5 @@
 query findManySegments($cursor: SegmentsWhereUniqueInput, $distinct: [SegmentsScalarFieldEnum!], $orderBy: [SegmentsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: SegmentsWhereInput){
-    findManySegments{
+    findManySegments(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         apply_to
         created_at
         customers

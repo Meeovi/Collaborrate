@@ -1,5 +1,5 @@
 query deepdives($cursor: DeepdiveWhereUniqueInput, $distinct: [DeepdiveScalarFieldEnum!], $orderBy: [DeepdiveOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: DeepdiveWhereInput){
-    deepdives{
+    deepdives(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         attendees
         content
         created_at

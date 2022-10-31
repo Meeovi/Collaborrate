@@ -1,5 +1,5 @@
 query findManyLeads($cursor: LeadsWhereUniqueInput, $distinct: [LeadsScalarFieldEnum!], $orderBy: [LeadsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: LeadsWhereInput){
-    findManyLeads{
+    findManyLeads(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         Prefix
         account_name
         address

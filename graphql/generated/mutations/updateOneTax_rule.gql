@@ -1,9 +1,0 @@
-mutation updateOneTax_rule($data: Tax_ruleUpdateInput!, $where: Tax_ruleWhereUniqueInput!){
-    updateOneTax_rule(data: $data, where: $where){
-        id
-        name
-        prod_id
-        products
-        tax_rate
-    }
-}

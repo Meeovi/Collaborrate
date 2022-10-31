@@ -1,5 +1,5 @@
 query findFirstFullfillments($cursor: FullfillmentsWhereUniqueInput, $distinct: [FullfillmentsScalarFieldEnum!], $orderBy: [FullfillmentsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: FullfillmentsWhereInput){
-    findFirstFullfillments{
+    findFirstFullfillments(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         address
         address_two
         city

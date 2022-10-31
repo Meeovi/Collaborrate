@@ -1,5 +1,5 @@
 query findManyWebsites($cursor: WebsitesWhereUniqueInput, $distinct: [WebsitesScalarFieldEnum!], $orderBy: [WebsitesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: WebsitesWhereInput){
-    findManyWebsites{
+    findManyWebsites(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         category
         created_at
         id

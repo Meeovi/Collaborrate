@@ -1,5 +1,0 @@
-mutation updateManyCustomer_group($data: Customer_groupUpdateManyMutationInput!, $where: Customer_groupWhereInput){
-    updateManyCustomer_group(data: $data, where: $where){
-        count
-    }
-}

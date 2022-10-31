@@ -29,19 +29,19 @@
                     <tr>
                       <td style="text-align: right;">Partner Name</td>
                       <td>
-                        <input v-model="name" type="text" required />
+                        <input :value="partner.name" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Address</td>
                       <td>
-                        <input v-model="address" type="text" name="tax" />
+                        <input :value="partner.address" type="text" name="tax" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">City</td>
                       <td>
-                        <select id="city" v-model="city" name="template" class="form-category">
+                        <select id="city" :value="partner.city" name="template" class="form-category">
                           <option v-for="city in findManyCities" :key="city.id" :value="city">{{ city.name }}
                           </option>
                         </select>
@@ -50,7 +50,7 @@
                     <tr>
                       <td style="text-align: right;">State</td>
                       <td>
-                        <select id="states" v-model="states" name="template" class="form-category">
+                        <select id="states" :value="partner.states" name="template" class="form-category">
                           <option v-for="states in findManyStates" :key="states.id" :value="states">{{ states.name }}
                           </option>
                         </select>
@@ -59,7 +59,7 @@
                     <tr>
                       <td style="text-align: right;">Country</td>
                       <td>
-                        <select id="countries" v-model="countries" name="template" class="form-category">
+                        <select id="countries" :value="partner.countries" name="template" class="form-category">
                           <option v-for="countries in findManyCountries" :key="countries.id" :value="countries">
                             {{ countries.name }}
                           </option>
@@ -69,7 +69,7 @@
                     <tr>
                       <td style="text-align: right;">Business Type</td>
                       <td>
-                        <select id="businessType" v-model="business_type" name="template" class="form-category">
+                        <select id="businessType" :value="partner.business_type" name="template" class="form-category">
                           <option value="digital">Digital</option>
                           <option value="physical">Has Physical Location</option>
                           <option value="digitalPhysical">Digital & Physical Location</option>
@@ -79,7 +79,7 @@
                     <tr>
                       <td style="text-align: right;">Is the Partner Public?</td>
                       <td>
-                        <select id="status" v-model="isPublic" name="template" class="form-category">
+                        <select id="status" :value="partner.isPublic" name="template" class="form-category">
                           <option value="public">Public</option>
                           <option value="private">Not Public</option>
                         </select>

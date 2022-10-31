@@ -1,5 +1,5 @@
 query findFirstGlossary($cursor: GlossaryWhereUniqueInput, $distinct: [GlossaryScalarFieldEnum!], $orderBy: [GlossaryOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: GlossaryWhereInput){
-    findFirstGlossary{
+    findFirstGlossary(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         content
         id
         image

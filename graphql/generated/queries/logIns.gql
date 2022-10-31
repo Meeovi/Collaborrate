@@ -1,5 +1,5 @@
 query logIns($cursor: LogInWhereUniqueInput, $distinct: [LogInScalarFieldEnum!], $orderBy: [LogInOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: LogInWhereInput){
-    logIns{
+    logIns(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         created_at
         email
         expiresIn

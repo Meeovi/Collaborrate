@@ -1,5 +1,5 @@
 query findManyWishlists($cursor: WishlistsWhereUniqueInput, $distinct: [WishlistsScalarFieldEnum!], $orderBy: [WishlistsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: WishlistsWhereInput){
-    findManyWishlists{
+    findManyWishlists(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         created_at
         customers
         id

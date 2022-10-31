@@ -1,5 +1,0 @@
-mutation updateManyRating($data: RatingUpdateManyMutationInput!, $where: RatingWhereInput){
-    updateManyRating(data: $data, where: $where){
-        count
-    }
-}

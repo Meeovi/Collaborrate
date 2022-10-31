@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-discounts"><input type="submit" class="btn btn-warning" value="Create New Discount"></a>
+        <a class="navbar-brand" href="/admin/edit/add-new-discounts"><input type="submit" class="btn btn-warning" value="Create New Discount"></a>
         
       </div>
     </nav>
@@ -27,6 +27,9 @@
             <td>{{ discounts.expiration }}</td>
             <td>{{ discounts.excerpt }}</td>
             <td>{{ discounts.type }}</td>
+            <td>{{ discounts.creditMemo }}</td>
+            <td>{{ discounts.billToName }}</td>
+            <td>{{ discounts.refunded }}</td>
             <td><a :href="`/admin/edit/gift-certificate/${discounts.id}`">View</a></td>
           </tr>
         </tbody>

@@ -1,5 +1,5 @@
 query mediamanagers($cursor: MediamanagerWhereUniqueInput, $distinct: [MediamanagerScalarFieldEnum!], $orderBy: [MediamanagerOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: MediamanagerWhereInput){
-    mediamanagers{
+    mediamanagers(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         agreements
         agreements_agreementsTomediamanager
         albums

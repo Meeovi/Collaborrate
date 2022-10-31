@@ -1,5 +1,5 @@
 query findManyWorkspaces($cursor: WorkspacesWhereUniqueInput, $distinct: [WorkspacesScalarFieldEnum!], $orderBy: [WorkspacesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: WorkspacesWhereInput){
-    findManyWorkspaces{
+    findManyWorkspaces(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         author
         brands
         brands_brandsToworkspaces

@@ -15,4 +15,9 @@ export declare class Discounts {
     customers?: string | null;
     users?: string | null;
     type?: string | null;
+    creditMemo?: string | null;
+    billToName?: string | null;
+    orderNumber?: string | null;
+    refunded?: string | null;
+    status?: string | null;
 }

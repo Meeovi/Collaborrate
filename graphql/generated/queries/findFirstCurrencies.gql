@@ -1,9 +1,11 @@
 query findFirstCurrencies($cursor: CurrenciesWhereUniqueInput, $distinct: [CurrenciesScalarFieldEnum!], $orderBy: [CurrenciesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CurrenciesWhereInput){
-    findFirstCurrencies{
+    findFirstCurrencies(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         code
         created_at
         id
         name
         region
+        symbol
+        useStandard
     }
 }

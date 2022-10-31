@@ -29,11 +29,11 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Collection Name</td>
-                      <td><input id="collectionsName" v-model="name" type="text" required /></td>
+                      <td><input id="collectionsName" :value="collection.name" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
-                      <td><textarea v-model="description" cols="40" rows="10"></textarea></td>
+                      <td><textarea :value="collection.description" cols="40" rows="10"></textarea></td>
                     </tr>
                   </tbody>
                 </table>
@@ -78,15 +78,15 @@
                           </tr>
                           <tr>
                             <td style="text-align: right;">Meta Title</td>
-                            <td><input v-model="meta_title" type="text" value="Collection Url" required /></td>
+                            <td><input :value="collection.meta_title" type="text" required /></td>
                           </tr>
                           <tr>
                             <td style="text-align: right;">Meta Keywords</td>
-                            <td><input v-model="meta_keywords" type="text" value="Collection Keywords" /></td>
+                            <td><input :value="collection.meta_keywords" type="text" /></td>
                           </tr>
                           <tr>
                             <td style="text-align: right;">Meta Description</td>
-                            <td><textarea v-model="meta_description" cols="40" rows="10"></textarea></td>
+                            <td><textarea :value="collection.meta_description" cols="40" rows="10"></textarea></td>
                           </tr>
                         </tbody>
                       </table>

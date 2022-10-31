@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="addAttribute()">
+    <form v-for="attribute in findManyAttributes" :key="attribute.id" @submit.prevent="addAttribute()">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
@@ -29,37 +29,37 @@
                 <tr>
                   <td style="text-align: right;">Attribute Name</td>
                   <td>
-                    <input id="attributesLabel" v-model="default_label" type="text" required />
+                    <input id="attributesLabel" :value="attribute.default_label" type="text" required />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Attribute Code</td>
                   <td>
-                    <input id="attributesCode" v-model="attribute_code" type="text" value="This is used internally. Make sure you don’t use spaces"  />
+                    <input id="attributesCode" :value="attribute.attribute_code" type="text"  />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Default Value</td>
                   <td>
-                    <input id="attributesValue" v-model="attribute_value" type="text" />
+                    <input id="attributesValue" :value="attribute.attribute_value" type="text" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Meta Name</td>
                   <td>
-                    <input id="attributesValue" v-model="meta_name" type="text" value="Used in Search Engine Optimization" />
+                    <input id="attributesValue" :value="attribute.meta_name" type="text" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Meta URL</td>
                   <td>
-                    <input id="attributesValue" v-model="meta_url" type="text" value="Used in Search Engine Optimization"  />
+                    <input id="attributesValue" :value="attribute.meta_url" type="text"  />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Meta Description</td>
                   <td>
-                    <input id="attributesValue" v-model="meta_description" type="text" value="Used in Search Engine Optimization"  />
+                    <input id="attributesValue" :value="attribute.meta_description" type="text"  />
                   </td>
                 </tr>
               </tbody>
@@ -81,7 +81,7 @@
                 <tr>
                   <td style="text-align: right;">Attribute Class</td>
                   <td>
-                    <select id="status" v-model="attribute_class" name="template" class="form-category">
+                    <select id="status" :value="attribute.attribute_class" name="template" class="form-category">
                           <option value="productAttribute">Product Attribute</option>
                           <option value="contentAttribute">Content Attribute</option>
                         </select>
@@ -90,16 +90,14 @@
                 <tr>
                   <td style="text-align: right;">Storefront Properties</td>
                   <td>
-                    <input id="attributesFacetedNavigation" v-model="faceted_navigation" type="checkbox" value="Use in faceted Navigation" />
-                    <input id="attributesPosition" v-model="position" type="text" value="Position in faceted navigation" />
-                    <input id="attributesPublic" v-model="isPublic" type="checkbox" value="Check to make public" />
+                    <input id="attributesPublic" :value="attribute.isPublic" type="checkbox" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Dashboard Properties</td>
                   <td>
-                    <input id="attributesFilterOptions" v-model="filter_options" type="checkbox" value="Use in filtering" />
-                    <input id="attributesColumnOptions" v-model="column_options" type="checkbox" value="Add to Column Options" />
+                    <input id="attributesFilterOptions" :value="attribute.filter_options" type="checkbox" />
+                    <input id="attributesColumnOptions" :value="attribute.column_options" type="checkbox" />
                   </td>
                 </tr>
               </tbody>
@@ -115,7 +113,7 @@
 
 <script>
   import  gql from "graphql-tag";
-  import findManyProduct_attributes from "~/graphql/generated/queries/findManyAttributes";
+  import findManyAttributes from "~/graphql/generated/queries/findManyAttributes";
 
   const DELETE_ATTRIBUTES = gql`
     mutation ($id: Int!){
@@ -183,7 +181,7 @@ export default {
         },
         refetchQueries: [
           {
-            query: findManyProduct_attributes
+            query: findManyAttributes
           }       
           
         ]
@@ -199,7 +197,7 @@ export default {
         },
         refetchQueries: [
           {
-            query: findManyProduct_attributes
+            query: findManyAttributes
           }       
           
         ]

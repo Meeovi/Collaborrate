@@ -102,6 +102,36 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], DiscountsCreateManyInput.prototype, "type", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsCreateManyInput.prototype, "creditMemo", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsCreateManyInput.prototype, "billToName", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsCreateManyInput.prototype, "orderNumber", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsCreateManyInput.prototype, "refunded", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsCreateManyInput.prototype, "status", void 0);
 DiscountsCreateManyInput = tslib_1.__decorate([
     TypeGraphQL.InputType("DiscountsCreateManyInput", {
         isAbstract: true

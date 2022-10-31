@@ -9,6 +9,8 @@ export declare class CurrenciesOrderByWithAggregationInput {
     code?: "asc" | "desc" | undefined;
     name?: "asc" | "desc" | undefined;
     region?: "asc" | "desc" | undefined;
+    symbol?: "asc" | "desc" | undefined;
+    useStandard?: "asc" | "desc" | undefined;
     _count?: CurrenciesCountOrderByAggregateInput | undefined;
     _avg?: CurrenciesAvgOrderByAggregateInput | undefined;
     _max?: CurrenciesMaxOrderByAggregateInput | undefined;

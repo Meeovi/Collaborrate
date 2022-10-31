@@ -36,6 +36,18 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], CurrenciesMaxAggregate.prototype, "region", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], CurrenciesMaxAggregate.prototype, "symbol", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], CurrenciesMaxAggregate.prototype, "useStandard", void 0);
 CurrenciesMaxAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("CurrenciesMaxAggregate", {
         isAbstract: true

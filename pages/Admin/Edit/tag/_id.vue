@@ -28,7 +28,7 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Tag Name</td>
-                      <td><input id="tagsName" v-model="name" type="tagsName" required /></td>
+                      <td><input id="tagsName" :value="tag.name" type="tagsName" required /></td>
                     </tr>
                   </tbody>
                 </table>
@@ -52,7 +52,7 @@
                               <td style="text-align: right;">Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <input type="textarea" id="tagDesc" v-model="excerpt" name="tagDesc" cols="80"
+                                  <input type="textarea" id="tagDesc" :value="tag.excerpt" name="tagDesc" cols="80"
                                     rows="10" />
                                 </div>
                               </td>

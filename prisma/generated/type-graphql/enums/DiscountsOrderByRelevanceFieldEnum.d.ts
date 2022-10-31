@@ -12,5 +12,10 @@ export declare enum DiscountsOrderByRelevanceFieldEnum {
     products = "products",
     customers = "customers",
     users = "users",
-    type = "type"
+    type = "type",
+    creditMemo = "creditMemo",
+    billToName = "billToName",
+    orderNumber = "orderNumber",
+    refunded = "refunded",
+    status = "status"
 }

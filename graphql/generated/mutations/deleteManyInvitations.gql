@@ -1,5 +1,0 @@
-mutation deleteManyInvitations($where: InvitationsWhereInput){
-    deleteManyInvitations(where: $where){
-        count
-    }
-}

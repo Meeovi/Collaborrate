@@ -1,8 +1,10 @@
 mutation createOneDiscounts($data: DiscountsCreateInput!){
     createOneDiscounts(data: $data){
         articles
+        billToName
         categories
         coupons
+        creditMemo
         customers
         discount
         excerpt
@@ -10,10 +12,13 @@ mutation createOneDiscounts($data: DiscountsCreateInput!){
         id
         image
         name
+        orderNumber
         products
         published
+        refunded
         rewards
         special_offers
+        status
         type
         users
     }

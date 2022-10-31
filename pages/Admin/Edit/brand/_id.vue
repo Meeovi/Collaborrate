@@ -29,7 +29,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="products">Products</label><br>
-                        <select id="products" v-model="products" name="template" class="form-category">
+                        <select id="products" :value="brands.products" name="template" class="form-category">
                           <option v-for="products in productss" :key="products" :value="products">
                             {{ products.name }}</option>
                         </select>
@@ -38,31 +38,31 @@
                     <tr>
                       <td style="text-align: right;">Code</td>
                       <td>
-                        <input v-model="code" name="fullfillmentCompanyName" type="text" />{{ brands.code }}
+                        <input :value="brands.code" name="fullfillmentCompanyName" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Brand Name</td>
                       <td>
-                        <input v-model="name" type="text" required />{{ brands.name }}
+                        <input :value="brands.name" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <input v-model="description" type="textarea" />{{ brands.description }}
+                        <input :value="brands.description" type="textarea" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Public</td>
                       <td>
-                        <input v-model="isPublic" type="checkbox" value="Check the box if Brand is public" />
+                        <input :value="brands.isPublic" type="checkbox" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
                         <label for="cities">City</label><br>
-                        <select id="cities" v-model="city" name="template" class="form-category">
+                        <select id="cities" :value="brands.city" name="template" class="form-category">
                           <option v-for="cities in cities" :key="cities" :value="cities">
                             {{ cities.name }}</option>
                         </select>
@@ -71,7 +71,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="states">State</label><br>
-                        <select id="states" v-model="state" name="template" class="form-category">
+                        <select id="states" :value="brands.state" name="template" class="form-category">
                           <option v-for="states in states" :key="states" :value="states">
                             {{ states.name }}</option>
                         </select>
@@ -80,7 +80,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="countries">Countries</label><br>
-                        <select id="countries" v-model="country" name="template" class="form-category">
+                        <select id="countries" :value="brands.country" name="template" class="form-category">
                           <option v-for="countries in countries" :key="countries" :value="countries">
                             {{ countries.name }}</option>
                         </select>
@@ -89,7 +89,7 @@
                     <tr>
                       <td style="text-align: right;">Media</td>
                       <td>
-                        <input v-model="media" type="image" />{{ brands.media }}
+                        <input :value="brands.media" type="image" />
                       </td>
                     </tr>
                   </tbody>

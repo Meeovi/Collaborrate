@@ -21,6 +21,11 @@ var DiscountsScalarFieldEnum;
     DiscountsScalarFieldEnum["customers"] = "customers";
     DiscountsScalarFieldEnum["users"] = "users";
     DiscountsScalarFieldEnum["type"] = "type";
+    DiscountsScalarFieldEnum["creditMemo"] = "creditMemo";
+    DiscountsScalarFieldEnum["billToName"] = "billToName";
+    DiscountsScalarFieldEnum["orderNumber"] = "orderNumber";
+    DiscountsScalarFieldEnum["refunded"] = "refunded";
+    DiscountsScalarFieldEnum["status"] = "status";
 })(DiscountsScalarFieldEnum = exports.DiscountsScalarFieldEnum || (exports.DiscountsScalarFieldEnum = {}));
 TypeGraphQL.registerEnumType(DiscountsScalarFieldEnum, {
     name: "DiscountsScalarFieldEnum",

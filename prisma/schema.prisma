@@ -61,27 +61,6 @@ model agreements {
   mediamanager String?
 }
 
-model analytics {
-  id               BigInt    @id @default(autoincrement())
-  created_at       DateTime? @default(now())
-  name             String?
-  country          String?
-  share_data       String?
-  website_name     String?
-  client_id        String?
-  client_secret    String?
-  tracking_id      String?
-  property_name    String?
-  url              String?
-  default_view     String?
-  category         String?
-  property_hit     String?
-  tracking_code    String?
-  data_collection  Boolean?
-  data_retention   Boolean?
-  search_analytics String?
-}
-
 model apitoken {
   id          BigInt    @id @default(autoincrement())
   created_at  DateTime? @default(now())
@@ -125,58 +104,6 @@ model brands {
   mediamanager String?
   products     String?
   workspaces   String?
-}
-
-model cart_price_rules {
-  id                                     Int       @id @default(autoincrement())
-  rule                                   String?
-  description                            String?
-  active                                 Boolean?
-  coupon                                 String?
-  uses_per_customer                      String?
-  priority                               String?
-  start_date                             DateTime? @db.Date
-  end_date                               DateTime? @db.Date
-  status                                 String?
-  website                                String?
-  actions_apply                          String?
-  actions_discount_amount                Decimal?  @db.Decimal(10, 0)
-  actions_discard_subsequent_rules       Boolean?
-  actions_max_qty_discount_is_applied_to Decimal?  @db.Decimal(10, 0)
-  actions_discount_qty_step              Decimal?  @db.Decimal(10, 0)
-  actions_apply_shipping_amount          Boolean?
-}
-
-model cases {
-  id            BigInt    @id @default(autoincrement())
-  created_at    DateTime? @default(now())
-  case_number   Int?      @db.SmallInt
-  state         String?
-  type          String?
-  subject       String?
-  description   String?
-  resolution    String?
-  priority      String?
-  status        String?
-  account_name  String?
-  assigned_to   String?
-  date_modified DateTime? @default(now())
-}
-
-model catalog_price_rule {
-  id                               Int       @id @default(autoincrement())
-  rule                             String?
-  description                      String?
-  active                           Boolean?
-  customer_groups                  String?
-  priority                         String?
-  start_date                       DateTime? @db.Date
-  end_date                         DateTime? @db.Date
-  status                           String?
-  website                          String?
-  actions_apply                    String?
-  actions_discount_amount          Decimal?  @db.Decimal(10, 0)
-  actions_discard_subsequent_rules Boolean?
 }
 
 model categories {
@@ -253,19 +180,6 @@ model collections {
   meta_description String?
 }
 
-model comments {
-  id            Int       @id @default(autoincrement())
-  customer_name String
-  description   String?
-  image         String?
-  response      String?
-  published     DateTime?
-  cust_id       Int
-  customers     String?
-  mediamanager  String?
-  trainings     String?
-}
-
 model content_type {
   id            BigInt    @id @default(autoincrement())
   created_at    DateTime? @default(now())
@@ -322,53 +236,14 @@ model countries {
   trainings   String?
 }
 
-model credit_memos {
-  credit_memo  String
-  order_number Int
-  created      DateTime? @default(now())
-  bill_to_name String
-  status       String?
-  refunded     String?
-  action       String?
-  id           BigInt
-  cust_id      Int
-  prod_id      BigInt
-  customers    String?
-  products     String?
-
-  @@id([credit_memo, id])
-}
-
 model currencies {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now())
-  code       String?
-  name       String?
-  region     String?
-}
-
-model currency_rates {
-  import_service String   @id
-  usd            Decimal?
-  id             BigInt   @unique
-}
-
-model currency_symbols {
-  symbol       String   @id
-  use_standard Boolean?
-  id           BigInt   @unique @default(autoincrement())
-}
-
-model customer_group {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now())
-  name       String?
-  tax_class  String?
-  cust_id    Int
-  customers  String?
-  content    String?
-  image      String?
-  coverPhoto String?
+  id          BigInt    @id @default(autoincrement())
+  created_at  DateTime? @default(now())
+  code        String?
+  name        String?
+  region      String?
+  symbol      String?
+  useStandard String?
 }
 
 model customers {
@@ -553,16 +428,6 @@ model glossary {
   published DateTime?
 }
 
-model importm {
-  id          BigInt    @id @default(autoincrement())
-  created_at  DateTime? @default(now())
-  name        String?
-  description String?
-  file        String?
-  url         String?
-  image       String?
-}
-
 model integrations {
   id         BigInt    @id @default(autoincrement())
   created_at DateTime? @default(now())
@@ -690,36 +555,6 @@ model mediamanager {
   users                               String?
 }
 
-model meeting {
-  id          BigInt    @id @default(autoincrement())
-  created_at  DateTime? @default(now())
-  subject     String?
-  start_date  String?
-  end_date    String?
-  duration    String?
-  status      String?
-  related_to  String?
-  reminders   String?
-  content     String?
-  assigned_to String?
-  invitees    String?
-  scheduling  String?
-}
-
-model messages {
-  id         Int       @id @default(autoincrement())
-  from       String?
-  created_at DateTime? @default(now())
-  subject    String?
-  content    String?
-  sender     String?
-  cust_id    Int
-  media      String?
-  staff_id   Int?
-  customers  String?
-  users      String?
-}
-
 model ooto {
   id         BigInt    @id @default(autoincrement())
   created_at DateTime? @default(now())
@@ -833,22 +668,6 @@ model plugins {
   publisher_name  String?
   agree_terms     Boolean?
   publisher_email String?
-}
-
-model polls {
-  id          Int       @id @default(autoincrement())
-  name        String
-  excerpt     String?
-  description String?
-  image       String?
-  published   DateTime? @default(now())
-  question    String?
-  response    String?
-  categories  String?
-  articles    String?
-  products    String?
-  customers   String?
-  users       String?
 }
 
 model product_types {
@@ -1032,30 +851,6 @@ model quotes {
   products_productsToquotes   String?
 }
 
-model rating {
-  id                 Int      @id @default(autoincrement())
-  default_value      String?
-  default_store_view String?
-  rating_visibility  String?
-  active             Boolean?
-  sort_order         Decimal? @db.Decimal(10, 0)
-  prod_id            BigInt
-  products           String?
-}
-
-model reports {
-  id             Int       @id @default(autoincrement())
-  customer       String?
-  email          String?
-  products       String?
-  quantity       Decimal?  @db.Decimal(10, 0)
-  subtotal       String?
-  applied_coupon String?
-  created        DateTime? @default(now())
-  updated        DateTime? @default(now())
-  ip_address     String?
-}
-
 model returns {
   id                  BigInt    @id @default(autoincrement())
   created_at          DateTime? @default(now())
@@ -1138,23 +933,6 @@ model shipments {
   website       String?
 }
 
-model special_discounts {
-  id         Int       @id @default(autoincrement())
-  name       String
-  excerpt    String?
-  discount   Decimal?
-  image      String?
-  published  DateTime?
-  rewards    String?
-  coupons    String?
-  expiration DateTime? @db.Date
-  categories String?
-  articles   String?
-  products   String?
-  customers  String?
-  users      String?
-}
-
 model states {
   id          Int     @id @default(autoincrement())
   name        String
@@ -1162,25 +940,6 @@ model states {
   country     String?
   image       String?
   trainings   String?
-}
-
-model statistics {
-  id             Int       @id @default(autoincrement())
-  name           String
-  excerpt        String?
-  description    String?
-  image          String?
-  published      DateTime?
-  special_offers String?
-  reports        String?
-  rewards        String?
-  coupons        String?
-  expiration     DateTime? @db.Date
-  categories     String?
-  articles       String?
-  products       String?
-  customers      String?
-  users          String?
 }
 
 model stocks {
@@ -1231,34 +990,6 @@ model targets {
   customer_name  String?
   email_opt_out  String?
   donotcall      String?
-}
-
-model tax_category {
-  id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now())
-  name       String?
-  default    String?
-}
-
-model tax_rate {
-  id                 Int      @id @default(autoincrement())
-  tax_identifier     String
-  zip_post_is_range  Boolean?
-  postcode           String?
-  state              String?
-  country            String?
-  rate_percent       String?
-  default_store_view String?
-  prod_id            BigInt
-  products           String?
-}
-
-model tax_rule {
-  id       Int     @id @default(autoincrement())
-  name     String
-  tax_rate String?
-  prod_id  BigInt
-  products String?
 }
 
 model themes {
@@ -1621,4 +1352,22 @@ model discounts {
   customers      String?
   users          String?
   type           String?
+  creditMemo     String?
+  billToName     String?
+  orderNumber    String?
+  refunded       String?
+  status         String?
+}
+
+model taxes {
+  id             Int     @id(map: "tax_rate_pkey") @default(autoincrement())
+  tax_identifier String
+  postcode       String?
+  state          String?
+  country        String?
+  rate_percent   String?
+  taxDefault     String?
+  products       String?
+  taxRuleName    String?
+  taxCategory    String?
 }

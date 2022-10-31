@@ -10,4 +10,6 @@ export declare class CurrenciesWhereInput {
     code?: StringNullableFilter | undefined;
     name?: StringNullableFilter | undefined;
     region?: StringNullableFilter | undefined;
+    symbol?: StringNullableFilter | undefined;
+    useStandard?: StringNullableFilter | undefined;
 }

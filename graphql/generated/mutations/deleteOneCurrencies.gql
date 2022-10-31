@@ -5,5 +5,7 @@ mutation deleteOneCurrencies($where: CurrenciesWhereUniqueInput!){
         id
         name
         region
+        symbol
+        useStandard
     }
 }

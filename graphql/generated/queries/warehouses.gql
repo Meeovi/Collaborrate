@@ -1,5 +1,5 @@
 query warehouses($cursor: WarehouseWhereUniqueInput, $distinct: [WarehouseScalarFieldEnum!], $orderBy: [WarehouseOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: WarehouseWhereInput){
-    warehouses{
+    warehouses(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         category
         city
         country

@@ -1,9 +1,0 @@
-mutation upsertOneTax_rule($create: Tax_ruleCreateInput!, $update: Tax_ruleUpdateInput!, $where: Tax_ruleWhereUniqueInput!){
-    upsertOneTax_rule(create: $create, update: $update, where: $where){
-        id
-        name
-        prod_id
-        products
-        tax_rate
-    }
-}

@@ -104,6 +104,36 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], DiscountsOrderByWithRelationAndSearchRelevanceInput.prototype, "type", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsOrderByWithRelationAndSearchRelevanceInput.prototype, "creditMemo", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsOrderByWithRelationAndSearchRelevanceInput.prototype, "billToName", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsOrderByWithRelationAndSearchRelevanceInput.prototype, "orderNumber", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsOrderByWithRelationAndSearchRelevanceInput.prototype, "refunded", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsOrderByWithRelationAndSearchRelevanceInput.prototype, "status", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => DiscountsOrderByRelevanceInput_1.DiscountsOrderByRelevanceInput, {
         nullable: true
     }),

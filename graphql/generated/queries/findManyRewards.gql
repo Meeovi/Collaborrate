@@ -1,5 +1,5 @@
 query findManyRewards($cursor: RewardsWhereUniqueInput, $distinct: [RewardsScalarFieldEnum!], $orderBy: [RewardsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: RewardsWhereInput){
-    findManyRewards{
+    findManyRewards(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         articles
         categories
         coupons

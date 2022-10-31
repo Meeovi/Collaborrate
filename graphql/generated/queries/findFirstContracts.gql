@@ -1,5 +1,5 @@
 query findFirstContracts($cursor: ContractsWhereUniqueInput, $distinct: [ContractsScalarFieldEnum!], $orderBy: [ContractsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ContractsWhereInput){
-    findFirstContracts{
+    findFirstContracts(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         account
         company_signed_date
         contact

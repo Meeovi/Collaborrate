@@ -36,7 +36,7 @@
                     <tr>
                       <td style="text-align: right;">Returns Type</td>
                       <td>
-                        <select id="returnType" v-model="type">
+                        <select id="returnType" :value="returns.type">
                           <option value="equipmentReturn">Product Return</option>
                           <option value="rma">Return Merchandise Authorization (RMA)</option>
                           <option value="liquidations">Liquidations</option>
@@ -47,7 +47,7 @@
                     <tr>
                       <td style="text-align: right;">Returns Status</td>
                       <td>
-                        <select id="returnStatus" v-model="status">
+                        <select id="returnStatus" :value="returns.status">
                           <option value="equipmentReturn">Draft</option>
                         </select>
                       </td>
@@ -55,46 +55,46 @@
                     <tr>
                       <td style="text-align: right;">Returns Name</td>
                       <td>
-                        <input id="returnsName" v-model="name" type="text" required />
+                        <input id="returnsName" :value="returns.name" type="text" required />
                         <p for="name">Name of the return</p>
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Time limit of validity</td>
                       <td>
-                        <input id="returnsName" v-model="validity" type="number" required />
+                        <input id="returnsName" :value="returns.validity" type="number" required />
                         <p for="validity">How many days can a customer return a product?</p>
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Returns prefix</td>
                       <td>
-                        <input id="returnsName" v-model="return_prefix" type="text" required />
+                        <input id="returnsName" :value="returns.return_prefix" type="text" required />
                         <p for="returnsPrefix">Prefix used for returns name (e.g. RE00001).</p>
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Height</td>
                       <td>
-                        <input id="returnsHeight" v-model="height" type="text" />
+                        <input id="returnsHeight" :value="returns.height" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Weight</td>
                       <td>
-                        <input id="returnsWeight" v-model="weight" type="text" />
+                        <input id="returnsWeight" :value="returns.weight" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">External Case ID</td>
                       <td>
-                        <input id="returnsWeight" v-model="case_id" type="number" />
+                        <input id="returnsWeight" :value="returns.case_id" type="number" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">From Location</td>
                       <td>
-                        <input id="returnsLocation" v-model="location" type="text" />
+                        <input id="returnsLocation" :value="returns.location" type="text" />
                       </td>
                     </tr>
                   </tbody>
@@ -119,20 +119,20 @@
                                   <tr>
                                     <td style="text-align: right;">Shipping Number</td>
                                     <td>
-                                      <input id="shippingNumber" v-model="shippingNumber" type="number" />
+                                      <input id="shippingNumber" :value="returns.shippingNumber" type="number" />
                                     </td>
                                   </tr>
                                   <tr>
                                     <td style="text-align: right;">Shipping Description</td>
                                     <td>
-                                      <input id="shippingDescription" v-model="shippingDescription" type="text" /><br><br>
+                                      <input id="shippingDescription" :value="returns.shippingDescription" type="text" /><br><br>
                                       <input type="submit" class="btn btn-primary fas fa-plus" value="Add Shipping" />
                                     </td>
                                   </tr>
                                   <tr>
                                     <td style="text-align: right;">Ship To Address</td>
                                     <td>
-                                      <input id="returnsWeight" v-model="shipTo" type="text" />
+                                      <input id="returnsWeight" :value="returns.shipTo" type="text" />
                                     </td>
                                   </tr>
                                 </tbody>
@@ -172,7 +172,7 @@
                               <tr class="col-lg-6">
                                 <td>
                                   <label for="products">Products</label><br>
-                                  <select id="products" v-model="products">
+                                  <select id="products" :value="returns.products">
                                     <option v-for="products in findManyProducts" :key="products.id" :value="products">
                                       {{ products.name }}</option>
                                   </select>

@@ -29,7 +29,7 @@
                     <tr>
                       <td style="text-align: right;">Username</td>
                       <td>
-                        <input v-model="username" type="text" />
+                        <input :value="visit.username" type="text" />
                       </td>
                     </tr>
                     <tr>
@@ -49,13 +49,13 @@
                     <tr>
                       <td style="text-align: right;">Start Date</td>
                       <td>
-                        <input v-model="start_date" type="datetime-local" />
+                        <input :value="visit.start_date" type="datetime-local" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">End Date</td>
                       <td>
-                        <input v-model="end_date" type="datetime-local" />
+                        <input :value="visit.end_date" type="datetime-local" />
                       </td>
                     </tr>
                     <tr>
@@ -70,7 +70,7 @@
                     <tr>
                       <td style="text-align: right;">Location</td>
                       <td>
-                        <input v-model="location" type="text" />
+                        <input :value="visit.location" type="text" />
                       </td>
                     </tr>
                     <tr>
@@ -80,7 +80,7 @@
                           <FormulateInput type="group" name="taskGroup" :repeatable="true" add-label="+ Add Task"
                             validation="required">
                             <div class="task" style="padding-bottom:10px;">
-                              <FormulateInput name="task" v-model="task" validation="required" />
+                              <FormulateInput name="task" :value="visit.task" validation="required" />
                             </div>
                           </FormulateInput>
                         </div>
@@ -89,14 +89,7 @@
                     <tr>
                       <td style="text-align: right;">Visit Description</td>
                       <td>
-                        <client-only><Editor v-model="content" /></client-only>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">Meetings</td>
-                        <td><select id="meeting" v-model="meeting" name="template" class="form-category">
-                          <option v-for="meeting in meetings" :key="meeting" :value="meeting">{{ meeting.name }}</option>
-                        </select>
+                        <client-only><Editor :value="visit.content" /></client-only>
                       </td>
                     </tr>
                   </tbody>
@@ -114,7 +107,6 @@
   import  gql from "graphql-tag";
 
   import findManyVisits from "~/graphql/generated/queries/findManyVisits";
-  import meetings from "~/graphql/generated/queries/meetings";
   /* eslint-disable camelcase */
 
   const DELETE_VISIT = gql`

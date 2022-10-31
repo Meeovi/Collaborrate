@@ -27,26 +27,26 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Customer First Name</td>
-                      <td><input v-model="customer_first_name" type="text" /></td>
+                      <td><input :value="newsletter.customer_first_name" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Cusotmer Last Name</td>
-                      <td><input v-model="customer_last_name" type="text" required /></td>
+                      <td><input :value="newsletter.customer_last_name" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Email</td>
-                      <td><input v-model="email" type="text" required /></td>
+                      <td><input :value="newsletter.email" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Store</td>
-                      <td><select id="store" v-model="store" name="template" class="form-store">
+                      <td><select id="store" :value="newsletter.store" name="template" class="form-store">
                           <option v-for="store in findManyVendors" :key="store.id" :value="store">{{ store.name }}
                           </option>
                         </select></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Website</td>
-                      <td><select id="websites" v-model="websites" name="template" class="form-websites">
+                      <td><select id="websites" :value="newsletter.websites" name="template" class="form-websites">
                           <option v-for="websites in findManyWebsites" :key="websites.id" :value="websites">
                             {{ websites.name }}</option>
                         </select>

@@ -1,5 +1,0 @@
-mutation deleteManyCredit_memos($where: Credit_memosWhereInput){
-    deleteManyCredit_memos(where: $where){
-        count
-    }
-}

@@ -1,5 +1,5 @@
 query findFirstShipments($cursor: ShipmentsWhereUniqueInput, $distinct: [ShipmentsScalarFieldEnum!], $orderBy: [ShipmentsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ShipmentsWhereInput){
-    findFirstShipments{
+    findFirstShipments(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         carrier_name
         client_id
         client_secret

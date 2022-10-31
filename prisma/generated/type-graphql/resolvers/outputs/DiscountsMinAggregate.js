@@ -102,6 +102,36 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], DiscountsMinAggregate.prototype, "type", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsMinAggregate.prototype, "creditMemo", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsMinAggregate.prototype, "billToName", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsMinAggregate.prototype, "orderNumber", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsMinAggregate.prototype, "refunded", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsMinAggregate.prototype, "status", void 0);
 DiscountsMinAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("DiscountsMinAggregate", {
         isAbstract: true

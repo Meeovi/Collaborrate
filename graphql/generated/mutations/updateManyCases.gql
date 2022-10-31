@@ -1,5 +1,0 @@
-mutation updateManyCases($data: CasesUpdateManyMutationInput!, $where: CasesWhereInput){
-    updateManyCases(data: $data, where: $where){
-        count
-    }
-}

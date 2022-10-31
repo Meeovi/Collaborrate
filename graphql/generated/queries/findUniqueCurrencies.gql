@@ -5,5 +5,7 @@ query findUniqueCurrencies($where: CurrenciesWhereUniqueInput!){
         id
         name
         region
+        symbol
+        useStandard
     }
 }

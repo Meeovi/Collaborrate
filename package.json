@@ -48,7 +48,8 @@
     "lintfix": "npm run lint:js -- --fix",
     "test:e2e": "nightwatch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "all": "npm-run-all --parallel docs dev yoga gql-generate"
+    "all": "npm-run-all --parallel docs dev yoga gql-generate",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "dependencies": {
     "@babel/runtime": "^7.19.0",
@@ -82,7 +83,6 @@
     "@types/passport": "^1.0.10",
     "algoliasearch": "^4.14.2",
     "ap-style-title-case": "^1.1.2",
-    "apollo-server": "^3.10.0",
     "connect-ensure-login": "^0.1.1",
     "cookie-parser": "^1.4.6",
     "core-js": "^3.19.3",
@@ -102,6 +102,7 @@
     "graphql-tag": "^2.12.6",
     "graphql-type-json": "^0.3.2",
     "graphql-yoga": "^2.13.5",
+    "graphql2rest": "^0.6.4",
     "helmet": "^5.0.1",
     "instantsearch.css": "^7.4.5",
     "jquery": "^3.6.1",
@@ -132,12 +133,13 @@
     "vue-template-compiler": "^2.6.14"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "2.13.8",
+    "@graphql-codegen/client-preset": "1.1.1",
     "@prisma/client": "^4.4.0 || ^3.7.0 || ^4.1.1",
     "@types/node": "^18.8.4",
-    "@vue/babel-plugin-jsx": "^1.1.1",
     "chromedriver": "^96.0.0",
     "express": "^4.18.1",
-    "graphql": "^15.8.0 || ^16.6.0 || ^15.3.0",
+    "graphql": "^15.3.0",
     "nightwatch": "^2.4.1",
     "npm-run-all": "^4.1.5",
     "prisma": "^4.1.0",

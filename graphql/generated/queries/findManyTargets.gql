@@ -1,5 +1,5 @@
 query findManyTargets($cursor: TargetsWhereUniqueInput, $distinct: [TargetsScalarFieldEnum!], $orderBy: [TargetsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: TargetsWhereInput){
-    findManyTargets{
+    findManyTargets(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         Prefix
         account_name
         address

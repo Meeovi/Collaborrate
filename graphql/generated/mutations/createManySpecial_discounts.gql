@@ -1,5 +1,0 @@
-mutation createManySpecial_discounts($data: [Special_discountsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManySpecial_discounts(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

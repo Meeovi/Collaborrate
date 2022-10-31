@@ -1,5 +1,0 @@
-mutation updateManyComments($data: CommentsUpdateManyMutationInput!, $where: CommentsWhereInput){
-    updateManyComments(data: $data, where: $where){
-        count
-    }
-}

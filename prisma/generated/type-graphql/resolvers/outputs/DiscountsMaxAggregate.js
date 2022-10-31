@@ -102,6 +102,36 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], DiscountsMaxAggregate.prototype, "type", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsMaxAggregate.prototype, "creditMemo", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsMaxAggregate.prototype, "billToName", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsMaxAggregate.prototype, "orderNumber", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsMaxAggregate.prototype, "refunded", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], DiscountsMaxAggregate.prototype, "status", void 0);
 DiscountsMaxAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("DiscountsMaxAggregate", {
         isAbstract: true

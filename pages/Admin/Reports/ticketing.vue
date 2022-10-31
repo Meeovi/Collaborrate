@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-ticket"><input type="submit" class="btn btn-warning" value="Create A Ticket"></a>
+        <a class="navbar-brand" href="/admin/edit/ticket/add-new-ticket"><input type="submit" class="btn btn-warning" value="Create A Ticket"></a>
       </div>
 </nav>
 <br>

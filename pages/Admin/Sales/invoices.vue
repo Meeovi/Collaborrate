@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-invoice"><input type="submit" class="btn btn-warning" value="Create New Invoice"></a>
+        <a class="navbar-brand" href="/admin/edit/add-new-invoice"><input type="submit" class="btn btn-warning" value="Create New Invoice"></a>
         
       </div>
     </nav>

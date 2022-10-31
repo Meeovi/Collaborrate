@@ -1,5 +1,0 @@
-mutation createManyStatistics($data: [StatisticsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyStatistics(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

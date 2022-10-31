@@ -1,9 +1,0 @@
-query findFirstTax_rule($cursor: Tax_ruleWhereUniqueInput, $distinct: [Tax_ruleScalarFieldEnum!], $orderBy: [Tax_ruleOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Tax_ruleWhereInput){
-    findFirstTax_rule{
-        id
-        name
-        prod_id
-        products
-        tax_rate
-    }
-}

@@ -29,25 +29,25 @@
                     <tr>
                       <td style="text-align: right;">Login (Username)</td>
                       <td>
-                        <input v-model="login" type="text" required /> {{ deepdive.login }}
+                        <input :value="deepdive.login" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Start Date</td>
                       <td>
-                        <input v-model="start_date" type="datetime-local" required /> {{ deepdive.start_date }}
+                        <input :value="deepdive.start_date" type="datetime-local" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">End Date</td>
                       <td>
-                        <input v-model="end_date" type="datetime-local" /> {{ deepdive.end_date }}
+                        <input :value="deepdive.end_date" type="datetime-local" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Attendees</td>
                       <td>
-                        <select id="assignedTo" v-model="attendees">
+                        <select id="assignedTo" :value="deepdive.attendees">
                           <option v-for="users in findManyUsers" :key="users.id" :value="users">
                             {{ users.name }}
                           </option>
@@ -57,8 +57,7 @@
                     <tr>
                       <td style="text-align: right;">Discussion</td>
                       <td>
-                        <client-only><Editor v-model="content" /></client-only>
-                        {{ deepdive.content }}
+                        <client-only><Editor :value="deepdive.content" /></client-only>
                       </td>
                     </tr>
                   </tbody>

@@ -29,7 +29,7 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Glossary Name</td>
-                      <td><input v-model="name" type="text" required /></td>
+                      <td><input :value="glossary.name" type="text" required /></td>
                     </tr>
                   </tbody>
                 </table>
@@ -53,7 +53,7 @@
                               <td style="text-align: right;">Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <client-only><Editor v-model="content" /></client-only>
+                                  <client-only><Editor :value="glossary.content" /></client-only>
                                 </div>
                               </td>
                             </tr>

@@ -1,5 +1,0 @@
-mutation deleteManyImportm($where: ImportmWhereInput){
-    deleteManyImportm(where: $where){
-        count
-    }
-}

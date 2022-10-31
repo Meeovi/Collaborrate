@@ -5,5 +5,7 @@ mutation updateOneCurrencies($data: CurrenciesUpdateInput!, $where: CurrenciesWh
         id
         name
         region
+        symbol
+        useStandard
     }
 }

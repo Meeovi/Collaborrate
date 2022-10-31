@@ -27,15 +27,15 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Code</td>
-                      <td><input v-model="code" type="text" value="Example is AUD for Australia" required /></td>
+                      <td><input :value="currency.code" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Name</td>
-                      <td><input v-model="name" type="text" value="Example is Australian Dollar" required /></td>
+                      <td><input :value="currency.name" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Region</td>
-                      <td><select id="region" v-model="region" name="template" class="form-category">
+                      <td><select id="region" :value="currency.region" name="template" class="form-category">
                           <option v-for="countries in findManyCountries" :key="countries" :value="countries">
                             {{ countries.name }}
                           </option>

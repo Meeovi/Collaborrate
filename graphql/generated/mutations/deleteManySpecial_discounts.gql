@@ -1,5 +1,0 @@
-mutation deleteManySpecial_discounts($where: Special_discountsWhereInput){
-    deleteManySpecial_discounts(where: $where){
-        count
-    }
-}

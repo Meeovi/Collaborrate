@@ -1,5 +1,0 @@
-mutation deleteManyTax_rate($where: Tax_rateWhereInput){
-    deleteManyTax_rate(where: $where){
-        count
-    }
-}

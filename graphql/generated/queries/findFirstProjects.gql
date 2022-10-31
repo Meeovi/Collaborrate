@@ -1,5 +1,5 @@
 query findFirstProjects($cursor: ProjectsWhereUniqueInput, $distinct: [ProjectsScalarFieldEnum!], $orderBy: [ProjectsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: ProjectsWhereInput){
-    findFirstProjects{
+    findFirstProjects(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         assignee
         categories
         company

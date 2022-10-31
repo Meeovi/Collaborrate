@@ -1,5 +1,0 @@
-mutation deleteManyCatalog_price_rule($where: Catalog_price_ruleWhereInput){
-    deleteManyCatalog_price_rule(where: $where){
-        count
-    }
-}

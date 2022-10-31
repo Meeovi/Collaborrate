@@ -1,5 +1,0 @@
-mutation updateManyCart_price_rules($data: Cart_price_rulesUpdateManyMutationInput!, $where: Cart_price_rulesWhereInput){
-    updateManyCart_price_rules(data: $data, where: $where){
-        count
-    }
-}

@@ -36,6 +36,18 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], CurrenciesCreateManyInput.prototype, "region", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], CurrenciesCreateManyInput.prototype, "symbol", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], CurrenciesCreateManyInput.prototype, "useStandard", void 0);
 CurrenciesCreateManyInput = tslib_1.__decorate([
     TypeGraphQL.InputType("CurrenciesCreateManyInput", {
         isAbstract: true

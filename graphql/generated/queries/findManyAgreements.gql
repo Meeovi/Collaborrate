@@ -1,4 +1,4 @@
-query findManyAgreements($cursor: AgreementsWhereUniqueInput, $distinct: [AgreementsScalarFieldEnum!], $orderBy: [AgreementsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: AgreementsWhereInput){
+query findManyAgreements{
     findManyAgreements{
         content
         created

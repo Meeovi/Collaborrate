@@ -31,15 +31,15 @@
             <tbody>
               <tr>
                 <td style="text-align: right;">Segment Name</td>
-                <td><input v-model="name" type="text" required /></td>
+                <td><input :value="segment.name" type="text" required /></td>
               </tr>
               <tr>
                 <td style="text-align: right;">Description</td>
-                <td><textarea v-model="description" cols="40" rows="10"></textarea></td>
+                <td><textarea :value="segment.description" cols="40" rows="10"></textarea></td>
               </tr>
               <tr>
                 <td style="text-align: right;">Assigned to Website</td>
-                <td><input v-model="website" name="website" type="url" /></td>
+                <td><input :value="segment.website" name="website" type="url" /></td>
               </tr>
             </tbody>
           </table>

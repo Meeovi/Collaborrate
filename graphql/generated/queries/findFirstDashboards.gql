@@ -1,5 +1,5 @@
 query findFirstDashboards($cursor: DashboardsWhereUniqueInput, $distinct: [DashboardsScalarFieldEnum!], $orderBy: [DashboardsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: DashboardsWhereInput){
-    findFirstDashboards{
+    findFirstDashboards(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         articles
         category
         checklists

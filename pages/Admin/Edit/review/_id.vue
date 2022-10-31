@@ -27,30 +27,30 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">First Name</td>
-                      <td><input v-model="first_name" type="text" /></td>
+                      <td><input :value="review.first_name" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Last Name</td>
-                      <td><input v-model="last_name" type="text" /></td>
+                      <td><input :value="review.last_name" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Website</td>
-                      <td><input id="websites" v-model="websites" name="websites" type="url" />
+                      <td><input id="websites" :value="review.websites" name="websites" type="url" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Review Content</td>
-                      <td><client-only><Editor v-model="content" /></client-only>
+                      <td><client-only><Editor :value="review.content" /></client-only>
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Shop ID</td>
-                      <td><input v-model="shop_id" type="text" disabled>
+                      <td><input :value="review.shop_id" type="text" disabled>
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Comment ID</td>
-                      <td><input v-model="comment_id" type="text" disabled>
+                      <td><input :value="review.comment_id" type="text" disabled>
                       </td>
                     </tr>
                   </tbody>

@@ -36,6 +36,18 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], CurrenciesMinAggregate.prototype, "region", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], CurrenciesMinAggregate.prototype, "symbol", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], CurrenciesMinAggregate.prototype, "useStandard", void 0);
 CurrenciesMinAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("CurrenciesMinAggregate", {
         isAbstract: true

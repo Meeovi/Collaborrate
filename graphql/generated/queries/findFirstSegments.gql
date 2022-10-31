@@ -1,5 +1,5 @@
 query findFirstSegments($cursor: SegmentsWhereUniqueInput, $distinct: [SegmentsScalarFieldEnum!], $orderBy: [SegmentsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: SegmentsWhereInput){
-    findFirstSegments{
+    findFirstSegments(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         apply_to
         created_at
         customers

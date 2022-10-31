@@ -28,11 +28,11 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Country Name</td>
-                      <td><input id="countriesName" v-model="name" type="countriesName" required /></td>
+                      <td><input id="countriesName" :value="country.name" type="countriesName" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Country Region</td>
-                      <td><select id="region" v-model="region" name="template" class="form-category">
+                      <td><select id="region" :value="country.region" name="template" class="form-category">
                           <option value="NA">North America</option>
                           <option value="SA">South America</option>
                           <option value="CA">Central America</option>
@@ -46,7 +46,7 @@
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <textarea v-model="description" cols="40" rows="10"></textarea>
+                        <textarea :value="country.description" cols="40" rows="10"></textarea>
                       </td>
                     </tr>
                   </tbody>

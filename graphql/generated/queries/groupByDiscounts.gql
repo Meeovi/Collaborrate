@@ -6,8 +6,10 @@ query groupByDiscounts($by: [DiscountsScalarFieldEnum!]!, $having: DiscountsScal
         _count{
             _all
             articles
+            billToName
             categories
             coupons
+            creditMemo
             customers
             discount
             excerpt
@@ -15,17 +17,22 @@ query groupByDiscounts($by: [DiscountsScalarFieldEnum!]!, $having: DiscountsScal
             id
             image
             name
+            orderNumber
             products
             published
+            refunded
             rewards
             special_offers
+            status
             type
             users
         }
         _max{
             articles
+            billToName
             categories
             coupons
+            creditMemo
             customers
             discount
             excerpt
@@ -33,17 +40,22 @@ query groupByDiscounts($by: [DiscountsScalarFieldEnum!]!, $having: DiscountsScal
             id
             image
             name
+            orderNumber
             products
             published
+            refunded
             rewards
             special_offers
+            status
             type
             users
         }
         _min{
             articles
+            billToName
             categories
             coupons
+            creditMemo
             customers
             discount
             excerpt
@@ -51,10 +63,13 @@ query groupByDiscounts($by: [DiscountsScalarFieldEnum!]!, $having: DiscountsScal
             id
             image
             name
+            orderNumber
             products
             published
+            refunded
             rewards
             special_offers
+            status
             type
             users
         }
@@ -62,8 +77,10 @@ query groupByDiscounts($by: [DiscountsScalarFieldEnum!]!, $having: DiscountsScal
             id
         }
         articles
+        billToName
         categories
         coupons
+        creditMemo
         customers
         discount
         excerpt
@@ -71,10 +88,13 @@ query groupByDiscounts($by: [DiscountsScalarFieldEnum!]!, $having: DiscountsScal
         id
         image
         name
+        orderNumber
         products
         published
+        refunded
         rewards
         special_offers
+        status
         type
         users
     }

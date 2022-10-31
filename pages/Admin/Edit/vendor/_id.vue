@@ -27,7 +27,7 @@
                     <tr>
                       <td style="text-align: right;">Vendor Name</td>
                       <td>
-                        <input v-model="name" type="text" required />
+                        <input :value="vendor.name" type="text" required />
                       </td>
                     </tr>
                     <tr>
@@ -69,25 +69,25 @@
                     <tr>
                       <td style="text-align: right;">Website</td>
                       <td>
-                        <input v-model="website" type="url" />
+                        <input :value="vendor.website" type="url" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <textarea v-model="description" cols="40" rows="10"></textarea>
+                        <textarea :value="vendor.description" cols="40" rows="10"></textarea>
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Vendor Image</td>
                       <td>
-                        <input v-model="image" type="image" />
+                        <input :value="vendor.image" type="image" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Tags</td>
                       <td>
-                        <input v-model="tags" type="text" />
+                        <input :value="vendor.tags" type="text" />
                       </td>
                     </tr>
                     <tr>

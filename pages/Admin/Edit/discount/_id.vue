@@ -27,20 +27,20 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Gift Name</td>
-                      <td><input v-model="name" type="text" required /></td>
+                      <td><input :value="certificates.name" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Discount</td>
-                      <td><input v-model="discount" type="text" required /></td>
+                      <td><input :value="certificates.discount" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Expiration</td>
-                      <td><input id="expiration" v-model="expiration" name="expiration" type="datetime-local" />
+                      <td><input id="expiration" :value="certificates.expiration" name="expiration" type="datetime-local" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Gift Type</td>
-                      <td><select id="status" v-model="type" name="template" class="form-category">
+                      <td><select id="status" :value="certificates.type" name="template" class="form-category">
                           <option value="giftCard">Gift Card</option>
                           <option value="giftCertificate">Gift Certificate</option>
                         </select>
@@ -48,7 +48,7 @@
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
-                      <td><textarea v-model="excerpt" cols="40" rows="10"></textarea>
+                      <td><textarea :value="certificates.excerpt" cols="40" rows="10"></textarea>
                       </td>
                     </tr>
                   </tbody>

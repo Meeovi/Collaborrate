@@ -18,92 +18,92 @@
             <tr>
               <td style="text-align: right;">Active</td>
               <td>
-                <input v-model="active" type="checkbox" />{{ template.active }}
+                <input :value="template.active" type="checkbox" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Template Name</td>
               <td>
-                <input v-model="name" type="text" required />{{ template.name }}
+                <input :value="template.name" type="text" required />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Orientation</td>
               <td>
-                <input v-model="orientation" type="text" />{{ template.orientation }}
+                <input :value="template.orientation" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Description</td>
               <td>
-                <input v-model="content" type="textarea" />{{ template.description }}
+                <input :value="template.content" type="textarea" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Header</td>
               <td>
-                <input v-model="header" type="text" placeholder="#" required />{{ template.header }}
+                <input :value="template.header" type="text" placeholder="#" required />
               </td>
             </tr>
             
             <tr>
               <td style="text-align: right;">Footer</td>
               <td>
-                <input v-model="footer" type="text" />{{ template.footer }}
+                <input :value="template.footer" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Page Size</td>
               <td>
-                <input v-model="page_size" type="text" />{{ template.page_size }}
+                <input :value="template.page_size" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Height</td>
               <td>
-                <input v-model="height" type="text" />{{ template.height }}
+                <input :value="template.height" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Type</td>
               <td>
-                <input v-model="type" type="text" />{{ template.type }}
+                <input :value="template.type" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Margin allHeader</td>
               <td>
-                <input v-model="margin_header" type="text" />{{ template.margin_header }}
+                <input :value="template.margin_header" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Margin Bottom</td>
               <td>
-                <input v-model="margin_bottom" type="text" />{{ template.margin_bottom }}
+                <input :value="template.margin_bottom" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Margin Left</td>
               <td>
-                <input v-model="margin_left" type="text" />{{ template.margin_left }}
+                <input :value="template.margin_left" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Margin Right</td>
               <td>
-                <input v-model="margin_right" type="text" />{{ template.margin_right }}
+                <input :value="template.margin_right" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Margin Top</td>
               <td>
-                <input v-model="margin_top" type="text" />{{ template.margin_top }}
+                <input :value="template.margin_top" type="text" />
               </td>
             </tr>
             <tr>
               <td style="text-align: right;">Assigned To</td>
               <td>
-                <input v-model="assigned_to" type="text" />{{ template.assigned_to }}
+                <input :value="template.assigned_to" type="text" />
               </td>
             </tr>
           </tbody>

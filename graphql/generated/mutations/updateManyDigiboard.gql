@@ -1,5 +1,0 @@
-mutation updateManyDigiboard($data: DigiboardUpdateManyMutationInput!, $where: DigiboardWhereInput){
-    updateManyDigiboard(data: $data, where: $where){
-        count
-    }
-}

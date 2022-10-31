@@ -1,5 +1,5 @@
 query findFirstInvoices($cursor: InvoicesWhereUniqueInput, $distinct: [InvoicesScalarFieldEnum!], $orderBy: [InvoicesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: InvoicesWhereInput){
-    findFirstInvoices{
+    findFirstInvoices(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         bill_to_name
         billing_address
         customer_group

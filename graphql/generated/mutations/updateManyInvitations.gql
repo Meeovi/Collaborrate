@@ -1,5 +1,0 @@
-mutation updateManyInvitations($data: InvitationsUpdateManyMutationInput!, $where: InvitationsWhereInput){
-    updateManyInvitations(data: $data, where: $where){
-        count
-    }
-}

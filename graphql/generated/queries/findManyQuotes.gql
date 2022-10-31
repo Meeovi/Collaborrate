@@ -1,5 +1,5 @@
 query findManyQuotes($cursor: QuotesWhereUniqueInput, $distinct: [QuotesScalarFieldEnum!], $orderBy: [QuotesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: QuotesWhereInput){
-    findManyQuotes{
+    findManyQuotes(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         account
         approval_issues
         approval_status

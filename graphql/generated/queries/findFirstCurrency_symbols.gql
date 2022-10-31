@@ -1,7 +1,0 @@
-query findFirstCurrency_symbols($cursor: Currency_symbolsWhereUniqueInput, $distinct: [Currency_symbolsScalarFieldEnum!], $orderBy: [Currency_symbolsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: Currency_symbolsWhereInput){
-    findFirstCurrency_symbols{
-        id
-        symbol
-        use_standard
-    }
-}

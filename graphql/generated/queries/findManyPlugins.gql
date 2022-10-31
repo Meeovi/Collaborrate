@@ -1,5 +1,5 @@
 query findManyPlugins($cursor: PluginsWhereUniqueInput, $distinct: [PluginsScalarFieldEnum!], $orderBy: [PluginsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: PluginsWhereInput){
-    findManyPlugins{
+    findManyPlugins(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         agree_terms
         created_at
         description

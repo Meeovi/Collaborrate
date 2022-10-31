@@ -1,9 +1,0 @@
-mutation deleteOneTax_rule($where: Tax_ruleWhereUniqueInput!){
-    deleteOneTax_rule(where: $where){
-        id
-        name
-        prod_id
-        products
-        tax_rate
-    }
-}

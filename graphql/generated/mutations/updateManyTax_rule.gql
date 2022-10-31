@@ -1,5 +1,0 @@
-mutation updateManyTax_rule($data: Tax_ruleUpdateManyMutationInput!, $where: Tax_ruleWhereInput){
-    updateManyTax_rule(data: $data, where: $where){
-        count
-    }
-}

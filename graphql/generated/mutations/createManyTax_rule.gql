@@ -1,5 +1,0 @@
-mutation createManyTax_rule($data: [Tax_ruleCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyTax_rule(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

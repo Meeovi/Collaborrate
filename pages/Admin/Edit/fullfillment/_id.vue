@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="addFullFillment" >
+    <form v-for="fullfillment in findManyFullfillments" :key="fullfillment.id" @submit.prevent="addFullFillment" >
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
@@ -29,7 +29,7 @@
                     <tr>
                       <td style="text-align: right;">Pickup</td>
                       <td>
-                        <select id="pickup" v-model="pickup" name="template" class="form-category">
+                        <select id="pickup" :value="fullfillment.pickup" name="template" class="form-category">
                           <option value="allow">Allows Pickup</option>
                           <option value="noPickups">No Pickups</option>
                         </select>
@@ -38,31 +38,31 @@
                     <tr>
                       <td style="text-align: right;">Stock</td>
                       <td>
-                        <input v-model="stock" name="fullfillmentStock" type="number" />
+                        <input :value="fullfillment.stock" name="fullfillmentStock" type="number" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Company Name</td>
                       <td>
-                        <input v-model="company" name="fullfillmentCompanyName" type="text" />
+                        <input :value="fullfillment.company" name="fullfillmentCompanyName" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">FullFillment Name</td>
                       <td>
-                        <input v-model="name" type="text" required />
+                        <input :value="fullfillment.name" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Phone Number</td>
                       <td>
-                        <input v-model="phone" type="phone" placeholder="#" />
+                        <input :value="fullfillment.phone" type="phone" placeholder="#" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Shipping Zones</td>
                       <td>
-                        <select id="zones" v-model="shipping_zones" name="template" class="form-zones">
+                        <select id="zones" :value="fullfillment.shipping_zones" name="template" class="form-zones">
                           <option v-for="zones in findManyZones" :key="zones" :value="zones">{{ zones.name }}</option>
                         </select>
                       </td>
@@ -70,19 +70,19 @@
                     <tr>
                       <td style="text-align: right;">Address</td>
                       <td>
-                        <input v-model="address" type="text" />
+                        <input :value="fullfillment.address" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Address Line 2</td>
                       <td>
-                        <input v-model="address_two" type="text" name="addressTwo" />
+                        <input :value="fullfillment.address_two" type="text" name="addressTwo" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">City</td>
                       <td>
-                        <select id="category" v-model="city" name="template" class="form-category">
+                        <select id="category" :value="fullfillment.city" name="template" class="form-category">
                           <option v-for="city in findManyCities" :key="city" :value="city">{{ city.name }}</option>
                         </select>
                       </td>
@@ -90,7 +90,7 @@
                     <tr>
                       <td style="text-align: right;">State</td>
                       <td>
-                        <select id="category" v-model="state" name="template" class="form-category">
+                        <select id="category" :value="fullfillment.state" name="template" class="form-category">
                           <option v-for="state in findManyStates" :key="state" :value="state">{{ state.name }}</option>
                         </select>
                       </td>
@@ -98,7 +98,7 @@
                     <tr>
                       <td style="text-align: right;">Country Area</td>
                       <td>
-                        <select id="countryArea" v-model="country_area" name="template" class="form-category">
+                        <select id="countryArea" :value="fullfillment.country_area" name="template" class="form-category">
                           <option value="NA">North America</option>
                           <option value="SA">South America</option>
                           <option value="CA">Central America</option>
@@ -113,7 +113,7 @@
                     <tr>
                       <td style="text-align: right;">Country</td>
                       <td>
-                        <select id="category" v-model="country" name="template" class="form-category">
+                        <select id="category" :value="fullfillment.country" name="template" class="form-category">
                           <option v-for="country in findManyCountries" :key="country" :value="country">{{ country.name }}</option>
                         </select>
                       </td>
@@ -121,7 +121,7 @@
                     <tr>
                       <td style="text-align: right;">Zipcode</td>
                       <td>
-                        <input v-model="zipcode" name="fullfillmentZipcode" type="text" />
+                        <input :value="fullfillment.zipcode" name="fullfillmentZipcode" type="text" />
                       </td>
                     </tr>
                   </tbody>

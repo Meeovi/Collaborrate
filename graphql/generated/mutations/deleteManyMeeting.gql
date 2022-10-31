@@ -1,5 +1,0 @@
-mutation deleteManyMeeting($where: MeetingWhereInput){
-    deleteManyMeeting(where: $where){
-        count
-    }
-}

@@ -1,5 +1,5 @@
 query findFirstVisits($cursor: VisitsWhereUniqueInput, $distinct: [VisitsScalarFieldEnum!], $orderBy: [VisitsOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: VisitsWhereInput){
-    findFirstVisits{
+    findFirstVisits(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         content
         created_at
         emergency

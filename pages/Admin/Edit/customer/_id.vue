@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="addCustomer">
+    <form v-for="customer in findManyCustomers" :key="customer.id" @submit.prevent="addCustomer">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
@@ -28,7 +28,7 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Name Prefix</td>
-                      <td><select id="name_prefix" v-model="name_prefix" name="template" class="form-category">
+                      <td><select id="name_prefix" :value="customer.name_prefix" name="template" class="form-category">
                           <option value="mr">Mr.</option>
                           <option value="ms">Ms.</option>
                           <option value="miss">Miss</option>
@@ -41,27 +41,27 @@
                     </tr>
                     <tr>
                       <td style="text-align: right;">First Name</td>
-                      <td><input v-model="first_name" type="text" required /></td>
+                      <td><input :value="customer.first_name" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Middle Name</td>
-                      <td><input v-model="middle_name" type="text" /></td>
+                      <td><input :value="customer.middle_name" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Last Name</td>
-                      <td><input v-model="last_name" type="text" required /></td>
+                      <td><input :value="customer.last_name" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Suffix</td>
-                      <td><input v-model="name_suffix" type="text" /></td>
+                      <td><input :value="customer.name_suffix" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Email Address</td>
-                      <td><input v-model="email" type="text" /></td>
+                      <td><input :value="customer.email" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Gender</td>
-                      <td><select id="gender" v-model="gender" name="template" class="form-category">
+                      <td><select id="gender" :value="customer.gender" name="template" class="form-category">
                           <option value="male">Male</option>
                           <option value="female">Female</option>
                           <option value="other">Other / Rather Not Say</option>
@@ -69,44 +69,44 @@
                     </tr>
                     <tr>
                       <td style="text-align: right;">Username</td>
-                      <td><input v-model="username" type="text" /></td>
+                      <td><input :value="customer.username" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Password</td>
-                      <td><input v-model="password" type="text" /></td>
+                      <td><input :value="customer.password" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Websites</td>
-                      <td><input v-model="websites" type="url" /></td>
+                      <td><input :value="customer.websites" type="url" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Phone</td>
-                      <td><input v-model="phone" type="number" /></td>
+                      <td><input :value="customer.phone" type="number" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Tax VAT Number</td>
-                      <td><input v-model="tax_vat_number" type="number" /></td>
+                      <td><input :value="customer.tax_vat_number" type="number" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Image</td>
-                      <td><input v-model="image" type="image" name="image" /></td>
+                      <td><input :value="customer.image" type="image" name="image" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Date of Birth</td>
-                      <td><input v-model="date_of_birth" type="datetime-local" /></td>
+                      <td><input :value="customer.date_of_birth" type="datetime-local" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Address</td>
-                      <td><input v-model="Address" type="text" /></td>
+                      <td><input :value="customer.Address" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Address 2</td>
-                      <td><input v-model="address_two" type="text" /></td>
+                      <td><input :value="customer.address_two" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">State</td>
                       <td>
-                        <select id="state" v-model="state" name="template" class="form-category">
+                        <select id="state" :value="customer.state" name="template" class="form-category">
                           <option v-for="states in findManyStates" :key="states" :value="states">{{ states.name }}
                           </option>
                         </select>
@@ -115,7 +115,7 @@
                     <tr>
                       <td style="text-align: right;">Country</td>
                       <td>
-                        <select id="country" v-model="country" name="template" class="form-category">
+                        <select id="country" :value="customer.country" name="template" class="form-category">
                           <option v-for="countries in findManyCountries" :key="countries" :value="countries">
                             {{ countries.name }}
                           </option>
@@ -124,12 +124,12 @@
                     </tr>
                     <tr>
                       <td style="text-align: right;">Postal</td>
-                      <td><input v-model="zipcode" type="text" /></td>
+                      <td><input :value="customer.zipcode" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Customer Group</td>
                       <td>
-                        <select id="segments" v-model="customer" name="template" class="form-category">
+                        <select id="segments" :value="customer.customer" name="template" class="form-category">
                           <option v-for="segments in findManySegments" :key="segments" :value="segments">{{ segments.name }}
                           </option>
                         </select>
@@ -139,13 +139,13 @@
                       <div class="col-md-6">
                         <tr>
                           <td style="text-align: right;">Short Description</td>
-                          <td><textarea v-model="short_description" col="40" rows="10"></textarea></td>
+                          <td><textarea :value="customer.short_description" col="40" rows="10"></textarea></td>
                         </tr>
                       </div>
                       <div class="col-md-6">
                         <tr>
                           <td style="text-align: right;">Long Description</td>
-                          <td><textarea v-model="description" col="40" rows="10"></textarea></td>
+                          <td><textarea :value="customer.description" col="40" rows="10"></textarea></td>
                         </tr>
                       </div>
                     </div>

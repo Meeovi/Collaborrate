@@ -1,5 +1,5 @@
 query findManyCategories($cursor: CategoriesWhereUniqueInput, $distinct: [CategoriesScalarFieldEnum!], $orderBy: [CategoriesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: CategoriesWhereInput){
-    findManyCategories{
+    findManyCategories(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
         content
         country
         description

@@ -1,5 +1,0 @@
-mutation updateManyTax_category($data: Tax_categoryUpdateManyMutationInput!, $where: Tax_categoryWhereInput){
-    updateManyTax_category(data: $data, where: $where){
-        count
-    }
-}
