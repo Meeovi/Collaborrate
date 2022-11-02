@@ -63,7 +63,7 @@
 
 <script>
 import gql from "graphql-tag";
-import findManyShipments from "~/graphql/generated/queries/findManyShipments";
+import findManyShipments from "~/graphql/query/findManyShipments";
 
 const DELETE_SHIPMENT = gql`
 mutation ($carrier_name:String!,$transit_time:String!,$image:String!,$tracking_url:String!,$speed_grade:String!,$product:String!){

@@ -1,5 +1,0 @@
-mutation deleteManyRewards($where: RewardsWhereInput){
-    deleteManyRewards(where: $where){
-        count
-    }
-}

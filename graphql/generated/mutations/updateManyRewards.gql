@@ -1,5 +1,0 @@
-mutation updateManyRewards($data: RewardsUpdateManyMutationInput!, $where: RewardsWhereInput){
-    updateManyRewards(data: $data, where: $where){
-        count
-    }
-}

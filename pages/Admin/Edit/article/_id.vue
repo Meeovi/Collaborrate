@@ -188,7 +188,7 @@
 <script>
 // eslint-disable-next-line camelcase
 import gql from 'graphql-tag'
-import findManyArticles from '~/graphql/generated/queries/findManyArticles'
+import findManyArticles from '~/graphql/query/findManyArticles'
 
 const DELETE_ARTICLE = gql`
   mutation deleteOneArticles($id: Int!){

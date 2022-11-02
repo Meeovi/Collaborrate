@@ -1,0 +1,13 @@
+query {
+  findFirstTags 
+ {
+    articles
+    categories
+    customers
+    excerpt
+    id
+    name
+    products
+    users
+  }
+}

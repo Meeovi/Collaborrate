@@ -1,0 +1,6 @@
+mutation {
+  createManyWorkspaces 
+ {
+    count
+  }
+}

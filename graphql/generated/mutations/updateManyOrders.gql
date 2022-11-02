@@ -1,5 +1,0 @@
-mutation updateManyOrders($data: OrdersUpdateManyMutationInput!, $where: OrdersWhereInput){
-    updateManyOrders(data: $data, where: $where){
-        count
-    }
-}

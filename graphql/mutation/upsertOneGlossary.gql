@@ -1,0 +1,10 @@
+mutation {
+  upsertOneGlossary 
+ {
+    content
+    id
+    image
+    name
+    published
+  }
+}

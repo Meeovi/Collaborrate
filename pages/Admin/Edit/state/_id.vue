@@ -61,8 +61,8 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyStates from "~/graphql/generated/queries/findManyStates";
-  import findManyCountries from "~/graphql/generated/queries/findManyCountries";
+  import findManyStates from "~/graphql/query/findManyStates";
+  import findManyCountries from "~/graphql/query/findManyCountries";
 
   const DELETE_STATE = gql`
     mutation ($name:String!,$description:String!,$image:String!,$country:String!){

@@ -1,0 +1,39 @@
+query {
+  aggregateIntegrations 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      category
+      content
+      created_at
+      id
+      location
+      media
+      name
+    }
+    _max {
+      category
+      content
+      created_at
+      id
+      location
+      media
+      name
+    }
+    _min {
+      category
+      content
+      created_at
+      id
+      location
+      media
+      name
+    }
+    _sum {
+      id
+    }
+  }
+}

@@ -1,0 +1,6 @@
+mutation {
+  updateManyTicketing 
+ {
+    count
+  }
+}

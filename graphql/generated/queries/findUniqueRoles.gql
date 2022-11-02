@@ -1,8 +1,0 @@
-query findUniqueRoles($where: RolesWhereUniqueInput!){
-    findUniqueRoles(where: $where){
-        content
-        created_at
-        id
-        role_name
-    }
-}

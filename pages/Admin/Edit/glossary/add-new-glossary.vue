@@ -94,7 +94,7 @@
 <script>
   import gql from "graphql-tag";
 
-  import glossaries from "~/graphql/generated/queries/glossaries";
+  import glossaries from "~/graphql/query/glossaries";
 
   const ADD_GLOSSARIES = gql `
     mutation ($name:String!,$content:String!,$image:String!){

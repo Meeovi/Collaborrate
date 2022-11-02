@@ -122,9 +122,9 @@
   import gql from "graphql-tag";
   /* eslint-disable camelcase */
 
-  import findManyOpportunities from "~/graphql/generated/queries/findManyOpportunities";
-  import findManyUsers from '~/graphql/generated/queries/findManyUsers'
-  import findManyCategories from '~/graphql/generated/queries/findManyCategories'
+  import findManyOpportunities from "~/graphql/query/findManyOpportunities";
+  import findManyUsers from '~/graphql/query/findManyUsers'
+  import findManyCategories from '~/graphql/query/findManyCategories'
 
   const ADD_OPPORTUNITIES = gql`
     mutation ($name: String!, $next_step: String!, $name: String!, $grand_total: String!, $categories: String!, $quote_stage: String!, $valid_until: String!, $lead_source: String!, $expected_close_date: String!, $assigned_to: String!, $description: String!, $currency: String!, $campaign: String!, $amount: String!, $account_name: String!, $next_step: String!, $created_at: String!, $probability: String!, $sales_stage: String!, $type: String!){

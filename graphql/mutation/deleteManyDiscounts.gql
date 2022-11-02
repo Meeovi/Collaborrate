@@ -1,0 +1,6 @@
+mutation {
+  deleteManyDiscounts 
+ {
+    count
+  }
+}

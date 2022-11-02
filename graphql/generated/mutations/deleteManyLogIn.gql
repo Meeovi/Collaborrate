@@ -1,5 +1,0 @@
-mutation deleteManyLogIn($where: LogInWhereInput){
-    deleteManyLogIn(where: $where){
-        count
-    }
-}

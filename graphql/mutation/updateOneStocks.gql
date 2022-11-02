@@ -1,0 +1,11 @@
+mutation {
+  updateOneStocks 
+ {
+    description
+    enabled
+    id
+    name
+    sources
+    website
+  }
+}

@@ -1,5 +1,0 @@
-mutation updateManyWebhooks($data: WebhooksUpdateManyMutationInput!, $where: WebhooksWhereInput){
-    updateManyWebhooks(data: $data, where: $where){
-        count
-    }
-}

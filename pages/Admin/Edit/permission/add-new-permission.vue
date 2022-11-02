@@ -94,9 +94,9 @@
 <script>
   import gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import findManyPermissions from "~/graphql/generated/queries/findManyPermissions";
-  import findManyRoles from "~/graphql/generated/queries/findManyRoles";
-  import findManyUsers from "~/graphql/generated/queries/findManyUsers";
+  import findManyPermissions from "~/graphql/query/findManyPermissions";
+  import findManyRoles from "~/graphql/query/findManyRoles";
+  import findManyUsers from "~/graphql/query/findManyUsers";
 
   const ADD_PERMISSIONS = gql`
     mutation ($Delete:String!,$update:String,$users:String,$content:String,$read:String!,$role:String!,$created_at:String!,$create:String!,$name:String){

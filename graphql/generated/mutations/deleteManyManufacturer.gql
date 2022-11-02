@@ -1,5 +1,0 @@
-mutation deleteManyManufacturer($where: ManufacturerWhereInput){
-    deleteManyManufacturer(where: $where){
-        count
-    }
-}

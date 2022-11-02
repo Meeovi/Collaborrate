@@ -1,5 +1,0 @@
-mutation createManyGlossary($data: [GlossaryCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyGlossary(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

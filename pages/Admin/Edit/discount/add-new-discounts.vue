@@ -66,7 +66,7 @@
 <script>
   import gql from "graphql-tag";
   // eslint-disable-next-line camelcase
-  import  findManyDiscounts from '~/graphql/generated/queries/findManyDiscounts'
+  import  findManyDiscounts from '~/graphql/query/findManyDiscounts'
 
   const ADD_DISCOUNT = gql `
     mutation ($name:String!,$discount:String!$expiration:String!,$excerpt:String!,$type:String){

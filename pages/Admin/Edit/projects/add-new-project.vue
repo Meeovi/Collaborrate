@@ -335,15 +335,15 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyProducts from "~/graphql/generated/queries/findManyProducts"
-  import findManyProjects from "~/graphql/generated/queries/findManyProjects"
-  import findManyCategories from "~/graphql/generated/queries/findManyCategories"
-  import findManyWorkspaces from "~/graphql/generated/queries/findManyWorkspaces"
-  import findManyCustomers from "~/graphql/generated/queries/findManyCustomers"
-  import ticketings from "~/graphql/generated/queries/ticketings"
-  import findManyUsers from "~/graphql/generated/queries/findManyUsers"
-  import findManyTags from "~/graphql/generated/queries/findManyTags"
-  import findManyZones from "~/graphql/generated/queries/findManyZones"
+  import findManyProducts from "~/graphql/query/findManyProducts"
+  import findManyProjects from "~/graphql/query/findManyProjects"
+  import findManyCategories from "~/graphql/query/findManyCategories"
+  import findManyWorkspaces from "~/graphql/query/findManyWorkspaces"
+  import findManyCustomers from "~/graphql/query/findManyCustomers"
+  import ticketings from "~/graphql/query/ticketings"
+  import findManyUsers from "~/graphql/query/findManyUsers"
+  import findManyTags from "~/graphql/query/findManyTags"
+  import findManyZones from "~/graphql/query/findManyZones"
 
   const ADD_PROJECTS = gql `
     mutation ($assignee: String!, $customers: String!, $categories: String!, $tasks: String!, $users: String!, $doing: String!, $workspaces: String!, $created_at: String!, $done: String!, $end_date: String!, $file: String!, $format: String!, $height: String!, $id: String!, $image: String!, $goal_collaborators: String!, $goal_measurement: String!, $ticketing: String!, $name: String!, $goal_name: String!, $goal_privacy: String!, $goal_progress_source: String!, $goal_timeperiod: String!, $goal_updatemethod: String!, $priority: String!, $product: String!, $project_manager: String!, $resource: String!, $section_rule: String!, $staff_id: String!, $start_date: String!, $task_id: String!, $status: String!, $ticket_id: String!, $tags: String!, $considerworkingdays: String!, $method: String!, $type: String!, $team: String!, $visibility: String!, $websites: String!, $company: String!, $zone: String!){

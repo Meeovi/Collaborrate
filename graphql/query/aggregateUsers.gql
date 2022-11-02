@@ -1,0 +1,63 @@
+query {
+  aggregateUsers 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      created_at
+      email
+      emails
+      first_name
+      id
+      interface_locale
+      last_name
+      mediamanager
+      messages
+      password
+      permissions
+      projects
+      username
+      value
+      workspaces
+    }
+    _max {
+      created_at
+      email
+      emails
+      first_name
+      id
+      interface_locale
+      last_name
+      mediamanager
+      messages
+      password
+      permissions
+      projects
+      username
+      value
+      workspaces
+    }
+    _min {
+      created_at
+      email
+      emails
+      first_name
+      id
+      interface_locale
+      last_name
+      mediamanager
+      messages
+      password
+      permissions
+      projects
+      username
+      value
+      workspaces
+    }
+    _sum {
+      id
+    }
+  }
+}

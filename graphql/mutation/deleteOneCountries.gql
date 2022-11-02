@@ -1,0 +1,11 @@
+mutation {
+  deleteOneCountries 
+ {
+    description
+    id
+    image
+    name
+    region
+    trainings
+  }
+}

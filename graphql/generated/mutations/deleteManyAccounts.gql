@@ -1,5 +1,0 @@
-mutation deleteManyAccounts($where: AccountsWhereInput){
-    deleteManyAccounts(where: $where){
-        count
-    }
-}

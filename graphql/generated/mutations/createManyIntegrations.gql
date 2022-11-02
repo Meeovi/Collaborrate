@@ -1,5 +1,0 @@
-mutation createManyIntegrations($data: [IntegrationsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyIntegrations(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

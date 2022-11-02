@@ -1,5 +1,0 @@
-mutation createManyLogIn($data: [LogInCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyLogIn(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

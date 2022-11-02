@@ -1,5 +1,0 @@
-mutation createManyCustomizations($data: [CustomizationsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyCustomizations(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

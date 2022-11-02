@@ -52,7 +52,7 @@
 <script>
   /* eslint-disable camelcase */
   import gql from "graphql-tag";
-  import findManyRoles from "~/graphql/generated/queries/findManyRoles";
+  import findManyRoles from "~/graphql/query/findManyRoles";
 
   const ADD_ROLES = gql `
     mutation ($role_name:String!,$content:String!){

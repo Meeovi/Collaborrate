@@ -1,5 +1,0 @@
-mutation deleteManyShipments($where: ShipmentsWhereInput){
-    deleteManyShipments(where: $where){
-        count
-    }
-}

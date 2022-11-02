@@ -1,5 +1,0 @@
-mutation createManyManufacturer($data: [ManufacturerCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyManufacturer(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

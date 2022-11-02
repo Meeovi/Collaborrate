@@ -1,5 +1,0 @@
-mutation createManyBrands($data: [BrandsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyBrands(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

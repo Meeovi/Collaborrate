@@ -1,5 +1,0 @@
-mutation updateManyApitoken($data: ApitokenUpdateManyMutationInput!, $where: ApitokenWhereInput){
-    updateManyApitoken(data: $data, where: $where){
-        count
-    }
-}

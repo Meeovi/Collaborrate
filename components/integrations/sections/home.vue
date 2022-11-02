@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import findManyPlugins from '~/graphql/generated/queries/findManyPlugins'
+import findManyPlugins from '~/graphql/query/findManyPlugins'
 
 export default {
   data() {

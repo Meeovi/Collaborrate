@@ -1,5 +1,0 @@
-mutation deleteManyMediamanager($where: MediamanagerWhereInput){
-    deleteManyMediamanager(where: $where){
-        count
-    }
-}

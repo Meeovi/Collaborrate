@@ -1,5 +1,0 @@
-mutation updateManyLeads($data: LeadsUpdateManyMutationInput!, $where: LeadsWhereInput){
-    updateManyLeads(data: $data, where: $where){
-        count
-    }
-}

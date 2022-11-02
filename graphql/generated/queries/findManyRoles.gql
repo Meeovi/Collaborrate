@@ -1,8 +1,0 @@
-query findManyRoles($cursor: RolesWhereUniqueInput, $distinct: [RolesScalarFieldEnum!], $orderBy: [RolesOrderByWithRelationAndSearchRelevanceInput!], $skip: Int, $take: Int, $where: RolesWhereInput){
-    findManyRoles(cursor: $cursor, distinct: $distinct, orderBy: $orderBy, skip: $skip, take: $take, where: $where){
-        content
-        created_at
-        id
-        role_name
-    }
-}

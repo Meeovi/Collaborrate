@@ -66,9 +66,9 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyNewsletters from "~/graphql/generated/queries/findManyNewsletters"
-  import findManyWebsites from "~/graphql/generated/queries/findManyWebsites"
-  import findManyVendors from "~/graphql/generated/queries/findManyVendors"
+  import findManyNewsletters from "~/graphql/query/findManyNewsletters"
+  import findManyWebsites from "~/graphql/query/findManyWebsites"
+  import findManyVendors from "~/graphql/query/findManyVendors"
 
   const ADD_NEWSLETTERS = gql `
     mutation ($customer_first_name:String!,$customer_last_name:String!$email:String!,$websites:String!,$store:String){

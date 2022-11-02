@@ -1,5 +1,0 @@
-mutation updateManyChannels($data: ChannelsUpdateManyMutationInput!, $where: ChannelsWhereInput){
-    updateManyChannels(data: $data, where: $where){
-        count
-    }
-}

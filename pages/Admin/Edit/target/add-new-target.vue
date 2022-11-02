@@ -241,10 +241,10 @@
 
   import
   findManyTargets
-  from "~/graphql/generated/queries/findManyTargets";
-  import findManyStates from '~/graphql/generated/queries/findManyStates'
-  import findManyCountries from '~/graphql/generated/queries/findManyCountries'
-  import findManyCities from '~/graphql/generated/queries/findManyCities'
+  from "~/graphql/query/findManyTargets";
+  import findManyStates from '~/graphql/query/findManyStates'
+  import findManyCountries from '~/graphql/query/findManyCountries'
+  import findManyCities from '~/graphql/query/findManyCities'
   /* eslint-disable camelcase */
   const ADD_TARGETS = gql `
     mutation ($Prefix: String!, $account_name: String!, $address: String!, $city: String!, $country: String!, $postalcode: String!, $department: String!, $customer_name: String!, $description: String!, $email: String!, $fax: String!, $first_name: String!, $last_name: String!, $job_title: String!, $email_opt_out: String!, $donotcall: String!, $mobile: String!, $office_phone: String!, $state: String!, $website: String){

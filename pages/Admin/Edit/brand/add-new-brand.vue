@@ -109,11 +109,11 @@
 <script>
   import  gql from "graphql-tag";
 
-  import  findManyBrands from "~/graphql/generated/queries/findManyBrands";
-  import  findManyCountries from "~/graphql/generated/queries/findManyCountries"
-  import  findManyProducts from "~/graphql/generated/queries/findManyProducts"
-  import  findManyCities from "~/graphql/generated/queries/findManyCities"
-  import  findManyStates from "~/graphql/generated/queries/findManyStates"
+  import  findManyBrands from "~/graphql/query/findManyBrands";
+  import  findManyCountries from "~/graphql/query/findManyCountries"
+  import  findManyProducts from "~/graphql/query/findManyProducts"
+  import  findManyCities from "~/graphql/query/findManyCities"
+  import  findManyStates from "~/graphql/query/findManyStates"
 
   const ADD_BRANDS = gql`
     mutation ($name: String!,$code: String!,$description: String!,$isPublic: String!,$created_at: String!,$product: String!,$state: String!,$media: String!,$country: String!,$city: String!){

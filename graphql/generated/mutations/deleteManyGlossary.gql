@@ -1,5 +1,0 @@
-mutation deleteManyGlossary($where: GlossaryWhereInput){
-    deleteManyGlossary(where: $where){
-        count
-    }
-}

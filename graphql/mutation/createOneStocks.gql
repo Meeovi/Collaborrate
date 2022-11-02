@@ -1,0 +1,11 @@
+mutation {
+  createOneStocks 
+ {
+    description
+    enabled
+    id
+    name
+    sources
+    website
+  }
+}

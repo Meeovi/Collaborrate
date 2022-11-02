@@ -1,5 +1,0 @@
-mutation deleteManyZones($where: ZonesWhereInput){
-    deleteManyZones(where: $where){
-        count
-    }
-}

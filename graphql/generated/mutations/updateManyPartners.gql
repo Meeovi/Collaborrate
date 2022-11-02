@@ -1,5 +1,0 @@
-mutation updateManyPartners($data: PartnersUpdateManyMutationInput!, $where: PartnersWhereInput){
-    updateManyPartners(data: $data, where: $where){
-        count
-    }
-}

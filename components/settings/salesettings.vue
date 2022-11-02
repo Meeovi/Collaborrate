@@ -189,7 +189,7 @@
 <script>
 import gql from "graphql-tag";
 
-import { generalSettings } from "~/graphql/generated/queries/findManySettings";
+import { generalSettings } from "~/graphql/query/findManySettings";
 
 const ADD_GENERAL_SETTINGS = gql`
     mutation ($siteTitle:String!,$tagline:String,$siteUrl:String,$siteAdminEmail:String,$value:String){

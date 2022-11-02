@@ -144,8 +144,8 @@
 <script>
   import gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import ticketings from "~/graphql/generated/queries/ticketings";
-  import findManyUsers from "~/graphql/generated/queries/findManyUsers";
+  import ticketings from "~/graphql/query/ticketings";
+  import findManyUsers from "~/graphql/query/findManyUsers";
 
   const DELETE_TICKETING = gql`
     mutation ($name: String!,$department: String!,$comment: String!,$location: String!,$content: String!,$level: String!,$media: String!,$requester: String!,$requester_email: String!,$assigned_to: String!,$account_name: String!,$severity: String!,$team: String!,$resolution: String!,$status: String!,$ticket_type: String!,$priority: String!,$date: String!){

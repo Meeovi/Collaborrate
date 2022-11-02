@@ -47,7 +47,7 @@
 </template>
 
 <script>
-  import  findManyPermissions from '~/graphql/generated/queries/findManyPermissions'
+  import  findManyPermissions from '~/graphql/query/findManyPermissions'
 
   export default {
     data() {

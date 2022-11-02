@@ -1,5 +1,0 @@
-mutation createManyRewards($data: [RewardsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyRewards(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

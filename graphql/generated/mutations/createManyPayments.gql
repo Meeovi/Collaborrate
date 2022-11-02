@@ -1,5 +1,0 @@
-mutation createManyPayments($data: [PaymentsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyPayments(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

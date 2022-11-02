@@ -1,0 +1,6 @@
+mutation {
+  createManyContent_type 
+ {
+    count
+  }
+}

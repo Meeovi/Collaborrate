@@ -1,5 +1,0 @@
-mutation deleteManyPermissions($where: PermissionsWhereInput){
-    deleteManyPermissions(where: $where){
-        count
-    }
-}

@@ -1,5 +1,0 @@
-mutation updateManyWarehouse($data: WarehouseUpdateManyMutationInput!, $where: WarehouseWhereInput){
-    updateManyWarehouse(data: $data, where: $where){
-        count
-    }
-}

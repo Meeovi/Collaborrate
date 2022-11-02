@@ -1,5 +1,0 @@
-mutation deleteManyBrands($where: BrandsWhereInput){
-    deleteManyBrands(where: $where){
-        count
-    }
-}

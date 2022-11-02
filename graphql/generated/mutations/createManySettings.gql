@@ -1,5 +1,0 @@
-mutation createManySettings($data: [SettingsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManySettings(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

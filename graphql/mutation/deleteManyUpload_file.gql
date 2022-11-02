@@ -1,0 +1,6 @@
+mutation {
+  deleteManyUpload_file 
+ {
+    count
+  }
+}

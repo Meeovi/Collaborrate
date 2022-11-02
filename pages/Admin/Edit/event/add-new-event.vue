@@ -147,11 +147,11 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyEvents from "~/graphql/generated/queries/findManyEvents";
-  import findManyStates from '~/graphql/generated/queries/findManyStates'
-  import findManyCountries from '~/graphql/generated/queries/findManyCountries'
-  import findManyCities from '~/graphql/generated/queries/findManyCities'
-  import findManyCategories from '~/graphql/generated/queries/findManyCategories'
+  import findManyEvents from "~/graphql/query/findManyEvents";
+  import findManyStates from '~/graphql/query/findManyStates'
+  import findManyCountries from '~/graphql/query/findManyCountries'
+  import findManyCities from '~/graphql/query/findManyCities'
+  import findManyCategories from '~/graphql/query/findManyCategories'
 
   const ADD_EVENTS = gql `
     mutation ($image: Upload!,$name: String!,$postalcode: String!,$start: String!,$end: String!,$tickets: String!,$content: String!,$country: String!,$city: String!,$state: String!,$category: String){

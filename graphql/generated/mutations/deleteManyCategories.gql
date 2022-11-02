@@ -1,5 +1,0 @@
-mutation deleteManyCategories($where: CategoriesWhereInput){
-    deleteManyCategories(where: $where){
-        count
-    }
-}

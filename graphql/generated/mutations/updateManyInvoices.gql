@@ -1,5 +1,0 @@
-mutation updateManyInvoices($data: InvoicesUpdateManyMutationInput!, $where: InvoicesWhereInput){
-    updateManyInvoices(data: $data, where: $where){
-        count
-    }
-}

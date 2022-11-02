@@ -1,0 +1,16 @@
+query {
+  findUniqueCustomizations 
+ {
+    allow_signup
+    announcement
+    banner
+    created_at
+    email
+    footer_link
+    id
+    nav_link
+    notification
+    site_name
+    site_url
+  }
+}

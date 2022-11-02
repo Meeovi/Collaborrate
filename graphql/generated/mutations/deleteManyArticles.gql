@@ -1,5 +1,0 @@
-mutation deleteManyArticles($where: ArticlesWhereInput){
-    deleteManyArticles(where: $where){
-        count
-    }
-}

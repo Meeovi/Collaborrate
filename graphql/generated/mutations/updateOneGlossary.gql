@@ -1,9 +1,0 @@
-mutation updateOneGlossary($data: GlossaryUpdateInput!, $where: GlossaryWhereUniqueInput!){
-    updateOneGlossary(data: $data, where: $where){
-        content
-        id
-        image
-        name
-        published
-    }
-}

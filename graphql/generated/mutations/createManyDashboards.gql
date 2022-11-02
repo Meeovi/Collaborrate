@@ -1,5 +1,0 @@
-mutation createManyDashboards($data: [DashboardsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyDashboards(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

@@ -1,5 +1,0 @@
-mutation deleteManyThemes($where: ThemesWhereInput){
-    deleteManyThemes(where: $where){
-        count
-    }
-}

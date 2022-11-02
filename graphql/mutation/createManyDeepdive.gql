@@ -1,0 +1,6 @@
+mutation {
+  createManyDeepdive 
+ {
+    count
+  }
+}

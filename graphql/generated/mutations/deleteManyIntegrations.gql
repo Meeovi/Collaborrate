@@ -1,5 +1,0 @@
-mutation deleteManyIntegrations($where: IntegrationsWhereInput){
-    deleteManyIntegrations(where: $where){
-        count
-    }
-}

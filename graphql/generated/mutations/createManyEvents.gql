@@ -1,5 +1,0 @@
-mutation createManyEvents($data: [EventsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyEvents(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

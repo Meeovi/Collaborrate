@@ -113,7 +113,7 @@
 
 <script>
   import  gql from "graphql-tag";
-  import findManyAttributes from "~/graphql/generated/queries/findManyAttributes";
+  import findManyAttributes from "~/graphql/query/findManyAttributes";
 
   const DELETE_ATTRIBUTES = gql`
     mutation ($id: Int!){

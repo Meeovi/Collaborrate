@@ -1,0 +1,12 @@
+mutation {
+  deleteOneCities 
+ {
+    country
+    description
+    id
+    image
+    name
+    postalCode
+    state
+  }
+}

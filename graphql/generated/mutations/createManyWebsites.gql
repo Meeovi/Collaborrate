@@ -1,5 +1,0 @@
-mutation createManyWebsites($data: [WebsitesCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyWebsites(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

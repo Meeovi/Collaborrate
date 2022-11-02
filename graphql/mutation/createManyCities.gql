@@ -1,0 +1,6 @@
+mutation {
+  createManyCities 
+ {
+    count
+  }
+}

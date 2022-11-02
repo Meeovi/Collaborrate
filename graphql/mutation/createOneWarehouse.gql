@@ -1,0 +1,18 @@
+mutation {
+  createOneWarehouse 
+ {
+    category
+    city
+    country
+    created_at
+    description
+    id
+    image
+    isPublic
+    name
+    postal
+    products
+    state
+    status
+  }
+}

@@ -1,5 +1,0 @@
-mutation updateManyWebsites($data: WebsitesUpdateManyMutationInput!, $where: WebsitesWhereInput){
-    updateManyWebsites(data: $data, where: $where){
-        count
-    }
-}

@@ -55,7 +55,7 @@
 </template>
 
 <script>
-import apitokens from '~/graphql/generated/queries/apitokens'
+import apitokens from '~/graphql/query/apitokens'
 
 export default {
   data() {

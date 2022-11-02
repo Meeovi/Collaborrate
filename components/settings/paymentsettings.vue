@@ -55,7 +55,7 @@
 </template>
 
 <script>
-import payments from '~/graphql/generated/queries/findManyPayments'
+import payments from '~/graphql/query/findManyPayments'
 
 export default {
   data() {

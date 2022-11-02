@@ -1,0 +1,66 @@
+query {
+  groupByScheduler 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      created_at
+      end_date
+      id
+      label
+      level
+      login
+      name
+      notes
+      permission
+      public
+      start_date
+      whid
+    }
+    _max {
+      created_at
+      end_date
+      id
+      label
+      level
+      login
+      name
+      notes
+      permission
+      public
+      start_date
+      whid
+    }
+    _min {
+      created_at
+      end_date
+      id
+      label
+      level
+      login
+      name
+      notes
+      permission
+      public
+      start_date
+      whid
+    }
+    _sum {
+      id
+    }
+    created_at
+    end_date
+    id
+    label
+    level
+    login
+    name
+    notes
+    permission
+    public
+    start_date
+    whid
+  }
+}

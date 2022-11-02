@@ -1,0 +1,6 @@
+mutation {
+  updateManyShipments 
+ {
+    count
+  }
+}

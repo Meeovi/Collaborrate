@@ -1,0 +1,11 @@
+mutation {
+  deleteOneStocks 
+ {
+    description
+    enabled
+    id
+    name
+    sources
+    website
+  }
+}

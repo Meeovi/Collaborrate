@@ -103,9 +103,9 @@
 <script>
   // eslint-disable-next-line camelcase
   import gql from "graphql-tag";
-  import findManyCities from "~/graphql/generated/queries/findManyCities";
-  import findManyStates from '~/graphql/generated/queries/findManyStates'
-  import findManyCountries from '~/graphql/generated/queries/findManyCountries'
+  import findManyCities from "~/graphql/query/findManyCities";
+  import findManyStates from '~/graphql/query/findManyStates'
+  import findManyCountries from '~/graphql/query/findManyCountries'
 
   const DELETE_CITY = gql`
     mutation ($name:String!,$state:String,$country:String,$postalCode:String,$description:String){

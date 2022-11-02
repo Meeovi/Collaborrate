@@ -32,7 +32,7 @@
 </template>
 
 <script>
- import  findManyTags from '~/graphql/generated/queries/findManyTags'
+ import  findManyTags from '~/graphql/query/findManyTags'
 
 export default {
   data() {

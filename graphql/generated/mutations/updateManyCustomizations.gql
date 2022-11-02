@@ -1,5 +1,0 @@
-mutation updateManyCustomizations($data: CustomizationsUpdateManyMutationInput!, $where: CustomizationsWhereInput){
-    updateManyCustomizations(data: $data, where: $where){
-        count
-    }
-}

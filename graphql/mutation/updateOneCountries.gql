@@ -1,0 +1,11 @@
+mutation {
+  updateOneCountries 
+ {
+    description
+    id
+    image
+    name
+    region
+    trainings
+  }
+}

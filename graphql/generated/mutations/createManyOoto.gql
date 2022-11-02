@@ -1,5 +1,0 @@
-mutation createManyOoto($data: [OotoCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyOoto(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

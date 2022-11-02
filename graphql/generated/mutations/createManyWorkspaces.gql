@@ -1,5 +1,0 @@
-mutation createManyWorkspaces($data: [WorkspacesCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyWorkspaces(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

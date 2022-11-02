@@ -47,7 +47,7 @@
 </template>
 
 <script>
- import  findManyTargets from '~/graphql/generated/queries/findManyTargets'
+ import  findManyTargets from '~/graphql/query/findManyTargets'
 
 export default {
    data() {

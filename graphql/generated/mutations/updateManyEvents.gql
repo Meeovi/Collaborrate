@@ -1,5 +1,0 @@
-mutation updateManyEvents($data: EventsUpdateManyMutationInput!, $where: EventsWhereInput){
-    updateManyEvents(data: $data, where: $where){
-        count
-    }
-}

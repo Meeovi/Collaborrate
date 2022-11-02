@@ -1,5 +1,0 @@
-mutation createManyPartners($data: [PartnersCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyPartners(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

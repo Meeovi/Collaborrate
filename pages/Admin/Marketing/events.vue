@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import  events from '~/graphql/generated/queries/findManyEvents'
+import  events from '~/graphql/query/findManyEvents'
 
 export default {
   data() {

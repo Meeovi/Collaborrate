@@ -1,5 +1,0 @@
-mutation deleteManyPartners($where: PartnersWhereInput){
-    deleteManyPartners(where: $where){
-        count
-    }
-}

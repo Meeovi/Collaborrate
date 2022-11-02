@@ -1,0 +1,6 @@
+mutation {
+  updateManyTemplates 
+ {
+    count
+  }
+}

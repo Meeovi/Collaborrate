@@ -1,5 +1,0 @@
-mutation deleteManyCities($where: CitiesWhereInput){
-    deleteManyCities(where: $where){
-        count
-    }
-}

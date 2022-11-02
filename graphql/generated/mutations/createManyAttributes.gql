@@ -1,5 +1,0 @@
-mutation createManyAttributes($data: [AttributesCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyAttributes(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

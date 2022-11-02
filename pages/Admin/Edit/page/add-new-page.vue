@@ -109,7 +109,7 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyPages from "~/graphql/generated/queries/findManyPages";
+  import findManyPages from "~/graphql/query/findManyPages";
 
   const ADD_PAGES = gql`
     mutation ($title:String!,$meta_description:String,$meta_keywords:String,$content:String,$meta_title:String!,$url_key:String){

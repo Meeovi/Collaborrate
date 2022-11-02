@@ -1,5 +1,0 @@
-mutation updateManyTemplates($data: TemplatesUpdateManyMutationInput!, $where: TemplatesWhereInput){
-    updateManyTemplates(data: $data, where: $where){
-        count
-    }
-}

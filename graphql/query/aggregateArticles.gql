@@ -1,0 +1,66 @@
+query {
+  aggregateArticles 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      categories
+      content
+      cust_id
+      customers
+      excerpt
+      id
+      image
+      isPublic
+      meta_description
+      meta_name
+      meta_url
+      name
+      published
+      tags
+      type
+      users
+    }
+    _max {
+      categories
+      content
+      cust_id
+      customers
+      excerpt
+      id
+      image
+      isPublic
+      meta_description
+      meta_name
+      meta_url
+      name
+      published
+      tags
+      type
+      users
+    }
+    _min {
+      categories
+      content
+      cust_id
+      customers
+      excerpt
+      id
+      image
+      isPublic
+      meta_description
+      meta_name
+      meta_url
+      name
+      published
+      tags
+      type
+      users
+    }
+    _sum {
+      id
+    }
+  }
+}

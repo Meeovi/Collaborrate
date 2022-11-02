@@ -1,5 +1,0 @@
-mutation createManyAgreements($data: [AgreementsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyAgreements(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

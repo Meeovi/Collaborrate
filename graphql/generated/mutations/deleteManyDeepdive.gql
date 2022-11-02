@@ -1,5 +1,0 @@
-mutation deleteManyDeepdive($where: DeepdiveWhereInput){
-    deleteManyDeepdive(where: $where){
-        count
-    }
-}

@@ -1,5 +1,0 @@
-mutation deleteManyContracts($where: ContractsWhereInput){
-    deleteManyContracts(where: $where){
-        count
-    }
-}

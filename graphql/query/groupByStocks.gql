@@ -1,0 +1,42 @@
+query {
+  groupByStocks 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      description
+      enabled
+      id
+      name
+      sources
+      website
+    }
+    _max {
+      description
+      enabled
+      id
+      name
+      sources
+      website
+    }
+    _min {
+      description
+      enabled
+      id
+      name
+      sources
+      website
+    }
+    _sum {
+      id
+    }
+    description
+    enabled
+    id
+    name
+    sources
+    website
+  }
+}

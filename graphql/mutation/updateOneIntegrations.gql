@@ -1,0 +1,12 @@
+mutation {
+  updateOneIntegrations 
+ {
+    category
+    content
+    created_at
+    id
+    location
+    media
+    name
+  }
+}

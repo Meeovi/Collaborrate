@@ -1,0 +1,6 @@
+mutation {
+  updateManyProduct_types 
+ {
+    count
+  }
+}

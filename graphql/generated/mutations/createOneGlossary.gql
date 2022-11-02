@@ -1,9 +1,0 @@
-mutation createOneGlossary($data: GlossaryCreateInput!){
-    createOneGlossary(data: $data){
-        content
-        id
-        image
-        name
-        published
-    }
-}

@@ -1,5 +1,0 @@
-mutation updateManyTargets($data: TargetsUpdateManyMutationInput!, $where: TargetsWhereInput){
-    updateManyTargets(data: $data, where: $where){
-        count
-    }
-}

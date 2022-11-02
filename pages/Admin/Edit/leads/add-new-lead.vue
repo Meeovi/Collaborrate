@@ -299,12 +299,12 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyLeads from "~/graphql/generated/queries/findManyLeads";
-  import findManyAccounts from "~/graphql/generated/queries/findManyAccounts";
-  import findManyUsers from '~/graphql/generated/queries/findManyUsers'
-  import findManyCities from '~/graphql/generated/queries/findManyCities'
-  import findManyCountries from '~/graphql/generated/queries/findManyCountries'
-  import findManyStates from '~/graphql/generated/queries/findManyStates'
+  import findManyLeads from "~/graphql/query/findManyLeads";
+  import findManyAccounts from "~/graphql/query/findManyAccounts";
+  import findManyUsers from '~/graphql/query/findManyUsers'
+  import findManyCities from '~/graphql/query/findManyCities'
+  import findManyCountries from '~/graphql/query/findManyCountries'
+  import findManyStates from '~/graphql/query/findManyStates'
   
 
   /* eslint-disable camelcase */

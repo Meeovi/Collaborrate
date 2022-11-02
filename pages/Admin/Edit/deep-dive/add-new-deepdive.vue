@@ -74,8 +74,8 @@
 <script>
   import gql from "graphql-tag";
 
-  import deepdives from "~/graphql/generated/queries/deepdives";
-  import findManyUsers from '~/graphql/generated/queries/findManyUsers'
+  import deepdives from "~/graphql/query/deepdives";
+  import findManyUsers from '~/graphql/query/findManyUsers'
 
   const ADD_DEEPDIVE = gql`
     mutation ($login:String!,$whid:String!,$start_date:String!,$content:String!,$end_date:String!,$attendees:String){

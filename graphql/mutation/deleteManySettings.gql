@@ -1,0 +1,6 @@
+mutation {
+  deleteManySettings 
+ {
+    count
+  }
+}

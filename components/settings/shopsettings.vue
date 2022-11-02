@@ -540,15 +540,15 @@
 
   import {
     generalSettings
-  } from "~/graphql/generated/queries/findManySettings";
+  } from "~/graphql/query/findManySettings";
   import paymentsettings from '~/components/settings/paymentsettings';
-  import currencies from '~/graphql/generated/queries/findManyCurrencies'
-  import findManyCities from '~/graphql/generated/queries/findManyCities'
-  import findManyStates from '~/graphql/generated/queries/findManyStates'
-  import findManyCountries from '~/graphql/generated/queries/findManyCountries'
-  import findManyChannels from '~/graphql/generated/queries/findManyChannels'
-  import findManyZones from '~/graphql/generated/queries/findManyZones'
-  import findManyTaxes from '~/graphql/generated/queries/findManyTaxes'
+  import currencies from '~/graphql/query/findManyCurrencies'
+  import findManyCities from '~/graphql/query/findManyCities'
+  import findManyStates from '~/graphql/query/findManyStates'
+  import findManyCountries from '~/graphql/query/findManyCountries'
+  import findManyChannels from '~/graphql/query/findManyChannels'
+  import findManyZones from '~/graphql/query/findManyZones'
+  import findManyTaxes from '~/graphql/query/findManyTaxes'
 
   const ADD_GENERAL_SETTINGS = gql `
     mutation ($siteTitle:String!,$tagline:String,$siteUrl:String,$siteAdminEmail:String,$value:String){

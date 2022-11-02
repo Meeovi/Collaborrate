@@ -115,7 +115,7 @@
 
 <script>
   import  gql from "graphql-tag";
-  import findManyAttributes from "~/graphql/generated/queries/findManyAttributes";
+  import findManyAttributes from "~/graphql/query/findManyAttributes";
 
   const ADD_ATTRIBUTES = gql`
     mutation ($default_label:String!,$allow_html_tags_storefront:String!, $attribute_class:String!, $attribute_code:String!, $attribute_value:String!, $column_options:String!, $faceted_navigation:String!, $filter_options:String!, $id:Int!, $isPublic:String!, $layered_navigation:String!, $meta_description:String!, $meta_name:String!, $meta_url:String!, $position:String!, $prod_id:String!,){

@@ -1,8 +1,0 @@
-mutation updateOneRoles($data: RolesUpdateInput!, $where: RolesWhereUniqueInput!){
-    updateOneRoles(data: $data, where: $where){
-        content
-        created_at
-        id
-        role_name
-    }
-}

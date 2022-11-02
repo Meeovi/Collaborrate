@@ -1,5 +1,0 @@
-mutation createManySegments($data: [SegmentsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManySegments(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

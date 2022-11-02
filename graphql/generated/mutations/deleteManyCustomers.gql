@@ -1,5 +1,0 @@
-mutation deleteManyCustomers($where: CustomersWhereInput){
-    deleteManyCustomers(where: $where){
-        count
-    }
-}

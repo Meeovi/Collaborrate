@@ -1,5 +1,0 @@
-mutation deleteManyChannels($where: ChannelsWhereInput){
-    deleteManyChannels(where: $where){
-        count
-    }
-}

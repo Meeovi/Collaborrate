@@ -1,5 +1,0 @@
-mutation deleteManyPlugins($where: PluginsWhereInput){
-    deleteManyPlugins(where: $where){
-        count
-    }
-}

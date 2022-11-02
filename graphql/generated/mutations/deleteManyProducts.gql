@@ -1,5 +1,0 @@
-mutation deleteManyProducts($where: ProductsWhereInput){
-    deleteManyProducts(where: $where){
-        count
-    }
-}

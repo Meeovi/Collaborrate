@@ -1,5 +1,0 @@
-mutation updateManyProduct_types($data: Product_typesUpdateManyMutationInput!, $where: Product_typesWhereInput){
-    updateManyProduct_types(data: $data, where: $where){
-        count
-    }
-}

@@ -40,7 +40,7 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyUsers from "~/graphql/generated/queries/findManyUsers";
+  import findManyUsers from "~/graphql/query/findManyUsers";
 
   const ADD_USER = gql`
     mutation ($first_name:String!,$last_name:String!,$username:String!,$email:String!, $password: String!){

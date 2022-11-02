@@ -1,0 +1,6 @@
+mutation {
+  updateManyZones 
+ {
+    count
+  }
+}

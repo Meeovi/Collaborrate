@@ -1,5 +1,0 @@
-mutation deleteManyWebhooks($where: WebhooksWhereInput){
-    deleteManyWebhooks(where: $where){
-        count
-    }
-}

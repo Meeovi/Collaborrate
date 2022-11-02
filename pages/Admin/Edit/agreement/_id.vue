@@ -68,7 +68,7 @@
 <script>
   // eslint-disable-next-line camelcase
   import gql from 'graphql-tag'
-  import findManyAgreements from '~/graphql/generated/queries/findManyAgreements'
+  import findManyAgreements from '~/graphql/query/findManyAgreements'
 
   const UPDATE_AGREEMENTS = gql `
   mutation MyMutation($id: Int!) {

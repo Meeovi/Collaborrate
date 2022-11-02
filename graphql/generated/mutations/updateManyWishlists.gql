@@ -1,5 +1,0 @@
-mutation updateManyWishlists($data: WishlistsUpdateManyMutationInput!, $where: WishlistsWhereInput){
-    updateManyWishlists(data: $data, where: $where){
-        count
-    }
-}

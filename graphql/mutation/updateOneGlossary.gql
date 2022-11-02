@@ -1,0 +1,10 @@
+mutation {
+  updateOneGlossary 
+ {
+    content
+    id
+    image
+    name
+    published
+  }
+}

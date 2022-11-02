@@ -1,0 +1,6 @@
+mutation {
+  deleteManyCustomizations 
+ {
+    count
+  }
+}

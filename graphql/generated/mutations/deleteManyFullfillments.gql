@@ -1,5 +1,0 @@
-mutation deleteManyFullfillments($where: FullfillmentsWhereInput){
-    deleteManyFullfillments(where: $where){
-        count
-    }
-}

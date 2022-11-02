@@ -1,5 +1,0 @@
-mutation deleteManyStates($where: StatesWhereInput){
-    deleteManyStates(where: $where){
-        count
-    }
-}

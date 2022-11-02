@@ -1,5 +1,0 @@
-mutation createManyInvoices($data: [InvoicesCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyInvoices(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

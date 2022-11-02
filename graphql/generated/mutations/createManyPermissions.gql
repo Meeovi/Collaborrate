@@ -1,5 +1,0 @@
-mutation createManyPermissions($data: [PermissionsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyPermissions(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

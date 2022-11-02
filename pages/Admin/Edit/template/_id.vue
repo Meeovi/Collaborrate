@@ -116,7 +116,7 @@
 <script>
 /* eslint-disable camelcase */
 import  gql from 'graphql-tag'
-import  findManyTemplates from '~/graphql/generated/mutations/createOneChannels'
+import  findManyTemplates from '~/graphql/mutation/createOneChannels'
 
 const DELETE_PDF_TEMPLATE = gql`
   mutation deleteOnetemplates($id: Int!){

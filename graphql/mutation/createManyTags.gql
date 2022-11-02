@@ -1,0 +1,6 @@
+mutation {
+  createManyTags 
+ {
+    count
+  }
+}

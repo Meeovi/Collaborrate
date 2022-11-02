@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import findManyProviders from '~/graphql/generated/queries/findManyProviders'
+import findManyProviders from '~/graphql/query/findManyProviders'
 
 export default {
   data() {

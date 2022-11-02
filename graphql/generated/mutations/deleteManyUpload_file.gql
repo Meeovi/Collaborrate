@@ -1,5 +1,0 @@
-mutation deleteManyUpload_file($where: Upload_fileWhereInput){
-    deleteManyUpload_file(where: $where){
-        count
-    }
-}

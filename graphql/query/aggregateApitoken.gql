@@ -1,0 +1,38 @@
+query {
+  aggregateApitoken 
+ {
+    _avg {
+      id
+      token
+    }
+    _count {
+      _all
+      created_at
+      description
+      id
+      name
+      token
+      token_type
+    }
+    _max {
+      created_at
+      description
+      id
+      name
+      token
+      token_type
+    }
+    _min {
+      created_at
+      description
+      id
+      name
+      token
+      token_type
+    }
+    _sum {
+      id
+      token
+    }
+  }
+}

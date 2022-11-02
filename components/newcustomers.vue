@@ -11,7 +11,7 @@
             <th>Email</th>
           </tr>
         </thead>
-        <tbody v-for="customers in findFirstCustomers" :key="customers.id">
+        <tbody v-for="customers in findManyCustomers" :key="customers.id">
           <tr>
             <th scope="row">{{customers.id}}</th>
             <td>{{customers.first_name}}</td>

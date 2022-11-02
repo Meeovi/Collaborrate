@@ -51,7 +51,7 @@
   
   <script>
     import gql from "graphql-tag";
-    import findManyWebhooks from "~/graphql/generated/queries/findManyWebhooks";
+    import findManyWebhooks from "~/graphql/query/findManyWebhooks";
   
     const ADD_WEBHOOKS = gql`
       mutation ($name:String!,$url:String){

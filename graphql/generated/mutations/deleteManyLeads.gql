@@ -1,5 +1,0 @@
-mutation deleteManyLeads($where: LeadsWhereInput){
-    deleteManyLeads(where: $where){
-        count
-    }
-}

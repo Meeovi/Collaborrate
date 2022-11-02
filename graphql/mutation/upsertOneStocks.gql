@@ -1,0 +1,11 @@
+mutation {
+  upsertOneStocks 
+ {
+    description
+    enabled
+    id
+    name
+    sources
+    website
+  }
+}

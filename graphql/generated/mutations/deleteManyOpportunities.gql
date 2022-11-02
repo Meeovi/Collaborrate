@@ -1,5 +1,0 @@
-mutation deleteManyOpportunities($where: OpportunitiesWhereInput){
-    deleteManyOpportunities(where: $where){
-        count
-    }
-}

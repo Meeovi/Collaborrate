@@ -1,0 +1,6 @@
+mutation {
+  updateManyScheduler 
+ {
+    count
+  }
+}

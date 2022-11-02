@@ -1,5 +1,0 @@
-mutation createManyChannels($data: [ChannelsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyChannels(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

@@ -74,7 +74,7 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyTags from "~/graphql/generated/queries/findManyTags";
+  import findManyTags from "~/graphql/query/findManyTags";
 
   const DELETE_TAG = gql `
     mutation ($name:String!,$excerpt:String){

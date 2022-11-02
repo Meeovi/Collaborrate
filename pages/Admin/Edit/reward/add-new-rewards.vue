@@ -119,13 +119,13 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyRewards from "~/graphql/generated/queries/findManyRewards";
-  import findManyArticles from "~/graphql/generated/queries/findManyArticles";
-  import findManyCustomers from '~/graphql/generated/queries/findManyCustomers';
-  import findManyUsers from '~/graphql/generated/queries/findManyUsers';
-  import findManyProducts from '~/graphql/generated/queries/findManyProducts';
-  import findManyCategories from '~/graphql/generated/queries/findManyCategories';
-  import findManyDiscounts from '~/graphql/generated/queries/findManyDiscounts';
+  import findManyRewards from "~/graphql/query/findManyRewards";
+  import findManyArticles from "~/graphql/query/findManyArticles";
+  import findManyCustomers from '~/graphql/query/findManyCustomers';
+  import findManyUsers from '~/graphql/query/findManyUsers';
+  import findManyProducts from '~/graphql/query/findManyProducts';
+  import findManyCategories from '~/graphql/query/findManyCategories';
+  import findManyDiscounts from '~/graphql/query/findManyDiscounts';
 
   const ADD_REWARDS = gql`
     mutation ($name: String!,$expiration: String!,$customers: String!,$coupons: String!,$categories: String!,$products: String!,$users: String!,$articles: String!,$level: String!){

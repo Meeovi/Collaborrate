@@ -1,0 +1,6 @@
+mutation {
+  createManyStocks 
+ {
+    count
+  }
+}

@@ -1,5 +1,0 @@
-mutation createManyCustomers($data: [CustomersCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyCustomers(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

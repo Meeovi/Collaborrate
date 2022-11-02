@@ -8,41 +8,11 @@
             <i class="fas fa-home fa-fw me-3" style="color: white;"></i><span>Main Dashboard</span></a>
         </li>
         <li class="sidenav-item">
-          <a class="sidenav-link"><i class="fas fa-money-bill fa-fw me-3"
-              style="color: white;"></i><span>Sales</span></a>
-          <ul class="sidenav-collapse">
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/sales/orders">Orders</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/sales/invoices">Invoices</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/sales/shipments">Shipments</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/sales/returns">Returns</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/sales/agreements">Agreements</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/sales/transactions">Transactions</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/sales/discounts">Discounts</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/sales/quotes">Quotes</a>
-            </li><br>
-          </ul>
-        </li>
-        <li class="sidenav-item">
           <a class="sidenav-link"><i class="fas fa-users fa-fw me-3"
               style="color: white;"></i><span>Customers</span></a>
           <ul class="sidenav-collapse">
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/customers/all-customers">All Customers</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/customers/customers">All Customers</a>
             </li><br>
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/customers/segments">Segments</a>
@@ -57,7 +27,10 @@
               <a class="sidenav-link" style="color: white;" href="/admin/customers/targets">Targets</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/customers/meetings">Meetings</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/customers/reviews">Reviews</a>
+            </li><br>
+            <li class="sidenav-item">
+              <a class="sidenav-link" style="color: white;" href="/admin/customers/contracts">Contracts</a>
             </li><br>
           </ul>
         </li>
@@ -70,25 +43,16 @@
               <a class="sidenav-link" style="color: white;" href="/admin/marketing/events">Events</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/marketing/invitations">Invitations</a>
-            </li><br>
-            <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/marketing/newsletter">Newsletter</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/marketing/communications">Communications</a>
             </li><br>
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/marketing/rewards">Rewards</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/marketing/reviews">Reviews</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/marketing/contracts">Contracts</a>
-            </li><br>
-            <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/marketing/visits">Visits</a>
+            </li><br>
+            <li class="sidenav-item">
+              <a class="sidenav-link" style="color: white;" href="/admin/marketing/agreements">Agreements</a>
             </li><br>
           </ul>
         </li>
@@ -113,7 +77,7 @@
                 Tool</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/reports/ticketing">Ticketing</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/reports/tickets">Ticket Management</a>
             </li><br>
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/reports/checklists">Checklists</a>
@@ -122,13 +86,16 @@
         </li>
         <li class="sidenav-item">
           <a class="sidenav-link" style="color: white;" href="">
-            <i class="fas fa-edit fa-fw me-3" style="color: white;"></i><span>Content</span></a>
+            <i class="fas fa-edit fa-fw me-3" style="color: white;"></i><span>Content Management</span></a>
           <ul class="sidenav-collapse">
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/content/pages">Pages</a>
             </li><br>
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/content/blog">Blog</a>
+            </li><br>
+            <li class="sidenav-item">
+              <a class="sidenav-link" style="color: white;" href="/admin/content/categories">Categories</a>
             </li><br>
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/content/media-manager">Media Manager</a>
@@ -155,37 +122,55 @@
             <i class="fas fa-shopping-basket fa-fw me-3" style="color: white;"></i><span>Inventory</span></a>
           <ul class="sidenav-collapse">
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/shop/products">Products</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/products">Products</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/shop/product-types">Product Types</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/product-types">Product Types</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/shop/categories">Categories</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/collections">Collections</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/shop/collections">Collections</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/brands">Brands</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/shop/brands">Brands</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/manufacturers">Manufacturers</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/shop/manufacturers">Manufacturers</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/attributes">Attributes</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/shop/attributes">Attributes</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/vendors">Multi-Vendor</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/shop/vendors">Multi-Vendor</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/partners">Partners</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/shop/partners">Partners</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/warehouses">Warehouses</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/shop/warehouses">Warehouses</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/wishlists">Wishlists</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/shop/wishlists">Wishlists</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/orders">Orders</a>
+            </li><br>
+            <li class="sidenav-item">
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/invoices">Invoices</a>
+            </li><br>
+            <li class="sidenav-item">
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/shipments">Shipments</a>
+            </li><br>
+            <li class="sidenav-item">
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/returns">Returns</a>
+            </li><br>
+            <li class="sidenav-item">
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/transactions">Transactions</a>
+            </li><br>
+            <li class="sidenav-item">
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/discounts">Discounts</a>
+            </li><br>
+            <li class="sidenav-item">
+              <a class="sidenav-link" style="color: white;" href="/admin/inventory/quotes">Quotes</a>
             </li><br>
           </ul>
         </li>

@@ -112,7 +112,7 @@
 <script>
   import  gql from "graphql-tag";
 
-  import findManyVisits from "~/graphql/generated/queries/findManyVisits";
+  import findManyVisits from "~/graphql/query/findManyVisits";
   /* eslint-disable camelcase */
 
   const ADD_VISITS = gql`

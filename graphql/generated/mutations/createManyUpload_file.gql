@@ -1,5 +1,0 @@
-mutation createManyUpload_file($data: [Upload_fileCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyUpload_file(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

@@ -1,0 +1,6 @@
+mutation {
+  deleteManyProducts 
+ {
+    count
+  }
+}

@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import  workspaces from '~/graphql/generated/queries/findManyWorkspaces'
+import  workspaces from '~/graphql/query/findManyWorkspaces'
 
 export default {
   data() {

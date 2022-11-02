@@ -1,0 +1,11 @@
+mutation {
+  upsertOneCountries 
+ {
+    description
+    id
+    image
+    name
+    region
+    trainings
+  }
+}

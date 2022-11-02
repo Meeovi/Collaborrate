@@ -1,0 +1,6 @@
+mutation {
+  updateManyUsers 
+ {
+    count
+  }
+}

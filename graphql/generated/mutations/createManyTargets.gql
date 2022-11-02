@@ -1,5 +1,0 @@
-mutation createManyTargets($data: [TargetsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyTargets(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

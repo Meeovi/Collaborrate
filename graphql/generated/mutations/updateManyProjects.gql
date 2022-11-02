@@ -1,5 +1,0 @@
-mutation updateManyProjects($data: ProjectsUpdateManyMutationInput!, $where: ProjectsWhereInput){
-    updateManyProjects(data: $data, where: $where){
-        count
-    }
-}

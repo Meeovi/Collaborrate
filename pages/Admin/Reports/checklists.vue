@@ -44,7 +44,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  checklists from '~/graphql/generated/queries/checklists'
+ import  checklists from '~/graphql/query/checklists'
 
 export default {
   data() {

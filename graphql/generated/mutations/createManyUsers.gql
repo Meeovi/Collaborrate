@@ -1,5 +1,0 @@
-mutation createManyUsers($data: [UsersCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyUsers(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

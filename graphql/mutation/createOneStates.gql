@@ -1,0 +1,11 @@
+mutation {
+  createOneStates 
+ {
+    country
+    description
+    id
+    image
+    name
+    trainings
+  }
+}

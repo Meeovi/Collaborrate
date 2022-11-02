@@ -213,14 +213,14 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyProducts from "~/graphql/generated/queries/findManyProducts"
-  import findManyBrands from "~/graphql/generated/queries/findManyBrands"
-  import findManyTags from "~/graphql/generated/queries/findManyTags"
-  import findManyCustomers from "~/graphql/generated/queries/findManyCustomers"
-  import findManyUsers from "~/graphql/generated/queries/findManyUsers"
-  import findManyAgreements from "~/graphql/generated/queries/findManyAgreements"
-  import findManyWorkspacess from "~/graphql/generated/queries/findManyWorkspaces"
-  import checklists from "~/graphql/generated/queries/checklists"
+  import findManyProducts from "~/graphql/query/findManyProducts"
+  import findManyBrands from "~/graphql/query/findManyBrands"
+  import findManyTags from "~/graphql/query/findManyTags"
+  import findManyCustomers from "~/graphql/query/findManyCustomers"
+  import findManyUsers from "~/graphql/query/findManyUsers"
+  import findManyAgreements from "~/graphql/query/findManyAgreements"
+  import findManyWorkspacess from "~/graphql/query/findManyWorkspaces"
+  import checklists from "~/graphql/query/checklists"
   
   const ADD_MEDIAMANAGER = gql`
     mutation ($brands: String!, $products: String!, $description: String!, $workspace: String!, $albums: String!, $author: String!, $created_at: String!, $expiration_date: String!, $comment: String!, $media: String!, $copyright: String!, $content_type: String!, $dimensions: String!, $task_description: String!, $task_name: String!, $task_type: String!, $name: String!, $watermark_name: String!, $watermark_description: String!, $watermark_media: String!, $versions: String!, $keywords: String!, $members: String!, $status: String!, $tags: String!){

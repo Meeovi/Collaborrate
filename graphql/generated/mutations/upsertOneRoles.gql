@@ -1,8 +1,0 @@
-mutation upsertOneRoles($create: RolesCreateInput!, $update: RolesUpdateInput!, $where: RolesWhereUniqueInput!){
-    upsertOneRoles(create: $create, update: $update, where: $where){
-        content
-        created_at
-        id
-        role_name
-    }
-}

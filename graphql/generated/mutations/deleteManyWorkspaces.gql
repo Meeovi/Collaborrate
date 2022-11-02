@@ -1,5 +1,0 @@
-mutation deleteManyWorkspaces($where: WorkspacesWhereInput){
-    deleteManyWorkspaces(where: $where){
-        count
-    }
-}

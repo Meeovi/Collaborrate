@@ -1,0 +1,6 @@
+mutation {
+  createManyUpload_file 
+ {
+    count
+  }
+}

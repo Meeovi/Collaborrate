@@ -1,5 +1,0 @@
-mutation updateManyDashboards($data: DashboardsUpdateManyMutationInput!, $where: DashboardsWhereInput){
-    updateManyDashboards(data: $data, where: $where){
-        count
-    }
-}

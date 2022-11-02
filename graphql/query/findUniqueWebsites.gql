@@ -1,0 +1,13 @@
+query {
+  findUniqueWebsites 
+ {
+    category
+    created_at
+    id
+    name
+    shop
+    store
+    themes
+    url
+  }
+}

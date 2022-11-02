@@ -1,5 +1,0 @@
-mutation updateManyVendors($data: VendorsUpdateManyMutationInput!, $where: VendorsWhereInput){
-    updateManyVendors(data: $data, where: $where){
-        count
-    }
-}

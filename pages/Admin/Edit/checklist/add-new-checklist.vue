@@ -136,8 +136,8 @@
 
 <script>
   import gql from "graphql-tag";
-  import checklists from "~/graphql/generated/queries/checklists";
-  import findManyCountries from '~/graphql/generated/queries/findManyCountries'
+  import checklists from "~/graphql/query/checklists";
+  import findManyCountries from '~/graphql/query/findManyCountries'
   /* eslint-disable camelcase */
 
   const ADD_CHECKLISTS = gql `

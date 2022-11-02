@@ -1,9 +1,0 @@
-mutation deleteOneGlossary($where: GlossaryWhereUniqueInput!){
-    deleteOneGlossary(where: $where){
-        content
-        id
-        image
-        name
-        published
-    }
-}

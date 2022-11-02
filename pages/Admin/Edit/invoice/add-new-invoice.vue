@@ -93,10 +93,10 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyInvoices from "~/graphql/generated/queries/findManyInvoices";
-  // import  grand_total_base from "~/graphql/generated/queries/findManyGrand_total_base"
-  // import  findManyCountries from "~/graphql/generated/queries/findManyCountries"
-  // import  attributes from "~/graphql/generated/queries/findManyAttributes"
+  import findManyInvoices from "~/graphql/query/findManyInvoices";
+  // import  grand_total_base from "~/graphql/query/findManyGrand_total_base"
+  // import  findManyCountries from "~/graphql/query/findManyCountries"
+  // import  attributes from "~/graphql/query/findManyAttributes"
 
   const ADD_INVOICES = gql `
     mutation ($subtotal: String!,$customer_name: String!,$shipping_information: String!,$shipping_address: String!,$shipping_and_handling: String!,$payment_method: String!,$bill_to_name: String!,$grand_total_purchased: String!,$customer_group: String!,$email: String!,$billing_address: String!,$grand_total_base: String){

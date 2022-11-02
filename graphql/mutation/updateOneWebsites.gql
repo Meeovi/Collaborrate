@@ -1,0 +1,13 @@
+mutation {
+  updateOneWebsites 
+ {
+    category
+    created_at
+    id
+    name
+    shop
+    store
+    themes
+    url
+  }
+}

@@ -78,8 +78,8 @@
 
 <script>
   import  gql from "graphql-tag";
-  import  findManyZones from "~/graphql/generated/queries/findManyZones"
-  import  findManyCountries from "~/graphql/generated/queries/findManyCountries"
+  import  findManyZones from "~/graphql/query/findManyZones"
+  import  findManyCountries from "~/graphql/query/findManyCountries"
 
   const DELETE_ZONE = gql`
     mutation ($code:String!,$name:String!$type:String!,$scope:String!,$country:String!){

@@ -105,7 +105,7 @@
 <script>
 // eslint-disable-next-line camelcase
 import  gql from 'graphql-tag'
-import  findManyCollections from '~/graphql/generated/queries/findManyCollections'
+import  findManyCollections from '~/graphql/query/findManyCollections'
 
   const DELETE_COLLECTION = gql`
     mutation ($name:String!,$description:String!,$image:String!,$meta_description:String!,$meta_keywords:String!,$meta_title:String!){

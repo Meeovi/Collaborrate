@@ -1,0 +1,54 @@
+query {
+  aggregateAgreements 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      content
+      created
+      excerpt
+      id
+      image
+      mediamanager
+      name
+      reference_id
+      shop_id
+      type
+      updated
+      user_id
+    }
+    _max {
+      content
+      created
+      excerpt
+      id
+      image
+      mediamanager
+      name
+      reference_id
+      shop_id
+      type
+      updated
+      user_id
+    }
+    _min {
+      content
+      created
+      excerpt
+      id
+      image
+      mediamanager
+      name
+      reference_id
+      shop_id
+      type
+      updated
+      user_id
+    }
+    _sum {
+      id
+    }
+  }
+}

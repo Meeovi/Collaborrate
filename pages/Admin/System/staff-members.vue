@@ -38,7 +38,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  findManyUsers from '~/graphql/generated/queries/findManyUsers'
+ import  findManyUsers from '~/graphql/query/findManyUsers'
 
 export default {
   data() {

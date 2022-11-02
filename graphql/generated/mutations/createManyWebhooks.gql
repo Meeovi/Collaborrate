@@ -1,5 +1,0 @@
-mutation createManyWebhooks($data: [WebhooksCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyWebhooks(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

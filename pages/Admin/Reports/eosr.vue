@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import  endofshifts from '~/graphql/generated/queries/endofshift'
+import  endofshifts from '~/graphql/query/endofshift'
 
   export default {
     data() {

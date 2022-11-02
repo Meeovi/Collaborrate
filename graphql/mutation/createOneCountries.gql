@@ -1,0 +1,11 @@
+mutation {
+  createOneCountries 
+ {
+    description
+    id
+    image
+    name
+    region
+    trainings
+  }
+}

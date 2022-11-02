@@ -1,5 +1,0 @@
-mutation deleteManyInternalization($where: InternalizationWhereInput){
-    deleteManyInternalization(where: $where){
-        count
-    }
-}

@@ -1,5 +1,0 @@
-mutation createManyArticles($data: [ArticlesCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyArticles(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

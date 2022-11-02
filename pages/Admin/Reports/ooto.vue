@@ -38,7 +38,7 @@
 </template>
 
 <script>
-  import  ootos from '~/graphql/generated/queries/ooto'
+  import  ootos from '~/graphql/query/ooto'
 
   export default {
     data() {

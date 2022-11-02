@@ -94,7 +94,7 @@
 <script>
   import gql from "graphql-tag";
 
-  import glossaries from "~/graphql/generated/queries/glossaries";
+  import glossaries from "~/graphql/query/glossaries";
 
   const DELETE_GLOSSARY = gql `
     mutation ($name:String!,$content:String!,$image:String!){

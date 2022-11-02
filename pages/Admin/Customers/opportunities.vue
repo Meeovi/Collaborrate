@@ -40,7 +40,7 @@
 </template>
 
 <script>
- import  allOpportunities from '~/graphql/generated/queries/findManyOpportunities'
+ import  allOpportunities from '~/graphql/query/findManyOpportunities'
 
 export default {
    data() {

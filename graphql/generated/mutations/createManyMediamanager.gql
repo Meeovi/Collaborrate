@@ -1,5 +1,0 @@
-mutation createManyMediamanager($data: [MediamanagerCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyMediamanager(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

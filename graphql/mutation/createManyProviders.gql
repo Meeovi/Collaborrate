@@ -1,0 +1,6 @@
+mutation {
+  createManyProviders 
+ {
+    count
+  }
+}

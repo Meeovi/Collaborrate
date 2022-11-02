@@ -1,5 +1,0 @@
-mutation createManyCurrencies($data: [CurrenciesCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyCurrencies(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

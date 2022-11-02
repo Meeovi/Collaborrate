@@ -1,0 +1,17 @@
+mutation {
+  deleteOneEmails 
+ {
+    bcc
+    cc
+    content
+    created_at
+    cust_id
+    customers
+    from
+    id
+    media
+    staff_id
+    subject
+    users
+  }
+}

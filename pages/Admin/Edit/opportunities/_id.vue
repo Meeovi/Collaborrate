@@ -130,9 +130,9 @@
   import gql from "graphql-tag";
   /* eslint-disable camelcase */
 
-  import findManyOpportunities from "~/graphql/generated/queries/findManyOpportunities";
-  import findManyUsers from '~/graphql/generated/queries/findManyUsers'
-  import findManyCategories from '~/graphql/generated/queries/findManyCategories'
+  import findManyOpportunities from "~/graphql/query/findManyOpportunities";
+  import findManyUsers from '~/graphql/query/findManyUsers'
+  import findManyCategories from '~/graphql/query/findManyCategories'
   
 
   const DELETE_OPPORTUNITY = gql`

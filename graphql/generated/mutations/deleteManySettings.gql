@@ -1,5 +1,0 @@
-mutation deleteManySettings($where: SettingsWhereInput){
-    deleteManySettings(where: $where){
-        count
-    }
-}

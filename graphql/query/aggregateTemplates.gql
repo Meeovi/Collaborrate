@@ -1,0 +1,69 @@
+query {
+  aggregateTemplates 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      active
+      assigned_to
+      content
+      created_at
+      footer
+      header
+      id
+      margin_bottom
+      margin_footer
+      margin_header
+      margin_left
+      margin_right
+      margin_top
+      name
+      orientation
+      page_size
+      type
+    }
+    _max {
+      active
+      assigned_to
+      content
+      created_at
+      footer
+      header
+      id
+      margin_bottom
+      margin_footer
+      margin_header
+      margin_left
+      margin_right
+      margin_top
+      name
+      orientation
+      page_size
+      type
+    }
+    _min {
+      active
+      assigned_to
+      content
+      created_at
+      footer
+      header
+      id
+      margin_bottom
+      margin_footer
+      margin_header
+      margin_left
+      margin_right
+      margin_top
+      name
+      orientation
+      page_size
+      type
+    }
+    _sum {
+      id
+    }
+  }
+}

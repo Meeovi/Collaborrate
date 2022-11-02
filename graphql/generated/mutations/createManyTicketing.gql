@@ -1,5 +1,0 @@
-mutation createManyTicketing($data: [TicketingCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyTicketing(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

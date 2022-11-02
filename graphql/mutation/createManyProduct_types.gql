@@ -1,0 +1,6 @@
+mutation {
+  createManyProduct_types 
+ {
+    count
+  }
+}

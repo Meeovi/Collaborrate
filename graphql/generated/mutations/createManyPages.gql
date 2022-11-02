@@ -1,5 +1,0 @@
-mutation createManyPages($data: [PagesCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyPages(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

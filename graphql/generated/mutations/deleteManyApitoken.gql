@@ -1,5 +1,0 @@
-mutation deleteManyApitoken($where: ApitokenWhereInput){
-    deleteManyApitoken(where: $where){
-        count
-    }
-}

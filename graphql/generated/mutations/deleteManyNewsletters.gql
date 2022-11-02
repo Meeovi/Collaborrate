@@ -1,5 +1,0 @@
-mutation deleteManyNewsletters($where: NewslettersWhereInput){
-    deleteManyNewsletters(where: $where){
-        count
-    }
-}

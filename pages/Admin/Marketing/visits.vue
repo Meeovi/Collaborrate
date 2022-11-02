@@ -42,7 +42,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  findManyVisits from '~/graphql/generated/queries/findManyVisits'
+ import  findManyVisits from '~/graphql/query/findManyVisits'
 
 export default {
   data() {

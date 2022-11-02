@@ -1,0 +1,10 @@
+mutation {
+  deleteOneGlossary 
+ {
+    content
+    id
+    image
+    name
+    published
+  }
+}

@@ -1,5 +1,0 @@
-mutation updateManyEmails($data: EmailsUpdateManyMutationInput!, $where: EmailsWhereInput){
-    updateManyEmails(data: $data, where: $where){
-        count
-    }
-}

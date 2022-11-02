@@ -32,7 +32,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  findManyNewsletters from '~/graphql/generated/queries/findManyNewsletters'
+ import  findManyNewsletters from '~/graphql/query/findManyNewsletters'
 
 export default {
   data() {

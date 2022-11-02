@@ -1,5 +1,0 @@
-mutation updateManyZones($data: ZonesUpdateManyMutationInput!, $where: ZonesWhereInput){
-    updateManyZones(data: $data, where: $where){
-        count
-    }
-}

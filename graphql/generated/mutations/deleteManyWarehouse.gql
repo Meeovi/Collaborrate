@@ -1,5 +1,0 @@
-mutation deleteManyWarehouse($where: WarehouseWhereInput){
-    deleteManyWarehouse(where: $where){
-        count
-    }
-}

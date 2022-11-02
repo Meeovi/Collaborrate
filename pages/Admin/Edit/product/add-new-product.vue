@@ -339,17 +339,17 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyProducts from "~/graphql/generated/queries/findManyProducts"
-  import findManyCategories from "~/graphql/generated/queries/findManyCategories"
-  import findManyCountries from "~/graphql/generated/queries/findManyCountries"
-  import attributes from "~/graphql/generated/queries/findManyAttributes"
-  import findManyProduct_types from "~/graphql/generated/queries/findManyProduct_types"
-  import findManyBrands from "~/graphql/generated/queries/findManyBrands"
-  import findManyContracts from "~/graphql/generated/queries/findManyContracts"
-  import findManyEvents from "~/graphql/generated/queries/findManyEvents"
-  import manufacturerss from "~/graphql/generated/queries/manufacturers"
-  import findManyTags from "~/graphql/generated/queries/findManyTags"
-  import findManyZones from "~/graphql/generated/queries/findManyZones"
+  import findManyProducts from "~/graphql/query/findManyProducts"
+  import findManyCategories from "~/graphql/query/findManyCategories"
+  import findManyCountries from "~/graphql/query/findManyCountries"
+  import attributes from "~/graphql/query/findManyAttributes"
+  import findManyProduct_types from "~/graphql/query/findManyProduct_types"
+  import findManyBrands from "~/graphql/query/findManyBrands"
+  import findManyContracts from "~/graphql/query/findManyContracts"
+  import findManyEvents from "~/graphql/query/findManyEvents"
+  import manufacturerss from "~/graphql/query/manufacturers"
+  import findManyTags from "~/graphql/query/findManyTags"
+  import findManyZones from "~/graphql/query/findManyZones"
 
   const ADD_PRODUCTS = gql`
     mutation ($attributes: String!, $brand: String!, $categories: String!, $content: String!, $contract: String!, $cost_string: String!, $country: String!, $created_at: String!, $customer_type: String!, $family: String!, $file: String!, $format: String!, $height: String!, $id: String!, $image: String!, $manufacture: String!, $manufacturer_part_number: String!, $occassions: String!, $name: String!, $meta_url: String!, $meta_title: String!, $meta_keywords: String!, $meta_description: String!, $part_number: String!, $price: String!, $product: String!, $quantity_per_source: String!, $related_product: String!, $salable_quantity: String!, $short_description: String!, $size: String!, $sku: String!, $status: String!, $stock_status: String!, $tags: String!, $tax_class: String!, $thumbnail: String!, $types: String!, $variants: String!, $visibility: String!, $websites: String!, $weight: String!, $zone: String!){

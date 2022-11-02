@@ -99,10 +99,10 @@
 <script>
   /* eslint-disable camelcase */
   import gql from "graphql-tag";
-  import findManyPartners from "~/graphql/generated/queries/findManyPartners";
-  import findManyStates from '~/graphql/generated/queries/findManyStates'
-  import findManyCountries from '~/graphql/generated/queries/findManyCountries'
-  import findManyCities from '~/graphql/generated/queries/findManyCities'
+  import findManyPartners from "~/graphql/query/findManyPartners";
+  import findManyStates from '~/graphql/query/findManyStates'
+  import findManyCountries from '~/graphql/query/findManyCountries'
+  import findManyCities from '~/graphql/query/findManyCities'
 
   const ADD_PARTNER = gql `
     mutation ($name:String!,$city:String!,$isPublic:String!,$state:String!,$country:String!,$business_type:String!,$address:String!){

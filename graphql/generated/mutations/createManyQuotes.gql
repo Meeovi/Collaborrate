@@ -1,5 +1,0 @@
-mutation createManyQuotes($data: [QuotesCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyQuotes(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

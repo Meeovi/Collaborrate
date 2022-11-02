@@ -1,5 +1,0 @@
-mutation updateManyContracts($data: ContractsUpdateManyMutationInput!, $where: ContractsWhereInput){
-    updateManyContracts(data: $data, where: $where){
-        count
-    }
-}

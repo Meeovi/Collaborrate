@@ -1,0 +1,12 @@
+query {
+  findFirstInternalization 
+ {
+    created_at
+    default
+    description
+    id
+    name
+    region
+    website
+  }
+}

@@ -1,5 +1,0 @@
-mutation createManyWishlists($data: [WishlistsCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyWishlists(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

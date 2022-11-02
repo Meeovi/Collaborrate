@@ -1,0 +1,13 @@
+mutation {
+  createOneTags 
+ {
+    articles
+    categories
+    customers
+    excerpt
+    id
+    name
+    products
+    users
+  }
+}

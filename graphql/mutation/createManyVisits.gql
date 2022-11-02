@@ -1,0 +1,6 @@
+mutation {
+  createManyVisits 
+ {
+    count
+  }
+}

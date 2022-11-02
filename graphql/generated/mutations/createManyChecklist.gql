@@ -1,5 +1,0 @@
-mutation createManyChecklist($data: [ChecklistCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyChecklist(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

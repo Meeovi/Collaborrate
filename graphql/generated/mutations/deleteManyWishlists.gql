@@ -1,5 +1,0 @@
-mutation deleteManyWishlists($where: WishlistsWhereInput){
-    deleteManyWishlists(where: $where){
-        count
-    }
-}

@@ -1,0 +1,14 @@
+query {
+  findManyPartners 
+ {
+    address
+    business_type
+    city
+    country
+    created_at
+    id
+    isPublic
+    name
+    state
+  }
+}

@@ -1,0 +1,11 @@
+mutation {
+  createOneApitoken 
+ {
+    created_at
+    description
+    id
+    name
+    token
+    token_type
+  }
+}

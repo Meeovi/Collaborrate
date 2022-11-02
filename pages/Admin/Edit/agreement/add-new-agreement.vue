@@ -89,7 +89,7 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyAgreements from "~/graphql/generated/queries/findManyAgreements";
+  import findManyAgreements from "~/graphql/query/findManyAgreements";
   import Editor from '~/components/Editor.vue'
 
   const ADD_AGREEMENTS = gql `

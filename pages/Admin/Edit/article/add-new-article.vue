@@ -189,10 +189,10 @@
 <script>
   import  gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import findManyArticles from "~/graphql/generated/queries/findManyArticles";
-  import findManyCategories from '~/graphql/generated/queries/findManyCategories';
-  import findManyTags from '~/graphql/generated/queries/findManyTags';
-  import findManyCustomers from '~/graphql/generated/queries/findManyCustomers';
+  import findManyArticles from "~/graphql/query/findManyArticles";
+  import findManyCategories from '~/graphql/query/findManyCategories';
+  import findManyTags from '~/graphql/query/findManyTags';
+  import findManyCustomers from '~/graphql/query/findManyCustomers';
   import Editor from '~/components/Editor.vue'
 
   const ADD_ARTICLES = gql`

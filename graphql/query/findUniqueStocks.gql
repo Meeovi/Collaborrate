@@ -1,0 +1,11 @@
+query {
+  findUniqueStocks 
+ {
+    description
+    enabled
+    id
+    name
+    sources
+    website
+  }
+}

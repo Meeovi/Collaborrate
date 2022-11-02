@@ -1,5 +1,0 @@
-mutation createManyScheduler($data: [SchedulerCreateManyInput!]!, $skipDuplicates: Boolean){
-    createManyScheduler(data: $data, skipDuplicates: $skipDuplicates){
-        count
-    }
-}

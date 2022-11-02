@@ -1,5 +1,0 @@
-mutation updateManyPlugins($data: PluginsUpdateManyMutationInput!, $where: PluginsWhereInput){
-    updateManyPlugins(data: $data, where: $where){
-        count
-    }
-}

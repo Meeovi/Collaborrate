@@ -1,8 +1,0 @@
-mutation createOneRoles($data: RolesCreateInput!){
-    createOneRoles(data: $data){
-        content
-        created_at
-        id
-        role_name
-    }
-}

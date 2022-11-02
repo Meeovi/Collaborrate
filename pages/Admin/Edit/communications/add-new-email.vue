@@ -78,7 +78,7 @@
 <script>
   import  gql from "graphql-tag";
 
-  import findManyEmails from "~/graphql/generated/queries/findManyEmails";
+  import findManyEmails from "~/graphql/query/findManyEmails";
 
   const ADD_EMAILS = gql`
     mutation ($from:String!,$subject:String!,$bcc:String!,$content:String!,$media:String!,$bcc:String!,$cc:String!){
