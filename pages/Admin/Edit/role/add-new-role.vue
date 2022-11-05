@@ -97,7 +97,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../system/general-settings'
+            path: '../../system/general-settings'
           })
         }).catch(err => console.log(err));
         this.role_name = ' ';

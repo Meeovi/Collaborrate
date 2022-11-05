@@ -38,11 +38,11 @@
 </template>
 
 <script>
-import  mediamanager from '~/graphql/query/mediamanager'
-import  mediasettings from '~/components/dashboard/media/mediasettings'
-import  mediadetails from '~/components/dashboard/media/mediadetails'
+//import  mediamanager from '~/graphql/query/mediamanager'
+//import  mediasettings from '~/components/dashboard/media/mediasettings'
+//import  mediadetails from '~/components/dashboard/media/mediadetails'
   export default {
-    data() {
+   /* data() {
       return {
         mediamanager: [],
       }
@@ -52,9 +52,9 @@ import  mediadetails from '~/components/dashboard/media/mediadetails'
         prefetch: true,
         query: mediamanager
       }
-    },
+    }, */
     layout: 'dashboard',
-    components: {mediasettings, mediadetails},
+    // components: {mediasettings, mediadetails},
     head: {
       title: 'Media Manager'
     }

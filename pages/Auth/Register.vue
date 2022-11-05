@@ -125,7 +125,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../auth/login'
+            path: '../../auth/login'
           })
         }).catch(err => console.log(err));
         this.first_name = ' ';

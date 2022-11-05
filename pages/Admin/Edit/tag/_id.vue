@@ -119,7 +119,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/content/tags'})
+            this.$router.push({path: '../../admin/content/tags'})
             }).catch(err => console.log(err));
     },
     async updateTag(tag){

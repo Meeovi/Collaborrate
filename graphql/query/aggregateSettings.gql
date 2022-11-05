@@ -19,10 +19,8 @@ query {
       databaseUrl
       default_country
       default_currency
-      disqusKey
       european_union_countries
       googleAnalytics
-      googleDrive
       id
       isPublic
       mailServer
@@ -40,7 +38,6 @@ query {
       top_destinations
       type
       vat_number
-      youtubeVideos
       zipcode
     }
     _max {
@@ -57,10 +54,8 @@ query {
       databaseUrl
       default_country
       default_currency
-      disqusKey
       european_union_countries
       googleAnalytics
-      googleDrive
       id
       isPublic
       mailServer
@@ -78,7 +73,6 @@ query {
       top_destinations
       type
       vat_number
-      youtubeVideos
       zipcode
     }
     _min {
@@ -95,10 +89,8 @@ query {
       databaseUrl
       default_country
       default_currency
-      disqusKey
       european_union_countries
       googleAnalytics
-      googleDrive
       id
       isPublic
       mailServer
@@ -116,7 +108,6 @@ query {
       top_destinations
       type
       vat_number
-      youtubeVideos
       zipcode
     }
     _sum {

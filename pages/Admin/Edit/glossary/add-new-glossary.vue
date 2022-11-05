@@ -145,7 +145,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../content/glossary'
+            path: '../../content/glossary'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

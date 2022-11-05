@@ -12,25 +12,13 @@
               style="color: white;"></i><span>Customers</span></a>
           <ul class="sidenav-collapse">
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/customers/customers">All Customers</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/customers/customers">Customers</a>
             </li><br>
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/customers/segments">Segments</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/customers/opportunities">Opportunities</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/customers/leads">Leads</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/customers/targets">Targets</a>
-            </li><br>
-            <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/customers/reviews">Reviews</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/customers/contracts">Contracts</a>
             </li><br>
           </ul>
         </li>

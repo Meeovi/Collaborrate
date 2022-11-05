@@ -2,14 +2,7 @@ query {
   aggregateMediamanager 
  {
     _avg {
-      agreements
-      author
-      brands
-      comment
       id
-      members
-      products
-      task_name
     }
     _count {
       _all
@@ -121,14 +114,7 @@ query {
       workspace
     }
     _sum {
-      agreements
-      author
-      brands
-      comment
       id
-      members
-      products
-      task_name
     }
   }
 }

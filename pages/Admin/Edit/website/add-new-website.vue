@@ -42,7 +42,7 @@
                       <td>
                         <label for="category">Website Category</label><br>
                         <select id="category" v-model="category" name="template" class="form-category">
-                          <option v-for="category in findManyCategories" :key="category" :value="category">{{ category.name }}</option>
+                          <option v-for="category in findManyCategories" :key="category" :value="category.name">{{ category.name }}</option>
                         </select>
                       </td>
                     </tr>
@@ -92,8 +92,8 @@ import findManyCategories from "~/graphql/query/findManyCategories"
 import findManyShops from "~/graphql/query/findManyVendors"
 
   const ADD_WEBSITES = gql`
-    mutation ($name: String!, $shop: String!, $category: String!, $url: String!) {
-    createOneWebsites(data: {name: $name, shop: $shop, category: $category, url: $url}) {
+    mutation ($name: String!, $shop: String!, $category: String!, $url: String!, $image: String) {
+    createOneWebsites(data: {name: $name, shop: $shop, category: $category, url: $url, image: $image}) {
         url
         name
         category
@@ -154,7 +154,7 @@ import findManyShops from "~/graphql/query/findManyVendors"
           }
         }).then(() => {
           this.$router.push({
-            path: '../content/websites'
+            path: '../../content/websites'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

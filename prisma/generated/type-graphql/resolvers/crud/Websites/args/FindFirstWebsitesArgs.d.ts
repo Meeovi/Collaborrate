@@ -7,5 +7,5 @@ export declare class FindFirstWebsitesArgs {
     cursor?: WebsitesWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;
-    distinct?: Array<"id" | "created_at" | "name" | "url" | "shop" | "store" | "category" | "themes"> | undefined;
+    distinct?: Array<"id" | "created_at" | "name" | "url" | "shop" | "store" | "category" | "themes" | "image"> | undefined;
 }

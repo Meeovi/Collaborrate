@@ -120,7 +120,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../system/ooto'
+            path: '../../system/ooto'
           })
         }).catch(err => console.log(err));
         this.login = ' ';

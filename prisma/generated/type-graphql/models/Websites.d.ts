@@ -6,5 +6,6 @@ export declare class Websites {
     shop?: string | null;
     store?: string | null;
     category?: string | null;
-    themes: string;
+    themes?: string | null;
+    image?: string | null;
 }

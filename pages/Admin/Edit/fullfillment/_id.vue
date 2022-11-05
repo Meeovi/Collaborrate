@@ -203,7 +203,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/shop/fullfillments'})
+            this.$router.push({path: '../../admin/shop/fullfillments'})
             }).catch(err => console.log(err));
     },
     async updateFullfillment(fullfillment){

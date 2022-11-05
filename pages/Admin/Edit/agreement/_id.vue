@@ -1,7 +1,14 @@
 <template>
   <div>
     <form v-for="agreement in findManyAgreements" :key="agreement.id" method="POST" @submit.prevent="updateAgreement()">
-
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <button type="reset" class="btn btn-warning">Reset</button></a>
+          <a class="navbar-brand">
+            <input type="submit" class="btn btn-warning" value="Save Agreement" /></a>
+        </div>
+      </nav>
       <br>
       <div class="row">
         <div class="col-3">
@@ -125,7 +132,7 @@
           ]
         }).then(() => {
           this.$router.push({
-            path: '../admin/sales/agreements'
+            path: '../../admin/sales/agreements'
           })
         }).catch(err => console.log(err));
       },

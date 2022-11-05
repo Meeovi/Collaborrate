@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.MediamanagerMinAggregate = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const GraphQLScalars = tslib_1.__importStar(require("graphql-scalars"));
 let MediamanagerMinAggregate = class MediamanagerMinAggregate {
 };
 tslib_1.__decorate([
@@ -49,10 +48,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], MediamanagerMinAggregate.prototype, "tags", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => GraphQLScalars.BigIntResolver, {
+    TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", typeof BigInt === "function" ? BigInt : Object)
+    tslib_1.__metadata("design:type", String)
 ], MediamanagerMinAggregate.prototype, "brands", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
@@ -79,10 +78,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], MediamanagerMinAggregate.prototype, "dimensions", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", Number)
+    tslib_1.__metadata("design:type", String)
 ], MediamanagerMinAggregate.prototype, "author", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
@@ -115,10 +114,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], MediamanagerMinAggregate.prototype, "watermark_media", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", Number)
+    tslib_1.__metadata("design:type", String)
 ], MediamanagerMinAggregate.prototype, "agreements", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
@@ -127,10 +126,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], MediamanagerMinAggregate.prototype, "albums", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", Number)
+    tslib_1.__metadata("design:type", String)
 ], MediamanagerMinAggregate.prototype, "comment", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
@@ -139,10 +138,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], MediamanagerMinAggregate.prototype, "workspace", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => GraphQLScalars.BigIntResolver, {
+    TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", typeof BigInt === "function" ? BigInt : Object)
+    tslib_1.__metadata("design:type", String)
 ], MediamanagerMinAggregate.prototype, "task_name", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
@@ -157,16 +156,16 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], MediamanagerMinAggregate.prototype, "task_type", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", Number)
+    tslib_1.__metadata("design:type", String)
 ], MediamanagerMinAggregate.prototype, "members", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => GraphQLScalars.BigIntResolver, {
+    TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", typeof BigInt === "function" ? BigInt : Object)
+    tslib_1.__metadata("design:type", String)
 ], MediamanagerMinAggregate.prototype, "products", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {

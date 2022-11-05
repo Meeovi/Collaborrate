@@ -1,7 +1,6 @@
 import { BigIntFieldUpdateOperationsInput } from "../inputs/BigIntFieldUpdateOperationsInput";
 import { NullableDateTimeFieldUpdateOperationsInput } from "../inputs/NullableDateTimeFieldUpdateOperationsInput";
 import { NullableStringFieldUpdateOperationsInput } from "../inputs/NullableStringFieldUpdateOperationsInput";
-import { StringFieldUpdateOperationsInput } from "../inputs/StringFieldUpdateOperationsInput";
 export declare class WebsitesUpdateInput {
     id?: BigIntFieldUpdateOperationsInput | undefined;
     created_at?: NullableDateTimeFieldUpdateOperationsInput | undefined;
@@ -10,5 +9,6 @@ export declare class WebsitesUpdateInput {
     shop?: NullableStringFieldUpdateOperationsInput | undefined;
     store?: NullableStringFieldUpdateOperationsInput | undefined;
     category?: NullableStringFieldUpdateOperationsInput | undefined;
-    themes?: StringFieldUpdateOperationsInput | undefined;
+    themes?: NullableStringFieldUpdateOperationsInput | undefined;
+    image?: NullableStringFieldUpdateOperationsInput | undefined;
 }

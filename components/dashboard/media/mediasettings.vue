@@ -343,7 +343,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../content/media-manager'
+            path: '../../content/media-manager'
           })
         }).catch(err => console.log(err));
         this.agreements = ' ';

@@ -34,8 +34,5 @@ export declare class SettingsUpdateManyMutationInput {
     googleAnalytics?: NullableStringFieldUpdateOperationsInput | undefined;
     searchSetting?: NullableStringFieldUpdateOperationsInput | undefined;
     mailServer?: NullableStringFieldUpdateOperationsInput | undefined;
-    youtubeVideos?: NullableStringFieldUpdateOperationsInput | undefined;
     siteTagline?: NullableStringFieldUpdateOperationsInput | undefined;
-    googleDrive?: NullableStringFieldUpdateOperationsInput | undefined;
-    disqusKey?: NullableStringFieldUpdateOperationsInput | undefined;
 }

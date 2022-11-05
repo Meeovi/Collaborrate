@@ -582,7 +582,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../tasks/projects'
+            path: '../../tasks/projects'
           })
         }).catch(err => console.log(err));
         this.assignee = ' ';

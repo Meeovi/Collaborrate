@@ -116,7 +116,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/marketing/newsletters'})
+            this.$router.push({path: '../../admin/marketing/newsletters'})
             }).catch(err => console.log(err));
     },
     async updateNewsletter(newsletter){

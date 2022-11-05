@@ -124,7 +124,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/sales/taxes'})
+            this.$router.push({path: '../../admin/sales/taxes'})
             }).catch(err => console.log(err));
     },
     async updateTax(tax){

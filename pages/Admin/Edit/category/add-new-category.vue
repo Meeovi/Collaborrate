@@ -52,7 +52,7 @@
                             <tr>
                               <td style="text-align: right;">Description</td>
                               <td>
-                                <textarea v-model="description" cols="40" rows="10"></textarea>
+                                <textarea v-model="content" cols="40" rows="10"></textarea>
                               </td>
                             </tr>
                           </tbody>
@@ -196,7 +196,7 @@
           }
         }).then((_data) => {
           this.$router.push({
-            path: '../shop/categories'
+            path: '../../content/categories'
           })
         }).catch(error => console.error(error));
         this.name = ' ';

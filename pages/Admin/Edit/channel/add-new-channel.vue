@@ -159,7 +159,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../admin/system/general-settings'
+            path: '../../admin/system/general-settings'
           })
         }).catch(err => console.log(err));
         this.client_id = ' ';

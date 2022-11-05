@@ -6,5 +6,6 @@ export declare enum WebsitesScalarFieldEnum {
     shop = "shop",
     store = "store",
     category = "category",
-    themes = "themes"
+    themes = "themes",
+    image = "image"
 }

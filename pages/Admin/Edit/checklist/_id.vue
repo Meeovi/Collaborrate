@@ -164,7 +164,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/marketing/checklists'})
+            this.$router.push({path: '../../admin/marketing/checklists'})
             }).catch(err => console.log(err));
     },
     async updateChecklist(checklist){

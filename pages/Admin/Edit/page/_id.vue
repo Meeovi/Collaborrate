@@ -163,7 +163,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/content/pages'})
+            this.$router.push({path: '../../admin/content/pages'})
             }).catch(err => console.log(err));
     },
     async updatePage(page){

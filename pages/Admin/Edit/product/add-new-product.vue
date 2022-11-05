@@ -588,7 +588,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../shop/products'
+            path: '../../shop/products'
           })
         }).catch(err => console.log(err));
         this.attributes = ' ';

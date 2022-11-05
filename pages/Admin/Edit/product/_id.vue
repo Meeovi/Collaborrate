@@ -440,7 +440,7 @@
           ]
         }).then(() => {
           this.$router.push({
-            path: '../admin/shop/products'
+            path: '../../admin/shop/products'
           })
         }).catch(err => console.log(err));
       },

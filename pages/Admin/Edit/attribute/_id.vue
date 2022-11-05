@@ -186,7 +186,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/shop/attributes'})
+            this.$router.push({path: '../../admin/shop/attributes'})
             }).catch(err => console.log(err));
     },
     async updateAttribute(attribute){

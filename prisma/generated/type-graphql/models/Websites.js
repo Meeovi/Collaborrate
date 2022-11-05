@@ -50,10 +50,16 @@ tslib_1.__decorate([
 ], Websites.prototype, "category", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
-        nullable: false
+        nullable: true
     }),
     tslib_1.__metadata("design:type", String)
 ], Websites.prototype, "themes", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], Websites.prototype, "image", void 0);
 Websites = tslib_1.__decorate([
     TypeGraphQL.ObjectType("Websites", {
         isAbstract: true

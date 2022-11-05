@@ -37,8 +37,5 @@ export declare class SettingsWhereInput {
     googleAnalytics?: StringNullableFilter | undefined;
     searchSetting?: StringNullableFilter | undefined;
     mailServer?: StringNullableFilter | undefined;
-    youtubeVideos?: StringNullableFilter | undefined;
     siteTagline?: StringNullableFilter | undefined;
-    googleDrive?: StringNullableFilter | undefined;
-    disqusKey?: StringNullableFilter | undefined;
 }

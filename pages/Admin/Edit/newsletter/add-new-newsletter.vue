@@ -131,7 +131,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../marketing/customer-engagement'
+            path: '../../marketing/customer-engagement'
           })
         }).catch(err => console.log(err));
         this.customer_first_name = ' ';

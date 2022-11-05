@@ -174,7 +174,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../shop/product-types'
+            path: '../../shop/product-types'
           })
         }).catch(err => console.log(err));
         this.type_name = ' ';

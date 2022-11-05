@@ -247,7 +247,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../marketing/events'
+            path: '../../marketing/events'
           })
         }).catch(err => console.log(err));
         this.image = ' ';

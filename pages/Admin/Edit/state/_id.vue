@@ -109,7 +109,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/shop/states'})
+            this.$router.push({path: '../../admin/shop/states'})
             }).catch(err => console.log(err));
     },
     async updateState(state){

@@ -173,7 +173,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/shop/brands'})
+            this.$router.push({path: '../../admin/shop/brands'})
             }).catch(err => console.log(err));
     },
     async updateBrand(brand){

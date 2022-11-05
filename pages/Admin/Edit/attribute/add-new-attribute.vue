@@ -221,7 +221,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../shop/attributes'
+            path: '../../shop/attributes'
           })
         }).catch(err => console.log(err));
         this.default_label = ' ';

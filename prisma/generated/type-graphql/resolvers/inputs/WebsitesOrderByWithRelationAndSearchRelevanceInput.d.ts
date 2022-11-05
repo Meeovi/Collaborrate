@@ -8,5 +8,6 @@ export declare class WebsitesOrderByWithRelationAndSearchRelevanceInput {
     store?: "asc" | "desc" | undefined;
     category?: "asc" | "desc" | undefined;
     themes?: "asc" | "desc" | undefined;
+    image?: "asc" | "desc" | undefined;
     _relevance?: WebsitesOrderByRelevanceInput | undefined;
 }

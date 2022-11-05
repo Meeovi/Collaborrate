@@ -114,7 +114,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../customers/segments'
+            path: '../../customers/segments'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

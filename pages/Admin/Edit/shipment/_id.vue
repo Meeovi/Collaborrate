@@ -112,7 +112,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/sales/shipments'})
+            this.$router.push({path: '../../admin/sales/shipments'})
             }).catch(err => console.log(err));
     },
     async updateShipment(shipment){

@@ -1,10 +1,10 @@
 <template>
   <div class="modal-content">
-    <div v-for="mediamanager in findManyMediamanager" :key="mediamanager.id" class="modal-header">
+    <div v-for="mediamanager in mediamanager" :key="mediamanager.id" class="modal-header">
       <h5 class="modal-title" id="exampleModalLabel">{{ mediamanager.name }} Details</h5>
       <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
     </div>
-    <div v-for="mediamanager in findManyMediamanager" :key="mediamanager.id" class="modal-body">
+    <div v-for="mediamanager in mediamanager" :key="mediamanager.id" class="modal-body">
       <section class="testimonials1 cid-t878PR58k2" id="testimonials1-x">
         <div>
           <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2">
@@ -64,7 +64,7 @@
 <script>
   // eslint-disable-next-line camelcase
   import gql from 'graphql-tag'
-  import findManyMediamanager from '~/graphql/mutation/createOneMediamanager'
+  import mediamanager from '~/graphql/mutation/createOneMediamanager'
 
   const DELETE_MEDIAMANAGER = gql `
   mutation delete_mediamanager($id: Int!){
@@ -103,13 +103,13 @@
             id: mediamanager.id
           },
           refetchQueries: [{
-              query: findManyMediamanager
+              query: mediamanager
             }
 
           ]
         }).then(() => {
           this.$router.push({
-            path: '../admin/content/mediamanager'
+            path: '../../admin/content/mediamanager'
           })
         }).catch(err => console.log(err));
       },
@@ -120,7 +120,7 @@
             id: mediamanager.id
           },
           refetchQueries: [{
-              query: findManyMediamanager
+              query: mediamanager
             }
 
           ]
@@ -131,8 +131,8 @@
       }
     },
     apollo: {
-      findManyMediamanager: {
-        query: findManyMediamanager,
+      mediamanager: {
+        query: mediamanager,
         prefetch: ({
           route
         }) => ({

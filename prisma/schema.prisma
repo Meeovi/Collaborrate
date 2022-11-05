@@ -19,33 +19,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model accounts {
-  id             BigInt    @id @default(autoincrement())
-  created_at     DateTime? @default(now())
-  name           String?
-  website        String?
-  office_phone   String?
-  fax            String?
-  email          String?
-  address        String?
-  postalcode     String?
-  city           String?
-  state          String?
-  country        String?
-  assigned_to    String?
-  alt_address    String?
-  alt_postalcode String?
-  alt_city       String?
-  alt_state      String?
-  alt_country    String?
-  type           String?
-  industry       String?
-  employees      String?
-  annual_revenue String?
-  member_of      String?
-  campaign       String?
-}
-
 model agreements {
   id           BigInt    @id @default(autoincrement())
   reference_id String?
@@ -199,34 +172,6 @@ model content_type {
   database_name String?
 }
 
-model contracts {
-  id                   BigInt    @id @default(autoincrement())
-  contract_title       String?
-  contract_value       String?
-  start_date           String?
-  end_date             String?
-  renewal_reminder     String?
-  customer_signed_date String?
-  company_signed_date  String?
-  status               String?
-  contract_manager     String?
-  account              String?
-  contact              String?
-  description          String?
-  opportunity          String?
-  contract_type        String?
-  currency             String?
-  line_items           String?
-  total                String?
-  discount             String?
-  subtotal             String?
-  shipping             String?
-  shipping_tax         String?
-  tax                  String?
-  grand_total          String?
-  created_at           DateTime? @default(now())
-}
-
 model countries {
   id          Int     @id @default(autoincrement())
   name        String
@@ -289,20 +234,6 @@ model customers {
   workspaces             String?
 }
 
-model customizations {
-  id           Int       @id @default(autoincrement())
-  created_at   DateTime? @default(now())
-  site_name    String?
-  nav_link     String?
-  notification String?
-  banner       String?
-  footer_link  String?
-  announcement String?
-  email        String?
-  site_url     String?
-  allow_signup String?
-}
-
 model dashboards {
   id            BigInt    @id @default(autoincrement())
   created_at    DateTime? @default(now())
@@ -338,41 +269,6 @@ model deepdive {
   login      String?
   start_date String?
   whid       String?
-}
-
-model templates {
-  id            BigInt    @id(map: "pdf_templates_pkey") @default(autoincrement())
-  created_at    DateTime? @default(now())
-  name          String?
-  assigned_to   String?
-  type          String?
-  active        String?
-  page_size     String?
-  orientation   String?
-  content       String?
-  header        String?
-  footer        String?
-  margin_left   String?
-  margin_right  String?
-  margin_top    String?
-  margin_bottom String?
-  margin_header String?
-  margin_footer String?
-}
-
-model emails {
-  id         Int       @id @default(autoincrement())
-  created_at DateTime? @default(now())
-  subject    String?
-  content    String?
-  cust_id    Int
-  bcc        String?
-  cc         String?
-  from       String?
-  media      String?
-  staff_id   Int?
-  customers  String?
-  users      String?
 }
 
 model events {
@@ -468,41 +364,6 @@ model invoices {
   id                    BigInt    @id @default(autoincrement())
 }
 
-model leads {
-  id                      BigInt    @id @default(autoincrement())
-  created_at              DateTime? @default(now())
-  Prefix                  String?
-  first_name              String?
-  last_name               String?
-  department              String?
-  account_name            String?
-  address                 String?
-  postalcode              String?
-  city                    String?
-  state                   String?
-  country                 String?
-  email                   String?
-  description             String?
-  fax                     String?
-  website                 String?
-  mobile                  String?
-  job_title               String?
-  alt_address             String?
-  alt_postalcode          String?
-  alt_city                String?
-  alt_state               String?
-  alt_country             String?
-  office_phone            String?
-  status                  String?
-  status_description      String?
-  opportunity_amount      String?
-  campaign                String?
-  lead_source             String?
-  lead_source_description String?
-  referred_by             String?
-  customer_name           String?
-}
-
 model manufacturer {
   id          BigInt    @id @default(autoincrement())
   created_at  DateTime? @default(now())
@@ -526,26 +387,26 @@ model mediamanager {
   media                               String?
   keywords                            String?
   tags                                String?
-  brands                              BigInt?
+  brands                              String?
   status                              String?
   expiration_date                     String?
   copyright                           String?
   dimensions                          String?
-  author                              Int?
+  author                              String?
   content_type                        String?
   versions                            String?
   watermark_name                      String?
   watermark_description               String?
   watermark_media                     String?
-  agreements                          Int?
+  agreements                          String?
   albums                              String?
-  comment                             Int?
+  comment                             String?
   workspace                           String?
-  task_name                           BigInt?
+  task_name                           String?
   task_description                    String?
   task_type                           String?
-  members                             Int?
-  products                            BigInt?
+  members                             String?
+  products                            String?
   agreements_agreementsTomediamanager String?
   brands_brandsTomediamanager         String?
   comments                            String?
@@ -564,24 +425,6 @@ model ooto {
   note       String?
   using_time String?
   location   String?
-}
-
-model opportunities {
-  id                  BigInt    @id @default(autoincrement())
-  created_at          DateTime? @default(now())
-  name                String?
-  amount              String?
-  sales_stage         String?
-  currency            String?
-  probability         String?
-  next_step           String?
-  description         String?
-  assigned_to         String?
-  lead_source         String?
-  campaign            String?
-  type                String?
-  account_name        String?
-  expected_close_date String?
 }
 
 model orders {
@@ -942,15 +785,6 @@ model states {
   trainings   String?
 }
 
-model stocks {
-  id          Int      @id @default(autoincrement())
-  name        String
-  enabled     Boolean?
-  description String?
-  website     String?
-  sources     String?
-}
-
 model tags {
   id         Int     @id @default(autoincrement())
   name       String
@@ -960,36 +794,6 @@ model tags {
   products   String?
   customers  String?
   users      String?
-}
-
-model targets {
-  id             BigInt    @id @default(autoincrement())
-  created_at     DateTime? @default(now())
-  Prefix         String?
-  first_name     String?
-  last_name      String?
-  department     String?
-  account_name   String?
-  address        String?
-  postalcode     String?
-  city           String?
-  state          String?
-  country        String?
-  email          String?
-  description    String?
-  fax            String?
-  website        String?
-  mobile         String?
-  job_title      String?
-  alt_address    String?
-  alt_postalcode String?
-  alt_city       String?
-  alt_state      String?
-  alt_country    String?
-  office_phone   String?
-  customer_name  String?
-  email_opt_out  String?
-  donotcall      String?
 }
 
 model themes {
@@ -1135,7 +939,8 @@ model websites {
   shop       String?
   store      String?
   category   String?   @db.VarChar(255)
-  themes     String
+  themes     String?
+  image      String?
 }
 
 model wishlists {
@@ -1247,10 +1052,7 @@ model settings {
   googleAnalytics          String?
   searchSetting            String?
   mailServer               String?
-  youtubeVideos            String?
   siteTagline              String?
-  googleDrive              String?
-  disqusKey                String?
 }
 
 model attributes {

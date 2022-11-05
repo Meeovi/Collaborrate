@@ -159,7 +159,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/shop/collections'})
+            this.$router.push({path: '../../admin/shop/collections'})
             }).catch(err => console.log(err));
     },
     async updateCollection(collection){

@@ -30,9 +30,6 @@
           <div id="v-tabs-home" class="tab-pane fade show active" role="tabpanel" aria-labelledby="v-tabs-home-tab">
             <toppicks />
           </div>
-          <div id="v-tabs-catalog" class="tab-pane fade" role="tabpanel" aria-labelledby="v-tabs-catalog-tab">
-            <Sales />
-          </div>
           <div id="v-tabs-security" class="tab-pane fade" role="tabpanel" aria-labelledby="v-tabs-security-tab">
             <Customers />
           </div>
@@ -57,7 +54,6 @@
 
 <script>
 import toppicks from '~/components/integrations/toppicks'
-import Sales from '~/components/integrations/sales'
 import Marketings from '~/components/integrations/marketing'
 import Customers from '~/components/integrations/customers'
 import Reports from '~/components/integrations/reports'
@@ -68,7 +64,6 @@ import Users from '~/components/integrations/settings'
     layout: 'dashboard',
     components: {
         toppicks,
-        Sales,
         Marketings,
         Customers,
         Reports,

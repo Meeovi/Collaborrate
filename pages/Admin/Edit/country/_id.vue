@@ -109,7 +109,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/shop/countries'})
+            this.$router.push({path: '../../admin/shop/countries'})
             }).catch(err => console.log(err));
     },
     async updateCountry(country){

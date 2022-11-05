@@ -140,7 +140,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/content/glossaries'})
+            this.$router.push({path: '../../admin/content/glossaries'})
             }).catch(err => console.log(err));
     },
     async updateCountry(glossary){

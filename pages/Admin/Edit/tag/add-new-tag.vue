@@ -52,8 +52,7 @@
                               <td style="text-align: right;">Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <input type="textarea" id="tagDesc" v-model="excerpt" name="tagDesc" cols="80"
-                                    rows="10" />
+                                  <textarea v-model="excerpt" cols="40" rows="10"></textarea>
                                 </div>
                               </td>
                             </tr>
@@ -120,7 +119,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../content/tags'
+            path: '../../content/tags'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

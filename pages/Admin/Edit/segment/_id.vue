@@ -102,7 +102,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/customers/segments'})
+            this.$router.push({path: '../../admin/customers/segments'})
             }).catch(err => console.log(err));
     },
     async updateSegment(segment){

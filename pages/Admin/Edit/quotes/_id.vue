@@ -383,7 +383,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/sales/quotes'})
+            this.$router.push({path: '../../admin/sales/quotes'})
             }).catch(err => console.log(err));
     },
     async updateQuote(quote){

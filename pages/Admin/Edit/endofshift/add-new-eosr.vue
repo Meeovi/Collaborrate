@@ -195,7 +195,7 @@
             }
           }).then(() => {
             this.$router.push({
-              path: '../reports/eosr'
+              path: '../../reports/eosr'
             })
           }).catch(err => console.log(err));
           this.content = ' ';

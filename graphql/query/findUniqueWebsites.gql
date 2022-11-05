@@ -4,6 +4,7 @@ query {
     category
     created_at
     id
+    image
     name
     shop
     store

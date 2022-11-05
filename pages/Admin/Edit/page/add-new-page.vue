@@ -173,7 +173,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../content/pages'
+            path: '../../content/pages'
           })
         }).catch(err => console.log(err));
         this.title = ' ';

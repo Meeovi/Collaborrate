@@ -226,7 +226,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../shop/warehouses'
+            path: '../../shop/warehouses'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

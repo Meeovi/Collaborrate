@@ -203,25 +203,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], SettingsMinOrderByAggregateInput.prototype, "youtubeVideos", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
 ], SettingsMinOrderByAggregateInput.prototype, "siteTagline", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], SettingsMinOrderByAggregateInput.prototype, "googleDrive", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], SettingsMinOrderByAggregateInput.prototype, "disqusKey", void 0);
 SettingsMinOrderByAggregateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("SettingsMinOrderByAggregateInput", {
         isAbstract: true

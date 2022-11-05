@@ -7,5 +7,6 @@ export declare class WebsitesCountAggregate {
     store: number;
     category: number;
     themes: number;
+    image: number;
     _all: number;
 }

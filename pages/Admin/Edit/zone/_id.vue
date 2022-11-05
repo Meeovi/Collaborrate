@@ -127,7 +127,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/system/zones'})
+            this.$router.push({path: '../../admin/system/zones'})
             }).catch(err => console.log(err));
     },
     async updateZone(zone){

@@ -37,10 +37,7 @@ var SettingsScalarFieldEnum;
     SettingsScalarFieldEnum["googleAnalytics"] = "googleAnalytics";
     SettingsScalarFieldEnum["searchSetting"] = "searchSetting";
     SettingsScalarFieldEnum["mailServer"] = "mailServer";
-    SettingsScalarFieldEnum["youtubeVideos"] = "youtubeVideos";
     SettingsScalarFieldEnum["siteTagline"] = "siteTagline";
-    SettingsScalarFieldEnum["googleDrive"] = "googleDrive";
-    SettingsScalarFieldEnum["disqusKey"] = "disqusKey";
 })(SettingsScalarFieldEnum = exports.SettingsScalarFieldEnum || (exports.SettingsScalarFieldEnum = {}));
 TypeGraphQL.registerEnumType(SettingsScalarFieldEnum, {
     name: "SettingsScalarFieldEnum",

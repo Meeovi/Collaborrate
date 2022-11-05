@@ -31,8 +31,5 @@ export declare class SettingsCreateManyInput {
     googleAnalytics?: string | undefined;
     searchSetting?: string | undefined;
     mailServer?: string | undefined;
-    youtubeVideos?: string | undefined;
     siteTagline?: string | undefined;
-    googleDrive?: string | undefined;
-    disqusKey?: string | undefined;
 }

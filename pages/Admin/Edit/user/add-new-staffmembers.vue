@@ -116,7 +116,7 @@ export default {
                         }
                     }
                 }).then(() => {
-                    this.$router.push({path: '../system/staff-members'})
+                    this.$router.push({path: '../../system/staff-members'})
                 }).catch(err => console.log(err));
                 this.first_name = ' ';
                 this.last_name = ' ';

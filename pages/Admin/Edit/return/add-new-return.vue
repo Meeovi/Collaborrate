@@ -302,7 +302,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../sales/returns'
+            path: '../../../marketing/returns'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

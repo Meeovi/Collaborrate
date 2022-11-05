@@ -253,7 +253,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/customers/customers'})
+            this.$router.push({path: '../../admin/customers/customers'})
             }).catch(err => console.log(err));
     },
     // eslint-disable-next-line camelcase

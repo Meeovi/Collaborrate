@@ -157,7 +157,7 @@
           ]
         }).then(() => {
           this.$router.push({
-            path: '../admin/shop/cities'
+            path: '../../admin/shop/cities'
           })
         }).catch(err => console.log(err));
       },
@@ -206,7 +206,7 @@
             ]
           }).then(() => {
             this.$router.push({
-              path: '../admin/shop/cities'
+              path: '../../admin/shop/cities'
             })
           }).catch(err => console.log(err));
         },

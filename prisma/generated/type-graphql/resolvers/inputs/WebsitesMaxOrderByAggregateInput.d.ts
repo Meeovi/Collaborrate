@@ -7,4 +7,5 @@ export declare class WebsitesMaxOrderByAggregateInput {
     store?: "asc" | "desc" | undefined;
     category?: "asc" | "desc" | undefined;
     themes?: "asc" | "desc" | undefined;
+    image?: "asc" | "desc" | undefined;
 }

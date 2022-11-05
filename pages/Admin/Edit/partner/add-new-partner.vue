@@ -167,7 +167,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../shop/partners'
+            path: '../../shop/partners'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

@@ -269,7 +269,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../marketing/ticketing'
+            path: '../../marketing/ticketing'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

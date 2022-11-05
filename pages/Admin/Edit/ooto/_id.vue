@@ -108,7 +108,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/system/ooto'})
+            this.$router.push({path: '../../admin/system/ooto'})
             }).catch(err => console.log(err));
     },
     async updateOOTO(ooto){

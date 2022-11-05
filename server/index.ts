@@ -11,16 +11,18 @@ const { getUserId } = require('../server/config/utils');
 
 const feathers = require('@feathersjs/feathers');
 const express = require('@feathersjs/express');
-
-import { createModule } from 'graphql-modules'
+import { useSofaWithSwaggerUI } from '@graphql-yoga/plugin-sofa'
+//import { createModule } from 'graphql-modules'
 
 //import { useGraphQLModules } from '@envelop/graphql-modules';
 import { useGraphQlJit } from '@envelop/graphql-jit';
 import { resolvers } from "../prisma/generated/type-graphql";
 import { useSentry } from '@envelop/sentry';
 import '@sentry/tracing';
-import { loadFilesSync } from '@graphql-tools/load-files';
-import { join } from 'path';
+import { useResponseCache } from '@graphql-yoga/plugin-response-cache'
+import { useAPQ } from '@graphql-yoga/plugin-apq'
+//import { loadFilesSync } from '@graphql-tools/load-files';
+//import { join } from 'path';
 
 // Create an app that is a Feathers AND Express application
 const app = express(feathers());
@@ -37,9 +39,9 @@ var cors = require('cors')
 
 app.options('*', cors())
 
-interface Context {
+/*interface Context {
   prisma: PrismaClient;
-}
+}*/
 
 // Pulling our Graphql Resolvers from Type-graphql & Prisma generation
 
@@ -52,11 +54,11 @@ async function main() {
 
   // Graphql Modules implementation using our Graphql File
 
-  const myModule = createModule({
+ /* const myModule = createModule({
     id: 'my-module',
     dirname: __dirname,
     typeDefs: loadFilesSync(join(__dirname, './*.graphql'))
-  })
+  }) */
 
   // Connect to Prisma
 
@@ -65,7 +67,7 @@ async function main() {
 
   // Graphql Server main function 
 
-  const server = createServer ({
+  const server = createServer({
     schema,
     cors: {
       origin: '*',
@@ -83,11 +85,31 @@ async function main() {
       // useGraphQLModules(application),
       useValidationCache({}),
       useGraphQlJit({}),
+      useAPQ(),
       useSentry({
         includeRawResult: false, // set to `true` in order to include the execution result in the metadata collected
         includeResolverArgs: false, // set to `true` in order to include the args passed to resolvers
         includeExecuteVariables: false, // set to `true` in order to include the operation variables values
-        configureScope: (args, scope) => {}, // if you wish to modify the Sentry scope
+        // configureScope: (args, scope) => {}, // if you wish to modify the Sentry scope
+      }),
+      useResponseCache({
+        // global cache
+        session: () => null
+      }),
+      useSofaWithSwaggerUI({
+        basePath: '/rest',
+        swaggerUIEndpoint: '/swagger',
+        servers: [
+          {
+            url: '/',
+            description: 'Development server'
+          }
+        ],
+        info: {
+          title: 'AlternateCMS API',
+          version: '1.0.0'
+        },
+        schema
       })
     ],
   });
@@ -100,6 +122,5 @@ async function main() {
     console.log('Running a GraphQL API server at http://localhost:4000/graphql')
   })
 }
-
 
 main().catch(console.error);

@@ -107,7 +107,7 @@ export default {
                         }
                     }
                 }).then(() => {
-                    this.$router.push({path: '../system/general-settings'})
+                    this.$router.push({path: '../../system/general-settings'})
                 }).catch(err => console.log(err));
                 this.siteTitle = ' ';
                 this.tagline = ' ';

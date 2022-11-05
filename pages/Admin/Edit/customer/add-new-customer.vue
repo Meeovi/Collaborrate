@@ -376,7 +376,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../customers/customers'
+            path: '../../customers/customers'
           })
         }).catch(err => console.log(err));
         this.Address = ' ';

@@ -513,7 +513,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../sales/quotes'
+            path: '../../../marketing/quotes'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

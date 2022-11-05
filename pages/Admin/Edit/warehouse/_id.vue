@@ -185,7 +185,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/shop/warehouses'})
+            this.$router.push({path: '../../admin/shop/warehouses'})
             }).catch(err => console.log(err));
     },
     async updateWarehouse(warehouse){

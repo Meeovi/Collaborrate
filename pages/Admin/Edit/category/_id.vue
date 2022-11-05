@@ -161,7 +161,7 @@
           ]
         }).then(() => {
           this.$router.push({
-            path: '../admin/shop/categories'
+            path: '../../admin/shop/categories'
           })
         }).catch(err => console.log(err));
       },

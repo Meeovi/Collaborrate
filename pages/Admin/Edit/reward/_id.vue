@@ -176,7 +176,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/marketing/rewards'})
+            this.$router.push({path: '../../admin/marketing/rewards'})
             }).catch(err => console.log(err));
     },
     async updateReward(reward){

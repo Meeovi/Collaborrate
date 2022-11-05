@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-dark bg-dark">
+    <!--<nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/admin/system/import -management">
           <input type="submit" class="btn btn-warning" value="Import Data">
@@ -9,7 +9,7 @@
           <input type="submit" class="btn btn-warning" style="float:right; right: 15px; position: absolute;" value="Export Data">
         </a>
       </div>
-    </nav>
+    </nav>-->
     <br>
 
     <div class="row">
@@ -18,8 +18,6 @@
         <div id="v-tabs-tab" class="nav flex-column nav-tabs text-center" role="tablist" aria-orientation="vertical">
           <a id="v-tabs-home-tab" class="nav-link active" data-mdb-toggle="tab" href="#v-tabs-home" role="tab"
             aria-controls="v-tabs-home" aria-selected="true">General</a>
-          <a id="v-tabs-catalog-tab" class="nav-link" data-mdb-toggle="tab" href="#v-tabs-catalog" role="tab"
-            aria-controls="v-tabs-catalog" aria-selected="false">Sales</a>
           <a id="v-tabs-security-tab" class="nav-link" data-mdb-toggle="tab" href="#v-tabs-security" role="tab"
             aria-controls="v-tabs-security" aria-selected="false">Customers</a>
             <a id="v-tabs-customers-tab" class="nav-link" data-mdb-toggle="tab" href="#v-tabs-customers" role="tab"
@@ -37,9 +35,6 @@
         <div id="v-tabs-tabContent" class="tab-content">
           <div id="v-tabs-home" class="tab-pane fade show active" role="tabpanel" aria-labelledby="v-tabs-home-tab">
             <Generalsettings />
-          </div>
-          <div id="v-tabs-catalog" class="tab-pane fade" role="tabpanel" aria-labelledby="v-tabs-catalog-tab">
-            <Salesettings />
           </div>
           <div id="v-tabs-security" class="tab-pane fade" role="tabpanel" aria-labelledby="v-tabs-security-tab">
             <Customersettings />
@@ -65,7 +60,6 @@
 
 <script>
 import  Generalsettings from '~/components/settings/generalsettings'
-import  Salesettings from '~/components/settings/salesettings'
 import  Marketingsettings from '~/components/settings/marketingsettings'
 // import  Customizations from '~/components/settings/customizations'
 import findManyCustomersettings from '~/components/settings/customersettings'
@@ -76,7 +70,6 @@ import  Shopsettings from '~/components/settings/shopsettings'
 
     components: {
         Generalsettings,
-        Salesettings,
         Marketingsettings,
         // Customizations,
         Customersettings,

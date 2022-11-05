@@ -31,9 +31,6 @@ export declare class SettingsCountAggregate {
     googleAnalytics: number;
     searchSetting: number;
     mailServer: number;
-    youtubeVideos: number;
     siteTagline: number;
-    googleDrive: number;
-    disqusKey: number;
     _all: number;
 }

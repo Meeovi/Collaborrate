@@ -168,7 +168,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../shop/tax-rate'
+            path: '../../shop/tax-rate'
           })
         }).catch(err => console.log(err));
         this.country = " ";

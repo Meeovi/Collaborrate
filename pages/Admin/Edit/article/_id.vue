@@ -259,7 +259,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/content/blog'})
+            this.$router.push({path: '../../admin/content/blog'})
             }).catch(err => console.log(err));
     },
     async updateArticle(article){

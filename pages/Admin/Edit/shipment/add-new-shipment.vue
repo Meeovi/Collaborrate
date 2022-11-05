@@ -130,7 +130,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../sales/shipments'
+            path: '../../../marketing/shipments'
           })
         }).catch(err => console.log(err));
         this.carrier_name = ' ';

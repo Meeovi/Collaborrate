@@ -32,9 +32,6 @@ export declare class SettingsOrderByWithRelationAndSearchRelevanceInput {
     googleAnalytics?: "asc" | "desc" | undefined;
     searchSetting?: "asc" | "desc" | undefined;
     mailServer?: "asc" | "desc" | undefined;
-    youtubeVideos?: "asc" | "desc" | undefined;
     siteTagline?: "asc" | "desc" | undefined;
-    googleDrive?: "asc" | "desc" | undefined;
-    disqusKey?: "asc" | "desc" | undefined;
     _relevance?: SettingsOrderByRelevanceInput | undefined;
 }

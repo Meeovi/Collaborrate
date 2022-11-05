@@ -7,4 +7,5 @@ export declare class WebsitesMinAggregate {
     store: string | null;
     category: string | null;
     themes: string | null;
+    image: string | null;
 }

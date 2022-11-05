@@ -141,7 +141,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../system/zones'
+            path: '../../system/zones'
           })
         }).catch(err => console.log(err));
         this.code = ' ';

@@ -97,7 +97,7 @@ createOneRoles(data: {role_name: $role_name, content: $content}) {
           ]
         }).then(() => {
           this.$router.push({
-            path: '../admin/system/role-manager'
+            path: '../../admin/system/role-manager'
           })
         }).catch(err => console.log(err));
       },

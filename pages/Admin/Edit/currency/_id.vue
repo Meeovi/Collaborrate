@@ -101,7 +101,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/system/system-settings'})
+            this.$router.push({path: '../../admin/system/system-settings'})
             }).catch(err => console.log(err));
     },
     async updateCurrency(currency){

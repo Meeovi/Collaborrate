@@ -191,7 +191,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../marketing/visits'
+            path: '../../marketing/visits'
           })
         }).catch(err => console.log(err));
         this.reason = ' ';

@@ -113,7 +113,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/sales/gift_certificates'})
+            this.$router.push({path: '../../admin/sales/gift_certificates'})
             }).catch(err => console.log(err));
     },
     async updateCountry(certificates){

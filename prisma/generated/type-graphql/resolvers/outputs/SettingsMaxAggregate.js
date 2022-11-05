@@ -203,25 +203,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], SettingsMaxAggregate.prototype, "youtubeVideos", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
 ], SettingsMaxAggregate.prototype, "siteTagline", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], SettingsMaxAggregate.prototype, "googleDrive", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], SettingsMaxAggregate.prototype, "disqusKey", void 0);
 SettingsMaxAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("SettingsMaxAggregate", {
         isAbstract: true

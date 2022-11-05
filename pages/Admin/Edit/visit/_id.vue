@@ -159,7 +159,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/marketing/visits'})
+            this.$router.push({path: '../../admin/marketing/visits'})
             }).catch(err => console.log(err));
     },
     async updateVisit(visit){

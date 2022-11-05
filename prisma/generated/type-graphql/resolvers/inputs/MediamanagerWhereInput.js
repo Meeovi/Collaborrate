@@ -4,10 +4,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.MediamanagerWhereInput = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const BigIntNullableFilter_1 = require("../inputs/BigIntNullableFilter");
 const DateTimeNullableFilter_1 = require("../inputs/DateTimeNullableFilter");
 const IntFilter_1 = require("../inputs/IntFilter");
-const IntNullableFilter_1 = require("../inputs/IntNullableFilter");
 const StringNullableFilter_1 = require("../inputs/StringNullableFilter");
 let MediamanagerWhereInput = MediamanagerWhereInput_1 = class MediamanagerWhereInput {
 };
@@ -72,10 +70,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], MediamanagerWhereInput.prototype, "tags", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => BigIntNullableFilter_1.BigIntNullableFilter, {
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", BigIntNullableFilter_1.BigIntNullableFilter)
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], MediamanagerWhereInput.prototype, "brands", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
@@ -102,10 +100,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], MediamanagerWhereInput.prototype, "dimensions", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => IntNullableFilter_1.IntNullableFilter, {
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", IntNullableFilter_1.IntNullableFilter)
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], MediamanagerWhereInput.prototype, "author", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
@@ -138,10 +136,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], MediamanagerWhereInput.prototype, "watermark_media", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => IntNullableFilter_1.IntNullableFilter, {
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", IntNullableFilter_1.IntNullableFilter)
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], MediamanagerWhereInput.prototype, "agreements", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
@@ -150,10 +148,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], MediamanagerWhereInput.prototype, "albums", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => IntNullableFilter_1.IntNullableFilter, {
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", IntNullableFilter_1.IntNullableFilter)
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], MediamanagerWhereInput.prototype, "comment", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
@@ -162,10 +160,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], MediamanagerWhereInput.prototype, "workspace", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => BigIntNullableFilter_1.BigIntNullableFilter, {
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", BigIntNullableFilter_1.BigIntNullableFilter)
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], MediamanagerWhereInput.prototype, "task_name", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
@@ -180,16 +178,16 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], MediamanagerWhereInput.prototype, "task_type", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => IntNullableFilter_1.IntNullableFilter, {
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", IntNullableFilter_1.IntNullableFilter)
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], MediamanagerWhereInput.prototype, "members", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => BigIntNullableFilter_1.BigIntNullableFilter, {
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", BigIntNullableFilter_1.BigIntNullableFilter)
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], MediamanagerWhereInput.prototype, "products", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {

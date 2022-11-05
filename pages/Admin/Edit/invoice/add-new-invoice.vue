@@ -191,7 +191,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../sales/invoices'
+            path: '../../../marketing/invoices'
           })
         }).catch(err => console.log(err));
         this.subtotal = ' ';

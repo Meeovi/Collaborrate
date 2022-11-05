@@ -54,6 +54,12 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], WebsitesMinAggregate.prototype, "themes", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], WebsitesMinAggregate.prototype, "image", void 0);
 WebsitesMinAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("WebsitesMinAggregate", {
         isAbstract: true

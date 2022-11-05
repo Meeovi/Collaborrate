@@ -154,7 +154,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../shop/cities'
+            path: '../../shop/cities'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

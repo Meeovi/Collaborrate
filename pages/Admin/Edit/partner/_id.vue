@@ -152,7 +152,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/shop/partners'})
+            this.$router.push({path: '../../admin/shop/partners'})
             }).catch(err => console.log(err));
     },
     async updatePartner(partner){

@@ -197,7 +197,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/marketing/events'})
+            this.$router.push({path: '../../admin/marketing/events'})
             }).catch(err => console.log(err));
     },
     async updateEvent(event){

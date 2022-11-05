@@ -116,7 +116,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/marketing/reviews'})
+            this.$router.push({path: '../../admin/marketing/reviews'})
             }).catch(err => console.log(err));
     },
     async updateReview(review){

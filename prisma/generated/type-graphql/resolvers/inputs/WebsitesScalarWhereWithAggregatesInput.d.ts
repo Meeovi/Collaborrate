@@ -1,7 +1,6 @@
 import { BigIntWithAggregatesFilter } from "../inputs/BigIntWithAggregatesFilter";
 import { DateTimeNullableWithAggregatesFilter } from "../inputs/DateTimeNullableWithAggregatesFilter";
 import { StringNullableWithAggregatesFilter } from "../inputs/StringNullableWithAggregatesFilter";
-import { StringWithAggregatesFilter } from "../inputs/StringWithAggregatesFilter";
 export declare class WebsitesScalarWhereWithAggregatesInput {
     AND?: WebsitesScalarWhereWithAggregatesInput[] | undefined;
     OR?: WebsitesScalarWhereWithAggregatesInput[] | undefined;
@@ -13,5 +12,6 @@ export declare class WebsitesScalarWhereWithAggregatesInput {
     shop?: StringNullableWithAggregatesFilter | undefined;
     store?: StringNullableWithAggregatesFilter | undefined;
     category?: StringNullableWithAggregatesFilter | undefined;
-    themes?: StringWithAggregatesFilter | undefined;
+    themes?: StringNullableWithAggregatesFilter | undefined;
+    image?: StringNullableWithAggregatesFilter | undefined;
 }

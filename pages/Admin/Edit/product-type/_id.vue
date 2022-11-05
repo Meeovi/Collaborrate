@@ -146,7 +146,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/shop/product-types'})
+            this.$router.push({path: '../../admin/shop/product-types'})
             }).catch(err => console.log(err));
     },
     async updateProduct_Type(product_type){

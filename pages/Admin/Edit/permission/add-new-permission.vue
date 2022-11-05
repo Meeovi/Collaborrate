@@ -169,7 +169,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../system/permissions'
+            path: '../../system/permissions'
           })
         }).catch(err => console.log(err));
         this.Delete = ' ';

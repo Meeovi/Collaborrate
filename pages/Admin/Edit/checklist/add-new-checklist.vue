@@ -236,7 +236,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../reports/checklists'
+            path: '../../reports/checklists'
           })
         }).catch(err => console.log(err));
         this.region = ' ';

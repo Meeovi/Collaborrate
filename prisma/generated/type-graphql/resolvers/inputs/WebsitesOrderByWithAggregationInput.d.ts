@@ -12,6 +12,7 @@ export declare class WebsitesOrderByWithAggregationInput {
     store?: "asc" | "desc" | undefined;
     category?: "asc" | "desc" | undefined;
     themes?: "asc" | "desc" | undefined;
+    image?: "asc" | "desc" | undefined;
     _count?: WebsitesCountOrderByAggregateInput | undefined;
     _avg?: WebsitesAvgOrderByAggregateInput | undefined;
     _max?: WebsitesMaxOrderByAggregateInput | undefined;

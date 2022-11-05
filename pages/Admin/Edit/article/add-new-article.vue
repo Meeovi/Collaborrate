@@ -290,7 +290,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../content/blog'
+            path: '../../content/blog'
           })
         }).catch(err => console.log(err));
         this.categories = ' ';

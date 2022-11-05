@@ -253,7 +253,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/sales/returns'})
+            this.$router.push({path: '../../admin/sales/returns'})
             }).catch(err => console.log(err));
     },
     async updateReturn(returns){

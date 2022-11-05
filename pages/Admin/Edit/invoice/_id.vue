@@ -144,7 +144,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/sales/invoices'})
+            this.$router.push({path: '../../admin/sales/invoices'})
             }).catch(err => console.log(err));
     },
     async updateInvoice(invoice){

@@ -235,7 +235,7 @@ export default {
 
         ]
       }).then(() => {
-        this.$router.push({ path: '../admin/system/general-settings' })
+        this.$router.push({ path: '../../admin/system/general-settings' })
       }).catch(err => console.log(err))
     },
     async updateCustomization (customization) {

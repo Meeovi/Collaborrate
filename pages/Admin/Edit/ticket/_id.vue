@@ -209,7 +209,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/marketing/ticketing'})
+            this.$router.push({path: '../../admin/marketing/ticketing'})
             }).catch(err => console.log(err));
     },
     async updateTicketing(ticketing){

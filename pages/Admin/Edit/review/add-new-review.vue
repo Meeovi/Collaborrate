@@ -129,7 +129,7 @@ export default {
                         }
                     }
                 }).then(() => {
-                    this.$router.push({path: '../marketing/reviews'})
+                    this.$router.push({path: '../../marketing/reviews'})
                 }).catch(err => console.log(err));
                     this.first_name = ' ';
                     this.last_name = ' ';
