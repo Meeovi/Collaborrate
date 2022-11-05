@@ -2,7 +2,7 @@ let express = require('express');
 let cors = require('cors');
 let app = express();
 
-require('dotenv').config();
+require('@nuxtjs/dotenv').config();
 require('./config/alternate.config') // AlternateCMS main settings config file
 require('../packages/authentication/index') // File for authentication used throughout AlternateCMS
 require('../packages/alternate-start/metrics/metric') // Pulls in the Metrics code for application
