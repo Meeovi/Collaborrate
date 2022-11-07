@@ -77,9 +77,10 @@
   import gql from 'graphql-tag'
   import findManyAgreements from '~/graphql/query/findManyAgreements'
 
-  const UPDATE_AGREEMENTS = gql `
-  mutation MyMutation($id: Int!) {
-  updateOneAgreements(where: {id: {equals: $id}}) {
+  const UPDATE_AGREEMENTS = gql`
+  mutation ($name:String!,$excerpt:String!,$type:String!,$content:String!,$image:String!,$user_id: String!, $reference_id: String!, $shop_id: String!){
+  updateOneAgreements(data: {reference_id: $reference_id, user_id: $user_id, shop_id: $shop_id, content: $content, excerpt: $excerpt, image: $image, type: $type, name: $name}, where: {id: {equals: $id}})
+  {
     name
       excerpt
       type
@@ -91,9 +92,9 @@
   }
 }`;
 
-  const DELETE_AGREEMENTS = gql `
-    mutation ($name:String!,$excerpt:String!,$type:String!,$content:String!,$image:String!,$user_id: String!, $reference_id: String!, $shop_id: String!){
-    deleteOneAgreements(data: {reference_id: $reference_id, user_id: $user_id, shop_id: $shop_id, content: $content, excerpt: $excerpt, image: $image, type: $type, name: $name}, where: {id: {equals: $id}}){
+  const DELETE_AGREEMENTS = gql`
+    mutation MyMutation($id: Int!) {
+    deleteOneAgreements(where: {id: {equals: $id}}) {
       name
       excerpt
       type
