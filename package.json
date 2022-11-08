@@ -45,7 +45,7 @@
     "lintfix": "npm run lint:js -- --fix",
     "test:e2e": "nightwatch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "all": "npm-run-all --parallel dev prisma-dev docs yoga gql-generate"
+    "all": "npm-run-all --parallel dev docs yoga gql-generate"
   },
   "dependencies": {
     "@apollo/gateway": "^0.43.1",
