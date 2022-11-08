@@ -1,0 +1,12 @@
+export { AggregateCollectionsArgs } from "./AggregateCollectionsArgs";
+export { CreateManyCollectionsArgs } from "./CreateManyCollectionsArgs";
+export { CreateOneCollectionsArgs } from "./CreateOneCollectionsArgs";
+export { DeleteManyCollectionsArgs } from "./DeleteManyCollectionsArgs";
+export { DeleteOneCollectionsArgs } from "./DeleteOneCollectionsArgs";
+export { FindFirstCollectionsArgs } from "./FindFirstCollectionsArgs";
+export { FindManyCollectionsArgs } from "./FindManyCollectionsArgs";
+export { FindUniqueCollectionsArgs } from "./FindUniqueCollectionsArgs";
+export { GroupByCollectionsArgs } from "./GroupByCollectionsArgs";
+export { UpdateManyCollectionsArgs } from "./UpdateManyCollectionsArgs";
+export { UpdateOneCollectionsArgs } from "./UpdateOneCollectionsArgs";
+export { UpsertOneCollectionsArgs } from "./UpsertOneCollectionsArgs";

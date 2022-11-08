@@ -1,0 +1,32 @@
+import { BigIntFilter } from "../inputs/BigIntFilter";
+import { DateTimeNullableFilter } from "../inputs/DateTimeNullableFilter";
+import { StringNullableFilter } from "../inputs/StringNullableFilter";
+export declare class TicketingWhereInput {
+    AND?: TicketingWhereInput[] | undefined;
+    OR?: TicketingWhereInput[] | undefined;
+    NOT?: TicketingWhereInput[] | undefined;
+    id?: BigIntFilter | undefined;
+    created_at?: DateTimeNullableFilter | undefined;
+    name?: StringNullableFilter | undefined;
+    location?: StringNullableFilter | undefined;
+    date?: StringNullableFilter | undefined;
+    severity?: StringNullableFilter | undefined;
+    team?: StringNullableFilter | undefined;
+    requester?: StringNullableFilter | undefined;
+    requester_email?: StringNullableFilter | undefined;
+    content?: StringNullableFilter | undefined;
+    department?: StringNullableFilter | undefined;
+    media?: StringNullableFilter | undefined;
+    projects?: StringNullableFilter | undefined;
+    ticket_type?: StringNullableFilter | undefined;
+    comment?: StringNullableFilter | undefined;
+    products?: StringNullableFilter | undefined;
+    priority?: StringNullableFilter | undefined;
+    status?: StringNullableFilter | undefined;
+    resolution?: StringNullableFilter | undefined;
+    assigned_to?: StringNullableFilter | undefined;
+    date_modified?: DateTimeNullableFilter | undefined;
+    account_name?: StringNullableFilter | undefined;
+    level?: StringNullableFilter | undefined;
+    projects_projectsToticketing?: StringNullableFilter | undefined;
+}

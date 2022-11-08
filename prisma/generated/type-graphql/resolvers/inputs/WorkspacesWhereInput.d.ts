@@ -1,0 +1,35 @@
+import { BigIntFilter } from "../inputs/BigIntFilter";
+import { BigIntNullableFilter } from "../inputs/BigIntNullableFilter";
+import { BoolNullableFilter } from "../inputs/BoolNullableFilter";
+import { DateTimeNullableFilter } from "../inputs/DateTimeNullableFilter";
+import { IntNullableFilter } from "../inputs/IntNullableFilter";
+import { StringNullableFilter } from "../inputs/StringNullableFilter";
+export declare class WorkspacesWhereInput {
+    AND?: WorkspacesWhereInput[] | undefined;
+    OR?: WorkspacesWhereInput[] | undefined;
+    NOT?: WorkspacesWhereInput[] | undefined;
+    id?: BigIntFilter | undefined;
+    created_at?: DateTimeNullableFilter | undefined;
+    code?: StringNullableFilter | undefined;
+    name?: StringNullableFilter | undefined;
+    description?: StringNullableFilter | undefined;
+    customers?: IntNullableFilter | undefined;
+    users?: IntNullableFilter | undefined;
+    products?: BigIntNullableFilter | undefined;
+    tasks?: BigIntNullableFilter | undefined;
+    brands?: BigIntNullableFilter | undefined;
+    shops?: IntNullableFilter | undefined;
+    category?: IntNullableFilter | undefined;
+    isPublic?: BoolNullableFilter | undefined;
+    projects?: BigIntNullableFilter | undefined;
+    author?: StringNullableFilter | undefined;
+    media?: StringNullableFilter | undefined;
+    brands_brandsToworkspaces?: StringNullableFilter | undefined;
+    categories?: StringNullableFilter | undefined;
+    customers_customersToworkspaces?: StringNullableFilter | undefined;
+    products_productsToworkspaces?: StringNullableFilter | undefined;
+    projects_projectsToworkspaces?: StringNullableFilter | undefined;
+    shops_shopsToworkspaces?: StringNullableFilter | undefined;
+    tasks_tasksToworkspaces?: StringNullableFilter | undefined;
+    users_usersToworkspaces?: StringNullableFilter | undefined;
+}

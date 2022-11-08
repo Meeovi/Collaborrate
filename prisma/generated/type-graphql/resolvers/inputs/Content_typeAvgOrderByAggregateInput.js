@@ -1,0 +1,26 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Content_typeAvgOrderByAggregateInput = void 0;
+const tslib_1 = require("tslib");
+const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
+const SortOrder_1 = require("../../enums/SortOrder");
+let Content_typeAvgOrderByAggregateInput = class Content_typeAvgOrderByAggregateInput {
+};
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], Content_typeAvgOrderByAggregateInput.prototype, "id", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], Content_typeAvgOrderByAggregateInput.prototype, "number", void 0);
+Content_typeAvgOrderByAggregateInput = tslib_1.__decorate([
+    TypeGraphQL.InputType("Content_typeAvgOrderByAggregateInput", {
+        isAbstract: true
+    })
+], Content_typeAvgOrderByAggregateInput);
+exports.Content_typeAvgOrderByAggregateInput = Content_typeAvgOrderByAggregateInput;

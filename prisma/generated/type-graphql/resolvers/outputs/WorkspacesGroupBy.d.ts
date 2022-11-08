@@ -1,0 +1,36 @@
+import { WorkspacesAvgAggregate } from "../outputs/WorkspacesAvgAggregate";
+import { WorkspacesCountAggregate } from "../outputs/WorkspacesCountAggregate";
+import { WorkspacesMaxAggregate } from "../outputs/WorkspacesMaxAggregate";
+import { WorkspacesMinAggregate } from "../outputs/WorkspacesMinAggregate";
+import { WorkspacesSumAggregate } from "../outputs/WorkspacesSumAggregate";
+export declare class WorkspacesGroupBy {
+    id: bigint;
+    created_at: Date | null;
+    code: string | null;
+    name: string | null;
+    description: string | null;
+    customers: number | null;
+    users: number | null;
+    products: bigint | null;
+    tasks: bigint | null;
+    brands: bigint | null;
+    shops: number | null;
+    category: number | null;
+    isPublic: boolean | null;
+    projects: bigint | null;
+    author: string | null;
+    media: string | null;
+    brands_brandsToworkspaces: string | null;
+    categories: string | null;
+    customers_customersToworkspaces: string | null;
+    products_productsToworkspaces: string | null;
+    projects_projectsToworkspaces: string | null;
+    shops_shopsToworkspaces: string | null;
+    tasks_tasksToworkspaces: string | null;
+    users_usersToworkspaces: string | null;
+    _count: WorkspacesCountAggregate | null;
+    _avg: WorkspacesAvgAggregate | null;
+    _sum: WorkspacesSumAggregate | null;
+    _min: WorkspacesMinAggregate | null;
+    _max: WorkspacesMaxAggregate | null;
+}

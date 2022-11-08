@@ -1,0 +1,51 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuotesOrderByRelevanceFieldEnum = void 0;
+const tslib_1 = require("tslib");
+const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
+var QuotesOrderByRelevanceFieldEnum;
+(function (QuotesOrderByRelevanceFieldEnum) {
+    QuotesOrderByRelevanceFieldEnum["name"] = "name";
+    QuotesOrderByRelevanceFieldEnum["grand_total"] = "grand_total";
+    QuotesOrderByRelevanceFieldEnum["categories"] = "categories";
+    QuotesOrderByRelevanceFieldEnum["valid_until"] = "valid_until";
+    QuotesOrderByRelevanceFieldEnum["quote_stage"] = "quote_stage";
+    QuotesOrderByRelevanceFieldEnum["customers"] = "customers";
+    QuotesOrderByRelevanceFieldEnum["account"] = "account";
+    QuotesOrderByRelevanceFieldEnum["approval_issues"] = "approval_issues";
+    QuotesOrderByRelevanceFieldEnum["approval_status"] = "approval_status";
+    QuotesOrderByRelevanceFieldEnum["assigned_to"] = "assigned_to";
+    QuotesOrderByRelevanceFieldEnum["billing_city"] = "billing_city";
+    QuotesOrderByRelevanceFieldEnum["billing_country"] = "billing_country";
+    QuotesOrderByRelevanceFieldEnum["billing_postal"] = "billing_postal";
+    QuotesOrderByRelevanceFieldEnum["billing_state"] = "billing_state";
+    QuotesOrderByRelevanceFieldEnum["billing_street"] = "billing_street";
+    QuotesOrderByRelevanceFieldEnum["contact"] = "contact";
+    QuotesOrderByRelevanceFieldEnum["currency"] = "currency";
+    QuotesOrderByRelevanceFieldEnum["discount"] = "discount";
+    QuotesOrderByRelevanceFieldEnum["invoice_status"] = "invoice_status";
+    QuotesOrderByRelevanceFieldEnum["line_item_discount"] = "line_item_discount";
+    QuotesOrderByRelevanceFieldEnum["line_item_group_total"] = "line_item_group_total";
+    QuotesOrderByRelevanceFieldEnum["line_item_name"] = "line_item_name";
+    QuotesOrderByRelevanceFieldEnum["line_item_subtotal"] = "line_item_subtotal";
+    QuotesOrderByRelevanceFieldEnum["line_item_tax"] = "line_item_tax";
+    QuotesOrderByRelevanceFieldEnum["line_item_total"] = "line_item_total";
+    QuotesOrderByRelevanceFieldEnum["payment_terms"] = "payment_terms";
+    QuotesOrderByRelevanceFieldEnum["shipping"] = "shipping";
+    QuotesOrderByRelevanceFieldEnum["shipping_city"] = "shipping_city";
+    QuotesOrderByRelevanceFieldEnum["shipping_country"] = "shipping_country";
+    QuotesOrderByRelevanceFieldEnum["shipping_postal"] = "shipping_postal";
+    QuotesOrderByRelevanceFieldEnum["shipping_state"] = "shipping_state";
+    QuotesOrderByRelevanceFieldEnum["shipping_street"] = "shipping_street";
+    QuotesOrderByRelevanceFieldEnum["shipping_tax"] = "shipping_tax";
+    QuotesOrderByRelevanceFieldEnum["subtotal"] = "subtotal";
+    QuotesOrderByRelevanceFieldEnum["tax"] = "tax";
+    QuotesOrderByRelevanceFieldEnum["total"] = "total";
+    QuotesOrderByRelevanceFieldEnum["customers_customersToquotes"] = "customers_customersToquotes";
+    QuotesOrderByRelevanceFieldEnum["orders"] = "orders";
+    QuotesOrderByRelevanceFieldEnum["products_productsToquotes"] = "products_productsToquotes";
+})(QuotesOrderByRelevanceFieldEnum = exports.QuotesOrderByRelevanceFieldEnum || (exports.QuotesOrderByRelevanceFieldEnum = {}));
+TypeGraphQL.registerEnumType(QuotesOrderByRelevanceFieldEnum, {
+    name: "QuotesOrderByRelevanceFieldEnum",
+    description: undefined,
+});

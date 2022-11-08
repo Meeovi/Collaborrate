@@ -1,0 +1,12 @@
+export { AggregatePluginsArgs } from "./AggregatePluginsArgs";
+export { CreateManyPluginsArgs } from "./CreateManyPluginsArgs";
+export { CreateOnePluginsArgs } from "./CreateOnePluginsArgs";
+export { DeleteManyPluginsArgs } from "./DeleteManyPluginsArgs";
+export { DeleteOnePluginsArgs } from "./DeleteOnePluginsArgs";
+export { FindFirstPluginsArgs } from "./FindFirstPluginsArgs";
+export { FindManyPluginsArgs } from "./FindManyPluginsArgs";
+export { FindUniquePluginsArgs } from "./FindUniquePluginsArgs";
+export { GroupByPluginsArgs } from "./GroupByPluginsArgs";
+export { UpdateManyPluginsArgs } from "./UpdateManyPluginsArgs";
+export { UpdateOnePluginsArgs } from "./UpdateOnePluginsArgs";
+export { UpsertOnePluginsArgs } from "./UpsertOnePluginsArgs";

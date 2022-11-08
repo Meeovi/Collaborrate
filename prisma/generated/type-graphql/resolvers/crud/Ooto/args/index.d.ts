@@ -1,0 +1,12 @@
+export { AggregateOotoArgs } from "./AggregateOotoArgs";
+export { CreateManyOotoArgs } from "./CreateManyOotoArgs";
+export { CreateOneOotoArgs } from "./CreateOneOotoArgs";
+export { DeleteManyOotoArgs } from "./DeleteManyOotoArgs";
+export { DeleteOneOotoArgs } from "./DeleteOneOotoArgs";
+export { FindFirstOotoArgs } from "./FindFirstOotoArgs";
+export { FindManyOotoArgs } from "./FindManyOotoArgs";
+export { FindUniqueOotoArgs } from "./FindUniqueOotoArgs";
+export { GroupByOotoArgs } from "./GroupByOotoArgs";
+export { UpdateManyOotoArgs } from "./UpdateManyOotoArgs";
+export { UpdateOneOotoArgs } from "./UpdateOneOotoArgs";
+export { UpsertOneOotoArgs } from "./UpsertOneOotoArgs";
