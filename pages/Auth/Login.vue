@@ -1,8 +1,7 @@
 <template>
   <div>
-    <div class="alert" v-if="errors.length" role="alert" data-mdb-color="primary">
-      <p v-for="(error, i) in errors" :key="i + 1"></p>
-      {{ error }}
+    <div class="alert" role="alert" data-mdb-color="primary">
+
     </div>
     <div class="container">
 
@@ -26,16 +25,16 @@
               <!-- Pills content -->
               <div class="tab-content">
                 <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-                  <form method="post" @submit.prevent="handleLoginSubmit">
+                  <form method="post" @submit.prevent="login">
                     <!-- Email input -->
                     <div class="form-outline mb-4">
-                      <input type="email" id="loginName" class="form-control" v-model="form.email" required />
+                      <input type="email" id="loginName" class="form-control" v-model="email" required />
                       <label class="form-label" for="loginName">Email</label>
                     </div>
 
                     <!-- Password input -->
                     <div class="form-outline mb-4">
-                      <input type="password" id="loginPassword" class="form-control" v-model="form.password" required />
+                      <input type="password" id="loginPassword" class="form-control" v-model="password" required />
                       <label class="form-label" for="loginPassword">Password</label>
                     </div>
 
@@ -44,10 +43,8 @@
                       <p>Forgot your Password? <a href="/auth/forgot">Reset Password</a></p>
                     </div>
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary btn-block mb-4" :disabled="formBusy">
-                      <div class="spinner-border text-danger" role="status">
-                        <span class="visually-hidden">Loading...</span>Sign In
-                      </div>
+                    <button type="submit" class="btn btn-primary btn-block mb-4">
+                      Sign In
                     </button>
 
                     <!-- Register buttons -->
@@ -72,45 +69,37 @@
 
 <script>
   import Register from '~/pages/Auth/Register'
-
+  import { LOGIN_MUTATION } from '../../graphql/code/login'
   import gql from "graphql-tag";
 
   export default {
     components: {
       Register
     },
-    data() {
+    data () {
     return {
-      form: {
-        email: '',
-        password: '',
-      },
-      formBusy: false,
-      errors: [],
+      email: '',
+      password: ''
     }
   },
   methods: {
-    async handleLoginSubmit() {
-      const credentials = this.form
-      this.formBusy = true
-      this.errors = []
-      try {
-        await this.$auth.loginWith('graphql', credentials)
-        this.formBusy = false
-      } catch ({ graphQLErrors: errors }) {
-        this.formBusy = false
-        // Handle hour custom error
-        if (errors && errors.length) {
-          errors.forEach((error) => {
-            if (error.extensions.key === 'InvalidCredentials') {
-              this.errors = [...this.errors, error.message]
-            }
-          })
-        } else {
-          // Handle other errors
-        }
-      }
-    },
+    login () {
+      this.$apollo
+        .mutate({
+          mutation: LOGIN_MUTATION,
+          variables: {
+            email: this.email,
+            password: this.password
+          }
+        })
+        .then(response => {
+          // save user token to localstorage
+          localStorage.setItem('blog-app-token', response.data.login)
+
+          // redirect user
+          this.$router.replace('/')
+        })
+    }
   },
     layout: 'nologin',
     head: {

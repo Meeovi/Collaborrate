@@ -18,11 +18,26 @@
 
 
 <script>
-import { mapGetters } from 'vuex'
-    export default {
-      middleware: 'auth',
-      computed: {
-        ...mapGetters(['loggedInUser']),
-      },
+  import findManyUsers from '~/graphql/query/findManyUsers'
+
+  export default {
+    data() {
+      return {
+        user: '',
+        id: this.$route.params.id
+      }
+    },
+    apollo: {
+      // fetch user by ID
+      user: {
+        query: findManyUsers,
+        variables() {
+          return {
+            id: this.id
+          }
+        }
+      }
     }
+  }
+
 </script>
