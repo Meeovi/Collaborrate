@@ -10,4 +10,8 @@ export declare class SchedulerUpdateInput {
     notes?: NullableStringFieldUpdateOperationsInput | undefined;
     start_date?: NullableStringFieldUpdateOperationsInput | undefined;
     whid?: NullableStringFieldUpdateOperationsInput | undefined;
+    label?: NullableStringFieldUpdateOperationsInput | undefined;
+    public?: NullableStringFieldUpdateOperationsInput | undefined;
+    permission?: NullableStringFieldUpdateOperationsInput | undefined;
+    name?: NullableStringFieldUpdateOperationsInput | undefined;
 }

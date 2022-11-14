@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-website"><input type="submit" class="btn btn-warning" value="Add New Websites"></a>
+        <a class="navbar-brand" href="/admin/edit/website/add-new-website"><input type="submit" class="btn btn-warning" value="Add New Websites"></a>
       </div>
     </nav>
     <br>
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-  import findManyWebsites from '~/graphql/queries/content/website'
+  import findManyWebsites from '~/graphql/query/findManyWebsites'
 
   export default {
     data() {

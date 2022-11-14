@@ -90,6 +90,72 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], EventsGroupBy.prototype, "postalcode", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsGroupBy.prototype, "type", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsGroupBy.prototype, "invitationEmail", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsGroupBy.prototype, "invitationBillingAddress", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsGroupBy.prototype, "invitationGrandTotalPurchased", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsGroupBy.prototype, "invitationInvoiceDate", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsGroupBy.prototype, "invitationOrderNumber", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsGroupBy.prototype, "invitationPaymentMethod", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsGroupBy.prototype, "invitationShippingAddress", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsGroupBy.prototype, "invitationCustomerName", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsGroupBy.prototype, "invitationStatus", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsGroupBy.prototype, "media", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => EventsCountAggregate_1.EventsCountAggregate, {
         nullable: true
     }),

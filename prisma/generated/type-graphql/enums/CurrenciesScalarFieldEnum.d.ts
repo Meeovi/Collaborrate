@@ -3,5 +3,7 @@ export declare enum CurrenciesScalarFieldEnum {
     created_at = "created_at",
     code = "code",
     name = "name",
-    region = "region"
+    region = "region",
+    symbol = "symbol",
+    useStandard = "useStandard"
 }

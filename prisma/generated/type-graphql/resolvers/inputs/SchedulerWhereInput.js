@@ -75,6 +75,30 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], SchedulerWhereInput.prototype, "whid", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
+], SchedulerWhereInput.prototype, "label", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
+], SchedulerWhereInput.prototype, "public", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
+], SchedulerWhereInput.prototype, "permission", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
+], SchedulerWhereInput.prototype, "name", void 0);
 SchedulerWhereInput = SchedulerWhereInput_1 = tslib_1.__decorate([
     TypeGraphQL.InputType("SchedulerWhereInput", {
         isAbstract: true

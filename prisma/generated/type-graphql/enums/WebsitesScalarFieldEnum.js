@@ -13,6 +13,7 @@ var WebsitesScalarFieldEnum;
     WebsitesScalarFieldEnum["store"] = "store";
     WebsitesScalarFieldEnum["category"] = "category";
     WebsitesScalarFieldEnum["themes"] = "themes";
+    WebsitesScalarFieldEnum["image"] = "image";
 })(WebsitesScalarFieldEnum = exports.WebsitesScalarFieldEnum || (exports.WebsitesScalarFieldEnum = {}));
 TypeGraphQL.registerEnumType(WebsitesScalarFieldEnum, {
     name: "WebsitesScalarFieldEnum",

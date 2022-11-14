@@ -15,7 +15,7 @@
                style="margin-top: -15px"
                >
             <img
-                 src="https://mdbcdn.b-cdn.net/img/new/standard/city/024.webp"
+                 src="../../static/images/rest.png"
                  class="img-fluid"
                  />
             <a href="#!">
@@ -40,7 +40,7 @@
                style="margin-top: -15px"
                >
             <img
-                 src="https://mdbcdn.b-cdn.net/img/new/standard/city/031.webp"
+                 src="../../static/images/devcenter.jpg"
                  class="img-fluid"
                  />
             <a href="#!">

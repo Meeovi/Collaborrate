@@ -163,7 +163,7 @@
 <script>
 import gql from "graphql-tag";
 
-import { generalSettings } from "~/graphql/queries/system/settings";
+import { generalSettings } from "~/graphql/query/findManySettings";
 
 const ADD_GENERAL_SETTINGS = gql`
     mutation ($siteTitle:String!,$tagline:String,$siteUrl:String,$siteAdminEmail:String,$value:String){
@@ -220,7 +220,7 @@ export default {
                         }
                     }
                 }).then(() => {
-                    this.$router.push({path: '../system/general-settings'})
+                    this.$router.push({path: '../../system/general-settings'})
                 }).catch(err => console.log(err));
                 this.siteTitle = ' ';
                 this.tagline = ' ';

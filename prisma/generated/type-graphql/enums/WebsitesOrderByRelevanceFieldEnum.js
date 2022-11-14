@@ -11,6 +11,7 @@ var WebsitesOrderByRelevanceFieldEnum;
     WebsitesOrderByRelevanceFieldEnum["store"] = "store";
     WebsitesOrderByRelevanceFieldEnum["category"] = "category";
     WebsitesOrderByRelevanceFieldEnum["themes"] = "themes";
+    WebsitesOrderByRelevanceFieldEnum["image"] = "image";
 })(WebsitesOrderByRelevanceFieldEnum = exports.WebsitesOrderByRelevanceFieldEnum || (exports.WebsitesOrderByRelevanceFieldEnum = {}));
 TypeGraphQL.registerEnumType(WebsitesOrderByRelevanceFieldEnum, {
     name: "WebsitesOrderByRelevanceFieldEnum",

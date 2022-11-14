@@ -27,7 +27,7 @@
                     <tr>
                       <td style="text-align: right;">Vendor Name</td>
                       <td>
-                        <input v-model="name" type="text" required />
+                        <input :value="vendor.name" type="text" required />
                       </td>
                     </tr>
                     <tr>
@@ -69,25 +69,25 @@
                     <tr>
                       <td style="text-align: right;">Website</td>
                       <td>
-                        <input v-model="website" type="url" />
+                        <input :value="vendor.website" type="url" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <textarea v-model="description" cols="40" rows="10"></textarea>
+                        <textarea :value="vendor.description" cols="40" rows="10"></textarea>
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Vendor Image</td>
                       <td>
-                        <input v-model="image" type="image" />
+                        <input :value="vendor.image" type="image" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Tags</td>
                       <td>
-                        <input v-model="tags" type="text" />
+                        <input :value="vendor.tags" type="text" />
                       </td>
                     </tr>
                     <tr>
@@ -113,10 +113,10 @@
 <script>
   import gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import findManyShops from "~/graphql/queries/shop/vendors";
-  import findManyCategories from "~/graphql/queries/shop/categories"
-  import findManyCountries from "~/graphql/queries/shop/countries"
-  import findManyProducts from "~/graphql/queries/shop/products"
+  import findManyShops from "~/graphql/query/findManyVendors";
+  import findManyCategories from "~/graphql/query/findManyCategories"
+  import findManyCountries from "~/graphql/query/findManyCountries"
+  import findManyProducts from "~/graphql/query/findManyProducts"
 
   const DELETE_VENDOR = gql `
     mutation ($name: String!,$products: String!,$website: String!,$categories: String!,$country: String!,$description: String!,$image: String!,$tags: String!,$physical_store: String!,$type: String!){
@@ -136,7 +136,7 @@
 
 const UPDATE_VENDOR = gql`
   mutation updateOneVendors($id: Int!){
-  updateOneVendors(where: {id: {equals: $id}}){
+  updateOneVendors(where: {id: $id}){
     affected_rows
   }
 }
@@ -169,7 +169,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/shop/vendors'})
+            this.$router.push({path: '../../admin/shop/vendors'})
             }).catch(err => console.log(err));
     },
     async updateShop(shop){

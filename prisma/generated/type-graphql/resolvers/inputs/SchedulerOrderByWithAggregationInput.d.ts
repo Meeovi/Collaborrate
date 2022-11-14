@@ -12,6 +12,10 @@ export declare class SchedulerOrderByWithAggregationInput {
     notes?: "asc" | "desc" | undefined;
     start_date?: "asc" | "desc" | undefined;
     whid?: "asc" | "desc" | undefined;
+    label?: "asc" | "desc" | undefined;
+    public?: "asc" | "desc" | undefined;
+    permission?: "asc" | "desc" | undefined;
+    name?: "asc" | "desc" | undefined;
     _count?: SchedulerCountOrderByAggregateInput | undefined;
     _avg?: SchedulerAvgOrderByAggregateInput | undefined;
     _max?: SchedulerMaxOrderByAggregateInput | undefined;

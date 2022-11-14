@@ -37,8 +37,5 @@ export declare class SettingsScalarWhereWithAggregatesInput {
     googleAnalytics?: StringNullableWithAggregatesFilter | undefined;
     searchSetting?: StringNullableWithAggregatesFilter | undefined;
     mailServer?: StringNullableWithAggregatesFilter | undefined;
-    youtubeVideos?: StringNullableWithAggregatesFilter | undefined;
     siteTagline?: StringNullableWithAggregatesFilter | undefined;
-    googleDrive?: StringNullableWithAggregatesFilter | undefined;
-    disqusKey?: StringNullableWithAggregatesFilter | undefined;
 }

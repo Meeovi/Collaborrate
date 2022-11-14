@@ -29,31 +29,31 @@
                     <tr>
                       <td style="text-align: right;">Title</td>
                       <td>
-                        <input v-model="name" type="text" required />
+                        <input :value="quote.name" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Opportunity</td>
                       <td>
-                        <input v-model="opportunity" type="text" />
+                        <input :value="quote.opportunity" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Valid Until</td>
                       <td>
-                        <input v-model="valid_until" type="text" required />
+                        <input :value="quote.valid_until" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Quote Stage</td>
                       <td>
-                        <input v-model="quote_stage" type="text" required />
+                        <input :value="quote.quote_stage" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Assigned To</td>
                       <td>
-                        <select id="users" v-model="assigned_to" name="template" class="form-category">
+                        <select id="users" :value="quote.assigned_to" name="template" class="form-category">
                                   <option v-for="users in findManyUsers" :key="users" :value="users">
                                     {{ users.name }}
                                   </option>
@@ -63,25 +63,25 @@
                     <tr>
                       <td style="text-align: right;">Invoice Status</td>
                       <td>
-                        <input v-model="invoice_status" type="text" />
+                        <input :value="quote.invoice_status" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Payment Terms</td>
                       <td>
-                        <input v-model="payment_terms" type="text" />
+                        <input :value="quote.payment_terms" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Approval Status</td>
                       <td>
-                        <input v-model="approval_status" type="text" />
+                        <input :value="quote.approval_status" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Approval Issues:</td>
                       <td>
-                        <input v-model="approval_issues" type="textarea" />
+                        <input :value="quote.approval_issues" type="textarea" />
                       </td>
                     </tr>
                   </tbody>
@@ -105,13 +105,13 @@
                             <tr>
                               <td style="text-align: right;">Account</td>
                               <td>
-                                <input v-model="account" type="text" />
+                                <input :value="quote.account" type="text" />
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Contact</td>
                               <td>
-                                <select id="contact" v-model="contact" name="template" class="form-category">
+                                <select id="contact" :value="quote.contact" name="template" class="form-category">
                                   <option v-for="contact in findManyCustomers" :key="contact" :value="contact">
                                     {{ contact.name }}
                                   </option>
@@ -127,13 +127,13 @@
                             <tr>
                               <td style="text-align: right;">Street Address</td>
                               <td>
-                                <input v-model="billing_street" type="text" />
+                                <input :value="quote.billing_street" type="text" />
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">City</td>
                               <td>
-                                <select id="city" v-model="billing_city" name="template" class="form-category">
+                                <select id="city" :value="quote.billing_city" name="template" class="form-category">
                                   <option v-for="city in findManyCities" :key="city" :value="city">{{ city.name }}
                                   </option>
                                 </select>
@@ -142,7 +142,7 @@
                             <tr>
                               <td style="text-align: right;">State/Region</td>
                               <td>
-                                <select id="state" v-model="billing_state" name="template" class="form-category">
+                                <select id="state" :value="quote.billing_state" name="template" class="form-category">
                                   <option v-for="states in findManyStates" :key="states" :value="states">
                                     {{ states.name }}
                                   </option>
@@ -152,13 +152,13 @@
                             <tr>
                               <td style="text-align: right;">Postal Code</td>
                               <td>
-                                <input v-model="billing_postal" type="text" />
+                                <input :value="quote.billing_postal" type="text" />
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Country</td>
                               <td>
-                                <select id="country" v-model="billing_country" name="template" class="form-category">
+                                <select id="country" :value="quote.billing_country" name="template" class="form-category">
                                   <option v-for="countries in findManyCountries" :key="countries" :value="countries">
                                     {{ countries.name }}
                                   </option>
@@ -174,13 +174,13 @@
                             <tr>
                               <td style="text-align: right;">Street Address</td>
                               <td>
-                                <input v-model="shipping_street" type="text" />
+                                <input :value="quote.shipping_street" type="text" />
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">City</td>
                               <td>
-                                <select id="city" v-model="shipping_city" name="template" class="form-category">
+                                <select id="city" :value="quote.shipping_city" name="template" class="form-category">
                                   <option v-for="city in findManyCities" :key="city" :value="city">{{ city.name }}
                                   </option>
                                 </select>
@@ -189,7 +189,7 @@
                             <tr>
                               <td style="text-align: right;">State/Region</td>
                               <td>
-                                <select id="state" v-model="shipping_state" name="template" class="form-category">
+                                <select id="state" :value="quote.shipping_state" name="template" class="form-category">
                                   <option v-for="states in findManyStates" :key="states" :value="states">
                                     {{ states.name }}
                                   </option>
@@ -199,13 +199,13 @@
                             <tr>
                               <td style="text-align: right;">Postal Code</td>
                               <td>
-                                <input v-model="shipping_postal" type="text" />
+                                <input :value="quote.shipping_postal" type="text" />
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Country</td>
                               <td>
-                                <select id="country" v-model="shipping_country" name="template" class="form-category">
+                                <select id="country" :value="quote.shipping_country" name="template" class="form-category">
                                   <option v-for="countries in findManyCountries" :key="countries" :value="countries">
                                     {{ countries.name }}
                                   </option>
@@ -232,7 +232,7 @@
                         <tr>
                           <td style="text-align: right;">Currency</td>
                           <td>
-                            <select id="currency" v-model="currency" name="template" class="form-category">
+                            <select id="currency" :value="quote.currency" name="template" class="form-category">
                               <option v-for="currency in findManyCurrencies" :key="currency" :value="currency">
                                 {{ currency.name }}
                               </option>
@@ -242,37 +242,37 @@
                         <tr>
                           <td style="text-align: right;">Total:</td>
                           <td>
-                            <input v-model="total" type="number" value="0.00" />
+                            <input :value="quote.total" type="number" />
                           </td>
                         </tr>
                         <tr>
                           <td style="text-align: right;">Discount:</td>
                           <td>
-                            <input v-model="discount" type="number" value="0.00" />
+                            <input :value="quote.discount" type="number" />
                           </td>
                         </tr>
                         <tr>
                           <td style="text-align: right;">Subtotal:</td>
                           <td>
-                            <input v-model="subtotal" type="number" value="0.00" />
+                            <input :value="quote.subtotal" type="number" />
                           </td>
                         </tr>
                         <tr>
                           <td style="text-align: right;">Shipping:</td>
                           <td>
-                            <input v-model="shipping" type="number" value="0.00" />
+                            <input :value="quote.shipping" type="number" />
                           </td>
                         </tr>
                         <tr>
                           <td style="text-align: right;">Shipping Tax:</td>
                           <td>
-                            <input v-model="shipping_tax" type="number" value="0.00" />
+                            <input :value="quote.shipping_tax" type="number" />
                           </td>
                         </tr>
                         <tr>
                           <td style="text-align: right;">Grand Total:</td>
                           <td>
-                            <input v-model="grand_total" type="number" value="0.00" />
+                            <input :value="quote.grand_total" type="number" />
                           </td>
                         </tr>
                       </tbody>
@@ -291,14 +291,14 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyQuotes from "~/graphql/queries/sales/quotes";
-  import findManyCategories from '~/graphql/queries/shop/categories'
-  import findManyStates from '~/graphql/queries/shop/states'
-  import findManyCountries from '~/graphql/queries/shop/countries'
-  import findManyCities from '~/graphql/queries/shop/cities'
-  import findManyCurrencies from '~/graphql/queries/system/currencies'
-  import findManyCustomers from '~/graphql/queries/customers/customers'
-  import findManyUsers from '~/graphql/queries/system/users'
+  import findManyQuotes from "~/graphql/query/findManyQuotes";
+  import findManyCategories from '~/graphql/query/findManyCategories'
+  import findManyStates from '~/graphql/query/findManyStates'
+  import findManyCountries from '~/graphql/query/findManyCountries'
+  import findManyCities from '~/graphql/query/findManyCities'
+  import findManyCurrencies from '~/graphql/query/findManyCurrencies'
+  import findManyCustomers from '~/graphql/query/findManyCustomers'
+  import findManyUsers from '~/graphql/query/findManyUsers'
   /* eslint-disable camelcase */
 
   const DELETE_QUOTE = gql`
@@ -350,7 +350,7 @@
 
 const UPDATE_QUOTE = gql`
   mutation updateOnequotes($id: Int!){
-  updateOnequotes(where: {id: {equals: $id}}){
+  updateOnequotes(where: {id: $id}){
     affected_rows
   }
 }
@@ -383,7 +383,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/sales/quotes'})
+            this.$router.push({path: '../../admin/sales/quotes'})
             }).catch(err => console.log(err));
     },
     async updateQuote(quote){

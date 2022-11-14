@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import webhooks from '~/graphql/queries/system/webhooks'
+import webhooks from '~/graphql/query/findManyWebhooks'
 
 export default {
   data() {

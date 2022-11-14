@@ -36,10 +36,7 @@ export declare class SettingsGroupBy {
     googleAnalytics: string | null;
     searchSetting: string | null;
     mailServer: string | null;
-    youtubeVideos: string | null;
     siteTagline: string | null;
-    googleDrive: string | null;
-    disqusKey: string | null;
     _count: SettingsCountAggregate | null;
     _avg: SettingsAvgAggregate | null;
     _sum: SettingsSumAggregate | null;

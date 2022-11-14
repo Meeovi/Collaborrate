@@ -1,7 +1,14 @@
 <template>
   <div>
-    <form method="POST" @submit.prevent="updateAgreement()">
-
+    <form v-for="agreement in findManyAgreements" :key="agreement.id" method="POST" @submit.prevent="updateAgreement()">
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <button type="reset" class="btn btn-warning">Reset</button></a>
+          <a class="navbar-brand">
+            <input type="submit" class="btn btn-warning" value="Save Agreement" /></a>
+        </div>
+      </nav>
       <br>
       <div class="row">
         <div class="col-3">
@@ -28,29 +35,11 @@
                     <tr>
                       <td style="text-align: right;">Agreement Type</td>
                       <td>
-                        <select name="agreementType" id="agreementType" v-model="type" :value="agreement.type">{{ agreement.type }}
+                        <select name="agreementType" id="agreementType" :value="agreement.type">
                           <option value="policies">Policies</option>
                           <option value="agreements">Agreements</option>
                           <option value="announcements">Announcements</option>
                         </select>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">User ID</td>
-                      <td>
-                        <input type="text" id="name" disabled :value="agreement.user_id" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">Reference ID</td>
-                      <td>
-                        <input type="text" id="name" disabled :value="agreement.reference_id" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">Shop ID</td>
-                      <td>
-                        <input v-model="shop_id" type="text" id="name" disabled />{{ agreement.shop_id }}
                       </td>
                     </tr>
                     <tr>
@@ -63,15 +52,13 @@
                       <td style="text-align: right;">Detail</td>
                       <td>
                         <client-only>
-                          <Editor v-model="content" />
-                        </client-only><br>{{ agreement.content }}
+                          <Editor :value="agreement.content" />
+                        </client-only><br>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <input v-model="image" type="image" name="headshot" value="Select an image to upload"
-                          help="Select a png, jpg or gif to upload."
-                          validation="mime:image/jpeg,image/png,image/gif" />{{ agreement.image }}
+                        <input :value="agreement.image" type="image" name="headshot" />
                       </td>
                     </tr>
                   </tbody>
@@ -88,11 +75,11 @@
 <script>
   // eslint-disable-next-line camelcase
   import gql from 'graphql-tag'
-  import findManyAgreements from '~/graphql/queries/sales/agreements'
+  import findManyAgreements from '~/graphql/query/findManyAgreements'
 
-  const UPDATE_AGREEMENTS = gql `
-  mutation MyMutation($id: Int!) {
-  updateOneAgreements(where: {id: {equals: $id}}) {
+  const UPDATE_AGREEMENTS = gql`
+  mutation ($name:String!,$excerpt:String!,$type:String!,$content:String!,$image:String!,$user_id: String!, $reference_id: String!, $shop_id: String!){
+    updateOneAgreements(data: {reference_id: $reference_id, user_id: $user_id, shop_id: $shop_id, content: $content, excerpt: $excerpt, image: $image, type: $type, name: $name}, where: {id: $id}) {
     name
       excerpt
       type
@@ -104,9 +91,9 @@
   }
 }`;
 
-  const DELETE_AGREEMENTS = gql `
-    mutation ($name:String!,$excerpt:String!,$type:String!,$content:String!,$image:String!,$user_id: String!, $reference_id: String!, $shop_id: String!){
-    deleteOneAgreements(data: {reference_id: $reference_id, user_id: $user_id, shop_id: $shop_id, content: $content, excerpt: $excerpt, image: $image, type: $type, name: $name}, where: {id: {equals: $id}}){
+  const DELETE_AGREEMENTS = gql`
+    mutation MyMutation($id: Int!) {
+    deleteOneAgreements(where: {id: $id}) {
       name
       excerpt
       type
@@ -145,7 +132,7 @@
           ]
         }).then(() => {
           this.$router.push({
-            path: '../admin/sales/agreements'
+            path: '../../admin/sales/agreements'
           })
         }).catch(err => console.log(err));
       },

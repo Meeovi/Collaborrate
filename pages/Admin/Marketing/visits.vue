@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-visit"><input type="submit" class="btn btn-warning" value="Create A Visit"></a>
+        <a class="navbar-brand" href="/admin/edit/visit/add-new-visit"><input type="submit" class="btn btn-warning" value="Create A Visit"></a>
       </div>
 </nav>
 <br>
@@ -42,7 +42,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  findManyVisits from '~/graphql/queries/marketing/visits'
+ import  findManyVisits from '~/graphql/query/findManyVisits'
 
 export default {
   data() {

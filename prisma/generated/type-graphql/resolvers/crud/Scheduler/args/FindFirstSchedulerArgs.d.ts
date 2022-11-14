@@ -7,5 +7,5 @@ export declare class FindFirstSchedulerArgs {
     cursor?: SchedulerWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;
-    distinct?: Array<"id" | "created_at" | "end_date" | "level" | "login" | "notes" | "start_date" | "whid"> | undefined;
+    distinct?: Array<"id" | "created_at" | "end_date" | "level" | "login" | "notes" | "start_date" | "whid" | "label" | "public" | "permission" | "name"> | undefined;
 }

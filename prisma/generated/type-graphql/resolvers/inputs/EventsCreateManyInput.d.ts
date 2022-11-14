@@ -12,4 +12,15 @@ export declare class EventsCreateManyInput {
     state?: string | undefined;
     country?: string | undefined;
     postalcode?: string | undefined;
+    type?: string | undefined;
+    invitationEmail?: string | undefined;
+    invitationBillingAddress?: string | undefined;
+    invitationGrandTotalPurchased?: string | undefined;
+    invitationInvoiceDate?: string | undefined;
+    invitationOrderNumber?: string | undefined;
+    invitationPaymentMethod?: string | undefined;
+    invitationShippingAddress?: string | undefined;
+    invitationCustomerName?: string | undefined;
+    invitationStatus?: string | undefined;
+    media?: string | undefined;
 }

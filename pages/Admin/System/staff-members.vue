@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-staffmembers"><input type="submit" class="btn btn-warning" value="Create New User" /></a>
+        <a class="navbar-brand" href="/admin/edit/user/add-new-user"><input type="submit" class="btn btn-warning" value="Create New User" /></a>
       </div>
 </nav>
 <br>
@@ -38,7 +38,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  findManyUsers from '~/graphql/queries/system/users'
+ import  findManyUsers from '~/graphql/query/findManyUsers'
 
 export default {
   data() {

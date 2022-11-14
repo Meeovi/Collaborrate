@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="editProject()">
+    <form  v-for="project in findManyProjects" :key="project.id" @submit.prevent="editProject()">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-customers">
@@ -29,7 +29,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="type">Project Type</label><br>
-                        <select id="type" v-model="type">
+                        <select id="type" :value="project.type">
                           <option value="team">Team Project</option>
                           <option value="mega">Mega Project</option>
                           <option value="individual">Individual Project</option>
@@ -40,7 +40,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="assignee">Assigned To</label><br>
-                        <select id="productAttribute" v-model="assignee" name="template" class="form-attribute">
+                        <select id="productAttribute" :value="project.assignee" name="template" class="form-attribute">
                           <option v-for="assignee in product_assignee" :key="assignee.id" :value="product_attribute">
                             {{ assignee.name }}</option>
                         </select>
@@ -48,27 +48,27 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="start_date" type="datetime-local" required value="Start Date" />
+                        <input :value="project.start_date" type="datetime-local" required />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="end_date" type="datetime-local" required value="End Date" />
+                        <input :value="project.end_date" type="datetime-local" required />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="goal_timeperiod" type="datetime-local" required value="Goal Time Period" />
+                        <input :value="project.goal_timeperiod" type="datetime-local" required />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="name" type="text" required value="Project Name" />
+                        <input :value="project.name" type="text" required />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <select id="priority" v-model="priority">
+                        <select id="priority" :value="project.priority">
                           <option value="critical">Critical</option>
                           <option value="high">High</option>
                           <option value="high">Medium</option>
@@ -78,7 +78,7 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <select id="doing" v-model="doing">
+                        <select id="doing" :value="project.doing">
                           <option value="not started">Not Started</option>
                           <option value="in progress">In Progress</option>
                           <option value="at risk">At Risk</option>
@@ -89,7 +89,7 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <select id="done" v-model="done">
+                        <select id="done" :value="project.done">
                           <option value="not started">Completed</option>
                           <option value="in progress">Cancelled</option>
                           <option value="at risk">At Risk</option>
@@ -98,17 +98,17 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="ticket_id" name="ticket" type="text" />
+                        <input :value="project.ticket_id" name="ticket" type="text" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="project_manager" type="number" />
+                        <input :value="project.project_manager" type="number" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <select id="stockStatus" v-model="considerworkingdays">
+                        <select id="stockStatus" :value="project.considerworkingdays">
                           <option value="days">Can Work Days</option>
                           <option value="nights">Can Work Nights</option>
                           <option value="daysandnights">Days and Nights</option>
@@ -120,17 +120,17 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="section_rule" type="number" value="Product Height" />
+                        <input :value="project.section_rule" type="number" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="company" type="number" value="Company" />
+                        <input :value="project.company" type="number" />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <select id="visibility" v-model="visibility">
+                        <select id="visibility" :value="project.visibility">
                           <option value="public">Public</option>
                           <option value="private">Private</option>
                           <option value="draft">Draft</option>
@@ -140,7 +140,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="categories">Categories</label><br>
-                        <select id="category" v-model="categories">
+                        <select id="category" :value="project.categories">
                           <option v-for="categories in findManyCategories" :key="categories.id" :value="categories">
                             {{ categories.name }}</option>
                         </select>
@@ -149,7 +149,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="customers">Customers</label><br>
-                        <select id="category" v-model="customers">
+                        <select id="category" :value="project.customers">
                           <option v-for="customers in findManyCustomers" :key="customers.id" :value="customers">
                             {{ customers.name }}</option>
                         </select>
@@ -158,7 +158,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="goal_collaborators">Goal Collaborators</label><br>
-                        <select id="category" v-model="goal_collaborators">
+                        <select id="category" :value="project.goal_collaborators">
                           <option v-for="goal_collaborators in findManyUsers" :key="goal_collaborators.id"
                             :value="goal_collaborators">
                             {{ goal_collaborators.name }}</option>
@@ -168,8 +168,8 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="tickets">Tickets</label><br>
-                        <select id="category" v-model="ticketing">
-                          <option v-for="tickets in findManyTicketing" :key="tickets.id" :value="tickets">
+                        <select id="category" :value="project.ticketing">
+                          <option v-for="tickets in ticketings" :key="tickets.id" :value="tickets">
                             {{ tickets.name }}</option>
                         </select>
                       </td>
@@ -177,7 +177,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="tags">Tags</label><br>
-                        <select id="category" v-model="tags">
+                        <select id="category" :value="project.tags">
                           <option v-for="tags in findManyTags" :key="tags.id" :value="tags">
                             {{ tags.name }}</option>
                         </select>
@@ -186,7 +186,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="workspaces">Workspace</label><br>
-                        <select id="category" v-model="workspaces">
+                        <select id="category" :value="project.workspaces">
                           <option v-for="workspaces in findManyWorkspaces" :key="workspaces.id" :value="workspaces">
                             {{ workspaces.name }}</option>
                         </select>
@@ -195,7 +195,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="users">Assigned Staff</label><br>
-                        <select id="users" v-model="users">
+                        <select id="users" :value="project.users">
                           <option v-for="users in findManyUsers" :key="users.id" :value="users">
                             {{ users.name }}</option>
                         </select>
@@ -204,7 +204,7 @@
                     <tr class="col-lg-6">
                       <td>
                         <label for="zone">Zones</label><br>
-                        <select id="zone" v-model="zone">
+                        <select id="zone" :value="project.zone">
                           <option v-for="zone in findManyZones" :key="zone.id" :value="zone">
                             {{ zone.name }}</option>
                         </select>
@@ -212,7 +212,7 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <select id="goal_updatemethod" v-model="goal_updatemethod">
+                        <select id="goal_updatemethod" :value="project.goal_updatemethod">
                           <option value="email">Email</option>
                           <option value="text">Text</option>
                           <option value="call">Call</option>
@@ -223,28 +223,28 @@
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="goal_privacy" type="text" value="Meta Title" required />
+                        <input :value="project.goal_privacy" type="text"  required />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="goal_progress_source" type="text" value="What is your Goal Progress Source" />
+                        <input :value="project.goal_progress_source" type="text"  />
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="goal_measurement" value="Add a Goal Measurement">
+                        <input :value="project.goal_measurement">
                       </td>
                     </tr>
                     <tr class="col-lg-6">
                       <td>
-                        <input v-model="goal_name" type="url" value="Meta URL" />
+                        <input :value="project.goal_name" type="url" />
                       </td>
                     </tr>
                     <tr class="col-lg-12">
                       <td>
                         <label for="product">Related Products</label><br>
-                        <select id="product" v-model="product">
+                        <select id="product" :value="project.product">
                           <option v-for="product in findManyProducts" :key="product.id" :value="product">
                             {{ product.name }}</option>
                         </select>
@@ -275,7 +275,7 @@
                                   <FormulateInput type="group" name="taskGroup" :repeatable="true"
                                     add-label="+ Add Task" validation="required">
                                     <div class="task" style="padding-bottom:10px;">
-                                      <FormulateInput name="task" v-model="tasks" validation="required" />
+                                      <FormulateInput name="task" :value="project.tasks" validation="required" />
                                     </div>
                                   </FormulateInput>
                                 </div>
@@ -285,8 +285,7 @@
                               <td style="text-align: right;">Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <textarea v-model="resource" cols="50" rows="10"
-                                    value="Add a longer Description"></textarea>
+                                  <textarea :value="project.resource" cols="50" rows="10"></textarea>
                                 </div>
                               </td>
                             </tr>
@@ -323,11 +322,11 @@
                     </form>
                     <div>
                       <div class="product-footer">
-                        <li><a href="/admin/add-new/add-new-workspace" target="_blank">
+                        <li><a href="/admin/edit/add-new-workspace" target="_blank">
                             <input type="submit" class="btn btn-warning" value="Add New Workspace" /></a></li>
-                        <li><a href="/admin/add-new/add-new-ticket" target="_blank">
+                        <li><a href="/admin/edit/add-new-ticket" target="_blank">
                             <input type="submit" class="btn btn-warning" value="Edit Ticket" /></a></li>
-                        <li><a href="/admin/add-new/add-new-training" target="_blank">
+                        <li><a href="/admin/edit/add-new-training" target="_blank">
                             <input type="submit" class="btn btn-warning" value="Add New Training" /></a></li>
                       </div>
                     </div>
@@ -337,15 +336,15 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyProducts from "~/graphql/queries/shop/products"
-  import findManyProjects from "~/graphql/queries/content/projects"
-  import findManyCategories from "~/graphql/queries/shop/categories"
-  import findManyWorkspaces from "~/graphql/queries/content/workspaces"
-  import findManyCustomers from "~/graphql/queries/customers/customers"
-  import findManyTicketing from "~/graphql/queries/marketing/ticketing"
-  import findManyUsers from "~/graphql/queries/system/users"
-  import findManyTags from "~/graphql/queries/content/tags"
-  import findManyZones from "~/graphql/queries/system/zones"
+  import findManyProducts from "~/graphql/query/findManyProducts"
+  import findManyProjects from "~/graphql/query/findManyProjects"
+  import findManyCategories from "~/graphql/query/findManyCategories"
+  import findManyWorkspaces from "~/graphql/query/findManyWorkspaces"
+  import findManyCustomers from "~/graphql/query/findManyCustomers"
+  import ticketings from "~/graphql/query/ticketings"
+  import findManyUsers from "~/graphql/query/findManyUsers"
+  import findManyTags from "~/graphql/query/findManyTags"
+  import findManyZones from "~/graphql/query/findManyZones"
 
   const ADD_PROJECTS = gql `
       mutation ($assignee: String!, $customers: String!, $categories: String!, $tasks: String!, $users: String!, $doing: String!, $workspaces: String!, $created_at: String!, $done: String!, $end_date: String!, $file: String!, $format: String!, $height: String!, $id: String!, $image: String!, $goal_collaborators: String!, $goal_measurement: String!, $ticketing: String!, $name: String!, $goal_name: String!, $goal_privacy: String!, $goal_progress_source: String!, $goal_timeperiod: String!, $goal_updatemethod: String!, $priority: String!, $product: String!, $project_manager: String!, $resource: String!, $section_rule: String!, $staff_id: String!, $start_date: String!, $task_id: String!, $status: String!, $ticket_id: String!, $tags: String!, $considerworkingdays: String!, $method: String!, $type: String!, $team: String!, $visibility: String!, $websites: String!, $company: String!, $zone: String!){
@@ -583,7 +582,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../tasks/projects'
+            path: '../../tasks/projects'
           })
         }).catch(err => console.log(err));
         this.assignee = ' ';
@@ -648,9 +647,9 @@
         prefetch: true,
         query: findManyUsers
       },
-      findManyTicketing: {
+      ticketings: {
         prefetch: true,
-        query: findManyTicketing
+        query: ticketings
       },
       findManyTags: {
         prefetch: true,

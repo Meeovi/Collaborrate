@@ -38,13 +38,13 @@
                     <tr>
                       <td style="text-align: right;">Warehouse Name</td>
                       <td>
-                        <input v-model="name" type="text" required />
+                        <input type="text" :value="warehouse.name" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <textarea v-model="description" cols="40" rows="10"></textarea>
+                        <textarea :value="warehouse.description" cols="40" rows="10"></textarea>
                       </td>
                     </tr>
                     <tr>
@@ -86,13 +86,13 @@
                     <tr>
                       <td style="text-align: right;">Postal Code</td>
                       <td>
-                        <input v-model="postal" type="text" />
+                        <input :value="warehouse.postal" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Products</td>
                       <td>
-                        <input v-model="products" type="text" />
+                        <input :value="warehouse.products" type="text" />
                       </td>
                     </tr>
                     <tr>
@@ -125,11 +125,11 @@
 <script>
   import  gql from "graphql-tag";
 
-  import warehouses from "~/graphql/queries/shop/warehouses";
-  import  findManyStates from '~/graphql/queries/shop/states'
-  import  findManyCountries from '~/graphql/queries/shop/countries'
-  import  findManyCities from '~/graphql/queries/shop/cities'
-  import findManyCategories from '~/graphql/queries/shop/categories'
+  import warehouses from "~/graphql/query/warehouses";
+  import  findManyStates from '~/graphql/query/findManyStates'
+  import  findManyCountries from '~/graphql/query/findManyCountries'
+  import  findManyCities from '~/graphql/query/findManyCities'
+  import findManyCategories from '~/graphql/query/findManyCategories'
 
   const DELETE_WAREHOUSE = gql`
     mutation ($name: String!,$description: String!,$image: String!,$products: String!,$status: String!,$state: String!,$postal: String!,$country: String!,$isPublic: String!,$city: String!, $category: String!){
@@ -152,7 +152,7 @@
 
 const UPDATE_WAREHOUSE = gql`
   mutation updateOnewarehouses($id: Int!){
-  updateOnewarehouses(where: {id: {equals: $id}}){
+  updateOnewarehouses(where: {id: $id}){
     affected_rows
   }
 }
@@ -185,7 +185,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/shop/warehouses'})
+            this.$router.push({path: '../../admin/shop/warehouses'})
             }).catch(err => console.log(err));
     },
     async updateWarehouse(warehouse){

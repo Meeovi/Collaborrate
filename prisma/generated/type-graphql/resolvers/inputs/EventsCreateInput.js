@@ -84,6 +84,72 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], EventsCreateInput.prototype, "postalcode", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCreateInput.prototype, "type", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCreateInput.prototype, "invitationEmail", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCreateInput.prototype, "invitationBillingAddress", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCreateInput.prototype, "invitationGrandTotalPurchased", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCreateInput.prototype, "invitationInvoiceDate", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCreateInput.prototype, "invitationOrderNumber", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCreateInput.prototype, "invitationPaymentMethod", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCreateInput.prototype, "invitationShippingAddress", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCreateInput.prototype, "invitationCustomerName", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCreateInput.prototype, "invitationStatus", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCreateInput.prototype, "media", void 0);
 EventsCreateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("EventsCreateInput", {
         isAbstract: true

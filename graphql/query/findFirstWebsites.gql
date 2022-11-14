@@ -1,0 +1,14 @@
+query {
+  findFirstWebsites 
+ {
+    category
+    created_at
+    id
+    image
+    name
+    shop
+    store
+    themes
+    url
+  }
+}

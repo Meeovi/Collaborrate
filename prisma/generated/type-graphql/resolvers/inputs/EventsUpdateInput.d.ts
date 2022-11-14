@@ -15,4 +15,15 @@ export declare class EventsUpdateInput {
     state?: NullableStringFieldUpdateOperationsInput | undefined;
     country?: NullableStringFieldUpdateOperationsInput | undefined;
     postalcode?: NullableStringFieldUpdateOperationsInput | undefined;
+    type?: NullableStringFieldUpdateOperationsInput | undefined;
+    invitationEmail?: NullableStringFieldUpdateOperationsInput | undefined;
+    invitationBillingAddress?: NullableStringFieldUpdateOperationsInput | undefined;
+    invitationGrandTotalPurchased?: NullableStringFieldUpdateOperationsInput | undefined;
+    invitationInvoiceDate?: NullableStringFieldUpdateOperationsInput | undefined;
+    invitationOrderNumber?: NullableStringFieldUpdateOperationsInput | undefined;
+    invitationPaymentMethod?: NullableStringFieldUpdateOperationsInput | undefined;
+    invitationShippingAddress?: NullableStringFieldUpdateOperationsInput | undefined;
+    invitationCustomerName?: NullableStringFieldUpdateOperationsInput | undefined;
+    invitationStatus?: NullableStringFieldUpdateOperationsInput | undefined;
+    media?: NullableStringFieldUpdateOperationsInput | undefined;
 }

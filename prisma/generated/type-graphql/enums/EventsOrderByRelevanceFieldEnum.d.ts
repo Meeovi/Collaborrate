@@ -9,5 +9,16 @@ export declare enum EventsOrderByRelevanceFieldEnum {
     city = "city",
     state = "state",
     country = "country",
-    postalcode = "postalcode"
+    postalcode = "postalcode",
+    type = "type",
+    invitationEmail = "invitationEmail",
+    invitationBillingAddress = "invitationBillingAddress",
+    invitationGrandTotalPurchased = "invitationGrandTotalPurchased",
+    invitationInvoiceDate = "invitationInvoiceDate",
+    invitationOrderNumber = "invitationOrderNumber",
+    invitationPaymentMethod = "invitationPaymentMethod",
+    invitationShippingAddress = "invitationShippingAddress",
+    invitationCustomerName = "invitationCustomerName",
+    invitationStatus = "invitationStatus",
+    media = "media"
 }

@@ -205,25 +205,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
-], SettingsUpdateManyMutationInput.prototype, "youtubeVideos", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
 ], SettingsUpdateManyMutationInput.prototype, "siteTagline", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
-], SettingsUpdateManyMutationInput.prototype, "googleDrive", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
-], SettingsUpdateManyMutationInput.prototype, "disqusKey", void 0);
 SettingsUpdateManyMutationInput = tslib_1.__decorate([
     TypeGraphQL.InputType("SettingsUpdateManyMutationInput", {
         isAbstract: true

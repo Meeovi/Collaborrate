@@ -31,8 +31,5 @@ export declare class SettingsMaxAggregate {
     googleAnalytics: string | null;
     searchSetting: string | null;
     mailServer: string | null;
-    youtubeVideos: string | null;
     siteTagline: string | null;
-    googleDrive: string | null;
-    disqusKey: string | null;
 }

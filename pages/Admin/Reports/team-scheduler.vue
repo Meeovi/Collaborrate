@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import  schedulers from '~/graphql/queries/reports/scheduler'
+import  schedulers from '~/graphql/query/scheduler'
 
   export default {
     data() {

@@ -1,0 +1,11 @@
+query {
+  findFirstStocks 
+ {
+    description
+    enabled
+    id
+    name
+    sources
+    website
+  }
+}

@@ -28,23 +28,23 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Login</td>
-                      <td><input v-model="login" type="text" required /></td>
+                      <td><input :value="ooto.login" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Location</td>
-                      <td><input v-model="whid" type="text" /></td>
+                      <td><input :value="ooto.whid" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Start Date</td>
-                      <td><input v-model="start_date" type="datetime-local" required /></td>
+                      <td><input :value="ooto.start_date" type="datetime-local" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">End Date</td>
-                      <td><input v-model="end_date" type="datetime-local" required /></td>
+                      <td><input :value="ooto.end_date" type="datetime-local" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
-                      <td><textarea v-model="description" cols="40" rows="10"></textarea></td>
+                      <td><textarea :value="ooto.description" cols="40" rows="10"></textarea></td>
                     </tr>
                   </tbody>
                 </table>
@@ -60,7 +60,7 @@
 <script>
   import gql from "graphql-tag";
 
-  import ootos from "~/graphql/queries/reports/ooto";
+  import ootos from "~/graphql/query/ootos";
 
   const DELETE_OOTO = gql`
     mutation ($login:String!,$description:String!,$whid:String!,$start_date:String!,$end_date:String){
@@ -75,7 +75,7 @@
 
 const UPDATE_OOTO = gql`
   mutation updateOneooto($id: Int!){
-  updateOneOoto(where: {id: {equals: $id}}){
+  updateOneOoto(where: {id: $id}){
     affected_rows
   }
 }
@@ -108,7 +108,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/system/ooto'})
+            this.$router.push({path: '../../admin/system/ooto'})
             }).catch(err => console.log(err));
     },
     async updateOOTO(ooto){

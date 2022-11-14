@@ -1,5 +1,5 @@
 require('dotenv').config();
-import findManySettings from '~/graphql/queries/system/settings'
+import findManySettings from '~/graphql/query/findManySettings'
 
 export default {
   data() {

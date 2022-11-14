@@ -10,4 +10,6 @@ export declare class CurrenciesScalarWhereWithAggregatesInput {
     code?: StringNullableWithAggregatesFilter | undefined;
     name?: StringNullableWithAggregatesFilter | undefined;
     region?: StringNullableWithAggregatesFilter | undefined;
+    symbol?: StringNullableWithAggregatesFilter | undefined;
+    useStandard?: StringNullableWithAggregatesFilter | undefined;
 }

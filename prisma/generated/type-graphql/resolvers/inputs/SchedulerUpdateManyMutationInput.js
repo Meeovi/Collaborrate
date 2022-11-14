@@ -56,6 +56,30 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
 ], SchedulerUpdateManyMutationInput.prototype, "whid", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
+], SchedulerUpdateManyMutationInput.prototype, "label", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
+], SchedulerUpdateManyMutationInput.prototype, "public", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
+], SchedulerUpdateManyMutationInput.prototype, "permission", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
+], SchedulerUpdateManyMutationInput.prototype, "name", void 0);
 SchedulerUpdateManyMutationInput = tslib_1.__decorate([
     TypeGraphQL.InputType("SchedulerUpdateManyMutationInput", {
         isAbstract: true

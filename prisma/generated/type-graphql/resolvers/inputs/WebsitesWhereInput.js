@@ -6,7 +6,6 @@ const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const BigIntFilter_1 = require("../inputs/BigIntFilter");
 const DateTimeNullableFilter_1 = require("../inputs/DateTimeNullableFilter");
-const StringFilter_1 = require("../inputs/StringFilter");
 const StringNullableFilter_1 = require("../inputs/StringNullableFilter");
 let WebsitesWhereInput = WebsitesWhereInput_1 = class WebsitesWhereInput {
 };
@@ -71,11 +70,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], WebsitesWhereInput.prototype, "category", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringFilter_1.StringFilter, {
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", StringFilter_1.StringFilter)
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], WebsitesWhereInput.prototype, "themes", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
+], WebsitesWhereInput.prototype, "image", void 0);
 WebsitesWhereInput = WebsitesWhereInput_1 = tslib_1.__decorate([
     TypeGraphQL.InputType("WebsitesWhereInput", {
         isAbstract: true

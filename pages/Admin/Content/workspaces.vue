@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-workspace"><input type="submit" class="btn btn-warning" value="Add New Workspace"></a>
+        <a class="navbar-brand" href="/admin/edit/add-new-workspace"><input type="submit" class="btn btn-warning" value="Add New Workspace"></a>
         
 </div>
 </nav>
@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import  workspaces from '~/graphql/queries/content/workspaces'
+import  workspaces from '~/graphql/query/findManyWorkspaces'
 
 export default {
   data() {

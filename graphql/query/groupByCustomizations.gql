@@ -1,0 +1,62 @@
+query {
+  groupByCustomizations 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      allow_signup
+      announcement
+      banner
+      created_at
+      email
+      footer_link
+      id
+      nav_link
+      notification
+      site_name
+      site_url
+    }
+    _max {
+      allow_signup
+      announcement
+      banner
+      created_at
+      email
+      footer_link
+      id
+      nav_link
+      notification
+      site_name
+      site_url
+    }
+    _min {
+      allow_signup
+      announcement
+      banner
+      created_at
+      email
+      footer_link
+      id
+      nav_link
+      notification
+      site_name
+      site_url
+    }
+    _sum {
+      id
+    }
+    allow_signup
+    announcement
+    banner
+    created_at
+    email
+    footer_link
+    id
+    nav_link
+    notification
+    site_name
+    site_url
+  }
+}

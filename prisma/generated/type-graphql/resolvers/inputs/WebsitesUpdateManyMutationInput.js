@@ -6,7 +6,6 @@ const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const BigIntFieldUpdateOperationsInput_1 = require("../inputs/BigIntFieldUpdateOperationsInput");
 const NullableDateTimeFieldUpdateOperationsInput_1 = require("../inputs/NullableDateTimeFieldUpdateOperationsInput");
 const NullableStringFieldUpdateOperationsInput_1 = require("../inputs/NullableStringFieldUpdateOperationsInput");
-const StringFieldUpdateOperationsInput_1 = require("../inputs/StringFieldUpdateOperationsInput");
 let WebsitesUpdateManyMutationInput = class WebsitesUpdateManyMutationInput {
 };
 tslib_1.__decorate([
@@ -52,11 +51,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
 ], WebsitesUpdateManyMutationInput.prototype, "category", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringFieldUpdateOperationsInput_1.StringFieldUpdateOperationsInput, {
+    TypeGraphQL.Field(_type => NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", StringFieldUpdateOperationsInput_1.StringFieldUpdateOperationsInput)
+    tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
 ], WebsitesUpdateManyMutationInput.prototype, "themes", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
+], WebsitesUpdateManyMutationInput.prototype, "image", void 0);
 WebsitesUpdateManyMutationInput = tslib_1.__decorate([
     TypeGraphQL.InputType("WebsitesUpdateManyMutationInput", {
         isAbstract: true

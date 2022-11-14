@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-projects"><input type="submit" class="btn btn-warning" value="Add New Project"></a>
+        <a class="navbar-brand" href="/admin/edit/project/add-new-projects"><input type="submit" class="btn btn-warning" value="Add New Project"></a>
         
       </div>
     </nav>
@@ -42,7 +42,7 @@
 </template>
 
 <script>
- import  projects from '~/graphql/queries/content/projects'
+ import  projects from '~/graphql/query/findManyProjects'
 
 export default {
   data() {

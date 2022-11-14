@@ -7,5 +7,5 @@ export declare class FindFirstCurrenciesArgs {
     cursor?: CurrenciesWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;
-    distinct?: Array<"id" | "created_at" | "code" | "name" | "region"> | undefined;
+    distinct?: Array<"id" | "created_at" | "code" | "name" | "region" | "symbol" | "useStandard"> | undefined;
 }

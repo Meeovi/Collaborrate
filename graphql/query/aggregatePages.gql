@@ -1,0 +1,45 @@
+query {
+  aggregatePages 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      content
+      content_title
+      enable_page
+      id
+      meta_description
+      meta_keywords
+      meta_title
+      title
+      url_key
+    }
+    _max {
+      content
+      content_title
+      enable_page
+      id
+      meta_description
+      meta_keywords
+      meta_title
+      title
+      url_key
+    }
+    _min {
+      content
+      content_title
+      enable_page
+      id
+      meta_description
+      meta_keywords
+      meta_title
+      title
+      url_key
+    }
+    _sum {
+      id
+    }
+  }
+}

@@ -7,4 +7,8 @@ export declare class Scheduler {
     notes?: string | null;
     start_date?: string | null;
     whid?: string | null;
+    label?: string | null;
+    public?: string | null;
+    permission?: string | null;
+    name?: string | null;
 }

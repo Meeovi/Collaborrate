@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-page"><input type="submit" class="btn btn-warning" value="Add New Page"></a>
+        <a class="navbar-brand" href="/admin/edit/page/add-new-page"><input type="submit" class="btn btn-warning" value="Add New Page"></a>
       </div>
     </nav>
 <br>
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import  findManyPages from '~/graphql/queries/content/pages'
+import  findManyPages from '~/graphql/query/findManyPages'
 
 export default {
   data() {

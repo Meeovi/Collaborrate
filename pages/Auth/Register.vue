@@ -40,7 +40,7 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyUsers from "~/graphql/queries/system/users";
+  import findManyUsers from "~/graphql/query/findManyUsers";
 
   const ADD_USER = gql`
     mutation ($first_name:String!,$last_name:String!,$username:String!,$email:String!, $password: String!){
@@ -125,7 +125,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../auth/login'
+            path: '../../auth/login'
           })
         }).catch(err => console.log(err));
         this.first_name = ' ';

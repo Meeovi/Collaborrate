@@ -1,6 +1,5 @@
 import { BigIntFilter } from "../inputs/BigIntFilter";
 import { DateTimeNullableFilter } from "../inputs/DateTimeNullableFilter";
-import { StringFilter } from "../inputs/StringFilter";
 import { StringNullableFilter } from "../inputs/StringNullableFilter";
 export declare class WebsitesWhereInput {
     AND?: WebsitesWhereInput[] | undefined;
@@ -13,5 +12,6 @@ export declare class WebsitesWhereInput {
     shop?: StringNullableFilter | undefined;
     store?: StringNullableFilter | undefined;
     category?: StringNullableFilter | undefined;
-    themes?: StringFilter | undefined;
+    themes?: StringNullableFilter | undefined;
+    image?: StringNullableFilter | undefined;
 }

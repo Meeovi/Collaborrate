@@ -58,6 +58,12 @@ tslib_1.__decorate([
         nullable: false
     }),
     tslib_1.__metadata("design:type", Number)
+], WebsitesCountAggregate.prototype, "image", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+        nullable: false
+    }),
+    tslib_1.__metadata("design:type", Number)
 ], WebsitesCountAggregate.prototype, "_all", void 0);
 WebsitesCountAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("WebsitesCountAggregate", {

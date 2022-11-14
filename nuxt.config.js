@@ -38,7 +38,6 @@ export default {
   plugins: [
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
     { src: '~/plugins/axios.js' },
-    { src: '~/plugins/redux.js' },
   ],
 
   components: true,
@@ -53,7 +52,6 @@ export default {
     'nuxt-client-init-module',
     '@nuxtjs/pwa',
     '@nuxtjs/sentry',
-    'nuxt-stripe-module',
     'nuxt-highcharts',
     '@nuxtjs/apollo',
     '@nuxtjs/dotenv',
@@ -88,8 +86,8 @@ export default {
   apollo: {
     clientConfigs: {
       default:{
-        httpEndpoint: MAIN_ENDPOINT,
-        wsEndpoint: WS_ENDPOINT
+        httpEndpoint: 'http://127.0.0.1:4000/graphql',
+       // wsEndpoint: WS_ENDPOINT
       }
     },
     watchLoading: '~/plugins/apollo-watch-loading-handler.js',

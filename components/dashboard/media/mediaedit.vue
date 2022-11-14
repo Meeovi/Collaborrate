@@ -1,6 +1,6 @@
 <template>
   <div class="modal-content">
-    <div v-for="mediamanager in findManyMediamanager" :key="mediamanager.id" class="modal-header">
+    <div v-for="mediamanager in mediamanager" :key="mediamanager.id" class="modal-header">
       <h5 id="exampleModalLabel" class="modal-title">
         Edit {{ mediamanager.name }}
       </h5>
@@ -243,9 +243,9 @@
 </template>
 
 <script>
-// eslint-disable-next-line camelcase
+/* // eslint-disable-next-line camelcase
 import gql from 'graphql-tag'
-import findManyMediamanager from '~/graphql/mutations/content/mediamanager'
+//import mediamanager from '~/graphql/mutation/createOneMediamanager'
 
 const DELETE_MEDIAMANAGER = gql`
   mutation delete_mediamanager($id: Int!){
@@ -285,12 +285,12 @@ export default {
         },
         refetchQueries: [
           {
-            query: findManyMediamanager
+            query: mediamanager
           }
 
         ]
       }).then(() => {
-        this.$router.push({ path: '../admin/content/mediamanager' })
+        this.$router.push({ path: '../../admin/content/mediamanager' })
       }).catch(err => console.log(err))
     },
     async updateMediamanager (mediamanager) {
@@ -301,7 +301,7 @@ export default {
         },
         refetchQueries: [
           {
-            query: findManyMediamanager
+            query: mediamanager
           }
 
         ]
@@ -312,15 +312,15 @@ export default {
     }
   },
   apollo: {
-    findManyMediamanager: {
-      query: findManyMediamanager,
+    mediamanager: {
+      query: mediamanager,
       prefetch: ({ route }) => ({ id: route.params.id }),
       variables () {
         return { id: this.$route.params.id }
       }
     }
   }
-}
+} */
 </script>
 
 <style>

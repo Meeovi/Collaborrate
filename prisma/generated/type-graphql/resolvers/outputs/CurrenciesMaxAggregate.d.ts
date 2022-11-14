@@ -4,4 +4,6 @@ export declare class CurrenciesMaxAggregate {
     code: string | null;
     name: string | null;
     region: string | null;
+    symbol: string | null;
+    useStandard: string | null;
 }

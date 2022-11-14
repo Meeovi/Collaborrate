@@ -8,5 +8,9 @@ export declare class SchedulerOrderByWithRelationAndSearchRelevanceInput {
     notes?: "asc" | "desc" | undefined;
     start_date?: "asc" | "desc" | undefined;
     whid?: "asc" | "desc" | undefined;
+    label?: "asc" | "desc" | undefined;
+    public?: "asc" | "desc" | undefined;
+    permission?: "asc" | "desc" | undefined;
+    name?: "asc" | "desc" | undefined;
     _relevance?: SchedulerOrderByRelevanceInput | undefined;
 }

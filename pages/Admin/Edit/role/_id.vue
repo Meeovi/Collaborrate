@@ -32,11 +32,11 @@
             <tbody>
               <tr>
                 <td style="text-align: right;">Role Name</td>
-                <td><input v-model="role_name" type="text" required /></td>
+                <td><input :value="role.role_name" type="text" required /></td>
               </tr>
               <tr>
                 <td style="text-align: right;">Description</td>
-                <td><client-only><Editor v-model="content" /></client-only></td>
+                <td><client-only><Editor :value="role.content" /></client-only></td>
               </tr>
             </tbody>
           </table>
@@ -52,7 +52,7 @@
 <script>
 /* eslint-disable camelcase */
 import gql from "graphql-tag";
-import findManyRoles from "~/graphql/queries/system/roles";
+import findManyRoles from "~/graphql/query/findManyRoles";
 
 const DELETE_ROLE = gql`
 mutation ($role_name:String!,$content:String!){
@@ -64,7 +64,7 @@ createOneRoles(data: {role_name: $role_name, content: $content}) {
 
   const UPDATE_PERMISSION = gql`
   mutation updateOneroles($id: Int!){
-  updateOneRoles(where: {id: {equals: $id}}){
+  updateOneRoles(where: {id: $id}){
     affected_rows
   }
 }
@@ -97,7 +97,7 @@ createOneRoles(data: {role_name: $role_name, content: $content}) {
           ]
         }).then(() => {
           this.$router.push({
-            path: '../admin/system/role-manager'
+            path: '../../admin/system/role-manager'
           })
         }).catch(err => console.log(err));
       },

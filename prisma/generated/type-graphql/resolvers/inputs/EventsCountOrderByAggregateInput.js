@@ -84,6 +84,72 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], EventsCountOrderByAggregateInput.prototype, "postalcode", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCountOrderByAggregateInput.prototype, "type", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCountOrderByAggregateInput.prototype, "invitationEmail", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCountOrderByAggregateInput.prototype, "invitationBillingAddress", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCountOrderByAggregateInput.prototype, "invitationGrandTotalPurchased", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCountOrderByAggregateInput.prototype, "invitationInvoiceDate", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCountOrderByAggregateInput.prototype, "invitationOrderNumber", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCountOrderByAggregateInput.prototype, "invitationPaymentMethod", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCountOrderByAggregateInput.prototype, "invitationShippingAddress", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCountOrderByAggregateInput.prototype, "invitationCustomerName", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCountOrderByAggregateInput.prototype, "invitationStatus", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], EventsCountOrderByAggregateInput.prototype, "media", void 0);
 EventsCountOrderByAggregateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("EventsCountOrderByAggregateInput", {
         isAbstract: true

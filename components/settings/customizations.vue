@@ -191,9 +191,9 @@
 </template>
 
 <script>
-// eslint-disable-next-line camelcase
+/* // eslint-disable-next-line camelcase
 import gql from 'graphql-tag'
-import customizations from '~/graphql/mutations/system/customizations'
+//import customizations from '../../graphql/mutation/createOneSettings'
 
 const DELETE_CUSTOMIZATION = gql`
   mutation delete_customizations($id: Int!){
@@ -235,7 +235,7 @@ export default {
 
         ]
       }).then(() => {
-        this.$router.push({ path: '../admin/system/general-settings' })
+        this.$router.push({ path: '../../admin/system/general-settings' })
       }).catch(err => console.log(err))
     },
     async updateCustomization (customization) {
@@ -265,7 +265,7 @@ export default {
       }
     }
   }
-}
+} */
 </script>
 
 <style>

@@ -1,9 +1,0 @@
-query MyQuery {
-  tax_rules {
-    tax_rate
-    products
-    prod_id
-    name
-    id
-  }
-}

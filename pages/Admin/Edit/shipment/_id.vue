@@ -30,24 +30,24 @@
             <tbody>
               <tr>
                 <td style="text-align: right;">Carrier Name</td>
-                <td><input id="shipmentsName" v-model="carrier_name" type="text" required /></td>
+                <td><input id="shipmentsName" :value="shipment.carrier_name" type="text" required /></td>
               </tr>
               <tr>
                 <td style="text-align: right;">Transit Time</td>
-                <td><input id="shipmentsTime" v-model="transit_time" type="number" required /></td>
+                <td><input id="shipmentsTime" :value="shipment.transit_time" type="number" required /></td>
               </tr>
               <tr>
                 <td style="text-align: right;">Speed grade</td>
-                <td><input id="shipmentsSpeed" v-model="speed_grade" type="number" /></td>
+                <td><input id="shipmentsSpeed" :value="shipment.speed_grade" type="number" /></td>
               </tr>
               <tr>
                 <td style="text-align: right;">Tracking URL</td>
-                <td><input id="shipmentsTracking" v-model="tracking_url" type="url" /></td>
+                <td><input id="shipmentsTracking" :value="shipment.tracking_url" type="url" /></td>
               </tr>
               <tr>
                 <td style="text-align: right;">Logo</td>
                 <td>
-                  <input type="image" v-model="image" />
+                  <input type="image" :value="shipment.image" />
                 </td>
               </tr>
             </tbody>
@@ -63,7 +63,7 @@
 
 <script>
 import gql from "graphql-tag";
-import findManyShipments from "~/graphql/queries/sales/shipments";
+import findManyShipments from "~/graphql/query/findManyShipments";
 
 const DELETE_SHIPMENT = gql`
 mutation ($carrier_name:String!,$transit_time:String!,$image:String!,$tracking_url:String!,$speed_grade:String!,$product:String!){
@@ -79,7 +79,7 @@ createOneShipments(data: {carrier_name: $carrier_name, transit_time: $transit_ti
 
 const UPDATE_SHIPMENT = gql`
   mutation updateOneshipments($id: Int!){
-  updateOneShipments(where: {id: {equals: $id}}){
+  updateOneShipments(where: {id: $id}){
     affected_rows
   }
 }
@@ -112,7 +112,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/sales/shipments'})
+            this.$router.push({path: '../../admin/sales/shipments'})
             }).catch(err => console.log(err));
     },
     async updateShipment(shipment){

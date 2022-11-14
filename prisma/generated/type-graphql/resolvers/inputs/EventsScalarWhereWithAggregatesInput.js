@@ -105,6 +105,72 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
 ], EventsScalarWhereWithAggregatesInput.prototype, "postalcode", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], EventsScalarWhereWithAggregatesInput.prototype, "type", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], EventsScalarWhereWithAggregatesInput.prototype, "invitationEmail", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], EventsScalarWhereWithAggregatesInput.prototype, "invitationBillingAddress", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], EventsScalarWhereWithAggregatesInput.prototype, "invitationGrandTotalPurchased", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], EventsScalarWhereWithAggregatesInput.prototype, "invitationInvoiceDate", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], EventsScalarWhereWithAggregatesInput.prototype, "invitationOrderNumber", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], EventsScalarWhereWithAggregatesInput.prototype, "invitationPaymentMethod", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], EventsScalarWhereWithAggregatesInput.prototype, "invitationShippingAddress", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], EventsScalarWhereWithAggregatesInput.prototype, "invitationCustomerName", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], EventsScalarWhereWithAggregatesInput.prototype, "invitationStatus", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], EventsScalarWhereWithAggregatesInput.prototype, "media", void 0);
 EventsScalarWhereWithAggregatesInput = EventsScalarWhereWithAggregatesInput_1 = tslib_1.__decorate([
     TypeGraphQL.InputType("EventsScalarWhereWithAggregatesInput", {
         isAbstract: true

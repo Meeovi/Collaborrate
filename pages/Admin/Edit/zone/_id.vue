@@ -29,7 +29,7 @@
                     <tr>
                       <td style="text-align: right;">Code</td>
                       <td>
-                        <input v-model="code" type="text" required value="Example would be US, WORLD, etc." />
+                        <input type="text" :value="zone.code" required  />
                       </td>
                     </tr>
                     <tr>
@@ -45,7 +45,7 @@
                     <tr>
                       <td style="text-align: right;">Name</td>
                       <td>
-                        <input v-model="name" type="text" required />
+                        <input type="text" :value="zone.name" required />
                       </td>
                     </tr>
                     <tr>
@@ -78,8 +78,8 @@
 
 <script>
   import  gql from "graphql-tag";
-  import  findManyZones from "~/graphql/queries/system/zones"
-  import  findManyCountries from "~/graphql/queries/shop/countries"
+  import  findManyZones from "~/graphql/query/findManyZones"
+  import  findManyCountries from "~/graphql/query/findManyCountries"
 
   const DELETE_ZONE = gql`
     mutation ($code:String!,$name:String!$type:String!,$scope:String!,$country:String!){
@@ -94,7 +94,7 @@
 
 const UPDATE_ZONE = gql`
   mutation updateOnezones($id: Int!){
-  updateOnezones(where: {id: {equals: $id}}){
+  updateOnezones(where: {id: $id}){
     affected_rows
   }
 }
@@ -127,7 +127,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/system/zones'})
+            this.$router.push({path: '../../admin/system/zones'})
             }).catch(err => console.log(err));
     },
     async updateZone(zone){

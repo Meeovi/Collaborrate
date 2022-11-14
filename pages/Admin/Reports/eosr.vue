@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-eosr"><input type="submit" class="btn btn-warning" value="Create End of Shift Report"></a>
+        <a class="navbar-brand" href="/admin/edit/add-new-eosr"><input type="submit" class="btn btn-warning" value="Create End of Shift Report"></a>
         
       </div>
     </nav>
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import  endofshifts from '~/graphql/queries/reports/eosr'
+import  endofshifts from '~/graphql/query/endofshift'
 
   export default {
     data() {

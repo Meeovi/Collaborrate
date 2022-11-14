@@ -28,7 +28,7 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Tag Name</td>
-                      <td><input id="tagsName" v-model="name" type="tagsName" required /></td>
+                      <td><input id="tagsName" :value="tag.name" type="tagsName" required /></td>
                     </tr>
                   </tbody>
                 </table>
@@ -52,7 +52,7 @@
                               <td style="text-align: right;">Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <input type="textarea" id="tagDesc" v-model="excerpt" name="tagDesc" cols="80"
+                                  <input type="textarea" id="tagDesc" :value="tag.excerpt" name="tagDesc" cols="80"
                                     rows="10" />
                                 </div>
                               </td>
@@ -74,7 +74,7 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyTags from "~/graphql/queries/content/tags";
+  import findManyTags from "~/graphql/query/findManyTags";
 
   const DELETE_TAG = gql `
     mutation ($name:String!,$excerpt:String){
@@ -86,7 +86,7 @@
 
 const UPDATE_TAG = gql`
   mutation updateOnetags($id: Int!){
-  updateOneTags(where: {id: {equals: $id}}){
+  updateOneTags(where: {id: $id}){
     affected_rows
   }
 }
@@ -119,7 +119,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/content/tags'})
+            this.$router.push({path: '../../admin/content/tags'})
             }).catch(err => console.log(err));
     },
     async updateTag(tag){

@@ -27,12 +27,10 @@
 import gql from 'graphql-tag';
 
 const findManyProducts = gql`{
-    aggregateProducts(take: 5) {
-    _count {
+    findManyProducts(take: 5) {
       name
       price
       quantity_per_source
-    }
   }
 }`
 export default {

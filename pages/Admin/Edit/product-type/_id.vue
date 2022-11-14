@@ -20,13 +20,13 @@
                 <tr>
                   <td style="text-align: right;">Product Type Name</td>
                   <td>
-                    <input id="productTypesLabel" v-model="type_name" type="text" required />
+                    <input id="productTypesLabel" :value="product_typestype_name" type="text" required />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Product Types</td>
                   <td>
-                    <select name="filterOptions" id="filterOptions" v-model="filter_options">
+                    <select name="filterOptions" id="filterOptions" :value="product_typesfilter_options">
                           <option value="digital">Digital</option>
                           <option value="physical">Physical</option>
                           <option value="service">Service</option>
@@ -37,25 +37,25 @@
                 <tr>
                   <td style="text-align: right;">Taxes</td>
                   <td>
-                    <input id="productTypesValue" v-model="taxes" type="text" />
+                    <input id="productTypesValue" :value="product_typestaxes" type="text" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Meta Name</td>
                   <td>
-                    <input id="productTypesValue" v-model="meta_name" type="text" value="Used in Search Engine Optimization" />
+                    <input id="productTypesValue" :value="product_typesmeta_name" type="text" />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Meta URL</td>
                   <td>
-                    <input id="productTypesValue" v-model="meta_url" type="text" value="Used in Search Engine Optimization"  />
+                    <input id="productTypesValue" :value="product_typesmeta_url" type="text"  />
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: right;">Meta Description</td>
                   <td>
-                    <input id="productTypesValue" v-model="meta_description" type="text" value="Used in Search Engine Optimization"  />
+                    <input id="productTypesValue" :value="product_typesmeta_description" type="text"  />
                   </td>
                 </tr>
               </tbody>
@@ -77,7 +77,7 @@
                 <tr>
                   <td style="text-align: right;">Is this product shippable?</td>
                   <td>
-                    <select name="isShippable" id="isShippable" v-model="isShippable">
+                    <select name="isShippable" id="isShippable" :value="product_typesisShippable">
                           <option value="shipped">Can Be Shipped</option>
                           <option value="cant shipped">Cannot Be Shipped</option>
                         </select>
@@ -94,7 +94,7 @@
 <script>
 /* eslint-disable camelcase */
   import  gql from "graphql-tag";
-  import findManyProduct_types from "~/graphql/queries/shop/product-type";
+  import findManyProduct_types from "~/graphql/query/findManyProduct_types";
 
   const DELETE_PRODUCT_TYPE = gql`
     mutation ($type_name:String!,$taxes:String!, $filter_options:String!, $id:String!, $isShippable:String!, $meta_description:String!, $meta_name:String!, $meta_url:String!, $position:String!, $prod_id:String!,){
@@ -113,7 +113,7 @@
 
 const UPDATE_PRODUCT_TYPE = gql`
   mutation updateOneproduct_types($id: Int!){
-  updateOneProduct_types(where: {id: {equals: $id}}){
+  updateOneProduct_types(where: {id: $id}){
     affected_rows
   }
 }
@@ -146,7 +146,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/shop/product-types'})
+            this.$router.push({path: '../../admin/shop/product-types'})
             }).catch(err => console.log(err));
     },
     async updateProduct_Type(product_type){

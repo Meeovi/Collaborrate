@@ -8,7 +8,7 @@ https://app.netlify.com/start/deploy?repository=https://github.com/meeovi/altern
 
 ## Features include:
 
-- AlternateCMS supports PostgresSQL, MySQL, SQLite, SQL Server, MongoDB, CockroachDB
+- AlternateCMS supports PostgresSQL, CockroachDB, Supabase, and Amazon Redshift
 - Blog Functionality with tags, publishing dates, draft, and enhanced editor support
 - Extendible system that supports Nuxtjs, Vuejs modules, and Feathersjs extensions
 - Inventory Management System with support for Unlimited Products with product attributes and product types, categories, multi-channel creation, graphql
@@ -23,9 +23,9 @@ https://app.netlify.com/start/deploy?repository=https://github.com/meeovi/altern
 - Multi-lingual support
 - Sales features including creation of agreements, invoices, transactions, returns, Sales reports, and more
 - Dashboard sneek peak with your data
-- Customer management features including creating & managing customers, cases, opportunities, todo lists, meetings, contracts, leads, campaigns, quotes, leads, projects, tickets, and more.
-- Manage cities, countries, states, tax rates, and tax rules
-- Media Manager with support for media comments, watermarks, sharing, downloading, retail, wholesale, multi-channel support, create galleries, save to s3 or filesystem
+- Customer management features including creating & managing customers, cases, opportunities, meetings, contracts, leads, quotes, leads, projects, tickets, and more.
+- Manage cities, countries, states, taxes
+- Flexible Media Manager with Visual Previews, expiration date, and comments.
 - Filterable datatables with export functionality
 - PWA Support with push notifications, desktop notifications, and offline caching
 - Mobile, Desktop, and Docker support

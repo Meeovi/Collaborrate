@@ -7,7 +7,6 @@ const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const BigIntWithAggregatesFilter_1 = require("../inputs/BigIntWithAggregatesFilter");
 const DateTimeNullableWithAggregatesFilter_1 = require("../inputs/DateTimeNullableWithAggregatesFilter");
 const StringNullableWithAggregatesFilter_1 = require("../inputs/StringNullableWithAggregatesFilter");
-const StringWithAggregatesFilter_1 = require("../inputs/StringWithAggregatesFilter");
 let WebsitesScalarWhereWithAggregatesInput = WebsitesScalarWhereWithAggregatesInput_1 = class WebsitesScalarWhereWithAggregatesInput {
 };
 tslib_1.__decorate([
@@ -71,11 +70,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
 ], WebsitesScalarWhereWithAggregatesInput.prototype, "category", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringWithAggregatesFilter_1.StringWithAggregatesFilter, {
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", StringWithAggregatesFilter_1.StringWithAggregatesFilter)
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
 ], WebsitesScalarWhereWithAggregatesInput.prototype, "themes", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], WebsitesScalarWhereWithAggregatesInput.prototype, "image", void 0);
 WebsitesScalarWhereWithAggregatesInput = WebsitesScalarWhereWithAggregatesInput_1 = tslib_1.__decorate([
     TypeGraphQL.InputType("WebsitesScalarWhereWithAggregatesInput", {
         isAbstract: true

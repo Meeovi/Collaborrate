@@ -40,6 +40,18 @@ tslib_1.__decorate([
         nullable: false
     }),
     tslib_1.__metadata("design:type", Number)
+], CurrenciesCountAggregate.prototype, "symbol", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+        nullable: false
+    }),
+    tslib_1.__metadata("design:type", Number)
+], CurrenciesCountAggregate.prototype, "useStandard", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+        nullable: false
+    }),
+    tslib_1.__metadata("design:type", Number)
 ], CurrenciesCountAggregate.prototype, "_all", void 0);
 CurrenciesCountAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("CurrenciesCountAggregate", {

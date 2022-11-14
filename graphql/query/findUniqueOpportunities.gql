@@ -1,0 +1,20 @@
+query {
+  findUniqueOpportunities 
+ {
+    account_name
+    amount
+    assigned_to
+    campaign
+    created_at
+    currency
+    description
+    expected_close_date
+    id
+    lead_source
+    name
+    next_step
+    probability
+    sales_stage
+    type
+  }
+}

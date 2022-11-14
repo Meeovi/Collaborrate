@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-permission">
+        <a class="navbar-brand" href="/admin/edit/role/add-new-permission">
           <input type="submit" class="btn btn-warning" value="Create New Permission" />
         </a>
 
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-  import  findManyPermissions from '~/graphql/queries/system/permissions'
+  import  findManyPermissions from '~/graphql/query/findManyPermissions'
 
   export default {
     data() {

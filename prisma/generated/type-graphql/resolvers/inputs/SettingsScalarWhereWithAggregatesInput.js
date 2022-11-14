@@ -224,25 +224,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
-], SettingsScalarWhereWithAggregatesInput.prototype, "youtubeVideos", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
 ], SettingsScalarWhereWithAggregatesInput.prototype, "siteTagline", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
-], SettingsScalarWhereWithAggregatesInput.prototype, "googleDrive", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
-], SettingsScalarWhereWithAggregatesInput.prototype, "disqusKey", void 0);
 SettingsScalarWhereWithAggregatesInput = SettingsScalarWhereWithAggregatesInput_1 = tslib_1.__decorate([
     TypeGraphQL.InputType("SettingsScalarWhereWithAggregatesInput", {
         isAbstract: true

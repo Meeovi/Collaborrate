@@ -31,15 +31,15 @@
             <tbody>
               <tr>
                 <td style="text-align: right;">Segment Name</td>
-                <td><input v-model="name" type="text" required /></td>
+                <td><input :value="segment.name" type="text" required /></td>
               </tr>
               <tr>
                 <td style="text-align: right;">Description</td>
-                <td><textarea v-model="description" cols="40" rows="10"></textarea></td>
+                <td><textarea :value="segment.description" cols="40" rows="10"></textarea></td>
               </tr>
               <tr>
                 <td style="text-align: right;">Assigned to Website</td>
-                <td><input v-model="website" name="website" type="url" /></td>
+                <td><input :value="segment.website" name="website" type="url" /></td>
               </tr>
             </tbody>
           </table>
@@ -54,7 +54,7 @@
 
 <script>
 import gql from "graphql-tag";
-import findManySegments from "~/graphql/queries/customers/segments";
+import findManySegments from "~/graphql/query/findManySegments";
 
 const DELETE_SEGMENT = gql`
 mutation ($name:String!,$description:String,$website:String,$status:String,$apply_to:String){
@@ -69,7 +69,7 @@ createOneSegments(data: {name: $name, description: $description, website: $websi
 
 const UPDATE_SEGMENT = gql`
   mutation updateOnesegments($id: Int!){
-  updateOneSegments(where: {id: {equals: $id}}){
+  updateOneSegments(where: {id: $id}){
     affected_rows
   }
 }
@@ -102,7 +102,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/customers/segments'})
+            this.$router.push({path: '../../admin/customers/segments'})
             }).catch(err => console.log(err));
     },
     async updateSegment(segment){

@@ -54,6 +54,30 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], SchedulerMinAggregate.prototype, "whid", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerMinAggregate.prototype, "label", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerMinAggregate.prototype, "public", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerMinAggregate.prototype, "permission", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerMinAggregate.prototype, "name", void 0);
 SchedulerMinAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("SchedulerMinAggregate", {
         isAbstract: true

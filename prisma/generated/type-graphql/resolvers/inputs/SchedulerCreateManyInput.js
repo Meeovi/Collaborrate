@@ -54,6 +54,30 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], SchedulerCreateManyInput.prototype, "whid", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerCreateManyInput.prototype, "label", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerCreateManyInput.prototype, "public", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerCreateManyInput.prototype, "permission", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerCreateManyInput.prototype, "name", void 0);
 SchedulerCreateManyInput = tslib_1.__decorate([
     TypeGraphQL.InputType("SchedulerCreateManyInput", {
         isAbstract: true

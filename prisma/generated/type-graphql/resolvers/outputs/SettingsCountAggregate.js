@@ -202,25 +202,7 @@ tslib_1.__decorate([
         nullable: false
     }),
     tslib_1.__metadata("design:type", Number)
-], SettingsCountAggregate.prototype, "youtubeVideos", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: false
-    }),
-    tslib_1.__metadata("design:type", Number)
 ], SettingsCountAggregate.prototype, "siteTagline", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: false
-    }),
-    tslib_1.__metadata("design:type", Number)
-], SettingsCountAggregate.prototype, "googleDrive", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: false
-    }),
-    tslib_1.__metadata("design:type", Number)
-], SettingsCountAggregate.prototype, "disqusKey", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => TypeGraphQL.Int, {
         nullable: false

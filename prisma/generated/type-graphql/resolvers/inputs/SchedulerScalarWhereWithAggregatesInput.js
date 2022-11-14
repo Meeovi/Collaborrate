@@ -75,6 +75,30 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
 ], SchedulerScalarWhereWithAggregatesInput.prototype, "whid", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], SchedulerScalarWhereWithAggregatesInput.prototype, "label", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], SchedulerScalarWhereWithAggregatesInput.prototype, "public", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], SchedulerScalarWhereWithAggregatesInput.prototype, "permission", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
+], SchedulerScalarWhereWithAggregatesInput.prototype, "name", void 0);
 SchedulerScalarWhereWithAggregatesInput = SchedulerScalarWhereWithAggregatesInput_1 = tslib_1.__decorate([
     TypeGraphQL.InputType("SchedulerScalarWhereWithAggregatesInput", {
         isAbstract: true

@@ -7,4 +7,8 @@ export declare class SchedulerMaxOrderByAggregateInput {
     notes?: "asc" | "desc" | undefined;
     start_date?: "asc" | "desc" | undefined;
     whid?: "asc" | "desc" | undefined;
+    label?: "asc" | "desc" | undefined;
+    public?: "asc" | "desc" | undefined;
+    permission?: "asc" | "desc" | undefined;
+    name?: "asc" | "desc" | undefined;
 }

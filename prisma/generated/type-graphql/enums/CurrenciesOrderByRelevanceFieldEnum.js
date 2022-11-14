@@ -8,6 +8,8 @@ var CurrenciesOrderByRelevanceFieldEnum;
     CurrenciesOrderByRelevanceFieldEnum["code"] = "code";
     CurrenciesOrderByRelevanceFieldEnum["name"] = "name";
     CurrenciesOrderByRelevanceFieldEnum["region"] = "region";
+    CurrenciesOrderByRelevanceFieldEnum["symbol"] = "symbol";
+    CurrenciesOrderByRelevanceFieldEnum["useStandard"] = "useStandard";
 })(CurrenciesOrderByRelevanceFieldEnum = exports.CurrenciesOrderByRelevanceFieldEnum || (exports.CurrenciesOrderByRelevanceFieldEnum = {}));
 TypeGraphQL.registerEnumType(CurrenciesOrderByRelevanceFieldEnum, {
     name: "CurrenciesOrderByRelevanceFieldEnum",

@@ -37,7 +37,9 @@
                             <button type="button" class="btn-close" data-mdb-dismiss="modal"
                               aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">...</div>
+                          <div class="modal-body">
+                            <apitoken />
+                          </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Cancel</button>
                             <button type="button" class="btn btn-primary">Save</button>
@@ -55,9 +57,11 @@
 </template>
 
 <script>
-import apitokens from '~/graphql/queries/system/apitokens'
+import apitokens from '~/graphql/query/apitokens'
+import apitoken from '../../pages/Admin/Edit/tokens/add-new-apitoken'
 
 export default {
+  components: { apitoken },
   data() {
     return {
       apitokens: [],

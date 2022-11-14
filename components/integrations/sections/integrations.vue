@@ -10,8 +10,6 @@
         <div id="v-tabs-tab" class="nav flex-column nav-tabs text-center" role="tablist" aria-orientation="vertical">
           <a id="v-tabs-home-tab" class="nav-link active" data-mdb-toggle="tab" href="#v-tabs-home" role="tab"
             aria-controls="v-tabs-home" aria-selected="true">General</a>
-          <a id="v-tabs-catalog-tab" class="nav-link" data-mdb-toggle="tab" href="#v-tabs-catalog" role="tab"
-            aria-controls="v-tabs-catalog" aria-selected="false">Sales</a>
           <a id="v-tabs-security-tab" class="nav-link" data-mdb-toggle="tab" href="#v-tabs-security" role="tab"
             aria-controls="v-tabs-security" aria-selected="false">Customers</a>
             <a id="v-tabs-customers-tab" class="nav-link" data-mdb-toggle="tab" href="#v-tabs-customers" role="tab"
@@ -29,9 +27,6 @@
         <div id="v-tabs-tabContent" class="tab-content">
           <div id="v-tabs-home" class="tab-pane fade show active" role="tabpanel" aria-labelledby="v-tabs-home-tab">
             <toppicks />
-          </div>
-          <div id="v-tabs-catalog" class="tab-pane fade" role="tabpanel" aria-labelledby="v-tabs-catalog-tab">
-            <Sales />
           </div>
           <div id="v-tabs-security" class="tab-pane fade" role="tabpanel" aria-labelledby="v-tabs-security-tab">
             <Customers />
@@ -57,7 +52,6 @@
 
 <script>
 import toppicks from '~/components/integrations/toppicks'
-import Sales from '~/components/integrations/sales'
 import Marketings from '~/components/integrations/marketing'
 import Customers from '~/components/integrations/customers'
 import Reports from '~/components/integrations/reports'
@@ -68,7 +62,6 @@ import Users from '~/components/integrations/settings'
     layout: 'dashboard',
     components: {
         toppicks,
-        Sales,
         Marketings,
         Customers,
         Reports,

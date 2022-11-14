@@ -7,4 +7,6 @@ export declare class CurrenciesUpdateInput {
     code?: NullableStringFieldUpdateOperationsInput | undefined;
     name?: NullableStringFieldUpdateOperationsInput | undefined;
     region?: NullableStringFieldUpdateOperationsInput | undefined;
+    symbol?: NullableStringFieldUpdateOperationsInput | undefined;
+    useStandard?: NullableStringFieldUpdateOperationsInput | undefined;
 }

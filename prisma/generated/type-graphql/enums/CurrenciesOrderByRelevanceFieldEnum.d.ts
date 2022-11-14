@@ -1,5 +1,7 @@
 export declare enum CurrenciesOrderByRelevanceFieldEnum {
     code = "code",
     name = "name",
-    region = "region"
+    region = "region",
+    symbol = "symbol",
+    useStandard = "useStandard"
 }

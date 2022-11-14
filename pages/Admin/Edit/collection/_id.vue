@@ -29,11 +29,11 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Collection Name</td>
-                      <td><input id="collectionsName" v-model="name" type="text" required /></td>
+                      <td><input id="collectionsName" :value="collection.name" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
-                      <td><textarea v-model="description" cols="40" rows="10"></textarea></td>
+                      <td><textarea :value="collection.description" cols="40" rows="10"></textarea></td>
                     </tr>
                   </tbody>
                 </table>
@@ -78,15 +78,15 @@
                           </tr>
                           <tr>
                             <td style="text-align: right;">Meta Title</td>
-                            <td><input v-model="meta_title" type="text" value="Collection Url" required /></td>
+                            <td><input :value="collection.meta_title" type="text" required /></td>
                           </tr>
                           <tr>
                             <td style="text-align: right;">Meta Keywords</td>
-                            <td><input v-model="meta_keywords" type="text" value="Collection Keywords" /></td>
+                            <td><input :value="collection.meta_keywords" type="text" /></td>
                           </tr>
                           <tr>
                             <td style="text-align: right;">Meta Description</td>
-                            <td><textarea v-model="meta_description" cols="40" rows="10"></textarea></td>
+                            <td><textarea :value="collection.meta_description" cols="40" rows="10"></textarea></td>
                           </tr>
                         </tbody>
                       </table>
@@ -105,7 +105,7 @@
 <script>
 // eslint-disable-next-line camelcase
 import  gql from 'graphql-tag'
-import  findManyCollections from '~/graphql/mutations/shop/collections'
+import  findManyCollections from '~/graphql/query/findManyCollections'
 
   const DELETE_COLLECTION = gql`
     mutation ($name:String!,$description:String!,$image:String!,$meta_description:String!,$meta_keywords:String!,$meta_title:String!){
@@ -121,7 +121,7 @@ import  findManyCollections from '~/graphql/mutations/shop/collections'
 
 const UPDATE_COLLECTION = gql`
   mutation updateOnecollections($id: Int!){
-  updateOneCollections(data: {name: $name, description: $description, image: $image, meta_description: $meta_description, meta_title: $meta_title, meta_keywords: $meta_keywords}, where: {id: {equals: $id}}){
+  updateOneCollections(data: {name: $name, description: $description, image: $image, meta_description: $meta_description, meta_title: $meta_title, meta_keywords: $meta_keywords}, (where: {id: $id})){
     name
         description
         image
@@ -159,7 +159,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/shop/collections'})
+            this.$router.push({path: '../../admin/shop/collections'})
             }).catch(err => console.log(err));
     },
     async updateCollection(collection){

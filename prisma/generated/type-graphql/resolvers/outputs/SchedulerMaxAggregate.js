@@ -54,6 +54,30 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], SchedulerMaxAggregate.prototype, "whid", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerMaxAggregate.prototype, "label", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerMaxAggregate.prototype, "public", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerMaxAggregate.prototype, "permission", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], SchedulerMaxAggregate.prototype, "name", void 0);
 SchedulerMaxAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("SchedulerMaxAggregate", {
         isAbstract: true

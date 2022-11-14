@@ -1,0 +1,9 @@
+query {
+  findUniqueRoles 
+ {
+    content
+    created_at
+    id
+    role_name
+  }
+}

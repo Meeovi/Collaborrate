@@ -6,5 +6,9 @@ export declare enum SchedulerScalarFieldEnum {
     login = "login",
     notes = "notes",
     start_date = "start_date",
-    whid = "whid"
+    whid = "whid",
+    label = "label",
+    "public" = "public",
+    permission = "permission",
+    name = "name"
 }

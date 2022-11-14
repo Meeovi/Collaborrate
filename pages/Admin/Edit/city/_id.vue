@@ -37,11 +37,11 @@
                       </td>
                     </tr>
               <td style="text-align: right;">City Name</td>
-              <td><input id="cityName" v-model="name" type="cityName" required /></td>
+              <td><input id="cityName" :value="city.name" type="cityName" required /></td>
               <tr>
                 <td style="text-align: right;">State</td>
                 <td>
-                  <select id="state" v-model="state" name="template" class="form-category">
+                  <select id="state" :value="city.state" name="template" class="form-category">
                     <option v-for="states in findManyStates" :key="states" :value="states">{{ states.name }}
                     </option>
                   </select>
@@ -50,7 +50,7 @@
               <tr>
                 <td style="text-align: right;">Country</td>
                 <td>
-                  <select id="country" v-model="country" name="template" class="form-category">
+                  <select id="country" :value="city.country" name="template" class="form-category">
                     <option v-for="countries in findManyCountries" :key="countries" :value="countries">
                       {{ countries.name }}
                     </option>
@@ -59,7 +59,7 @@
               </tr>
               <tr>
                 <td style="text-align: right;">Postal Code</td>
-                <td><input id="cityName" v-model="postalCode" type="text" /></td>
+                <td><input id="cityName" :value="city.postalCode" type="text" /></td>
               </tr>
               </tbody>
               </table>
@@ -82,7 +82,7 @@
                           <tr>
                             <td style="text-align: right;">Description</td>
                             <td>
-                              <textarea v-model="description" cols="40" rows="10"></textarea>
+                              <textarea :value="city.description" cols="40" rows="10"></textarea>
                             </td>
                           </tr>
                         </tbody>
@@ -103,9 +103,9 @@
 <script>
   // eslint-disable-next-line camelcase
   import gql from "graphql-tag";
-  import findManyCities from "~/graphql/queries/shop/cities";
-  import findManyStates from '~/graphql/queries/shop/states'
-  import findManyCountries from '~/graphql/queries/shop/countries'
+  import findManyCities from "~/graphql/query/findManyCities";
+  import findManyStates from '~/graphql/query/findManyStates'
+  import findManyCountries from '~/graphql/query/findManyCountries'
 
   const DELETE_CITY = gql`
     mutation ($name:String!,$state:String,$country:String,$postalCode:String,$description:String){
@@ -120,7 +120,7 @@
 
   const UPDATE_CITY = gql`
   mutation updateOnecities($id: Int!){
-  updateOneCities(data: {name: $name, state: $state, country: $country, postalCode: $postalCode, description: $description}, where: {id: {equals: $id}}){
+  updateOneCities(data: {name: $name, state: $state, country: $country, postalCode: $postalCode, description: $description}, (where: {id: $id})){
     name
         state
         country
@@ -157,7 +157,7 @@
           ]
         }).then(() => {
           this.$router.push({
-            path: '../admin/shop/cities'
+            path: '../../admin/shop/cities'
           })
         }).catch(err => console.log(err));
       },
@@ -206,7 +206,7 @@
             ]
           }).then(() => {
             this.$router.push({
-              path: '../admin/shop/cities'
+              path: '../../admin/shop/cities'
             })
           }).catch(err => console.log(err));
         },

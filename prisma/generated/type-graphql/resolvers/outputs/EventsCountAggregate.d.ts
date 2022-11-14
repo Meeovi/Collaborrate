@@ -12,5 +12,16 @@ export declare class EventsCountAggregate {
     state: number;
     country: number;
     postalcode: number;
+    type: number;
+    invitationEmail: number;
+    invitationBillingAddress: number;
+    invitationGrandTotalPurchased: number;
+    invitationInvoiceDate: number;
+    invitationOrderNumber: number;
+    invitationPaymentMethod: number;
+    invitationShippingAddress: number;
+    invitationCustomerName: number;
+    invitationStatus: number;
+    media: number;
     _all: number;
 }

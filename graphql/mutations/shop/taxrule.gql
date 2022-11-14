@@ -1,8 +1,0 @@
-
-query ($id: Int){
-  createOneTax_rule (where: {id: {_eq: $id}}){
-    id
-    name
-    tax_rate
-  }
-}

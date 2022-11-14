@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-rewards"><input type="submit" class="btn btn-warning" value="Create A Reward"></a>
+        <a class="navbar-brand" href="/admin/edit/reward/add-new-rewards"><input type="submit" class="btn btn-warning" value="Create A Reward"></a>
       </div>
 </nav>
 <br>
@@ -38,7 +38,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  findManyRewards from '~/graphql/queries/marketing/rewards'
+ import  findManyRewards from '~/graphql/query/findManyRewards'
 
 export default {
   data() {

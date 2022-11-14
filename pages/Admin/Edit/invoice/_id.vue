@@ -28,57 +28,49 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Customer Name</td>
-                      <td><input v-model="customer_name" name="customerName" type="text"
-                          value="Customer Name on the Invoice" required /></td>
+                      <td><input :value="invoice.customer_name" name="customerName" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Bill to Name</td>
-                      <td><input v-model="bill_to_name" name="orderNumber" type="number" value="Who should we bill to?"
+                      <td><input :value="invoice.bill_to_name" name="orderNumber" type="number"
                           required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Customer Email</td>
-                      <td><input v-model="email" type="text" required
-                          value="Customer's Email used to email the invoice" /></td>
+                      <td><input :value="invoice.email" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Billing Address</td>
-                      <td><input v-model="billing_address" type="text" value="Billing address for this invoice"
+                      <td><input :value="invoice.billing_address" type="text"
                           required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Customer Group</td>
-                      <td><input v-model="customer_group" type="text" value="Group this customer belongs to" /></td>
+                      <td><input :value="invoice.customer_group" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Shipping Information</td>
-                      <td><input v-model="shipping_information" name="shippingInformation" type="text"
-                          value="Shipping service used for shipping" /></td>
+                      <td><input :value="invoice.shipping_information" name="shippingInformation" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Shipping and Handling</td>
-                      <td><input v-model="shipping_and_handling" name="shippingHandling" type="text"
-                          value="How much does shipping cost?" /></td>
+                      <td><input :value="invoice.shipping_and_handling" name="shippingHandling" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Shipping Address</td>
-                      <td><input v-model="shipping_address" name="shippingInformation" type="text"
-                          value="Where is this the address where the products are shipped to?" /></td>
+                      <td><input :value="invoice.shipping_address" name="shippingInformation" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Payment Method</td>
-                      <td><input v-model="payment_method" name="payment" type="text"
-                          value="What payment method is used for this transaction?" /></td>
+                      <td><input :value="invoice.payment_method" name="payment" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Grand Total Base</td>
-                      <td><input v-model="grand_total_base" name="grandTotal" type="text"
-                          value="Amount of transaction with tax excluded" /></td>
+                      <td><input :value="invoice.grand_total_base" name="grandTotal" type="text" /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Grand Total Purchased</td>
-                      <td><input v-model="grand_total_purchased" name="grandTotal" type="text"
-                          value="Amount of transaction with tax included" /></td>
+                      <td><input :value="invoice.grand_total_purchased" name="grandTotal" type="text" /></td>
                     </tr>
                   </tbody>
                 </table>
@@ -93,10 +85,10 @@
 
 <script>
   import gql from "graphql-tag";
-  import findManyInvoices from "~/graphql/queries/sales/invoices";
-  // import  grand_total_base from "~/graphql/queries/shop/grand_total_base"
-  // import  findManyCountries from "~/graphql/queries/shop/countries"
-  // import  attributes from "~/graphql/queries/shop/attributes"
+  import findManyInvoices from "~/graphql/query/findManyInvoices";
+  // import  grand_total_base from "~/graphql/query/findManyGrand_total_base"
+  // import  findManyCountries from "~/graphql/query/findManyCountries"
+  // import  attributes from "~/graphql/query/findManyAttributes"
 
   const DELETE_INVOICE = gql `
     mutation ($subtotal: String!,$customer_name: String!,$shipping_information: String!,$shipping_address: String!,$shipping_and_handling: String!,$payment_method: String!,$bill_to_name: String!,$grand_total_purchased: String!,$customer_group: String!,$email: String!,$billing_address: String!,$grand_total_base: String){
@@ -119,7 +111,7 @@
 
 const UPDATE_INVOICE = gql`
   mutation updateOneinvoices($id: Int!){
-  updateOneInvoices(where: {id: {equals: $id}}){
+  updateOneInvoices(where: {id: $id}){
     affected_rows
   }
 }
@@ -152,7 +144,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/sales/invoices'})
+            this.$router.push({path: '../../admin/sales/invoices'})
             }).catch(err => console.log(err));
     },
     async updateInvoice(invoice){

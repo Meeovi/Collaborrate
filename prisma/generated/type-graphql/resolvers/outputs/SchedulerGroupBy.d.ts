@@ -12,6 +12,10 @@ export declare class SchedulerGroupBy {
     notes: string | null;
     start_date: string | null;
     whid: string | null;
+    label: string | null;
+    public: string | null;
+    permission: string | null;
+    name: string | null;
     _count: SchedulerCountAggregate | null;
     _avg: SchedulerAvgAggregate | null;
     _sum: SchedulerSumAggregate | null;

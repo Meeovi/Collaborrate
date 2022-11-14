@@ -30,43 +30,43 @@
                     <tr>
                       <td style="text-align: right;">Name</td>
                       <td>
-                        <input v-model="update" type="text" />
+                        <input :value="permission.update" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
                       <td>
-                        <client-only><Editor v-model="content" /></client-only>
+                        <client-only><Editor :value="permission.content" /></client-only>
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Create</td>
                       <td>
-                        <input v-model="create" type="text" />
+                        <input :value="permission.create" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Read</td>
                       <td>
-                        <input v-model="read" type="text" />
+                        <input :value="permission.read" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Update</td>
                       <td>
-                        <input v-model="update" type="text" />
+                        <input :value="permission.update" type="text" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Delete</td>
                       <td>
-                        <input v-model="Delete" type="text" />
+                        <input :value="permission.Delete" type="text" />
                       </td>
                     </tr>
                     <tr class="col-lg-12">
                       <td>
                         <label for="role">Role</label><br>
-                        <select id="role" v-model="role" name="template" class="form-category">
+                        <select id="role" :value="permission.role" name="template" class="form-category">
                           <option v-for="role in findManyRoles" :key="role" :value="role">
                             {{ role.name }}</option>
                         </select>
@@ -75,7 +75,7 @@
                     <tr class="col-lg-12">
                       <td>
                         <label for="users">Users</label><br>
-                        <select id="users" v-model="users" name="template" class="form-category">
+                        <select id="users" :value="permission.users" name="template" class="form-category">
                           <option v-for="users in findManyUsers" :key="users" :value="users">
                             {{ users.name }}</option>
                         </select>
@@ -95,9 +95,9 @@
 <script>
   import gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import findManyPermissions from "~/graphql/queries/system/permissions";
-  import findManyRoles from "~/graphql/queries/system/roles";
-  import findManyUsers from "~/graphql/queries/system/users";
+  import findManyPermissions from "~/graphql/query/findManyPermissions";
+  import findManyRoles from "~/graphql/query/findManyRoles";
+  import findManyUsers from "~/graphql/query/findManyUsers";
 
   const DELETE_PERMISSION = gql`
     mutation ($Delete:String!,$update:String,$users:String,$content:String,$read:String!,$role:String!,$created_at:String!,$create:String!,$name:String){
@@ -116,7 +116,7 @@
 
   const UPDATE_PERMISSION = gql`
   mutation updateOnepermissions($id: Int!){
-  updateOnePermissions(where: {id: {equals: $id}}){
+  updateOnePermissions(where: {id: $id}){
     affected_rows
   }
 }
@@ -149,7 +149,7 @@
           ]
         }).then(() => {
           this.$router.push({
-            path: '../admin/system/role-manager'
+            path: '../../admin/system/role-manager'
           })
         }).catch(err => console.log(err));
       },

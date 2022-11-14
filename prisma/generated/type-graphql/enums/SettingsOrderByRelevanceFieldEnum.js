@@ -35,10 +35,7 @@ var SettingsOrderByRelevanceFieldEnum;
     SettingsOrderByRelevanceFieldEnum["googleAnalytics"] = "googleAnalytics";
     SettingsOrderByRelevanceFieldEnum["searchSetting"] = "searchSetting";
     SettingsOrderByRelevanceFieldEnum["mailServer"] = "mailServer";
-    SettingsOrderByRelevanceFieldEnum["youtubeVideos"] = "youtubeVideos";
     SettingsOrderByRelevanceFieldEnum["siteTagline"] = "siteTagline";
-    SettingsOrderByRelevanceFieldEnum["googleDrive"] = "googleDrive";
-    SettingsOrderByRelevanceFieldEnum["disqusKey"] = "disqusKey";
 })(SettingsOrderByRelevanceFieldEnum = exports.SettingsOrderByRelevanceFieldEnum || (exports.SettingsOrderByRelevanceFieldEnum = {}));
 TypeGraphQL.registerEnumType(SettingsOrderByRelevanceFieldEnum, {
     name: "SettingsOrderByRelevanceFieldEnum",

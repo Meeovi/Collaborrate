@@ -55,10 +55,16 @@ tslib_1.__decorate([
 ], WebsitesGroupBy.prototype, "category", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
-        nullable: false
+        nullable: true
     }),
     tslib_1.__metadata("design:type", String)
 ], WebsitesGroupBy.prototype, "themes", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], WebsitesGroupBy.prototype, "image", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => WebsitesCountAggregate_1.WebsitesCountAggregate, {
         nullable: true

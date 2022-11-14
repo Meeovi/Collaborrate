@@ -1,0 +1,50 @@
+query {
+  aggregateProduct_types 
+ {
+    _avg {
+      id
+      prod_id
+    }
+    _count {
+      _all
+      filter_options
+      id
+      isShippable
+      meta_description
+      meta_url
+      prod_id
+      product_type
+      products
+      taxes
+      type_name
+    }
+    _max {
+      filter_options
+      id
+      isShippable
+      meta_description
+      meta_url
+      prod_id
+      product_type
+      products
+      taxes
+      type_name
+    }
+    _min {
+      filter_options
+      id
+      isShippable
+      meta_description
+      meta_url
+      prod_id
+      product_type
+      products
+      taxes
+      type_name
+    }
+    _sum {
+      id
+      prod_id
+    }
+  }
+}

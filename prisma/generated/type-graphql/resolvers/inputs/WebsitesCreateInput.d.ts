@@ -6,5 +6,6 @@ export declare class WebsitesCreateInput {
     shop?: string | undefined;
     store?: string | undefined;
     category?: string | undefined;
-    themes: string;
+    themes?: string | undefined;
+    image?: string | undefined;
 }

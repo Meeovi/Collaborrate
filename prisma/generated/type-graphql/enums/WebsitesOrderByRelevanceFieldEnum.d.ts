@@ -4,5 +4,6 @@ export declare enum WebsitesOrderByRelevanceFieldEnum {
     shop = "shop",
     store = "store",
     category = "category",
-    themes = "themes"
+    themes = "themes",
+    image = "image"
 }

@@ -9,6 +9,8 @@ export declare class CurrenciesGroupBy {
     code: string | null;
     name: string | null;
     region: string | null;
+    symbol: string | null;
+    useStandard: string | null;
     _count: CurrenciesCountAggregate | null;
     _avg: CurrenciesAvgAggregate | null;
     _sum: CurrenciesSumAggregate | null;

@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import plugins from '~/graphql/queries/system/plugins'
+import plugins from '~/graphql/query/findManyPlugins'
 
 export default {
   data() {

@@ -18,4 +18,15 @@ export declare class EventsWhereInput {
     state?: StringNullableFilter | undefined;
     country?: StringNullableFilter | undefined;
     postalcode?: StringNullableFilter | undefined;
+    type?: StringNullableFilter | undefined;
+    invitationEmail?: StringNullableFilter | undefined;
+    invitationBillingAddress?: StringNullableFilter | undefined;
+    invitationGrandTotalPurchased?: StringNullableFilter | undefined;
+    invitationInvoiceDate?: StringNullableFilter | undefined;
+    invitationOrderNumber?: StringNullableFilter | undefined;
+    invitationPaymentMethod?: StringNullableFilter | undefined;
+    invitationShippingAddress?: StringNullableFilter | undefined;
+    invitationCustomerName?: StringNullableFilter | undefined;
+    invitationStatus?: StringNullableFilter | undefined;
+    media?: StringNullableFilter | undefined;
 }

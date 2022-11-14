@@ -203,25 +203,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], SettingsCreateManyInput.prototype, "youtubeVideos", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
 ], SettingsCreateManyInput.prototype, "siteTagline", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], SettingsCreateManyInput.prototype, "googleDrive", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], SettingsCreateManyInput.prototype, "disqusKey", void 0);
 SettingsCreateManyInput = tslib_1.__decorate([
     TypeGraphQL.InputType("SettingsCreateManyInput", {
         isAbstract: true

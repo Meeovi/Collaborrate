@@ -1,14 +1,22 @@
 {
-    "compilerOptions": {
-      "jsx": "preserve",
-      "target": "es2018",
-      "module": "commonjs",
-      "lib": ["es2018", "esnext.asynciterable", "DOM"],
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "strict": true,
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "noImplicitAny": false
-    }
+  "compilerOptions": {
+    "jsx": "preserve",
+    "target": "es2018",
+    "module": "commonjs",
+    "lib": ["es2018", "esnext.asynciterable", "DOM"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "inlineSources": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "importHelpers": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   }
+}

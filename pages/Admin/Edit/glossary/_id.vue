@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 <template>
     <div>
-        <form v-for="glossary in findManyGlossaries" :key="glossary.id" @submit.prevent="addGlossary">
+        <form v-for="glossary in glossaries" :key="glossary.id" @submit.prevent="addGlossary">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
@@ -29,7 +29,7 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Glossary Name</td>
-                      <td><input v-model="name" type="text" required /></td>
+                      <td><input :value="glossary.name" type="text" required /></td>
                     </tr>
                   </tbody>
                 </table>
@@ -53,7 +53,7 @@
                               <td style="text-align: right;">Description</td>
                               <td>
                                 <div class="form-check form-switch">
-                                  <client-only><Editor v-model="content" /></client-only>
+                                  <client-only><Editor :value="glossary.content" /></client-only>
                                 </div>
                               </td>
                             </tr>
@@ -94,7 +94,7 @@
 <script>
   import gql from "graphql-tag";
 
-  import findManyGlossaries from "~/graphql/queries/content/glossaries";
+  import glossaries from "~/graphql/query/glossaries";
 
   const DELETE_GLOSSARY = gql `
     mutation ($name:String!,$content:String!,$image:String!){
@@ -107,7 +107,7 @@
 
 const UPDATE_GLOSSARY = gql`
   mutation updateOneglossaries($id: Int!){
-  updateOneglossaries(where: {id: {equals: $id}}){
+  updateOneglossaries(where: {id: $id}){
     affected_rows
   }
 }
@@ -135,12 +135,12 @@ export default {
         },
         refetchQueries: [
           {
-            query: findManyGlossaries
+            query: glossaries
           }       
           
         ]
       }).then(() => {
-            this.$router.push({path: '../admin/content/glossaries'})
+            this.$router.push({path: '../../admin/content/glossaries'})
             }).catch(err => console.log(err));
     },
     async updateCountry(glossary){
@@ -151,7 +151,7 @@ export default {
         },
         refetchQueries: [
           {
-            query: findManyGlossaries
+            query: glossaries
           }       
           
         ]
@@ -162,8 +162,8 @@ export default {
     }
   },
   apollo: {
-    findManyGlossaries: {
-      query: findManyGlossaries,
+    glossaries: {
+      query: glossaries,
       prefetch: ({ route }) => ({ id: route.params.id }),
       variables() {
         return { id: this.$route.params.id }

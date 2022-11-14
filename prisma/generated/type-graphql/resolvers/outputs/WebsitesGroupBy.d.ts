@@ -11,7 +11,8 @@ export declare class WebsitesGroupBy {
     shop: string | null;
     store: string | null;
     category: string | null;
-    themes: string;
+    themes: string | null;
+    image: string | null;
     _count: WebsitesCountAggregate | null;
     _avg: WebsitesAvgAggregate | null;
     _sum: WebsitesSumAggregate | null;

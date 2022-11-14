@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-            <a class="navbar-brand" href="/admin/add-new/add-new-newsletter"><input type="submit" class="btn btn-warning" value="Create A Newsletter" /></a>
+            <a class="navbar-brand" href="/admin/edit/newletter/add-new-newsletter"><input type="submit" class="btn btn-warning" value="Create A Newsletter" /></a>
           </div>
           </nav>
 <br>
@@ -32,7 +32,7 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import  findManyNewsletters from '~/graphql/queries/marketing/newsletters'
+ import  findManyNewsletters from '~/graphql/query/findManyNewsletters'
 
 export default {
   data() {

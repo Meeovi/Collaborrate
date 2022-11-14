@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-event"><input type="submit" class="btn btn-warning" value="Add New Event"></a>
+        <a class="navbar-brand" href="/admin/edit/event/add-new-event"><input type="submit" class="btn btn-warning" value="Add New Event"></a>
       </div>
     </nav>
 
@@ -16,17 +16,21 @@
             <th>Event Dates</th>
             <th>Event Ticket Count</th>
             <th>Event Location</th>
+            <th>Invitation Customer Name</th>
+            <th>Invitation Grand Total Purchased</th>
             <th>Event Created</th>
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="events in events" :key="events.id">
+        <tbody v-for="events in findManyEvents" :key="events.id">
           <tr>
             <td>{{ events.id }}</td>
             <td>{{ events.name }}</td>
             <td>{{ events.start }} - {{ events.end }}</td>
             <td>{{ events.tickets }}</td>
             <td>{{ events.city }} {{ events.state }} {{ events.country }}</td>
+            <td>{{ events.invitationCustomerName }}</td>
+            <td>{{ events.invitationGrandTotalPurchased }}</td>
             <td>{{ events.created_at }}</td>
             <td><a :href="`/admin/edit/event/${events.id}`">View</a></td>
           </tr>
@@ -38,18 +42,18 @@
 </template>
 
 <script>
-import  events from '~/graphql/queries/marketing/events'
+import  findManyEvents from '~/graphql/query/findManyEvents'
 
 export default {
   data() {
     return {
-      events: [],
+      findManyEvents: [],
     }
   },
   apollo: {
-    events: {
+    findManyEvents: {
       prefetch: true,
-      query: events
+      query: findManyEvents
     }
   },
     head: {

@@ -31,8 +31,5 @@ export declare enum SettingsScalarFieldEnum {
     googleAnalytics = "googleAnalytics",
     searchSetting = "searchSetting",
     mailServer = "mailServer",
-    youtubeVideos = "youtubeVideos",
-    siteTagline = "siteTagline",
-    googleDrive = "googleDrive",
-    disqusKey = "disqusKey"
+    siteTagline = "siteTagline"
 }

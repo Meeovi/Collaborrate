@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/admin/add-new/add-new-tag"><input type="submit" class="btn btn-warning" value="Add New Tags"></a>
+        <a class="navbar-brand" href="/admin/edit/tag/add-new-tag"><input type="submit" class="btn btn-warning" value="Add New Tags"></a>
         
 </div>
 </nav>
@@ -32,7 +32,7 @@
 </template>
 
 <script>
- import  findManyTags from '~/graphql/queries/content/tags'
+ import  findManyTags from '~/graphql/query/findManyTags'
 
 export default {
   data() {

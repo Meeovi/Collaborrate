@@ -10,6 +10,8 @@ var CurrenciesScalarFieldEnum;
     CurrenciesScalarFieldEnum["code"] = "code";
     CurrenciesScalarFieldEnum["name"] = "name";
     CurrenciesScalarFieldEnum["region"] = "region";
+    CurrenciesScalarFieldEnum["symbol"] = "symbol";
+    CurrenciesScalarFieldEnum["useStandard"] = "useStandard";
 })(CurrenciesScalarFieldEnum = exports.CurrenciesScalarFieldEnum || (exports.CurrenciesScalarFieldEnum = {}));
 TypeGraphQL.registerEnumType(CurrenciesScalarFieldEnum, {
     name: "CurrenciesScalarFieldEnum",

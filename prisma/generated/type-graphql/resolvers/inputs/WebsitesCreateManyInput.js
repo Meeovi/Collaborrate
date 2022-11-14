@@ -50,10 +50,16 @@ tslib_1.__decorate([
 ], WebsitesCreateManyInput.prototype, "category", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
-        nullable: false
+        nullable: true
     }),
     tslib_1.__metadata("design:type", String)
 ], WebsitesCreateManyInput.prototype, "themes", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], WebsitesCreateManyInput.prototype, "image", void 0);
 WebsitesCreateManyInput = tslib_1.__decorate([
     TypeGraphQL.InputType("WebsitesCreateManyInput", {
         isAbstract: true
