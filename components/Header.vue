@@ -52,9 +52,6 @@
               <a class="sidenav-link" style="color: white;" href="/admin/customers/segments">Segments</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/customers/social-groups">Social Groups</a>
-            </li><br>
-            <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/customers/opportunities">Opportunities</a>
             </li><br>
             <li class="sidenav-item">
@@ -126,7 +123,7 @@
                 Tool</a>
             </li><br>
             <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/reports/ticketing">Ticketing</a>
+              <a class="sidenav-link" style="color: white;" href="/admin/reports/ticketing">Tickets</a>
             </li><br>
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/reports/checklists">Checklists</a>
