@@ -69,7 +69,7 @@ createOneSegments(data: {name: $name, description: $description, website: $websi
 
 const UPDATE_SEGMENT = gql`
   mutation updateOnesegments($id: Int!){
-  updateOneSegments(where: {id: {equals: $id}}){
+  updateOneSegments(where: {id: $id}){
     affected_rows
   }
 }

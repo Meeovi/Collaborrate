@@ -110,7 +110,7 @@
 
   const DELETE_CATEGORY = gql `
   mutation deleteOneCategories($id: Int!){
-  deleteOneCategories(where: {id: {equals: $id}}){
+  deleteOneCategories(where: {id: $id}){
     name
         content
         image
@@ -123,7 +123,7 @@
 
   const UPDATE_CATEGORY = gql `
   mutation updateOneCategories($id: Int!){
-  updateOneCategories(data: {name: $name, content: $content, image: $image, meta_description: $meta_description, meta_keywords: $meta_keywords, meta_title: $meta_title}, where: {id: {equals: $id}}){
+  updateOneCategories(data: {name: $name, content: $content, image: $image, meta_description: $meta_description, meta_keywords: $meta_keywords, meta_title: $meta_title}, (where: {id: $id})){
     name
         content
         image

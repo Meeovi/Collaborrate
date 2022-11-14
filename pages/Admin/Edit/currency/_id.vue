@@ -68,7 +68,7 @@
 
 const UPDATE_CURRENCY = gql`
   mutation updateOnecurrencies($id: Int!){
-  updateOneCurrencies(where: {id: {equals: $id}}){
+  updateOneCurrencies(where: {id: $id}){
     affected_rows
   }
 }

@@ -120,7 +120,7 @@
 
   const UPDATE_CITY = gql`
   mutation updateOnecities($id: Int!){
-  updateOneCities(data: {name: $name, state: $state, country: $country, postalCode: $postalCode, description: $description}, where: {id: {equals: $id}}){
+  updateOneCities(data: {name: $name, state: $state, country: $country, postalCode: $postalCode, description: $description}, (where: {id: $id})){
     name
         state
         country

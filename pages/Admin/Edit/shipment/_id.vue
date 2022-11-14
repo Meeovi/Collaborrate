@@ -79,7 +79,7 @@ createOneShipments(data: {carrier_name: $carrier_name, transit_time: $transit_ti
 
 const UPDATE_SHIPMENT = gql`
   mutation updateOneshipments($id: Int!){
-  updateOneShipments(where: {id: {equals: $id}}){
+  updateOneShipments(where: {id: $id}){
     affected_rows
   }
 }

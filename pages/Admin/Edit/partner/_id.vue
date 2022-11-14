@@ -119,7 +119,7 @@
 
 const UPDATE_PARTNER = gql`
   mutation updateOnepartners($id: Int!){
-  updateOnePartners(where: {id: {equals: $id}}){
+  updateOnePartners(where: {id: $id}){
     affected_rows
   }
 }

@@ -152,7 +152,7 @@
 
 const UPDATE_WAREHOUSE = gql`
   mutation updateOnewarehouses($id: Int!){
-  updateOnewarehouses(where: {id: {equals: $id}}){
+  updateOnewarehouses(where: {id: $id}){
     affected_rows
   }
 }

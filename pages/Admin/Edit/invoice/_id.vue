@@ -111,7 +111,7 @@
 
 const UPDATE_INVOICE = gql`
   mutation updateOneinvoices($id: Int!){
-  updateOneInvoices(where: {id: {equals: $id}}){
+  updateOneInvoices(where: {id: $id}){
     affected_rows
   }
 }

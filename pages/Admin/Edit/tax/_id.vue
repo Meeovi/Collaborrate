@@ -91,7 +91,7 @@
 
 const UPDATE_TAX = gql`
   mutation updateOneTaxes($id: Int!){
-  updateOneTaxs(where: {id: {equals: $id}}){
+  updateOneTaxs(where: {id: $id}){
     affected_rows
   }
 }

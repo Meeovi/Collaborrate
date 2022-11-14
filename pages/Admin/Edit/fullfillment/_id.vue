@@ -170,7 +170,7 @@
 
 const UPDATE_FULLFILLMENT = gql`
   mutation updateOnefullfillments($id: Int!){
-  updateOnefullfillments(where: {id: {equals: $id}}){
+  updateOnefullfillments(where: {id: $id}){
     affected_rows
   }
 }

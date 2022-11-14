@@ -176,7 +176,7 @@
 
 const UPDATE_TICKETING = gql`
   mutation updateOneticketing($id: Int!){
-  updateOneticketing(where: {id: {equals: $id}}){
+  updateOneticketing(where: {id: $id}){
     affected_rows
   }
 }

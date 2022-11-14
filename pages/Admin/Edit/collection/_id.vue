@@ -121,7 +121,7 @@ import  findManyCollections from '~/graphql/query/findManyCollections'
 
 const UPDATE_COLLECTION = gql`
   mutation updateOnecollections($id: Int!){
-  updateOneCollections(data: {name: $name, description: $description, image: $image, meta_description: $meta_description, meta_title: $meta_title, meta_keywords: $meta_keywords}, where: {id: {equals: $id}}){
+  updateOneCollections(data: {name: $name, description: $description, image: $image, meta_description: $meta_description, meta_title: $meta_title, meta_keywords: $meta_keywords}, (where: {id: $id})){
     name
         description
         image

@@ -86,7 +86,7 @@
 
 const UPDATE_TAG = gql`
   mutation updateOnetags($id: Int!){
-  updateOneTags(where: {id: {equals: $id}}){
+  updateOneTags(where: {id: $id}){
     affected_rows
   }
 }

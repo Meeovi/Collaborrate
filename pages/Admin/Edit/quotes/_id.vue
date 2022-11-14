@@ -350,7 +350,7 @@
 
 const UPDATE_QUOTE = gql`
   mutation updateOnequotes($id: Int!){
-  updateOnequotes(where: {id: {equals: $id}}){
+  updateOnequotes(where: {id: $id}){
     affected_rows
   }
 }

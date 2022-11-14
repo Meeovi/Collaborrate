@@ -110,7 +110,7 @@ import  findManyBrands from '~/graphql/query/findManyBrands'
 
 const DELETE_BRAND = gql`
   mutation deleteOnebrands($id: Int!){
-  deleteOneBrands(where: {id: {equals: $id}}){
+  deleteOneBrands(where: {id: $id}){
     city
     code
     country
@@ -129,7 +129,7 @@ const DELETE_BRAND = gql`
 
 const UPDATE_BRAND = gql`
   mutation updateOnebrands($id: Int!){
-  updateOneBrands(data: {name: $name,code: $code,description: $description,isPublic: $isPublic,created_at: $created_at,media: $media,country: $country,product: $product,state: $state,country: $country,city: $city}, where: {id: {equals: $id}}){
+  updateOneBrands(data: {name: $name,code: $code,description: $description,isPublic: $isPublic,created_at: $created_at,media: $media,country: $country,product: $product,state: $state,country: $country,city: $city}, (where: {id: $id})){
     city
     code
     country

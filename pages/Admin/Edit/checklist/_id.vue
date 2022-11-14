@@ -97,7 +97,7 @@ import  gql from 'graphql-tag'
 
 const DELETE_CHECKLIST = gql`
   mutation deleteOnechecklists($id: BigInt){
-  deleteOneChecklist(where: {id: {equals: $id}}){
+  deleteOneChecklist(where: {id: $id}){
     country
       description
       id
@@ -118,7 +118,7 @@ const DELETE_CHECKLIST = gql`
 `;
 const UPDATE_CHECKLIST = gql`
   mutation updateOnechecklists($id: BigInt){
-  updateOneChecklist(data: {username: $username, ticket: $ticket, regional_manager: $regional_manager, region: $region, project: $project, type: $type, media: $media, manager: $manager, location: $location, description: $description, country: $country, task: $task}, where: {id: {equals: $id}}){
+  updateOneChecklist(data: {username: $username, ticket: $ticket, regional_manager: $regional_manager, region: $region, project: $project, type: $type, media: $media, manager: $manager, location: $location, description: $description, country: $country, task: $task}, (where: {id: $id})){
     country
       description
       id

@@ -83,7 +83,7 @@ const DELETE_REVIEW = gql`
 
 const UPDATE_REVIEW = gql`
   mutation updateOnereviews($id: Int!){
-  updateOneReviews(where: {id: {equals: $id}}){
+  updateOneReviews(where: {id: $id}){
     affected_rows
   }
 }

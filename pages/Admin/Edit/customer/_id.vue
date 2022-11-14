@@ -219,7 +219,7 @@
 
 const UPDATE_CUSTOMER = gql`
   mutation updateOnecustomers($id: Int!){
-  updateOneCustomers(where: {id: {equals: $id}}){
+  updateOneCustomers(where: {id: $id}){
     affected_rows
   }
 }

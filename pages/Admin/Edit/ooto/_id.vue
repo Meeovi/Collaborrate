@@ -75,7 +75,7 @@
 
 const UPDATE_OOTO = gql`
   mutation updateOneooto($id: Int!){
-  updateOneOoto(where: {id: {equals: $id}}){
+  updateOneOoto(where: {id: $id}){
     affected_rows
   }
 }

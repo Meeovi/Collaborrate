@@ -116,7 +116,7 @@
 
   const UPDATE_PERMISSION = gql`
   mutation updateOnepermissions($id: Int!){
-  updateOnePermissions(where: {id: {equals: $id}}){
+  updateOnePermissions(where: {id: $id}){
     affected_rows
   }
 }

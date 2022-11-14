@@ -94,7 +94,7 @@
 
 const UPDATE_ZONE = gql`
   mutation updateOnezones($id: Int!){
-  updateOnezones(where: {id: {equals: $id}}){
+  updateOnezones(where: {id: $id}){
     affected_rows
   }
 }

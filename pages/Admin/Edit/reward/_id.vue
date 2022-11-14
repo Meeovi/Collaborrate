@@ -143,7 +143,7 @@ createOneRewards(data: {name: $name,expiration: $expiration,customers: $customer
 
 const UPDATE_REWARD = gql`
   mutation updateOnerewards($id: Int!){
-  updateOneRewards(where: {id: {equals: $id}}){
+  updateOneRewards(where: {id: $id}){
     affected_rows
   }
 }

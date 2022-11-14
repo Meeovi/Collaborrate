@@ -220,7 +220,7 @@
 
 const UPDATE_RETURN = gql`
   mutation updateOnereturns($id: Int!){
-  updateOneReturns(where: {id: {equals: $id}}){
+  updateOneReturns(where: {id: $id}){
     affected_rows
   }
 }

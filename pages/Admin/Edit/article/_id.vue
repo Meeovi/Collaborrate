@@ -192,7 +192,7 @@ import findManyArticles from '~/graphql/query/findManyArticles'
 
 const DELETE_ARTICLE = gql`
   mutation deleteOneArticles($id: Int!){
-  deleteOneArticles(where: {id: {equals: $id}}){
+  deleteOneArticles(where: {id: $id}){
     categories
         content
         customers
@@ -213,7 +213,7 @@ const DELETE_ARTICLE = gql`
 
 const UPDATE_ARTICLE = gql`
   mutation updateOneArticles($id: Int!){
-  updateOneArticles(data: {categories: $categories, content: $content, customers: $customers, excerpt: $excerpt, image: $image, isPublic: $isPublic, meta_description: $meta_description, meta_name: $meta_name, meta_url: $meta_url, name: $name, published: $published, tags: $tags, users: $users, type: $type}, where: {id: {equals: $id}}){
+  updateOneArticles(data: {categories: $categories, content: $content, customers: $customers, excerpt: $excerpt, image: $image, isPublic: $isPublic, meta_description: $meta_description, meta_name: $meta_name, meta_url: $meta_url, name: $name, published: $published, tags: $tags, users: $users, type: $type}, (where: {id: $id})){
     categories
         content
         customers

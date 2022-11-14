@@ -66,7 +66,7 @@ import  findManyCurrencies from "~/graphql/query/findManyCurrencies"
 
 const DELETE_CHANNEL = gql`
   mutation deleteOneZones($id: Int!){
-  deleteOneZones(where: {id: {equals: $id}}){
+  deleteOneZones(where: {id: $id}){
     default_shipping
         client_id
         client_secret
@@ -82,7 +82,7 @@ const DELETE_CHANNEL = gql`
 
 const UPDATE_CHANNEL = gql`
   mutation updateOneZones($id: Int!){
-  updateOneZones(data: {client_id: $client_id, client_secret: $client_secret, default_shipping: $default_shipping, default_zone: $default_zone, default_lang: $default_lang, code: $code, include_tax: $include_tax, name: $name, currency: $currency}, where: {id: {equals: $id}}){
+  updateOneZones(data: {client_id: $client_id, client_secret: $client_secret, default_shipping: $default_shipping, default_zone: $default_zone, default_lang: $default_lang, code: $code, include_tax: $include_tax, name: $name, currency: $currency}, (where: {id: $id})){
     default_shipping
         client_id
         client_secret

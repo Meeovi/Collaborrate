@@ -76,7 +76,7 @@
 
 const UPDATE_COUNTRY = gql`
   mutation updateOnecountries($id: Int!){
-  updateOneCountries(where: {id: {equals: $id}}){
+  updateOneCountries(where: {id: $id}){
     affected_rows
   }
 }

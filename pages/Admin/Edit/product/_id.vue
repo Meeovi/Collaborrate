@@ -408,7 +408,7 @@
 
   const UPDATE_PRODUCT = gql`
   mutation updateOneproducts($id: Int!){
-  updateOneProducts(where: {id: {equals: $id}}){
+  updateOneProducts(where: {id: $id}){
     affected_rows
   }
 }`;

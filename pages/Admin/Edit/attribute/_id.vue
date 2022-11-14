@@ -117,7 +117,7 @@
 
   const DELETE_ATTRIBUTES = gql`
     mutation ($id: Int!){
-    deleteOneProduct_attributes(where: {id: {equals: $id}}){
+    deleteOneProduct_attributes(where: {id: $id}){
         default_label
         allow_html_tags_storefront
         attribute_class
@@ -138,7 +138,7 @@
 
 const UPDATE_ATTRIBUTE = gql`
   mutation updateOneAttributes($id: Int!){
-  updateOneProduct_attributes(data: {default_label: $default_label, allow_html_tags_storefront: $allow_html_tags_storefront, attribute_class: $attribute_class, attribute_code: $attribute_code, attribute_value: $attribute_value, column_options: $column_options, faceted_navigation: $faceted_navigation, filter_options: $filter_options, id: $id, isPublic: $isPublic, layered_navigation: $layered_navigation, meta_description: $meta_description, meta_name: $meta_name, meta_url: $meta_url, position: $position, prod_id: $prod_id}, where: {id: {equals: $id}}){
+  updateOneProduct_attributes(data: {default_label: $default_label, allow_html_tags_storefront: $allow_html_tags_storefront, attribute_class: $attribute_class, attribute_code: $attribute_code, attribute_value: $attribute_value, column_options: $column_options, faceted_navigation: $faceted_navigation, filter_options: $filter_options, id: $id, isPublic: $isPublic, layered_navigation: $layered_navigation, meta_description: $meta_description, meta_name: $meta_name, meta_url: $meta_url, position: $position, prod_id: $prod_id}, (where: {id: $id})){
     default_label
         allow_html_tags_storefront
         attribute_class

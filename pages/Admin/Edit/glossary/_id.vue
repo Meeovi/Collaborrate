@@ -107,7 +107,7 @@
 
 const UPDATE_GLOSSARY = gql`
   mutation updateOneglossaries($id: Int!){
-  updateOneglossaries(where: {id: {equals: $id}}){
+  updateOneglossaries(where: {id: $id}){
     affected_rows
   }
 }

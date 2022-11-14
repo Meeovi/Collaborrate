@@ -80,7 +80,7 @@
 
 const UPDATE_GIFT_CERTIFICATE = gql`
   mutation updateOnegift_certificates($id: Int!){
-  updateOnegift_certificates(where: {id: {equals: $id}}){
+  updateOnegift_certificates(where: {id: $id}){
     affected_rows
   }
 }

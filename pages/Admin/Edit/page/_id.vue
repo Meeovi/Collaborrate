@@ -125,7 +125,7 @@
 
 const UPDATE_PAGE = gql`
   mutation updateOnepages($id: Int!){
-  updateOnePages(where: {id: {equals: $id}}){
+  updateOnePages(where: {id: $id}){
     meta_keywords
         title
         meta_description

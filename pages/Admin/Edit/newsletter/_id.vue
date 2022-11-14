@@ -83,7 +83,7 @@
 
 const UPDATE_NEWSLETTER = gql`
   mutation updateOnenewsletters($id: Int!){
-  updateOneNewsletters(where: {id: {equals: $id}}){
+  updateOneNewsletters(where: {id: $id}){
     affected_rows
   }
 }

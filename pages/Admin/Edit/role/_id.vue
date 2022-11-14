@@ -64,7 +64,7 @@ createOneRoles(data: {role_name: $role_name, content: $content}) {
 
   const UPDATE_PERMISSION = gql`
   mutation updateOneroles($id: Int!){
-  updateOneRoles(where: {id: {equals: $id}}){
+  updateOneRoles(where: {id: $id}){
     affected_rows
   }
 }
