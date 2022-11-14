@@ -1,6 +1,0 @@
-mutation {
-  createManyReviews 
- {
-    count
-  }
-}

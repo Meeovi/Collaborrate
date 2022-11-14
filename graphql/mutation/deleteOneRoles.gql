@@ -1,9 +1,0 @@
-mutation {
-  deleteOneRoles 
- {
-    content
-    created_at
-    id
-    role_name
-  }
-}

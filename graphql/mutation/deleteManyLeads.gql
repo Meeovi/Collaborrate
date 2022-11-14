@@ -1,6 +1,0 @@
-mutation {
-  deleteManyLeads 
- {
-    count
-  }
-}

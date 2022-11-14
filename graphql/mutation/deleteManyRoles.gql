@@ -1,6 +1,0 @@
-mutation {
-  deleteManyRoles 
- {
-    count
-  }
-}

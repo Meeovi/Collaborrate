@@ -18,7 +18,7 @@
               aria-controls="v-tabs-home" aria-selected="true">Create A New Agreement</a>
           </div>
           <!-- Tab navs -->
-        </div> 
+        </div>
 
         <div class="col-9">
           <div id="v-tabs-tabContent" class="tab-scope">
@@ -43,24 +43,6 @@
                       </td>
                     </tr>
                     <tr>
-                      <td style="text-align: right;">User ID</td>
-                      <td>
-                        <input v-model="user_id" type="text" id="name" disabled />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">Reference ID</td>
-                      <td>
-                        <input v-model="reference_id" type="text" id="name" disabled />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">Shop ID</td>
-                      <td>
-                        <input v-model="shop_id" type="text" id="name" disabled />
-                      </td>
-                    </tr>
-                    <tr>
                       <td style="text-align: right;">Excerpt</td>
                       <td>
                         <textarea id="excerpt" v-model="excerpt" cols="50" rows="10"></textarea>
@@ -69,7 +51,9 @@
                     <tr>
                       <td style="text-align: right;">Detail</td>
                       <td>
-                        <client-only><Editor v-model="content" /></client-only>
+                        <client-only>
+                          <Editor v-model="content" />
+                        </client-only>
                       </td>
                     </tr>
                   </tbody>
@@ -88,7 +72,7 @@
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
                       <td>
-                        <input v-model="image" type="image" name="headshot" value="Select an image to upload"
+                        <FormulateInput type="image" v-model="image" name="headshot" label="Select an image to upload"
                           help="Select a png, jpg or gif to upload." validation="mime:image/jpeg,image/png,image/gif" />
                       </td>
                     </div>
@@ -104,15 +88,35 @@
 </template>
 
 <script>
-//require('../../../graphql/generated/mutations/createManyAgreements');
-import Editor from '~/components/Editor.vue'
-
-export default {
+  import gql from "graphql-tag";
+  //const createOneAgreements = require("~/graphql/mutation/createOneAgreements");
+  import Editor from '~/components/Editor.vue'
+  import {name,
+      excerpt,
+      type,
+      content,
+      image,
+      reference_id,
+      user_id,
+      shop_id} from '../../graphql/code/agreements'
+  export default {
     components: {
       Editor
     },
+    data() {
+    return {
+      type: [],
+      name: " ",
+      excerpt: " ",
+      content: " ",
+      image: " ",
+      user_id: "",
+      reference_id: "",
+      shop_id: "",
+    }
+  },
     head: {
-      title: 'sample add'
+      title: 'Add New Agreement'
     },
   }
 </script>

@@ -10,7 +10,10 @@ const { getUserId } = require('../server/config/utils');
 
 const feathers = require('@feathersjs/feathers');
 const express = require('@feathersjs/express');
+import { ExecutionArgs, execute, subscribe } from 'graphql';
 import { createServer } from '@graphql-yoga/node';
+import { Server } from 'ws';
+import { useServer } from 'graphql-ws/lib/use/ws';
 //import { useSofaWithSwaggerUI } from '@graphql-yoga/plugin-sofa'
 
 import { useGraphQlJit } from '@envelop/graphql-jit';
@@ -111,6 +114,9 @@ async function main() {
         gateway
       }) */
     ],
+    graphiql: {
+      subscriptionsProtocol: 'WS', // use WebSockets instead of SSE
+    },
   });
 
   app.use(express.errorHandler())
@@ -118,8 +124,57 @@ async function main() {
   app.use('/graphql', server)
 
   app.listen(4000, () => {
-    console.log('Running a GraphQL API server at http://localhost:4000/graphql')
+    console.log('Running a GraphQL API server at http://127.0.0.1:4000/graphql')
   })
+
+  const httpServer = await server.start();
+
+  const wsServer = new Server({
+    server: httpServer,
+    path: server.getAddressInfo().endpoint,
+  });
+
+  // yoga's envelop may augment the `execute` and `subscribe` operations
+  // so we need to make sure we always use the freshest instance
+  type EnvelopedExecutionArgs = ExecutionArgs & {
+    rootValue: {
+      execute: typeof execute;
+      subscribe: typeof subscribe;
+    };
+  };
+
+  useServer(
+    {
+      execute: (args) =>
+        (args as EnvelopedExecutionArgs).rootValue.execute(args),
+      subscribe: (args) =>
+        (args as EnvelopedExecutionArgs).rootValue.subscribe(args),
+      onSubscribe: async (ctx, msg) => {
+        const { schema, execute, subscribe, contextFactory, parse, validate } =
+          server.getEnveloped(ctx);
+
+        const args: EnvelopedExecutionArgs = {
+          schema,
+          operationName: msg.payload.operationName,
+          document: parse(msg.payload.query),
+          variableValues: msg.payload.variables,
+          contextValue: await contextFactory(),
+          rootValue: {
+            execute,
+            subscribe,
+          },
+        };
+
+        const errors = validate(args.schema, args.document);
+        if (errors.length) return errors;
+        return args;
+      },
+    },
+    wsServer,
+  );
 }
 
-main().catch(console.error);
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});

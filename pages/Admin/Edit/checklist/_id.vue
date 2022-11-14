@@ -93,7 +93,7 @@
 
 <script>
 import  gql from 'graphql-tag'
-import  checklists from '~/graphql/mutation/createOneChecklist'
+//import  checklists from '~/graphql/mutation/createOneChecklist'
 
 const DELETE_CHECKLIST = gql`
   mutation deleteOnechecklists($id: BigInt){

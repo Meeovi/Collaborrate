@@ -44,7 +44,8 @@ export default {
 
   buildModules: [
     '@nuxtjs/moment',
-    '@braid/vue-formulate/nuxt'
+    '@braid/vue-formulate/nuxt',
+    'nuxt-graphql-request'
   ],
 
   modules: [
@@ -52,9 +53,8 @@ export default {
     'nuxt-client-init-module',
     '@nuxtjs/pwa',
     '@nuxtjs/sentry',
-    'nuxt-stripe-module',
     'nuxt-highcharts',
-    '@nuxtjs/apollo',
+    //'@nuxtjs/apollo',
     '@nuxtjs/dotenv',
     "@nuxtjs/axios", 
     //"@nuxtjs/auth-next",
@@ -83,20 +83,35 @@ export default {
     path: './' 
   },
 
-  // Apollo config
-  apollo: {
-    clientConfigs: {
-      default:{
-        httpEndpoint: MAIN_ENDPOINT,
-       // wsEndpoint: WS_ENDPOINT
-      }
+  // Graphql-Request config
+  graphql: {
+    clients: {
+      default: {
+        endpoint: 'http://localhost:4000/graphql',
+        /**
+         * Per-client options overrides
+         * See: https://github.com/prisma-labs/graphql-request#passing-more-options-to-fetch
+         */
+         options: {
+          credentials: 'include',
+          mode: 'cors',
+        },
+      },
+      secondClient: {
+        // ...client config
+      },
+      // ...your other clients
     },
-    watchLoading: '~/plugins/apollo-watch-loading-handler.js',
-    errorHandler: '~/plugins/apollo-error-handler.js'
-  },
 
-  stripe: {
-    publishableKey: process.env.STRIPE_PUBLISHABLE_KEY
+    /**
+     * Options
+     * See: https://github.com/prisma-labs/graphql-request#passing-more-options-to-fetch
+     */
+    options: {
+      method: 'get', // Default to `POST`
+    },
+    useFetchPolyfill: true,
+    includeNodeModules: true,
   },
 
   highcharts: {

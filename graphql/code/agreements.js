@@ -1,7 +1,6 @@
 import gql from "graphql-tag";
 
-
-const ADD_AGREEMENTS = gql `
+export const ADD_AGREEMENTS = gql`
     mutation ($name:String!,$excerpt:String!,$type:String!,$content:String!,$image:String!,$user_id: String!, $reference_id: String!, $shop_id: String!){
     createOneAgreements(data: {reference_id: $reference_id, user_id: $user_id, shop_id: $shop_id, content: $content, excerpt: $excerpt, image: $image, type: $type, name: $name}) {
       name
@@ -16,18 +15,6 @@ const ADD_AGREEMENTS = gql `
 }`;
 
 export default {
-  data() {
-    return {
-      type: [],
-      name: " ",
-      excerpt: " ",
-      content: " ",
-      image: " ",
-      user_id: "",
-      reference_id: "",
-      shop_id: "",
-    }
-  },
   methods: {
     async addAgreement() {
       const name = this.name;
@@ -79,7 +66,6 @@ export default {
       this.reference_id = '';
       this.user_id = '';
       this.shop_id = '';
-    },
-
+    }
   }
 }

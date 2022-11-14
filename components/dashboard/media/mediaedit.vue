@@ -243,9 +243,9 @@
 </template>
 
 <script>
-// eslint-disable-next-line camelcase
+/* // eslint-disable-next-line camelcase
 import gql from 'graphql-tag'
-import mediamanager from '~/graphql/mutation/createOneMediamanager'
+//import mediamanager from '~/graphql/mutation/createOneMediamanager'
 
 const DELETE_MEDIAMANAGER = gql`
   mutation delete_mediamanager($id: Int!){
@@ -320,7 +320,7 @@ export default {
       }
     }
   }
-}
+} */
 </script>
 
 <style>

@@ -1,0 +1,66 @@
+import gql from 'graphql-tag'
+export const deleteManyTicketing = gql`
+mutation (
+    where: {
+    $AND: [TicketingWhereInput!]!,
+    $NOT: [TicketingWhereInput!]!,
+    $OR: [TicketingWhereInput!]!,
+    $account_name: StringNullableFilter!,
+    $assigned_to: StringNullableFilter!,
+    $comment: StringNullableFilter!,
+    $content: StringNullableFilter!,
+    $created_at: DateTimeNullableFilter!,
+    $date: StringNullableFilter!,
+    $date_modified: DateTimeNullableFilter!,
+    $department: StringNullableFilter!,
+    $id: BigIntFilter!,
+    $level: StringNullableFilter!,
+    $location: StringNullableFilter!,
+    $media: StringNullableFilter!,
+    $name: StringNullableFilter!,
+    $priority: StringNullableFilter!,
+    $products: StringNullableFilter!,
+    $projects: StringNullableFilter!,
+    $projects_projectsToticketing: StringNullableFilter!,
+    $requester: StringNullableFilter!,
+    $requester_email: StringNullableFilter!,
+    $resolution: StringNullableFilter!,
+    $severity: StringNullableFilter!,
+    $status: StringNullableFilter!,
+    $team: StringNullableFilter!,
+    $ticket_type: StringNullableFilter!,
+    }
+  ) {
+deleteManyTicketing (
+    where: {
+    AND: $AND,
+    NOT: $NOT,
+    OR: $OR,
+    account_name: $account_name,
+    assigned_to: $assigned_to,
+    comment: $comment,
+    content: $content,
+    created_at: $created_at,
+    date: $date,
+    date_modified: $date_modified,
+    department: $department,
+    id: $id,
+    level: $level,
+    location: $location,
+    media: $media,
+    name: $name,
+    priority: $priority,
+    products: $products,
+    projects: $projects,
+    projects_projectsToticketing: $projects_projectsToticketing,
+    requester: $requester,
+    requester_email: $requester_email,
+    resolution: $resolution,
+    severity: $severity,
+    status: $status,
+    team: $team,
+    ticket_type: $ticket_type,
+    }
+  ) } {
+    count
+  }`

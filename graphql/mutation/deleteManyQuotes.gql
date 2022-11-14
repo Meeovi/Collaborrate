@@ -1,6 +1,0 @@
-mutation {
-  deleteManyQuotes 
- {
-    count
-  }
-}

@@ -1,6 +1,0 @@
-mutation {
-  createManyUsers 
- {
-    count
-  }
-}

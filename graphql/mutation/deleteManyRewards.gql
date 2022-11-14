@@ -1,6 +1,0 @@
-mutation {
-  deleteManyRewards 
- {
-    count
-  }
-}

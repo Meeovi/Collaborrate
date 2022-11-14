@@ -1,6 +1,0 @@
-mutation {
-  updateManyContent_type 
- {
-    count
-  }
-}

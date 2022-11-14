@@ -22,7 +22,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="events in events" :key="events.id">
+        <tbody v-for="events in findManyEvents" :key="events.id">
           <tr>
             <td>{{ events.id }}</td>
             <td>{{ events.name }}</td>
@@ -42,18 +42,18 @@
 </template>
 
 <script>
-import  events from '~/graphql/query/findManyEvents'
+import  findManyEvents from '~/graphql/query/findManyEvents'
 
 export default {
   data() {
     return {
-      events: [],
+      findManyEvents: [],
     }
   },
   apollo: {
-    events: {
+    findManyEvents: {
       prefetch: true,
-      query: events
+      query: findManyEvents
     }
   },
     head: {

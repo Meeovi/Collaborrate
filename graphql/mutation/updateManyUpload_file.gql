@@ -1,6 +1,0 @@
-mutation {
-  updateManyUpload_file 
- {
-    count
-  }
-}

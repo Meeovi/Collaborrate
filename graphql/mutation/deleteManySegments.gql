@@ -1,6 +1,0 @@
-mutation {
-  deleteManySegments 
- {
-    count
-  }
-}

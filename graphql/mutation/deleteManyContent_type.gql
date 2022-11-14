@@ -1,6 +1,0 @@
-mutation {
-  deleteManyContent_type 
- {
-    count
-  }
-}

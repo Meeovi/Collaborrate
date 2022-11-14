@@ -191,9 +191,9 @@
 </template>
 
 <script>
-// eslint-disable-next-line camelcase
+/* // eslint-disable-next-line camelcase
 import gql from 'graphql-tag'
-import customizations from '~/graphql/mutation/createOneCustomizations'
+//import customizations from '../../graphql/mutation/createOneSettings'
 
 const DELETE_CUSTOMIZATION = gql`
   mutation delete_customizations($id: Int!){
@@ -265,7 +265,7 @@ export default {
       }
     }
   }
-}
+} */
 </script>
 
 <style>

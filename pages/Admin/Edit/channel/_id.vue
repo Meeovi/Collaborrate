@@ -61,7 +61,7 @@
 <script>
 /* eslint-disable camelcase */
 import  gql from 'graphql-tag'
-import  findManyChannels from '~/graphql/mutation/createOneChannels'
+//import  findManyChannels from '~/graphql/mutation/createOneChannels'
 import  findManyCurrencies from "~/graphql/query/findManyCurrencies"
 
 const DELETE_CHANNEL = gql`

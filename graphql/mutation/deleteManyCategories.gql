@@ -1,6 +1,0 @@
-mutation {
-  deleteManyCategories 
- {
-    count
-  }
-}

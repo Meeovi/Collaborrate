@@ -1,6 +1,0 @@
-mutation {
-  updateManyTransactions 
- {
-    count
-  }
-}

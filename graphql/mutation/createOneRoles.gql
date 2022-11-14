@@ -1,9 +1,0 @@
-mutation {
-  createOneRoles 
- {
-    content
-    created_at
-    id
-    role_name
-  }
-}
