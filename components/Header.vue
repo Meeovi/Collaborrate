@@ -18,20 +18,7 @@
               <a class="sidenav-link" style="color: white;" href="/admin/customers/segments">Segments</a>
             </li><br>
             <li class="sidenav-item">
-<<<<<<< HEAD
-              <a class="sidenav-link" style="color: white;" href="/admin/customers/opportunities">Opportunities</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/customers/leads">Leads</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/customers/targets">Targets</a>
-            </li><br>
-            <li class="sidenav-item">
-              <a class="sidenav-link" style="color: white;" href="/admin/customers/meetings">Meetings</a>
-=======
               <a class="sidenav-link" style="color: white;" href="/admin/customers/reviews">Reviews</a>
->>>>>>> 4a89a3e9063a4064fdc600fa5d73623587dff5cf
             </li><br>
           </ul>
         </li>
@@ -78,11 +65,7 @@
                 Tool</a>
             </li><br>
             <li class="sidenav-item">
-<<<<<<< HEAD
-              <a class="sidenav-link" style="color: white;" href="/admin/reports/ticketing">Tickets</a>
-=======
               <a class="sidenav-link" style="color: white;" href="/admin/reports/tickets">Ticket Management</a>
->>>>>>> 4a89a3e9063a4064fdc600fa5d73623587dff5cf
             </li><br>
             <li class="sidenav-item">
               <a class="sidenav-link" style="color: white;" href="/admin/reports/checklists">Checklists</a>
