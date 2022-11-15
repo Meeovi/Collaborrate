@@ -38,6 +38,7 @@ export default {
   plugins: [
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
     { src: '~/plugins/axios.js' },
+    { src: '~/plugins/extensions/vuera.js' },
   ],
 
   components: true,
