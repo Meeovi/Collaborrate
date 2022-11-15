@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PeriqlesForm useMutation={createOneAgreements} />
+    <client-only><PeriqlesForm useMutation={createOneAgreements} /></client-only>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
   import React from 'react';
   import { applyReactInVue } from 'vuereact-combined'
   import { gql, useMutation } from '@apollo/client';
-  import PeriqlesForm from 'periqles';
+  //import PeriqlesForm from 'periqles';
   import Editor from '~/components/Editor.vue'
 
   const ADD_AGREEMENTS = gql`
@@ -27,7 +27,7 @@
   export default {
     components: {
       Editor,
-      PeriqlesForm
+      //PeriqlesForm: applyReactInVue(PeriqlesForm)
     },
     head: {
       title: 'Add New Agreement'
