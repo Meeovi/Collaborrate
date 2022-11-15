@@ -10,8 +10,10 @@ const CreateOneShipmentsArgs_1 = require("./args/CreateOneShipmentsArgs");
 const DeleteManyShipmentsArgs_1 = require("./args/DeleteManyShipmentsArgs");
 const DeleteOneShipmentsArgs_1 = require("./args/DeleteOneShipmentsArgs");
 const FindFirstShipmentsArgs_1 = require("./args/FindFirstShipmentsArgs");
+const FindFirstShipmentsOrThrowArgs_1 = require("./args/FindFirstShipmentsOrThrowArgs");
 const FindManyShipmentsArgs_1 = require("./args/FindManyShipmentsArgs");
 const FindUniqueShipmentsArgs_1 = require("./args/FindUniqueShipmentsArgs");
+const FindUniqueShipmentsOrThrowArgs_1 = require("./args/FindUniqueShipmentsOrThrowArgs");
 const GroupByShipmentsArgs_1 = require("./args/GroupByShipmentsArgs");
 const UpdateManyShipmentsArgs_1 = require("./args/UpdateManyShipmentsArgs");
 const UpdateOneShipmentsArgs_1 = require("./args/UpdateOneShipmentsArgs");
@@ -63,6 +65,13 @@ let ShipmentsCrudResolver = class ShipmentsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstShipmentsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).shipments.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyShipments(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).shipments.findMany({
@@ -73,6 +82,13 @@ let ShipmentsCrudResolver = class ShipmentsCrudResolver {
     async findUniqueShipments(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).shipments.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueShipmentsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).shipments.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], ShipmentsCrudResolver.prototype, "findFirstShipments", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Shipments_1.Shipments, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstShipmentsOrThrowArgs_1.FindFirstShipmentsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ShipmentsCrudResolver.prototype, "findFirstShipmentsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Shipments_1.Shipments], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueShipmentsArgs_1.FindUniqueShipmentsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ShipmentsCrudResolver.prototype, "findUniqueShipments", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Shipments_1.Shipments, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueShipmentsOrThrowArgs_1.FindUniqueShipmentsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ShipmentsCrudResolver.prototype, "findUniqueShipmentsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [ShipmentsGroupBy_1.ShipmentsGroupBy], {
         nullable: false

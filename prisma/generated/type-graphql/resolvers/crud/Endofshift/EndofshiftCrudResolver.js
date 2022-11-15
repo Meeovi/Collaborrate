@@ -10,8 +10,10 @@ const CreateOneEndofshiftArgs_1 = require("./args/CreateOneEndofshiftArgs");
 const DeleteManyEndofshiftArgs_1 = require("./args/DeleteManyEndofshiftArgs");
 const DeleteOneEndofshiftArgs_1 = require("./args/DeleteOneEndofshiftArgs");
 const FindFirstEndofshiftArgs_1 = require("./args/FindFirstEndofshiftArgs");
+const FindFirstEndofshiftOrThrowArgs_1 = require("./args/FindFirstEndofshiftOrThrowArgs");
 const FindManyEndofshiftArgs_1 = require("./args/FindManyEndofshiftArgs");
 const FindUniqueEndofshiftArgs_1 = require("./args/FindUniqueEndofshiftArgs");
+const FindUniqueEndofshiftOrThrowArgs_1 = require("./args/FindUniqueEndofshiftOrThrowArgs");
 const GroupByEndofshiftArgs_1 = require("./args/GroupByEndofshiftArgs");
 const UpdateManyEndofshiftArgs_1 = require("./args/UpdateManyEndofshiftArgs");
 const UpdateOneEndofshiftArgs_1 = require("./args/UpdateOneEndofshiftArgs");
@@ -63,6 +65,13 @@ let EndofshiftCrudResolver = class EndofshiftCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstEndofshiftOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).endofshift.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async endofshifts(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).endofshift.findMany({
@@ -73,6 +82,13 @@ let EndofshiftCrudResolver = class EndofshiftCrudResolver {
     async endofshift(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).endofshift.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async getEndofshift(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).endofshift.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], EndofshiftCrudResolver.prototype, "findFirstEndofshift", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Endofshift_1.Endofshift, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstEndofshiftOrThrowArgs_1.FindFirstEndofshiftOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], EndofshiftCrudResolver.prototype, "findFirstEndofshiftOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Endofshift_1.Endofshift], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueEndofshiftArgs_1.FindUniqueEndofshiftArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], EndofshiftCrudResolver.prototype, "endofshift", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Endofshift_1.Endofshift, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueEndofshiftOrThrowArgs_1.FindUniqueEndofshiftOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], EndofshiftCrudResolver.prototype, "getEndofshift", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [EndofshiftGroupBy_1.EndofshiftGroupBy], {
         nullable: false

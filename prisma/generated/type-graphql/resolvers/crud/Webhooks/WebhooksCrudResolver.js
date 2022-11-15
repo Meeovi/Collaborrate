@@ -10,8 +10,10 @@ const CreateOneWebhooksArgs_1 = require("./args/CreateOneWebhooksArgs");
 const DeleteManyWebhooksArgs_1 = require("./args/DeleteManyWebhooksArgs");
 const DeleteOneWebhooksArgs_1 = require("./args/DeleteOneWebhooksArgs");
 const FindFirstWebhooksArgs_1 = require("./args/FindFirstWebhooksArgs");
+const FindFirstWebhooksOrThrowArgs_1 = require("./args/FindFirstWebhooksOrThrowArgs");
 const FindManyWebhooksArgs_1 = require("./args/FindManyWebhooksArgs");
 const FindUniqueWebhooksArgs_1 = require("./args/FindUniqueWebhooksArgs");
+const FindUniqueWebhooksOrThrowArgs_1 = require("./args/FindUniqueWebhooksOrThrowArgs");
 const GroupByWebhooksArgs_1 = require("./args/GroupByWebhooksArgs");
 const UpdateManyWebhooksArgs_1 = require("./args/UpdateManyWebhooksArgs");
 const UpdateOneWebhooksArgs_1 = require("./args/UpdateOneWebhooksArgs");
@@ -63,6 +65,13 @@ let WebhooksCrudResolver = class WebhooksCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstWebhooksOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).webhooks.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyWebhooks(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).webhooks.findMany({
@@ -73,6 +82,13 @@ let WebhooksCrudResolver = class WebhooksCrudResolver {
     async findUniqueWebhooks(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).webhooks.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueWebhooksOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).webhooks.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], WebhooksCrudResolver.prototype, "findFirstWebhooks", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Webhooks_1.Webhooks, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstWebhooksOrThrowArgs_1.FindFirstWebhooksOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], WebhooksCrudResolver.prototype, "findFirstWebhooksOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Webhooks_1.Webhooks], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueWebhooksArgs_1.FindUniqueWebhooksArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], WebhooksCrudResolver.prototype, "findUniqueWebhooks", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Webhooks_1.Webhooks, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueWebhooksOrThrowArgs_1.FindUniqueWebhooksOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], WebhooksCrudResolver.prototype, "findUniqueWebhooksOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [WebhooksGroupBy_1.WebhooksGroupBy], {
         nullable: false

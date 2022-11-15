@@ -10,8 +10,10 @@ const CreateOneTagsArgs_1 = require("./args/CreateOneTagsArgs");
 const DeleteManyTagsArgs_1 = require("./args/DeleteManyTagsArgs");
 const DeleteOneTagsArgs_1 = require("./args/DeleteOneTagsArgs");
 const FindFirstTagsArgs_1 = require("./args/FindFirstTagsArgs");
+const FindFirstTagsOrThrowArgs_1 = require("./args/FindFirstTagsOrThrowArgs");
 const FindManyTagsArgs_1 = require("./args/FindManyTagsArgs");
 const FindUniqueTagsArgs_1 = require("./args/FindUniqueTagsArgs");
+const FindUniqueTagsOrThrowArgs_1 = require("./args/FindUniqueTagsOrThrowArgs");
 const GroupByTagsArgs_1 = require("./args/GroupByTagsArgs");
 const UpdateManyTagsArgs_1 = require("./args/UpdateManyTagsArgs");
 const UpdateOneTagsArgs_1 = require("./args/UpdateOneTagsArgs");
@@ -63,6 +65,13 @@ let TagsCrudResolver = class TagsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstTagsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).tags.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyTags(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).tags.findMany({
@@ -73,6 +82,13 @@ let TagsCrudResolver = class TagsCrudResolver {
     async findUniqueTags(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).tags.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueTagsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).tags.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], TagsCrudResolver.prototype, "findFirstTags", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Tags_1.Tags, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstTagsOrThrowArgs_1.FindFirstTagsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], TagsCrudResolver.prototype, "findFirstTagsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Tags_1.Tags], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueTagsArgs_1.FindUniqueTagsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], TagsCrudResolver.prototype, "findUniqueTags", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Tags_1.Tags, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueTagsOrThrowArgs_1.FindUniqueTagsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], TagsCrudResolver.prototype, "findUniqueTagsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [TagsGroupBy_1.TagsGroupBy], {
         nullable: false

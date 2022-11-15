@@ -10,8 +10,10 @@ const CreateOneQuotesArgs_1 = require("./args/CreateOneQuotesArgs");
 const DeleteManyQuotesArgs_1 = require("./args/DeleteManyQuotesArgs");
 const DeleteOneQuotesArgs_1 = require("./args/DeleteOneQuotesArgs");
 const FindFirstQuotesArgs_1 = require("./args/FindFirstQuotesArgs");
+const FindFirstQuotesOrThrowArgs_1 = require("./args/FindFirstQuotesOrThrowArgs");
 const FindManyQuotesArgs_1 = require("./args/FindManyQuotesArgs");
 const FindUniqueQuotesArgs_1 = require("./args/FindUniqueQuotesArgs");
+const FindUniqueQuotesOrThrowArgs_1 = require("./args/FindUniqueQuotesOrThrowArgs");
 const GroupByQuotesArgs_1 = require("./args/GroupByQuotesArgs");
 const UpdateManyQuotesArgs_1 = require("./args/UpdateManyQuotesArgs");
 const UpdateOneQuotesArgs_1 = require("./args/UpdateOneQuotesArgs");
@@ -63,6 +65,13 @@ let QuotesCrudResolver = class QuotesCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstQuotesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).quotes.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyQuotes(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).quotes.findMany({
@@ -73,6 +82,13 @@ let QuotesCrudResolver = class QuotesCrudResolver {
     async findUniqueQuotes(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).quotes.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueQuotesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).quotes.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], QuotesCrudResolver.prototype, "findFirstQuotes", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Quotes_1.Quotes, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstQuotesOrThrowArgs_1.FindFirstQuotesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], QuotesCrudResolver.prototype, "findFirstQuotesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Quotes_1.Quotes], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueQuotesArgs_1.FindUniqueQuotesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], QuotesCrudResolver.prototype, "findUniqueQuotes", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Quotes_1.Quotes, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueQuotesOrThrowArgs_1.FindUniqueQuotesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], QuotesCrudResolver.prototype, "findUniqueQuotesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [QuotesGroupBy_1.QuotesGroupBy], {
         nullable: false

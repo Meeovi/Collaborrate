@@ -10,8 +10,10 @@ const CreateOneChecklistArgs_1 = require("./args/CreateOneChecklistArgs");
 const DeleteManyChecklistArgs_1 = require("./args/DeleteManyChecklistArgs");
 const DeleteOneChecklistArgs_1 = require("./args/DeleteOneChecklistArgs");
 const FindFirstChecklistArgs_1 = require("./args/FindFirstChecklistArgs");
+const FindFirstChecklistOrThrowArgs_1 = require("./args/FindFirstChecklistOrThrowArgs");
 const FindManyChecklistArgs_1 = require("./args/FindManyChecklistArgs");
 const FindUniqueChecklistArgs_1 = require("./args/FindUniqueChecklistArgs");
+const FindUniqueChecklistOrThrowArgs_1 = require("./args/FindUniqueChecklistOrThrowArgs");
 const GroupByChecklistArgs_1 = require("./args/GroupByChecklistArgs");
 const UpdateManyChecklistArgs_1 = require("./args/UpdateManyChecklistArgs");
 const UpdateOneChecklistArgs_1 = require("./args/UpdateOneChecklistArgs");
@@ -63,6 +65,13 @@ let ChecklistCrudResolver = class ChecklistCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstChecklistOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).checklist.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async checklists(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).checklist.findMany({
@@ -73,6 +82,13 @@ let ChecklistCrudResolver = class ChecklistCrudResolver {
     async checklist(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).checklist.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async getChecklist(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).checklist.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], ChecklistCrudResolver.prototype, "findFirstChecklist", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Checklist_1.Checklist, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstChecklistOrThrowArgs_1.FindFirstChecklistOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ChecklistCrudResolver.prototype, "findFirstChecklistOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Checklist_1.Checklist], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueChecklistArgs_1.FindUniqueChecklistArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ChecklistCrudResolver.prototype, "checklist", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Checklist_1.Checklist, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueChecklistOrThrowArgs_1.FindUniqueChecklistOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ChecklistCrudResolver.prototype, "getChecklist", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [ChecklistGroupBy_1.ChecklistGroupBy], {
         nullable: false

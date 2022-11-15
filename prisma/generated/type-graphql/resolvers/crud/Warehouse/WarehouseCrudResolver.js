@@ -10,8 +10,10 @@ const CreateOneWarehouseArgs_1 = require("./args/CreateOneWarehouseArgs");
 const DeleteManyWarehouseArgs_1 = require("./args/DeleteManyWarehouseArgs");
 const DeleteOneWarehouseArgs_1 = require("./args/DeleteOneWarehouseArgs");
 const FindFirstWarehouseArgs_1 = require("./args/FindFirstWarehouseArgs");
+const FindFirstWarehouseOrThrowArgs_1 = require("./args/FindFirstWarehouseOrThrowArgs");
 const FindManyWarehouseArgs_1 = require("./args/FindManyWarehouseArgs");
 const FindUniqueWarehouseArgs_1 = require("./args/FindUniqueWarehouseArgs");
+const FindUniqueWarehouseOrThrowArgs_1 = require("./args/FindUniqueWarehouseOrThrowArgs");
 const GroupByWarehouseArgs_1 = require("./args/GroupByWarehouseArgs");
 const UpdateManyWarehouseArgs_1 = require("./args/UpdateManyWarehouseArgs");
 const UpdateOneWarehouseArgs_1 = require("./args/UpdateOneWarehouseArgs");
@@ -63,6 +65,13 @@ let WarehouseCrudResolver = class WarehouseCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstWarehouseOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).warehouse.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async warehouses(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).warehouse.findMany({
@@ -73,6 +82,13 @@ let WarehouseCrudResolver = class WarehouseCrudResolver {
     async warehouse(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).warehouse.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async getWarehouse(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).warehouse.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], WarehouseCrudResolver.prototype, "findFirstWarehouse", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Warehouse_1.Warehouse, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstWarehouseOrThrowArgs_1.FindFirstWarehouseOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], WarehouseCrudResolver.prototype, "findFirstWarehouseOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Warehouse_1.Warehouse], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueWarehouseArgs_1.FindUniqueWarehouseArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], WarehouseCrudResolver.prototype, "warehouse", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Warehouse_1.Warehouse, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueWarehouseOrThrowArgs_1.FindUniqueWarehouseOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], WarehouseCrudResolver.prototype, "getWarehouse", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [WarehouseGroupBy_1.WarehouseGroupBy], {
         nullable: false

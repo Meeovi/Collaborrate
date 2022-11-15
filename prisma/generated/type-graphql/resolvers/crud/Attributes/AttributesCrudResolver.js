@@ -10,8 +10,10 @@ const CreateOneAttributesArgs_1 = require("./args/CreateOneAttributesArgs");
 const DeleteManyAttributesArgs_1 = require("./args/DeleteManyAttributesArgs");
 const DeleteOneAttributesArgs_1 = require("./args/DeleteOneAttributesArgs");
 const FindFirstAttributesArgs_1 = require("./args/FindFirstAttributesArgs");
+const FindFirstAttributesOrThrowArgs_1 = require("./args/FindFirstAttributesOrThrowArgs");
 const FindManyAttributesArgs_1 = require("./args/FindManyAttributesArgs");
 const FindUniqueAttributesArgs_1 = require("./args/FindUniqueAttributesArgs");
+const FindUniqueAttributesOrThrowArgs_1 = require("./args/FindUniqueAttributesOrThrowArgs");
 const GroupByAttributesArgs_1 = require("./args/GroupByAttributesArgs");
 const UpdateManyAttributesArgs_1 = require("./args/UpdateManyAttributesArgs");
 const UpdateOneAttributesArgs_1 = require("./args/UpdateOneAttributesArgs");
@@ -63,6 +65,13 @@ let AttributesCrudResolver = class AttributesCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstAttributesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).attributes.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyAttributes(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).attributes.findMany({
@@ -73,6 +82,13 @@ let AttributesCrudResolver = class AttributesCrudResolver {
     async findUniqueAttributes(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).attributes.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueAttributesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).attributes.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], AttributesCrudResolver.prototype, "findFirstAttributes", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Attributes_1.Attributes, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstAttributesOrThrowArgs_1.FindFirstAttributesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], AttributesCrudResolver.prototype, "findFirstAttributesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Attributes_1.Attributes], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueAttributesArgs_1.FindUniqueAttributesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], AttributesCrudResolver.prototype, "findUniqueAttributes", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Attributes_1.Attributes, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueAttributesOrThrowArgs_1.FindUniqueAttributesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], AttributesCrudResolver.prototype, "findUniqueAttributesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [AttributesGroupBy_1.AttributesGroupBy], {
         nullable: false

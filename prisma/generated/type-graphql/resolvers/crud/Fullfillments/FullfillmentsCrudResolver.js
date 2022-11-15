@@ -10,8 +10,10 @@ const CreateOneFullfillmentsArgs_1 = require("./args/CreateOneFullfillmentsArgs"
 const DeleteManyFullfillmentsArgs_1 = require("./args/DeleteManyFullfillmentsArgs");
 const DeleteOneFullfillmentsArgs_1 = require("./args/DeleteOneFullfillmentsArgs");
 const FindFirstFullfillmentsArgs_1 = require("./args/FindFirstFullfillmentsArgs");
+const FindFirstFullfillmentsOrThrowArgs_1 = require("./args/FindFirstFullfillmentsOrThrowArgs");
 const FindManyFullfillmentsArgs_1 = require("./args/FindManyFullfillmentsArgs");
 const FindUniqueFullfillmentsArgs_1 = require("./args/FindUniqueFullfillmentsArgs");
+const FindUniqueFullfillmentsOrThrowArgs_1 = require("./args/FindUniqueFullfillmentsOrThrowArgs");
 const GroupByFullfillmentsArgs_1 = require("./args/GroupByFullfillmentsArgs");
 const UpdateManyFullfillmentsArgs_1 = require("./args/UpdateManyFullfillmentsArgs");
 const UpdateOneFullfillmentsArgs_1 = require("./args/UpdateOneFullfillmentsArgs");
@@ -63,6 +65,13 @@ let FullfillmentsCrudResolver = class FullfillmentsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstFullfillmentsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).fullfillments.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyFullfillments(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).fullfillments.findMany({
@@ -73,6 +82,13 @@ let FullfillmentsCrudResolver = class FullfillmentsCrudResolver {
     async findUniqueFullfillments(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).fullfillments.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueFullfillmentsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).fullfillments.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], FullfillmentsCrudResolver.prototype, "findFirstFullfillments", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Fullfillments_1.Fullfillments, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstFullfillmentsOrThrowArgs_1.FindFirstFullfillmentsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], FullfillmentsCrudResolver.prototype, "findFirstFullfillmentsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Fullfillments_1.Fullfillments], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueFullfillmentsArgs_1.FindUniqueFullfillmentsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], FullfillmentsCrudResolver.prototype, "findUniqueFullfillments", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Fullfillments_1.Fullfillments, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueFullfillmentsOrThrowArgs_1.FindUniqueFullfillmentsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], FullfillmentsCrudResolver.prototype, "findUniqueFullfillmentsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [FullfillmentsGroupBy_1.FullfillmentsGroupBy], {
         nullable: false

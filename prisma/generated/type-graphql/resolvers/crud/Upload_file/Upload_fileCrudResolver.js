@@ -10,8 +10,10 @@ const CreateOneUpload_fileArgs_1 = require("./args/CreateOneUpload_fileArgs");
 const DeleteManyUpload_fileArgs_1 = require("./args/DeleteManyUpload_fileArgs");
 const DeleteOneUpload_fileArgs_1 = require("./args/DeleteOneUpload_fileArgs");
 const FindFirstUpload_fileArgs_1 = require("./args/FindFirstUpload_fileArgs");
+const FindFirstUpload_fileOrThrowArgs_1 = require("./args/FindFirstUpload_fileOrThrowArgs");
 const FindManyUpload_fileArgs_1 = require("./args/FindManyUpload_fileArgs");
 const FindUniqueUpload_fileArgs_1 = require("./args/FindUniqueUpload_fileArgs");
+const FindUniqueUpload_fileOrThrowArgs_1 = require("./args/FindUniqueUpload_fileOrThrowArgs");
 const GroupByUpload_fileArgs_1 = require("./args/GroupByUpload_fileArgs");
 const UpdateManyUpload_fileArgs_1 = require("./args/UpdateManyUpload_fileArgs");
 const UpdateOneUpload_fileArgs_1 = require("./args/UpdateOneUpload_fileArgs");
@@ -63,6 +65,13 @@ let Upload_fileCrudResolver = class Upload_fileCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstUpload_fileOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).upload_file.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async upload_files(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).upload_file.findMany({
@@ -73,6 +82,13 @@ let Upload_fileCrudResolver = class Upload_fileCrudResolver {
     async upload_file(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).upload_file.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async getUpload_file(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).upload_file.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], Upload_fileCrudResolver.prototype, "findFirstUpload_file", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Upload_file_1.Upload_file, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstUpload_fileOrThrowArgs_1.FindFirstUpload_fileOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], Upload_fileCrudResolver.prototype, "findFirstUpload_fileOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Upload_file_1.Upload_file], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueUpload_fileArgs_1.FindUniqueUpload_fileArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], Upload_fileCrudResolver.prototype, "upload_file", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Upload_file_1.Upload_file, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueUpload_fileOrThrowArgs_1.FindUniqueUpload_fileOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], Upload_fileCrudResolver.prototype, "getUpload_file", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Upload_fileGroupBy_1.Upload_fileGroupBy], {
         nullable: false

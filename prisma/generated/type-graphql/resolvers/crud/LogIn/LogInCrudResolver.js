@@ -10,8 +10,10 @@ const CreateOneLogInArgs_1 = require("./args/CreateOneLogInArgs");
 const DeleteManyLogInArgs_1 = require("./args/DeleteManyLogInArgs");
 const DeleteOneLogInArgs_1 = require("./args/DeleteOneLogInArgs");
 const FindFirstLogInArgs_1 = require("./args/FindFirstLogInArgs");
+const FindFirstLogInOrThrowArgs_1 = require("./args/FindFirstLogInOrThrowArgs");
 const FindManyLogInArgs_1 = require("./args/FindManyLogInArgs");
 const FindUniqueLogInArgs_1 = require("./args/FindUniqueLogInArgs");
+const FindUniqueLogInOrThrowArgs_1 = require("./args/FindUniqueLogInOrThrowArgs");
 const GroupByLogInArgs_1 = require("./args/GroupByLogInArgs");
 const UpdateManyLogInArgs_1 = require("./args/UpdateManyLogInArgs");
 const UpdateOneLogInArgs_1 = require("./args/UpdateOneLogInArgs");
@@ -63,6 +65,13 @@ let LogInCrudResolver = class LogInCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstLogInOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).logIn.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async logIns(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).logIn.findMany({
@@ -73,6 +82,13 @@ let LogInCrudResolver = class LogInCrudResolver {
     async logIn(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).logIn.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async getLogIn(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).logIn.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], LogInCrudResolver.prototype, "findFirstLogIn", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => LogIn_1.LogIn, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstLogInOrThrowArgs_1.FindFirstLogInOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], LogInCrudResolver.prototype, "findFirstLogInOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [LogIn_1.LogIn], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueLogInArgs_1.FindUniqueLogInArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], LogInCrudResolver.prototype, "logIn", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => LogIn_1.LogIn, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueLogInOrThrowArgs_1.FindUniqueLogInOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], LogInCrudResolver.prototype, "getLogIn", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [LogInGroupBy_1.LogInGroupBy], {
         nullable: false

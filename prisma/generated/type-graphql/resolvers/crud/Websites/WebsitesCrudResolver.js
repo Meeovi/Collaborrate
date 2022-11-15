@@ -10,8 +10,10 @@ const CreateOneWebsitesArgs_1 = require("./args/CreateOneWebsitesArgs");
 const DeleteManyWebsitesArgs_1 = require("./args/DeleteManyWebsitesArgs");
 const DeleteOneWebsitesArgs_1 = require("./args/DeleteOneWebsitesArgs");
 const FindFirstWebsitesArgs_1 = require("./args/FindFirstWebsitesArgs");
+const FindFirstWebsitesOrThrowArgs_1 = require("./args/FindFirstWebsitesOrThrowArgs");
 const FindManyWebsitesArgs_1 = require("./args/FindManyWebsitesArgs");
 const FindUniqueWebsitesArgs_1 = require("./args/FindUniqueWebsitesArgs");
+const FindUniqueWebsitesOrThrowArgs_1 = require("./args/FindUniqueWebsitesOrThrowArgs");
 const GroupByWebsitesArgs_1 = require("./args/GroupByWebsitesArgs");
 const UpdateManyWebsitesArgs_1 = require("./args/UpdateManyWebsitesArgs");
 const UpdateOneWebsitesArgs_1 = require("./args/UpdateOneWebsitesArgs");
@@ -63,6 +65,13 @@ let WebsitesCrudResolver = class WebsitesCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstWebsitesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).websites.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyWebsites(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).websites.findMany({
@@ -73,6 +82,13 @@ let WebsitesCrudResolver = class WebsitesCrudResolver {
     async findUniqueWebsites(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).websites.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueWebsitesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).websites.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], WebsitesCrudResolver.prototype, "findFirstWebsites", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Websites_1.Websites, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstWebsitesOrThrowArgs_1.FindFirstWebsitesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], WebsitesCrudResolver.prototype, "findFirstWebsitesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Websites_1.Websites], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueWebsitesArgs_1.FindUniqueWebsitesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], WebsitesCrudResolver.prototype, "findUniqueWebsites", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Websites_1.Websites, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueWebsitesOrThrowArgs_1.FindUniqueWebsitesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], WebsitesCrudResolver.prototype, "findUniqueWebsitesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [WebsitesGroupBy_1.WebsitesGroupBy], {
         nullable: false

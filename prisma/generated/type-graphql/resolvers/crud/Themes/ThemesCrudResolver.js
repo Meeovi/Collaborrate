@@ -10,8 +10,10 @@ const CreateOneThemesArgs_1 = require("./args/CreateOneThemesArgs");
 const DeleteManyThemesArgs_1 = require("./args/DeleteManyThemesArgs");
 const DeleteOneThemesArgs_1 = require("./args/DeleteOneThemesArgs");
 const FindFirstThemesArgs_1 = require("./args/FindFirstThemesArgs");
+const FindFirstThemesOrThrowArgs_1 = require("./args/FindFirstThemesOrThrowArgs");
 const FindManyThemesArgs_1 = require("./args/FindManyThemesArgs");
 const FindUniqueThemesArgs_1 = require("./args/FindUniqueThemesArgs");
+const FindUniqueThemesOrThrowArgs_1 = require("./args/FindUniqueThemesOrThrowArgs");
 const GroupByThemesArgs_1 = require("./args/GroupByThemesArgs");
 const UpdateManyThemesArgs_1 = require("./args/UpdateManyThemesArgs");
 const UpdateOneThemesArgs_1 = require("./args/UpdateOneThemesArgs");
@@ -63,6 +65,13 @@ let ThemesCrudResolver = class ThemesCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstThemesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).themes.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyThemes(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).themes.findMany({
@@ -73,6 +82,13 @@ let ThemesCrudResolver = class ThemesCrudResolver {
     async findUniqueThemes(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).themes.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueThemesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).themes.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], ThemesCrudResolver.prototype, "findFirstThemes", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Themes_1.Themes, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstThemesOrThrowArgs_1.FindFirstThemesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ThemesCrudResolver.prototype, "findFirstThemesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Themes_1.Themes], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueThemesArgs_1.FindUniqueThemesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ThemesCrudResolver.prototype, "findUniqueThemes", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Themes_1.Themes, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueThemesOrThrowArgs_1.FindUniqueThemesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ThemesCrudResolver.prototype, "findUniqueThemesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [ThemesGroupBy_1.ThemesGroupBy], {
         nullable: false

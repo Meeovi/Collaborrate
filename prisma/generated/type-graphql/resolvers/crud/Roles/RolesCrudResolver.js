@@ -10,8 +10,10 @@ const CreateOneRolesArgs_1 = require("./args/CreateOneRolesArgs");
 const DeleteManyRolesArgs_1 = require("./args/DeleteManyRolesArgs");
 const DeleteOneRolesArgs_1 = require("./args/DeleteOneRolesArgs");
 const FindFirstRolesArgs_1 = require("./args/FindFirstRolesArgs");
+const FindFirstRolesOrThrowArgs_1 = require("./args/FindFirstRolesOrThrowArgs");
 const FindManyRolesArgs_1 = require("./args/FindManyRolesArgs");
 const FindUniqueRolesArgs_1 = require("./args/FindUniqueRolesArgs");
+const FindUniqueRolesOrThrowArgs_1 = require("./args/FindUniqueRolesOrThrowArgs");
 const GroupByRolesArgs_1 = require("./args/GroupByRolesArgs");
 const UpdateManyRolesArgs_1 = require("./args/UpdateManyRolesArgs");
 const UpdateOneRolesArgs_1 = require("./args/UpdateOneRolesArgs");
@@ -63,6 +65,13 @@ let RolesCrudResolver = class RolesCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstRolesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).roles.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyRoles(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).roles.findMany({
@@ -73,6 +82,13 @@ let RolesCrudResolver = class RolesCrudResolver {
     async findUniqueRoles(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).roles.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueRolesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).roles.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], RolesCrudResolver.prototype, "findFirstRoles", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Roles_1.Roles, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstRolesOrThrowArgs_1.FindFirstRolesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], RolesCrudResolver.prototype, "findFirstRolesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Roles_1.Roles], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueRolesArgs_1.FindUniqueRolesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], RolesCrudResolver.prototype, "findUniqueRoles", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Roles_1.Roles, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueRolesOrThrowArgs_1.FindUniqueRolesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], RolesCrudResolver.prototype, "findUniqueRolesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [RolesGroupBy_1.RolesGroupBy], {
         nullable: false

@@ -10,8 +10,10 @@ const CreateOneDashboardsArgs_1 = require("./args/CreateOneDashboardsArgs");
 const DeleteManyDashboardsArgs_1 = require("./args/DeleteManyDashboardsArgs");
 const DeleteOneDashboardsArgs_1 = require("./args/DeleteOneDashboardsArgs");
 const FindFirstDashboardsArgs_1 = require("./args/FindFirstDashboardsArgs");
+const FindFirstDashboardsOrThrowArgs_1 = require("./args/FindFirstDashboardsOrThrowArgs");
 const FindManyDashboardsArgs_1 = require("./args/FindManyDashboardsArgs");
 const FindUniqueDashboardsArgs_1 = require("./args/FindUniqueDashboardsArgs");
+const FindUniqueDashboardsOrThrowArgs_1 = require("./args/FindUniqueDashboardsOrThrowArgs");
 const GroupByDashboardsArgs_1 = require("./args/GroupByDashboardsArgs");
 const UpdateManyDashboardsArgs_1 = require("./args/UpdateManyDashboardsArgs");
 const UpdateOneDashboardsArgs_1 = require("./args/UpdateOneDashboardsArgs");
@@ -63,6 +65,13 @@ let DashboardsCrudResolver = class DashboardsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstDashboardsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).dashboards.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyDashboards(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).dashboards.findMany({
@@ -73,6 +82,13 @@ let DashboardsCrudResolver = class DashboardsCrudResolver {
     async findUniqueDashboards(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).dashboards.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueDashboardsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).dashboards.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], DashboardsCrudResolver.prototype, "findFirstDashboards", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Dashboards_1.Dashboards, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstDashboardsOrThrowArgs_1.FindFirstDashboardsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], DashboardsCrudResolver.prototype, "findFirstDashboardsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Dashboards_1.Dashboards], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueDashboardsArgs_1.FindUniqueDashboardsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], DashboardsCrudResolver.prototype, "findUniqueDashboards", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Dashboards_1.Dashboards, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueDashboardsOrThrowArgs_1.FindUniqueDashboardsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], DashboardsCrudResolver.prototype, "findUniqueDashboardsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [DashboardsGroupBy_1.DashboardsGroupBy], {
         nullable: false

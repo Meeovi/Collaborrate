@@ -10,8 +10,10 @@ const CreateOneUsersArgs_1 = require("./args/CreateOneUsersArgs");
 const DeleteManyUsersArgs_1 = require("./args/DeleteManyUsersArgs");
 const DeleteOneUsersArgs_1 = require("./args/DeleteOneUsersArgs");
 const FindFirstUsersArgs_1 = require("./args/FindFirstUsersArgs");
+const FindFirstUsersOrThrowArgs_1 = require("./args/FindFirstUsersOrThrowArgs");
 const FindManyUsersArgs_1 = require("./args/FindManyUsersArgs");
 const FindUniqueUsersArgs_1 = require("./args/FindUniqueUsersArgs");
+const FindUniqueUsersOrThrowArgs_1 = require("./args/FindUniqueUsersOrThrowArgs");
 const GroupByUsersArgs_1 = require("./args/GroupByUsersArgs");
 const UpdateManyUsersArgs_1 = require("./args/UpdateManyUsersArgs");
 const UpdateOneUsersArgs_1 = require("./args/UpdateOneUsersArgs");
@@ -63,6 +65,13 @@ let UsersCrudResolver = class UsersCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstUsersOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).users.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyUsers(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).users.findMany({
@@ -73,6 +82,13 @@ let UsersCrudResolver = class UsersCrudResolver {
     async findUniqueUsers(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).users.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueUsersOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).users.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], UsersCrudResolver.prototype, "findFirstUsers", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Users_1.Users, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstUsersOrThrowArgs_1.FindFirstUsersOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], UsersCrudResolver.prototype, "findFirstUsersOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Users_1.Users], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueUsersArgs_1.FindUniqueUsersArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], UsersCrudResolver.prototype, "findUniqueUsers", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Users_1.Users, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueUsersOrThrowArgs_1.FindUniqueUsersOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], UsersCrudResolver.prototype, "findUniqueUsersOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [UsersGroupBy_1.UsersGroupBy], {
         nullable: false

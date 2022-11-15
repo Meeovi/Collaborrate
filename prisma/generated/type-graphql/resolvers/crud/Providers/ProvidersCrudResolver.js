@@ -10,8 +10,10 @@ const CreateOneProvidersArgs_1 = require("./args/CreateOneProvidersArgs");
 const DeleteManyProvidersArgs_1 = require("./args/DeleteManyProvidersArgs");
 const DeleteOneProvidersArgs_1 = require("./args/DeleteOneProvidersArgs");
 const FindFirstProvidersArgs_1 = require("./args/FindFirstProvidersArgs");
+const FindFirstProvidersOrThrowArgs_1 = require("./args/FindFirstProvidersOrThrowArgs");
 const FindManyProvidersArgs_1 = require("./args/FindManyProvidersArgs");
 const FindUniqueProvidersArgs_1 = require("./args/FindUniqueProvidersArgs");
+const FindUniqueProvidersOrThrowArgs_1 = require("./args/FindUniqueProvidersOrThrowArgs");
 const GroupByProvidersArgs_1 = require("./args/GroupByProvidersArgs");
 const UpdateManyProvidersArgs_1 = require("./args/UpdateManyProvidersArgs");
 const UpdateOneProvidersArgs_1 = require("./args/UpdateOneProvidersArgs");
@@ -63,6 +65,13 @@ let ProvidersCrudResolver = class ProvidersCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstProvidersOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).providers.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyProviders(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).providers.findMany({
@@ -73,6 +82,13 @@ let ProvidersCrudResolver = class ProvidersCrudResolver {
     async findUniqueProviders(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).providers.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueProvidersOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).providers.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], ProvidersCrudResolver.prototype, "findFirstProviders", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Providers_1.Providers, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstProvidersOrThrowArgs_1.FindFirstProvidersOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ProvidersCrudResolver.prototype, "findFirstProvidersOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Providers_1.Providers], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueProvidersArgs_1.FindUniqueProvidersArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ProvidersCrudResolver.prototype, "findUniqueProviders", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Providers_1.Providers, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueProvidersOrThrowArgs_1.FindUniqueProvidersOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ProvidersCrudResolver.prototype, "findUniqueProvidersOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [ProvidersGroupBy_1.ProvidersGroupBy], {
         nullable: false

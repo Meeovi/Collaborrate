@@ -10,8 +10,10 @@ const CreateOneZonesArgs_1 = require("./args/CreateOneZonesArgs");
 const DeleteManyZonesArgs_1 = require("./args/DeleteManyZonesArgs");
 const DeleteOneZonesArgs_1 = require("./args/DeleteOneZonesArgs");
 const FindFirstZonesArgs_1 = require("./args/FindFirstZonesArgs");
+const FindFirstZonesOrThrowArgs_1 = require("./args/FindFirstZonesOrThrowArgs");
 const FindManyZonesArgs_1 = require("./args/FindManyZonesArgs");
 const FindUniqueZonesArgs_1 = require("./args/FindUniqueZonesArgs");
+const FindUniqueZonesOrThrowArgs_1 = require("./args/FindUniqueZonesOrThrowArgs");
 const GroupByZonesArgs_1 = require("./args/GroupByZonesArgs");
 const UpdateManyZonesArgs_1 = require("./args/UpdateManyZonesArgs");
 const UpdateOneZonesArgs_1 = require("./args/UpdateOneZonesArgs");
@@ -63,6 +65,13 @@ let ZonesCrudResolver = class ZonesCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstZonesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).zones.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyZones(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).zones.findMany({
@@ -73,6 +82,13 @@ let ZonesCrudResolver = class ZonesCrudResolver {
     async findUniqueZones(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).zones.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueZonesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).zones.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], ZonesCrudResolver.prototype, "findFirstZones", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Zones_1.Zones, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstZonesOrThrowArgs_1.FindFirstZonesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ZonesCrudResolver.prototype, "findFirstZonesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Zones_1.Zones], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueZonesArgs_1.FindUniqueZonesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ZonesCrudResolver.prototype, "findUniqueZones", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Zones_1.Zones, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueZonesOrThrowArgs_1.FindUniqueZonesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ZonesCrudResolver.prototype, "findUniqueZonesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [ZonesGroupBy_1.ZonesGroupBy], {
         nullable: false

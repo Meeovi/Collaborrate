@@ -10,8 +10,10 @@ const CreateOneInvoicesArgs_1 = require("./args/CreateOneInvoicesArgs");
 const DeleteManyInvoicesArgs_1 = require("./args/DeleteManyInvoicesArgs");
 const DeleteOneInvoicesArgs_1 = require("./args/DeleteOneInvoicesArgs");
 const FindFirstInvoicesArgs_1 = require("./args/FindFirstInvoicesArgs");
+const FindFirstInvoicesOrThrowArgs_1 = require("./args/FindFirstInvoicesOrThrowArgs");
 const FindManyInvoicesArgs_1 = require("./args/FindManyInvoicesArgs");
 const FindUniqueInvoicesArgs_1 = require("./args/FindUniqueInvoicesArgs");
+const FindUniqueInvoicesOrThrowArgs_1 = require("./args/FindUniqueInvoicesOrThrowArgs");
 const GroupByInvoicesArgs_1 = require("./args/GroupByInvoicesArgs");
 const UpdateManyInvoicesArgs_1 = require("./args/UpdateManyInvoicesArgs");
 const UpdateOneInvoicesArgs_1 = require("./args/UpdateOneInvoicesArgs");
@@ -63,6 +65,13 @@ let InvoicesCrudResolver = class InvoicesCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstInvoicesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).invoices.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyInvoices(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).invoices.findMany({
@@ -73,6 +82,13 @@ let InvoicesCrudResolver = class InvoicesCrudResolver {
     async findUniqueInvoices(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).invoices.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueInvoicesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).invoices.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], InvoicesCrudResolver.prototype, "findFirstInvoices", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Invoices_1.Invoices, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstInvoicesOrThrowArgs_1.FindFirstInvoicesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], InvoicesCrudResolver.prototype, "findFirstInvoicesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Invoices_1.Invoices], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueInvoicesArgs_1.FindUniqueInvoicesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], InvoicesCrudResolver.prototype, "findUniqueInvoices", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Invoices_1.Invoices, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueInvoicesOrThrowArgs_1.FindUniqueInvoicesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], InvoicesCrudResolver.prototype, "findUniqueInvoicesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [InvoicesGroupBy_1.InvoicesGroupBy], {
         nullable: false

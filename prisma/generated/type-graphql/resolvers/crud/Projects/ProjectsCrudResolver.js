@@ -10,8 +10,10 @@ const CreateOneProjectsArgs_1 = require("./args/CreateOneProjectsArgs");
 const DeleteManyProjectsArgs_1 = require("./args/DeleteManyProjectsArgs");
 const DeleteOneProjectsArgs_1 = require("./args/DeleteOneProjectsArgs");
 const FindFirstProjectsArgs_1 = require("./args/FindFirstProjectsArgs");
+const FindFirstProjectsOrThrowArgs_1 = require("./args/FindFirstProjectsOrThrowArgs");
 const FindManyProjectsArgs_1 = require("./args/FindManyProjectsArgs");
 const FindUniqueProjectsArgs_1 = require("./args/FindUniqueProjectsArgs");
+const FindUniqueProjectsOrThrowArgs_1 = require("./args/FindUniqueProjectsOrThrowArgs");
 const GroupByProjectsArgs_1 = require("./args/GroupByProjectsArgs");
 const UpdateManyProjectsArgs_1 = require("./args/UpdateManyProjectsArgs");
 const UpdateOneProjectsArgs_1 = require("./args/UpdateOneProjectsArgs");
@@ -63,6 +65,13 @@ let ProjectsCrudResolver = class ProjectsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstProjectsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).projects.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyProjects(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).projects.findMany({
@@ -73,6 +82,13 @@ let ProjectsCrudResolver = class ProjectsCrudResolver {
     async findUniqueProjects(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).projects.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueProjectsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).projects.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], ProjectsCrudResolver.prototype, "findFirstProjects", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Projects_1.Projects, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstProjectsOrThrowArgs_1.FindFirstProjectsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ProjectsCrudResolver.prototype, "findFirstProjectsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Projects_1.Projects], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueProjectsArgs_1.FindUniqueProjectsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ProjectsCrudResolver.prototype, "findUniqueProjects", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Projects_1.Projects, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueProjectsOrThrowArgs_1.FindUniqueProjectsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ProjectsCrudResolver.prototype, "findUniqueProjectsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [ProjectsGroupBy_1.ProjectsGroupBy], {
         nullable: false

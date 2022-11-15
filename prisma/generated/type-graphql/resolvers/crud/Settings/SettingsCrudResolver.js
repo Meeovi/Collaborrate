@@ -10,8 +10,10 @@ const CreateOneSettingsArgs_1 = require("./args/CreateOneSettingsArgs");
 const DeleteManySettingsArgs_1 = require("./args/DeleteManySettingsArgs");
 const DeleteOneSettingsArgs_1 = require("./args/DeleteOneSettingsArgs");
 const FindFirstSettingsArgs_1 = require("./args/FindFirstSettingsArgs");
+const FindFirstSettingsOrThrowArgs_1 = require("./args/FindFirstSettingsOrThrowArgs");
 const FindManySettingsArgs_1 = require("./args/FindManySettingsArgs");
 const FindUniqueSettingsArgs_1 = require("./args/FindUniqueSettingsArgs");
+const FindUniqueSettingsOrThrowArgs_1 = require("./args/FindUniqueSettingsOrThrowArgs");
 const GroupBySettingsArgs_1 = require("./args/GroupBySettingsArgs");
 const UpdateManySettingsArgs_1 = require("./args/UpdateManySettingsArgs");
 const UpdateOneSettingsArgs_1 = require("./args/UpdateOneSettingsArgs");
@@ -63,6 +65,13 @@ let SettingsCrudResolver = class SettingsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstSettingsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).settings.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManySettings(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).settings.findMany({
@@ -73,6 +82,13 @@ let SettingsCrudResolver = class SettingsCrudResolver {
     async findUniqueSettings(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).settings.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueSettingsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).settings.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], SettingsCrudResolver.prototype, "findFirstSettings", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Settings_1.Settings, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstSettingsOrThrowArgs_1.FindFirstSettingsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], SettingsCrudResolver.prototype, "findFirstSettingsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Settings_1.Settings], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueSettingsArgs_1.FindUniqueSettingsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], SettingsCrudResolver.prototype, "findUniqueSettings", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Settings_1.Settings, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueSettingsOrThrowArgs_1.FindUniqueSettingsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], SettingsCrudResolver.prototype, "findUniqueSettingsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [SettingsGroupBy_1.SettingsGroupBy], {
         nullable: false

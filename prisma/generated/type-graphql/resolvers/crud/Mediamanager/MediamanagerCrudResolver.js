@@ -10,8 +10,10 @@ const CreateOneMediamanagerArgs_1 = require("./args/CreateOneMediamanagerArgs");
 const DeleteManyMediamanagerArgs_1 = require("./args/DeleteManyMediamanagerArgs");
 const DeleteOneMediamanagerArgs_1 = require("./args/DeleteOneMediamanagerArgs");
 const FindFirstMediamanagerArgs_1 = require("./args/FindFirstMediamanagerArgs");
+const FindFirstMediamanagerOrThrowArgs_1 = require("./args/FindFirstMediamanagerOrThrowArgs");
 const FindManyMediamanagerArgs_1 = require("./args/FindManyMediamanagerArgs");
 const FindUniqueMediamanagerArgs_1 = require("./args/FindUniqueMediamanagerArgs");
+const FindUniqueMediamanagerOrThrowArgs_1 = require("./args/FindUniqueMediamanagerOrThrowArgs");
 const GroupByMediamanagerArgs_1 = require("./args/GroupByMediamanagerArgs");
 const UpdateManyMediamanagerArgs_1 = require("./args/UpdateManyMediamanagerArgs");
 const UpdateOneMediamanagerArgs_1 = require("./args/UpdateOneMediamanagerArgs");
@@ -63,6 +65,13 @@ let MediamanagerCrudResolver = class MediamanagerCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstMediamanagerOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).mediamanager.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async mediamanagers(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).mediamanager.findMany({
@@ -73,6 +82,13 @@ let MediamanagerCrudResolver = class MediamanagerCrudResolver {
     async mediamanager(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).mediamanager.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async getMediamanager(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).mediamanager.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], MediamanagerCrudResolver.prototype, "findFirstMediamanager", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Mediamanager_1.Mediamanager, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstMediamanagerOrThrowArgs_1.FindFirstMediamanagerOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], MediamanagerCrudResolver.prototype, "findFirstMediamanagerOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Mediamanager_1.Mediamanager], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueMediamanagerArgs_1.FindUniqueMediamanagerArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], MediamanagerCrudResolver.prototype, "mediamanager", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Mediamanager_1.Mediamanager, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueMediamanagerOrThrowArgs_1.FindUniqueMediamanagerOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], MediamanagerCrudResolver.prototype, "getMediamanager", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [MediamanagerGroupBy_1.MediamanagerGroupBy], {
         nullable: false

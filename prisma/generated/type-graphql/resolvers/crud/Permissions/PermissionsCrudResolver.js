@@ -10,8 +10,10 @@ const CreateOnePermissionsArgs_1 = require("./args/CreateOnePermissionsArgs");
 const DeleteManyPermissionsArgs_1 = require("./args/DeleteManyPermissionsArgs");
 const DeleteOnePermissionsArgs_1 = require("./args/DeleteOnePermissionsArgs");
 const FindFirstPermissionsArgs_1 = require("./args/FindFirstPermissionsArgs");
+const FindFirstPermissionsOrThrowArgs_1 = require("./args/FindFirstPermissionsOrThrowArgs");
 const FindManyPermissionsArgs_1 = require("./args/FindManyPermissionsArgs");
 const FindUniquePermissionsArgs_1 = require("./args/FindUniquePermissionsArgs");
+const FindUniquePermissionsOrThrowArgs_1 = require("./args/FindUniquePermissionsOrThrowArgs");
 const GroupByPermissionsArgs_1 = require("./args/GroupByPermissionsArgs");
 const UpdateManyPermissionsArgs_1 = require("./args/UpdateManyPermissionsArgs");
 const UpdateOnePermissionsArgs_1 = require("./args/UpdateOnePermissionsArgs");
@@ -63,6 +65,13 @@ let PermissionsCrudResolver = class PermissionsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstPermissionsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).permissions.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyPermissions(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).permissions.findMany({
@@ -73,6 +82,13 @@ let PermissionsCrudResolver = class PermissionsCrudResolver {
     async findUniquePermissions(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).permissions.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniquePermissionsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).permissions.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], PermissionsCrudResolver.prototype, "findFirstPermissions", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Permissions_1.Permissions, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstPermissionsOrThrowArgs_1.FindFirstPermissionsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], PermissionsCrudResolver.prototype, "findFirstPermissionsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Permissions_1.Permissions], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniquePermissionsArgs_1.FindUniquePermissionsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], PermissionsCrudResolver.prototype, "findUniquePermissions", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Permissions_1.Permissions, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniquePermissionsOrThrowArgs_1.FindUniquePermissionsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], PermissionsCrudResolver.prototype, "findUniquePermissionsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [PermissionsGroupBy_1.PermissionsGroupBy], {
         nullable: false

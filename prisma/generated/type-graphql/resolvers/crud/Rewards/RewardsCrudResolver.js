@@ -10,8 +10,10 @@ const CreateOneRewardsArgs_1 = require("./args/CreateOneRewardsArgs");
 const DeleteManyRewardsArgs_1 = require("./args/DeleteManyRewardsArgs");
 const DeleteOneRewardsArgs_1 = require("./args/DeleteOneRewardsArgs");
 const FindFirstRewardsArgs_1 = require("./args/FindFirstRewardsArgs");
+const FindFirstRewardsOrThrowArgs_1 = require("./args/FindFirstRewardsOrThrowArgs");
 const FindManyRewardsArgs_1 = require("./args/FindManyRewardsArgs");
 const FindUniqueRewardsArgs_1 = require("./args/FindUniqueRewardsArgs");
+const FindUniqueRewardsOrThrowArgs_1 = require("./args/FindUniqueRewardsOrThrowArgs");
 const GroupByRewardsArgs_1 = require("./args/GroupByRewardsArgs");
 const UpdateManyRewardsArgs_1 = require("./args/UpdateManyRewardsArgs");
 const UpdateOneRewardsArgs_1 = require("./args/UpdateOneRewardsArgs");
@@ -63,6 +65,13 @@ let RewardsCrudResolver = class RewardsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstRewardsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).rewards.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyRewards(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).rewards.findMany({
@@ -73,6 +82,13 @@ let RewardsCrudResolver = class RewardsCrudResolver {
     async findUniqueRewards(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).rewards.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueRewardsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).rewards.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], RewardsCrudResolver.prototype, "findFirstRewards", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Rewards_1.Rewards, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstRewardsOrThrowArgs_1.FindFirstRewardsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], RewardsCrudResolver.prototype, "findFirstRewardsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Rewards_1.Rewards], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueRewardsArgs_1.FindUniqueRewardsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], RewardsCrudResolver.prototype, "findUniqueRewards", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Rewards_1.Rewards, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueRewardsOrThrowArgs_1.FindUniqueRewardsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], RewardsCrudResolver.prototype, "findUniqueRewardsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [RewardsGroupBy_1.RewardsGroupBy], {
         nullable: false

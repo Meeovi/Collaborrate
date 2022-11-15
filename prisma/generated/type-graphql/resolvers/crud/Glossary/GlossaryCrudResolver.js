@@ -10,8 +10,10 @@ const CreateOneGlossaryArgs_1 = require("./args/CreateOneGlossaryArgs");
 const DeleteManyGlossaryArgs_1 = require("./args/DeleteManyGlossaryArgs");
 const DeleteOneGlossaryArgs_1 = require("./args/DeleteOneGlossaryArgs");
 const FindFirstGlossaryArgs_1 = require("./args/FindFirstGlossaryArgs");
+const FindFirstGlossaryOrThrowArgs_1 = require("./args/FindFirstGlossaryOrThrowArgs");
 const FindManyGlossaryArgs_1 = require("./args/FindManyGlossaryArgs");
 const FindUniqueGlossaryArgs_1 = require("./args/FindUniqueGlossaryArgs");
+const FindUniqueGlossaryOrThrowArgs_1 = require("./args/FindUniqueGlossaryOrThrowArgs");
 const GroupByGlossaryArgs_1 = require("./args/GroupByGlossaryArgs");
 const UpdateManyGlossaryArgs_1 = require("./args/UpdateManyGlossaryArgs");
 const UpdateOneGlossaryArgs_1 = require("./args/UpdateOneGlossaryArgs");
@@ -63,6 +65,13 @@ let GlossaryCrudResolver = class GlossaryCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstGlossaryOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).glossary.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async glossaries(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).glossary.findMany({
@@ -73,6 +82,13 @@ let GlossaryCrudResolver = class GlossaryCrudResolver {
     async glossary(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).glossary.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async getGlossary(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).glossary.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], GlossaryCrudResolver.prototype, "findFirstGlossary", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Glossary_1.Glossary, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstGlossaryOrThrowArgs_1.FindFirstGlossaryOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], GlossaryCrudResolver.prototype, "findFirstGlossaryOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Glossary_1.Glossary], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueGlossaryArgs_1.FindUniqueGlossaryArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], GlossaryCrudResolver.prototype, "glossary", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Glossary_1.Glossary, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueGlossaryOrThrowArgs_1.FindUniqueGlossaryOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], GlossaryCrudResolver.prototype, "getGlossary", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [GlossaryGroupBy_1.GlossaryGroupBy], {
         nullable: false

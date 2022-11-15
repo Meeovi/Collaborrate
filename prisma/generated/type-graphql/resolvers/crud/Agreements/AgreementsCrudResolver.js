@@ -10,8 +10,10 @@ const CreateOneAgreementsArgs_1 = require("./args/CreateOneAgreementsArgs");
 const DeleteManyAgreementsArgs_1 = require("./args/DeleteManyAgreementsArgs");
 const DeleteOneAgreementsArgs_1 = require("./args/DeleteOneAgreementsArgs");
 const FindFirstAgreementsArgs_1 = require("./args/FindFirstAgreementsArgs");
+const FindFirstAgreementsOrThrowArgs_1 = require("./args/FindFirstAgreementsOrThrowArgs");
 const FindManyAgreementsArgs_1 = require("./args/FindManyAgreementsArgs");
 const FindUniqueAgreementsArgs_1 = require("./args/FindUniqueAgreementsArgs");
+const FindUniqueAgreementsOrThrowArgs_1 = require("./args/FindUniqueAgreementsOrThrowArgs");
 const GroupByAgreementsArgs_1 = require("./args/GroupByAgreementsArgs");
 const UpdateManyAgreementsArgs_1 = require("./args/UpdateManyAgreementsArgs");
 const UpdateOneAgreementsArgs_1 = require("./args/UpdateOneAgreementsArgs");
@@ -63,6 +65,13 @@ let AgreementsCrudResolver = class AgreementsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstAgreementsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).agreements.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyAgreements(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).agreements.findMany({
@@ -73,6 +82,13 @@ let AgreementsCrudResolver = class AgreementsCrudResolver {
     async findUniqueAgreements(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).agreements.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueAgreementsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).agreements.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], AgreementsCrudResolver.prototype, "findFirstAgreements", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Agreements_1.Agreements, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstAgreementsOrThrowArgs_1.FindFirstAgreementsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], AgreementsCrudResolver.prototype, "findFirstAgreementsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Agreements_1.Agreements], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueAgreementsArgs_1.FindUniqueAgreementsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], AgreementsCrudResolver.prototype, "findUniqueAgreements", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Agreements_1.Agreements, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueAgreementsOrThrowArgs_1.FindUniqueAgreementsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], AgreementsCrudResolver.prototype, "findUniqueAgreementsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [AgreementsGroupBy_1.AgreementsGroupBy], {
         nullable: false

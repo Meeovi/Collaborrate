@@ -10,8 +10,10 @@ const CreateOnePaymentsArgs_1 = require("./args/CreateOnePaymentsArgs");
 const DeleteManyPaymentsArgs_1 = require("./args/DeleteManyPaymentsArgs");
 const DeleteOnePaymentsArgs_1 = require("./args/DeleteOnePaymentsArgs");
 const FindFirstPaymentsArgs_1 = require("./args/FindFirstPaymentsArgs");
+const FindFirstPaymentsOrThrowArgs_1 = require("./args/FindFirstPaymentsOrThrowArgs");
 const FindManyPaymentsArgs_1 = require("./args/FindManyPaymentsArgs");
 const FindUniquePaymentsArgs_1 = require("./args/FindUniquePaymentsArgs");
+const FindUniquePaymentsOrThrowArgs_1 = require("./args/FindUniquePaymentsOrThrowArgs");
 const GroupByPaymentsArgs_1 = require("./args/GroupByPaymentsArgs");
 const UpdateManyPaymentsArgs_1 = require("./args/UpdateManyPaymentsArgs");
 const UpdateOnePaymentsArgs_1 = require("./args/UpdateOnePaymentsArgs");
@@ -63,6 +65,13 @@ let PaymentsCrudResolver = class PaymentsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstPaymentsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).payments.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyPayments(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).payments.findMany({
@@ -73,6 +82,13 @@ let PaymentsCrudResolver = class PaymentsCrudResolver {
     async findUniquePayments(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).payments.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniquePaymentsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).payments.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], PaymentsCrudResolver.prototype, "findFirstPayments", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Payments_1.Payments, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstPaymentsOrThrowArgs_1.FindFirstPaymentsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], PaymentsCrudResolver.prototype, "findFirstPaymentsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Payments_1.Payments], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniquePaymentsArgs_1.FindUniquePaymentsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], PaymentsCrudResolver.prototype, "findUniquePayments", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Payments_1.Payments, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniquePaymentsOrThrowArgs_1.FindUniquePaymentsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], PaymentsCrudResolver.prototype, "findUniquePaymentsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [PaymentsGroupBy_1.PaymentsGroupBy], {
         nullable: false

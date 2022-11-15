@@ -10,8 +10,10 @@ const CreateOneCollectionsArgs_1 = require("./args/CreateOneCollectionsArgs");
 const DeleteManyCollectionsArgs_1 = require("./args/DeleteManyCollectionsArgs");
 const DeleteOneCollectionsArgs_1 = require("./args/DeleteOneCollectionsArgs");
 const FindFirstCollectionsArgs_1 = require("./args/FindFirstCollectionsArgs");
+const FindFirstCollectionsOrThrowArgs_1 = require("./args/FindFirstCollectionsOrThrowArgs");
 const FindManyCollectionsArgs_1 = require("./args/FindManyCollectionsArgs");
 const FindUniqueCollectionsArgs_1 = require("./args/FindUniqueCollectionsArgs");
+const FindUniqueCollectionsOrThrowArgs_1 = require("./args/FindUniqueCollectionsOrThrowArgs");
 const GroupByCollectionsArgs_1 = require("./args/GroupByCollectionsArgs");
 const UpdateManyCollectionsArgs_1 = require("./args/UpdateManyCollectionsArgs");
 const UpdateOneCollectionsArgs_1 = require("./args/UpdateOneCollectionsArgs");
@@ -63,6 +65,13 @@ let CollectionsCrudResolver = class CollectionsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstCollectionsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).collections.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyCollections(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).collections.findMany({
@@ -73,6 +82,13 @@ let CollectionsCrudResolver = class CollectionsCrudResolver {
     async findUniqueCollections(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).collections.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueCollectionsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).collections.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], CollectionsCrudResolver.prototype, "findFirstCollections", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Collections_1.Collections, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstCollectionsOrThrowArgs_1.FindFirstCollectionsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], CollectionsCrudResolver.prototype, "findFirstCollectionsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Collections_1.Collections], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueCollectionsArgs_1.FindUniqueCollectionsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], CollectionsCrudResolver.prototype, "findUniqueCollections", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Collections_1.Collections, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueCollectionsOrThrowArgs_1.FindUniqueCollectionsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], CollectionsCrudResolver.prototype, "findUniqueCollectionsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [CollectionsGroupBy_1.CollectionsGroupBy], {
         nullable: false

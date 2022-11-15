@@ -10,8 +10,10 @@ const CreateOneSchedulerArgs_1 = require("./args/CreateOneSchedulerArgs");
 const DeleteManySchedulerArgs_1 = require("./args/DeleteManySchedulerArgs");
 const DeleteOneSchedulerArgs_1 = require("./args/DeleteOneSchedulerArgs");
 const FindFirstSchedulerArgs_1 = require("./args/FindFirstSchedulerArgs");
+const FindFirstSchedulerOrThrowArgs_1 = require("./args/FindFirstSchedulerOrThrowArgs");
 const FindManySchedulerArgs_1 = require("./args/FindManySchedulerArgs");
 const FindUniqueSchedulerArgs_1 = require("./args/FindUniqueSchedulerArgs");
+const FindUniqueSchedulerOrThrowArgs_1 = require("./args/FindUniqueSchedulerOrThrowArgs");
 const GroupBySchedulerArgs_1 = require("./args/GroupBySchedulerArgs");
 const UpdateManySchedulerArgs_1 = require("./args/UpdateManySchedulerArgs");
 const UpdateOneSchedulerArgs_1 = require("./args/UpdateOneSchedulerArgs");
@@ -63,6 +65,13 @@ let SchedulerCrudResolver = class SchedulerCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstSchedulerOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).scheduler.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async schedulers(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).scheduler.findMany({
@@ -73,6 +82,13 @@ let SchedulerCrudResolver = class SchedulerCrudResolver {
     async scheduler(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).scheduler.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async getScheduler(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).scheduler.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], SchedulerCrudResolver.prototype, "findFirstScheduler", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Scheduler_1.Scheduler, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstSchedulerOrThrowArgs_1.FindFirstSchedulerOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], SchedulerCrudResolver.prototype, "findFirstSchedulerOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Scheduler_1.Scheduler], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueSchedulerArgs_1.FindUniqueSchedulerArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], SchedulerCrudResolver.prototype, "scheduler", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Scheduler_1.Scheduler, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueSchedulerOrThrowArgs_1.FindUniqueSchedulerOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], SchedulerCrudResolver.prototype, "getScheduler", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [SchedulerGroupBy_1.SchedulerGroupBy], {
         nullable: false

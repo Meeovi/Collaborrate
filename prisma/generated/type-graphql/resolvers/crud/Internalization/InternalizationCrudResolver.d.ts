@@ -5,8 +5,10 @@ import { CreateOneInternalizationArgs } from "./args/CreateOneInternalizationArg
 import { DeleteManyInternalizationArgs } from "./args/DeleteManyInternalizationArgs";
 import { DeleteOneInternalizationArgs } from "./args/DeleteOneInternalizationArgs";
 import { FindFirstInternalizationArgs } from "./args/FindFirstInternalizationArgs";
+import { FindFirstInternalizationOrThrowArgs } from "./args/FindFirstInternalizationOrThrowArgs";
 import { FindManyInternalizationArgs } from "./args/FindManyInternalizationArgs";
 import { FindUniqueInternalizationArgs } from "./args/FindUniqueInternalizationArgs";
+import { FindUniqueInternalizationOrThrowArgs } from "./args/FindUniqueInternalizationOrThrowArgs";
 import { GroupByInternalizationArgs } from "./args/GroupByInternalizationArgs";
 import { UpdateManyInternalizationArgs } from "./args/UpdateManyInternalizationArgs";
 import { UpdateOneInternalizationArgs } from "./args/UpdateOneInternalizationArgs";
@@ -22,8 +24,10 @@ export declare class InternalizationCrudResolver {
     deleteManyInternalization(ctx: any, info: GraphQLResolveInfo, args: DeleteManyInternalizationArgs): Promise<AffectedRowsOutput>;
     deleteOneInternalization(ctx: any, info: GraphQLResolveInfo, args: DeleteOneInternalizationArgs): Promise<Internalization | null>;
     findFirstInternalization(ctx: any, info: GraphQLResolveInfo, args: FindFirstInternalizationArgs): Promise<Internalization | null>;
+    findFirstInternalizationOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstInternalizationOrThrowArgs): Promise<Internalization | null>;
     internalizations(ctx: any, info: GraphQLResolveInfo, args: FindManyInternalizationArgs): Promise<Internalization[]>;
     internalization(ctx: any, info: GraphQLResolveInfo, args: FindUniqueInternalizationArgs): Promise<Internalization | null>;
+    getInternalization(ctx: any, info: GraphQLResolveInfo, args: FindUniqueInternalizationOrThrowArgs): Promise<Internalization | null>;
     groupByInternalization(ctx: any, info: GraphQLResolveInfo, args: GroupByInternalizationArgs): Promise<InternalizationGroupBy[]>;
     updateManyInternalization(ctx: any, info: GraphQLResolveInfo, args: UpdateManyInternalizationArgs): Promise<AffectedRowsOutput>;
     updateOneInternalization(ctx: any, info: GraphQLResolveInfo, args: UpdateOneInternalizationArgs): Promise<Internalization | null>;

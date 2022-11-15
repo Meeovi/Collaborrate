@@ -10,8 +10,10 @@ const CreateOneDiscountsArgs_1 = require("./args/CreateOneDiscountsArgs");
 const DeleteManyDiscountsArgs_1 = require("./args/DeleteManyDiscountsArgs");
 const DeleteOneDiscountsArgs_1 = require("./args/DeleteOneDiscountsArgs");
 const FindFirstDiscountsArgs_1 = require("./args/FindFirstDiscountsArgs");
+const FindFirstDiscountsOrThrowArgs_1 = require("./args/FindFirstDiscountsOrThrowArgs");
 const FindManyDiscountsArgs_1 = require("./args/FindManyDiscountsArgs");
 const FindUniqueDiscountsArgs_1 = require("./args/FindUniqueDiscountsArgs");
+const FindUniqueDiscountsOrThrowArgs_1 = require("./args/FindUniqueDiscountsOrThrowArgs");
 const GroupByDiscountsArgs_1 = require("./args/GroupByDiscountsArgs");
 const UpdateManyDiscountsArgs_1 = require("./args/UpdateManyDiscountsArgs");
 const UpdateOneDiscountsArgs_1 = require("./args/UpdateOneDiscountsArgs");
@@ -63,6 +65,13 @@ let DiscountsCrudResolver = class DiscountsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstDiscountsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).discounts.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyDiscounts(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).discounts.findMany({
@@ -73,6 +82,13 @@ let DiscountsCrudResolver = class DiscountsCrudResolver {
     async findUniqueDiscounts(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).discounts.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueDiscountsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).discounts.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], DiscountsCrudResolver.prototype, "findFirstDiscounts", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Discounts_1.Discounts, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstDiscountsOrThrowArgs_1.FindFirstDiscountsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], DiscountsCrudResolver.prototype, "findFirstDiscountsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Discounts_1.Discounts], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueDiscountsArgs_1.FindUniqueDiscountsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], DiscountsCrudResolver.prototype, "findUniqueDiscounts", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Discounts_1.Discounts, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueDiscountsOrThrowArgs_1.FindUniqueDiscountsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], DiscountsCrudResolver.prototype, "findUniqueDiscountsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [DiscountsGroupBy_1.DiscountsGroupBy], {
         nullable: false

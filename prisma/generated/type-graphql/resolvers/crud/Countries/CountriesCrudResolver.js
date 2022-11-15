@@ -10,8 +10,10 @@ const CreateOneCountriesArgs_1 = require("./args/CreateOneCountriesArgs");
 const DeleteManyCountriesArgs_1 = require("./args/DeleteManyCountriesArgs");
 const DeleteOneCountriesArgs_1 = require("./args/DeleteOneCountriesArgs");
 const FindFirstCountriesArgs_1 = require("./args/FindFirstCountriesArgs");
+const FindFirstCountriesOrThrowArgs_1 = require("./args/FindFirstCountriesOrThrowArgs");
 const FindManyCountriesArgs_1 = require("./args/FindManyCountriesArgs");
 const FindUniqueCountriesArgs_1 = require("./args/FindUniqueCountriesArgs");
+const FindUniqueCountriesOrThrowArgs_1 = require("./args/FindUniqueCountriesOrThrowArgs");
 const GroupByCountriesArgs_1 = require("./args/GroupByCountriesArgs");
 const UpdateManyCountriesArgs_1 = require("./args/UpdateManyCountriesArgs");
 const UpdateOneCountriesArgs_1 = require("./args/UpdateOneCountriesArgs");
@@ -63,6 +65,13 @@ let CountriesCrudResolver = class CountriesCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstCountriesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).countries.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyCountries(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).countries.findMany({
@@ -73,6 +82,13 @@ let CountriesCrudResolver = class CountriesCrudResolver {
     async findUniqueCountries(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).countries.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueCountriesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).countries.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], CountriesCrudResolver.prototype, "findFirstCountries", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Countries_1.Countries, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstCountriesOrThrowArgs_1.FindFirstCountriesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], CountriesCrudResolver.prototype, "findFirstCountriesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Countries_1.Countries], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueCountriesArgs_1.FindUniqueCountriesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], CountriesCrudResolver.prototype, "findUniqueCountries", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Countries_1.Countries, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueCountriesOrThrowArgs_1.FindUniqueCountriesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], CountriesCrudResolver.prototype, "findUniqueCountriesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [CountriesGroupBy_1.CountriesGroupBy], {
         nullable: false

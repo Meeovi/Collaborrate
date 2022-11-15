@@ -10,8 +10,10 @@ const CreateOneReturnsArgs_1 = require("./args/CreateOneReturnsArgs");
 const DeleteManyReturnsArgs_1 = require("./args/DeleteManyReturnsArgs");
 const DeleteOneReturnsArgs_1 = require("./args/DeleteOneReturnsArgs");
 const FindFirstReturnsArgs_1 = require("./args/FindFirstReturnsArgs");
+const FindFirstReturnsOrThrowArgs_1 = require("./args/FindFirstReturnsOrThrowArgs");
 const FindManyReturnsArgs_1 = require("./args/FindManyReturnsArgs");
 const FindUniqueReturnsArgs_1 = require("./args/FindUniqueReturnsArgs");
+const FindUniqueReturnsOrThrowArgs_1 = require("./args/FindUniqueReturnsOrThrowArgs");
 const GroupByReturnsArgs_1 = require("./args/GroupByReturnsArgs");
 const UpdateManyReturnsArgs_1 = require("./args/UpdateManyReturnsArgs");
 const UpdateOneReturnsArgs_1 = require("./args/UpdateOneReturnsArgs");
@@ -63,6 +65,13 @@ let ReturnsCrudResolver = class ReturnsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstReturnsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).returns.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyReturns(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).returns.findMany({
@@ -73,6 +82,13 @@ let ReturnsCrudResolver = class ReturnsCrudResolver {
     async findUniqueReturns(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).returns.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueReturnsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).returns.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], ReturnsCrudResolver.prototype, "findFirstReturns", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Returns_1.Returns, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstReturnsOrThrowArgs_1.FindFirstReturnsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ReturnsCrudResolver.prototype, "findFirstReturnsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Returns_1.Returns], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueReturnsArgs_1.FindUniqueReturnsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ReturnsCrudResolver.prototype, "findUniqueReturns", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Returns_1.Returns, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueReturnsOrThrowArgs_1.FindUniqueReturnsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ReturnsCrudResolver.prototype, "findUniqueReturnsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [ReturnsGroupBy_1.ReturnsGroupBy], {
         nullable: false

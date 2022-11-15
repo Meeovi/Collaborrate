@@ -10,8 +10,10 @@ const CreateOneWorkspacesArgs_1 = require("./args/CreateOneWorkspacesArgs");
 const DeleteManyWorkspacesArgs_1 = require("./args/DeleteManyWorkspacesArgs");
 const DeleteOneWorkspacesArgs_1 = require("./args/DeleteOneWorkspacesArgs");
 const FindFirstWorkspacesArgs_1 = require("./args/FindFirstWorkspacesArgs");
+const FindFirstWorkspacesOrThrowArgs_1 = require("./args/FindFirstWorkspacesOrThrowArgs");
 const FindManyWorkspacesArgs_1 = require("./args/FindManyWorkspacesArgs");
 const FindUniqueWorkspacesArgs_1 = require("./args/FindUniqueWorkspacesArgs");
+const FindUniqueWorkspacesOrThrowArgs_1 = require("./args/FindUniqueWorkspacesOrThrowArgs");
 const GroupByWorkspacesArgs_1 = require("./args/GroupByWorkspacesArgs");
 const UpdateManyWorkspacesArgs_1 = require("./args/UpdateManyWorkspacesArgs");
 const UpdateOneWorkspacesArgs_1 = require("./args/UpdateOneWorkspacesArgs");
@@ -63,6 +65,13 @@ let WorkspacesCrudResolver = class WorkspacesCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstWorkspacesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).workspaces.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyWorkspaces(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).workspaces.findMany({
@@ -73,6 +82,13 @@ let WorkspacesCrudResolver = class WorkspacesCrudResolver {
     async findUniqueWorkspaces(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).workspaces.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueWorkspacesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).workspaces.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], WorkspacesCrudResolver.prototype, "findFirstWorkspaces", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Workspaces_1.Workspaces, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstWorkspacesOrThrowArgs_1.FindFirstWorkspacesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], WorkspacesCrudResolver.prototype, "findFirstWorkspacesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Workspaces_1.Workspaces], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueWorkspacesArgs_1.FindUniqueWorkspacesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], WorkspacesCrudResolver.prototype, "findUniqueWorkspaces", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Workspaces_1.Workspaces, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueWorkspacesOrThrowArgs_1.FindUniqueWorkspacesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], WorkspacesCrudResolver.prototype, "findUniqueWorkspacesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [WorkspacesGroupBy_1.WorkspacesGroupBy], {
         nullable: false

@@ -10,8 +10,10 @@ const CreateOneContent_typeArgs_1 = require("./args/CreateOneContent_typeArgs");
 const DeleteManyContent_typeArgs_1 = require("./args/DeleteManyContent_typeArgs");
 const DeleteOneContent_typeArgs_1 = require("./args/DeleteOneContent_typeArgs");
 const FindFirstContent_typeArgs_1 = require("./args/FindFirstContent_typeArgs");
+const FindFirstContent_typeOrThrowArgs_1 = require("./args/FindFirstContent_typeOrThrowArgs");
 const FindManyContent_typeArgs_1 = require("./args/FindManyContent_typeArgs");
 const FindUniqueContent_typeArgs_1 = require("./args/FindUniqueContent_typeArgs");
+const FindUniqueContent_typeOrThrowArgs_1 = require("./args/FindUniqueContent_typeOrThrowArgs");
 const GroupByContent_typeArgs_1 = require("./args/GroupByContent_typeArgs");
 const UpdateManyContent_typeArgs_1 = require("./args/UpdateManyContent_typeArgs");
 const UpdateOneContent_typeArgs_1 = require("./args/UpdateOneContent_typeArgs");
@@ -63,6 +65,13 @@ let Content_typeCrudResolver = class Content_typeCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstContent_typeOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).content_type.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async content_types(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).content_type.findMany({
@@ -73,6 +82,13 @@ let Content_typeCrudResolver = class Content_typeCrudResolver {
     async content_type(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).content_type.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async getContent_type(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).content_type.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], Content_typeCrudResolver.prototype, "findFirstContent_type", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Content_type_1.Content_type, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstContent_typeOrThrowArgs_1.FindFirstContent_typeOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], Content_typeCrudResolver.prototype, "findFirstContent_typeOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Content_type_1.Content_type], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueContent_typeArgs_1.FindUniqueContent_typeArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], Content_typeCrudResolver.prototype, "content_type", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Content_type_1.Content_type, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueContent_typeOrThrowArgs_1.FindUniqueContent_typeOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], Content_typeCrudResolver.prototype, "getContent_type", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Content_typeGroupBy_1.Content_typeGroupBy], {
         nullable: false

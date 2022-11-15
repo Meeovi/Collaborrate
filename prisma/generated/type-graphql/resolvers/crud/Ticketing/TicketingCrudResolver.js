@@ -10,8 +10,10 @@ const CreateOneTicketingArgs_1 = require("./args/CreateOneTicketingArgs");
 const DeleteManyTicketingArgs_1 = require("./args/DeleteManyTicketingArgs");
 const DeleteOneTicketingArgs_1 = require("./args/DeleteOneTicketingArgs");
 const FindFirstTicketingArgs_1 = require("./args/FindFirstTicketingArgs");
+const FindFirstTicketingOrThrowArgs_1 = require("./args/FindFirstTicketingOrThrowArgs");
 const FindManyTicketingArgs_1 = require("./args/FindManyTicketingArgs");
 const FindUniqueTicketingArgs_1 = require("./args/FindUniqueTicketingArgs");
+const FindUniqueTicketingOrThrowArgs_1 = require("./args/FindUniqueTicketingOrThrowArgs");
 const GroupByTicketingArgs_1 = require("./args/GroupByTicketingArgs");
 const UpdateManyTicketingArgs_1 = require("./args/UpdateManyTicketingArgs");
 const UpdateOneTicketingArgs_1 = require("./args/UpdateOneTicketingArgs");
@@ -63,6 +65,13 @@ let TicketingCrudResolver = class TicketingCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstTicketingOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).ticketing.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async ticketings(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).ticketing.findMany({
@@ -73,6 +82,13 @@ let TicketingCrudResolver = class TicketingCrudResolver {
     async ticketing(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).ticketing.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async getTicketing(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).ticketing.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], TicketingCrudResolver.prototype, "findFirstTicketing", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Ticketing_1.Ticketing, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstTicketingOrThrowArgs_1.FindFirstTicketingOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], TicketingCrudResolver.prototype, "findFirstTicketingOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Ticketing_1.Ticketing], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueTicketingArgs_1.FindUniqueTicketingArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], TicketingCrudResolver.prototype, "ticketing", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Ticketing_1.Ticketing, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueTicketingOrThrowArgs_1.FindUniqueTicketingOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], TicketingCrudResolver.prototype, "getTicketing", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [TicketingGroupBy_1.TicketingGroupBy], {
         nullable: false

@@ -10,8 +10,10 @@ const CreateOneApitokenArgs_1 = require("./args/CreateOneApitokenArgs");
 const DeleteManyApitokenArgs_1 = require("./args/DeleteManyApitokenArgs");
 const DeleteOneApitokenArgs_1 = require("./args/DeleteOneApitokenArgs");
 const FindFirstApitokenArgs_1 = require("./args/FindFirstApitokenArgs");
+const FindFirstApitokenOrThrowArgs_1 = require("./args/FindFirstApitokenOrThrowArgs");
 const FindManyApitokenArgs_1 = require("./args/FindManyApitokenArgs");
 const FindUniqueApitokenArgs_1 = require("./args/FindUniqueApitokenArgs");
+const FindUniqueApitokenOrThrowArgs_1 = require("./args/FindUniqueApitokenOrThrowArgs");
 const GroupByApitokenArgs_1 = require("./args/GroupByApitokenArgs");
 const UpdateManyApitokenArgs_1 = require("./args/UpdateManyApitokenArgs");
 const UpdateOneApitokenArgs_1 = require("./args/UpdateOneApitokenArgs");
@@ -63,6 +65,13 @@ let ApitokenCrudResolver = class ApitokenCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstApitokenOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).apitoken.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async apitokens(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).apitoken.findMany({
@@ -73,6 +82,13 @@ let ApitokenCrudResolver = class ApitokenCrudResolver {
     async apitoken(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).apitoken.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async getApitoken(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).apitoken.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], ApitokenCrudResolver.prototype, "findFirstApitoken", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Apitoken_1.Apitoken, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstApitokenOrThrowArgs_1.FindFirstApitokenOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ApitokenCrudResolver.prototype, "findFirstApitokenOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Apitoken_1.Apitoken], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueApitokenArgs_1.FindUniqueApitokenArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ApitokenCrudResolver.prototype, "apitoken", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Apitoken_1.Apitoken, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueApitokenOrThrowArgs_1.FindUniqueApitokenOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ApitokenCrudResolver.prototype, "getApitoken", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [ApitokenGroupBy_1.ApitokenGroupBy], {
         nullable: false

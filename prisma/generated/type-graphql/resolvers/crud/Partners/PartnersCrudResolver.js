@@ -10,8 +10,10 @@ const CreateOnePartnersArgs_1 = require("./args/CreateOnePartnersArgs");
 const DeleteManyPartnersArgs_1 = require("./args/DeleteManyPartnersArgs");
 const DeleteOnePartnersArgs_1 = require("./args/DeleteOnePartnersArgs");
 const FindFirstPartnersArgs_1 = require("./args/FindFirstPartnersArgs");
+const FindFirstPartnersOrThrowArgs_1 = require("./args/FindFirstPartnersOrThrowArgs");
 const FindManyPartnersArgs_1 = require("./args/FindManyPartnersArgs");
 const FindUniquePartnersArgs_1 = require("./args/FindUniquePartnersArgs");
+const FindUniquePartnersOrThrowArgs_1 = require("./args/FindUniquePartnersOrThrowArgs");
 const GroupByPartnersArgs_1 = require("./args/GroupByPartnersArgs");
 const UpdateManyPartnersArgs_1 = require("./args/UpdateManyPartnersArgs");
 const UpdateOnePartnersArgs_1 = require("./args/UpdateOnePartnersArgs");
@@ -63,6 +65,13 @@ let PartnersCrudResolver = class PartnersCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstPartnersOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).partners.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyPartners(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).partners.findMany({
@@ -73,6 +82,13 @@ let PartnersCrudResolver = class PartnersCrudResolver {
     async findUniquePartners(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).partners.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniquePartnersOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).partners.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], PartnersCrudResolver.prototype, "findFirstPartners", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Partners_1.Partners, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstPartnersOrThrowArgs_1.FindFirstPartnersOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], PartnersCrudResolver.prototype, "findFirstPartnersOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Partners_1.Partners], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniquePartnersArgs_1.FindUniquePartnersArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], PartnersCrudResolver.prototype, "findUniquePartners", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Partners_1.Partners, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniquePartnersOrThrowArgs_1.FindUniquePartnersOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], PartnersCrudResolver.prototype, "findUniquePartnersOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [PartnersGroupBy_1.PartnersGroupBy], {
         nullable: false

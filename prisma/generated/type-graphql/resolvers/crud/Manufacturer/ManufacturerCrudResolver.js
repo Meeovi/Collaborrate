@@ -10,8 +10,10 @@ const CreateOneManufacturerArgs_1 = require("./args/CreateOneManufacturerArgs");
 const DeleteManyManufacturerArgs_1 = require("./args/DeleteManyManufacturerArgs");
 const DeleteOneManufacturerArgs_1 = require("./args/DeleteOneManufacturerArgs");
 const FindFirstManufacturerArgs_1 = require("./args/FindFirstManufacturerArgs");
+const FindFirstManufacturerOrThrowArgs_1 = require("./args/FindFirstManufacturerOrThrowArgs");
 const FindManyManufacturerArgs_1 = require("./args/FindManyManufacturerArgs");
 const FindUniqueManufacturerArgs_1 = require("./args/FindUniqueManufacturerArgs");
+const FindUniqueManufacturerOrThrowArgs_1 = require("./args/FindUniqueManufacturerOrThrowArgs");
 const GroupByManufacturerArgs_1 = require("./args/GroupByManufacturerArgs");
 const UpdateManyManufacturerArgs_1 = require("./args/UpdateManyManufacturerArgs");
 const UpdateOneManufacturerArgs_1 = require("./args/UpdateOneManufacturerArgs");
@@ -63,6 +65,13 @@ let ManufacturerCrudResolver = class ManufacturerCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstManufacturerOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).manufacturer.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async manufacturers(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).manufacturer.findMany({
@@ -73,6 +82,13 @@ let ManufacturerCrudResolver = class ManufacturerCrudResolver {
     async manufacturer(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).manufacturer.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async getManufacturer(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).manufacturer.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], ManufacturerCrudResolver.prototype, "findFirstManufacturer", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Manufacturer_1.Manufacturer, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstManufacturerOrThrowArgs_1.FindFirstManufacturerOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ManufacturerCrudResolver.prototype, "findFirstManufacturerOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Manufacturer_1.Manufacturer], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueManufacturerArgs_1.FindUniqueManufacturerArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ManufacturerCrudResolver.prototype, "manufacturer", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Manufacturer_1.Manufacturer, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueManufacturerOrThrowArgs_1.FindUniqueManufacturerOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ManufacturerCrudResolver.prototype, "getManufacturer", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [ManufacturerGroupBy_1.ManufacturerGroupBy], {
         nullable: false

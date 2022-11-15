@@ -10,8 +10,10 @@ const CreateOneWishlistsArgs_1 = require("./args/CreateOneWishlistsArgs");
 const DeleteManyWishlistsArgs_1 = require("./args/DeleteManyWishlistsArgs");
 const DeleteOneWishlistsArgs_1 = require("./args/DeleteOneWishlistsArgs");
 const FindFirstWishlistsArgs_1 = require("./args/FindFirstWishlistsArgs");
+const FindFirstWishlistsOrThrowArgs_1 = require("./args/FindFirstWishlistsOrThrowArgs");
 const FindManyWishlistsArgs_1 = require("./args/FindManyWishlistsArgs");
 const FindUniqueWishlistsArgs_1 = require("./args/FindUniqueWishlistsArgs");
+const FindUniqueWishlistsOrThrowArgs_1 = require("./args/FindUniqueWishlistsOrThrowArgs");
 const GroupByWishlistsArgs_1 = require("./args/GroupByWishlistsArgs");
 const UpdateManyWishlistsArgs_1 = require("./args/UpdateManyWishlistsArgs");
 const UpdateOneWishlistsArgs_1 = require("./args/UpdateOneWishlistsArgs");
@@ -63,6 +65,13 @@ let WishlistsCrudResolver = class WishlistsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstWishlistsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).wishlists.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyWishlists(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).wishlists.findMany({
@@ -73,6 +82,13 @@ let WishlistsCrudResolver = class WishlistsCrudResolver {
     async findUniqueWishlists(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).wishlists.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueWishlistsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).wishlists.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], WishlistsCrudResolver.prototype, "findFirstWishlists", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Wishlists_1.Wishlists, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstWishlistsOrThrowArgs_1.FindFirstWishlistsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], WishlistsCrudResolver.prototype, "findFirstWishlistsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Wishlists_1.Wishlists], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueWishlistsArgs_1.FindUniqueWishlistsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], WishlistsCrudResolver.prototype, "findUniqueWishlists", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Wishlists_1.Wishlists, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueWishlistsOrThrowArgs_1.FindUniqueWishlistsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], WishlistsCrudResolver.prototype, "findUniqueWishlistsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [WishlistsGroupBy_1.WishlistsGroupBy], {
         nullable: false

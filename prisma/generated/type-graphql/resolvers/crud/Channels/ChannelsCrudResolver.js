@@ -10,8 +10,10 @@ const CreateOneChannelsArgs_1 = require("./args/CreateOneChannelsArgs");
 const DeleteManyChannelsArgs_1 = require("./args/DeleteManyChannelsArgs");
 const DeleteOneChannelsArgs_1 = require("./args/DeleteOneChannelsArgs");
 const FindFirstChannelsArgs_1 = require("./args/FindFirstChannelsArgs");
+const FindFirstChannelsOrThrowArgs_1 = require("./args/FindFirstChannelsOrThrowArgs");
 const FindManyChannelsArgs_1 = require("./args/FindManyChannelsArgs");
 const FindUniqueChannelsArgs_1 = require("./args/FindUniqueChannelsArgs");
+const FindUniqueChannelsOrThrowArgs_1 = require("./args/FindUniqueChannelsOrThrowArgs");
 const GroupByChannelsArgs_1 = require("./args/GroupByChannelsArgs");
 const UpdateManyChannelsArgs_1 = require("./args/UpdateManyChannelsArgs");
 const UpdateOneChannelsArgs_1 = require("./args/UpdateOneChannelsArgs");
@@ -63,6 +65,13 @@ let ChannelsCrudResolver = class ChannelsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstChannelsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).channels.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyChannels(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).channels.findMany({
@@ -73,6 +82,13 @@ let ChannelsCrudResolver = class ChannelsCrudResolver {
     async findUniqueChannels(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).channels.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueChannelsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).channels.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], ChannelsCrudResolver.prototype, "findFirstChannels", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Channels_1.Channels, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstChannelsOrThrowArgs_1.FindFirstChannelsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ChannelsCrudResolver.prototype, "findFirstChannelsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Channels_1.Channels], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueChannelsArgs_1.FindUniqueChannelsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ChannelsCrudResolver.prototype, "findUniqueChannels", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Channels_1.Channels, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueChannelsOrThrowArgs_1.FindUniqueChannelsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ChannelsCrudResolver.prototype, "findUniqueChannelsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [ChannelsGroupBy_1.ChannelsGroupBy], {
         nullable: false

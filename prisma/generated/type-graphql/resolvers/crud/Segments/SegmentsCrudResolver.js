@@ -10,8 +10,10 @@ const CreateOneSegmentsArgs_1 = require("./args/CreateOneSegmentsArgs");
 const DeleteManySegmentsArgs_1 = require("./args/DeleteManySegmentsArgs");
 const DeleteOneSegmentsArgs_1 = require("./args/DeleteOneSegmentsArgs");
 const FindFirstSegmentsArgs_1 = require("./args/FindFirstSegmentsArgs");
+const FindFirstSegmentsOrThrowArgs_1 = require("./args/FindFirstSegmentsOrThrowArgs");
 const FindManySegmentsArgs_1 = require("./args/FindManySegmentsArgs");
 const FindUniqueSegmentsArgs_1 = require("./args/FindUniqueSegmentsArgs");
+const FindUniqueSegmentsOrThrowArgs_1 = require("./args/FindUniqueSegmentsOrThrowArgs");
 const GroupBySegmentsArgs_1 = require("./args/GroupBySegmentsArgs");
 const UpdateManySegmentsArgs_1 = require("./args/UpdateManySegmentsArgs");
 const UpdateOneSegmentsArgs_1 = require("./args/UpdateOneSegmentsArgs");
@@ -63,6 +65,13 @@ let SegmentsCrudResolver = class SegmentsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstSegmentsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).segments.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManySegments(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).segments.findMany({
@@ -73,6 +82,13 @@ let SegmentsCrudResolver = class SegmentsCrudResolver {
     async findUniqueSegments(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).segments.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueSegmentsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).segments.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], SegmentsCrudResolver.prototype, "findFirstSegments", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Segments_1.Segments, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstSegmentsOrThrowArgs_1.FindFirstSegmentsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], SegmentsCrudResolver.prototype, "findFirstSegmentsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Segments_1.Segments], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueSegmentsArgs_1.FindUniqueSegmentsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], SegmentsCrudResolver.prototype, "findUniqueSegments", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Segments_1.Segments, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueSegmentsOrThrowArgs_1.FindUniqueSegmentsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], SegmentsCrudResolver.prototype, "findUniqueSegmentsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [SegmentsGroupBy_1.SegmentsGroupBy], {
         nullable: false

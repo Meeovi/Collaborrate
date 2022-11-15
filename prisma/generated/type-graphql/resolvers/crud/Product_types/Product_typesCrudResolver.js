@@ -10,8 +10,10 @@ const CreateOneProduct_typesArgs_1 = require("./args/CreateOneProduct_typesArgs"
 const DeleteManyProduct_typesArgs_1 = require("./args/DeleteManyProduct_typesArgs");
 const DeleteOneProduct_typesArgs_1 = require("./args/DeleteOneProduct_typesArgs");
 const FindFirstProduct_typesArgs_1 = require("./args/FindFirstProduct_typesArgs");
+const FindFirstProduct_typesOrThrowArgs_1 = require("./args/FindFirstProduct_typesOrThrowArgs");
 const FindManyProduct_typesArgs_1 = require("./args/FindManyProduct_typesArgs");
 const FindUniqueProduct_typesArgs_1 = require("./args/FindUniqueProduct_typesArgs");
+const FindUniqueProduct_typesOrThrowArgs_1 = require("./args/FindUniqueProduct_typesOrThrowArgs");
 const GroupByProduct_typesArgs_1 = require("./args/GroupByProduct_typesArgs");
 const UpdateManyProduct_typesArgs_1 = require("./args/UpdateManyProduct_typesArgs");
 const UpdateOneProduct_typesArgs_1 = require("./args/UpdateOneProduct_typesArgs");
@@ -63,6 +65,13 @@ let Product_typesCrudResolver = class Product_typesCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstProduct_typesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).product_types.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyProduct_types(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).product_types.findMany({
@@ -73,6 +82,13 @@ let Product_typesCrudResolver = class Product_typesCrudResolver {
     async findUniqueProduct_types(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).product_types.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueProduct_typesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).product_types.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], Product_typesCrudResolver.prototype, "findFirstProduct_types", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Product_types_1.Product_types, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstProduct_typesOrThrowArgs_1.FindFirstProduct_typesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], Product_typesCrudResolver.prototype, "findFirstProduct_typesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Product_types_1.Product_types], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueProduct_typesArgs_1.FindUniqueProduct_typesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], Product_typesCrudResolver.prototype, "findUniqueProduct_types", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Product_types_1.Product_types, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueProduct_typesOrThrowArgs_1.FindUniqueProduct_typesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], Product_typesCrudResolver.prototype, "findUniqueProduct_typesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Product_typesGroupBy_1.Product_typesGroupBy], {
         nullable: false

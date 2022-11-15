@@ -10,8 +10,10 @@ const CreateOneOotoArgs_1 = require("./args/CreateOneOotoArgs");
 const DeleteManyOotoArgs_1 = require("./args/DeleteManyOotoArgs");
 const DeleteOneOotoArgs_1 = require("./args/DeleteOneOotoArgs");
 const FindFirstOotoArgs_1 = require("./args/FindFirstOotoArgs");
+const FindFirstOotoOrThrowArgs_1 = require("./args/FindFirstOotoOrThrowArgs");
 const FindManyOotoArgs_1 = require("./args/FindManyOotoArgs");
 const FindUniqueOotoArgs_1 = require("./args/FindUniqueOotoArgs");
+const FindUniqueOotoOrThrowArgs_1 = require("./args/FindUniqueOotoOrThrowArgs");
 const GroupByOotoArgs_1 = require("./args/GroupByOotoArgs");
 const UpdateManyOotoArgs_1 = require("./args/UpdateManyOotoArgs");
 const UpdateOneOotoArgs_1 = require("./args/UpdateOneOotoArgs");
@@ -63,6 +65,13 @@ let OotoCrudResolver = class OotoCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstOotoOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).ooto.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async ootos(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).ooto.findMany({
@@ -73,6 +82,13 @@ let OotoCrudResolver = class OotoCrudResolver {
     async ooto(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).ooto.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async getOoto(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).ooto.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], OotoCrudResolver.prototype, "findFirstOoto", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Ooto_1.Ooto, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstOotoOrThrowArgs_1.FindFirstOotoOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], OotoCrudResolver.prototype, "findFirstOotoOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Ooto_1.Ooto], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueOotoArgs_1.FindUniqueOotoArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], OotoCrudResolver.prototype, "ooto", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Ooto_1.Ooto, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueOotoOrThrowArgs_1.FindUniqueOotoOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], OotoCrudResolver.prototype, "getOoto", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [OotoGroupBy_1.OotoGroupBy], {
         nullable: false

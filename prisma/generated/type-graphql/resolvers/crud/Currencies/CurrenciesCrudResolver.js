@@ -10,8 +10,10 @@ const CreateOneCurrenciesArgs_1 = require("./args/CreateOneCurrenciesArgs");
 const DeleteManyCurrenciesArgs_1 = require("./args/DeleteManyCurrenciesArgs");
 const DeleteOneCurrenciesArgs_1 = require("./args/DeleteOneCurrenciesArgs");
 const FindFirstCurrenciesArgs_1 = require("./args/FindFirstCurrenciesArgs");
+const FindFirstCurrenciesOrThrowArgs_1 = require("./args/FindFirstCurrenciesOrThrowArgs");
 const FindManyCurrenciesArgs_1 = require("./args/FindManyCurrenciesArgs");
 const FindUniqueCurrenciesArgs_1 = require("./args/FindUniqueCurrenciesArgs");
+const FindUniqueCurrenciesOrThrowArgs_1 = require("./args/FindUniqueCurrenciesOrThrowArgs");
 const GroupByCurrenciesArgs_1 = require("./args/GroupByCurrenciesArgs");
 const UpdateManyCurrenciesArgs_1 = require("./args/UpdateManyCurrenciesArgs");
 const UpdateOneCurrenciesArgs_1 = require("./args/UpdateOneCurrenciesArgs");
@@ -63,6 +65,13 @@ let CurrenciesCrudResolver = class CurrenciesCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstCurrenciesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).currencies.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyCurrencies(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).currencies.findMany({
@@ -73,6 +82,13 @@ let CurrenciesCrudResolver = class CurrenciesCrudResolver {
     async findUniqueCurrencies(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).currencies.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueCurrenciesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).currencies.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], CurrenciesCrudResolver.prototype, "findFirstCurrencies", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Currencies_1.Currencies, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstCurrenciesOrThrowArgs_1.FindFirstCurrenciesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], CurrenciesCrudResolver.prototype, "findFirstCurrenciesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Currencies_1.Currencies], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueCurrenciesArgs_1.FindUniqueCurrenciesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], CurrenciesCrudResolver.prototype, "findUniqueCurrencies", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Currencies_1.Currencies, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueCurrenciesOrThrowArgs_1.FindUniqueCurrenciesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], CurrenciesCrudResolver.prototype, "findUniqueCurrenciesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [CurrenciesGroupBy_1.CurrenciesGroupBy], {
         nullable: false

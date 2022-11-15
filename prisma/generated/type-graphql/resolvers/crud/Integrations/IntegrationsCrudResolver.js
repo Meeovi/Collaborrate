@@ -10,8 +10,10 @@ const CreateOneIntegrationsArgs_1 = require("./args/CreateOneIntegrationsArgs");
 const DeleteManyIntegrationsArgs_1 = require("./args/DeleteManyIntegrationsArgs");
 const DeleteOneIntegrationsArgs_1 = require("./args/DeleteOneIntegrationsArgs");
 const FindFirstIntegrationsArgs_1 = require("./args/FindFirstIntegrationsArgs");
+const FindFirstIntegrationsOrThrowArgs_1 = require("./args/FindFirstIntegrationsOrThrowArgs");
 const FindManyIntegrationsArgs_1 = require("./args/FindManyIntegrationsArgs");
 const FindUniqueIntegrationsArgs_1 = require("./args/FindUniqueIntegrationsArgs");
+const FindUniqueIntegrationsOrThrowArgs_1 = require("./args/FindUniqueIntegrationsOrThrowArgs");
 const GroupByIntegrationsArgs_1 = require("./args/GroupByIntegrationsArgs");
 const UpdateManyIntegrationsArgs_1 = require("./args/UpdateManyIntegrationsArgs");
 const UpdateOneIntegrationsArgs_1 = require("./args/UpdateOneIntegrationsArgs");
@@ -63,6 +65,13 @@ let IntegrationsCrudResolver = class IntegrationsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstIntegrationsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).integrations.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyIntegrations(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).integrations.findMany({
@@ -73,6 +82,13 @@ let IntegrationsCrudResolver = class IntegrationsCrudResolver {
     async findUniqueIntegrations(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).integrations.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueIntegrationsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).integrations.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], IntegrationsCrudResolver.prototype, "findFirstIntegrations", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Integrations_1.Integrations, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstIntegrationsOrThrowArgs_1.FindFirstIntegrationsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], IntegrationsCrudResolver.prototype, "findFirstIntegrationsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Integrations_1.Integrations], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueIntegrationsArgs_1.FindUniqueIntegrationsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], IntegrationsCrudResolver.prototype, "findUniqueIntegrations", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Integrations_1.Integrations, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueIntegrationsOrThrowArgs_1.FindUniqueIntegrationsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], IntegrationsCrudResolver.prototype, "findUniqueIntegrationsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [IntegrationsGroupBy_1.IntegrationsGroupBy], {
         nullable: false

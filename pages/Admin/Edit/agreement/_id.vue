@@ -132,7 +132,7 @@
           ]
         }).then(() => {
           this.$router.push({
-            path: '../../admin/sales/agreements'
+            path: '../../marketing/agreements'
           })
         }).catch(err => console.log(err));
       },

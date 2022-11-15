@@ -10,8 +10,10 @@ const CreateOnePluginsArgs_1 = require("./args/CreateOnePluginsArgs");
 const DeleteManyPluginsArgs_1 = require("./args/DeleteManyPluginsArgs");
 const DeleteOnePluginsArgs_1 = require("./args/DeleteOnePluginsArgs");
 const FindFirstPluginsArgs_1 = require("./args/FindFirstPluginsArgs");
+const FindFirstPluginsOrThrowArgs_1 = require("./args/FindFirstPluginsOrThrowArgs");
 const FindManyPluginsArgs_1 = require("./args/FindManyPluginsArgs");
 const FindUniquePluginsArgs_1 = require("./args/FindUniquePluginsArgs");
+const FindUniquePluginsOrThrowArgs_1 = require("./args/FindUniquePluginsOrThrowArgs");
 const GroupByPluginsArgs_1 = require("./args/GroupByPluginsArgs");
 const UpdateManyPluginsArgs_1 = require("./args/UpdateManyPluginsArgs");
 const UpdateOnePluginsArgs_1 = require("./args/UpdateOnePluginsArgs");
@@ -63,6 +65,13 @@ let PluginsCrudResolver = class PluginsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstPluginsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).plugins.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyPlugins(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).plugins.findMany({
@@ -73,6 +82,13 @@ let PluginsCrudResolver = class PluginsCrudResolver {
     async findUniquePlugins(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).plugins.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniquePluginsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).plugins.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], PluginsCrudResolver.prototype, "findFirstPlugins", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Plugins_1.Plugins, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstPluginsOrThrowArgs_1.FindFirstPluginsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], PluginsCrudResolver.prototype, "findFirstPluginsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Plugins_1.Plugins], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniquePluginsArgs_1.FindUniquePluginsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], PluginsCrudResolver.prototype, "findUniquePlugins", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Plugins_1.Plugins, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniquePluginsOrThrowArgs_1.FindUniquePluginsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], PluginsCrudResolver.prototype, "findUniquePluginsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [PluginsGroupBy_1.PluginsGroupBy], {
         nullable: false

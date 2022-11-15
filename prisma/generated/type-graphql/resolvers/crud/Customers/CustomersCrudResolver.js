@@ -10,8 +10,10 @@ const CreateOneCustomersArgs_1 = require("./args/CreateOneCustomersArgs");
 const DeleteManyCustomersArgs_1 = require("./args/DeleteManyCustomersArgs");
 const DeleteOneCustomersArgs_1 = require("./args/DeleteOneCustomersArgs");
 const FindFirstCustomersArgs_1 = require("./args/FindFirstCustomersArgs");
+const FindFirstCustomersOrThrowArgs_1 = require("./args/FindFirstCustomersOrThrowArgs");
 const FindManyCustomersArgs_1 = require("./args/FindManyCustomersArgs");
 const FindUniqueCustomersArgs_1 = require("./args/FindUniqueCustomersArgs");
+const FindUniqueCustomersOrThrowArgs_1 = require("./args/FindUniqueCustomersOrThrowArgs");
 const GroupByCustomersArgs_1 = require("./args/GroupByCustomersArgs");
 const UpdateManyCustomersArgs_1 = require("./args/UpdateManyCustomersArgs");
 const UpdateOneCustomersArgs_1 = require("./args/UpdateOneCustomersArgs");
@@ -63,6 +65,13 @@ let CustomersCrudResolver = class CustomersCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstCustomersOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).customers.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyCustomers(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).customers.findMany({
@@ -73,6 +82,13 @@ let CustomersCrudResolver = class CustomersCrudResolver {
     async findUniqueCustomers(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).customers.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueCustomersOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).customers.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], CustomersCrudResolver.prototype, "findFirstCustomers", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Customers_1.Customers, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstCustomersOrThrowArgs_1.FindFirstCustomersOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], CustomersCrudResolver.prototype, "findFirstCustomersOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Customers_1.Customers], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueCustomersArgs_1.FindUniqueCustomersArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], CustomersCrudResolver.prototype, "findUniqueCustomers", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Customers_1.Customers, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueCustomersOrThrowArgs_1.FindUniqueCustomersOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], CustomersCrudResolver.prototype, "findUniqueCustomersOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [CustomersGroupBy_1.CustomersGroupBy], {
         nullable: false

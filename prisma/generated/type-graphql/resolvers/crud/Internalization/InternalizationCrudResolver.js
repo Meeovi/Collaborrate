@@ -10,8 +10,10 @@ const CreateOneInternalizationArgs_1 = require("./args/CreateOneInternalizationA
 const DeleteManyInternalizationArgs_1 = require("./args/DeleteManyInternalizationArgs");
 const DeleteOneInternalizationArgs_1 = require("./args/DeleteOneInternalizationArgs");
 const FindFirstInternalizationArgs_1 = require("./args/FindFirstInternalizationArgs");
+const FindFirstInternalizationOrThrowArgs_1 = require("./args/FindFirstInternalizationOrThrowArgs");
 const FindManyInternalizationArgs_1 = require("./args/FindManyInternalizationArgs");
 const FindUniqueInternalizationArgs_1 = require("./args/FindUniqueInternalizationArgs");
+const FindUniqueInternalizationOrThrowArgs_1 = require("./args/FindUniqueInternalizationOrThrowArgs");
 const GroupByInternalizationArgs_1 = require("./args/GroupByInternalizationArgs");
 const UpdateManyInternalizationArgs_1 = require("./args/UpdateManyInternalizationArgs");
 const UpdateOneInternalizationArgs_1 = require("./args/UpdateOneInternalizationArgs");
@@ -63,6 +65,13 @@ let InternalizationCrudResolver = class InternalizationCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstInternalizationOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).internalization.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async internalizations(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).internalization.findMany({
@@ -73,6 +82,13 @@ let InternalizationCrudResolver = class InternalizationCrudResolver {
     async internalization(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).internalization.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async getInternalization(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).internalization.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], InternalizationCrudResolver.prototype, "findFirstInternalization", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Internalization_1.Internalization, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstInternalizationOrThrowArgs_1.FindFirstInternalizationOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], InternalizationCrudResolver.prototype, "findFirstInternalizationOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Internalization_1.Internalization], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueInternalizationArgs_1.FindUniqueInternalizationArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], InternalizationCrudResolver.prototype, "internalization", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Internalization_1.Internalization, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueInternalizationOrThrowArgs_1.FindUniqueInternalizationOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], InternalizationCrudResolver.prototype, "getInternalization", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [InternalizationGroupBy_1.InternalizationGroupBy], {
         nullable: false

@@ -10,8 +10,10 @@ const CreateOnePagesArgs_1 = require("./args/CreateOnePagesArgs");
 const DeleteManyPagesArgs_1 = require("./args/DeleteManyPagesArgs");
 const DeleteOnePagesArgs_1 = require("./args/DeleteOnePagesArgs");
 const FindFirstPagesArgs_1 = require("./args/FindFirstPagesArgs");
+const FindFirstPagesOrThrowArgs_1 = require("./args/FindFirstPagesOrThrowArgs");
 const FindManyPagesArgs_1 = require("./args/FindManyPagesArgs");
 const FindUniquePagesArgs_1 = require("./args/FindUniquePagesArgs");
+const FindUniquePagesOrThrowArgs_1 = require("./args/FindUniquePagesOrThrowArgs");
 const GroupByPagesArgs_1 = require("./args/GroupByPagesArgs");
 const UpdateManyPagesArgs_1 = require("./args/UpdateManyPagesArgs");
 const UpdateOnePagesArgs_1 = require("./args/UpdateOnePagesArgs");
@@ -63,6 +65,13 @@ let PagesCrudResolver = class PagesCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstPagesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).pages.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyPages(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).pages.findMany({
@@ -73,6 +82,13 @@ let PagesCrudResolver = class PagesCrudResolver {
     async findUniquePages(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).pages.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniquePagesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).pages.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], PagesCrudResolver.prototype, "findFirstPages", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Pages_1.Pages, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstPagesOrThrowArgs_1.FindFirstPagesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], PagesCrudResolver.prototype, "findFirstPagesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Pages_1.Pages], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniquePagesArgs_1.FindUniquePagesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], PagesCrudResolver.prototype, "findUniquePages", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Pages_1.Pages, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniquePagesOrThrowArgs_1.FindUniquePagesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], PagesCrudResolver.prototype, "findUniquePagesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [PagesGroupBy_1.PagesGroupBy], {
         nullable: false

@@ -10,8 +10,10 @@ const CreateOneCategoriesArgs_1 = require("./args/CreateOneCategoriesArgs");
 const DeleteManyCategoriesArgs_1 = require("./args/DeleteManyCategoriesArgs");
 const DeleteOneCategoriesArgs_1 = require("./args/DeleteOneCategoriesArgs");
 const FindFirstCategoriesArgs_1 = require("./args/FindFirstCategoriesArgs");
+const FindFirstCategoriesOrThrowArgs_1 = require("./args/FindFirstCategoriesOrThrowArgs");
 const FindManyCategoriesArgs_1 = require("./args/FindManyCategoriesArgs");
 const FindUniqueCategoriesArgs_1 = require("./args/FindUniqueCategoriesArgs");
+const FindUniqueCategoriesOrThrowArgs_1 = require("./args/FindUniqueCategoriesOrThrowArgs");
 const GroupByCategoriesArgs_1 = require("./args/GroupByCategoriesArgs");
 const UpdateManyCategoriesArgs_1 = require("./args/UpdateManyCategoriesArgs");
 const UpdateOneCategoriesArgs_1 = require("./args/UpdateOneCategoriesArgs");
@@ -63,6 +65,13 @@ let CategoriesCrudResolver = class CategoriesCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstCategoriesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).categories.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyCategories(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).categories.findMany({
@@ -73,6 +82,13 @@ let CategoriesCrudResolver = class CategoriesCrudResolver {
     async findUniqueCategories(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).categories.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueCategoriesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).categories.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], CategoriesCrudResolver.prototype, "findFirstCategories", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Categories_1.Categories, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstCategoriesOrThrowArgs_1.FindFirstCategoriesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], CategoriesCrudResolver.prototype, "findFirstCategoriesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Categories_1.Categories], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueCategoriesArgs_1.FindUniqueCategoriesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], CategoriesCrudResolver.prototype, "findUniqueCategories", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Categories_1.Categories, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueCategoriesOrThrowArgs_1.FindUniqueCategoriesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], CategoriesCrudResolver.prototype, "findUniqueCategoriesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [CategoriesGroupBy_1.CategoriesGroupBy], {
         nullable: false

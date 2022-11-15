@@ -10,8 +10,10 @@ const CreateOneReviewsArgs_1 = require("./args/CreateOneReviewsArgs");
 const DeleteManyReviewsArgs_1 = require("./args/DeleteManyReviewsArgs");
 const DeleteOneReviewsArgs_1 = require("./args/DeleteOneReviewsArgs");
 const FindFirstReviewsArgs_1 = require("./args/FindFirstReviewsArgs");
+const FindFirstReviewsOrThrowArgs_1 = require("./args/FindFirstReviewsOrThrowArgs");
 const FindManyReviewsArgs_1 = require("./args/FindManyReviewsArgs");
 const FindUniqueReviewsArgs_1 = require("./args/FindUniqueReviewsArgs");
+const FindUniqueReviewsOrThrowArgs_1 = require("./args/FindUniqueReviewsOrThrowArgs");
 const GroupByReviewsArgs_1 = require("./args/GroupByReviewsArgs");
 const UpdateManyReviewsArgs_1 = require("./args/UpdateManyReviewsArgs");
 const UpdateOneReviewsArgs_1 = require("./args/UpdateOneReviewsArgs");
@@ -63,6 +65,13 @@ let ReviewsCrudResolver = class ReviewsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstReviewsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).reviews.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyReviews(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).reviews.findMany({
@@ -73,6 +82,13 @@ let ReviewsCrudResolver = class ReviewsCrudResolver {
     async findUniqueReviews(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).reviews.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueReviewsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).reviews.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], ReviewsCrudResolver.prototype, "findFirstReviews", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Reviews_1.Reviews, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstReviewsOrThrowArgs_1.FindFirstReviewsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ReviewsCrudResolver.prototype, "findFirstReviewsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Reviews_1.Reviews], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueReviewsArgs_1.FindUniqueReviewsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ReviewsCrudResolver.prototype, "findUniqueReviews", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Reviews_1.Reviews, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueReviewsOrThrowArgs_1.FindUniqueReviewsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ReviewsCrudResolver.prototype, "findUniqueReviewsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [ReviewsGroupBy_1.ReviewsGroupBy], {
         nullable: false

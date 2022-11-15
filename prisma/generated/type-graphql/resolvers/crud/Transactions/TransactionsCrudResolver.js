@@ -10,8 +10,10 @@ const CreateOneTransactionsArgs_1 = require("./args/CreateOneTransactionsArgs");
 const DeleteManyTransactionsArgs_1 = require("./args/DeleteManyTransactionsArgs");
 const DeleteOneTransactionsArgs_1 = require("./args/DeleteOneTransactionsArgs");
 const FindFirstTransactionsArgs_1 = require("./args/FindFirstTransactionsArgs");
+const FindFirstTransactionsOrThrowArgs_1 = require("./args/FindFirstTransactionsOrThrowArgs");
 const FindManyTransactionsArgs_1 = require("./args/FindManyTransactionsArgs");
 const FindUniqueTransactionsArgs_1 = require("./args/FindUniqueTransactionsArgs");
+const FindUniqueTransactionsOrThrowArgs_1 = require("./args/FindUniqueTransactionsOrThrowArgs");
 const GroupByTransactionsArgs_1 = require("./args/GroupByTransactionsArgs");
 const UpdateManyTransactionsArgs_1 = require("./args/UpdateManyTransactionsArgs");
 const UpdateOneTransactionsArgs_1 = require("./args/UpdateOneTransactionsArgs");
@@ -63,6 +65,13 @@ let TransactionsCrudResolver = class TransactionsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstTransactionsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).transactions.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyTransactions(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).transactions.findMany({
@@ -73,6 +82,13 @@ let TransactionsCrudResolver = class TransactionsCrudResolver {
     async findUniqueTransactions(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).transactions.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueTransactionsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).transactions.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], TransactionsCrudResolver.prototype, "findFirstTransactions", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Transactions_1.Transactions, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstTransactionsOrThrowArgs_1.FindFirstTransactionsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], TransactionsCrudResolver.prototype, "findFirstTransactionsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Transactions_1.Transactions], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueTransactionsArgs_1.FindUniqueTransactionsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], TransactionsCrudResolver.prototype, "findUniqueTransactions", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Transactions_1.Transactions, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueTransactionsOrThrowArgs_1.FindUniqueTransactionsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], TransactionsCrudResolver.prototype, "findUniqueTransactionsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [TransactionsGroupBy_1.TransactionsGroupBy], {
         nullable: false

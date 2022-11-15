@@ -10,8 +10,10 @@ const CreateOneVendorsArgs_1 = require("./args/CreateOneVendorsArgs");
 const DeleteManyVendorsArgs_1 = require("./args/DeleteManyVendorsArgs");
 const DeleteOneVendorsArgs_1 = require("./args/DeleteOneVendorsArgs");
 const FindFirstVendorsArgs_1 = require("./args/FindFirstVendorsArgs");
+const FindFirstVendorsOrThrowArgs_1 = require("./args/FindFirstVendorsOrThrowArgs");
 const FindManyVendorsArgs_1 = require("./args/FindManyVendorsArgs");
 const FindUniqueVendorsArgs_1 = require("./args/FindUniqueVendorsArgs");
+const FindUniqueVendorsOrThrowArgs_1 = require("./args/FindUniqueVendorsOrThrowArgs");
 const GroupByVendorsArgs_1 = require("./args/GroupByVendorsArgs");
 const UpdateManyVendorsArgs_1 = require("./args/UpdateManyVendorsArgs");
 const UpdateOneVendorsArgs_1 = require("./args/UpdateOneVendorsArgs");
@@ -63,6 +65,13 @@ let VendorsCrudResolver = class VendorsCrudResolver {
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstVendorsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).vendors.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyVendors(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).vendors.findMany({
@@ -73,6 +82,13 @@ let VendorsCrudResolver = class VendorsCrudResolver {
     async findUniqueVendors(ctx, info, args) {
         const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
         return (0, helpers_1.getPrismaFromContext)(ctx).vendors.findUnique({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
+    async findUniqueVendorsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        return (0, helpers_1.getPrismaFromContext)(ctx).vendors.findUniqueOrThrow({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
@@ -173,6 +189,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], VendorsCrudResolver.prototype, "findFirstVendors", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Vendors_1.Vendors, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstVendorsOrThrowArgs_1.FindFirstVendorsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], VendorsCrudResolver.prototype, "findFirstVendorsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Vendors_1.Vendors], {
         nullable: false
     }),
@@ -194,6 +221,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueVendorsArgs_1.FindUniqueVendorsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], VendorsCrudResolver.prototype, "findUniqueVendors", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Vendors_1.Vendors, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueVendorsOrThrowArgs_1.FindUniqueVendorsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], VendorsCrudResolver.prototype, "findUniqueVendorsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [VendorsGroupBy_1.VendorsGroupBy], {
         nullable: false
