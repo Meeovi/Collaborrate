@@ -16185,69 +16185,133 @@ type Query {
   endofshift(where: EndofshiftWhereUniqueInput!): Endofshift
   endofshifts(cursor: EndofshiftWhereUniqueInput, distinct: [EndofshiftScalarFieldEnum!], orderBy: [EndofshiftOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EndofshiftWhereInput): [Endofshift!]!
   findFirstAgreements(cursor: AgreementsWhereUniqueInput, distinct: [AgreementsScalarFieldEnum!], orderBy: [AgreementsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AgreementsWhereInput): Agreements
+  findFirstAgreementsOrThrow(cursor: AgreementsWhereUniqueInput, distinct: [AgreementsScalarFieldEnum!], orderBy: [AgreementsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AgreementsWhereInput): Agreements
   findFirstApitoken(cursor: ApitokenWhereUniqueInput, distinct: [ApitokenScalarFieldEnum!], orderBy: [ApitokenOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ApitokenWhereInput): Apitoken
+  findFirstApitokenOrThrow(cursor: ApitokenWhereUniqueInput, distinct: [ApitokenScalarFieldEnum!], orderBy: [ApitokenOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ApitokenWhereInput): Apitoken
   findFirstArticles(cursor: ArticlesWhereUniqueInput, distinct: [ArticlesScalarFieldEnum!], orderBy: [ArticlesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ArticlesWhereInput): Articles
+  findFirstArticlesOrThrow(cursor: ArticlesWhereUniqueInput, distinct: [ArticlesScalarFieldEnum!], orderBy: [ArticlesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ArticlesWhereInput): Articles
   findFirstAttributes(cursor: AttributesWhereUniqueInput, distinct: [AttributesScalarFieldEnum!], orderBy: [AttributesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AttributesWhereInput): Attributes
+  findFirstAttributesOrThrow(cursor: AttributesWhereUniqueInput, distinct: [AttributesScalarFieldEnum!], orderBy: [AttributesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AttributesWhereInput): Attributes
   findFirstBrands(cursor: BrandsWhereUniqueInput, distinct: [BrandsScalarFieldEnum!], orderBy: [BrandsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: BrandsWhereInput): Brands
+  findFirstBrandsOrThrow(cursor: BrandsWhereUniqueInput, distinct: [BrandsScalarFieldEnum!], orderBy: [BrandsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: BrandsWhereInput): Brands
   findFirstCategories(cursor: CategoriesWhereUniqueInput, distinct: [CategoriesScalarFieldEnum!], orderBy: [CategoriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CategoriesWhereInput): Categories
+  findFirstCategoriesOrThrow(cursor: CategoriesWhereUniqueInput, distinct: [CategoriesScalarFieldEnum!], orderBy: [CategoriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CategoriesWhereInput): Categories
   findFirstChannels(cursor: ChannelsWhereUniqueInput, distinct: [ChannelsScalarFieldEnum!], orderBy: [ChannelsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ChannelsWhereInput): Channels
+  findFirstChannelsOrThrow(cursor: ChannelsWhereUniqueInput, distinct: [ChannelsScalarFieldEnum!], orderBy: [ChannelsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ChannelsWhereInput): Channels
   findFirstChecklist(cursor: ChecklistWhereUniqueInput, distinct: [ChecklistScalarFieldEnum!], orderBy: [ChecklistOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ChecklistWhereInput): Checklist
+  findFirstChecklistOrThrow(cursor: ChecklistWhereUniqueInput, distinct: [ChecklistScalarFieldEnum!], orderBy: [ChecklistOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ChecklistWhereInput): Checklist
   findFirstCities(cursor: CitiesWhereUniqueInput, distinct: [CitiesScalarFieldEnum!], orderBy: [CitiesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CitiesWhereInput): Cities
+  findFirstCitiesOrThrow(cursor: CitiesWhereUniqueInput, distinct: [CitiesScalarFieldEnum!], orderBy: [CitiesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CitiesWhereInput): Cities
   findFirstCollections(cursor: CollectionsWhereUniqueInput, distinct: [CollectionsScalarFieldEnum!], orderBy: [CollectionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CollectionsWhereInput): Collections
+  findFirstCollectionsOrThrow(cursor: CollectionsWhereUniqueInput, distinct: [CollectionsScalarFieldEnum!], orderBy: [CollectionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CollectionsWhereInput): Collections
   findFirstContent_type(cursor: Content_typeWhereUniqueInput, distinct: [Content_typeScalarFieldEnum!], orderBy: [Content_typeOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Content_typeWhereInput): Content_type
+  findFirstContent_typeOrThrow(cursor: Content_typeWhereUniqueInput, distinct: [Content_typeScalarFieldEnum!], orderBy: [Content_typeOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Content_typeWhereInput): Content_type
   findFirstCountries(cursor: CountriesWhereUniqueInput, distinct: [CountriesScalarFieldEnum!], orderBy: [CountriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CountriesWhereInput): Countries
+  findFirstCountriesOrThrow(cursor: CountriesWhereUniqueInput, distinct: [CountriesScalarFieldEnum!], orderBy: [CountriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CountriesWhereInput): Countries
   findFirstCurrencies(cursor: CurrenciesWhereUniqueInput, distinct: [CurrenciesScalarFieldEnum!], orderBy: [CurrenciesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CurrenciesWhereInput): Currencies
+  findFirstCurrenciesOrThrow(cursor: CurrenciesWhereUniqueInput, distinct: [CurrenciesScalarFieldEnum!], orderBy: [CurrenciesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CurrenciesWhereInput): Currencies
   findFirstCustomers(cursor: CustomersWhereUniqueInput, distinct: [CustomersScalarFieldEnum!], orderBy: [CustomersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CustomersWhereInput): Customers
+  findFirstCustomersOrThrow(cursor: CustomersWhereUniqueInput, distinct: [CustomersScalarFieldEnum!], orderBy: [CustomersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CustomersWhereInput): Customers
   findFirstDashboards(cursor: DashboardsWhereUniqueInput, distinct: [DashboardsScalarFieldEnum!], orderBy: [DashboardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardsWhereInput): Dashboards
+  findFirstDashboardsOrThrow(cursor: DashboardsWhereUniqueInput, distinct: [DashboardsScalarFieldEnum!], orderBy: [DashboardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardsWhereInput): Dashboards
   findFirstDeepdive(cursor: DeepdiveWhereUniqueInput, distinct: [DeepdiveScalarFieldEnum!], orderBy: [DeepdiveOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DeepdiveWhereInput): Deepdive
+  findFirstDeepdiveOrThrow(cursor: DeepdiveWhereUniqueInput, distinct: [DeepdiveScalarFieldEnum!], orderBy: [DeepdiveOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DeepdiveWhereInput): Deepdive
   findFirstDiscounts(cursor: DiscountsWhereUniqueInput, distinct: [DiscountsScalarFieldEnum!], orderBy: [DiscountsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DiscountsWhereInput): Discounts
+  findFirstDiscountsOrThrow(cursor: DiscountsWhereUniqueInput, distinct: [DiscountsScalarFieldEnum!], orderBy: [DiscountsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DiscountsWhereInput): Discounts
   findFirstEndofshift(cursor: EndofshiftWhereUniqueInput, distinct: [EndofshiftScalarFieldEnum!], orderBy: [EndofshiftOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EndofshiftWhereInput): Endofshift
+  findFirstEndofshiftOrThrow(cursor: EndofshiftWhereUniqueInput, distinct: [EndofshiftScalarFieldEnum!], orderBy: [EndofshiftOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EndofshiftWhereInput): Endofshift
   findFirstEvents(cursor: EventsWhereUniqueInput, distinct: [EventsScalarFieldEnum!], orderBy: [EventsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EventsWhereInput): Events
+  findFirstEventsOrThrow(cursor: EventsWhereUniqueInput, distinct: [EventsScalarFieldEnum!], orderBy: [EventsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EventsWhereInput): Events
   findFirstFullfillments(cursor: FullfillmentsWhereUniqueInput, distinct: [FullfillmentsScalarFieldEnum!], orderBy: [FullfillmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): Fullfillments
+  findFirstFullfillmentsOrThrow(cursor: FullfillmentsWhereUniqueInput, distinct: [FullfillmentsScalarFieldEnum!], orderBy: [FullfillmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): Fullfillments
   findFirstGlossary(cursor: GlossaryWhereUniqueInput, distinct: [GlossaryScalarFieldEnum!], orderBy: [GlossaryOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: GlossaryWhereInput): Glossary
+  findFirstGlossaryOrThrow(cursor: GlossaryWhereUniqueInput, distinct: [GlossaryScalarFieldEnum!], orderBy: [GlossaryOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: GlossaryWhereInput): Glossary
   findFirstIntegrations(cursor: IntegrationsWhereUniqueInput, distinct: [IntegrationsScalarFieldEnum!], orderBy: [IntegrationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: IntegrationsWhereInput): Integrations
+  findFirstIntegrationsOrThrow(cursor: IntegrationsWhereUniqueInput, distinct: [IntegrationsScalarFieldEnum!], orderBy: [IntegrationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: IntegrationsWhereInput): Integrations
   findFirstInternalization(cursor: InternalizationWhereUniqueInput, distinct: [InternalizationScalarFieldEnum!], orderBy: [InternalizationOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InternalizationWhereInput): Internalization
+  findFirstInternalizationOrThrow(cursor: InternalizationWhereUniqueInput, distinct: [InternalizationScalarFieldEnum!], orderBy: [InternalizationOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InternalizationWhereInput): Internalization
   findFirstInvoices(cursor: InvoicesWhereUniqueInput, distinct: [InvoicesScalarFieldEnum!], orderBy: [InvoicesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvoicesWhereInput): Invoices
+  findFirstInvoicesOrThrow(cursor: InvoicesWhereUniqueInput, distinct: [InvoicesScalarFieldEnum!], orderBy: [InvoicesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvoicesWhereInput): Invoices
   findFirstLogIn(cursor: LogInWhereUniqueInput, distinct: [LogInScalarFieldEnum!], orderBy: [LogInOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LogInWhereInput): LogIn
+  findFirstLogInOrThrow(cursor: LogInWhereUniqueInput, distinct: [LogInScalarFieldEnum!], orderBy: [LogInOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LogInWhereInput): LogIn
   findFirstManufacturer(cursor: ManufacturerWhereUniqueInput, distinct: [ManufacturerScalarFieldEnum!], orderBy: [ManufacturerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ManufacturerWhereInput): Manufacturer
+  findFirstManufacturerOrThrow(cursor: ManufacturerWhereUniqueInput, distinct: [ManufacturerScalarFieldEnum!], orderBy: [ManufacturerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ManufacturerWhereInput): Manufacturer
   findFirstMediamanager(cursor: MediamanagerWhereUniqueInput, distinct: [MediamanagerScalarFieldEnum!], orderBy: [MediamanagerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: MediamanagerWhereInput): Mediamanager
+  findFirstMediamanagerOrThrow(cursor: MediamanagerWhereUniqueInput, distinct: [MediamanagerScalarFieldEnum!], orderBy: [MediamanagerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: MediamanagerWhereInput): Mediamanager
   findFirstNewsletters(cursor: NewslettersWhereUniqueInput, distinct: [NewslettersScalarFieldEnum!], orderBy: [NewslettersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: NewslettersWhereInput): Newsletters
+  findFirstNewslettersOrThrow(cursor: NewslettersWhereUniqueInput, distinct: [NewslettersScalarFieldEnum!], orderBy: [NewslettersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: NewslettersWhereInput): Newsletters
   findFirstOoto(cursor: OotoWhereUniqueInput, distinct: [OotoScalarFieldEnum!], orderBy: [OotoOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: OotoWhereInput): Ooto
+  findFirstOotoOrThrow(cursor: OotoWhereUniqueInput, distinct: [OotoScalarFieldEnum!], orderBy: [OotoOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: OotoWhereInput): Ooto
   findFirstOrders(cursor: OrdersWhereUniqueInput, distinct: [OrdersScalarFieldEnum!], orderBy: [OrdersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: OrdersWhereInput): Orders
+  findFirstOrdersOrThrow(cursor: OrdersWhereUniqueInput, distinct: [OrdersScalarFieldEnum!], orderBy: [OrdersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: OrdersWhereInput): Orders
   findFirstPages(cursor: PagesWhereUniqueInput, distinct: [PagesScalarFieldEnum!], orderBy: [PagesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PagesWhereInput): Pages
+  findFirstPagesOrThrow(cursor: PagesWhereUniqueInput, distinct: [PagesScalarFieldEnum!], orderBy: [PagesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PagesWhereInput): Pages
   findFirstPartners(cursor: PartnersWhereUniqueInput, distinct: [PartnersScalarFieldEnum!], orderBy: [PartnersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PartnersWhereInput): Partners
+  findFirstPartnersOrThrow(cursor: PartnersWhereUniqueInput, distinct: [PartnersScalarFieldEnum!], orderBy: [PartnersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PartnersWhereInput): Partners
   findFirstPayments(cursor: PaymentsWhereUniqueInput, distinct: [PaymentsScalarFieldEnum!], orderBy: [PaymentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PaymentsWhereInput): Payments
+  findFirstPaymentsOrThrow(cursor: PaymentsWhereUniqueInput, distinct: [PaymentsScalarFieldEnum!], orderBy: [PaymentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PaymentsWhereInput): Payments
   findFirstPermissions(cursor: PermissionsWhereUniqueInput, distinct: [PermissionsScalarFieldEnum!], orderBy: [PermissionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PermissionsWhereInput): Permissions
+  findFirstPermissionsOrThrow(cursor: PermissionsWhereUniqueInput, distinct: [PermissionsScalarFieldEnum!], orderBy: [PermissionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PermissionsWhereInput): Permissions
   findFirstPlugins(cursor: PluginsWhereUniqueInput, distinct: [PluginsScalarFieldEnum!], orderBy: [PluginsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PluginsWhereInput): Plugins
+  findFirstPluginsOrThrow(cursor: PluginsWhereUniqueInput, distinct: [PluginsScalarFieldEnum!], orderBy: [PluginsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PluginsWhereInput): Plugins
   findFirstProduct_types(cursor: Product_typesWhereUniqueInput, distinct: [Product_typesScalarFieldEnum!], orderBy: [Product_typesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Product_typesWhereInput): Product_types
+  findFirstProduct_typesOrThrow(cursor: Product_typesWhereUniqueInput, distinct: [Product_typesScalarFieldEnum!], orderBy: [Product_typesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Product_typesWhereInput): Product_types
   findFirstProducts(cursor: ProductsWhereUniqueInput, distinct: [ProductsScalarFieldEnum!], orderBy: [ProductsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ProductsWhereInput): Products
+  findFirstProductsOrThrow(cursor: ProductsWhereUniqueInput, distinct: [ProductsScalarFieldEnum!], orderBy: [ProductsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ProductsWhereInput): Products
   findFirstProjects(cursor: ProjectsWhereUniqueInput, distinct: [ProjectsScalarFieldEnum!], orderBy: [ProjectsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ProjectsWhereInput): Projects
+  findFirstProjectsOrThrow(cursor: ProjectsWhereUniqueInput, distinct: [ProjectsScalarFieldEnum!], orderBy: [ProjectsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ProjectsWhereInput): Projects
   findFirstProviders(cursor: ProvidersWhereUniqueInput, distinct: [ProvidersScalarFieldEnum!], orderBy: [ProvidersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ProvidersWhereInput): Providers
+  findFirstProvidersOrThrow(cursor: ProvidersWhereUniqueInput, distinct: [ProvidersScalarFieldEnum!], orderBy: [ProvidersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ProvidersWhereInput): Providers
   findFirstQuotes(cursor: QuotesWhereUniqueInput, distinct: [QuotesScalarFieldEnum!], orderBy: [QuotesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: QuotesWhereInput): Quotes
+  findFirstQuotesOrThrow(cursor: QuotesWhereUniqueInput, distinct: [QuotesScalarFieldEnum!], orderBy: [QuotesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: QuotesWhereInput): Quotes
   findFirstReturns(cursor: ReturnsWhereUniqueInput, distinct: [ReturnsScalarFieldEnum!], orderBy: [ReturnsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ReturnsWhereInput): Returns
+  findFirstReturnsOrThrow(cursor: ReturnsWhereUniqueInput, distinct: [ReturnsScalarFieldEnum!], orderBy: [ReturnsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ReturnsWhereInput): Returns
   findFirstReviews(cursor: ReviewsWhereUniqueInput, distinct: [ReviewsScalarFieldEnum!], orderBy: [ReviewsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ReviewsWhereInput): Reviews
+  findFirstReviewsOrThrow(cursor: ReviewsWhereUniqueInput, distinct: [ReviewsScalarFieldEnum!], orderBy: [ReviewsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ReviewsWhereInput): Reviews
   findFirstRewards(cursor: RewardsWhereUniqueInput, distinct: [RewardsScalarFieldEnum!], orderBy: [RewardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: RewardsWhereInput): Rewards
+  findFirstRewardsOrThrow(cursor: RewardsWhereUniqueInput, distinct: [RewardsScalarFieldEnum!], orderBy: [RewardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: RewardsWhereInput): Rewards
   findFirstRoles(cursor: RolesWhereUniqueInput, distinct: [RolesScalarFieldEnum!], orderBy: [RolesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: RolesWhereInput): Roles
+  findFirstRolesOrThrow(cursor: RolesWhereUniqueInput, distinct: [RolesScalarFieldEnum!], orderBy: [RolesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: RolesWhereInput): Roles
   findFirstScheduler(cursor: SchedulerWhereUniqueInput, distinct: [SchedulerScalarFieldEnum!], orderBy: [SchedulerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SchedulerWhereInput): Scheduler
+  findFirstSchedulerOrThrow(cursor: SchedulerWhereUniqueInput, distinct: [SchedulerScalarFieldEnum!], orderBy: [SchedulerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SchedulerWhereInput): Scheduler
   findFirstSegments(cursor: SegmentsWhereUniqueInput, distinct: [SegmentsScalarFieldEnum!], orderBy: [SegmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SegmentsWhereInput): Segments
+  findFirstSegmentsOrThrow(cursor: SegmentsWhereUniqueInput, distinct: [SegmentsScalarFieldEnum!], orderBy: [SegmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SegmentsWhereInput): Segments
   findFirstSettings(cursor: SettingsWhereUniqueInput, distinct: [SettingsScalarFieldEnum!], orderBy: [SettingsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SettingsWhereInput): Settings
+  findFirstSettingsOrThrow(cursor: SettingsWhereUniqueInput, distinct: [SettingsScalarFieldEnum!], orderBy: [SettingsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SettingsWhereInput): Settings
   findFirstShipments(cursor: ShipmentsWhereUniqueInput, distinct: [ShipmentsScalarFieldEnum!], orderBy: [ShipmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ShipmentsWhereInput): Shipments
+  findFirstShipmentsOrThrow(cursor: ShipmentsWhereUniqueInput, distinct: [ShipmentsScalarFieldEnum!], orderBy: [ShipmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ShipmentsWhereInput): Shipments
   findFirstStates(cursor: StatesWhereUniqueInput, distinct: [StatesScalarFieldEnum!], orderBy: [StatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StatesWhereInput): States
+  findFirstStatesOrThrow(cursor: StatesWhereUniqueInput, distinct: [StatesScalarFieldEnum!], orderBy: [StatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StatesWhereInput): States
   findFirstTags(cursor: TagsWhereUniqueInput, distinct: [TagsScalarFieldEnum!], orderBy: [TagsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TagsWhereInput): Tags
+  findFirstTagsOrThrow(cursor: TagsWhereUniqueInput, distinct: [TagsScalarFieldEnum!], orderBy: [TagsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TagsWhereInput): Tags
   findFirstTaxes(cursor: TaxesWhereUniqueInput, distinct: [TaxesScalarFieldEnum!], orderBy: [TaxesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TaxesWhereInput): Taxes
+  findFirstTaxesOrThrow(cursor: TaxesWhereUniqueInput, distinct: [TaxesScalarFieldEnum!], orderBy: [TaxesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TaxesWhereInput): Taxes
   findFirstThemes(cursor: ThemesWhereUniqueInput, distinct: [ThemesScalarFieldEnum!], orderBy: [ThemesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ThemesWhereInput): Themes
+  findFirstThemesOrThrow(cursor: ThemesWhereUniqueInput, distinct: [ThemesScalarFieldEnum!], orderBy: [ThemesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ThemesWhereInput): Themes
   findFirstTicketing(cursor: TicketingWhereUniqueInput, distinct: [TicketingScalarFieldEnum!], orderBy: [TicketingOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TicketingWhereInput): Ticketing
+  findFirstTicketingOrThrow(cursor: TicketingWhereUniqueInput, distinct: [TicketingScalarFieldEnum!], orderBy: [TicketingOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TicketingWhereInput): Ticketing
   findFirstTransactions(cursor: TransactionsWhereUniqueInput, distinct: [TransactionsScalarFieldEnum!], orderBy: [TransactionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TransactionsWhereInput): Transactions
+  findFirstTransactionsOrThrow(cursor: TransactionsWhereUniqueInput, distinct: [TransactionsScalarFieldEnum!], orderBy: [TransactionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TransactionsWhereInput): Transactions
   findFirstUpload_file(cursor: Upload_fileWhereUniqueInput, distinct: [Upload_fileScalarFieldEnum!], orderBy: [Upload_fileOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Upload_fileWhereInput): Upload_file
+  findFirstUpload_fileOrThrow(cursor: Upload_fileWhereUniqueInput, distinct: [Upload_fileScalarFieldEnum!], orderBy: [Upload_fileOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Upload_fileWhereInput): Upload_file
   findFirstUsers(cursor: UsersWhereUniqueInput, distinct: [UsersScalarFieldEnum!], orderBy: [UsersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: UsersWhereInput): Users
+  findFirstUsersOrThrow(cursor: UsersWhereUniqueInput, distinct: [UsersScalarFieldEnum!], orderBy: [UsersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: UsersWhereInput): Users
   findFirstVendors(cursor: VendorsWhereUniqueInput, distinct: [VendorsScalarFieldEnum!], orderBy: [VendorsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: VendorsWhereInput): Vendors
+  findFirstVendorsOrThrow(cursor: VendorsWhereUniqueInput, distinct: [VendorsScalarFieldEnum!], orderBy: [VendorsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: VendorsWhereInput): Vendors
   findFirstVisits(cursor: VisitsWhereUniqueInput, distinct: [VisitsScalarFieldEnum!], orderBy: [VisitsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: VisitsWhereInput): Visits
+  findFirstVisitsOrThrow(cursor: VisitsWhereUniqueInput, distinct: [VisitsScalarFieldEnum!], orderBy: [VisitsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: VisitsWhereInput): Visits
   findFirstWarehouse(cursor: WarehouseWhereUniqueInput, distinct: [WarehouseScalarFieldEnum!], orderBy: [WarehouseOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WarehouseWhereInput): Warehouse
+  findFirstWarehouseOrThrow(cursor: WarehouseWhereUniqueInput, distinct: [WarehouseScalarFieldEnum!], orderBy: [WarehouseOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WarehouseWhereInput): Warehouse
   findFirstWebhooks(cursor: WebhooksWhereUniqueInput, distinct: [WebhooksScalarFieldEnum!], orderBy: [WebhooksOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WebhooksWhereInput): Webhooks
+  findFirstWebhooksOrThrow(cursor: WebhooksWhereUniqueInput, distinct: [WebhooksScalarFieldEnum!], orderBy: [WebhooksOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WebhooksWhereInput): Webhooks
   findFirstWebsites(cursor: WebsitesWhereUniqueInput, distinct: [WebsitesScalarFieldEnum!], orderBy: [WebsitesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WebsitesWhereInput): Websites
+  findFirstWebsitesOrThrow(cursor: WebsitesWhereUniqueInput, distinct: [WebsitesScalarFieldEnum!], orderBy: [WebsitesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WebsitesWhereInput): Websites
   findFirstWishlists(cursor: WishlistsWhereUniqueInput, distinct: [WishlistsScalarFieldEnum!], orderBy: [WishlistsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WishlistsWhereInput): Wishlists
+  findFirstWishlistsOrThrow(cursor: WishlistsWhereUniqueInput, distinct: [WishlistsScalarFieldEnum!], orderBy: [WishlistsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WishlistsWhereInput): Wishlists
   findFirstWorkspaces(cursor: WorkspacesWhereUniqueInput, distinct: [WorkspacesScalarFieldEnum!], orderBy: [WorkspacesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WorkspacesWhereInput): Workspaces
+  findFirstWorkspacesOrThrow(cursor: WorkspacesWhereUniqueInput, distinct: [WorkspacesScalarFieldEnum!], orderBy: [WorkspacesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WorkspacesWhereInput): Workspaces
   findFirstZones(cursor: ZonesWhereUniqueInput, distinct: [ZonesScalarFieldEnum!], orderBy: [ZonesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ZonesWhereInput): Zones
+  findFirstZonesOrThrow(cursor: ZonesWhereUniqueInput, distinct: [ZonesScalarFieldEnum!], orderBy: [ZonesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ZonesWhereInput): Zones
   findManyAgreements(cursor: AgreementsWhereUniqueInput, distinct: [AgreementsScalarFieldEnum!], orderBy: [AgreementsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AgreementsWhereInput): [Agreements!]!
   findManyArticles(cursor: ArticlesWhereUniqueInput, distinct: [ArticlesScalarFieldEnum!], orderBy: [ArticlesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ArticlesWhereInput): [Articles!]!
   findManyAttributes(cursor: AttributesWhereUniqueInput, distinct: [AttributesScalarFieldEnum!], orderBy: [AttributesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AttributesWhereInput): [Attributes!]!
@@ -16298,54 +16362,118 @@ type Query {
   findManyWorkspaces(cursor: WorkspacesWhereUniqueInput, distinct: [WorkspacesScalarFieldEnum!], orderBy: [WorkspacesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WorkspacesWhereInput): [Workspaces!]!
   findManyZones(cursor: ZonesWhereUniqueInput, distinct: [ZonesScalarFieldEnum!], orderBy: [ZonesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ZonesWhereInput): [Zones!]!
   findUniqueAgreements(where: AgreementsWhereUniqueInput!): Agreements
+  findUniqueAgreementsOrThrow(where: AgreementsWhereUniqueInput!): Agreements
   findUniqueArticles(where: ArticlesWhereUniqueInput!): Articles
+  findUniqueArticlesOrThrow(where: ArticlesWhereUniqueInput!): Articles
   findUniqueAttributes(where: AttributesWhereUniqueInput!): Attributes
+  findUniqueAttributesOrThrow(where: AttributesWhereUniqueInput!): Attributes
   findUniqueBrands(where: BrandsWhereUniqueInput!): Brands
+  findUniqueBrandsOrThrow(where: BrandsWhereUniqueInput!): Brands
   findUniqueCategories(where: CategoriesWhereUniqueInput!): Categories
+  findUniqueCategoriesOrThrow(where: CategoriesWhereUniqueInput!): Categories
   findUniqueChannels(where: ChannelsWhereUniqueInput!): Channels
+  findUniqueChannelsOrThrow(where: ChannelsWhereUniqueInput!): Channels
   findUniqueCities(where: CitiesWhereUniqueInput!): Cities
+  findUniqueCitiesOrThrow(where: CitiesWhereUniqueInput!): Cities
   findUniqueCollections(where: CollectionsWhereUniqueInput!): Collections
+  findUniqueCollectionsOrThrow(where: CollectionsWhereUniqueInput!): Collections
   findUniqueCountries(where: CountriesWhereUniqueInput!): Countries
+  findUniqueCountriesOrThrow(where: CountriesWhereUniqueInput!): Countries
   findUniqueCurrencies(where: CurrenciesWhereUniqueInput!): Currencies
+  findUniqueCurrenciesOrThrow(where: CurrenciesWhereUniqueInput!): Currencies
   findUniqueCustomers(where: CustomersWhereUniqueInput!): Customers
+  findUniqueCustomersOrThrow(where: CustomersWhereUniqueInput!): Customers
   findUniqueDashboards(where: DashboardsWhereUniqueInput!): Dashboards
+  findUniqueDashboardsOrThrow(where: DashboardsWhereUniqueInput!): Dashboards
   findUniqueDiscounts(where: DiscountsWhereUniqueInput!): Discounts
+  findUniqueDiscountsOrThrow(where: DiscountsWhereUniqueInput!): Discounts
   findUniqueEvents(where: EventsWhereUniqueInput!): Events
+  findUniqueEventsOrThrow(where: EventsWhereUniqueInput!): Events
   findUniqueFullfillments(where: FullfillmentsWhereUniqueInput!): Fullfillments
+  findUniqueFullfillmentsOrThrow(where: FullfillmentsWhereUniqueInput!): Fullfillments
   findUniqueIntegrations(where: IntegrationsWhereUniqueInput!): Integrations
+  findUniqueIntegrationsOrThrow(where: IntegrationsWhereUniqueInput!): Integrations
   findUniqueInvoices(where: InvoicesWhereUniqueInput!): Invoices
+  findUniqueInvoicesOrThrow(where: InvoicesWhereUniqueInput!): Invoices
   findUniqueNewsletters(where: NewslettersWhereUniqueInput!): Newsletters
+  findUniqueNewslettersOrThrow(where: NewslettersWhereUniqueInput!): Newsletters
   findUniqueOrders(where: OrdersWhereUniqueInput!): Orders
+  findUniqueOrdersOrThrow(where: OrdersWhereUniqueInput!): Orders
   findUniquePages(where: PagesWhereUniqueInput!): Pages
+  findUniquePagesOrThrow(where: PagesWhereUniqueInput!): Pages
   findUniquePartners(where: PartnersWhereUniqueInput!): Partners
+  findUniquePartnersOrThrow(where: PartnersWhereUniqueInput!): Partners
   findUniquePayments(where: PaymentsWhereUniqueInput!): Payments
+  findUniquePaymentsOrThrow(where: PaymentsWhereUniqueInput!): Payments
   findUniquePermissions(where: PermissionsWhereUniqueInput!): Permissions
+  findUniquePermissionsOrThrow(where: PermissionsWhereUniqueInput!): Permissions
   findUniquePlugins(where: PluginsWhereUniqueInput!): Plugins
+  findUniquePluginsOrThrow(where: PluginsWhereUniqueInput!): Plugins
   findUniqueProduct_types(where: Product_typesWhereUniqueInput!): Product_types
+  findUniqueProduct_typesOrThrow(where: Product_typesWhereUniqueInput!): Product_types
   findUniqueProducts(where: ProductsWhereUniqueInput!): Products
+  findUniqueProductsOrThrow(where: ProductsWhereUniqueInput!): Products
   findUniqueProjects(where: ProjectsWhereUniqueInput!): Projects
+  findUniqueProjectsOrThrow(where: ProjectsWhereUniqueInput!): Projects
   findUniqueProviders(where: ProvidersWhereUniqueInput!): Providers
+  findUniqueProvidersOrThrow(where: ProvidersWhereUniqueInput!): Providers
   findUniqueQuotes(where: QuotesWhereUniqueInput!): Quotes
+  findUniqueQuotesOrThrow(where: QuotesWhereUniqueInput!): Quotes
   findUniqueReturns(where: ReturnsWhereUniqueInput!): Returns
+  findUniqueReturnsOrThrow(where: ReturnsWhereUniqueInput!): Returns
   findUniqueReviews(where: ReviewsWhereUniqueInput!): Reviews
+  findUniqueReviewsOrThrow(where: ReviewsWhereUniqueInput!): Reviews
   findUniqueRewards(where: RewardsWhereUniqueInput!): Rewards
+  findUniqueRewardsOrThrow(where: RewardsWhereUniqueInput!): Rewards
   findUniqueRoles(where: RolesWhereUniqueInput!): Roles
+  findUniqueRolesOrThrow(where: RolesWhereUniqueInput!): Roles
   findUniqueSegments(where: SegmentsWhereUniqueInput!): Segments
+  findUniqueSegmentsOrThrow(where: SegmentsWhereUniqueInput!): Segments
   findUniqueSettings(where: SettingsWhereUniqueInput!): Settings
+  findUniqueSettingsOrThrow(where: SettingsWhereUniqueInput!): Settings
   findUniqueShipments(where: ShipmentsWhereUniqueInput!): Shipments
+  findUniqueShipmentsOrThrow(where: ShipmentsWhereUniqueInput!): Shipments
   findUniqueStates(where: StatesWhereUniqueInput!): States
+  findUniqueStatesOrThrow(where: StatesWhereUniqueInput!): States
   findUniqueTags(where: TagsWhereUniqueInput!): Tags
+  findUniqueTagsOrThrow(where: TagsWhereUniqueInput!): Tags
   findUniqueTaxes(where: TaxesWhereUniqueInput!): Taxes
+  findUniqueTaxesOrThrow(where: TaxesWhereUniqueInput!): Taxes
   findUniqueThemes(where: ThemesWhereUniqueInput!): Themes
+  findUniqueThemesOrThrow(where: ThemesWhereUniqueInput!): Themes
   findUniqueTransactions(where: TransactionsWhereUniqueInput!): Transactions
+  findUniqueTransactionsOrThrow(where: TransactionsWhereUniqueInput!): Transactions
   findUniqueUsers(where: UsersWhereUniqueInput!): Users
+  findUniqueUsersOrThrow(where: UsersWhereUniqueInput!): Users
   findUniqueVendors(where: VendorsWhereUniqueInput!): Vendors
+  findUniqueVendorsOrThrow(where: VendorsWhereUniqueInput!): Vendors
   findUniqueVisits(where: VisitsWhereUniqueInput!): Visits
+  findUniqueVisitsOrThrow(where: VisitsWhereUniqueInput!): Visits
   findUniqueWebhooks(where: WebhooksWhereUniqueInput!): Webhooks
+  findUniqueWebhooksOrThrow(where: WebhooksWhereUniqueInput!): Webhooks
   findUniqueWebsites(where: WebsitesWhereUniqueInput!): Websites
+  findUniqueWebsitesOrThrow(where: WebsitesWhereUniqueInput!): Websites
   findUniqueWishlists(where: WishlistsWhereUniqueInput!): Wishlists
+  findUniqueWishlistsOrThrow(where: WishlistsWhereUniqueInput!): Wishlists
   findUniqueWorkspaces(where: WorkspacesWhereUniqueInput!): Workspaces
+  findUniqueWorkspacesOrThrow(where: WorkspacesWhereUniqueInput!): Workspaces
   findUniqueZones(where: ZonesWhereUniqueInput!): Zones
+  findUniqueZonesOrThrow(where: ZonesWhereUniqueInput!): Zones
+  getApitoken(where: ApitokenWhereUniqueInput!): Apitoken
+  getChecklist(where: ChecklistWhereUniqueInput!): Checklist
+  getContent_type(where: Content_typeWhereUniqueInput!): Content_type
+  getDeepdive(where: DeepdiveWhereUniqueInput!): Deepdive
+  getEndofshift(where: EndofshiftWhereUniqueInput!): Endofshift
+  getGlossary(where: GlossaryWhereUniqueInput!): Glossary
+  getInternalization(where: InternalizationWhereUniqueInput!): Internalization
+  getLogIn(where: LogInWhereUniqueInput!): LogIn
+  getManufacturer(where: ManufacturerWhereUniqueInput!): Manufacturer
+  getMediamanager(where: MediamanagerWhereUniqueInput!): Mediamanager
+  getOoto(where: OotoWhereUniqueInput!): Ooto
+  getScheduler(where: SchedulerWhereUniqueInput!): Scheduler
+  getTicketing(where: TicketingWhereUniqueInput!): Ticketing
+  getUpload_file(where: Upload_fileWhereUniqueInput!): Upload_file
+  getWarehouse(where: WarehouseWhereUniqueInput!): Warehouse
   glossaries(cursor: GlossaryWhereUniqueInput, distinct: [GlossaryScalarFieldEnum!], orderBy: [GlossaryOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: GlossaryWhereInput): [Glossary!]!
   glossary(where: GlossaryWhereUniqueInput!): Glossary
   groupByAgreements(by: [AgreementsScalarFieldEnum!]!, having: AgreementsScalarWhereWithAggregatesInput, orderBy: [AgreementsOrderByWithAggregationInput!], skip: Int, take: Int, where: AgreementsWhereInput): [AgreementsGroupBy!]!

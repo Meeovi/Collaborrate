@@ -1,7 +1,7 @@
 <template>
   <header>
     <!-- Sidenav -->
-    <nav id="sidenav-4" class="sidenav bg-primary" data-mdb-mode="side" data-mdb-slim="true" data-mdb-slim-collapsed="true" data-mdb-content="#slim-content" data-mdb-hidden="true">
+    <nav id="sidenav-1" class="sidenav bg-primary" data-mdb-hidden="true">
       <ul class="sidenav-menu">
         <li class="sidenav-item">
           <a class="sidenav-link">
@@ -296,25 +296,24 @@
 </template>
 
 <script>
-  import MainSearch from '~/components/MainSearch.vue'
-  import colormode from '~/components/colormode.vue'
-  // import { mapGetters } from 'vuex'
+import MainSearch from '~/components/MainSearch.vue'
+import colormode from '~/components/colormode.vue'
+// import { mapGetters } from 'vuex'
 
-  export default {
-    middleware: 'auth',
+export default {
+  middleware: 'auth',
 
-    methods: {
-      async handleLogout() {
-        this.$nuxt.$loading.start()
-        await this.$auth.logout()
-      }
-    },
+  methods: {
+    async handleLogout() {
+      this.$nuxt.$loading.start()
+      await this.$auth.logout()
+    }
+  },
     components: {
       MainSearch,
       colormode
     },
-  }
-
+}
 </script>
 
 <style>

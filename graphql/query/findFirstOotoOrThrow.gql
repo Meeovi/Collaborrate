@@ -1,0 +1,13 @@
+query {
+  findFirstOotoOrThrow 
+ {
+    created_at
+    end_date
+    id
+    location
+    login
+    note
+    start_date
+    using_time
+  }
+}

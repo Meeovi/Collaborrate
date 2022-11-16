@@ -6,11 +6,10 @@ import * as path from "path";
 import { PrismaClient } from "@prisma/client";
 import { useParserCache } from '@envelop/parser-cache';
 import { useValidationCache } from '@envelop/validation-cache';
-const { getUserId } = require('../server/config/utils');
 
 const feathers = require('@feathersjs/feathers');
 const express = require('@feathersjs/express');
-import { createYoga } from '@graphql-yoga';
+import { createYoga } from 'graphql-yoga';
 import { createServer } from 'node:http'
 
 import { useGraphQlJit } from '@envelop/graphql-jit';
@@ -27,8 +26,6 @@ const app = express(feathers());
 app.use(express.json())
 // Turn on URL-encoded parser for REST services
 app.use(express.urlencoded({ extended: true }));
-// Set up REST transport
-app.configure(express.rest())
 
 // Setting cors and logging capabilities
 
@@ -70,12 +67,8 @@ async function main() {
       origin: '*',
       credentials: true,
     },
-    context: ({
-      req
-    }) => ({
+    context: ({}) => ({
       prisma,
-      userId: req && req.headers.authorization ?
-        getUserId(req) : null
     }),
     plugins: [
       useParserCache({}),
@@ -90,19 +83,14 @@ async function main() {
         gateway
       }) */
     ],
-    graphiql: {
-      subscriptionsProtocol: 'WS', // use WebSockets instead of SSE
-    },
   });
 
   const server = createServer(yoga)
 
   app.use(express.errorHandler())
 
-  app.use('/graphql', server)
-
-  app.listen(4000, () => {
-    console.log('Running a GraphQL API server at http://127.0.0.1:4000/graphql')
+  server.listen(4000, () => {
+    console.info('Server is running on http://localhost:4000/graphql')
   })
 }
 

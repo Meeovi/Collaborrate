@@ -1,0 +1,21 @@
+query {
+  findUniqueArticlesOrThrow 
+ {
+    categories
+    content
+    cust_id
+    customers
+    excerpt
+    id
+    image
+    isPublic
+    meta_description
+    meta_name
+    meta_url
+    name
+    published
+    tags
+    type
+    users
+  }
+}
