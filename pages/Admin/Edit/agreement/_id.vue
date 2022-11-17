@@ -73,12 +73,34 @@
 </template>
 
 <script>
-  // eslint-disable-next-line camelcase
-  import gql from 'graphql-tag'
-  import findManyAgreements from '~/graphql/query/findManyAgreements'
-  import Editor from '~/components/Editor.vue'
+import gql from 'graphql-tag'
+import findManyAgreements from '~/graphql/query/findManyAgreements'
+import Editor from '~/components/Editor.vue'
 
-  const UPDATE_AGREEMENTS = gql`
+import prisma, {update} from '../../../../plugins/extensions/prisma.client'
+
+async function agreementUpdate(){
+  const updateAgreement = await prisma.agreements.update({
+  where: {
+    id: 6,
+  },
+  data: {
+    name: "",
+    excerpt: "",
+    type: "",
+    content: "",
+    image: "",
+    reference_id: "",
+    user_id: "",
+    shop_id: ""
+  },
+})
+}
+
+agreementUpdate();
+
+
+/*  const UPDATE_AGREEMENTS = gql`
   mutation ($name:String!,$excerpt:String!,$type:String!,$content:String!,$image:String!,$user_id: String!, $reference_id: String!, $shop_id: String!){
     updateOneAgreements(data: {reference_id: $reference_id, user_id: $user_id, shop_id: $shop_id, content: $content, excerpt: $excerpt, image: $image, type: $type, name: $name}, where: {id: $id}) {
     name
@@ -90,13 +112,13 @@
       user_id
       shop_id
   }
-}`;
+}`; */
 
 export default {
     components: {
       Editor
     },
-    data() {
+  /*  data() {
       return {
         type: [],
         name: " ",
@@ -107,11 +129,11 @@ export default {
         reference_id: "",
         shop_id: "",
       }
-    },
+    }, */
     head: {
       title: 'Edit Agreement'
     },
-    methods: {
+/*    methods: {
       async updateAgreement() {
         const name = this.name;
         const content = this.content;
@@ -156,7 +178,7 @@ export default {
         this.user_id = '';
         this.shop_id = '';
       },
-    },
+    }, */
     apollo: {
       findManyAgreements: {
         query: findManyAgreements,
@@ -172,7 +194,7 @@ export default {
         }
       }
     }
-  }
+  } 
 
 /*  const DELETE_AGREEMENTS = gql`
     mutation MyMutation($id: Int!) {
