@@ -1,31 +1,29 @@
 require("reflect-metadata");
 require('dotenv').config();
 
-import {  buildSchema } from "type-graphql";
+import { buildSchema } from "type-graphql";
 import * as path from "path";
 import { PrismaClient } from "@prisma/client";
 import { useParserCache } from '@envelop/parser-cache';
 import { useValidationCache } from '@envelop/validation-cache';
 
-const feathers = require('@feathersjs/feathers');
-const express = require('@feathersjs/express');
 import { createYoga } from 'graphql-yoga';
-import { createServer } from 'node:http'
-
+import { createServer } from 'node:http';
+import { createFetch } from '@whatwg-node/fetch';
 import { useGraphQlJit } from '@envelop/graphql-jit';
 import { resolvers } from "../prisma/generated/type-graphql";
 import { useSentry } from '@envelop/sentry';
+import { useSofaWithSwaggerUI } from '@graphql-yoga/plugin-sofa'
 import '@sentry/tracing';
 
 //import { ApolloGateway } from '@apollo/gateway'
 //import { useApolloFederation } from '@envelop/apollo-federation'
+import fastify, { FastifyRequest, FastifyReply } from 'fastify'
 
-// Create an app that is a Feathers AND Express application
-const app = express(feathers());
-
-app.use(express.json())
-// Turn on URL-encoded parser for REST services
-app.use(express.urlencoded({ extended: true }));
+// This is the fastify instance you have created
+const app = fastify({
+  logger: true
+})
 
 // Setting cors and logging capabilities
 
@@ -49,7 +47,7 @@ async function main() {
     emitSchemaFile: path.resolve(__dirname, "./generated-schema.graphql"),
     validate: false,
   });
- 
+
   // Make sure all services are loaded
   // await gateway.load()
 
@@ -60,7 +58,17 @@ async function main() {
 
   // Graphql Server main function 
 
-  const yoga = createYoga({
+  const yoga = createYoga < {
+    req: FastifyRequest
+    reply: FastifyReply
+  } > ({
+    // Integrate Fastify logger
+    logging: {
+      debug: (...args) => args.forEach((arg) => app.log.debug(arg)),
+      info: (...args) => args.forEach((arg) => app.log.info(arg)),
+      warn: (...args) => args.forEach((arg) => app.log.warn(arg)),
+      error: (...args) => args.forEach((arg) => app.log.error(arg))
+    },
     schema,
     batching: true,
     cors: {
@@ -79,15 +87,67 @@ async function main() {
         includeResolverArgs: false, // set to `true` in order to include the args passed to resolvers
         includeExecuteVariables: false, // set to `true` in order to include the operation variables values
       }),
-     /* useApolloFederation({
-        gateway
-      }) */
+      /* useApolloFederation({
+         gateway
+       }) */
+       useSofaWithSwaggerUI({
+        basePath: '/rest',
+        swaggerUIEndpoint: '/swagger',
+        servers: [
+          {
+            url: '/', // Specify Server's URL.
+            description: 'Development server'
+          }
+        ],
+        info: {
+          title: 'Example API',
+          version: '1.0.0'
+        }
+      })
     ],
+    fetchAPI: createFetch({
+      // We prefer `node-fetch` over `undici` and current unstable Node's implementation
+      useNodeFetch: true,
+      formDataLimits: {
+        // Maximum allowed file size (in bytes)
+        fileSize: 1000000,
+        // Maximum allowed number of files
+        files: 10,
+        // Maximum allowed size of content (operations, variables etc...)
+        fieldSize: 1000000,
+        // Maximum allowed header size for form data
+        headerSize: 1000000
+      }
+    })
   });
 
   const server = createServer(yoga)
 
-  app.use(express.errorHandler())
+  app.route({
+    url: '/graphql',
+    method: ['GET', 'POST', 'OPTIONS'],
+    handler: async (req, reply) => {
+      // Second parameter adds Fastify's `req` and `reply` to the GraphQL Context
+      const response = await yoga.handleNodeRequest(req, {
+        req,
+        reply
+      })
+      response.headers.forEach((value, key) => {
+        reply.header(key, value)
+      })
+
+      reply.status(response.status)
+
+      reply.send(response.body)
+
+      return reply
+    }
+    
+  })
+
+  app.addContentTypeParser('multipart/form-data', {}, (done) =>
+    done(null)
+  )
 
   server.listen(4000, () => {
     console.info('Server is running on http://localhost:4000/graphql')

@@ -38,7 +38,6 @@ export default {
   plugins: [
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
     { src: '~/plugins/axios.js' },
-    //{ src: '~/plugins/extensions/vuera.js' },
   ],
 
   components: true,
@@ -87,7 +86,7 @@ export default {
   apollo: {
     clientConfigs: {
       default:{
-        httpEndpoint: 'http://127.0.0.1:4000/graphql',
+        httpEndpoint: 'http://localhost:4000/graphql',
        // wsEndpoint: WS_ENDPOINT
       }
     },

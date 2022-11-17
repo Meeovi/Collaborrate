@@ -27,7 +27,7 @@
           </div>
           <div class="card-body">
             <h5 class="card-title">Rest APIs</h5>
-            <a href="http://localhost:5858" target="_blank" class="btn btn-primary">Documentation</a>
+            <a href="http://localhost:4000/swagger" target="_blank" class="btn btn-primary">Documentation</a>
           </div>
         </div>
       </div>

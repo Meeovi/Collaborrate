@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Agreement" /></a>
         </div>
@@ -76,6 +76,7 @@
   // eslint-disable-next-line camelcase
   import gql from 'graphql-tag'
   import findManyAgreements from '~/graphql/query/findManyAgreements'
+  import Editor from '~/components/Editor.vue'
 
   const UPDATE_AGREEMENTS = gql`
   mutation ($name:String!,$excerpt:String!,$type:String!,$content:String!,$image:String!,$user_id: String!, $reference_id: String!, $shop_id: String!){
@@ -91,7 +92,89 @@
   }
 }`;
 
-  const DELETE_AGREEMENTS = gql`
+export default {
+    components: {
+      Editor
+    },
+    data() {
+      return {
+        type: [],
+        name: " ",
+        excerpt: " ",
+        content: " ",
+        image: " ",
+        user_id: "",
+        reference_id: "",
+        shop_id: "",
+      }
+    },
+    head: {
+      title: 'Edit Agreement'
+    },
+    methods: {
+      async updateAgreement() {
+        const name = this.name;
+        const content = this.content;
+        const excerpt = this.excerpt;
+        const type = this.type;
+        const image = this.image;
+        const user_id = this.user_id;
+        const reference_id = this.reference_id;
+        const shop_id = this.shop_id;
+        await this.$apollo.mutate({
+          mutation: UPDATE_AGREEMENTS,
+          variables: {
+            id: agreement.id
+          },
+          update: (cache, {
+            data: {
+              insertAgreements
+            }
+          }) => {
+            // Read data from cache for this query
+            try {
+              const insertedAgreement = insertAgreements.returning;
+              console.log(insertedAgreement)
+              cache.writeQuery({
+                query: findManyAgreements
+              })
+            } catch (err) {
+              console.error(err)
+            }
+          }
+        }).then(() => {
+          this.$router.push({
+            path: '../../marketing/agreements'
+          })
+        }).catch(err => console.log(err));
+        this.name = ' ';
+        this.excerpt = ' ';
+        this.type = ' ';
+        this.content = ' ';
+        this.image = ' ';
+        this.reference_id = '';
+        this.user_id = '';
+        this.shop_id = '';
+      },
+    },
+    apollo: {
+      findManyAgreements: {
+        query: findManyAgreements,
+        prefetch: ({
+          route
+        }) => ({
+          id: route.params.id
+        }),
+        variables() {
+          return {
+            id: this.$route.params.id
+          }
+        }
+      }
+    }
+  }
+
+/*  const DELETE_AGREEMENTS = gql`
     mutation MyMutation($id: Int!) {
     deleteOneAgreements(where: {id: $id}) {
       name
@@ -168,7 +251,7 @@
         }
       }
     }
-  }
+  } */
 
 </script>
 
