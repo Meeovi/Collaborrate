@@ -1,4 +1,4 @@
-## NOT READY FOR PRODUCTION ##
+## This Application is in Alpha Release ##
 
 # AlternateCMS
 
@@ -8,9 +8,9 @@ https://app.netlify.com/start/deploy?repository=https://github.com/meeovi/altern
 
 ## Features include:
 
-- AlternateCMS supports PostgresSQL, CockroachDB, Supabase, and Amazon Redshift
+- AlternateCMS supports MySQL, SQlite, Postgres, Supabase, SQL Server, CockroachDB
 - Blog Functionality with tags, publishing dates, draft, and enhanced editor support
-- Extendible system that supports Nuxtjs, Vuejs modules, and Feathersjs extensions
+- Extendible system that supports Nuxtjs, Vuejs modules, and Fastify extensions
 - Inventory Management System with support for Unlimited Products with product attributes and product types, categories, multi-channel creation, graphql
 - Per page & entire system SEO
 - Integrated File System Manager
@@ -23,7 +23,7 @@ https://app.netlify.com/start/deploy?repository=https://github.com/meeovi/altern
 - Multi-lingual support
 - Sales features including creation of agreements, invoices, transactions, returns, Sales reports, and more
 - Dashboard sneek peak with your data
-- Customer management features including creating & managing customers, cases, opportunities, meetings, contracts, leads, quotes, leads, projects, tickets, and more.
+- Customer management features including creating & managing customers, customer segments, and reviews.
 - Manage cities, countries, states, taxes
 - Flexible Media Manager with Visual Previews, expiration date, and comments.
 - Filterable datatables with export functionality
@@ -76,6 +76,6 @@ AlternateCMS will be at: http://localhost:8000
 
 AlternateCMS Graphiql Playground will be at: http://localhost:4000/graphql
 
-AlternateCMS API Documentation is located at: http://localhost:5858
+AlternateCMS API Documentation is located at: http://localhost:4000/swagger
 
 More installation and deployment details are located at https://docs.alternatecms.com

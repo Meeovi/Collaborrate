@@ -30,14 +30,14 @@
     "seed": "node prisma/seedDashboard.js"
   },
   "scripts": {
-    "alternate-update": "git add . && git commit -m \"update\" && git pull \"https://github.com/meeovi/alternatecms\"",
+    "alternate-commit": "git add . && git commit -m \"ready for update\"",
+    "alternate-update": "git pull \"https://github.com/meeovi/alternatecms\"",
     "dev": "nuxt dev && node server/server.js",
     "start": "nuxt start",
     "yoga": "ts-node server/index.ts",
     "build": "nuxt build && tsc -p tsconfig.json",
     "generate": "nuxt generate",
     "prisma-dev": "npx prisma generate",
-    "docs": "npx prisma-docs-generator serve",
     "db-dev": "prisma migrate dev",
     "gql-generate": "node packages/core/generators/graphql/queryGenerator.js -i server/generated-schema.graphql -o graphql/ --depth 0",
     "mutate-generate": "node packages/core/generators/graphql/mutationGenerator.js -i server/generated-schema.graphql -o graphql/ --depth 0",
@@ -46,7 +46,7 @@
     "lintfix": "npm run lint:js -- --fix",
     "test:e2e": "nightwatch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "all": "npm-run-all --parallel dev docs yoga gql-generate mutate-generate"
+    "all": "npm-run-all --parallel dev yoga gql-generate mutate-generate"
   },
   "dependencies": {
     "@apollo/client": "^3.7.1",
@@ -108,7 +108,6 @@
     "nuxt-highcharts": "^2.0.4",
     "nuxt-i18n": "^6.28.1",
     "passport": "^0.6.0",
-    "prisma-docs-generator": "^0.5.0",
     "reflect-metadata": "^0.1.13",
     "tls": "^0.0.1",
     "ts-node": "^10.9.1",

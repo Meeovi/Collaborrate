@@ -3,11 +3,6 @@ generator client {
   previewFeatures = ["fullTextSearch", "fullTextIndex", "metrics"]
 }
 
-generator docs {
-  provider = "node node_modules/prisma-docs-generator"
-  output   = "../../docs"
-}
-
 generator typegraphql {
   provider           = "typegraphql-prisma"
   output             = "../prisma/generated/type-graphql"
