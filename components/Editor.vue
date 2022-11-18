@@ -9,7 +9,7 @@
           plugins: [
             'advlist autolink lists link image charmap print preview anchor',
             'searchreplace visualblocks code fullscreen emoticons',
-            'insertdatetime media table paste imagetools wordcount'
+            'insertdatetime media table paste wordcount'
           ],
           toolbar:
             'insertfile image media | link | undo redo | formatselect | bold italic backcolor | \
@@ -19,7 +19,6 @@
           image_title: true,
           automatic_uploads: true,
           file_picker_types: 'image',
-          imagetools_toolbar: 'rotateleft rotateright | flipv fliph | editimage imageoptions',
           content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
         }"
       />

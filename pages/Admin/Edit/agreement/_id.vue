@@ -1,12 +1,12 @@
 <template>
   <div>
-    <form v-for="agreement in findManyAgreements" :key="agreement.id" method="POST" @submit.prevent="updateAgreement()">
+    <form method="POST">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Delete</button></a>
+            <button type="reset" class="btn btn-warning" @click="destroy(agreement.id)">Delete</button></a>
           <a class="navbar-brand">
-            <input type="submit" class="btn btn-warning" value="Save Agreement" /></a>
+            <input type="submit" class="btn btn-warning" value="Save Agreement" @click="publish(agreement.id)" /></a>
         </div>
       </nav>
       <br>
@@ -25,7 +25,7 @@
             <div id="v-tabs-home" class="tab-pane fade show active" role="tabpanel" aria-labelledby="v-tabs-home-tab">
               <div class="table table-responsive">
                 <table class="table">
-                  <tbody v-for="agreement in findManyAgreements" :key="agreement.id">
+                  <tbody>
                     <tr>
                       <td style="text-align: right;">Agreement Name</td>
                       <td>
@@ -58,7 +58,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input :value="agreement.image" type="image" name="headshot" />
+                        <input v-html="agreement.image" type="image" name="headshot" />
                       </td>
                     </tr>
                   </tbody>
@@ -74,51 +74,16 @@
 
 <script>
 import gql from 'graphql-tag'
-import findManyAgreements from '~/graphql/query/findManyAgreements'
+//import findManyAgreements from '~/graphql/query/findManyAgreements'
+//import { updateOneAgreements, deleteOneAgreements } from '~/graphql/code/agreements'
 import Editor from '~/components/Editor.vue'
-
-import prisma, {update} from '../../../../plugins/extensions/prisma.client'
-
-async function agreementUpdate(){
-  const updateAgreement = await prisma.agreements.update({
-  where: {
-    id: 6,
-  },
-  data: {
-    name: "",
-    excerpt: "",
-    type: "",
-    content: "",
-    image: "",
-    reference_id: "",
-    user_id: "",
-    shop_id: ""
-  },
-})
-}
-
-agreementUpdate();
-
-
-/*  const UPDATE_AGREEMENTS = gql`
-  mutation ($name:String!,$excerpt:String!,$type:String!,$content:String!,$image:String!,$user_id: String!, $reference_id: String!, $shop_id: String!){
-    updateOneAgreements(data: {reference_id: $reference_id, user_id: $user_id, shop_id: $shop_id, content: $content, excerpt: $excerpt, image: $image, type: $type, name: $name}, where: {id: $id}) {
-    name
-      excerpt
-      type
-      content
-      image
-      reference_id
-      user_id
-      shop_id
-  }
-}`; */
-
+import { name, excerpt, type, content } from './index'
 export default {
     components: {
       Editor
     },
-  /*  data() {
+    
+   data() {
       return {
         type: [],
         name: " ",
@@ -129,7 +94,7 @@ export default {
         reference_id: "",
         shop_id: "",
       }
-    }, */
+    }, 
     head: {
       title: 'Edit Agreement'
     },
@@ -144,7 +109,7 @@ export default {
         const reference_id = this.reference_id;
         const shop_id = this.shop_id;
         await this.$apollo.mutate({
-          mutation: UPDATE_AGREEMENTS,
+          mutation: updateOneAgreements,
           variables: {
             id: agreement.id
           },
@@ -178,102 +143,15 @@ export default {
         this.user_id = '';
         this.shop_id = '';
       },
-    }, */
+    }, 
     apollo: {
       findManyAgreements: {
         query: findManyAgreements,
-        prefetch: ({
-          route
-        }) => ({
-          id: route.params.id
-        }),
-        variables() {
-          return {
-            id: this.$route.params.id
-          }
-        }
+        prefetch: true,
       }
-    }
+    } */
   } 
 
-/*  const DELETE_AGREEMENTS = gql`
-    mutation MyMutation($id: Int!) {
-    deleteOneAgreements(where: {id: $id}) {
-      name
-      excerpt
-      type
-      content
-      image
-      reference_id
-      user_id
-      shop_id
-  }
-}`;
-
-  export default {
-    head: {
-      name: 'Edit Agreement'
-    },
-    mounted() {
-      this.forceRerender();
-    },
-    // eslint-disable-next-line vue/order-in-components
-    data() {
-      return {
-        componentKey: 0
-      }
-    },
-    methods: {
-      async deleteAgreement(agreement) {
-        await this.$apollo.mutate({
-          mutation: DELETE_AGREEMENTS,
-          variables: {
-            id: agreement.id
-          },
-          refetchQueries: [{
-              query: findManyAgreements
-            }
-
-          ]
-        }).then(() => {
-          this.$router.push({
-            path: '../../marketing/agreements'
-          })
-        }).catch(err => console.log(err));
-      },
-      async updateAgreement(agreement) {
-        await this.$apollo.mutate({
-          mutation: UPDATE_AGREEMENTS,
-          variables: {
-            id: agreement.id
-          },
-          refetchQueries: [{
-              query: findManyAgreements
-            }
-
-          ]
-        })
-      },
-      forceRerender() {
-        this.componentKey += 1;
-      }
-    },
-    apollo: {
-      findManyAgreements: {
-        query: findManyAgreements,
-        prefetch: ({
-          route
-        }) => ({
-          id: route.params.id
-        }),
-        variables() {
-          return {
-            id: this.$route.params.id
-          }
-        }
-      }
-    }
-  } */
 
 </script>
 
