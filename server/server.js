@@ -2,13 +2,10 @@ let express = require('express');
 let cors = require('cors');
 let app = express();
 
-require('@nuxtjs/dotenv').config();
 require('./config/alternate.config') // AlternateCMS main settings config file
 require('../packages/authentication/index') // File for authentication used throughout AlternateCMS
-require('../packages/alternate-start/metrics/metric') // Pulls in the Metrics code for application
 require('../packages/search/index') // Supports standard search capabilities
 require('../packages/email/index') // Main email functionality throughout AlternateCMS
-require('../graphql/index')
 // For Cors functionality across application
 app.use(cors())
 
@@ -21,4 +18,3 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/api', api);
