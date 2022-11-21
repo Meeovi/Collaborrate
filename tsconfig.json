@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
     "jsx": "preserve",
-    "target": "es2018",
-    "module": "commonjs",
+    "target": "ES6",
     "lib": ["es2018", "esnext.asynciterable", "DOM"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
@@ -13,10 +12,9 @@
     "declaration": true,
     "esModuleInterop": true,
     "noImplicitAny": false,
-    "noUnusedLocals": true,
     "noUnusedParameters": true,
     "importHelpers": true,
     "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
   }
 }
