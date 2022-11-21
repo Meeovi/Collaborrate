@@ -10,12 +10,10 @@ deleteOneReviews (
     id: $id,
     }
   ) } {
-    comment_id
     content
     created_at
     first_name
     id
     last_name
-    shop_id
     websites
   }`

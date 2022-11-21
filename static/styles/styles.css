@@ -271,7 +271,7 @@ body.darkmode--activated {
 form td,
 form select,
 form option {
-  width: 300px;
+  min-width: 300px;
 }
 
 input,

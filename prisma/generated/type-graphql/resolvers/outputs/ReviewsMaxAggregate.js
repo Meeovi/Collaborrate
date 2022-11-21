@@ -41,18 +41,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", Date)
 ], ReviewsMaxAggregate.prototype, "created_at", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Number)
-], ReviewsMaxAggregate.prototype, "shop_id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Number)
-], ReviewsMaxAggregate.prototype, "comment_id", void 0);
 ReviewsMaxAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("ReviewsMaxAggregate", {
         isAbstract: true

@@ -11,6 +11,4 @@ export declare class ReviewsWhereInput {
     content?: StringNullableFilter | undefined;
     websites?: StringNullableFilter | undefined;
     created_at?: DateTimeNullableFilter | undefined;
-    shop_id?: IntFilter | undefined;
-    comment_id?: IntFilter | undefined;
 }

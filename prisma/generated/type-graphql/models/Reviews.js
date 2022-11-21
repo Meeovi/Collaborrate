@@ -41,18 +41,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", Date)
 ], Reviews.prototype, "created_at", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: false
-    }),
-    tslib_1.__metadata("design:type", Number)
-], Reviews.prototype, "shop_id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: false
-    }),
-    tslib_1.__metadata("design:type", Number)
-], Reviews.prototype, "comment_id", void 0);
 Reviews = tslib_1.__decorate([
     TypeGraphQL.ObjectType("Reviews", {
         isAbstract: true

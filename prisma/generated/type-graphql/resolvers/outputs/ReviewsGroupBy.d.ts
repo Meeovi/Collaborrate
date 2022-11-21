@@ -10,8 +10,6 @@ export declare class ReviewsGroupBy {
     content: string | null;
     websites: string | null;
     created_at: Date | null;
-    shop_id: number;
-    comment_id: number;
     _count: ReviewsCountAggregate | null;
     _avg: ReviewsAvgAggregate | null;
     _sum: ReviewsSumAggregate | null;

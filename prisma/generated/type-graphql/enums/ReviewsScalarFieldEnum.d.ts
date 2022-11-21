@@ -4,7 +4,5 @@ export declare enum ReviewsScalarFieldEnum {
     last_name = "last_name",
     content = "content",
     websites = "websites",
-    created_at = "created_at",
-    shop_id = "shop_id",
-    comment_id = "comment_id"
+    created_at = "created_at"
 }

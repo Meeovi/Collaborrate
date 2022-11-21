@@ -5,6 +5,4 @@ export declare class Reviews {
     content?: string | null;
     websites?: string | null;
     created_at?: Date | null;
-    shop_id: number;
-    comment_id: number;
 }

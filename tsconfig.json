@@ -18,5 +18,9 @@
     "importHelpers": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true
-  }
+  },
+  "types": [
+    "@nuxt/types",
+    "@nuxtjs/color-mode"
+  ]
 }

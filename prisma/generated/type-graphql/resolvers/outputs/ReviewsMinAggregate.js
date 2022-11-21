@@ -41,18 +41,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", Date)
 ], ReviewsMinAggregate.prototype, "created_at", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Number)
-], ReviewsMinAggregate.prototype, "shop_id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Number)
-], ReviewsMinAggregate.prototype, "comment_id", void 0);
 ReviewsMinAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("ReviewsMinAggregate", {
         isAbstract: true

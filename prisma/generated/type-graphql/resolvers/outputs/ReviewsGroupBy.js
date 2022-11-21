@@ -47,18 +47,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", Date)
 ], ReviewsGroupBy.prototype, "created_at", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: false
-    }),
-    tslib_1.__metadata("design:type", Number)
-], ReviewsGroupBy.prototype, "shop_id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: false
-    }),
-    tslib_1.__metadata("design:type", Number)
-], ReviewsGroupBy.prototype, "comment_id", void 0);
-tslib_1.__decorate([
     TypeGraphQL.Field(_type => ReviewsCountAggregate_1.ReviewsCountAggregate, {
         nullable: true
     }),

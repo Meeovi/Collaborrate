@@ -4,7 +4,7 @@ import { ReviewsWhereInput } from "../../../inputs/ReviewsWhereInput";
 export declare class GroupByReviewsArgs {
     where?: ReviewsWhereInput | undefined;
     orderBy?: ReviewsOrderByWithAggregationInput[] | undefined;
-    by: Array<"id" | "first_name" | "last_name" | "content" | "websites" | "created_at" | "shop_id" | "comment_id">;
+    by: Array<"id" | "first_name" | "last_name" | "content" | "websites" | "created_at">;
     having?: ReviewsScalarWhereWithAggregatesInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

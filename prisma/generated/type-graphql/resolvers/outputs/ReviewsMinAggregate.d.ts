@@ -5,6 +5,4 @@ export declare class ReviewsMinAggregate {
     content: string | null;
     websites: string | null;
     created_at: Date | null;
-    shop_id: number | null;
-    comment_id: number | null;
 }

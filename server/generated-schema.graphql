@@ -17916,69 +17916,55 @@ input ReturnsWhereUniqueInput {
 }
 
 type Reviews {
-  comment_id: Int!
   content: String
   created_at: DateTime
   first_name: String
   id: Int!
   last_name: String
-  shop_id: Int!
   websites: String
 }
 
 type ReviewsAvgAggregate {
-  comment_id: Float
   id: Float
-  shop_id: Float
 }
 
 input ReviewsAvgOrderByAggregateInput {
-  comment_id: SortOrder
   id: SortOrder
-  shop_id: SortOrder
 }
 
 type ReviewsCountAggregate {
   _all: Int!
-  comment_id: Int!
   content: Int!
   created_at: Int!
   first_name: Int!
   id: Int!
   last_name: Int!
-  shop_id: Int!
   websites: Int!
 }
 
 input ReviewsCountOrderByAggregateInput {
-  comment_id: SortOrder
   content: SortOrder
   created_at: SortOrder
   first_name: SortOrder
   id: SortOrder
   last_name: SortOrder
-  shop_id: SortOrder
   websites: SortOrder
 }
 
 input ReviewsCreateInput {
-  comment_id: Int!
   content: String
   created_at: DateTime
   first_name: String
   last_name: String
-  shop_id: Int!
   websites: String
 }
 
 input ReviewsCreateManyInput {
-  comment_id: Int!
   content: String
   created_at: DateTime
   first_name: String
   id: Int
   last_name: String
-  shop_id: Int!
   websites: String
 }
 
@@ -17988,57 +17974,47 @@ type ReviewsGroupBy {
   _max: ReviewsMaxAggregate
   _min: ReviewsMinAggregate
   _sum: ReviewsSumAggregate
-  comment_id: Int!
   content: String
   created_at: DateTime
   first_name: String
   id: Int!
   last_name: String
-  shop_id: Int!
   websites: String
 }
 
 type ReviewsMaxAggregate {
-  comment_id: Int
   content: String
   created_at: DateTime
   first_name: String
   id: Int
   last_name: String
-  shop_id: Int
   websites: String
 }
 
 input ReviewsMaxOrderByAggregateInput {
-  comment_id: SortOrder
   content: SortOrder
   created_at: SortOrder
   first_name: SortOrder
   id: SortOrder
   last_name: SortOrder
-  shop_id: SortOrder
   websites: SortOrder
 }
 
 type ReviewsMinAggregate {
-  comment_id: Int
   content: String
   created_at: DateTime
   first_name: String
   id: Int
   last_name: String
-  shop_id: Int
   websites: String
 }
 
 input ReviewsMinOrderByAggregateInput {
-  comment_id: SortOrder
   content: SortOrder
   created_at: SortOrder
   first_name: SortOrder
   id: SortOrder
   last_name: SortOrder
-  shop_id: SortOrder
   websites: SortOrder
 }
 
@@ -18061,36 +18037,30 @@ input ReviewsOrderByWithAggregationInput {
   _max: ReviewsMaxOrderByAggregateInput
   _min: ReviewsMinOrderByAggregateInput
   _sum: ReviewsSumOrderByAggregateInput
-  comment_id: SortOrder
   content: SortOrder
   created_at: SortOrder
   first_name: SortOrder
   id: SortOrder
   last_name: SortOrder
-  shop_id: SortOrder
   websites: SortOrder
 }
 
 input ReviewsOrderByWithRelationAndSearchRelevanceInput {
   _relevance: ReviewsOrderByRelevanceInput
-  comment_id: SortOrder
   content: SortOrder
   created_at: SortOrder
   first_name: SortOrder
   id: SortOrder
   last_name: SortOrder
-  shop_id: SortOrder
   websites: SortOrder
 }
 
 enum ReviewsScalarFieldEnum {
-  comment_id
   content
   created_at
   first_name
   id
   last_name
-  shop_id
   websites
 }
 
@@ -18098,45 +18068,35 @@ input ReviewsScalarWhereWithAggregatesInput {
   AND: [ReviewsScalarWhereWithAggregatesInput!]
   NOT: [ReviewsScalarWhereWithAggregatesInput!]
   OR: [ReviewsScalarWhereWithAggregatesInput!]
-  comment_id: IntWithAggregatesFilter
   content: StringNullableWithAggregatesFilter
   created_at: DateTimeNullableWithAggregatesFilter
   first_name: StringNullableWithAggregatesFilter
   id: IntWithAggregatesFilter
   last_name: StringNullableWithAggregatesFilter
-  shop_id: IntWithAggregatesFilter
   websites: StringNullableWithAggregatesFilter
 }
 
 type ReviewsSumAggregate {
-  comment_id: Int
   id: Int
-  shop_id: Int
 }
 
 input ReviewsSumOrderByAggregateInput {
-  comment_id: SortOrder
   id: SortOrder
-  shop_id: SortOrder
 }
 
 input ReviewsUpdateInput {
-  comment_id: IntFieldUpdateOperationsInput
   content: NullableStringFieldUpdateOperationsInput
   created_at: NullableDateTimeFieldUpdateOperationsInput
   first_name: NullableStringFieldUpdateOperationsInput
   last_name: NullableStringFieldUpdateOperationsInput
-  shop_id: IntFieldUpdateOperationsInput
   websites: NullableStringFieldUpdateOperationsInput
 }
 
 input ReviewsUpdateManyMutationInput {
-  comment_id: IntFieldUpdateOperationsInput
   content: NullableStringFieldUpdateOperationsInput
   created_at: NullableDateTimeFieldUpdateOperationsInput
   first_name: NullableStringFieldUpdateOperationsInput
   last_name: NullableStringFieldUpdateOperationsInput
-  shop_id: IntFieldUpdateOperationsInput
   websites: NullableStringFieldUpdateOperationsInput
 }
 
@@ -18144,13 +18104,11 @@ input ReviewsWhereInput {
   AND: [ReviewsWhereInput!]
   NOT: [ReviewsWhereInput!]
   OR: [ReviewsWhereInput!]
-  comment_id: IntFilter
   content: StringNullableFilter
   created_at: DateTimeNullableFilter
   first_name: StringNullableFilter
   id: IntFilter
   last_name: StringNullableFilter
-  shop_id: IntFilter
   websites: StringNullableFilter
 }
 

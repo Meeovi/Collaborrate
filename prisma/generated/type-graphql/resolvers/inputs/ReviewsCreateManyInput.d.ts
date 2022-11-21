@@ -5,6 +5,4 @@ export declare class ReviewsCreateManyInput {
     content?: string | undefined;
     websites?: string | undefined;
     created_at?: Date | undefined;
-    shop_id: number;
-    comment_id: number;
 }

@@ -2,53 +2,41 @@ query {
   groupByReviews 
  {
     _avg {
-      comment_id
       id
-      shop_id
     }
     _count {
       _all
-      comment_id
       content
       created_at
       first_name
       id
       last_name
-      shop_id
       websites
     }
     _max {
-      comment_id
       content
       created_at
       first_name
       id
       last_name
-      shop_id
       websites
     }
     _min {
-      comment_id
       content
       created_at
       first_name
       id
       last_name
-      shop_id
       websites
     }
     _sum {
-      comment_id
       id
-      shop_id
     }
-    comment_id
     content
     created_at
     first_name
     id
     last_name
-    shop_id
     websites
   }
 }

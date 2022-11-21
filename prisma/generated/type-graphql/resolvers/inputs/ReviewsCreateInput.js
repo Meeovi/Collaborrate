@@ -35,18 +35,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", Date)
 ], ReviewsCreateInput.prototype, "created_at", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: false
-    }),
-    tslib_1.__metadata("design:type", Number)
-], ReviewsCreateInput.prototype, "shop_id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: false
-    }),
-    tslib_1.__metadata("design:type", Number)
-], ReviewsCreateInput.prototype, "comment_id", void 0);
 ReviewsCreateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("ReviewsCreateInput", {
         isAbstract: true

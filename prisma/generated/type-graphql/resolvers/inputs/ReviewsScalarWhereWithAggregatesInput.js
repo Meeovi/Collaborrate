@@ -63,18 +63,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", DateTimeNullableWithAggregatesFilter_1.DateTimeNullableWithAggregatesFilter)
 ], ReviewsScalarWhereWithAggregatesInput.prototype, "created_at", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => IntWithAggregatesFilter_1.IntWithAggregatesFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", IntWithAggregatesFilter_1.IntWithAggregatesFilter)
-], ReviewsScalarWhereWithAggregatesInput.prototype, "shop_id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => IntWithAggregatesFilter_1.IntWithAggregatesFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", IntWithAggregatesFilter_1.IntWithAggregatesFilter)
-], ReviewsScalarWhereWithAggregatesInput.prototype, "comment_id", void 0);
 ReviewsScalarWhereWithAggregatesInput = ReviewsScalarWhereWithAggregatesInput_1 = tslib_1.__decorate([
     TypeGraphQL.InputType("ReviewsScalarWhereWithAggregatesInput", {
         isAbstract: true

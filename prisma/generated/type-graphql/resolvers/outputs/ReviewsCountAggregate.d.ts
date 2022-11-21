@@ -5,7 +5,5 @@ export declare class ReviewsCountAggregate {
     content: number;
     websites: number;
     created_at: number;
-    shop_id: number;
-    comment_id: number;
     _all: number;
 }

@@ -11,8 +11,6 @@ var ReviewsScalarFieldEnum;
     ReviewsScalarFieldEnum["content"] = "content";
     ReviewsScalarFieldEnum["websites"] = "websites";
     ReviewsScalarFieldEnum["created_at"] = "created_at";
-    ReviewsScalarFieldEnum["shop_id"] = "shop_id";
-    ReviewsScalarFieldEnum["comment_id"] = "comment_id";
 })(ReviewsScalarFieldEnum = exports.ReviewsScalarFieldEnum || (exports.ReviewsScalarFieldEnum = {}));
 TypeGraphQL.registerEnumType(ReviewsScalarFieldEnum, {
     name: "ReviewsScalarFieldEnum",

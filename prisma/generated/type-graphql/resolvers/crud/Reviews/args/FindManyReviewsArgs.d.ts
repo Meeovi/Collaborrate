@@ -7,5 +7,5 @@ export declare class FindManyReviewsArgs {
     cursor?: ReviewsWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;
-    distinct?: Array<"id" | "first_name" | "last_name" | "content" | "websites" | "created_at" | "shop_id" | "comment_id"> | undefined;
+    distinct?: Array<"id" | "first_name" | "last_name" | "content" | "websites" | "created_at"> | undefined;
 }

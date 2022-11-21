@@ -10,8 +10,6 @@ export declare class ReviewsOrderByWithAggregationInput {
     content?: "asc" | "desc" | undefined;
     websites?: "asc" | "desc" | undefined;
     created_at?: "asc" | "desc" | undefined;
-    shop_id?: "asc" | "desc" | undefined;
-    comment_id?: "asc" | "desc" | undefined;
     _count?: ReviewsCountOrderByAggregateInput | undefined;
     _avg?: ReviewsAvgOrderByAggregateInput | undefined;
     _max?: ReviewsMaxOrderByAggregateInput | undefined;

@@ -24,7 +24,7 @@ mutation updateOneAgreements($name:String!,$excerpt:String!,$type:String!,$conte
   }
 }
 
-mutation deleteOneAgreements($id: Int!){
+mutation deleteOneAgreements($id: BigInt!){
     deleteOneAgreements(where: {id: $id}) {
     id
   }
