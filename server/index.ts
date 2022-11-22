@@ -1,5 +1,4 @@
 require("reflect-metadata");
-require('dotenv').config();
 
 import { buildSchema } from "type-graphql";
 import * as path from "path";
@@ -144,10 +143,6 @@ async function main() {
     }
     
   })
-
-  app.addContentTypeParser('multipart/form-data', {}, (done) =>
-    done(null)
-  )
 
   server.listen(4000, () => {
     console.info('Server is running on http://localhost:4000/graphql')

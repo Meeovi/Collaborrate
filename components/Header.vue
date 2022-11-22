@@ -208,10 +208,8 @@
           <MainSearch />
         </div>
 
-        <!-- Right links -->
         <ul class="navbar-nav ms-auto d-flex flex-row">
-          <colormode />
-          <!-- Notification dropdown -->
+      <!--    <colormode />
           <li class="nav-item dropdown">
             <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
               role="button" data-mdb-toggle="dropdown" aria-expanded="false">
@@ -227,7 +225,6 @@
             </ul>
           </li>
 
-          <!-- Icon dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdown" role="button"
               data-mdb-toggle="dropdown" aria-expanded="false">
@@ -263,13 +260,13 @@
                 <a class="dropdown-item" href="#"><i class="flag-portugal flag"></i>Português</a>
               </li>
             </ul>
-          </li>
+          </li>-->
 
           <!-- Avatar -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
               id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-              <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle" height="22"
+              <img src="../public/images/mbr-1.png" class="rounded-circle" height="22"
                 alt="" loading="lazy" />
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">

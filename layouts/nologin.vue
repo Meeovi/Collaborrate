@@ -1,7 +1,7 @@
 <template>
     <div>
         <div style="min-height:90vh">
-           <nuxt />
+           <slot />
         </div>
         <Footer />
     </div>
