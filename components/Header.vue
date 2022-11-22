@@ -209,8 +209,13 @@
         </div>
 
         <ul class="navbar-nav ms-auto d-flex flex-row">
+<<<<<<< HEAD
           <colormode />
       <!--    <li class="nav-item dropdown">
+=======
+      <!--    <colormode />
+          <li class="nav-item dropdown">
+>>>>>>> e3fbca0b84a463972c197cf2284118df1fd0e5b1
             <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
               role="button" data-mdb-toggle="dropdown" aria-expanded="false">
               <i class="fas fa-bell"></i>
@@ -266,7 +271,11 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
               id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+<<<<<<< HEAD
               <img src="../static/images/mbr-1.png" class="rounded-circle" height="22"
+=======
+              <img src="../public/images/mbr-1.png" class="rounded-circle" height="22"
+>>>>>>> e3fbca0b84a463972c197cf2284118df1fd0e5b1
                 alt="" loading="lazy" />
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
