@@ -38,17 +38,16 @@ export default {
   plugins: [
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
     { src: '~/plugins/axios.js' },
+    { src: '~/plugins/extensions/vuetify.js', ssr: false },
   ],
 
   components: true,
 
   buildModules: [
-    '@nuxtjs/moment',
-    '@braid/vue-formulate/nuxt'
+    '@braid/vue-formulate/nuxt',
   ],
 
   modules: [
-    '@nuxtjs/axios',
     'nuxt-client-init-module',
     '@nuxtjs/pwa',
     '@nuxtjs/sentry',
@@ -57,7 +56,8 @@ export default {
     '@nuxtjs/dotenv',
     "@nuxtjs/axios", 
     //"@nuxtjs/auth-next",
-    'nuxt-i18n',
+    '@nuxtjs/i18n',
+    '@nuxtjs/vuetify',
   ],
   
  /* auth: {
@@ -92,10 +92,6 @@ export default {
     },
     watchLoading: '~/plugins/apollo-watch-loading-handler.js',
     errorHandler: '~/plugins/apollo-error-handler.js'
-  },
-
-  stripe: {
-    publishableKey: process.env.STRIPE_PUBLISHABLE_KEY
   },
 
   highcharts: {

@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ReviewsUpdateInput = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const IntFieldUpdateOperationsInput_1 = require("../inputs/IntFieldUpdateOperationsInput");
 const NullableDateTimeFieldUpdateOperationsInput_1 = require("../inputs/NullableDateTimeFieldUpdateOperationsInput");
 const NullableStringFieldUpdateOperationsInput_1 = require("../inputs/NullableStringFieldUpdateOperationsInput");
 let ReviewsUpdateInput = class ReviewsUpdateInput {
@@ -38,18 +37,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", NullableDateTimeFieldUpdateOperationsInput_1.NullableDateTimeFieldUpdateOperationsInput)
 ], ReviewsUpdateInput.prototype, "created_at", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => IntFieldUpdateOperationsInput_1.IntFieldUpdateOperationsInput, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", IntFieldUpdateOperationsInput_1.IntFieldUpdateOperationsInput)
-], ReviewsUpdateInput.prototype, "shop_id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => IntFieldUpdateOperationsInput_1.IntFieldUpdateOperationsInput, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", IntFieldUpdateOperationsInput_1.IntFieldUpdateOperationsInput)
-], ReviewsUpdateInput.prototype, "comment_id", void 0);
 ReviewsUpdateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("ReviewsUpdateInput", {
         isAbstract: true

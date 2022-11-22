@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <form v-for="article in findManyArticles" :key="article.id" @submit.prevent="addArticle()">
+  <div>
+    <form @submit.prevent="addArticle()">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteArticle(article.id)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Article" /></a>
         </div>
@@ -25,18 +25,19 @@
             <div id="v-tabs-home" class="tab-pane fade show active" role="tabpanel" aria-labelledby="v-tabs-home-tab">
               <div class="table table-responsive">
                 <table class="table">
-                  <tbody>
+                  <tbody v-for="article in findManyArticles" :key="article.id">
                     <tr>
                       <td style="text-align: right;">Article Name</td>
                       <td>
-                        <input :value="article.name" type="text" required />{{ article.name }}
+                        <input :value="article.name" type="text" required />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Categories</td>
                       <td>
                         <select id="category" :value="article.categories" name="template" class="form-category">
-                          <option v-for="categories in findManyCategories" :key="categories.id" :value="categories">
+                          <option v-for="categories in findManyCategories" :key="categories.id"
+                            :value="categories.name">
                             {{ categories.name }}
                           </option>
                         </select>
@@ -46,7 +47,8 @@
                       <td style="text-align: right;">Tags</td>
                       <td>
                         <select id="category" :value="article.tags" name="template" class="form-category">
-                          <option v-for="tags in findManyTags" :key="tags.id" :value="tags">{{ tags.name }}</option>
+                          <option v-for="tags in findManyTags" :key="tags.id" :value="tags.name">{{ tags.name }}
+                          </option>
                         </select>
                       </td>
                     </tr>
@@ -63,7 +65,8 @@
                     <tr>
                       <td style="text-align: right;">Published Date</td>
                       <td>
-                        <input :value="article.published" type="datetime-local" placeholder="Default is published immediately" />{{ article.name }}
+                        <input :value="article.published" type="datetime-local"
+                          placeholder="Default is published immediately" />
                       </td>
                     </tr>
                     <tr>
@@ -79,7 +82,7 @@
                       <td style="text-align: right;">Author(s)</td>
                       <td>
                         <select id="category" :value="article.customers" name="template" class="form-category">
-                          <option v-for="customers in findManyCustomers" :key="customers.id" :value="customers">
+                          <option v-for="customers in findManyCustomers" :key="customers.id" :value="customers.name">
                             {{ customers.name }}</option>
                         </select>
                       </td>
@@ -105,13 +108,16 @@
                             <tr>
                               <td style="text-align: right;">Excerpt</td>
                               <td>
-                                <textarea id="excerpt" :value="article.excerpt" cols="50" rows="10" placeholder="Add a short Description"></textarea>{{ article.excerpt }}
+                                <textarea id="excerpt" :value="article.excerpt" cols="50" rows="10"
+                                  placeholder="Add a short Description"></textarea>
                               </td>
                             </tr>
                             <tr>
                               <td style="text-align: right;">Description</td>
                               <td>
-                                <client-only><Editor :value="article.content" /></client-only>{{ article.content }}
+                                <client-only>
+                                  <Editor :value="article.content" />
+                                </client-only>
                               </td>
                             </tr>
                           </tbody>
@@ -131,7 +137,7 @@
                     data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
                       <td>
-                        <input :value="article.image" type="image" />{{ article.image }}
+                        <input :value="article.image" type="image" />
                       </td>
                     </div>
                   </div>
@@ -177,41 +183,29 @@
                   </div>
                 </div>
               </div>
-              </div>
-              </div>
-              </div>
-              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </form>
   </div>
 </template>
 
 <script>
-// eslint-disable-next-line camelcase
-import gql from 'graphql-tag'
-import findManyArticles from '~/graphql/query/findManyArticles'
+  // eslint-disable-next-line camelcase
+  import gql from 'graphql-tag'
+  import findManyArticles from '~/graphql/query/findManyArticles'
+  import Editor from '~/components/Editor.vue'
 
-const DELETE_ARTICLE = gql`
+  const DELETE_ARTICLE = gql `
   mutation deleteOneArticles($id: Int!){
   deleteOneArticles(where: {id: $id}){
-    categories
-        content
-        customers
-        excerpt
-        image
-        isPublic
-        meta_description
-        meta_name
-        meta_url
-        name
-        published
-        tags
-        users
-        type
+    id
         }
 }
 `;
 
-const UPDATE_ARTICLE = gql`
+  const UPDATE_ARTICLE = gql `
   mutation updateOneArticles($id: Int!){
   updateOneArticles(data: {categories: $categories, content: $content, customers: $customers, excerpt: $excerpt, image: $image, isPublic: $isPublic, meta_description: $meta_description, meta_name: $meta_name, meta_url: $meta_url, name: $name, published: $published, tags: $tags, users: $users, type: $type}, (where: {id: $id})){
     categories
@@ -232,72 +226,85 @@ const UPDATE_ARTICLE = gql`
 }
 `;
 
-export default {
+  export default {
+    components: {
+      Editor
+    },
     head: {
-        name: 'Edit Article'
+      name: 'Edit Article'
     },
- mounted(){
+    mounted() {
       this.forceRerender();
-  },
-  // eslint-disable-next-line vue/order-in-components
-  data(){
-      return{
-          componentKey: 0
+    },
+    // eslint-disable-next-line vue/order-in-components
+    data() {
+      return {
+        componentKey: 0
       }
-  },
-  methods: {
-   async deleteArticle(article){
-    await this.$apollo.mutate({
-        mutation: DELETE_ARTICLE,
-        variables: {
-          id: article.id
-        },
-        refetchQueries: [
-          {
-            query: findManyArticles
-          }       
-          
-        ]
-      }).then(() => {
-            this.$router.push({path: '../../admin/content/blog'})
-            }).catch(err => console.log(err));
     },
-    async updateArticle(article){
-    await this.$apollo.mutate({
-        mutation: UPDATE_ARTICLE,
-        variables: {
-          id: article.id
-        },
-        refetchQueries: [
-          {
-            query: findManyArticles
-          }       
-          
-        ]
-      })
+    methods: {
+      async deleteArticle(article) {
+        await this.$apollo.mutate({
+          mutation: DELETE_ARTICLE,
+          variables: {
+            id: article.id
+          },
+          refetchQueries: [{
+              query: findManyArticles
+            }
+
+          ]
+        }).then(() => {
+          this.$router.push({
+            path: '../../admin/content/blog'
+          })
+        }).catch(err => console.log(err));
+      },
+      async updateArticle(article) {
+        await this.$apollo.mutate({
+          mutation: UPDATE_ARTICLE,
+          variables: {
+            id: article.id
+          },
+          refetchQueries: [{
+              query: findManyArticles
+            }
+
+          ]
+        })
+      },
+      forceRerender() {
+        this.componentKey += 1;
+      }
     },
-    forceRerender() {
-      this.componentKey += 1;
-    }
-  },
-  apollo: {
-    findManyArticles: {
-      query: findManyArticles,
-      prefetch: ({ route }) => ({ id: route.params.id }),
-      variables() {
-        return { id: this.$route.params.id }
+    apollo: {
+      findManyArticles: {
+        query: findManyArticles,
+        prefetch: ({
+          route
+        }) => ({
+          id: route.params.id
+        }),
+        variables() {
+          return {
+            id: this.$route.params.id
+          }
+        }
       }
     }
   }
-}
+
 </script>
 
 <style>
-input, select, option {
+  input,
+  select,
+  option {
     padding: 5px;
-}
+  }
 
-li {
+  li {
     display: inline-block;
-}
+  }
+
 </style>

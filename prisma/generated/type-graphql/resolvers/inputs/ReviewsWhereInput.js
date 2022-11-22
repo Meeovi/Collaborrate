@@ -63,18 +63,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", DateTimeNullableFilter_1.DateTimeNullableFilter)
 ], ReviewsWhereInput.prototype, "created_at", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => IntFilter_1.IntFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", IntFilter_1.IntFilter)
-], ReviewsWhereInput.prototype, "shop_id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => IntFilter_1.IntFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", IntFilter_1.IntFilter)
-], ReviewsWhereInput.prototype, "comment_id", void 0);
 ReviewsWhereInput = ReviewsWhereInput_1 = tslib_1.__decorate([
     TypeGraphQL.InputType("ReviewsWhereInput", {
         isAbstract: true

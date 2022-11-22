@@ -12,14 +12,16 @@
           <tr>
             <th>Customer Name</th>
             <th>Review</th>
+            <th>Website</th>
             <th>Created On</th>
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="reviews in reviews" :key="reviews.id">
+        <tbody v-for="reviews in findManyReviews" :key="reviews.id">
           <tr>
             <td>{{ reviews.first_name }} {{ reviews.last_name }}</td>
             <td>{{ reviews.content }}</td>
+            <td><a :href=reviews.websites>{{ reviews.websites }}</a></td>
             <td>{{ reviews.created_at }}</td>
             <td><a :href="`/admin/edit/review/${reviews.id}`">View</a></td>
           </tr>
@@ -32,18 +34,18 @@
 
 <script>
  // eslint-disable-next-line camelcase
- import reviews from '~/graphql/query/findManyReviews'
+ import findManyReviews from '~/graphql/query/findManyReviews'
 
 export default {
   data() {
     return {
-      reviews: [],
+      findManyReviews: [],
     }
   },
   apollo: {
-    reviews: {
+    findManyReviews: {
       prefetch: true,
-      query: reviews
+      query: findManyReviews
     }
   }, 
     head: {

@@ -14,12 +14,9 @@ import { resolvers } from "../prisma/generated/type-graphql";
 import { useSentry } from '@envelop/sentry';
 import { useSofaWithSwaggerUI } from '@graphql-yoga/plugin-sofa'
 import '@sentry/tracing';
-import { buildGraphbackAPI } from 'graphback'
-import { createKnexDbProvider } from '@graphback/runtime-knex'
 //import { ApolloGateway } from '@apollo/gateway'
 //import { useApolloFederation } from '@envelop/apollo-federation'
 import fastify, { FastifyRequest, FastifyReply } from 'fastify'
-import Knex from 'knex'
 
 // This is the fastify instance you have created
 const app = fastify({
@@ -57,23 +54,6 @@ async function main() {
   const prisma = new PrismaClient();
   await prisma.$connect();
 
-  const knex = Knex({
-    client: 'pg',
-    connection: {
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_DATABASE
-    }
-  })
-
-  const knexDbProviderCreator = createKnexDbProvider(knex);
-
-  // creates a schema, CRUD resolvers, services and data providers
-  const { contextCreator } = buildGraphbackAPI(schema, {
-    dataProviderCreator: knexDbProviderCreator
-  });
-
   // Graphql Server main function 
 
   const yoga = createYoga < {
@@ -88,18 +68,15 @@ async function main() {
       error: (...args) => args.forEach((arg) => app.log.error(arg))
     },
     schema,
-    //typeDefs,
-    context: contextCreator,
+    //context: contextCreator,
     batching: true,
     cors: {
       origin: '*',
       credentials: true,
     },
-    /*context: ({}) => ({
+    context: ({}) => ({
       prisma,
-      typeDefs,
-      contextCreator
-    }),*/
+    }),
     plugins: [
       useParserCache({}),
       useValidationCache({}),

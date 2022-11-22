@@ -11,18 +11,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", Number)
 ], ReviewsSumAggregate.prototype, "id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Number)
-], ReviewsSumAggregate.prototype, "shop_id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Number)
-], ReviewsSumAggregate.prototype, "comment_id", void 0);
 ReviewsSumAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("ReviewsSumAggregate", {
         isAbstract: true

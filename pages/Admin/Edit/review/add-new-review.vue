@@ -43,16 +43,6 @@
                       <td><client-only><Editor v-model="content" /></client-only>
                       </td>
                     </tr>
-                    <tr>
-                      <td style="text-align: right;">Shop ID</td>
-                      <td><input v-model="shop_id" type="text" disabled>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">Comment ID</td>
-                      <td><input v-model="comment_id" type="text" disabled>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -70,14 +60,12 @@ import  gql from "graphql-tag";
 import  findManyReviews from "~/graphql/query/findManyReviews"
 
 const ADD_REVIEWS = gql`
-    mutation ($first_name:String!,$last_name:String!$websites:String!,$content:String!,$comment_id:Int!,$shop_id:Int!){
-    createOneReviews(data: {first_name: $first_name, last_name: $last_name, websites: $websites, content: $content, comment_id: $comment_id, shop_id: $shop_id}) {
+    mutation ($first_name:String!,$last_name:String!$websites:String!,$content:String!){
+    createOneReviews(data: {first_name: $first_name, last_name: $last_name, websites: $websites, content: $content}) {
         first_name
             last_name
             websites
             content
-            comment_id
-            shop_id
   }
 }`;
 
@@ -88,8 +76,6 @@ export default {
             last_name: " ",
             websites: " ",
             content: " ",
-            comment_id: "",
-            shop_id: " "
         }
   },
     head: {
@@ -103,8 +89,6 @@ export default {
             const last_name = this.last_name;
             const websites = this.websites;
             const content = this.content;
-            const comment_id = this.comment_id;
-            const shop_id = this.shop_id;
             await this.$apollo.mutate({
                 mutation: ADD_REVIEWS,
                 variables: {
@@ -112,8 +96,6 @@ export default {
                     last_name,
                     websites,
                     content,
-                    comment_id,
-                    shop_id
                  },
         update: (cache, { data: { insertReviews }}) => {
                         // Read data from cache for this query
@@ -129,14 +111,12 @@ export default {
                         }
                     }
                 }).then(() => {
-                    this.$router.push({path: '../../marketing/reviews'})
+                    this.$router.push({path: '../../customers/reviews'})
                 }).catch(err => console.log(err));
                     this.first_name = ' ';
                     this.last_name = ' ';
                     this.websites = ' ';
                     this.content = ' ';
-                    this.comment_id = ' ';
-                    this.shop_id = ' '
                 }, 
         },
 }

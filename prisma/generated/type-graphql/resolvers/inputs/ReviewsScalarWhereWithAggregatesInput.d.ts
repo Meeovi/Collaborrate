@@ -11,6 +11,4 @@ export declare class ReviewsScalarWhereWithAggregatesInput {
     content?: StringNullableWithAggregatesFilter | undefined;
     websites?: StringNullableWithAggregatesFilter | undefined;
     created_at?: DateTimeNullableWithAggregatesFilter | undefined;
-    shop_id?: IntWithAggregatesFilter | undefined;
-    comment_id?: IntWithAggregatesFilter | undefined;
 }

@@ -6,7 +6,5 @@ export declare class ReviewsOrderByWithRelationAndSearchRelevanceInput {
     content?: "asc" | "desc" | undefined;
     websites?: "asc" | "desc" | undefined;
     created_at?: "asc" | "desc" | undefined;
-    shop_id?: "asc" | "desc" | undefined;
-    comment_id?: "asc" | "desc" | undefined;
     _relevance?: ReviewsOrderByRelevanceInput | undefined;
 }

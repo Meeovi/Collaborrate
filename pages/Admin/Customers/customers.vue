@@ -21,7 +21,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody v-for="customers in customers" :key="customers.id">
+        <tbody v-for="customers in findManyCustomers" :key="customers.id">
           <tr>
             <td>{{ customers.id }}</td>
             <td>{{ customers.first_name }}</td>
@@ -44,13 +44,13 @@ import findManyCustomers from '~/graphql/query/findManyCustomers'
 export default {
   data() {
     return {
-      customers: [],
+      findManyCustomers: [],
     }
   },
   apollo: {
-    customers: {
+    findManyCustomers: {
       prefetch: true,
-      query: customers
+      query: findManyCustomers
     }
   },
     head: {

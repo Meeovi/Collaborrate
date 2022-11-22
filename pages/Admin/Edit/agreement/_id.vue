@@ -1,12 +1,12 @@
 <template>
   <div>
-    <form method="POST">
+    <form method="POST" @submit.prevent="updateAgreement()">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning" @click="destroy(agreement.id)">Delete</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement.id)">Delete</button></a>
           <a class="navbar-brand">
-            <input type="submit" class="btn btn-warning" value="Save Agreement" @click="publish(agreement.id)" /></a>
+            <input type="submit" class="btn btn-warning" value="Save Agreement" /></a>
         </div>
       </nav>
       <br>
@@ -25,7 +25,7 @@
             <div id="v-tabs-home" class="tab-pane fade show active" role="tabpanel" aria-labelledby="v-tabs-home-tab">
               <div class="table table-responsive">
                 <table class="table">
-                  <tbody>
+                  <tbody v-for="agreement in findManyAgreements" :key="agreement.id">
                     <tr>
                       <td style="text-align: right;">Agreement Name</td>
                       <td>
@@ -75,84 +75,70 @@
 <script>
 import gql from 'graphql-tag'
 //import findManyAgreements from '~/graphql/query/findManyAgreements'
-//import { updateOneAgreements, deleteOneAgreements } from '~/graphql/code/agreements'
+import { updateOneAgreements, deleteOneAgreements } from '~/graphql/code/agreements'
 import Editor from '~/components/Editor.vue'
-import { name, excerpt, type, content } from './index'
+
 export default {
     components: {
       Editor
     },
-    
-   data() {
-      return {
-        type: [],
-        name: " ",
-        excerpt: " ",
-        content: " ",
-        image: " ",
-        user_id: "",
-        reference_id: "",
-        shop_id: "",
-      }
-    }, 
     head: {
       title: 'Edit Agreement'
     },
-/*    methods: {
-      async updateAgreement() {
-        const name = this.name;
-        const content = this.content;
-        const excerpt = this.excerpt;
-        const type = this.type;
-        const image = this.image;
-        const user_id = this.user_id;
-        const reference_id = this.reference_id;
-        const shop_id = this.shop_id;
-        await this.$apollo.mutate({
-          mutation: updateOneAgreements,
-          variables: {
-            id: agreement.id
-          },
-          update: (cache, {
-            data: {
-              insertAgreements
-            }
-          }) => {
-            // Read data from cache for this query
-            try {
-              const insertedAgreement = insertAgreements.returning;
-              console.log(insertedAgreement)
-              cache.writeQuery({
-                query: findManyAgreements
-              })
-            } catch (err) {
-              console.error(err)
-            }
-          }
-        }).then(() => {
-          this.$router.push({
-            path: '../../marketing/agreements'
-          })
-        }).catch(err => console.log(err));
-        this.name = ' ';
-        this.excerpt = ' ';
-        this.type = ' ';
-        this.content = ' ';
-        this.image = ' ';
-        this.reference_id = '';
-        this.user_id = '';
-        this.shop_id = '';
-      },
-    }, 
-    apollo: {
-      findManyAgreements: {
-        query: findManyAgreements,
-        prefetch: true,
+    mounted(){
+      this.forceRerender();
+  },
+  // eslint-disable-next-line vue/order-in-components
+  data(){
+      return{
+          componentKey: 0
       }
-    } */
-  } 
-
-
+  },
+  methods: {
+   async deleteAgreement(agreement){
+    await this.$apollo.mutate({
+        mutation: deleteOneAgreements,
+        variables: {
+          id: agreement.id
+        },
+        refetchQueries: [
+          {
+            query: findManyAgreements
+          }       
+          
+        ]
+      }).then(() => {
+            this.$router.push({path: '../../admin/marketing/agreements'})
+            }).catch(err => console.log(err));
+    },
+    async updateAgreement(agreement){
+    await this.$apollo.mutate({
+        mutation: updateOneAgreements,
+        variables: {
+          id: agreement.id
+        },
+        refetchQueries: [
+          {
+            query: findManyAgreements
+          }       
+          
+        ]
+      })
+    },
+    forceRerender() {
+      this.componentKey += 1;
+    }
+  },
+  apollo: {
+    findManyAgreements: {
+      query: findManyAgreements,
+      prefetch: ({ route }) => ({ id: route.params.id }),
+      variables() {
+        return { id: this.$route.params.id }
+      }
+    }
+  }
+  }
 </script>
 
 <style>

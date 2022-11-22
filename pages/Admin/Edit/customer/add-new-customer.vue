@@ -135,20 +135,14 @@
                         </select>
                       </td>
                     </tr>
-                    <div class="row">
-                      <div class="col-md-6">
                         <tr>
                           <td style="text-align: right;">Short Description</td>
-                          <td><textarea v-model="short_description" col="40" rows="10"></textarea></td>
+                          <td><textarea v-model="short_description" rows="10" cols="50"></textarea></td>
                         </tr>
-                      </div>
-                      <div class="col-md-6">
                         <tr>
                           <td style="text-align: right;">Long Description</td>
-                          <td><textarea v-model="description" col="40" rows="10"></textarea></td>
+                          <td><textarea v-model="description" rows="10" cols="50"></textarea></td>
                         </tr>
-                      </div>
-                    </div>
                   </tbody>
                 </table>
               </div>
@@ -171,8 +165,8 @@
   // import  tax from '~/graphql/query/findManyTax'
 
   const ADD_CUSTOMER = gql `
-    mutation ($Address: String!, $address_two: String!, $comments: String!, $confirmed_email: String!, $country: String!, $credit_memos: String!, $customer_group: String!, $customer_group_customer_groupTocustomers: String!, $customer_payment: String!, $customer_since: String!, $date_of_birth: String!, $description: String!, $email: String!, $emails: String!, $first_name: String!, $gender: String!, $id: String!, $image: String!, $last_name: String!, $mediamanager: String!, $messages: String!, $middle_name: String!, $name_prefix: String!, $name_suffix: String!, $newsletter_subscribers: String!, $orders: String!, $password: String!, $payment_type: String!, $phone: String!, $product: String!, $projects: String!, $quotes: String!, $returns: String!, $short_description: String!, $state: String!, $tax_vat_number: String!, $thumbnail: String!, $username: String!, $websites: String!, $workspaces: String!, $zipcode: String!){
-    createOneCustomers(data: {Address: $Address, address_two: $address_two, comments: $comments, confirmed_email: $confirmed_email, country: $country, credit_memos: $credit_memos, customer_group: $customer_group, customer_group_customer_groupTocustomers: $customer_group_customer_groupTocustomers, customer_payment: $customer_payment, customer_since: $customer_since, date_of_birth: $date_of_birth, description: $description, email: $email, emails: $emails, first_name: $first_name, gender: $gender, id: $id, image: $image, last_name: $last_name, mediamanager: $mediamanager, messages: $messages, middle_name: $middle_name, name_prefix: $name_prefix, name_suffix: $name_suffix, newsletter_subscribers: $newsletter_subscribers, orders: $orders, password: $password, payment_type: $payment_type, phone: $phone, product: $product, projects: $projects, quotes: $quotes, returns: $returns, short_description: $short_description, state: $state, tax_vat_number: $tax_vat_number, thumbnail: $thumbnail, username: $username, websites: $websites, workspaces: $workspaces, zipcode: $zipcode}) {
+    mutation ($Address: String!, $address_two: String!, $comments: String!, $confirmed_email: String!, $country: String!, $credit_memos: String!, $customer_group: String!, $customer_payment: String!, $date_of_birth: String!, $description: String!, $email: String!, $emails: String!, $first_name: String!, $gender: String!, $image: String!, $last_name: String!, $mediamanager: String!, $messages: String!, $middle_name: String!, $name_prefix: String!, $name_suffix: String!, $newsletter_subscribers: String!, $orders: String!, $password: String!, $payment_type: String!, $phone: String!, $product: String!, $projects: String!, $quotes: String!, $returns: String!, $short_description: String!, $state: String!, $tax_vat_number: String!, $thumbnail: String!, $username: String!, $websites: String!, $workspaces: String!, $zipcode: String!){
+    createOneCustomers(data: {Address: $Address, address_two: $address_two, comments: $comments, confirmed_email: $confirmed_email, country: $country, credit_memos: $credit_memos, customer_group: $customer_group, customer_payment: $customer_payment, date_of_birth: $date_of_birth, description: $description, email: $email, emails: $emails, first_name: $first_name, gender: $gender, image: $image, last_name: $last_name, mediamanager: $mediamanager, messages: $messages, middle_name: $middle_name, name_prefix: $name_prefix, name_suffix: $name_suffix, newsletter_subscribers: $newsletter_subscribers, orders: $orders, password: $password, payment_type: $payment_type, phone: $phone, product: $product, projects: $projects, quotes: $quotes, returns: $returns, short_description: $short_description, state: $state, tax_vat_number: $tax_vat_number, thumbnail: $thumbnail, username: $username, websites: $websites, workspaces: $workspaces, zipcode: $zipcode}) {
         Address
         address_two
         comments
@@ -180,16 +174,13 @@
         country
         credit_memos
         customer_group
-        customer_group_customer_groupTocustomers
         customer_payment
-        customer_since
         date_of_birth
         description
         email
         emails
         first_name
         gender
-        id
         image
         last_name
         mediamanager
@@ -227,16 +218,13 @@
         country: " ",
         credit_memos: " ",
         customer_group: " ",
-        customer_group_customer_groupTocustomers: " ",
         customer_payment: " ",
-        customer_since: " ",
         date_of_birth: " ",
         description: " ",
         email: " ",
         emails: " ",
         first_name: " ",
         gender: " ",
-        id: " ",
         image: " ",
         last_name: " ",
         mediamanager: " ",
@@ -273,16 +261,13 @@
         const country = this.country;
         const credit_memos = this.credit_memos;
         const customer_group = this.customer_group;
-        const customer_group_customer_groupTocustomers = this.customer_group_customer_groupTocustomers;
         const customer_payment = this.customer_payment;
-        const customer_since = this.customer_since;
         const date_of_birth = this.date_of_birth;
         const description = this.description;
         const email = this.email;
         const emails = this.emails;
         const first_name = this.first_name;
         const gender = this.gender;
-        const id = this.id;
         const image = this.image;
         const last_name = this.last_name;
         const mediamanager = this.mediamanager;
@@ -318,16 +303,13 @@
             country,
             credit_memos,
             customer_group,
-            customer_group_customer_groupTocustomers,
             customer_payment,
-            customer_since,
             date_of_birth,
             description,
             email,
             emails,
             first_name,
             gender,
-            id,
             image,
             last_name,
             mediamanager,
@@ -386,16 +368,13 @@
         this.country = ' ';
         this.credit_memos = ' ';
         this.customer_group = ' ';
-        this.customer_group_customer_groupTocustomers = ' ';
         this.customer_payment = ' ';
-        this.customer_since = ' ';
         this.date_of_birth = ' ';
         this.description = ' ';
         this.email = ' ';
         this.emails = ' ';
         this.first_name = ' ';
         this.gender = ' ';
-        this.id = ' ';
         this.image = ' ';
         this.last_name = ' ';
         this.mediamanager = ' ';
@@ -443,7 +422,7 @@
     },
     // eslint-disable-next-line vue/order-in-components
     head: {
-      title: 'Add New Staff Members'
+      title: 'Add New Customer'
     }
   }
 

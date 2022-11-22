@@ -48,18 +48,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], ReviewsOrderByWithAggregationInput.prototype, "created_at", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], ReviewsOrderByWithAggregationInput.prototype, "shop_id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], ReviewsOrderByWithAggregationInput.prototype, "comment_id", void 0);
-tslib_1.__decorate([
     TypeGraphQL.Field(_type => ReviewsCountOrderByAggregateInput_1.ReviewsCountOrderByAggregateInput, {
         nullable: true
     }),

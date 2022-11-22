@@ -43,16 +43,6 @@
                       <td><client-only><Editor :value="review.content" /></client-only>
                       </td>
                     </tr>
-                    <tr>
-                      <td style="text-align: right;">Shop ID</td>
-                      <td><input :value="review.shop_id" type="text" disabled>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">Comment ID</td>
-                      <td><input :value="review.comment_id" type="text" disabled>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -69,22 +59,20 @@
 import  gql from "graphql-tag";
 import  findManyReviews from "~/graphql/query/findManyReviews"
 
-const DELETE_REVIEW = gql`
-    mutation ($first_name:String!,$last_name:String!$websites:String!,$content:String!,$comment_id:Int!,$shop_id:Int!){
-    createOneReviews(data: {first_name: $first_name, last_name: $last_name, websites: $websites, content: $content, comment_id: $comment_id, shop_id: $shop_id}) {
+const UPDATE_REVIEW = gql`
+    mutation ($first_name:String!,$last_name:String!$websites:String!,$content:String!){
+    updateOneReviews(data: {first_name: $first_name, last_name: $last_name, websites: $websites, content: $content}, where: {id: $id}) {
         first_name
             last_name
             websites
             content
-            comment_id
-            shop_id
   }
 }`;
 
-const UPDATE_REVIEW = gql`
-  mutation updateOnereviews($id: Int!){
-  updateOneReviews(where: {id: $id}){
-    affected_rows
+const DELETE_REVIEW = gql`
+  mutation deleteOneReviews($id: Int!){
+  deleteOneReviews(where: {id: $id}){
+    id
   }
 }
 `;
@@ -116,7 +104,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/marketing/reviews'})
+            this.$router.push({path: '../../admin/customers/reviews'})
             }).catch(err => console.log(err));
     },
     async updateReview(review){

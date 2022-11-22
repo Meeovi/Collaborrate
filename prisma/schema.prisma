@@ -719,8 +719,6 @@ model reviews {
   content    String?
   websites   String?
   created_at DateTime? @default(now())
-  shop_id    Int
-  comment_id Int
 }
 
 model rewards {

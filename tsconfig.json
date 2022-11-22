@@ -15,6 +15,11 @@
     "noUnusedParameters": true,
     "importHelpers": true,
     "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-  }
+    "allowSyntheticDefaultImports": true
+  },
+  "types": [
+    "@nuxt/types",
+    "@nuxtjs/color-mode",
+    "@nuxtjs/vuetify"
+  ]
 }

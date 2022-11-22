@@ -11,18 +11,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", Number)
 ], ReviewsAvgAggregate.prototype, "id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Float, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Number)
-], ReviewsAvgAggregate.prototype, "shop_id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Float, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Number)
-], ReviewsAvgAggregate.prototype, "comment_id", void 0);
 ReviewsAvgAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("ReviewsAvgAggregate", {
         isAbstract: true
