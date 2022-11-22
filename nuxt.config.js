@@ -30,76 +30,13 @@ export default defineNuxtConfig({
     ]
   },
 
-<<<<<<< HEAD
-  css: [
-  ],
-
-  plugins: [
-    { src: '~/plugins/apollo-error-handler.js', ssr: false },
-    { src: '~/plugins/axios.js' },
-    { src: '~/plugins/extensions/vuetify.js', ssr: false },
-  ],
-
-  components: true,
-
-  buildModules: [
-    '@braid/vue-formulate/nuxt',
-  ],
-
-=======
->>>>>>> e3fbca0b84a463972c197cf2284118df1fd0e5b1
   modules: [
     //'@nuxtjs/sentry',
     '@nuxtjs/apollo',
     //"@nuxtjs/auth-next",
-<<<<<<< HEAD
-    '@nuxtjs/i18n',
-    '@nuxtjs/vuetify',
-=======
     '@nuxtjs/robots',
     "nuxt-security",
-    '@nuxtjs/color-mode',
-    'nuxt-meilisearch',
-    '@formkit/nuxt',
-    [
-      '@pinia/nuxt',
-      {
-        autoImports: [
-          // automatically imports `defineStore`
-          'defineStore', // import { defineStore } from 'pinia'
-          // automatically imports `defineStore` as `definePiniaStore`
-          ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
-        ],
-      },
-    ],
->>>>>>> e3fbca0b84a463972c197cf2284118df1fd0e5b1
   ],
-
-  colorMode: {
-    preference: 'system', // default value of $colorMode.preference
-    fallback: 'light', // fallback value if not system preference found
-    hid: 'nuxt-color-mode-script',
-    globalName: '__NUXT_COLOR_MODE__',
-    componentName: 'ColorScheme',
-    classPrefix: '',
-    classSuffix: '-mode',
-    storageKey: 'nuxt-color-mode'
-  },
-
-  meilisearch: {
-    hostUrl:  'http://my-meilisearch-server.domain.com',
-    readApiKey: '<your_read_key>',
-    writeApiKey: '<your_write_key>',
-    instantSearch: true, // default true
-    serverSideUsage:  false,// default false
-    clientOptions: {
-      placeholderSearch: true, // default
-      paginationTotalHits: 50, // default
-      finitePagination: true, // default
-      primaryKey: undefined, // default
-      keepZeroFacets: false // default
-    }
-  },
   
  /* auth: {
     strategies: {
