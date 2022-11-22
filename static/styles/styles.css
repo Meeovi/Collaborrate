@@ -255,7 +255,7 @@ body.darkmode--activated {
   -moz-appearance: none;
   appearance: none;
   border-radius: .3em;
-  border: 1px solid #cecece;
+  border: 1px solid #000000;
   box-sizing: border-box;
   background-color: transparent;
   font-size: .9em;
@@ -357,6 +357,7 @@ footer {
 /************* AlternateCMS Color Themes *************/
 
 :root {
+  --body-bg: white;
   --text-color: #252525;
 }
 
