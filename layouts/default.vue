@@ -3,7 +3,7 @@
     <main class="mb-5" style="margin-top: -55px;">
       <Header />
       <Breadcrumbs />
-      <slot />
+      <Nuxt />
     </main>
     <Footer />
   </div>

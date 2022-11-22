@@ -2,7 +2,7 @@
   <div>
     <main class="mb-5" style="margin-top: -55px;">
       <Header />
-      <slot />
+      <Nuxt />
     </main>
     <Footer />
   </div>

@@ -65,9 +65,8 @@
   import orders from '~/components/dashboard/orders/orders'
   import mostviewed from '~/components/dashboard/mostviewed/mostviewed'
   import bestsellers from '~/components/dashboard/bestsellers/bestsellers'
-  import { mapGetters } from 'vuex'
 
-definePageMeta({ layout: 'dashboard' })
+
 export default {
  /* computed: {
     ...mapGetters(['loggedInUser']),
@@ -83,7 +82,7 @@ export default {
       //bestsellers,
       charts,
     },
-    
+    layout: 'dashboard',
     head: {
       title: 'AlternateCMS'
     }

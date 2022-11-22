@@ -1,5 +1,5 @@
 
-export default defineNuxtConfig({
+export default {
   target: 'static',
   server: {
     port: 8000
@@ -30,12 +30,27 @@ export default defineNuxtConfig({
     ]
   },
 
+  css: [
+  ],
+
+  plugins: [
+    { src: '~/plugins/apollo-error-handler.js', ssr: false },
+    { src: '~/plugins/extensions/vuetify.js', ssr: false },
+  ],
+
+  components: true,
+
+  buildModules: [
+    '@braid/vue-formulate/nuxt',
+  ],
+
   modules: [
-    //'@nuxtjs/sentry',
+    '@nuxtjs/sentry',
     '@nuxtjs/apollo',
+    '@nuxtjs/vuetify',
+    '@nuxtjs/i18n',
+    'nuxt-client-init-module',
     //"@nuxtjs/auth-next",
-    '@nuxtjs/robots',
-    "nuxt-security",
   ],
   
  /* auth: {
@@ -58,7 +73,7 @@ export default defineNuxtConfig({
 
   // Apollo config
   apollo: {
-    clients: {
+    clientConfigs: {
       default:{
         httpEndpoint: 'http://localhost:4000/graphql',
        // wsEndpoint: WS_ENDPOINT
@@ -68,13 +83,12 @@ export default defineNuxtConfig({
     errorHandler: '~/plugins/apollo-error-handler.js'
   },
 
- /* sentry: {
+ sentry: {
     dsn: process.env.SENTRY_DSN,
-    config: {
-    }
-  }, */
+    config: {}
+  },
 
   build: {
     transpile: ['vue-instantsearch', 'instantsearch.js/es'],
   },
-})
+}
