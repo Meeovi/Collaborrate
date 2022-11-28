@@ -268,10 +268,11 @@ body.darkmode--activated {
   margin: 0;
 }
 
-form td,
+form input,
 form select,
 form option {
   min-width: 300px;
+  border: 1px solid #000000;
 }
 
 input,
