@@ -6,8 +6,8 @@
         <p>Welcome to AlternateCMS</p>
       </div><br>
       <!--<charts />--> <br>
-      <sales />
-      <orders />
+      <tickets />
+      <projects />
       <posts />
     </div>
     <ul id="ex1" class="nav nav-pills nav-fill mb-3" role="tablist">
@@ -61,8 +61,8 @@
   import Newcustomers from '~/components/newcustomers'
   import Reviewslimit from '~/components/reviewslimit'
   import posts from '~/components/dashboard/posts/posts'
-  import sales from '~/components/dashboard/sales/sales'
-  import orders from '~/components/dashboard/orders/orders'
+  import tickets from '~/components/dashboard/tickets/tickets'
+  import projects from '~/components/dashboard/projects/projects'
   import mostviewed from '~/components/dashboard/mostviewed/mostviewed'
   import bestsellers from '~/components/dashboard/bestsellers/bestsellers'
 
@@ -76,8 +76,8 @@ export default {
       Customerslimit,
       Reviewslimit,
       posts,
-      sales,
-      orders,
+      tickets,
+      projects,
       mostviewed,
       //bestsellers,
       charts,

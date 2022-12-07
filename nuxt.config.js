@@ -18,20 +18,13 @@ export default {
       { rel: 'stylesheet', href: '/mdb/plugins/css/all.min.css' },
       { rel: 'stylesheet', href: '/mdb/css/mdb.min.css' },
       { rel: 'stylesheet', href: '/styles/styles.css' },
-      { rel: 'stylesheet', href: '/DataTables/datatables.css' }
     ],
     script: [
       { src: '/mdb/plugins/js/all.min.js', mode: 'client' },
       { src: '/mdb/js/mdb.min.js', mode: 'client' },
-      { src: '/DataTables/datatables.js', mode: 'client' },
       { src: '/scripts/main.js', mode: 'client' },
-      { src: '/scripts/core/uploads/index.js' },
-      { src: '/scripts/media-library.js', mode: 'client' },
     ]
   },
-
-  css: [
-  ],
 
   plugins: [
     { src: '~/plugins/apollo-error-handler.js', ssr: false },
@@ -89,6 +82,6 @@ export default {
   },
 
   build: {
-    transpile: ['vue-instantsearch', 'instantsearch.js/es'],
+    transpile: ['vue-instantsearch', 'instantsearch.js/es']
   },
 }

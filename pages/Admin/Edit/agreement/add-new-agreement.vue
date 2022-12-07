@@ -92,7 +92,7 @@
   import findManyAgreements from "~/graphql/query/findManyAgreements";
   import Editor from '~/components/Editor.vue'
 
-  const ADD_AGREEMENTS = gql`
+  const ADD_AGREEMENTS = gql `
     mutation ($name:String!,$excerpt:String!,$type:String!,$content:String!,$image:String!,$user_id: String!, $reference_id: String!, $shop_id: String!){
     createOneAgreements(data: {reference_id: $reference_id, user_id: $user_id, shop_id: $shop_id, content: $content, excerpt: $excerpt, image: $image, type: $type, name: $name}) {
       name
@@ -177,7 +177,12 @@
         this.user_id = '';
         this.shop_id = '';
       },
-
+      apollo: {
+        findManyAgreements: {
+          prefetch: true,
+          query: findManyAgreements
+        }
+      },
     }
   }
 

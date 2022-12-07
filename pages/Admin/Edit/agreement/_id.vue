@@ -12,12 +12,10 @@
       <br>
       <div class="row">
         <div class="col-3">
-          <!-- Tab navs -->
           <div id="v-tabs-tab" class="nav flex-column nav-tabs text-center" role="tablist" aria-orientation="vertical">
             <a id="v-tabs-home-tab" class="nav-link active" data-mdb-toggle="tab" href="#v-tabs-home" role="tab"
               aria-controls="v-tabs-home" aria-selected="true">Edit Agreement</a>
           </div>
-          <!-- Tab navs -->
         </div>
 
         <div class="col-9">
@@ -73,9 +71,9 @@
 </template>
 
 <script>
-import gql from 'graphql-tag'
-//import findManyAgreements from '~/graphql/query/findManyAgreements'
-import { updateOneAgreements, deleteOneAgreements } from '~/graphql/code/agreements'
+//import gql from 'graphql-tag'
+import findManyAgreements from '~/graphql/query/findManyAgreements'
+import updateOneAgreements from '~/graphql/code/agreements'
 import Editor from '~/components/Editor.vue'
 
 export default {
@@ -85,59 +83,86 @@ export default {
     head: {
       title: 'Edit Agreement'
     },
-    mounted(){
-      this.forceRerender();
-  },
-  // eslint-disable-next-line vue/order-in-components
-  data(){
-      return{
-          componentKey: 0
+    data() {
+      return {
+        type: [],
+        name: " ",
+        excerpt: " ",
+        content: " ",
+        image: " ",
+        user_id: "",
+        reference_id: "",
+        shop_id: "",
       }
-  },
-  methods: {
-   async deleteAgreement(agreement){
-    await this.$apollo.mutate({
-        mutation: deleteOneAgreements,
-        variables: {
-          id: agreement.id
-        },
-        refetchQueries: [
-          {
-            query: findManyAgreements
-          }       
-          
-        ]
-      }).then(() => {
-            this.$router.push({path: '../../admin/marketing/agreements'})
-            }).catch(err => console.log(err));
     },
-    async updateAgreement(agreement){
-    await this.$apollo.mutate({
-        mutation: updateOneAgreements,
-        variables: {
-          id: agreement.id
-        },
-        refetchQueries: [
-          {
-            query: findManyAgreements
-          }       
-          
-        ]
-      })
+    methods: {
+      async updateAgreement() {
+        const name = this.name;
+        const content = this.content;
+        const excerpt = this.excerpt;
+        const type = this.type;
+        const image = this.image;
+        const user_id = this.user_id;
+        const reference_id = this.reference_id;
+        const shop_id = this.shop_id;
+        await this.$apollo.mutate({
+          mutation: updateOneAgreements,
+          variables: {
+            name,
+            excerpt,
+            type,
+            content,
+            image,
+            reference_id,
+            user_id,
+            shop_id,
+          },
+          update: (cache, {
+            data: {
+              updateAgreements
+            }
+          }) => {
+            // Read data from cache for this query
+            try {
+              const insertedAgreement = updateAgreements.returning;
+              console.log(insertedAgreement)
+              cache.writeQuery({
+                query: findManyAgreements
+              })
+            } catch (err) {
+              console.error(err)
+            }
+          }
+        }).then(() => {
+          this.$router.push({
+            path: '../../marketing/agreements'
+          })
+        }).catch(err => console.log(err));
+        this.name = ' ';
+        this.excerpt = ' ';
+        this.type = ' ';
+        this.content = ' ';
+        this.image = ' ';
+        this.reference_id = '';
+        this.user_id = '';
+        this.shop_id = '';
+      },
     },
-    forceRerender() {
-      this.componentKey += 1;
-    }
-  },
-  apollo: {
-    findManyAgreements: {
-      query: findManyAgreements,
-      prefetch: ({ route }) => ({ id: route.params.id }),
-      variables() {
-        return { id: this.$route.params.id }
+    apollo: {
+      findManyAgreements: {
+        query: findManyAgreements,
+        prefetch: ({
+          route
+        }) => ({
+          id: route.params.id
+        }),
+        variables() {
+          return {
+            id: this.$route.params.id
+          }
+        }
       }
     }
-  }
   }
 </script>
 
