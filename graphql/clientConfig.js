@@ -1,5 +1,5 @@
 import { InMemoryCache } from "apollo-cache-inmemory";
-export default function(context){
+export default function client(){
   return {
   		httpLinkOptions: {
     		uri: 'http://localhost:4000/graphql',

@@ -1,10 +1,13 @@
+
+
+
 <template>
   <div>
-    <form method="POST" @submit.prevent="updateAgreement()">
+    <form method="POST" @submit.prevent="updateAgreement.mutate({ pk_columns: { id: agreement.id }})">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement.id)">Delete</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement.mutate({id: agreement.id})">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Agreement" /></a>
         </div>
@@ -70,11 +73,35 @@
   </div>
 </template>
 
-<script>
+<script setup>
 //import gql from 'graphql-tag'
-import findManyAgreements from '~/graphql/query/findManyAgreements'
-import updateOneAgreements from '~/graphql/code/agreements'
+//import findManyAgreements from '~/graphql/query/findManyAgreements'
+import { updateOneAgreements, deleteOneAgreements } from '~/graphql/code/agreements'
 import Editor from '~/components/Editor.vue'
+
+const { findManyAgreements, type } = defineProps(["findManyAgreements", "type"])
+const updateAgreement = useMutation(updateOneAgreements)
+
+const deleteAgreement = useMutation(deleteOneAgreements, {
+    optimisticResponse: (variables) => {
+        return {
+            delete_agreements_by_pk: {
+                id: variables.id,
+            },
+        }
+    },
+    update: (cache, { data }) => {
+        cache.modify({
+            fields: {
+                findManyAgreements: (existingAgreements, { readField }) => {
+                    return existingAgreements.filter(
+                        (agreementRef) => data.delete_agreements_by_pk.id !== readField("id", agreementRef)
+                    )
+                },
+            },
+        })
+    },
+  })
 
 export default {
     components: {
@@ -83,7 +110,7 @@ export default {
     head: {
       title: 'Edit Agreement'
     },
-    data() {
+  /*  data() {
       return {
         type: [],
         name: " ",
@@ -162,7 +189,7 @@ export default {
           }
         }
       }
-    }
+    } */
   }
 </script>
 
