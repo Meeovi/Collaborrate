@@ -109,6 +109,7 @@
     "tslib": "^2.4.1",
     "type-graphql": "^1.1.1",
     "typegraphql-prisma": "^0.22.2",
+    "vite": "^3.2.5",
     "vue": "^2.7.14",
     "vue-instantsearch": "^4.6.0",
     "vue-property-decorator": "^9.1.2",
@@ -118,6 +119,7 @@
     "webpack": "^4.46.0"
   },
   "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.1.12",
     "@prisma/client": "^4.6.1",
     "@types/node": "^18.8.4",
     "chromedriver": "^96.0.0",
