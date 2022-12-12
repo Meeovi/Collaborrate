@@ -3,7 +3,7 @@
 
 <template>
   <div>
-    <form method="POST" @submit.prevent="updateAgreement.mutate({ pk_columns: { id: agreement.id }})">
+    <form method="agreement" @submit.prevent="updateAgreement.mutate({ pk_columns: { id: agreement.id }})">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
@@ -73,35 +73,40 @@
   </div>
 </template>
 
-<script setup>
+<script>
+export default {
+  data() {
+    return {
+      agreement: {},
+    }
+  },
+  async fetch() {
+    const agreement = await fetch(
+      `${location.origin}/api/agreement/${this.$route.params.id}`
+    ).then((res) => res.json())
+    this.agreement = agreement
+  },
+  methods: {
+    destroy: async function (id) {
+      const res = await fetch(`${location.origin}/api/agreement/${id}`, {
+        method: 'DELETE',
+      })
+      const data = await res.json()
+      this.$router.push('/')
+    },
+    publish: async function (id) {
+      const res = await fetch(`${location.origin}/api/publish/${id}`, {
+        method: 'PUT',
+      })  
+      const data = await res.json()
+      this.$router.push('/')
+    },
+  },
+}
 //import gql from 'graphql-tag'
-//import findManyAgreements from '~/graphql/query/findManyAgreements'
+/*import findManyAgreements from '~/graphql/query/findManyAgreements'
 import { updateOneAgreements, deleteOneAgreements } from '~/graphql/code/agreements'
 import Editor from '~/components/Editor.vue'
-
-const { findManyAgreements, type } = defineProps(["findManyAgreements", "type"])
-const updateAgreement = useMutation(updateOneAgreements)
-
-const deleteAgreement = useMutation(deleteOneAgreements, {
-    optimisticResponse: (variables) => {
-        return {
-            delete_agreements_by_pk: {
-                id: variables.id,
-            },
-        }
-    },
-    update: (cache, { data }) => {
-        cache.modify({
-            fields: {
-                findManyAgreements: (existingAgreements, { readField }) => {
-                    return existingAgreements.filter(
-                        (agreementRef) => data.delete_agreements_by_pk.id !== readField("id", agreementRef)
-                    )
-                },
-            },
-        })
-    },
-  })
 
 export default {
     components: {
@@ -110,7 +115,7 @@ export default {
     head: {
       title: 'Edit Agreement'
     },
-  /*  data() {
+    data() {
       return {
         type: [],
         name: " ",
@@ -189,8 +194,8 @@ export default {
           }
         }
       }
-    } */
-  }
+    }
+  }*/
 </script>
 
 <style>
