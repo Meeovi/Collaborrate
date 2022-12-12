@@ -1,0 +1,45 @@
+query {
+  aggregateWebsites 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      category
+      created_at
+      id
+      image
+      name
+      shop
+      store
+      themes
+      url
+    }
+    _max {
+      category
+      created_at
+      id
+      image
+      name
+      shop
+      store
+      themes
+      url
+    }
+    _min {
+      category
+      created_at
+      id
+      image
+      name
+      shop
+      store
+      themes
+      url
+    }
+    _sum {
+      id
+    }
+  }
+}

@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateSchedulerArgs } from "./args/AggregateSchedulerArgs";
+import { CreateManySchedulerArgs } from "./args/CreateManySchedulerArgs";
+import { CreateOneSchedulerArgs } from "./args/CreateOneSchedulerArgs";
+import { DeleteManySchedulerArgs } from "./args/DeleteManySchedulerArgs";
+import { DeleteOneSchedulerArgs } from "./args/DeleteOneSchedulerArgs";
+import { FindFirstSchedulerArgs } from "./args/FindFirstSchedulerArgs";
+import { FindFirstSchedulerOrThrowArgs } from "./args/FindFirstSchedulerOrThrowArgs";
+import { FindManySchedulerArgs } from "./args/FindManySchedulerArgs";
+import { FindUniqueSchedulerArgs } from "./args/FindUniqueSchedulerArgs";
+import { FindUniqueSchedulerOrThrowArgs } from "./args/FindUniqueSchedulerOrThrowArgs";
+import { GroupBySchedulerArgs } from "./args/GroupBySchedulerArgs";
+import { UpdateManySchedulerArgs } from "./args/UpdateManySchedulerArgs";
+import { UpdateOneSchedulerArgs } from "./args/UpdateOneSchedulerArgs";
+import { UpsertOneSchedulerArgs } from "./args/UpsertOneSchedulerArgs";
+import { Scheduler } from "../../../models/Scheduler";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateScheduler } from "../../outputs/AggregateScheduler";
+import { SchedulerGroupBy } from "../../outputs/SchedulerGroupBy";
+export declare class SchedulerCrudResolver {
+    aggregateScheduler(ctx: any, info: GraphQLResolveInfo, args: AggregateSchedulerArgs): Promise<AggregateScheduler>;
+    createManyScheduler(ctx: any, info: GraphQLResolveInfo, args: CreateManySchedulerArgs): Promise<AffectedRowsOutput>;
+    createOneScheduler(ctx: any, info: GraphQLResolveInfo, args: CreateOneSchedulerArgs): Promise<Scheduler>;
+    deleteManyScheduler(ctx: any, info: GraphQLResolveInfo, args: DeleteManySchedulerArgs): Promise<AffectedRowsOutput>;
+    deleteOneScheduler(ctx: any, info: GraphQLResolveInfo, args: DeleteOneSchedulerArgs): Promise<Scheduler | null>;
+    findFirstScheduler(ctx: any, info: GraphQLResolveInfo, args: FindFirstSchedulerArgs): Promise<Scheduler | null>;
+    findFirstSchedulerOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstSchedulerOrThrowArgs): Promise<Scheduler | null>;
+    schedulers(ctx: any, info: GraphQLResolveInfo, args: FindManySchedulerArgs): Promise<Scheduler[]>;
+    scheduler(ctx: any, info: GraphQLResolveInfo, args: FindUniqueSchedulerArgs): Promise<Scheduler | null>;
+    getScheduler(ctx: any, info: GraphQLResolveInfo, args: FindUniqueSchedulerOrThrowArgs): Promise<Scheduler | null>;
+    groupByScheduler(ctx: any, info: GraphQLResolveInfo, args: GroupBySchedulerArgs): Promise<SchedulerGroupBy[]>;
+    updateManyScheduler(ctx: any, info: GraphQLResolveInfo, args: UpdateManySchedulerArgs): Promise<AffectedRowsOutput>;
+    updateOneScheduler(ctx: any, info: GraphQLResolveInfo, args: UpdateOneSchedulerArgs): Promise<Scheduler | null>;
+    upsertOneScheduler(ctx: any, info: GraphQLResolveInfo, args: UpsertOneSchedulerArgs): Promise<Scheduler>;
+}

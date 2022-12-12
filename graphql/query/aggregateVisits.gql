@@ -1,0 +1,51 @@
+query {
+  aggregateVisits 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      content
+      created_at
+      emergency
+      end_date
+      id
+      location
+      meeting
+      reason
+      start_date
+      task
+      username
+    }
+    _max {
+      content
+      created_at
+      emergency
+      end_date
+      id
+      location
+      meeting
+      reason
+      start_date
+      task
+      username
+    }
+    _min {
+      content
+      created_at
+      emergency
+      end_date
+      id
+      location
+      meeting
+      reason
+      start_date
+      task
+      username
+    }
+    _sum {
+      id
+    }
+  }
+}

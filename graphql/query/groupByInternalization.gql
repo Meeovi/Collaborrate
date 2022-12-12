@@ -1,0 +1,46 @@
+query {
+  groupByInternalization 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      created_at
+      default
+      description
+      id
+      name
+      region
+      website
+    }
+    _max {
+      created_at
+      default
+      description
+      id
+      name
+      region
+      website
+    }
+    _min {
+      created_at
+      default
+      description
+      id
+      name
+      region
+      website
+    }
+    _sum {
+      id
+    }
+    created_at
+    default
+    description
+    id
+    name
+    region
+    website
+  }
+}

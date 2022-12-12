@@ -1,0 +1,31 @@
+mutation createOneAgreements($name:String!,$excerpt:String!,$type:String!,$content:String!,$image:String!,$user_id: String!, $reference_id: String!, $shop_id: String!){
+    createOneAgreements(data: {reference_id: $reference_id, user_id: $user_id, shop_id: $shop_id, content: $content, excerpt: $excerpt, image: $image, type: $type, name: $name}) {
+      name
+      excerpt
+      type
+      content
+      image
+      reference_id
+      user_id
+      shop_id
+  }
+}
+
+mutation updateOneAgreements($name:String!,$excerpt:String!,$type:String!,$content:String!,$image:String!,$user_id: String!, $reference_id: String!, $shop_id: String!){
+    updateOneAgreements(data: {reference_id: $reference_id, user_id: $user_id, shop_id: $shop_id, content: $content, excerpt: $excerpt, image: $image, type: $type, name: $name}, where: {id: $id}) {
+    name
+      excerpt
+      type
+      content
+      image
+      reference_id
+      user_id
+      shop_id
+  }
+}
+
+mutation deleteOneAgreements($id: BigInt!){
+    deleteOneAgreements(where: {id: $id}) {
+    id
+  }
+}

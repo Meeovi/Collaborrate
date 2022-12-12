@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateTicketingArgs } from "./args/AggregateTicketingArgs";
+import { CreateManyTicketingArgs } from "./args/CreateManyTicketingArgs";
+import { CreateOneTicketingArgs } from "./args/CreateOneTicketingArgs";
+import { DeleteManyTicketingArgs } from "./args/DeleteManyTicketingArgs";
+import { DeleteOneTicketingArgs } from "./args/DeleteOneTicketingArgs";
+import { FindFirstTicketingArgs } from "./args/FindFirstTicketingArgs";
+import { FindFirstTicketingOrThrowArgs } from "./args/FindFirstTicketingOrThrowArgs";
+import { FindManyTicketingArgs } from "./args/FindManyTicketingArgs";
+import { FindUniqueTicketingArgs } from "./args/FindUniqueTicketingArgs";
+import { FindUniqueTicketingOrThrowArgs } from "./args/FindUniqueTicketingOrThrowArgs";
+import { GroupByTicketingArgs } from "./args/GroupByTicketingArgs";
+import { UpdateManyTicketingArgs } from "./args/UpdateManyTicketingArgs";
+import { UpdateOneTicketingArgs } from "./args/UpdateOneTicketingArgs";
+import { UpsertOneTicketingArgs } from "./args/UpsertOneTicketingArgs";
+import { Ticketing } from "../../../models/Ticketing";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateTicketing } from "../../outputs/AggregateTicketing";
+import { TicketingGroupBy } from "../../outputs/TicketingGroupBy";
+export declare class TicketingCrudResolver {
+    aggregateTicketing(ctx: any, info: GraphQLResolveInfo, args: AggregateTicketingArgs): Promise<AggregateTicketing>;
+    createManyTicketing(ctx: any, info: GraphQLResolveInfo, args: CreateManyTicketingArgs): Promise<AffectedRowsOutput>;
+    createOneTicketing(ctx: any, info: GraphQLResolveInfo, args: CreateOneTicketingArgs): Promise<Ticketing>;
+    deleteManyTicketing(ctx: any, info: GraphQLResolveInfo, args: DeleteManyTicketingArgs): Promise<AffectedRowsOutput>;
+    deleteOneTicketing(ctx: any, info: GraphQLResolveInfo, args: DeleteOneTicketingArgs): Promise<Ticketing | null>;
+    findFirstTicketing(ctx: any, info: GraphQLResolveInfo, args: FindFirstTicketingArgs): Promise<Ticketing | null>;
+    findFirstTicketingOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstTicketingOrThrowArgs): Promise<Ticketing | null>;
+    ticketings(ctx: any, info: GraphQLResolveInfo, args: FindManyTicketingArgs): Promise<Ticketing[]>;
+    ticketing(ctx: any, info: GraphQLResolveInfo, args: FindUniqueTicketingArgs): Promise<Ticketing | null>;
+    getTicketing(ctx: any, info: GraphQLResolveInfo, args: FindUniqueTicketingOrThrowArgs): Promise<Ticketing | null>;
+    groupByTicketing(ctx: any, info: GraphQLResolveInfo, args: GroupByTicketingArgs): Promise<TicketingGroupBy[]>;
+    updateManyTicketing(ctx: any, info: GraphQLResolveInfo, args: UpdateManyTicketingArgs): Promise<AffectedRowsOutput>;
+    updateOneTicketing(ctx: any, info: GraphQLResolveInfo, args: UpdateOneTicketingArgs): Promise<Ticketing | null>;
+    upsertOneTicketing(ctx: any, info: GraphQLResolveInfo, args: UpsertOneTicketingArgs): Promise<Ticketing>;
+}

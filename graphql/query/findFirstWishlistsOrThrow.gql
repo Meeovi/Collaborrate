@@ -1,0 +1,13 @@
+query {
+  findFirstWishlistsOrThrow 
+ {
+    created_at
+    customers
+    id
+    name
+    occassions
+    products
+    quantity
+    visibility
+  }
+}

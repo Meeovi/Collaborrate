@@ -1,0 +1,13 @@
+query {
+  findFirstDeepdiveOrThrow 
+ {
+    attendees
+    content
+    created_at
+    end_date
+    id
+    login
+    start_date
+    whid
+  }
+}

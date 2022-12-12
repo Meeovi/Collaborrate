@@ -1,0 +1,14 @@
+query {
+  endofshift 
+ {
+    content
+    created_at
+    id
+    login
+    mcms
+    next_shift
+    projects
+    tickets
+    whid
+  }
+}

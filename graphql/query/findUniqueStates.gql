@@ -1,0 +1,11 @@
+query {
+  findUniqueStates 
+ {
+    country
+    description
+    id
+    image
+    name
+    trainings
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "generators",
+  "version": "1.0.0",
+  "main": "dashboards.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "codegen": "graphql-codegen --config codegen.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.13.7",
+    "@graphql-codegen/client-preset": "1.1.0",
+    "@graphql-codegen/introspection": "2.2.1",
+    "@graphql-codegen/typescript": "^2.7.5",
+    "@graphql-codegen/typescript-resolvers": "^2.7.5",
+    "@types/react": "^18.0.25",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "del": "^7.0.0",
+    "periqles": "^2.1.3",
+    "react": "^18.2.0"
+  },
+  "description": ""
+}

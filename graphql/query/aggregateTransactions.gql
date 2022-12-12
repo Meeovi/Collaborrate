@@ -1,0 +1,53 @@
+query {
+  aggregateTransactions 
+ {
+    _avg {
+      id
+      order_id
+      parent_transaction_id
+      payment_method
+      transaction_id
+    }
+    _count {
+      _all
+      closed
+      created
+      customer_payment
+      id
+      order_id
+      orders
+      parent_transaction_id
+      payment_method
+      transaction_id
+    }
+    _max {
+      closed
+      created
+      customer_payment
+      id
+      order_id
+      orders
+      parent_transaction_id
+      payment_method
+      transaction_id
+    }
+    _min {
+      closed
+      created
+      customer_payment
+      id
+      order_id
+      orders
+      parent_transaction_id
+      payment_method
+      transaction_id
+    }
+    _sum {
+      id
+      order_id
+      parent_transaction_id
+      payment_method
+      transaction_id
+    }
+  }
+}

@@ -1,0 +1,10 @@
+query {
+  getGlossary 
+ {
+    content
+    id
+    image
+    name
+    published
+  }
+}

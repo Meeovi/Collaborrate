@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateGlossaryArgs } from "./args/AggregateGlossaryArgs";
+import { CreateManyGlossaryArgs } from "./args/CreateManyGlossaryArgs";
+import { CreateOneGlossaryArgs } from "./args/CreateOneGlossaryArgs";
+import { DeleteManyGlossaryArgs } from "./args/DeleteManyGlossaryArgs";
+import { DeleteOneGlossaryArgs } from "./args/DeleteOneGlossaryArgs";
+import { FindFirstGlossaryArgs } from "./args/FindFirstGlossaryArgs";
+import { FindFirstGlossaryOrThrowArgs } from "./args/FindFirstGlossaryOrThrowArgs";
+import { FindManyGlossaryArgs } from "./args/FindManyGlossaryArgs";
+import { FindUniqueGlossaryArgs } from "./args/FindUniqueGlossaryArgs";
+import { FindUniqueGlossaryOrThrowArgs } from "./args/FindUniqueGlossaryOrThrowArgs";
+import { GroupByGlossaryArgs } from "./args/GroupByGlossaryArgs";
+import { UpdateManyGlossaryArgs } from "./args/UpdateManyGlossaryArgs";
+import { UpdateOneGlossaryArgs } from "./args/UpdateOneGlossaryArgs";
+import { UpsertOneGlossaryArgs } from "./args/UpsertOneGlossaryArgs";
+import { Glossary } from "../../../models/Glossary";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateGlossary } from "../../outputs/AggregateGlossary";
+import { GlossaryGroupBy } from "../../outputs/GlossaryGroupBy";
+export declare class GlossaryCrudResolver {
+    aggregateGlossary(ctx: any, info: GraphQLResolveInfo, args: AggregateGlossaryArgs): Promise<AggregateGlossary>;
+    createManyGlossary(ctx: any, info: GraphQLResolveInfo, args: CreateManyGlossaryArgs): Promise<AffectedRowsOutput>;
+    createOneGlossary(ctx: any, info: GraphQLResolveInfo, args: CreateOneGlossaryArgs): Promise<Glossary>;
+    deleteManyGlossary(ctx: any, info: GraphQLResolveInfo, args: DeleteManyGlossaryArgs): Promise<AffectedRowsOutput>;
+    deleteOneGlossary(ctx: any, info: GraphQLResolveInfo, args: DeleteOneGlossaryArgs): Promise<Glossary | null>;
+    findFirstGlossary(ctx: any, info: GraphQLResolveInfo, args: FindFirstGlossaryArgs): Promise<Glossary | null>;
+    findFirstGlossaryOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstGlossaryOrThrowArgs): Promise<Glossary | null>;
+    glossaries(ctx: any, info: GraphQLResolveInfo, args: FindManyGlossaryArgs): Promise<Glossary[]>;
+    glossary(ctx: any, info: GraphQLResolveInfo, args: FindUniqueGlossaryArgs): Promise<Glossary | null>;
+    getGlossary(ctx: any, info: GraphQLResolveInfo, args: FindUniqueGlossaryOrThrowArgs): Promise<Glossary | null>;
+    groupByGlossary(ctx: any, info: GraphQLResolveInfo, args: GroupByGlossaryArgs): Promise<GlossaryGroupBy[]>;
+    updateManyGlossary(ctx: any, info: GraphQLResolveInfo, args: UpdateManyGlossaryArgs): Promise<AffectedRowsOutput>;
+    updateOneGlossary(ctx: any, info: GraphQLResolveInfo, args: UpdateOneGlossaryArgs): Promise<Glossary | null>;
+    upsertOneGlossary(ctx: any, info: GraphQLResolveInfo, args: UpsertOneGlossaryArgs): Promise<Glossary>;
+}

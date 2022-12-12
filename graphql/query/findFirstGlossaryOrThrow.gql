@@ -1,0 +1,10 @@
+query {
+  findFirstGlossaryOrThrow 
+ {
+    content
+    id
+    image
+    name
+    published
+  }
+}

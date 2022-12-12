@@ -1,0 +1,12 @@
+query {
+  findUniqueCurrenciesOrThrow 
+ {
+    code
+    created_at
+    id
+    name
+    region
+    symbol
+    useStandard
+  }
+}

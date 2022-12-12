@@ -1,0 +1,14 @@
+export { AggregateEndofshiftArgs } from "./AggregateEndofshiftArgs";
+export { CreateManyEndofshiftArgs } from "./CreateManyEndofshiftArgs";
+export { CreateOneEndofshiftArgs } from "./CreateOneEndofshiftArgs";
+export { DeleteManyEndofshiftArgs } from "./DeleteManyEndofshiftArgs";
+export { DeleteOneEndofshiftArgs } from "./DeleteOneEndofshiftArgs";
+export { FindFirstEndofshiftArgs } from "./FindFirstEndofshiftArgs";
+export { FindFirstEndofshiftOrThrowArgs } from "./FindFirstEndofshiftOrThrowArgs";
+export { FindManyEndofshiftArgs } from "./FindManyEndofshiftArgs";
+export { FindUniqueEndofshiftArgs } from "./FindUniqueEndofshiftArgs";
+export { FindUniqueEndofshiftOrThrowArgs } from "./FindUniqueEndofshiftOrThrowArgs";
+export { GroupByEndofshiftArgs } from "./GroupByEndofshiftArgs";
+export { UpdateManyEndofshiftArgs } from "./UpdateManyEndofshiftArgs";
+export { UpdateOneEndofshiftArgs } from "./UpdateOneEndofshiftArgs";
+export { UpsertOneEndofshiftArgs } from "./UpsertOneEndofshiftArgs";

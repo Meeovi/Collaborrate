@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateWebsitesArgs } from "./args/AggregateWebsitesArgs";
+import { CreateManyWebsitesArgs } from "./args/CreateManyWebsitesArgs";
+import { CreateOneWebsitesArgs } from "./args/CreateOneWebsitesArgs";
+import { DeleteManyWebsitesArgs } from "./args/DeleteManyWebsitesArgs";
+import { DeleteOneWebsitesArgs } from "./args/DeleteOneWebsitesArgs";
+import { FindFirstWebsitesArgs } from "./args/FindFirstWebsitesArgs";
+import { FindFirstWebsitesOrThrowArgs } from "./args/FindFirstWebsitesOrThrowArgs";
+import { FindManyWebsitesArgs } from "./args/FindManyWebsitesArgs";
+import { FindUniqueWebsitesArgs } from "./args/FindUniqueWebsitesArgs";
+import { FindUniqueWebsitesOrThrowArgs } from "./args/FindUniqueWebsitesOrThrowArgs";
+import { GroupByWebsitesArgs } from "./args/GroupByWebsitesArgs";
+import { UpdateManyWebsitesArgs } from "./args/UpdateManyWebsitesArgs";
+import { UpdateOneWebsitesArgs } from "./args/UpdateOneWebsitesArgs";
+import { UpsertOneWebsitesArgs } from "./args/UpsertOneWebsitesArgs";
+import { Websites } from "../../../models/Websites";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateWebsites } from "../../outputs/AggregateWebsites";
+import { WebsitesGroupBy } from "../../outputs/WebsitesGroupBy";
+export declare class WebsitesCrudResolver {
+    aggregateWebsites(ctx: any, info: GraphQLResolveInfo, args: AggregateWebsitesArgs): Promise<AggregateWebsites>;
+    createManyWebsites(ctx: any, info: GraphQLResolveInfo, args: CreateManyWebsitesArgs): Promise<AffectedRowsOutput>;
+    createOneWebsites(ctx: any, info: GraphQLResolveInfo, args: CreateOneWebsitesArgs): Promise<Websites>;
+    deleteManyWebsites(ctx: any, info: GraphQLResolveInfo, args: DeleteManyWebsitesArgs): Promise<AffectedRowsOutput>;
+    deleteOneWebsites(ctx: any, info: GraphQLResolveInfo, args: DeleteOneWebsitesArgs): Promise<Websites | null>;
+    findFirstWebsites(ctx: any, info: GraphQLResolveInfo, args: FindFirstWebsitesArgs): Promise<Websites | null>;
+    findFirstWebsitesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstWebsitesOrThrowArgs): Promise<Websites | null>;
+    findManyWebsites(ctx: any, info: GraphQLResolveInfo, args: FindManyWebsitesArgs): Promise<Websites[]>;
+    findUniqueWebsites(ctx: any, info: GraphQLResolveInfo, args: FindUniqueWebsitesArgs): Promise<Websites | null>;
+    findUniqueWebsitesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueWebsitesOrThrowArgs): Promise<Websites | null>;
+    groupByWebsites(ctx: any, info: GraphQLResolveInfo, args: GroupByWebsitesArgs): Promise<WebsitesGroupBy[]>;
+    updateManyWebsites(ctx: any, info: GraphQLResolveInfo, args: UpdateManyWebsitesArgs): Promise<AffectedRowsOutput>;
+    updateOneWebsites(ctx: any, info: GraphQLResolveInfo, args: UpdateOneWebsitesArgs): Promise<Websites | null>;
+    upsertOneWebsites(ctx: any, info: GraphQLResolveInfo, args: UpsertOneWebsitesArgs): Promise<Websites>;
+}

@@ -1,0 +1,10 @@
+query {
+  glossary 
+ {
+    content
+    id
+    image
+    name
+    published
+  }
+}

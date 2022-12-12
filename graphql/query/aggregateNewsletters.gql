@@ -1,0 +1,50 @@
+query {
+  aggregateNewsletters 
+ {
+    _avg {
+      cust_id
+      id
+    }
+    _count {
+      _all
+      created_at
+      cust_id
+      customer_first_name
+      customer_last_name
+      customers
+      email
+      id
+      status
+      store
+      websites
+    }
+    _max {
+      created_at
+      cust_id
+      customer_first_name
+      customer_last_name
+      customers
+      email
+      id
+      status
+      store
+      websites
+    }
+    _min {
+      created_at
+      cust_id
+      customer_first_name
+      customer_last_name
+      customers
+      email
+      id
+      status
+      store
+      websites
+    }
+    _sum {
+      cust_id
+      id
+    }
+  }
+}

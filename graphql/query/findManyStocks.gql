@@ -1,0 +1,11 @@
+query {
+  findManyStocks 
+ {
+    description
+    enabled
+    id
+    name
+    sources
+    website
+  }
+}

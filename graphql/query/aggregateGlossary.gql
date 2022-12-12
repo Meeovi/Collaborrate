@@ -1,0 +1,33 @@
+query {
+  aggregateGlossary 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      content
+      id
+      image
+      name
+      published
+    }
+    _max {
+      content
+      id
+      image
+      name
+      published
+    }
+    _min {
+      content
+      id
+      image
+      name
+      published
+    }
+    _sum {
+      id
+    }
+  }
+}

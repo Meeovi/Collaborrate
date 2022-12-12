@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateProjectsArgs } from "./args/AggregateProjectsArgs";
+import { CreateManyProjectsArgs } from "./args/CreateManyProjectsArgs";
+import { CreateOneProjectsArgs } from "./args/CreateOneProjectsArgs";
+import { DeleteManyProjectsArgs } from "./args/DeleteManyProjectsArgs";
+import { DeleteOneProjectsArgs } from "./args/DeleteOneProjectsArgs";
+import { FindFirstProjectsArgs } from "./args/FindFirstProjectsArgs";
+import { FindFirstProjectsOrThrowArgs } from "./args/FindFirstProjectsOrThrowArgs";
+import { FindManyProjectsArgs } from "./args/FindManyProjectsArgs";
+import { FindUniqueProjectsArgs } from "./args/FindUniqueProjectsArgs";
+import { FindUniqueProjectsOrThrowArgs } from "./args/FindUniqueProjectsOrThrowArgs";
+import { GroupByProjectsArgs } from "./args/GroupByProjectsArgs";
+import { UpdateManyProjectsArgs } from "./args/UpdateManyProjectsArgs";
+import { UpdateOneProjectsArgs } from "./args/UpdateOneProjectsArgs";
+import { UpsertOneProjectsArgs } from "./args/UpsertOneProjectsArgs";
+import { Projects } from "../../../models/Projects";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateProjects } from "../../outputs/AggregateProjects";
+import { ProjectsGroupBy } from "../../outputs/ProjectsGroupBy";
+export declare class ProjectsCrudResolver {
+    aggregateProjects(ctx: any, info: GraphQLResolveInfo, args: AggregateProjectsArgs): Promise<AggregateProjects>;
+    createManyProjects(ctx: any, info: GraphQLResolveInfo, args: CreateManyProjectsArgs): Promise<AffectedRowsOutput>;
+    createOneProjects(ctx: any, info: GraphQLResolveInfo, args: CreateOneProjectsArgs): Promise<Projects>;
+    deleteManyProjects(ctx: any, info: GraphQLResolveInfo, args: DeleteManyProjectsArgs): Promise<AffectedRowsOutput>;
+    deleteOneProjects(ctx: any, info: GraphQLResolveInfo, args: DeleteOneProjectsArgs): Promise<Projects | null>;
+    findFirstProjects(ctx: any, info: GraphQLResolveInfo, args: FindFirstProjectsArgs): Promise<Projects | null>;
+    findFirstProjectsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstProjectsOrThrowArgs): Promise<Projects | null>;
+    findManyProjects(ctx: any, info: GraphQLResolveInfo, args: FindManyProjectsArgs): Promise<Projects[]>;
+    findUniqueProjects(ctx: any, info: GraphQLResolveInfo, args: FindUniqueProjectsArgs): Promise<Projects | null>;
+    findUniqueProjectsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueProjectsOrThrowArgs): Promise<Projects | null>;
+    groupByProjects(ctx: any, info: GraphQLResolveInfo, args: GroupByProjectsArgs): Promise<ProjectsGroupBy[]>;
+    updateManyProjects(ctx: any, info: GraphQLResolveInfo, args: UpdateManyProjectsArgs): Promise<AffectedRowsOutput>;
+    updateOneProjects(ctx: any, info: GraphQLResolveInfo, args: UpdateOneProjectsArgs): Promise<Projects | null>;
+    upsertOneProjects(ctx: any, info: GraphQLResolveInfo, args: UpsertOneProjectsArgs): Promise<Projects>;
+}

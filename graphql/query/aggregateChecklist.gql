@@ -1,0 +1,66 @@
+query {
+  aggregateChecklist 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      country
+      created_at
+      description
+      id
+      location
+      manager
+      media
+      prod_id
+      project
+      region
+      regional_manager
+      task
+      ticket
+      trainings
+      type
+      username
+    }
+    _max {
+      country
+      created_at
+      description
+      id
+      location
+      manager
+      media
+      prod_id
+      project
+      region
+      regional_manager
+      task
+      ticket
+      trainings
+      type
+      username
+    }
+    _min {
+      country
+      created_at
+      description
+      id
+      location
+      manager
+      media
+      prod_id
+      project
+      region
+      regional_manager
+      task
+      ticket
+      trainings
+      type
+      username
+    }
+    _sum {
+      id
+    }
+  }
+}

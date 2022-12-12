@@ -1,0 +1,399 @@
+/******************* Main CSS ***************/
+#sidenav-1,
+#main-navbar {
+  background-color: #024 !important
+}
+
+.topnav li {
+  display: grid;
+}
+
+.breadcrumb {
+  color: #1266f1;
+  font-size: 15px;
+  top: -30px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.breadcrumb li {
+  display: flex;
+}
+
+.navTotal {
+  padding-left: 20px;
+  position: relative;
+  top: 3px;
+}
+
+.filterPage {
+  top: 3px;
+  position: relative;
+  padding-right: 20px;
+}
+
+#filterPagination #actions {
+  font-size: 20px;
+}
+
+#filterAction select,
+#filterPagination select {
+  width: 100px;
+  height: 30px;
+}
+
+nav a,
+.input-group-text {
+  color: white !important;
+}
+
+.sidenav-link:hover {
+  color: indianred !important;
+}
+
+.dropdown-item {
+  color: black !important;
+  min-width: 200px !important;
+}
+
+main {
+  margin-top: 45px !important;
+  position: relative !important;
+  padding: 15px;
+  margin-bottom: 50px;
+  min-height: 100vh;
+}
+
+@media (min-width: 1400px) {
+
+  #main-navbar {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.sidenav-menu {
+  top: 90px !important;
+}
+
+.text-light {
+  color: #9FA6B2 !important;
+}
+
+.form-wrapper {
+  padding: 2em;
+  border: 1px solid #a8a8a8;
+  border-radius: .5em;
+  box-sizing: border-box;
+  /* width: auto !important; */
+}
+
+.form-wrapper input {
+  min-width: 50px !important;
+}
+
+.form-wrapper button {
+  background-color: rgb(52, 109, 216);
+  border: none;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+}
+
+@media (min-width: 650px) {
+  .task {
+    display: flex;
+  }
+}
+
+@media (min-width: 720px) {
+  .task {
+    display: block;
+  }
+}
+
+@media (min-width: 850px) {
+  .task {
+    display: flex;
+  }
+
+  .task .formulate-input {
+    margin-right: 1.5em;
+  }
+}
+
+.task .formulate-input {
+  margin-right: 2em;
+  margin-bottom: 0;
+}
+
+tr div {
+  max-height: 100% !important;
+}
+
+/* Header CSS */
+
+nav .fa-bell,
+nav .fa-user-circle {
+  font-size: 20px;
+}
+
+.navbar-brand {
+  padding-left: 20px;
+}
+
+.btn-group,
+.btn-group-vertical {
+  box-shadow: none !important;
+}
+
+.bg-image p {
+  width: fit-content;
+}
+
+/******************* Home Dashboard CSS *********/
+
+.dashboard {
+  position: relative;
+  margin: 10px;
+  min-height: 95vh;
+  top: 30px;
+  margin-bottom: 15%;
+}
+
+.welcomebanner {
+  width:100%;
+  height:300px;
+  background-image:url(../assets/images/matrix.jpg);
+  background-size: cover;
+  margin-bottom: 15px;
+}
+
+.welcomebanner p {
+  z-index:99; 
+  width:100%;
+  text-align:center;
+  font-size:50px;
+  color:white;
+  position:relative;
+  top:30%;
+}
+
+/**********************  Product Pages *****/
+
+.productAddOptions li {
+  display: inline-block;
+  padding-right: 10px;
+  position: relative;
+}
+
+/************************* Login Page ***********/
+
+.loginCollective {
+  width: 100%;
+  margin: 0px;
+}
+
+.loginPage {
+  background-color: rgb(52, 109, 216);
+  color: white;
+}
+
+.loginPage,
+.loginImage {
+  width: 50%;
+  height: 100vh;
+}
+
+.loginImage {
+  background-size: cover;
+  padding: 0px;
+}
+
+.loginImage img {
+  width: 100%;
+  height: 100%;
+}
+
+#loginForm {
+  position: relative;
+  top: 20%;
+  left: 25%;
+  padding: 20px;
+}
+
+#loginForm label {
+  width: 100%;
+  text-align: justify;
+}
+
+#loginForm input {
+  display: grid;
+  margin-bottom: 10px;
+  width: 50%;
+  padding: 10px;
+}
+
+#btn-back-to-top {
+  left: 32px !important;
+  float: left !important;
+  right: 0px !important;
+}
+
+.darkmode-toggle {
+  z-index: 99999 !important;
+}
+
+body.darkmode--activated {
+  color: white !important;
+}
+
+.form-category,
+.form-country,
+.form-attribute {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: .3em;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  background-color: transparent;
+  font-size: .9em;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  padding: .75em;
+  display: block;
+  width: 29%;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin: 0;
+}
+
+form input,
+form textarea,
+form select,
+form option {
+  min-width: 300px;
+  border: 1px solid #000000;
+}
+
+input,
+select,
+option {
+  padding: 5px;
+}
+
+.product-footer {
+  width: 100%;
+  position: fixed;
+  height: auto;
+  bottom: 0px;
+  z-index: 9999;
+}
+
+.product-footer li {
+  display: inline-block;
+  padding: 5px;
+  text-align: center;
+}
+
+#exampleModal {
+  overflow: scroll !important;
+}
+
+.modal-dialog {
+  max-width: 100% !important;
+  width: 100% !important;
+  background-color: white !important;
+  height: 600px !important;
+  position: relative;
+  top: -40px !important;
+}
+
+/****************** Editor ********************/
+
+.wysiwyg {
+  min-height: 200px;
+}
+
+/****************** Footer ********************/
+
+footer {
+  bottom: 0;
+  margin: 0;
+  position: relative !important;
+}
+
+/***************** Search ********************/
+
+.lunr-results {
+  position: relative;
+  top: 27px;
+}
+
+#navbarCenteredExample span {
+  border: none;
+  left: -35px;
+  position: relative;
+}
+
+#navbarCenteredExample .fa-search {
+  color: black;
+}
+
+.ais-SearchBox-input {
+  width: 525px;
+  border-radius: 25px !important;
+}
+
+.ais-SearchBox-form {
+  background-color: transparent !important;
+}
+
+/************** Dashboards *******************/
+
+.dashboardModal {
+  margin-top: -5% !important;
+  position: relative;
+}
+
+/************* AlternateCMS Color Themes *************/
+
+:root {
+  --body-bg: white;
+  --text-color: #252525;
+}
+
+.dark_mode {
+  --body-bg: #252525;
+  --text-color: #f5f5f5;
+}
+
+.blue_mode {
+  --body-bg: #1560eb;
+  --text-color: #f5f5f5;
+}
+
+.red_mode {
+  --body-bg: #e04848;
+  --text-color: #f5f5f5;
+}
+
+.green_mode {
+  --body-bg: #095a1b;
+  --text-color: #f5f5f5;
+}
+
+.yellow_mode {
+  --body-bg: #faf732;
+  --text-color: #0a0a0a;
+}
+
+.pink_mode {
+  --body-bg: #f51c76;
+  --text-color: #f8f4f4;
+}
+
+body {
+  background: var(--body-bg);
+  color: var(--text-color);
+}

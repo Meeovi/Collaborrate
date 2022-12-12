@@ -1,0 +1,14 @@
+export { AggregateNewslettersArgs } from "./AggregateNewslettersArgs";
+export { CreateManyNewslettersArgs } from "./CreateManyNewslettersArgs";
+export { CreateOneNewslettersArgs } from "./CreateOneNewslettersArgs";
+export { DeleteManyNewslettersArgs } from "./DeleteManyNewslettersArgs";
+export { DeleteOneNewslettersArgs } from "./DeleteOneNewslettersArgs";
+export { FindFirstNewslettersArgs } from "./FindFirstNewslettersArgs";
+export { FindFirstNewslettersOrThrowArgs } from "./FindFirstNewslettersOrThrowArgs";
+export { FindManyNewslettersArgs } from "./FindManyNewslettersArgs";
+export { FindUniqueNewslettersArgs } from "./FindUniqueNewslettersArgs";
+export { FindUniqueNewslettersOrThrowArgs } from "./FindUniqueNewslettersOrThrowArgs";
+export { GroupByNewslettersArgs } from "./GroupByNewslettersArgs";
+export { UpdateManyNewslettersArgs } from "./UpdateManyNewslettersArgs";
+export { UpdateOneNewslettersArgs } from "./UpdateOneNewslettersArgs";
+export { UpsertOneNewslettersArgs } from "./UpsertOneNewslettersArgs";

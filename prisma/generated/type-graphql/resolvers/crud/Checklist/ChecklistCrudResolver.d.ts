@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateChecklistArgs } from "./args/AggregateChecklistArgs";
+import { CreateManyChecklistArgs } from "./args/CreateManyChecklistArgs";
+import { CreateOneChecklistArgs } from "./args/CreateOneChecklistArgs";
+import { DeleteManyChecklistArgs } from "./args/DeleteManyChecklistArgs";
+import { DeleteOneChecklistArgs } from "./args/DeleteOneChecklistArgs";
+import { FindFirstChecklistArgs } from "./args/FindFirstChecklistArgs";
+import { FindFirstChecklistOrThrowArgs } from "./args/FindFirstChecklistOrThrowArgs";
+import { FindManyChecklistArgs } from "./args/FindManyChecklistArgs";
+import { FindUniqueChecklistArgs } from "./args/FindUniqueChecklistArgs";
+import { FindUniqueChecklistOrThrowArgs } from "./args/FindUniqueChecklistOrThrowArgs";
+import { GroupByChecklistArgs } from "./args/GroupByChecklistArgs";
+import { UpdateManyChecklistArgs } from "./args/UpdateManyChecklistArgs";
+import { UpdateOneChecklistArgs } from "./args/UpdateOneChecklistArgs";
+import { UpsertOneChecklistArgs } from "./args/UpsertOneChecklistArgs";
+import { Checklist } from "../../../models/Checklist";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateChecklist } from "../../outputs/AggregateChecklist";
+import { ChecklistGroupBy } from "../../outputs/ChecklistGroupBy";
+export declare class ChecklistCrudResolver {
+    aggregateChecklist(ctx: any, info: GraphQLResolveInfo, args: AggregateChecklistArgs): Promise<AggregateChecklist>;
+    createManyChecklist(ctx: any, info: GraphQLResolveInfo, args: CreateManyChecklistArgs): Promise<AffectedRowsOutput>;
+    createOneChecklist(ctx: any, info: GraphQLResolveInfo, args: CreateOneChecklistArgs): Promise<Checklist>;
+    deleteManyChecklist(ctx: any, info: GraphQLResolveInfo, args: DeleteManyChecklistArgs): Promise<AffectedRowsOutput>;
+    deleteOneChecklist(ctx: any, info: GraphQLResolveInfo, args: DeleteOneChecklistArgs): Promise<Checklist | null>;
+    findFirstChecklist(ctx: any, info: GraphQLResolveInfo, args: FindFirstChecklistArgs): Promise<Checklist | null>;
+    findFirstChecklistOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstChecklistOrThrowArgs): Promise<Checklist | null>;
+    checklists(ctx: any, info: GraphQLResolveInfo, args: FindManyChecklistArgs): Promise<Checklist[]>;
+    checklist(ctx: any, info: GraphQLResolveInfo, args: FindUniqueChecklistArgs): Promise<Checklist | null>;
+    getChecklist(ctx: any, info: GraphQLResolveInfo, args: FindUniqueChecklistOrThrowArgs): Promise<Checklist | null>;
+    groupByChecklist(ctx: any, info: GraphQLResolveInfo, args: GroupByChecklistArgs): Promise<ChecklistGroupBy[]>;
+    updateManyChecklist(ctx: any, info: GraphQLResolveInfo, args: UpdateManyChecklistArgs): Promise<AffectedRowsOutput>;
+    updateOneChecklist(ctx: any, info: GraphQLResolveInfo, args: UpdateOneChecklistArgs): Promise<Checklist | null>;
+    upsertOneChecklist(ctx: any, info: GraphQLResolveInfo, args: UpsertOneChecklistArgs): Promise<Checklist>;
+}

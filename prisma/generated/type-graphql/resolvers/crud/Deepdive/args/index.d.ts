@@ -1,0 +1,14 @@
+export { AggregateDeepdiveArgs } from "./AggregateDeepdiveArgs";
+export { CreateManyDeepdiveArgs } from "./CreateManyDeepdiveArgs";
+export { CreateOneDeepdiveArgs } from "./CreateOneDeepdiveArgs";
+export { DeleteManyDeepdiveArgs } from "./DeleteManyDeepdiveArgs";
+export { DeleteOneDeepdiveArgs } from "./DeleteOneDeepdiveArgs";
+export { FindFirstDeepdiveArgs } from "./FindFirstDeepdiveArgs";
+export { FindFirstDeepdiveOrThrowArgs } from "./FindFirstDeepdiveOrThrowArgs";
+export { FindManyDeepdiveArgs } from "./FindManyDeepdiveArgs";
+export { FindUniqueDeepdiveArgs } from "./FindUniqueDeepdiveArgs";
+export { FindUniqueDeepdiveOrThrowArgs } from "./FindUniqueDeepdiveOrThrowArgs";
+export { GroupByDeepdiveArgs } from "./GroupByDeepdiveArgs";
+export { UpdateManyDeepdiveArgs } from "./UpdateManyDeepdiveArgs";
+export { UpdateOneDeepdiveArgs } from "./UpdateOneDeepdiveArgs";
+export { UpsertOneDeepdiveArgs } from "./UpsertOneDeepdiveArgs";

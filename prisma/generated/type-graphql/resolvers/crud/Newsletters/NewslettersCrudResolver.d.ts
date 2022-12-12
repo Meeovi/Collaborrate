@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateNewslettersArgs } from "./args/AggregateNewslettersArgs";
+import { CreateManyNewslettersArgs } from "./args/CreateManyNewslettersArgs";
+import { CreateOneNewslettersArgs } from "./args/CreateOneNewslettersArgs";
+import { DeleteManyNewslettersArgs } from "./args/DeleteManyNewslettersArgs";
+import { DeleteOneNewslettersArgs } from "./args/DeleteOneNewslettersArgs";
+import { FindFirstNewslettersArgs } from "./args/FindFirstNewslettersArgs";
+import { FindFirstNewslettersOrThrowArgs } from "./args/FindFirstNewslettersOrThrowArgs";
+import { FindManyNewslettersArgs } from "./args/FindManyNewslettersArgs";
+import { FindUniqueNewslettersArgs } from "./args/FindUniqueNewslettersArgs";
+import { FindUniqueNewslettersOrThrowArgs } from "./args/FindUniqueNewslettersOrThrowArgs";
+import { GroupByNewslettersArgs } from "./args/GroupByNewslettersArgs";
+import { UpdateManyNewslettersArgs } from "./args/UpdateManyNewslettersArgs";
+import { UpdateOneNewslettersArgs } from "./args/UpdateOneNewslettersArgs";
+import { UpsertOneNewslettersArgs } from "./args/UpsertOneNewslettersArgs";
+import { Newsletters } from "../../../models/Newsletters";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateNewsletters } from "../../outputs/AggregateNewsletters";
+import { NewslettersGroupBy } from "../../outputs/NewslettersGroupBy";
+export declare class NewslettersCrudResolver {
+    aggregateNewsletters(ctx: any, info: GraphQLResolveInfo, args: AggregateNewslettersArgs): Promise<AggregateNewsletters>;
+    createManyNewsletters(ctx: any, info: GraphQLResolveInfo, args: CreateManyNewslettersArgs): Promise<AffectedRowsOutput>;
+    createOneNewsletters(ctx: any, info: GraphQLResolveInfo, args: CreateOneNewslettersArgs): Promise<Newsletters>;
+    deleteManyNewsletters(ctx: any, info: GraphQLResolveInfo, args: DeleteManyNewslettersArgs): Promise<AffectedRowsOutput>;
+    deleteOneNewsletters(ctx: any, info: GraphQLResolveInfo, args: DeleteOneNewslettersArgs): Promise<Newsletters | null>;
+    findFirstNewsletters(ctx: any, info: GraphQLResolveInfo, args: FindFirstNewslettersArgs): Promise<Newsletters | null>;
+    findFirstNewslettersOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstNewslettersOrThrowArgs): Promise<Newsletters | null>;
+    findManyNewsletters(ctx: any, info: GraphQLResolveInfo, args: FindManyNewslettersArgs): Promise<Newsletters[]>;
+    findUniqueNewsletters(ctx: any, info: GraphQLResolveInfo, args: FindUniqueNewslettersArgs): Promise<Newsletters | null>;
+    findUniqueNewslettersOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueNewslettersOrThrowArgs): Promise<Newsletters | null>;
+    groupByNewsletters(ctx: any, info: GraphQLResolveInfo, args: GroupByNewslettersArgs): Promise<NewslettersGroupBy[]>;
+    updateManyNewsletters(ctx: any, info: GraphQLResolveInfo, args: UpdateManyNewslettersArgs): Promise<AffectedRowsOutput>;
+    updateOneNewsletters(ctx: any, info: GraphQLResolveInfo, args: UpdateOneNewslettersArgs): Promise<Newsletters | null>;
+    upsertOneNewsletters(ctx: any, info: GraphQLResolveInfo, args: UpsertOneNewslettersArgs): Promise<Newsletters>;
+}

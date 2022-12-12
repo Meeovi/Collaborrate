@@ -1,0 +1,30 @@
+query {
+  aggregateRoles 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      content
+      created_at
+      id
+      role_name
+    }
+    _max {
+      content
+      created_at
+      id
+      role_name
+    }
+    _min {
+      content
+      created_at
+      id
+      role_name
+    }
+    _sum {
+      id
+    }
+  }
+}

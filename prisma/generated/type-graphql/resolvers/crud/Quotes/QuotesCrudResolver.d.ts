@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateQuotesArgs } from "./args/AggregateQuotesArgs";
+import { CreateManyQuotesArgs } from "./args/CreateManyQuotesArgs";
+import { CreateOneQuotesArgs } from "./args/CreateOneQuotesArgs";
+import { DeleteManyQuotesArgs } from "./args/DeleteManyQuotesArgs";
+import { DeleteOneQuotesArgs } from "./args/DeleteOneQuotesArgs";
+import { FindFirstQuotesArgs } from "./args/FindFirstQuotesArgs";
+import { FindFirstQuotesOrThrowArgs } from "./args/FindFirstQuotesOrThrowArgs";
+import { FindManyQuotesArgs } from "./args/FindManyQuotesArgs";
+import { FindUniqueQuotesArgs } from "./args/FindUniqueQuotesArgs";
+import { FindUniqueQuotesOrThrowArgs } from "./args/FindUniqueQuotesOrThrowArgs";
+import { GroupByQuotesArgs } from "./args/GroupByQuotesArgs";
+import { UpdateManyQuotesArgs } from "./args/UpdateManyQuotesArgs";
+import { UpdateOneQuotesArgs } from "./args/UpdateOneQuotesArgs";
+import { UpsertOneQuotesArgs } from "./args/UpsertOneQuotesArgs";
+import { Quotes } from "../../../models/Quotes";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateQuotes } from "../../outputs/AggregateQuotes";
+import { QuotesGroupBy } from "../../outputs/QuotesGroupBy";
+export declare class QuotesCrudResolver {
+    aggregateQuotes(ctx: any, info: GraphQLResolveInfo, args: AggregateQuotesArgs): Promise<AggregateQuotes>;
+    createManyQuotes(ctx: any, info: GraphQLResolveInfo, args: CreateManyQuotesArgs): Promise<AffectedRowsOutput>;
+    createOneQuotes(ctx: any, info: GraphQLResolveInfo, args: CreateOneQuotesArgs): Promise<Quotes>;
+    deleteManyQuotes(ctx: any, info: GraphQLResolveInfo, args: DeleteManyQuotesArgs): Promise<AffectedRowsOutput>;
+    deleteOneQuotes(ctx: any, info: GraphQLResolveInfo, args: DeleteOneQuotesArgs): Promise<Quotes | null>;
+    findFirstQuotes(ctx: any, info: GraphQLResolveInfo, args: FindFirstQuotesArgs): Promise<Quotes | null>;
+    findFirstQuotesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstQuotesOrThrowArgs): Promise<Quotes | null>;
+    findManyQuotes(ctx: any, info: GraphQLResolveInfo, args: FindManyQuotesArgs): Promise<Quotes[]>;
+    findUniqueQuotes(ctx: any, info: GraphQLResolveInfo, args: FindUniqueQuotesArgs): Promise<Quotes | null>;
+    findUniqueQuotesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueQuotesOrThrowArgs): Promise<Quotes | null>;
+    groupByQuotes(ctx: any, info: GraphQLResolveInfo, args: GroupByQuotesArgs): Promise<QuotesGroupBy[]>;
+    updateManyQuotes(ctx: any, info: GraphQLResolveInfo, args: UpdateManyQuotesArgs): Promise<AffectedRowsOutput>;
+    updateOneQuotes(ctx: any, info: GraphQLResolveInfo, args: UpdateOneQuotesArgs): Promise<Quotes | null>;
+    upsertOneQuotes(ctx: any, info: GraphQLResolveInfo, args: UpsertOneQuotesArgs): Promise<Quotes>;
+}

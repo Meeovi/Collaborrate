@@ -1,0 +1,12 @@
+query {
+  findUniqueCitiesOrThrow 
+ {
+    country
+    description
+    id
+    image
+    name
+    postalCode
+    state
+  }
+}

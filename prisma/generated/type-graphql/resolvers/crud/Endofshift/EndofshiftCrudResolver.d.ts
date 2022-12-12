@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateEndofshiftArgs } from "./args/AggregateEndofshiftArgs";
+import { CreateManyEndofshiftArgs } from "./args/CreateManyEndofshiftArgs";
+import { CreateOneEndofshiftArgs } from "./args/CreateOneEndofshiftArgs";
+import { DeleteManyEndofshiftArgs } from "./args/DeleteManyEndofshiftArgs";
+import { DeleteOneEndofshiftArgs } from "./args/DeleteOneEndofshiftArgs";
+import { FindFirstEndofshiftArgs } from "./args/FindFirstEndofshiftArgs";
+import { FindFirstEndofshiftOrThrowArgs } from "./args/FindFirstEndofshiftOrThrowArgs";
+import { FindManyEndofshiftArgs } from "./args/FindManyEndofshiftArgs";
+import { FindUniqueEndofshiftArgs } from "./args/FindUniqueEndofshiftArgs";
+import { FindUniqueEndofshiftOrThrowArgs } from "./args/FindUniqueEndofshiftOrThrowArgs";
+import { GroupByEndofshiftArgs } from "./args/GroupByEndofshiftArgs";
+import { UpdateManyEndofshiftArgs } from "./args/UpdateManyEndofshiftArgs";
+import { UpdateOneEndofshiftArgs } from "./args/UpdateOneEndofshiftArgs";
+import { UpsertOneEndofshiftArgs } from "./args/UpsertOneEndofshiftArgs";
+import { Endofshift } from "../../../models/Endofshift";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateEndofshift } from "../../outputs/AggregateEndofshift";
+import { EndofshiftGroupBy } from "../../outputs/EndofshiftGroupBy";
+export declare class EndofshiftCrudResolver {
+    aggregateEndofshift(ctx: any, info: GraphQLResolveInfo, args: AggregateEndofshiftArgs): Promise<AggregateEndofshift>;
+    createManyEndofshift(ctx: any, info: GraphQLResolveInfo, args: CreateManyEndofshiftArgs): Promise<AffectedRowsOutput>;
+    createOneEndofshift(ctx: any, info: GraphQLResolveInfo, args: CreateOneEndofshiftArgs): Promise<Endofshift>;
+    deleteManyEndofshift(ctx: any, info: GraphQLResolveInfo, args: DeleteManyEndofshiftArgs): Promise<AffectedRowsOutput>;
+    deleteOneEndofshift(ctx: any, info: GraphQLResolveInfo, args: DeleteOneEndofshiftArgs): Promise<Endofshift | null>;
+    findFirstEndofshift(ctx: any, info: GraphQLResolveInfo, args: FindFirstEndofshiftArgs): Promise<Endofshift | null>;
+    findFirstEndofshiftOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstEndofshiftOrThrowArgs): Promise<Endofshift | null>;
+    endofshifts(ctx: any, info: GraphQLResolveInfo, args: FindManyEndofshiftArgs): Promise<Endofshift[]>;
+    endofshift(ctx: any, info: GraphQLResolveInfo, args: FindUniqueEndofshiftArgs): Promise<Endofshift | null>;
+    getEndofshift(ctx: any, info: GraphQLResolveInfo, args: FindUniqueEndofshiftOrThrowArgs): Promise<Endofshift | null>;
+    groupByEndofshift(ctx: any, info: GraphQLResolveInfo, args: GroupByEndofshiftArgs): Promise<EndofshiftGroupBy[]>;
+    updateManyEndofshift(ctx: any, info: GraphQLResolveInfo, args: UpdateManyEndofshiftArgs): Promise<AffectedRowsOutput>;
+    updateOneEndofshift(ctx: any, info: GraphQLResolveInfo, args: UpdateOneEndofshiftArgs): Promise<Endofshift | null>;
+    upsertOneEndofshift(ctx: any, info: GraphQLResolveInfo, args: UpsertOneEndofshiftArgs): Promise<Endofshift>;
+}

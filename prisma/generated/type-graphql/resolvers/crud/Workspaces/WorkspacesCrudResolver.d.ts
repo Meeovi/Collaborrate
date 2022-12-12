@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateWorkspacesArgs } from "./args/AggregateWorkspacesArgs";
+import { CreateManyWorkspacesArgs } from "./args/CreateManyWorkspacesArgs";
+import { CreateOneWorkspacesArgs } from "./args/CreateOneWorkspacesArgs";
+import { DeleteManyWorkspacesArgs } from "./args/DeleteManyWorkspacesArgs";
+import { DeleteOneWorkspacesArgs } from "./args/DeleteOneWorkspacesArgs";
+import { FindFirstWorkspacesArgs } from "./args/FindFirstWorkspacesArgs";
+import { FindFirstWorkspacesOrThrowArgs } from "./args/FindFirstWorkspacesOrThrowArgs";
+import { FindManyWorkspacesArgs } from "./args/FindManyWorkspacesArgs";
+import { FindUniqueWorkspacesArgs } from "./args/FindUniqueWorkspacesArgs";
+import { FindUniqueWorkspacesOrThrowArgs } from "./args/FindUniqueWorkspacesOrThrowArgs";
+import { GroupByWorkspacesArgs } from "./args/GroupByWorkspacesArgs";
+import { UpdateManyWorkspacesArgs } from "./args/UpdateManyWorkspacesArgs";
+import { UpdateOneWorkspacesArgs } from "./args/UpdateOneWorkspacesArgs";
+import { UpsertOneWorkspacesArgs } from "./args/UpsertOneWorkspacesArgs";
+import { Workspaces } from "../../../models/Workspaces";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateWorkspaces } from "../../outputs/AggregateWorkspaces";
+import { WorkspacesGroupBy } from "../../outputs/WorkspacesGroupBy";
+export declare class WorkspacesCrudResolver {
+    aggregateWorkspaces(ctx: any, info: GraphQLResolveInfo, args: AggregateWorkspacesArgs): Promise<AggregateWorkspaces>;
+    createManyWorkspaces(ctx: any, info: GraphQLResolveInfo, args: CreateManyWorkspacesArgs): Promise<AffectedRowsOutput>;
+    createOneWorkspaces(ctx: any, info: GraphQLResolveInfo, args: CreateOneWorkspacesArgs): Promise<Workspaces>;
+    deleteManyWorkspaces(ctx: any, info: GraphQLResolveInfo, args: DeleteManyWorkspacesArgs): Promise<AffectedRowsOutput>;
+    deleteOneWorkspaces(ctx: any, info: GraphQLResolveInfo, args: DeleteOneWorkspacesArgs): Promise<Workspaces | null>;
+    findFirstWorkspaces(ctx: any, info: GraphQLResolveInfo, args: FindFirstWorkspacesArgs): Promise<Workspaces | null>;
+    findFirstWorkspacesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstWorkspacesOrThrowArgs): Promise<Workspaces | null>;
+    findManyWorkspaces(ctx: any, info: GraphQLResolveInfo, args: FindManyWorkspacesArgs): Promise<Workspaces[]>;
+    findUniqueWorkspaces(ctx: any, info: GraphQLResolveInfo, args: FindUniqueWorkspacesArgs): Promise<Workspaces | null>;
+    findUniqueWorkspacesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueWorkspacesOrThrowArgs): Promise<Workspaces | null>;
+    groupByWorkspaces(ctx: any, info: GraphQLResolveInfo, args: GroupByWorkspacesArgs): Promise<WorkspacesGroupBy[]>;
+    updateManyWorkspaces(ctx: any, info: GraphQLResolveInfo, args: UpdateManyWorkspacesArgs): Promise<AffectedRowsOutput>;
+    updateOneWorkspaces(ctx: any, info: GraphQLResolveInfo, args: UpdateOneWorkspacesArgs): Promise<Workspaces | null>;
+    upsertOneWorkspaces(ctx: any, info: GraphQLResolveInfo, args: UpsertOneWorkspacesArgs): Promise<Workspaces>;
+}
