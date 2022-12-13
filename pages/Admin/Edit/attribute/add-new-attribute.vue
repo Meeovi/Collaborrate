@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Attribute" /></a>
         </div>
@@ -119,7 +119,7 @@
 
   const ADD_ATTRIBUTES = gql`
     mutation ($default_label:String!,$allow_html_tags_storefront:String!, $attribute_class:String!, $attribute_code:String!, $attribute_value:String!, $column_options:String!, $faceted_navigation:String!, $filter_options:String!, $id:Int!, $isPublic:String!, $layered_navigation:String!, $meta_description:String!, $meta_name:String!, $meta_url:String!, $position:String!, $prod_id:String!,){
-    createOneAttribute(data: {default_label: $default_label, allow_html_tags_storefront: $allow_html_tags_storefront, attribute_class: $attribute_class, attribute_code: $attribute_code, attribute_value: $attribute_value, column_options: $column_options, faceted_navigation: $faceted_navigation, filter_options: $filter_options, id: $id, isPublic: $isPublic, layered_navigation: $layered_navigation, meta_description: $meta_description, meta_name: $meta_name, meta_url: $meta_url, position: $position, prod_id: $prod_id,}) {
+    createOneAttribute(data: {default_label: $default_label, allow_html_tags_storefront: $allow_html_tags_storefront, attribute_class: $attribute_class, attribute_code: $attribute_code, attribute_value: $attribute_value, column_options: $column_options, faceted_navigation: $faceted_navigation, filter_options: $filter_options, id: $id, isPublic: $isPublic, layered_navigation: $layered_navigation, meta_description: $meta_description, meta_name: $meta_name, meta_url: $meta_url, position: $position, prod_id: $prod_id,} where: {id: $id}) {
         default_label
         allow_html_tags_storefront
         attribute_class
@@ -221,7 +221,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../../shop/attributes'
+            path: '../../inventory/attributes'
           })
         }).catch(err => console.log(err));
         this.default_label = ' ';

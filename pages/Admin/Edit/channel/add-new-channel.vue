@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Channel" /></a>
         </div>
@@ -90,7 +90,7 @@
 
   const ADD_CHANNELS = gql `
     mutation ($client_id:String!,$client_secret:String,$default_shipping:String,$default_zone:String,$code:String!,$include_tax:String!,$name:String!,$currency:String!,$default_lang:String!){
-    createOneChannels(data: {client_id: $client_id, client_secret: $client_secret, default_shipping: $default_shipping, default_zone: $default_zone, default_lang: $default_lang, code: $code, include_tax: $include_tax, name: $name, currency: $currency}) {
+    createOneChannels(data: {client_id: $client_id, client_secret: $client_secret, default_shipping: $default_shipping, default_zone: $default_zone, default_lang: $default_lang, code: $code, include_tax: $include_tax, name: $name, currency: $currency} where: {id: $id}) {
       default_shipping
         client_id
         client_secret
@@ -159,7 +159,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../../admin/system/general-settings'
+            path: '../../system/general-settings'
           })
         }).catch(err => console.log(err));
         this.client_id = ' ';

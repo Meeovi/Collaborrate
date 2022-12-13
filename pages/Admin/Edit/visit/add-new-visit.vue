@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Visit" /></a>
         </div>
@@ -117,7 +117,7 @@
 
   const ADD_VISITS = gql`
     mutation ($reason:String!,$location:String!,$end_date:String!,$content:String!,$username:String!,$emergency:String!,$meeting:String!,$start_date:String!,$task:String!){
-    createOneVisits(data: {reason: $reason, location: $location, end_date: $end_date, content: $content, username: $username, emergency: $emergency, meeting: $meeting, start_date: $start_date, task: $task}) {
+    createOneVisits(data: {reason: $reason, location: $location, end_date: $end_date, content: $content, username: $username, emergency: $emergency, meeting: $meeting, start_date: $start_date, task: $task} where: {id: $id}) {
         reason
         location
         content

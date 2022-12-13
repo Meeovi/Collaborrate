@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-customers">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-customers">
             <input type="submit" class="btn btn-warning" value="Save Project" /></a>
         </div>
@@ -347,7 +347,7 @@
 
   const ADD_PROJECTS = gql `
     mutation ($assignee: String!, $customers: String!, $categories: String!, $tasks: String!, $users: String!, $doing: String!, $workspaces: String!, $created_at: String!, $done: String!, $end_date: String!, $file: String!, $format: String!, $height: String!, $id: String!, $image: String!, $goal_collaborators: String!, $goal_measurement: String!, $ticketing: String!, $name: String!, $goal_name: String!, $goal_privacy: String!, $goal_progress_source: String!, $goal_timeperiod: String!, $goal_updatemethod: String!, $priority: String!, $product: String!, $project_manager: String!, $resource: String!, $section_rule: String!, $staff_id: String!, $start_date: String!, $task_id: String!, $status: String!, $ticket_id: String!, $tags: String!, $considerworkingdays: String!, $method: String!, $type: String!, $team: String!, $visibility: String!, $websites: String!, $company: String!, $zone: String!){
-    createOneProjects(data: {assignee: $assignee, customers: $customers, categories: $categories, tasks: $tasks, users: $users, doing: $doing, workspaces: $workspaces, created_at: $created_at, done: $done, end_date: $end_date, file: $file, format: $format, height: $height, id: $id, image: $image, goal_collaborators: $goal_collaborators, goal_measurement: $goal_measurement, ticketing: $ticketing, name: $name, goal_name: $goal_name, goal_privacy: $goal_privacy, goal_progress_source: $goal_progress_source, goal_timeperiod: $goal_timeperiod, goal_updatemethod: $goal_updatemethod, priority: $priority, product: $product, project_manager: $project_manager, resource: $resource, section_rule: $section_rule, staff_id: $staff_id, start_date: $start_date, task_id: $task_id, status: $status, ticket_id: $ticket_id, tags: $tags, considerworkingdays: $considerworkingdays, method: $method, type: $type, team: $team, visibility: $visibility, websites: $websites, company: $company, zone: $zone}) {
+    createOneProjects(data: {assignee: $assignee, customers: $customers, categories: $categories, tasks: $tasks, users: $users, doing: $doing, workspaces: $workspaces, created_at: $created_at, done: $done, end_date: $end_date, file: $file, format: $format, height: $height, id: $id, image: $image, goal_collaborators: $goal_collaborators, goal_measurement: $goal_measurement, ticketing: $ticketing, name: $name, goal_name: $goal_name, goal_privacy: $goal_privacy, goal_progress_source: $goal_progress_source, goal_timeperiod: $goal_timeperiod, goal_updatemethod: $goal_updatemethod, priority: $priority, product: $product, project_manager: $project_manager, resource: $resource, section_rule: $section_rule, staff_id: $staff_id, start_date: $start_date, task_id: $task_id, status: $status, ticket_id: $ticket_id, tags: $tags, considerworkingdays: $considerworkingdays, method: $method, type: $type, team: $team, visibility: $visibility, websites: $websites, company: $company, zone: $zone} where: {id: $id}) {
         assignee
         customers
         categories

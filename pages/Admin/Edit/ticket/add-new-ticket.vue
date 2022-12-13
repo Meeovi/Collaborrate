@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Ticket" /></a>
         </div>
@@ -150,7 +150,7 @@
 
   const ADD_TICKETING = gql`
     mutation ($name: String!,$department: String!,$comment: String!,$location: String!,$content: String!,$level: String!,$media: String!,$requester: String!,$requester_email: String!,$assigned_to: String!,$account_name: String!,$severity: String!,$team: String!,$resolution: String!,$status: String!,$ticket_type: String!,$priority: String!,$date: String!){
-    createOneTicketing(data: {name: $name,department: $department,comment: $comment,location: $location,content: $content,assigned_to: $assigned_to,account_name: $account_name,level: $level,media: $media,requester: $requester,requester_email: $requester_email,resolution: $resolution,team: $team,severity: $severity,status: $status,ticket_type: $ticket_type,date: $date,priority: $priority}) {
+    createOneTicketing(data: {name: $name,department: $department,comment: $comment,location: $location,content: $content,assigned_to: $assigned_to,account_name: $account_name,level: $level,media: $media,requester: $requester,requester_email: $requester_email,resolution: $resolution,team: $team,severity: $severity,status: $status,ticket_type: $ticket_type,date: $date,priority: $priority} where: {id: $id}) {
         account_name
         countries
         thumbnail

@@ -1,10 +1,10 @@
 <template>
     <div>
-        <form v-for="state in findManyStates" :key="state.id" @submit.prevent="addState()">
+        <form v-for="state in findManyStates" :key="state.id" @submit.prevent="updateState(state)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteState(state)">Delete</button></a>
           <a class="navbar-brand">
 
             <input type="submit" class="btn btn-warning" value="Save State" /></a>
@@ -64,9 +64,9 @@
   import findManyStates from "~/graphql/query/findManyStates";
   import findManyCountries from "~/graphql/query/findManyCountries";
 
-  const DELETE_STATE = gql`
+  const UPDATE_STATE = gql`
     mutation ($name:String!,$description:String!,$image:String!,$country:String!){
-    createOneStates(data: {name: $name, description: $description, image: $image, country: $country}) {
+    updateOneStates(data: {name: $name, description: $description, image: $image, country: $country} where: {id: $id}) {
         name
         description
         image
@@ -74,10 +74,13 @@
   }
 }`;
 
-const UPDATE_STATE = gql`
-  mutation updateOnestates($id: Int!){
-  updateOneStates(where: {id: $id}){
-    affected_rows
+const DELETE_STATE = gql`
+  mutation deleteOneStates($id: Int!){
+  deleteOneStates(where: {id: $id}){
+    name
+        description
+        image
+        country
   }
 }
 `;
@@ -109,7 +112,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/shop/states'})
+            this.$router.push({path: '../../inventory/states'})
             }).catch(err => console.log(err));
     },
     async updateState(state){

@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Zone" /></a>
         </div>
@@ -83,7 +83,7 @@
 
   const ADD_ZONES = gql`
     mutation ($code:String!,$name:String!$type:String!,$scope:String!,$country:String!){
-    createOneZones(data: {code: $code, name: $name, type: $type, scope: $scope, country: $country}) {
+    createOneZones(data: {code: $code, name: $name, type: $type, scope: $scope, country: $country} where: {id: $id}) {
         code
         name
         type
@@ -100,7 +100,7 @@
         name: " ",
         type: " ",
         scope: " ",
-        country: [],
+        country: " ",
       }
     },
     head: {
@@ -141,7 +141,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../../system/zones'
+            path: '../../system/general-settings'
           })
         }).catch(err => console.log(err));
         this.code = ' ';

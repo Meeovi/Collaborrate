@@ -1,9 +1,9 @@
 <template>
   <div>
-    <form v-for="review in findManyReviews" :key="review.id" @submit.prevent="addReview()">
+    <form v-for="review in findManyReviews" :key="review.id" @submit.prevent="updateReview(review)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Delete"  @click="deleteReview(review)" /></a>
           <a class="navbar-brand"><input type="submit" class="btn btn-warning" value="Save Review" /></a>
         </div>
       </nav>
@@ -61,7 +61,7 @@ import  findManyReviews from "~/graphql/query/findManyReviews"
 
 const UPDATE_REVIEW = gql`
     mutation ($first_name:String!,$last_name:String!$websites:String!,$content:String!){
-    updateOneReviews(data: {first_name: $first_name, last_name: $last_name, websites: $websites, content: $content}, where: {id: $id}) {
+    updateOneReviews(data: {first_name: $first_name, last_name: $last_name, websites: $websites, content: $content}, where: {id: $id} where: {id: $id}) {
         first_name
             last_name
             websites
@@ -70,9 +70,12 @@ const UPDATE_REVIEW = gql`
 }`;
 
 const DELETE_REVIEW = gql`
-  mutation deleteOneReviews($id: Int!){
+  mutation deleteOneReviews($id: Int){
   deleteOneReviews(where: {id: $id}){
-    id
+    first_name
+            last_name
+            websites
+            content
   }
 }
 `;
@@ -104,7 +107,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/customers/reviews'})
+            this.$router.push({path: '../../customers/reviews'})
             }).catch(err => console.log(err));
     },
     async updateReview(review){

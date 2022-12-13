@@ -1,13 +1,12 @@
 <template>
     <div>
-        <form v-for="collection in findManyCollections" :key="collection.id" @submit.prevent="editCollection()">
+        <form v-for="collection in findManyCollections" :key="collection.id" @submit.prevent="updateCollection(collection)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteCollection(collection)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Collection" /></a>
-
         </div>
       </nav>
       <br>
@@ -108,8 +107,8 @@ import  gql from 'graphql-tag'
 import  findManyCollections from '~/graphql/query/findManyCollections'
 
   const DELETE_COLLECTION = gql`
-    mutation ($name:String!,$description:String!,$image:String!,$meta_description:String!,$meta_keywords:String!,$meta_title:String!){
-    createOneCollections(data: {name: $name, description: $description, image: $image, meta_description: $meta_description, meta_title: $meta_title, meta_keywords: $meta_keywords}) {
+    mutation ($id: Int){
+    deleteOneCollections(where: {id: $id} where: {id: $id}) {
         name
         description
         image
@@ -120,7 +119,7 @@ import  findManyCollections from '~/graphql/query/findManyCollections'
 }`;
 
 const UPDATE_COLLECTION = gql`
-  mutation updateOnecollections($id: Int!){
+  mutation updateOnecollections($name:String!,$description:String!,$image:String!,$meta_description:String!,$meta_keywords:String!,$meta_title:String!){
   updateOneCollections(data: {name: $name, description: $description, image: $image, meta_description: $meta_description, meta_title: $meta_title, meta_keywords: $meta_keywords}, (where: {id: $id})){
     name
         description
@@ -155,11 +154,10 @@ export default {
         refetchQueries: [
           {
             query: findManyCollections
-          }       
-          
+          }
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/shop/collections'})
+            this.$router.push({path: '../../inventory/collections'})
             }).catch(err => console.log(err));
     },
     async updateCollection(collection){
@@ -172,7 +170,6 @@ export default {
           {
             query: findManyCollections
           }       
-          
         ]
       })
     },
@@ -194,7 +191,7 @@ export default {
 
 <style>
 input, select, option {
-    pediting: 5px;
+    padding: 5px;
     width: 50%;
 }
 

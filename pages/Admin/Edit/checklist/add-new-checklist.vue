@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Checklist" /></a>
         </div>
@@ -142,7 +142,7 @@
 
   const ADD_CHECKLISTS = gql `
     mutation ($username:String!, $ticket:String!, $regional_manager:String!, $region:String!, $project:String!, $type:String!, $media:String!, $manager:String!, $location:String!, $description:String!, $country:String!, $task:String!){
-    createOneChecklist(data: {username: $username, ticket: $ticket, regional_manager: $regional_manager, region: $region, project: $project, type: $type, media: $media, manager: $manager, location: $location, description: $description, country: $country, task: $task}) {
+    createOneChecklist(data: {username: $username, ticket: $ticket, regional_manager: $regional_manager, region: $region, project: $project, type: $type, media: $media, manager: $manager, location: $location, description: $description, country: $country, task: $task} where: {id: $id}) {
       country
       description
       id

@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Collection" /></a>
         </div>
@@ -108,7 +108,7 @@
 
   const ADD_COLLECTIONS = gql`
     mutation ($name:String!,$description:String!,$image:String!,$meta_description:String!,$meta_keywords:String!,$meta_title:String!){
-    createOneCollections(data: {name: $name, description: $description, image: $image, meta_description: $meta_description, meta_title: $meta_title, meta_keywords: $meta_keywords}) {
+    createOneCollections(data: {name: $name, description: $description, image: $image, meta_description: $meta_description, meta_title: $meta_title, meta_keywords: $meta_keywords} where: {id: $id}) {
         name
         description
         image
@@ -170,7 +170,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../../shop/collections'
+            path: '../../inventory/collections'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

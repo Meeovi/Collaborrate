@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Tag" /></a>
         </div>
@@ -77,7 +77,7 @@
 
   const ADD_TAGS = gql `
     mutation ($name:String!,$excerpt:String){
-    createOneTags(data: {name: $name, excerpt: $excerpt}) {
+    createOneTags(data: {name: $name, excerpt: $excerpt} where: {id: $id}) {
         name
         excerpt
   }

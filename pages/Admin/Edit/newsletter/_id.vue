@@ -1,9 +1,9 @@
 <template>
   <div>
-    <form v-for="newsletter in findManyNewsletters" :key="newsletter.id" @submit.prevent="addNewsletter">
+    <form v-for="newsletter in findManyNewsletters" :key="newsletter.id" @submit.prevent="updateNewsletter(newsletter)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Delete"  @click="deleteNewsletter(newsletter)" /></a>
           <a class="navbar-brand"><input type="submit" class="btn btn-warning" value="Save Newsletter" /></a>
         </div>
       </nav>
@@ -70,9 +70,9 @@
   import findManyWebsites from "~/graphql/query/findManyWebsites"
   import findManyVendors from "~/graphql/query/findManyVendors"
 
-  const ADD_NEWSLETTERS = gql `
+  const UPDATE_NEWSLETTER = gql `
     mutation ($customer_first_name:String!,$customer_last_name:String!$email:String!,$websites:String!,$store:String){
-    createOneNewsletters(data: {customer_first_name: $customer_first_name, customer_last_name: $customer_last_name, email: $email, websites: $websites, store: $store}) {
+    createOneNewsletters(data: {customer_first_name: $customer_first_name, customer_last_name: $customer_last_name, email: $email, websites: $websites, store: $store} where: {id: $id}) {
         customer_first_name
         customer_last_name
         email
@@ -81,10 +81,14 @@
   }
 }`;
 
-const UPDATE_NEWSLETTER = gql`
-  mutation updateOnenewsletters($id: Int!){
+const DELETE_NEWSLETTER = gql`
+  mutation updateOnenewsletters($id: Int){
   updateOneNewsletters(where: {id: $id}){
-    affected_rows
+    customer_first_name
+        customer_last_name
+        email
+        websites
+        store
   }
 }
 `;
@@ -116,7 +120,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/marketing/newsletters'})
+            this.$router.push({path: '../../marketing/newsletters'})
             }).catch(err => console.log(err));
     },
     async updateNewsletter(newsletter){

@@ -1,10 +1,10 @@
 <template>
     <div>
-        <form v-for="tag in findManyTags" :key="tag.id" @submit.prevent="addTag()">
+        <form v-for="tag in findManyTags" :key="tag.id" @submit.prevent="updateTag(tag)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteTag(tag)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Tag" /></a>
         </div>
@@ -76,18 +76,19 @@
   import gql from "graphql-tag";
   import findManyTags from "~/graphql/query/findManyTags";
 
-  const DELETE_TAG = gql `
+  const UPDATE_TAG = gql `
     mutation ($name:String!,$excerpt:String){
-    createOneTags(data: {name: $name, excerpt: $excerpt}) {
+    updateOneTags(data: {name: $name, excerpt: $excerpt} where: {id: $id}) {
         name
         excerpt
   }
 }`;
 
-const UPDATE_TAG = gql`
-  mutation updateOnetags($id: Int!){
-  updateOneTags(where: {id: $id}){
-    affected_rows
+const DELETE_TAG = gql`
+  mutation deleteOneTags($id: Int!){
+  deleteOneTags(where: {id: $id}){
+    name
+    excerpt
   }
 }
 `;
@@ -119,7 +120,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/content/tags'})
+            this.$router.push({path: '../../content/tags'})
             }).catch(err => console.log(err));
     },
     async updateTag(tag){

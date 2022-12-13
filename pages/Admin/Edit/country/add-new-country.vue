@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Country" /></a>
         </div>
@@ -66,7 +66,7 @@
 
   const ADD_COUNTRIES = gql `
     mutation ($name:String!,$description:String,$image:String,$region:String){
-    createOneCountries(data: {name: $name, description: $description, image: $image, region: $region}) {
+    createOneCountries(data: {name: $name, description: $description, image: $image, region: $region} where: {id: $id}) {
         name
         description
         image

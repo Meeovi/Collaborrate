@@ -1,10 +1,10 @@
 <template>
   <div>
-    <form  v-for="project in findManyProjects" :key="project.id" @submit.prevent="editProject()">
+    <form  v-for="project in findManyProjects" :key="project.id" @submit.prevent="updateProject(project)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-customers">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteProject(project)">Delete</button></a>
           <a class="navbar-customers">
             <input type="submit" class="btn btn-warning" value="Save Project" /></a>
         </div>
@@ -346,9 +346,9 @@
   import findManyTags from "~/graphql/query/findManyTags"
   import findManyZones from "~/graphql/query/findManyZones"
 
-  const ADD_PROJECTS = gql `
+  const UPDATE_PROJECT = gql`
       mutation ($assignee: String!, $customers: String!, $categories: String!, $tasks: String!, $users: String!, $doing: String!, $workspaces: String!, $created_at: String!, $done: String!, $end_date: String!, $file: String!, $format: String!, $height: String!, $id: String!, $image: String!, $goal_collaborators: String!, $goal_measurement: String!, $ticketing: String!, $name: String!, $goal_name: String!, $goal_privacy: String!, $goal_progress_source: String!, $goal_timeperiod: String!, $goal_updatemethod: String!, $priority: String!, $product: String!, $project_manager: String!, $resource: String!, $section_rule: String!, $staff_id: String!, $start_date: String!, $task_id: String!, $status: String!, $ticket_id: String!, $tags: String!, $considerworkingdays: String!, $method: String!, $type: String!, $team: String!, $visibility: String!, $websites: String!, $company: String!, $zone: String!){
-      createOneProjects(data: {assignee: $assignee, customers: $customers, categories: $categories, tasks: $tasks, users: $users, doing: $doing, workspaces: $workspaces, created_at: $created_at, done: $done, end_date: $end_date, file: $file, format: $format, height: $height, id: $id, image: $image, goal_collaborators: $goal_collaborators, goal_measurement: $goal_measurement, ticketing: $ticketing, name: $name, goal_name: $goal_name, goal_privacy: $goal_privacy, goal_progress_source: $goal_progress_source, goal_timeperiod: $goal_timeperiod, goal_updatemethod: $goal_updatemethod, priority: $priority, product: $product, project_manager: $project_manager, resource: $resource, section_rule: $section_rule, staff_id: $staff_id, start_date: $start_date, task_id: $task_id, status: $status, ticket_id: $ticket_id, tags: $tags, considerworkingdays: $considerworkingdays, method: $method, type: $type, team: $team, visibility: $visibility, websites: $websites, company: $company, zone: $zone}) {
+      updateOneProjects(data: {assignee: $assignee, customers: $customers, categories: $categories, tasks: $tasks, users: $users, doing: $doing, workspaces: $workspaces, created_at: $created_at, done: $done, end_date: $end_date, file: $file, format: $format, height: $height, id: $id, image: $image, goal_collaborators: $goal_collaborators, goal_measurement: $goal_measurement, ticketing: $ticketing, name: $name, goal_name: $goal_name, goal_privacy: $goal_privacy, goal_progress_source: $goal_progress_source, goal_timeperiod: $goal_timeperiod, goal_updatemethod: $goal_updatemethod, priority: $priority, product: $product, project_manager: $project_manager, resource: $resource, section_rule: $section_rule, staff_id: $staff_id, start_date: $start_date, task_id: $task_id, status: $status, ticket_id: $ticket_id, tags: $tags, considerworkingdays: $considerworkingdays, method: $method, type: $type, team: $team, visibility: $visibility, websites: $websites, company: $company, zone: $zone} where: {id: $id}) {
           assignee
           customers
           categories
@@ -395,240 +395,102 @@
     }
   }`;
 
+const DELETE_PROJECT = gql`
+      mutation (id: Int){
+      deleteOneProjects(where: {id: $id}) {
+          assignee
+          customers
+          categories
+          tasks
+          users
+          doing
+          workspaces
+          created_at
+          done
+          end_date
+          file
+          format
+          height
+          id
+          image
+          goal_collaborators
+          goal_measurement
+          ticketing
+          name
+          goal_name
+          goal_privacy
+          goal_progress_source
+          goal_timeperiod
+          goal_updatemethod
+          priority
+          product
+          project_manager
+          resource
+          section_rule
+          staff_id
+          start_date
+          task_id
+          status
+          ticket_id
+          tags
+          considerworkingdays
+          method
+          type
+          team
+          visibility
+          websites
+          company
+          zone
+    }
+  }`;
 
-  export default {
+export default {
+    head: {
+      name: 'Edit Project'
+    },
+    mounted() {
+      this.forceRerender();
+    },
+    // eslint-disable-next-line vue/order-in-components
     data() {
       return {
-        assignee: [],
-        customers: [],
-        categories: [],
-        tasks: " ",
-        users: [],
-        doing: " ",
-        workspaces: [],
-        created_at: " ",
-        done: " ",
-        end_date: " ",
-        file: " ",
-        format: " ",
-        height: " ",
-        id: " ",
-        image: " ",
-        goal_collaborators: [],
-        goal_measurement: " ",
-        ticketing: [],
-        name: " ",
-        goal_name: " ",
-        goal_privacy: " ",
-        goal_progress_source: " ",
-        goal_timeperiod: " ",
-        goal_updatemethod: " ",
-        priority: " ",
-        product: [],
-        project_manager: " ",
-        resource: " ",
-        section_rule: " ",
-        staff_id: " ",
-        start_date: " ",
-        task_id: " ",
-        status: " ",
-        ticket_id: " ",
-        tags: [],
-        considerworkingdays: " ",
-        method: " ",
-        type: [],
-        team: " ",
-        visibility: " ",
-        websites: " ",
-        company: " ",
-        zone: [],
+        componentKey: 0
       }
     },
-    head: {
-      title: 'Add New Project'
-    },
-
     methods: {
-      async editProject() {
-        const assignee = this.assignee;
-        const customers = this.customers;
-        const categories = this.categories;
-        const tasks = this.tasks;
-        const users = this.users;
-        const doing = this.doing;
-        const workspaces = this.workspaces;
-        const created_at = this.created_at;
-        const done = this.done;
-        const end_date = this.end_date;
-        const file = this.file;
-        const format = this.format;
-        const height = this.height;
-        const id = this.id;
-        const image = this.image;
-        const goal_collaborators = this.goal_collaborators;
-        const goal_measurement = this.goal_measurement;
-        const ticketing = this.ticketing;
-        const name = this.name;
-        const goal_name = this.goal_name;
-        const goal_privacy = this.goal_privacy;
-        const goal_progress_source = this.goal_progress_source;
-        const goal_timeperiod = this.goal_timeperiod;
-        const goal_updatemethod = this.goal_updatemethod;
-        const priority = this.priority;
-        const product = this.product;
-        const project_manager = this.project_manager;
-        const resource = this.resource;
-        const section_rule = this.section_rule;
-        const staff_id = this.staff_id;
-        const start_date = this.start_date;
-        const task_id = this.task_id;
-        const status = this.status;
-        const ticket_id = this.ticket_id;
-        const tags = this.tags;
-        const considerworkingdays = this.considerworkingdays;
-        const method = this.method;
-        const type = this.type;
-        const team = this.team;
-        const visibility = this.visibility;
-        const websites = this.websites;
-        const company = this.company;
-        const zone = this.zone;
-
-
+      async deleteProject(project) {
         await this.$apollo.mutate({
-          mutation: ADD_PROJECTS,
+          mutation: DELETE_PROJECT,
           variables: {
-            assignee,
-            customers,
-            categories,
-            tasks,
-            users,
-            doing,
-            workspaces,
-            created_at,
-            done,
-            end_date,
-            file,
-            format,
-            height,
-            id,
-            image: target.files[0],
-            goal_collaborators,
-            goal_measurement,
-            ticketing,
-            name,
-            goal_name,
-            goal_privacy,
-            goal_progress_source,
-            goal_timeperiod,
-            goal_updatemethod,
-            priority,
-            product,
-            project_manager,
-            resource,
-            section_rule,
-            staff_id,
-            start_date,
-            task_id,
-            status,
-            ticket_id,
-            tags,
-            considerworkingdays,
-            method,
-            type,
-            team,
-            visibility,
-            websites,
-            company,
-            zone,
+            id: project.id
           },
-          update: (cache, {
-            data: {
-              insertCategories,
-              insertCountries,
-              insertAttributes,
-              insertproduct_type,
-              insertBrands,
-              insertOccassions,
-              insertZones,
-              insertTags,
-              insertmanufacturer,
-              insertProjects,
-              insertContracts
+          refetchQueries: [{
+              query: findManyProjects
             }
-          }) => {
-            // Read data from cache for this query
-            try {
-              const insertedCategory = insertCategories.returning;
-              const insertedCountries = insertCountries.returning;
-              const insertedAttributes = insertAttributes.returning;
-              const insertedproduct_type = insertproduct_type.returning;
-              const insertedBrands = insertBrands.returning;
-              const insertedOccassions = insertOccassions.returning;
-              const insertedZones = insertZones.returning;
-              const insertedTags = insertTags.returning;
-              const insertedmanufacturer = insertmanufacturer.returning;
-              const insertedProjects = insertProjects.returning;
-              const insertedContracts = insertContracts.returning;
-              console.log(insertedCategory, insertedCountries, insertedAttributes, insertedproduct_type,
-                insertedBrands, insertedOccassions, insertedZones, insertedTags, insertedmanufacturer,
-                insertedProjects, insertedContracts)
-              cache.writeQuery({
-                query: findManyProjects
-              })
-            } catch (err) {
-              console.error(err)
-            }
-          }
+
+          ]
         }).then(() => {
           this.$router.push({
-            path: '../../tasks/projects'
+            path: '../../content/projects'
           })
         }).catch(err => console.log(err));
-        this.assignee = ' ';
-        this.customers = ' ';
-        this.categories = ' ';
-        this.tasks = ' ';
-        this.users = ' ';
-        this.doing = ' ';
-        this.workspaces = ' ';
-        this.created_at = ' ';
-        this.done = ' ';
-        this.end_date = ' ';
-        this.file = ' ';
-        this.format = ' ';
-        this.height = ' ';
-        this.id = ' ';
-        this.image = ' ';
-        this.goal_collaborators = ' ';
-        this.goal_measurement = ' ';
-        this.ticketing = ' ';
-        this.name = ' ';
-        this.goal_name = ' ';
-        this.goal_privacy = ' ';
-        this.goal_progress_source = ' ';
-        this.goal_timeperiod = ' ';
-        this.goal_updatemethod = ' ';
-        this.priority = ' ';
-        this.product = ' ';
-        this.project_manager = ' ';
-        this.resource = ' ';
-        this.section_rule = ' ';
-        this.staff_id = ' ';
-        this.start_date = ' ';
-        this.task_id = ' ';
-        this.status = ' ';
-        this.ticket_id = ' ';
-        this.tags = ' ';
-        this.considerworkingdays = ' ';
-        this.method = ' ';
-        this.type = ' ';
-        this.team = ' ';
-        this.visibility = ' ';
-        this.websites = ' ';
-        this.company = ' ';
-        this.zone = ' ';
       },
+      async updateProject(project) {
+        await this.$apollo.mutate({
+          mutation: UPDATE_PROJECT,
+          variables: {
+            id: project.id
+          },
+          refetchQueries: [{
+              query: findManyProjects
+            }
+
+          ]
+        })
+      },
+      forceRerender() {
+        this.componentKey += 1;
+      }
     },
     apollo: {
       findManyCategories: {

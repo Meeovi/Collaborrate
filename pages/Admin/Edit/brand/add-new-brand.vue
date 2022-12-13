@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Brand" /></a>
         </div>
@@ -117,7 +117,7 @@
 
   const ADD_BRANDS = gql`
     mutation ($name: String!,$code: String!,$description: String!,$isPublic: String!,$created_at: String!,$product: String!,$state: String!,$media: String!,$country: String!,$city: String!){
-    createOneBrands(data: {name: $name,code: $code,description: $description,isPublic: $isPublic,created_at: $created_at,media: $media,country: $country,product: $product,state: $state,country: $country,city: $city}) {
+    createOneBrands(data: {name: $name,code: $code,description: $description,isPublic: $isPublic,created_at: $created_at,media: $media,country: $country,product: $product,state: $state,country: $country,city: $city} where: {id: $id}) {
         country
         countries
         thumbnail
@@ -202,7 +202,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../../shop/brands'
+            path: '../../inventory/brands'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Return" /></a>
         </div>
@@ -197,7 +197,7 @@
 
   const ADD_RETURNS = gql`
     mutation ($name:String!,$validity:String!,$return_prefix:String!, $description:String!, $shippingNumber:String!, $shippingDescription:String!, $status:String!, $liquidationReason:String!, $media:String!, $weight:String!, $height:String!, $howShipped:String!, $type:String!, $location:String!, $shipTo:String!, $products:String!, $case_id:String!){
-    createOneReturns(data: {name: $name, validity: $validity, return_prefix: $return_prefix, description: $description, shippingNumber: $shippingNumber, shippingDescription: $shippingDescription, status: $status, liquidationReason: $liquidationReason, media: $media, weight: $weight, height: $height, howShipped: $howShipped, type: $type, location: $location, shipTo: $shipTo, products: $products, case_id: $case_id}) {
+    createOneReturns(data: {name: $name, validity: $validity, return_prefix: $return_prefix, description: $description, shippingNumber: $shippingNumber, shippingDescription: $shippingDescription, status: $status, liquidationReason: $liquidationReason, media: $media, weight: $weight, height: $height, howShipped: $howShipped, type: $type, location: $location, shipTo: $shipTo, products: $products, case_id: $case_id} where: {id: $id}) {
         name
         validity
         return_prefix

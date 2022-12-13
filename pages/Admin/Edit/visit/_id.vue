@@ -1,10 +1,10 @@
 <template>
   <div>
-    <form v-for="visit in visits" :key="visit.id" @submit.prevent="addVisit()">
+    <form v-for="visit in findManyVisits" :key="visit.id" @submit.prevent="updateVisit(visit)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteVisit(visit)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Visit" /></a>
         </div>
@@ -109,9 +109,9 @@
   import findManyVisits from "~/graphql/query/findManyVisits";
   /* eslint-disable camelcase */
 
-  const DELETE_VISIT = gql`
+  const UPDATE_VISIT = gql`
     mutation ($reason:String!,$location:String!,$end_date:String!,$content:String!,$username:String!,$emergency:String!,$meeting:String!,$start_date:String!,$task:String!){
-    createOneVisits(data: {reason: $reason, location: $location, end_date: $end_date, content: $content, username: $username, emergency: $emergency, meeting: $meeting, start_date: $start_date, task: $task}) {
+    updateOneVisits(data: {reason: $reason, location: $location, end_date: $end_date, content: $content, username: $username, emergency: $emergency, meeting: $meeting, start_date: $start_date, task: $task} where: {id: $id}) {
         reason
         location
         content
@@ -124,10 +124,18 @@
   }
 }`;
 
-const UPDATE_VISIT = gql`
-  mutation updateOnevisits($id: Int!){
-  updateOnevisits(where: {id: $id}){
-    affected_rows
+const DELETE_VISIT = gql`
+  mutation deleteOneVisits($id: Int){
+  deleteOneVisits(where: {id: $id}){
+    reason
+        location
+        content
+        username
+        emergency
+        meeting
+        start_date
+        end_date
+        task
   }
 }
 `;
@@ -154,12 +162,12 @@ export default {
         },
         refetchQueries: [
           {
-            query: visits
+            query: findManyVisits
           }       
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/marketing/visits'})
+            this.$router.push({path: '../../marketing/visits'})
             }).catch(err => console.log(err));
     },
     async updateVisit(visit){
@@ -170,7 +178,7 @@ export default {
         },
         refetchQueries: [
           {
-            query: visits
+            query: findManyVisits
           }       
           
         ]
@@ -181,8 +189,8 @@ export default {
     }
   },
   apollo: {
-    visits: {
-      query: visits,
+    findManyVisits: {
+      query: findManyVisits,
       prefetch: ({ route }) => ({ id: route.params.id }),
       variables() {
         return { id: this.$route.params.id }

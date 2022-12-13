@@ -1,10 +1,10 @@
 <template>
   <div>
-    <form v-for="ticketing in ticketing" :key="ticketing.id" @submit.prevent="addTicket()">
+    <form v-for="ticketing in ticketings" :key="ticketing.id" @submit.prevent="updateTicketing(ticket)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteTicketing(ticket)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Ticket" /></a>
         </div>
@@ -147,9 +147,9 @@
   import ticketings from "~/graphql/query/ticketings";
   import findManyUsers from "~/graphql/query/findManyUsers";
 
-  const DELETE_TICKETING = gql`
+  const UPDATE_TICKETING = gql`
     mutation ($name: String!,$department: String!,$comment: String!,$location: String!,$content: String!,$level: String!,$media: String!,$requester: String!,$requester_email: String!,$assigned_to: String!,$account_name: String!,$severity: String!,$team: String!,$resolution: String!,$status: String!,$ticket_type: String!,$priority: String!,$date: String!){
-    createOneTicketing(data: {name: $name,department: $department,comment: $comment,location: $location,content: $content,assigned_to: $assigned_to,account_name: $account_name,level: $level,media: $media,requester: $requester,requester_email: $requester_email,resolution: $resolution,team: $team,severity: $severity,status: $status,ticket_type: $ticket_type,date: $date,priority: $priority}) {
+    createOneTicketing(data: {name: $name,department: $department,comment: $comment,location: $location,content: $content,assigned_to: $assigned_to,account_name: $account_name,level: $level,media: $media,requester: $requester,requester_email: $requester_email,resolution: $resolution,team: $team,severity: $severity,status: $status,ticket_type: $ticket_type,date: $date,priority: $priority} where: {id: $id}) {
         account_name
         countries
         thumbnail
@@ -174,10 +174,30 @@
   }
 }`;
 
-const UPDATE_TICKETING = gql`
-  mutation updateOneticketing($id: Int!){
-  updateOneticketing(where: {id: $id}){
-    affected_rows
+const DELETE_TICKETING = gql`
+  mutation deleteOneTicketing($id: Int){
+  deleteOneTicketing(where: {id: $id}){
+    account_name
+        countries
+        thumbnail
+        name
+        department
+        comment
+        location
+        content
+        websites
+        level
+        media
+        assigned_to
+        requester
+        requester_email
+        resolution
+        status
+        team
+        severity
+        ticket_type
+        date
+        priority
   }
 }
 `;
@@ -209,7 +229,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/marketing/ticketing'})
+            this.$router.push({path: '../../marketing/ticketing'})
             }).catch(err => console.log(err));
     },
     async updateTicketing(ticketing){
@@ -231,8 +251,15 @@ export default {
     }
   },
   apollo: {
-    ticketing: {
-      query: ticketing,
+    ticketings: {
+      query: ticketings,
+      prefetch: ({ route }) => ({ id: route.params.id }),
+      variables() {
+        return { id: this.$route.params.id }
+      }
+    },
+    findManyUsers: {
+      query: findManyUsers,
       prefetch: ({ route }) => ({ id: route.params.id }),
       variables() {
         return { id: this.$route.params.id }

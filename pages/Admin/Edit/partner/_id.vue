@@ -1,10 +1,10 @@
 <template>
     <div>
-        <form v-for="partner in findManyPartners" :key="partner.id" @submit.prevent="addPartner">
+        <form v-for="partner in findManyPartners" :key="partner.id" @submit.prevent="updatePartner(partner)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deletePartner(partner)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Partner" /></a>
         </div>
@@ -104,9 +104,9 @@
   import findManyCountries from '~/graphql/query/findManyCountries'
   import findManyCities from '~/graphql/query/findManyCities'
 
-  const ADD_PARTNER = gql `
+  const UPDATE_PARTNER = gql `
     mutation ($name:String!,$city:String!,$isPublic:String!,$state:String!,$country:String!,$business_type:String!,$address:String!){
-    createOnePartners(data: {name: $name, city: $city, state: $state, isPublic: $isPublic, country: $country, business_type: $business_type, address: $address}) {
+    updateOnePartners(data: {name: $name, city: $city, state: $state, isPublic: $isPublic, country: $country, business_type: $business_type, address: $address} where: {id: $id}) {
         state
         name
         city
@@ -117,10 +117,16 @@
   }
 }`;
 
-const UPDATE_PARTNER = gql`
-  mutation updateOnepartners($id: Int!){
-  updateOnePartners(where: {id: $id}){
-    affected_rows
+const DELETE_PARTNER = gql`
+  mutation deleteOnePartners($id: Int!){
+  deleteOnePartners(where: {id: $id}){
+    state
+        name
+        city
+        isPublic
+        country
+        business_type
+        address
   }
 }
 `;
@@ -152,7 +158,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/shop/partners'})
+            this.$router.push({path: '../../inventory/partners'})
             }).catch(err => console.log(err));
     },
     async updatePartner(partner){

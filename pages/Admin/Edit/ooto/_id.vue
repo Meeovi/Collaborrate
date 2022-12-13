@@ -1,10 +1,10 @@
 <template>
     <div>
-        <form  v-for="ooto in ootos" :key="ooto.id" @submit.prevent="addOoto">
+        <form  v-for="ooto in ootos" :key="ooto.id" @submit.prevent="updateOOTO(ooto)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteOOTO(ooto)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save OOTO" /></a>
         </div>
@@ -62,9 +62,9 @@
 
   import ootos from "~/graphql/query/ootos";
 
-  const DELETE_OOTO = gql`
+  const UPDATE_OOTO = gql`
     mutation ($login:String!,$description:String!,$whid:String!,$start_date:String!,$end_date:String){
-    createOneOoto(data: {login: $login, description: $description, whid: $whid, start_date: $start_date, end_date: $end_date}) {
+    createOneOoto(data: {login: $login, description: $description, whid: $whid, start_date: $start_date, end_date: $end_date} where: {id: $id}) {
         whid
         login
         description
@@ -73,10 +73,14 @@
   }
 }`;
 
-const UPDATE_OOTO = gql`
+const DELETE_OOTO = gql`
   mutation updateOneooto($id: Int!){
   updateOneOoto(where: {id: $id}){
-    affected_rows
+    whid
+        login
+        description
+        start_date
+        end_date
   }
 }
 `;
@@ -108,7 +112,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/system/ooto'})
+            this.$router.push({path: '../../system/ooto'})
             }).catch(err => console.log(err));
     },
     async updateOOTO(ooto){

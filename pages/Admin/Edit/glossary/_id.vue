@@ -1,11 +1,11 @@
 /* eslint-disable camelcase */
 <template>
     <div>
-        <form v-for="glossary in glossaries" :key="glossary.id" @submit.prevent="addGlossary">
+        <form v-for="glossary in glossaries" :key="glossary.id" @submit.prevent="updateGlossary(glossary)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteGlossary(glossary)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Glossary" /></a>
         </div>
@@ -96,19 +96,21 @@
 
   import glossaries from "~/graphql/query/glossaries";
 
-  const DELETE_GLOSSARY = gql `
+  const UPDATE_GLOSSARY = gql`
     mutation ($name:String!,$content:String!,$image:String!){
-    createOneGlossary(data: {name: $name, content: $content, image: $image}) {
+    updateOneGlossary(data: {name: $name, content: $content, image: $image} where: {id: $id} where: {id: $id}) {
         name
         content
         image
   }
 }`;
 
-const UPDATE_GLOSSARY = gql`
-  mutation updateOneglossaries($id: Int!){
-  updateOneglossaries(where: {id: $id}){
-    affected_rows
+const DELETE_GLOSSARY = gql`
+  mutation deleteOneGlossary($id: Int!){
+  deleteOneGlossary(where: {id: $id}){
+    name
+    content
+    image
   }
 }
 `;
@@ -140,7 +142,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/content/glossaries'})
+            this.$router.push({path: '../../content/glossary'})
             }).catch(err => console.log(err));
     },
     async updateCountry(glossary){

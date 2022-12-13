@@ -72,7 +72,7 @@
 
   const ADD_TOKENS = gql`
       mutation ($name: String!, $description: String!, $token_type: String!, $token: String!) {
-      createOneApitokens(data: {name: $name, description: $description, token_type: $token_type, token: $token}) {
+      createOneApitokens(data: {name: $name, description: $description, token_type: $token_type, token: $token} where: {id: $id}) {
           token
           name
           token_type

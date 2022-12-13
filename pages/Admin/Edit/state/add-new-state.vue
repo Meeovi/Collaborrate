@@ -5,7 +5,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
 
             <input type="submit" class="btn btn-warning" value="Save State" /></a>
@@ -67,7 +67,7 @@
 
   const ADD_STATES = gql`
     mutation ($name:String!,$description:String!,$image:String!,$country:String!){
-    createOneStates(data: {name: $name, description: $description, image: $image, country: $country}) {
+    createOneStates(data: {name: $name, description: $description, image: $image, country: $country} where: {id: $id}) {
         name
         description
         image

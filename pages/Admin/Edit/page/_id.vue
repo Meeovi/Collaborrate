@@ -1,10 +1,10 @@
 <template>
     <div>
-        <form v-for="page in findManyPages" :key="page.id" @submit.prevent="addPage">
+        <form v-for="page in findManyPages" :key="page.id" @submit.prevent="updatePage(page)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deletePage(page)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Page" /></a>
         </div>
@@ -111,9 +111,9 @@
   import gql from "graphql-tag";
   import findManyPages from "~/graphql/query/findManyPages";
 
-  const DELETE_PAGE = gql`
+  const UPDATE_PAGE = gql`
     mutation ($title:String!,$meta_description:String,$meta_keywords:String,$content:String,$meta_title:String!,$url_key:String){
-    createOnePages(data: {title: $title, meta_description: $meta_description, meta_keywords: $meta_keywords, content: $content, meta_title: $meta_title, url_key: $url_key}) {
+    updateOnePages(data: {title: $title, meta_description: $meta_description, meta_keywords: $meta_keywords, content: $content, meta_title: $meta_title, url_key: $url_key} where: {id: $id}) {
         meta_keywords
         title
         meta_description
@@ -123,9 +123,9 @@
   }
 }`;
 
-const UPDATE_PAGE = gql`
-  mutation updateOnepages($id: Int!){
-  updateOnePages(where: {id: $id}){
+const DELETE_PAGE = gql`
+  mutation updateOnepages($id: Int){
+  deleteOnePages(where: {id: $id}){
     meta_keywords
         title
         meta_description
@@ -163,7 +163,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/content/pages'})
+            this.$router.push({path: '../../content/pages'})
             }).catch(err => console.log(err));
     },
     async updatePage(page){

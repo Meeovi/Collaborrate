@@ -1,10 +1,10 @@
 <template>
     <div>
-        <form v-for="tax in findManyTaxes" :key="tax.id" @submit.prevent="addTaxrate()">
+        <form v-for="tax in findManyTaxes" :key="tax.id" @submit.prevent="updateTax(tax)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteTax(tax)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Taxrate" /></a>
         </div>
@@ -76,9 +76,9 @@
   import findManyCountries from "~/graphql/query/findManyCountries";
   import findManyStates from "~/graphql/query/findManyStates";
 
-  const DELETE_TAX = gql`
+  const UPDATE_TAX = gql`
     mutation ($country:String! $default_store_view:String! $zip_post_is_range:Boolean! $tax_identifier:String! $state:String! $rate_percent:String! $postcode:String){
-    createOneTax(data: {country: $country, default_store_view: $default_store_view, zip_post_is_range: $zip_post_is_range, tax_identifier: $tax_identifier, state: $state, rate_percent: $rate_percent, postcode: $postcode}) {
+    updateOneTaxes(data: {country: $country, default_store_view: $default_store_view, zip_post_is_range: $zip_post_is_range, tax_identifier: $tax_identifier, state: $state, rate_percent: $rate_percent, postcode: $postcode} where: {id: $id}) {
     country
         default_store_view
         postcode
@@ -89,10 +89,16 @@
   }
 }`;
 
-const UPDATE_TAX = gql`
-  mutation updateOneTaxes($id: Int!){
-  updateOneTaxs(where: {id: $id}){
-    affected_rows
+const DELETE_TAX = gql`
+  mutation deleteOneTaxes($id: Int){
+  deleteOneTaxes(where: {id: $id}){
+    country
+        default_store_view
+        postcode
+        rate_percent
+        state
+        tax_identifier
+        zip_post_is_range
   }
 }
 `;
@@ -124,7 +130,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/sales/taxes'})
+            this.$router.push({path: '../../inventory/taxes'})
             }).catch(err => console.log(err));
     },
     async updateTax(tax){

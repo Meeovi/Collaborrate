@@ -5,7 +5,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Glossary" /></a>
         </div>
@@ -98,7 +98,7 @@
 
   const ADD_GLOSSARIES = gql `
     mutation ($name:String!,$content:String!,$image:String!){
-    createOneGlossary(data: {name: $name, content: $content, image: $image}) {
+    createOneGlossary(data: {name: $name, content: $content, image: $image} where: {id: $id}) {
         name
         content
         image

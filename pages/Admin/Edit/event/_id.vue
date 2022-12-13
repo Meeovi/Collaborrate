@@ -1,10 +1,10 @@
 <template>
     <div>
-        <form v-for="event in findManyEvents" :key="event.id" @submit.prevent="addEvent">
+        <form v-for="event in findManyEvents" :key="event.id" @submit.prevent="updateEvent(event)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteEvent(event)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Event" /></a>
         </div>
@@ -144,9 +144,9 @@
   import findManyCities from '~/graphql/query/findManyCities'
   import findManyCategories from '~/graphql/query/findManyCategories'
 
-  const DELETE_EVENT = gql`
+  const UPDATE_EVENT = gql`
     mutation ($image: Upload!,$name: String!,$postalcode: String!,$start: String!,$end: String!,$tickets: String!,$content: String!,$country: String!,$city: String!,$state: String!,$category: String){
-    createOneEvents(data: {image: $image,name: $name,postalcode: $postalcode,start: $start,end: $end,tickets: $tickets,country: $country,content: $content,category: $category,city: $city,state: $state}) {
+    createOneEvents(data: {image: $image,name: $name,postalcode: $postalcode,start: $start,end: $end,tickets: $tickets,country: $country,content: $content,category: $category,city: $city,state: $state} where: {id: $id} where: {id: $id}) {
         category
         attributes
         image
@@ -162,10 +162,21 @@
   }
 }`;
 
-const UPDATE_EVENT = gql`
-  mutation updateOneevents($id: Int!){
+const DELETE_EVENT = gql`
+  mutation updateOneevents($id: Int){
   updateOneEvents(where: {id: $id}){
-    affected_rows
+    category
+        attributes
+        image
+        name
+        postalcode
+        start
+        end
+        tickets
+        country
+        content
+        city
+        state
   }
 }
 `;
@@ -197,7 +208,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/marketing/events'})
+            this.$router.push({path: '../../marketing/events'})
             }).catch(err => console.log(err));
     },
     async updateEvent(event){

@@ -6,7 +6,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
 
             <input type="submit" class="btn btn-warning" value="Save Reward" /></a>
@@ -129,7 +129,7 @@
 
   const ADD_REWARDS = gql`
     mutation ($name: String!,$expiration: String!,$customers: String!,$coupons: String!,$categories: String!,$products: String!,$users: String!,$articles: String!,$level: String!){
-    createOneRewards(data: {name: $name,expiration: $expiration,customers: $customers,coupons: $coupons,categories: $categories,articles: $articles,level: $level,products: $products,users: $users}) {
+    createOneRewards(data: {name: $name,expiration: $expiration,customers: $customers,coupons: $coupons,categories: $categories,articles: $articles,level: $level,products: $products,users: $users} where: {id: $id}) {
         name
         expiration
         customers

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <form v-for="brands in findManyBrands" :key="brands.id" @submit.prevent="add()">
+    <form v-for="brands in findManyBrands" :key="brands.id" @submit.prevent="updateBrands(brand)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteBrands(brand)">Delete</button></a>
           <a class="navbar-brand">
-            <input type="submit" class="btn btn-warning" value="Save Brand" @submit.prevent="addBrand" /></a>
+            <input type="submit" class="btn btn-warning" value="Save Brand" /></a>
         </div>
       </nav>
       <br>
@@ -30,7 +30,7 @@
                       <td>
                         <label for="products">Products</label><br>
                         <select id="products" :value="brands.products" name="template" class="form-category">
-                          <option v-for="products in productss" :key="products" :value="products">
+                          <option v-for="products in findManyProducts" :key="products" :value="products">
                             {{ products.name }}</option>
                         </select>
                       </td>
@@ -63,7 +63,7 @@
                       <td>
                         <label for="cities">City</label><br>
                         <select id="cities" :value="brands.city" name="template" class="form-category">
-                          <option v-for="cities in cities" :key="cities" :value="cities">
+                          <option v-for="cities in findManyCities" :key="cities" :value="cities">
                             {{ cities.name }}</option>
                         </select>
                       </td>
@@ -72,7 +72,7 @@
                       <td>
                         <label for="states">State</label><br>
                         <select id="states" :value="brands.state" name="template" class="form-category">
-                          <option v-for="states in states" :key="states" :value="states">
+                          <option v-for="states in findManyStates" :key="states" :value="states">
                             {{ states.name }}</option>
                         </select>
                       </td>
@@ -81,7 +81,7 @@
                       <td>
                         <label for="countries">Countries</label><br>
                         <select id="countries" :value="brands.country" name="template" class="form-category">
-                          <option v-for="countries in countries" :key="countries" :value="countries">
+                          <option v-for="countries in findManyCountries" :key="countries" :value="countries">
                             {{ countries.name }}</option>
                         </select>
                       </td>
@@ -128,8 +128,8 @@ const DELETE_BRAND = gql`
 `;
 
 const UPDATE_BRAND = gql`
-  mutation updateOnebrands($id: Int!){
-  updateOneBrands(data: {name: $name,code: $code,description: $description,isPublic: $isPublic,created_at: $created_at,media: $media,country: $country,product: $product,state: $state,country: $country,city: $city}, (where: {id: $id})){
+  mutation updateOnebrands($id: Int, $name: String, $code: String, $description: String, $isPublic: String, $media: String, $country: String, $product: String, $state: String, $city: String){
+  updateOneBrands(data: {name: $name,code: $code,description: $description,isPublic: $isPublic,media: $media,country: $country,product: $product,state: $state,country: $country,city: $city} (where: {id: $id})){
     city
     code
     country
@@ -173,7 +173,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/shop/brands'})
+            this.$router.push({path: '../../inventory/brands'})
             }).catch(err => console.log(err));
     },
     async updateBrand(brand){

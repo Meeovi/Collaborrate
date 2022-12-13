@@ -1,11 +1,10 @@
 <template>
   <div>
-    <form v-for="currency in findManyCurrencies" :key="currency.id" @submit="addCurrency">
+    <form v-for="currency in findManyCurrencies" :key="currency.id" @submit="updateCurrency(currency)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
-          <a class="navbar-brand"><input type="submit" class="btn btn-warning" value="Save Currency"
-              @submit.prevent="addCurrency" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" @click="deleteCurrency(currency)" /></a>
+          <a class="navbar-brand"><input type="submit" class="btn btn-warning" value="Save Currency" /></a>
         </div>
       </nav>
       <br>
@@ -57,19 +56,21 @@
   import findManyCurrencies from "~/graphql/query/findManyCurrencies"
   import findManyCountries from "~/graphql/query/findManyCountries"
 
-  const DELETE_CURRENCY = gql`
+  const UPDATE_CURRENCY = gql`
     mutation ($code:String!,$name:String!$region:String!){
-    createOneCurrencies(data: {code: $code, name: $name, region: $region}) {
+    updateOneCurrencies(data: {code: $code, name: $name, region: $region} where: {id: $id} where: {id: $id}) {
         code
         name
         region
   }
 }`;
 
-const UPDATE_CURRENCY = gql`
-  mutation updateOnecurrencies($id: Int!){
+const DELETE_CURRENCY = gql`
+  mutation updateOnecurrencies($id: Int){
   updateOneCurrencies(where: {id: $id}){
-    affected_rows
+    code
+    name
+    region
   }
 }
 `;
@@ -101,7 +102,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/system/system-settings'})
+            this.$router.push({path: '../../system/system-settings'})
             }).catch(err => console.log(err));
     },
     async updateCurrency(currency){

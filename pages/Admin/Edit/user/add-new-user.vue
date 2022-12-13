@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
 
             <input type="submit" class="btn btn-warning" username="Save User" /></a>
@@ -67,7 +67,7 @@ import findManyUsers from "~/graphql/query/findManyUsers";
 
 const ADD_USER = gql`
     mutation ($first_name:String!,$last_name:String!,$username:String!,$email:String!, $password: String!){
-    createOneUsers(data: {first_name: $first_name, last_name: $last_name, email: $email, username: $username, password: $password}) {
+    createOneUsers(data: {first_name: $first_name, last_name: $last_name, email: $email, username: $username, password: $password} where: {id: $id}) {
         email
         first_name
         last_name

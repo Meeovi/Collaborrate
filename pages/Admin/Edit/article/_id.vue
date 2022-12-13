@@ -1,10 +1,10 @@
 <template>
   <div>
-    <form @submit.prevent="addArticle()">
+    <form v-for="article in findManyArticles" :key="article.id" @submit.prevent="addArticle(article)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning" @click="deleteArticle(article.id)">Delete</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteArticle(article)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Article" /></a>
         </div>
@@ -25,7 +25,7 @@
             <div id="v-tabs-home" class="tab-pane fade show active" role="tabpanel" aria-labelledby="v-tabs-home-tab">
               <div class="table table-responsive">
                 <table class="table">
-                  <tbody v-for="article in findManyArticles" :key="article.id">
+                  <tbody>
                     <tr>
                       <td style="text-align: right;">Article Name</td>
                       <td>
@@ -198,14 +198,27 @@
   import Editor from '~/components/Editor.vue'
 
   const DELETE_ARTICLE = gql `
-  mutation deleteOneArticles($id: Int!){
+  mutation deleteOneArticles($id: Int){
   deleteOneArticles(where: {id: $id}){
-    id
+    categories
+        content
+        customers
+        excerpt
+        image
+        isPublic
+        meta_description
+        meta_name
+        meta_url
+        name
+        published
+        tags
+        users
+        type
         }
 }
 `;
 
-  const UPDATE_ARTICLE = gql `
+  const UPDATE_ARTICLE = gql`
   mutation updateOneArticles($id: Int!){
   updateOneArticles(data: {categories: $categories, content: $content, customers: $customers, excerpt: $excerpt, image: $image, isPublic: $isPublic, meta_description: $meta_description, meta_name: $meta_name, meta_url: $meta_url, name: $name, published: $published, tags: $tags, users: $users, type: $type}, (where: {id: $id})){
     categories
@@ -256,7 +269,7 @@
           ]
         }).then(() => {
           this.$router.push({
-            path: '../../admin/content/blog'
+            path: '../../content/blog'
           })
         }).catch(err => console.log(err));
       },

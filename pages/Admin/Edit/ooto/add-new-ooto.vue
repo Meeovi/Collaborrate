@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save OOTO" /></a>
         </div>
@@ -64,7 +64,7 @@
 
   const ADD_OOTO = gql`
     mutation ($login:String!,$description:String!,$whid:String!,$start_date:String!,$end_date:String){
-    createOneOoto(data: {login: $login, description: $description, whid: $whid, start_date: $start_date, end_date: $end_date}) {
+    createOneOoto(data: {login: $login, description: $description, whid: $whid, start_date: $start_date, end_date: $end_date} where: {id: $id}) {
         whid
         login
         description

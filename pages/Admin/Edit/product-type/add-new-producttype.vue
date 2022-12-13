@@ -100,7 +100,7 @@
 
   const ADD_PRODUCT_TYPES = gql`
     mutation ($type_name:String!,$taxes:String!, $filter_options:String!, $id:String!, $isShippable:String!, $meta_description:String!, $meta_name:String!, $meta_url:String!, $position:String!, $prod_id:String!,){
-    createOneProduct_attribute(data: {type_name: $type_name, taxes: $taxes, filter_options: $filter_options, id: $id, isShippable: $isShippable, meta_description: $meta_description, meta_name: $meta_name, meta_url: $meta_url, position: $position, prod_id: $prod_id,}) {
+    createOneProduct_attribute(data: {type_name: $type_name, taxes: $taxes, filter_options: $filter_options, id: $id, isShippable: $isShippable, meta_description: $meta_description, meta_name: $meta_name, meta_url: $meta_url, position: $position, prod_id: $prod_id,} where: {id: $id}) {
         type_name
         taxes
         filter_options
@@ -174,7 +174,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../../shop/product-types'
+            path: '../../inventory/product-types'
           })
         }).catch(err => console.log(err));
         this.type_name = ' ';

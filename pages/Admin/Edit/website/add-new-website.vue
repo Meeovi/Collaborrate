@@ -93,7 +93,7 @@ import findManyShops from "~/graphql/query/findManyVendors"
 
   const ADD_WEBSITES = gql`
     mutation ($name: String!, $shop: String!, $category: String!, $url: String!, $image: String) {
-    createOneWebsites(data: {name: $name, shop: $shop, category: $category, url: $url, image: $image}) {
+    createOneWebsites(data: {name: $name, shop: $shop, category: $category, url: $url, image: $image} where: {id: $id}) {
         url
         name
         category

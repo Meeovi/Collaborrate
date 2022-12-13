@@ -3,7 +3,7 @@
     <form @submit="addCurrency">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Delete"  @click="deleteNewsletter(newsletter)" /></a>
           <a class="navbar-brand"><input type="submit" class="btn btn-warning" value="Save Currency"
               @submit.prevent="addCurrency" /></a>
         </div>
@@ -59,7 +59,7 @@
 
   const ADD_CURRENCIES = gql `
     mutation ($code:String!,$name:String!$region:String!){
-    createOneCurrencies(data: {code: $code, name: $name, region: $region}) {
+    createOneCurrencies(data: {code: $code, name: $name, region: $region} where: {id: $id}) {
         code
         name
         region

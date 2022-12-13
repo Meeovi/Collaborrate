@@ -1,21 +1,21 @@
 <template>
   <div>
-    <form @submit.prevent="addFullFillment()">
-      <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
-          <a class="navbar-brand">
-            <input type="submit" class="btn btn-warning" value="Save FullFillment" /></a>
-        </div>
-      </nav>
-      <br>
+      <form @submit.prevent="addWorkspace()">
+          <nav class="navbar navbar-dark bg-dark">
+              <div class="container-fluid">
+              <a class="navbar-brand">
+                  <button type="reset" class="btn btn-warning">Reset</button></a>
+              <a class="navbar-brand">
+                  <input type="submit" class="btn btn-warning" value="Save Workspace" /></a>
+              </div>
+          </nav>
+          <br>
       <div class="row">
         <div class="col-3">
           <!-- Tab navs -->
           <div id="v-tabs-tab" class="nav flex-column nav-tabs text-center" role="tablist" aria-orientation="vertical">
             <a id="v-tabs-home-tab" class="nav-link active" data-mdb-toggle="tab" href="#v-tabs-home" role="tab"
-              aria-controls="v-tabs-home" aria-selected="true">Create A New FullFillment</a>
+              aria-controls="v-tabs-home" aria-selected="true">Create New Workspace</a>
           </div>
           <!-- Tab navs -->
         </div>
@@ -27,89 +27,75 @@
                 <table class="table">
                   <tbody>
                     <tr>
-                      <td style="text-align: right;">Pickup</td>
+                      <td style="text-align: right;">Workspace Name</td>
                       <td>
-                        <input v-model="pickup" name="fullfillmentPickup" type="checkbox"
-                          value="Check this box if this fullfillment allows pickups" />
+                        <input v-model="name" name="workspaceName" type="text" />
                       </td>
                     </tr>
                     <tr>
-                      <td style="text-align: right;">Stock</td>
+                      <td style="text-align: right;">Workspace Author</td>
                       <td>
-                        <input v-model="stock" name="fullfillmentStock" type="text" />
+                        <input v-model="author" name="workspaceAuthor" type="text" />
                       </td>
                     </tr>
                     <tr>
-                      <td style="text-align: right;">Company Name</td>
+                      <td style="text-align: right;">Category</td>
                       <td>
-                        <input v-model="company" name="fullfillmentCompanyName" type="text" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">FullFillment Name</td>
-                      <td>
-                        <input v-model="name" type="text" required />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">Phone Number</td>
-                      <td>
-                        <input v-model="phone" type="text" placeholder="#" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">Shipping Zones</td>
-                      <td>
-                        <input v-model="shipping_zones" name="fullfillmentShippingZones" type="text" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">Address</td>
-                      <td>
-                        <input v-model="address" type="text" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">Address Line 2</td>
-                      <td>
-                        <input v-model="address_two" type="text" name="addressTwo" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">City</td>
-                      <td>
-                        <select id="category" v-model="city" name="template" class="form-category">
-                          <option v-for="city in findManyCities" :key="city" :value="city">{{ city.name }}</option>
+                        <select id="category" v-model="categories" name="template" class="form-category">
+                          <option v-for="category in findManyCategories" :key="category" :value="category">{{ category.name }}</option>
                         </select>
                       </td>
                     </tr>
                     <tr>
-                      <td style="text-align: right;">State</td>
+                      <td style="text-align: right;">Code</td>
                       <td>
-                        <select id="category" v-model="state" name="template" class="form-category">
-                          <option v-for="state in findManyStates" :key="state" :value="state">{{ state.name }}</option>
+                        <input v-model="code" type="text" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: right;">description</td>
+                      <td>
+                          <textarea v-model="description" rows="10" cols="50"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: right;">Ticket</td>
+                      <td>
+                        <select id="category" v-model="ticket" name="template" class="form-category">
+                          <option v-for="ticket in findManyTickets" :key="ticket" :value="ticket">{{ ticket.name }}</option>
                         </select>
                       </td>
                     </tr>
                     <tr>
-                      <td style="text-align: right;">Country Area</td>
+                      <td style="text-align: right;">Customers</td>
                       <td>
-                        <input v-model="country_area" name="fullfillmentCountryArea" type="text" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: right;">Country</td>
-                      <td>
-                        <select id="category" v-model="country" name="template" class="form-category">
-                          <option v-for="country in findManyCountries" :key="country" :value="country">{{ country.name }}</option>
+                        <select id="customersWorkspace" v-model="customer" name="template" class="form-category">
+                          <option v-for="customer in findManyCustomers" :key="customer" :value="customer">{{ customer.name }}</option>
                         </select>
                       </td>
                     </tr>
                     <tr>
-                      <td style="text-align: right;">Zipcode</td>
+                      <td style="text-align: right;">Media</td>
                       <td>
-                        <input v-model="zipcode" name="fullfillmentZipcode" type="text" />
+                        <input v-model="media" name="workspaceMedia" type="image" />
                       </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: right;">Project</td>
+                      <td>
+                        <select id="category" v-model="project" name="template" class="form-category">
+                          <option v-for="project in findManyProjects" :key="project" :value="project">{{ project.name }}</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: right;">Is Workspace public or private?</td>
+                      <td>
+                      <select name="workspacePublic" id="workspacePublic" v-model="isPublic">
+                        <option value="public">Public</option>
+                        <option value="private">Private</option>
+                      </select>
+                    </td>
                     </tr>
                   </tbody>
                 </table>
@@ -123,115 +109,102 @@
 </template>
 
 <script>
-  import  gql from "graphql-tag";
+import gql from "graphql-tag";
+import findManyCategories from "~/graphql/query/findManyCategories"
 
-  import 
-    findManyFullfillments
-  from "~/graphql/query/findManyFullfillments";
-  import  findManyCountries from "~/graphql/query/findManyCountries"
-  import  findManyCities from "~/graphql/query/findManyCities"
-  import  findManyStates from "~/graphql/query/findManyStates"
-
-  const ADD_FULLFILLMENTS = gql`
-    mutation ($name: String!,$company: String!,$phone: String!,$address: String!,$country_area: String!,$stock: String!,$shipping_zones: String!,$address_two: String!,$state: String!,$zipcode: String!,$country: String!,$pickup: String!,$city: String!,$pickup: String!){
-    createOneFullfillments(data: {name: $name,company: $company,phone: $phone,address: $address,country_area: $country_area,zipcode: $zipcode,country: $country,stock: $stock,shipping_zones: $shipping_zones,address_two: $address_two,state: $state,country: $country,city: $city,pickup: $pickup,pickup: $pickup}) {
-        country
-        countries
-        thumbnail
-        name
-        company
-        phone
-        address
-        country_area
-        stock
-        shipping_zones
-        zipcode
-        address_two
-        state
-        city
-        pickup
+  const ADD_WORKSPACE = gql`
+    mutation ($name: String!, $shops: String!, $category: String!, $author: String!, $brands: String, $code: String, $customers: String, $description: String, $isPublic: String, $media: String, $projects: String, $products: String, $tasks: String, $users: String) {
+    updateOneWorkspaces(data: {author: $author, brands: $brand, category: $category, code: $code, customers: $customers, description: $description, isPublic: $isPublic, media: $media, name: $name, products: $products, projects: $projects, shops: $shops, tasks: $tasks, users: $users}) {
+      author
+      brands
+      categories
+      category
+      code
+      customers
+      description
+      isPublic
+      media
+      name
+      products
+      projects
+      shops
+      tasks
+      users
   }
 }`;
-
-
   export default {
     data() {
       return {
-        country: [],
-        countries: [],
-        thumbnail: " ",
+        categories: [],
         name: " ",
-        company: " ",
-        phone: " ",
-        address: " ",
-        country_area: " ",
-        stock: " ",
-        shipping_zones: " ",
-        zipcode: " ",
-        address_two: " ",
-        state: " ",
-        city: " ",
-        pickup: " ",
+        brands: " ",
+        code: " ",
+        customers: " ",
+        projects: " ",
+        description: " ",
+        isPublic: " ",
+        media: " ",
+        shops: " ",
+        tasks: " ",
+        users: " ",
         show: true
       }
     },
     head: {
-      title: 'Add New FullFillment'
+      title: 'Add New Workspace'
     },
 
     methods: {
-      async addFullfillment() {
+      async addWorkspace() {
         const name = this.name;
-        const company = this.company;
-        const phone = this.phone;
-        const address = this.address;
+        const brands = this.brands;
+        const code = this.code;
+        const customers = this.customers;
         // eslint-disable-next-line camelcase
-        const country_area = this.country_area;
-        const zipcode = this.zipcode;
-        const country = this.country;
-        const stock = this.stock;
+        const projects = this.projects;
+        const media = this.media;
+        const categories = this.categories;
+        const description = this.description;
         // eslint-disable-next-line camelcase
-        const shipping_zones = this.shipping_zones;
+        const isPublic = this.isPublic;
         // eslint-disable-next-line camelcase
-        const address_two = this.address_two;
-        const state = this.state;
-        const city = this.city;
-        const pickup = this.pickup;
+        const shops = this.shops;
+        const tasks = this.tasks;
+        const users = this.users;
 
         await this.$apollo.mutate({
-          mutation: ADD_FULLFILLMENTS,
+          mutation: ADD_WORKSPACE,
           variables: {
             name,
-            company,
-            phone,
-            address,
-            country_area,
-            zipcode,
-            country,
-            stock,
-            shipping_zones,
-            address_two,
-            state,
-            city,
-            pickup,
+            brands,
+            code,
+            customers,
+            projects,
+            media,
+            categories,
+            description,
+            isPublic,
+            shops,
+            tasks,
+            users,
           },
           update: (cache, {
             data: {
-              insertFullfillments,
-              insertCountries,
-              insertCities,
-              insertStates
+              insertWorkspaces,
+              insertCategories,
+              insertProjects,
+              insertTickets
             }
           }) => {
             // Read data from cache for this query
             try {
-              const insertedFullfillment = insertFullfillments.returning;
-              const insertedCountries = insertCountries.returning;
-              const insertedCities = insertCities.returning;
-              const insertedStates = insertStates.returning;
-              console.log(insertedFullfillment, insertedCountries, insertedCities, insertedStates)
+              const insertedWorkspace = insertWorkspaces.returning;
+              const insertedCategories = insertCategories.returning;
+              const insertedProjects = insertProjects.returning;
+              const insertedTickets = insertTickets.returning;
+              console.log(insertedWorkspace, insertedCategories, insertedProjects, insertedTickets)
               cache.writeQuery({
-                query: findManyFullfillments
+                query: findManyWorkspaces
               })
             } catch (err) {
               console.error(err)
@@ -239,37 +212,36 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../../shop/fullfillments'
+            path: '../../content/workspaces'
           })
         }).catch(err => console.log(err));
         this.name = ' ';
-        this.company = ' ';
-        this.phone = ' ';
-        this.address = ' ';
-        this.country_area = ' ';
-        this.zipcode = ' ';
-        this.country = ' ';
-        this.stock = ' ';
-        this.shipping_zones = ' ';
-        this.address_two = ' ';
-        this.state = ' ';
-        this.country = ' ';
-        this.city = ' ';
-        this.pickup = ' ';
+        this.brands = ' ';
+        this.code = ' ';
+        this.customers = ' ';
+        this.projects = ' ';
+        this.media = ' ';
+        this.categories = ' ';
+        this.description = ' ';
+        this.isPublic = ' ';
+        this.shops = ' ';
+        this.tasks = ' ';
+        this.categories = ' ';
+        this.users = ' ';
       },
     },
     apollo: {
-      findManyCountries: {
+      findManyTickets: {
         prefetch: true,
-        query: findManyCountries
+        query: findManyTickets
       },
-      findManyCities: {
+      findManyProjects: {
         prefetch: true,
-        query: findManyCities
+        query: findManyProjects
       },
-      findManyStates: {
+      findManyCategories: {
         prefetch: true,
-        query: findManyStates
+        query: findManyCategories
       },
     }
   }

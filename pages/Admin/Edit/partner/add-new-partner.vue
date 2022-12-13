@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Partner" /></a>
         </div>
@@ -106,7 +106,7 @@
 
   const ADD_PARTNER = gql `
     mutation ($name:String!,$city:String!,$isPublic:String!,$state:String!,$country:String!,$business_type:String!,$address:String!){
-    createOnePartners(data: {name: $name, city: $city, state: $state, isPublic: $isPublic, country: $country, business_type: $business_type, address: $address}) {
+    createOnePartners(data: {name: $name, city: $city, state: $state, isPublic: $isPublic, country: $country, business_type: $business_type, address: $address} where: {id: $id}) {
         state
         name
         city
@@ -167,7 +167,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../../shop/partners'
+            path: '../../inventory/partners'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

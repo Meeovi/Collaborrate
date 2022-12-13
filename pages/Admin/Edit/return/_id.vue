@@ -1,10 +1,10 @@
 <template>
     <div>
-        <form v-for="returns in findManyReturns" :key="returns.id" @submit.prevent="addReturn">
+        <form v-for="returns in findManyReturns" :key="returns.id" @submit.prevent="updateReturn(returns)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteReturn(returns)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Return" /></a>
         </div>
@@ -195,9 +195,9 @@
   import findManyReturns from "~/graphql/query/findManyReturns";
   import findManyProducts from "~/graphql/query/findManyProducts";
 
-  const DELETE_RETURN = gql`
+  const UPDATE_RETURN = gql`
     mutation ($name:String!,$validity:String!,$return_prefix:String!, $description:String!, $shippingNumber:String!, $shippingDescription:String!, $status:String!, $liquidationReason:String!, $media:String!, $weight:String!, $height:String!, $howShipped:String!, $type:String!, $location:String!, $shipTo:String!, $products:String!, $case_id:String!){
-    createOneReturns(data: {name: $name, validity: $validity, return_prefix: $return_prefix, description: $description, shippingNumber: $shippingNumber, shippingDescription: $shippingDescription, status: $status, liquidationReason: $liquidationReason, media: $media, weight: $weight, height: $height, howShipped: $howShipped, type: $type, location: $location, shipTo: $shipTo, products: $products, case_id: $case_id}) {
+    updateOneReturns(data: {name: $name, validity: $validity, return_prefix: $return_prefix, description: $description, shippingNumber: $shippingNumber, shippingDescription: $shippingDescription, status: $status, liquidationReason: $liquidationReason, media: $media, weight: $weight, height: $height, howShipped: $howShipped, type: $type, location: $location, shipTo: $shipTo, products: $products, case_id: $case_id} where: {id: $id}) {
         name
         validity
         return_prefix
@@ -218,10 +218,26 @@
   }
 }`;
 
-const UPDATE_RETURN = gql`
-  mutation updateOnereturns($id: Int!){
-  updateOneReturns(where: {id: $id}){
-    affected_rows
+const DELETE_RETURN = gql`
+  mutation deleteOneReturns($id: Int!){
+  deleteOneReturns(where: {id: $id}){
+    name
+        validity
+        return_prefix
+        howShipped
+        description
+        shippingNumber
+        shippingDescription
+        status
+        liquidationReason
+        media
+        height
+        weight
+        type
+        products
+        location
+        shipTo
+        case_id
   }
 }
 `;
@@ -253,7 +269,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/sales/returns'})
+            this.$router.push({path: '../../inventory/returns'})
             }).catch(err => console.log(err));
     },
     async updateReturn(returns){
@@ -277,6 +293,13 @@ export default {
   apollo: {
     findManyReturns: {
       query: findManyReturns,
+      prefetch: ({ route }) => ({ id: route.params.id }),
+      variables() {
+        return { id: this.$route.params.id }
+      }
+    },
+    findManyProducts: {
+      query: findManyProducts,
       prefetch: ({ route }) => ({ id: route.params.id }),
       variables() {
         return { id: this.$route.params.id }

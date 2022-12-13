@@ -1,11 +1,11 @@
 <template>
     <div>
-        <form v-for="shipment in findManyShipments" :key="shipment.id" @submit.prevent="addShipment()">
+        <form v-for="shipment in findManyShipments" :key="shipment.id" @submit.prevent="updateShipment(shipment)">
 
 <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand">
-      <button type="reset" class="btn btn-warning">Reset</button></a>
+      <button type="reset" class="btn btn-warning" @click="deleteShipment(shipment)">Delete</button></a>
     <a class="navbar-brand">
 
       <input type="submit" class="btn btn-warning" value="Save Shipment" /></a>
@@ -65,9 +65,9 @@
 import gql from "graphql-tag";
 import findManyShipments from "~/graphql/query/findManyShipments";
 
-const DELETE_SHIPMENT = gql`
+const UPDATE_SHIPMENT = gql`
 mutation ($carrier_name:String!,$transit_time:String!,$image:String!,$tracking_url:String!,$speed_grade:String!,$product:String!){
-createOneShipments(data: {carrier_name: $carrier_name, transit_time: $transit_time, image: $image, tracking_url: $tracking_url, product: $product, speed_grade: $speed_grade}) {
+updateOneShipments(data: {carrier_name: $carrier_name, transit_time: $transit_time, image: $image, tracking_url: $tracking_url, product: $product, speed_grade: $speed_grade} where: {id: $id}) {
   carrier_name
   transit_time
   image
@@ -77,10 +77,15 @@ createOneShipments(data: {carrier_name: $carrier_name, transit_time: $transit_ti
 }
 }`;
 
-const UPDATE_SHIPMENT = gql`
-  mutation updateOneshipments($id: Int!){
-  updateOneShipments(where: {id: $id}){
-    affected_rows
+const DELETE_SHIPMENT = gql`
+  mutation deleteOneShipments($id: Int!){
+  deleteOneShipments(where: {id: $id}){
+    carrier_name
+  transit_time
+  image
+  tracking_url
+  speed_grade
+  product
   }
 }
 `;
@@ -112,7 +117,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/sales/shipments'})
+            this.$router.push({path: '../../inventory/shipments'})
             }).catch(err => console.log(err));
     },
     async updateShipment(shipment){

@@ -1,10 +1,10 @@
 <template>
   <div>
-    <form v-for="fullfillment in findManyFullfillments" :key="fullfillment.id" @submit.prevent="addFullFillment" >
+    <form v-for="fullfillment in findManyFullfillments" :key="fullfillment.id" @submit.prevent="updateFullFillment(fullfillment)" >
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteFullfillment(fullfillment)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save FullFillment" /></a>
         </div>
@@ -147,9 +147,9 @@
   import  findManyZones from "~/graphql/query/findManyZones"
   // import  companys from "~/graphql/query/findManyCompanys"
 
-  const DELETE_FULLFILLMENT = gql`
+  const UPDATE_FULLFILLMENT = gql`
     mutation ($name: String!,$company: String!,$phone: String!,$address: String!,$country_area: String!,$stock: String!,$shipping_zones: String!,$address_two: String!,$state: String!,$zipcode: String!,$country: String!,$pickup: String!,$city: String!,$pickup: String!){
-    createOneFullfillments(data: {name: $name,company: $company,phone: $phone,address: $address,country_area: $country_area,zipcode: $zipcode,country: $country,stock: $stock,shipping_zones: $shipping_zones,address_two: $address_two,state: $state,country: $country,city: $city,pickup: $pickup,pickup: $pickup}) {
+    createOneFullfillments(data: {name: $name,company: $company,phone: $phone,address: $address,country_area: $country_area,zipcode: $zipcode,country: $country,stock: $stock,shipping_zones: $shipping_zones,address_two: $address_two,state: $state,country: $country,city: $city,pickup: $pickup,pickup: $pickup} where: {id: $id} where: {id: $id}) {
         country
         countries
         thumbnail
@@ -168,10 +168,24 @@
   }
 }`;
 
-const UPDATE_FULLFILLMENT = gql`
-  mutation updateOnefullfillments($id: Int!){
+const DELETE_FULLFILLMENT = gql`
+  mutation updateOnefullfillments($id: Int){
   updateOnefullfillments(where: {id: $id}){
-    affected_rows
+    country
+        countries
+        thumbnail
+        name
+        company
+        phone
+        address
+        country_area
+        stock
+        shipping_zones
+        zipcode
+        address_two
+        state
+        city
+        pickup
   }
 }
 `;
@@ -198,12 +212,12 @@ export default {
         },
         refetchQueries: [
           {
-            query: fullfillments
+            query: findManyFullfillments
           }       
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/shop/fullfillments'})
+            this.$router.push({path: '../../inventory/fullfillments'})
             }).catch(err => console.log(err));
     },
     async updateFullfillment(fullfillment){
@@ -214,7 +228,7 @@ export default {
         },
         refetchQueries: [
           {
-            query: fullfillments
+            query: findManyFullfillments
           }       
           
         ]
@@ -225,8 +239,8 @@ export default {
     }
   },
   apollo: {
-    fullfillments: {
-      query: fullfillments,
+    findManyFullfillments: {
+      query: findManyFullfillments,
       prefetch: ({ route }) => ({ id: route.params.id }),
       variables() {
         return { id: this.$route.params.id }

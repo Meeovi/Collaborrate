@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Warehouse" /></a>
         </div>
@@ -226,7 +226,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../../shop/warehouses'
+            path: '../../inventory/warehouses'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

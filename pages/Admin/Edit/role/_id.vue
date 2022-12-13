@@ -1,12 +1,11 @@
-/* eslint-disable camelcase */
 <template>
   <div>
-    <form v-for="role in findManyRoles" :key="role.id" @submit.prevent="addRole()">
+    <form v-for="role in findManyRoles" :key="role.id" @submit.prevent="updateRole(role)">
 
 <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand">
-      <button type="reset" class="btn btn-warning">Reset</button></a>
+      <button type="reset" class="btn btn-warning" @click="deleteRole(role)">Delete</button></a>
     <a class="navbar-brand">
 
       <input type="submit" class="btn btn-warning" value="Save Role" /></a>
@@ -54,18 +53,19 @@
 import gql from "graphql-tag";
 import findManyRoles from "~/graphql/query/findManyRoles";
 
-const DELETE_ROLE = gql`
+const UPDATE_ROLE = gql`
 mutation ($role_name:String!,$content:String!){
-createOneRoles(data: {role_name: $role_name, content: $content}) {
+updateOneRoles(data: {role_name: $role_name, content: $content} where: {id: $id}) {
   content
   role_name
 }
 }`;
 
-  const UPDATE_PERMISSION = gql`
-  mutation updateOneroles($id: Int!){
-  updateOneRoles(where: {id: $id}){
-    affected_rows
+  const DELETE_ROLE = gql`
+  mutation deleteOneRoles($id: Int!){
+  deleteOneRoles(where: {id: $id}){
+    content
+    role_name
   }
 }
 `;
@@ -86,7 +86,7 @@ createOneRoles(data: {role_name: $role_name, content: $content}) {
     methods: {
       async deleteRole(role) {
         await this.$apollo.mutate({
-          mutation: DELETE_PERMISSION,
+          mutation: DELETE_ROLE,
           variables: {
             id: role.id
           },
@@ -97,13 +97,13 @@ createOneRoles(data: {role_name: $role_name, content: $content}) {
           ]
         }).then(() => {
           this.$router.push({
-            path: '../../admin/system/role-manager'
+            path: '../../system/role-manager'
           })
         }).catch(err => console.log(err));
       },
       async updateRole(role) {
         await this.$apollo.mutate({
-          mutation: UPDATE_PERMISSION,
+          mutation: UPDATE_ROLE,
           variables: {
             id: role.id
           },

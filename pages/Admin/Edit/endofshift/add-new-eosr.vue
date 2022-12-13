@@ -4,7 +4,7 @@
         <nav class="navbar navbar-dark bg-dark">
           <div class="container-fluid">
             <a class="navbar-brand">
-              <button type="reset" class="btn btn-warning">Reset</button></a>
+              <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
             <a class="navbar-brand">
               <input type="submit" class="btn btn-warning" value="Save End of Shift Report" /></a>
           </div>
@@ -124,7 +124,7 @@
   
     const ADD_EOSR = gql`
       mutation ($login:String!, $tickets:String!, $project:String!, $type:String!, $media:String!, $whid:String!, $content:String!, $projects:String!, $nextShift:String!){
-      createOneEndofshift(data: {login: $login, tickets: $tickets, type: $type, media: $media, manager: $manager, whid: $whid, content: $content, projects: $projects, nextShift: $nextShift}) {
+      createOneEndofshift(data: {login: $login, tickets: $tickets, type: $type, media: $media, manager: $manager, whid: $whid, content: $content, projects: $projects, nextShift: $nextShift} where: {id: $id}) {
         projects
         content
         id

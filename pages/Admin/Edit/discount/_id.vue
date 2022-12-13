@@ -1,9 +1,9 @@
 <template>
   <div>
-    <form v-for="certificates in findManyDiscounts" :key="certificates.id" @submit.prevent="addGift_Certificate">
+    <form v-for="discounts in findManyDiscounts" :key="discounts.id" @submit.prevent="updateDiscount(discount)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Delete" @click="deleteDiscount(discount)" /></a>
           <a class="navbar-brand"><input type="submit" class="btn btn-warning" value="Save Gift_Certificate" /></a>
         </div>
       </nav>
@@ -27,20 +27,20 @@
                   <tbody>
                     <tr>
                       <td style="text-align: right;">Gift Name</td>
-                      <td><input :value="certificates.name" type="text" required /></td>
+                      <td><input :value="discounts.name" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Discount</td>
-                      <td><input :value="certificates.discount" type="text" required /></td>
+                      <td><input :value="discounts.discount" type="text" required /></td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Expiration</td>
-                      <td><input id="expiration" :value="certificates.expiration" name="expiration" type="datetime-local" />
+                      <td><input id="expiration" :value="discounts.expiration" name="expiration" type="datetime-local" />
                       </td>
                     </tr>
                     <tr>
                       <td style="text-align: right;">Gift Type</td>
-                      <td><select id="status" :value="certificates.type" name="template" class="form-category">
+                      <td><select id="status" :value="discounts.type" name="template" class="form-category">
                           <option value="giftCard">Gift Card</option>
                           <option value="giftCertificate">Gift Certificate</option>
                         </select>
@@ -48,7 +48,7 @@
                     </tr>
                     <tr>
                       <td style="text-align: right;">Description</td>
-                      <td><textarea :value="certificates.excerpt" cols="40" rows="10"></textarea>
+                      <td><textarea :value="discounts.excerpt" cols="40" rows="10"></textarea>
                       </td>
                     </tr>
                   </tbody>
@@ -67,9 +67,9 @@
   // eslint-disable-next-line camelcase
   import findManyDiscounts from "~/graphql/query/findManyDiscounts"
 
-  const DELETE_GIFT_CERTIFICATE = gql `
+  const UPDATE_DISCOUNT = gql`
     mutation ($name:String!,$discount:String!$expiration:String!,$excerpt:String!,$type:String){
-    createOneGift_certificates(data: {name: $name, discount: $discount, expiration: $expiration, excerpt: $excerpt, type: $type}) {
+    updateOneDiscounts(data: {name: $name, discount: $discount, expiration: $expiration, excerpt: $excerpt, type: $type} where: {id: $id} where: {id: $id}) {
         name
         discount
         expiration
@@ -78,17 +78,21 @@
   }
 }`;
 
-const UPDATE_GIFT_CERTIFICATE = gql`
-  mutation updateOnegift_certificates($id: Int!){
-  updateOnegift_certificates(where: {id: $id}){
-    affected_rows
+const DELETE_DISCOUNT = gql`
+  mutation deleteOneDiscounts($id: Int!){
+  deleteOneDiscounts(where: {id: $id}){
+    name
+        discount
+        expiration
+        excerpt
+        type
   }
 }
 `;
 
 export default {
     head: {
-        name: 'Edit Gift Certificate'
+        name: 'Edit Discount'
     },
  mounted(){
       this.forceRerender();
@@ -100,11 +104,11 @@ export default {
       }
   },
   methods: {
-   async deleteCountry(certificates){
+   async deleteDiscount(discounts){
     await this.$apollo.mutate({
-        mutation: DELETE_GIFT_CERTIFICATE,
+        mutation: UPDATE_DISCOUNT,
         variables: {
-          id: certificates.id
+          id: discounts.id
         },
         refetchQueries: [
           {
@@ -113,14 +117,14 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/sales/gift_certificates'})
+            this.$router.push({path: '../../inventory/discounts'})
             }).catch(err => console.log(err));
     },
-    async updateCountry(certificates){
+    async updateDiscount(discounts){
     await this.$apollo.mutate({
-        mutation: UPDATE_GIFT_CERTIFICATE,
+        mutation: DELETE_DISCOUNT,
         variables: {
-          id: certificates.id
+          id: discounts.id
         },
         refetchQueries: [
           {

@@ -3,7 +3,7 @@
     <form @submit.prevent="addDiscount">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Delete"  @click="deleteNewsletter(newsletter)" /></a>
           <a class="navbar-brand"><input type="submit" class="btn btn-warning" value="Save Discount" /></a>
         </div>
       </nav>
@@ -70,7 +70,7 @@
 
   const ADD_DISCOUNT = gql `
     mutation ($name:String!,$discount:String!$expiration:String!,$excerpt:String!,$type:String){
-    createOneDiscounts(data: {name: $name, discount: $discount, expiration: $expiration, excerpt: $excerpt, type: $type}) {
+    createOneDiscounts(data: {name: $name, discount: $discount, expiration: $expiration, excerpt: $excerpt, type: $type} where: {id: $id}) {
         name
         discount
         expiration

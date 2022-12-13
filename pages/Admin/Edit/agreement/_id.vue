@@ -1,13 +1,10 @@
-
-
-
 <template>
   <div>
-    <form method="agreement" @submit.prevent="updateAgreement.mutate({ pk_columns: { id: agreement.id }})">
+    <form v-for="agreement in findManyAgreements" :key="agreement.id" @submit.prevent="updateAgreement(agreement)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning" @click="deleteAgreement.mutate({id: agreement.id})">Delete</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Agreement" /></a>
         </div>
@@ -26,7 +23,7 @@
             <div id="v-tabs-home" class="tab-pane fade show active" role="tabpanel" aria-labelledby="v-tabs-home-tab">
               <div class="table table-responsive">
                 <table class="table">
-                  <tbody v-for="agreement in findManyAgreements" :key="agreement.id">
+                  <tbody>
                     <tr>
                       <td style="text-align: right;">Agreement Name</td>
                       <td>
@@ -59,7 +56,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input v-html="agreement.image" type="image" name="headshot" />
+                        <input :value="agreement.image" type="image" name="headshot" />
                       </td>
                     </tr>
                   </tbody>
@@ -74,111 +71,82 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      agreement: {},
-    }
-  },
-  async fetch() {
-    const agreement = await fetch(
-      `${location.origin}/api/agreement/${this.$route.params.id}`
-    ).then((res) => res.json())
-    this.agreement = agreement
-  },
-  methods: {
-    destroy: async function (id) {
-      const res = await fetch(`${location.origin}/api/agreement/${id}`, {
-        method: 'DELETE',
-      })
-      const data = await res.json()
-      this.$router.push('/')
-    },
-    publish: async function (id) {
-      const res = await fetch(`${location.origin}/api/publish/${id}`, {
-        method: 'PUT',
-      })  
-      const data = await res.json()
-      this.$router.push('/')
-    },
-  },
-}
-//import gql from 'graphql-tag'
-/*import findManyAgreements from '~/graphql/query/findManyAgreements'
-import { updateOneAgreements, deleteOneAgreements } from '~/graphql/code/agreements'
-import Editor from '~/components/Editor.vue'
+  import gql from 'graphql-tag'
+  import findManyAgreements from '~/graphql/query/findManyAgreements'
+  //import { updateOneAgreements, deleteOneAgreements } from '~/graphql/code/agreements'
+  import Editor from '~/components/Editor.vue'
 
-export default {
+  const UPDATE_AGREEMENT = gql`
+  mutation MyMutation($id: BigInt, $content: String, $excerpt: String, $image: String, $name: String, $type: String) {
+    updateOneAgreements(data: {content: {set: $content}, excerpt: {set: $excerpt}, image: {set: $image}, name: {set: $name}, type: {set: $type}} where: {id: $id} where: {id: $id}) {
+      content
+      excerpt
+      image
+      name
+      type
+    }
+  }
+`;
+
+  const DELETE_AGREEMENT = gql`
+  mutation MyMutation ($id: BigInt){
+    deleteOneAgreements(where: {id: $id} where: {id: $id}) {
+      content
+      excerpt
+      image
+      name
+      type
+    }
+  }
+`;
+
+  export default {
     components: {
       Editor
     },
     head: {
-      title: 'Edit Agreement'
+      name: 'Edit Agreement'
     },
+    mounted() {
+      this.forceRerender();
+    },
+    // eslint-disable-next-line vue/order-in-components
     data() {
       return {
-        type: [],
-        name: " ",
-        excerpt: " ",
-        content: " ",
-        image: " ",
-        user_id: "",
-        reference_id: "",
-        shop_id: "",
+        componentKey: 0
       }
     },
     methods: {
-      async updateAgreement() {
-        const name = this.name;
-        const content = this.content;
-        const excerpt = this.excerpt;
-        const type = this.type;
-        const image = this.image;
-        const user_id = this.user_id;
-        const reference_id = this.reference_id;
-        const shop_id = this.shop_id;
+      async deleteAgreement(agreement) {
         await this.$apollo.mutate({
-          mutation: updateOneAgreements,
+          mutation: DELETE_AGREEMENT,
           variables: {
-            name,
-            excerpt,
-            type,
-            content,
-            image,
-            reference_id,
-            user_id,
-            shop_id,
+            id: agreement.id
           },
-          update: (cache, {
-            data: {
-              updateAgreements
+          refetchQueries: [{
+              query: findManyAgreements
             }
-          }) => {
-            // Read data from cache for this query
-            try {
-              const insertedAgreement = updateAgreements.returning;
-              console.log(insertedAgreement)
-              cache.writeQuery({
-                query: findManyAgreements
-              })
-            } catch (err) {
-              console.error(err)
-            }
-          }
+          ]
         }).then(() => {
           this.$router.push({
             path: '../../marketing/agreements'
           })
         }).catch(err => console.log(err));
-        this.name = ' ';
-        this.excerpt = ' ';
-        this.type = ' ';
-        this.content = ' ';
-        this.image = ' ';
-        this.reference_id = '';
-        this.user_id = '';
-        this.shop_id = '';
       },
+      async updateAgreement(agreement) {
+        await this.$apollo.mutate({
+          mutation: UPDATE_AGREEMENT,
+          variables: {
+            id: agreement.id
+          },
+          refetchQueries: [{
+            query: findManyAgreements
+          }]
+        })
+      },
+      forceRerender() {
+        this.componentKey += 1;
+      }
     },
     apollo: {
       findManyAgreements: {
@@ -193,9 +161,10 @@ export default {
             id: this.$route.params.id
           }
         }
-      }
-    }
-  }*/
+      },
+    },
+  }
+
 </script>
 
 <style>

@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
         </div>
       </nav>
       <br>
@@ -120,7 +120,7 @@
 
   const ADD_VENDORS = gql `
     mutation ($name: String!,$products: String!,$website: String!,$categories: String!,$country: String!,$description: String!,$image: String!,$tags: String!,$physical_store: String!,$type: String!){
-    createOneVendors(data: {name: $name,products: $products,categories: $categories,website: $website,country: $country,description: $description,image: $image,tags: $tags,physical_store: $physical_store,type: $type}) {
+    createOneVendors(data: {name: $name,products: $products,categories: $categories,website: $website,country: $country,description: $description,image: $image,tags: $tags,physical_store: $physical_store,type: $type} where: {id: $id}) {
         categories
         name
         products
@@ -202,7 +202,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../../shop/vendors'
+            path: '../../inventory/vendors'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

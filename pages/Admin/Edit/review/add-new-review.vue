@@ -3,7 +3,7 @@
     <form @submit.prevent="addReview()">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Reset" /></a>
+          <a class="navbar-brand"><input type="reset" class="btn btn-warning" value="Delete"  @click="deleteNewsletter(newsletter)" /></a>
           <a class="navbar-brand"><input type="submit" class="btn btn-warning" value="Save Review" /></a>
         </div>
       </nav>
@@ -61,7 +61,7 @@ import  findManyReviews from "~/graphql/query/findManyReviews"
 
 const ADD_REVIEWS = gql`
     mutation ($first_name:String!,$last_name:String!$websites:String!,$content:String!){
-    createOneReviews(data: {first_name: $first_name, last_name: $last_name, websites: $websites, content: $content}) {
+    createOneReviews(data: {first_name: $first_name, last_name: $last_name, websites: $websites, content: $content} where: {id: $id}) {
         first_name
             last_name
             websites

@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Article" /></a>
         </div>
@@ -197,7 +197,7 @@
 
   const ADD_ARTICLES = gql`
     mutation ($categories:String!, $content:String!, $customers:String!, $excerpt:String!, $image:String!, $isPublic:String!, $meta_description:String!, $meta_name:String!, $meta_url:String!, $name:String!, $published:String!, $tags:String!, $users:String!, $type:String!){
-    createOneArticles(data: {categories: $categories, content: $content, customers: $customers, excerpt: $excerpt, image: $image, isPublic: $isPublic, meta_description: $meta_description, meta_name: $meta_name, meta_url: $meta_url, name: $name, published: $published, tags: $tags, users: $users, type: $type}) {
+    createOneArticles(data: {categories: $categories, content: $content, customers: $customers, excerpt: $excerpt, image: $image, isPublic: $isPublic, meta_description: $meta_description, meta_name: $meta_name, meta_url: $meta_url, name: $name, published: $published, tags: $tags, users: $users, type: $type} where: {id: $id}) {
         categories
         content
         customers

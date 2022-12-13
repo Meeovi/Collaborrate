@@ -1,10 +1,10 @@
 <template>
   <div>
-    <form v-for="attribute in findManyAttributes" :key="attribute.id" @submit.prevent="addAttribute()">
+    <form v-for="attribute in findManyAttributes" :key="attribute.id" @submit.prevent="updateAttribute(attribute)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAttribute(attribute)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Attribute" /></a>
         </div>
@@ -186,7 +186,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/shop/attributes'})
+            this.$router.push({path: '../../inventory/attributes'})
             }).catch(err => console.log(err));
     },
     async updateAttribute(attribute){

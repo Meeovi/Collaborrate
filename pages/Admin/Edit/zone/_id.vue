@@ -1,10 +1,10 @@
 <template>
   <div>
-    <form v-for="zone in zones" :key="zone.id" @submit.prevent="addZone()">
+    <form v-for="zone in findManyZones" :key="zone.id" @submit.prevent="updateZone(zone)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteZone(zone)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Zone" /></a>
         </div>
@@ -29,7 +29,7 @@
                     <tr>
                       <td style="text-align: right;">Code</td>
                       <td>
-                        <input type="text" :value="zone.code" required  />
+                        <input type="text" :value="zone.code" required />
                       </td>
                     </tr>
                     <tr>
@@ -61,7 +61,8 @@
                       <td style="text-align: right;">Country</td>
                       <td>
                         <select id="category" v-model="country" name="template" class="form-category">
-                          <option v-for="country in findManyCountries" :key="country" :value="country">{{ country.name }}</option>
+                          <option v-for="country in findManyCountries" :key="country" :value="country">
+                            {{ country.name }}</option>
                         </select>
                       </td>
                     </tr>
@@ -77,13 +78,13 @@
 </template>
 
 <script>
-  import  gql from "graphql-tag";
-  import  findManyZones from "~/graphql/query/findManyZones"
-  import  findManyCountries from "~/graphql/query/findManyCountries"
+  import gql from "graphql-tag";
+  import findManyZones from "~/graphql/query/findManyZones"
+  import findManyCountries from "~/graphql/query/findManyCountries"
 
-  const DELETE_ZONE = gql`
+  const UPDATE_ZONE = gql`
     mutation ($code:String!,$name:String!$type:String!,$scope:String!,$country:String!){
-    createOneZones(data: {code: $code, name: $name, type: $type, scope: $scope, country: $country}) {
+    updateOneZones(data: {code: $code, name: $name, type: $type, scope: $scope, country: $country} where: {id: $id}) {
         code
         name
         type
@@ -92,76 +93,87 @@
   }
 }`;
 
-const UPDATE_ZONE = gql`
-  mutation updateOnezones($id: Int!){
-  updateOnezones(where: {id: $id}){
-    affected_rows
+  const DELETE_ZONE = gql`
+  mutation updateOneZones($id: Int){
+  updateOneZones(where: {id: $id}){
+    code
+    name
+    type
+    scope
+    country
   }
 }
 `;
 
-export default {
+  export default {
     head: {
-        name: 'Edit Zone'
+      name: 'Edit Zone'
     },
- mounted(){
+    mounted() {
       this.forceRerender();
-  },
-  // eslint-disable-next-line vue/order-in-components
-  data(){
-      return{
-          componentKey: 0
-      }
-  },
-  methods: {
-   async deleteZone(zone){
-    await this.$apollo.mutate({
-        mutation: DELETE_ZONE,
-        variables: {
-          id: zone.id
-        },
-        refetchQueries: [
-          {
-            query: zones
-          }       
-          
-        ]
-      }).then(() => {
-            this.$router.push({path: '../../admin/system/zones'})
-            }).catch(err => console.log(err));
     },
-    async updateZone(zone){
-    await this.$apollo.mutate({
-        mutation: UPDATE_ZONE,
-        variables: {
-          id: zone.id
-        },
-        refetchQueries: [
-          {
-            query: zones
-          }       
-          
-        ]
-      })
-    },
-    forceRerender() {
-      this.componentKey += 1;  
-    }
-  },
-  apollo: {
-    zones: {
-      query: zones,
-      prefetch: ({ route }) => ({ id: route.params.id }),
-      variables() {
-        return { id: this.$route.params.id }
+    // eslint-disable-next-line vue/order-in-components
+    data() {
+      return {
+        componentKey: 0
       }
     },
-    country: {
+    methods: {
+      async deleteZone(zone) {
+        await this.$apollo.mutate({
+          mutation: DELETE_ZONE,
+          variables: {
+            id: zone.id
+          },
+          refetchQueries: [{
+              query: findManyZones
+            }
+
+          ]
+        }).then(() => {
+          this.$router.push({
+            path: '../../system/general-settings'
+          })
+        }).catch(err => console.log(err));
+      },
+      async updateZone(zone) {
+        await this.$apollo.mutate({
+          mutation: UPDATE_ZONE,
+          variables: {
+            id: zone.id
+          },
+          refetchQueries: [{
+              query: findManyZones
+            }
+
+          ]
+        })
+      },
+      forceRerender() {
+        this.componentKey += 1;
+      }
+    },
+    apollo: {
+      findManyZones: {
+        query: findManyZones,
+        prefetch: ({
+          route
+        }) => ({
+          id: route.params.id
+        }),
+        variables() {
+          return {
+            id: this.$route.params.id
+          }
+        }
+      },
+      findManyCountries: {
         prefetch: true,
-        query: country
+        query: findManyCountries
       }
-  },
-}
+    },
+  }
+
 </script>
 
 <style>

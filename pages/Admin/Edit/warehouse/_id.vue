@@ -1,10 +1,10 @@
 <template>
   <div>
-    <form v-for="warehouse in warehouses" :key="warehouse.id" @submit.prevent="addWarehouse()">
+    <form v-for="warehouse in warehouses" :key="warehouse.id" @submit.prevent="updateWarehouse(warehouse)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteWarehouse(warehouse)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Warehouse" /></a>
         </div>
@@ -133,7 +133,7 @@
 
   const DELETE_WAREHOUSE = gql`
     mutation ($name: String!,$description: String!,$image: String!,$products: String!,$status: String!,$state: String!,$postal: String!,$country: String!,$isPublic: String!,$city: String!, $category: String!){
-    createOneWarehouse(data: {name: $name,description: $description,image: $image,postal: $postal,country: $country,products: $products,status: $status,state: $state,city: $city,isPublic: $isPublic, category: $category}){
+    updateOneWarehouse(data: {name: $name,description: $description,image: $image,postal: $postal,country: $country,products: $products,status: $status,state: $state,city: $city,isPublic: $isPublic, category: $category}){
       country
         thumbnail
         name
@@ -151,9 +151,21 @@
 }`;
 
 const UPDATE_WAREHOUSE = gql`
-  mutation updateOnewarehouses($id: Int!){
-  updateOnewarehouses(where: {id: $id}){
-    affected_rows
+  mutation deleteOneWarehouses($id: Int!){
+  deleteOneWarehouses(where: {id: $id}){
+    country
+        thumbnail
+        name
+        description
+        category
+        image
+        websites
+        products
+        postal
+        status
+        state
+        city
+        isPublic
   }
 }
 `;
@@ -185,7 +197,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/shop/warehouses'})
+            this.$router.push({path: '../../inventory/warehouses'})
             }).catch(err => console.log(err));
     },
     async updateWarehouse(warehouse){

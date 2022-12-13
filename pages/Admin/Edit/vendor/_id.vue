@@ -1,10 +1,10 @@
 <template>
   <div>
-    <form v-for="shop in findManyVendors" :key="shop.id"  @submit.prevent="addShop()">
+    <form v-for="vendor in findManyVendors" :key="vendor.id"  @submit.prevent="updateVendor(vendor)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteVendor(vendor)">Delete</button></a>
         </div>
       </nav>
       <br>
@@ -113,14 +113,14 @@
 <script>
   import gql from "graphql-tag";
   /* eslint-disable camelcase */
-  import findManyShops from "~/graphql/query/findManyVendors";
+  import findManyVendors from "~/graphql/query/findManyVendors";
   import findManyCategories from "~/graphql/query/findManyCategories"
   import findManyCountries from "~/graphql/query/findManyCountries"
   import findManyProducts from "~/graphql/query/findManyProducts"
 
-  const DELETE_VENDOR = gql `
+  const DELETE_VENDOR = gql`
     mutation ($name: String!,$products: String!,$website: String!,$categories: String!,$country: String!,$description: String!,$image: String!,$tags: String!,$physical_store: String!,$type: String!){
-    createOneShops(data: {name: $name,products: $products,categories: $categories,website: $website,country: $country,description: $description,image: $image,tags: $tags,physical_store: $physical_store,type: $type}) {
+    updateOneVendors(data: {name: $name,products: $products,categories: $categories,website: $website,country: $country,description: $description,image: $image,tags: $tags,physical_store: $physical_store,type: $type} where: {id: $id}) {
         categories
         name
         products
@@ -135,16 +135,25 @@
 }`;
 
 const UPDATE_VENDOR = gql`
-  mutation updateOneVendors($id: Int!){
-  updateOneVendors(where: {id: $id}){
-    affected_rows
+  mutation deleteOneVendors($id: Int){
+  deleteOneVendors(where: {id: $id}){
+    categories
+        name
+        products
+        website
+        country
+        description
+        image
+        tags
+        physical_store
+        type
   }
 }
 `;
 
 export default {
     head: {
-        name: 'Edit Shop'
+        name: 'Edit Vendor'
     },
  mounted(){
       this.forceRerender();
@@ -156,11 +165,11 @@ export default {
       }
   },
   methods: {
-   async deleteShop(shop){
+   async deleteVendor(vendor){
     await this.$apollo.mutate({
         mutation: DELETE_VENDOR,
         variables: {
-          id: shop.id
+          id: vendor.id
         },
         refetchQueries: [
           {
@@ -169,14 +178,14 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/shop/vendors'})
+            this.$router.push({path: '../../inventory/vendors'})
             }).catch(err => console.log(err));
     },
-    async updateShop(shop){
+    async updateVendor(vendor){
     await this.$apollo.mutate({
         mutation: UPDATE_VENDOR,
         variables: {
-          id: shop.id
+          id: vendor.id
         },
         refetchQueries: [
           {

@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save City" /></a>
         </div>
@@ -100,7 +100,7 @@
 
   const ADD_CITIES = gql `
     mutation ($name:String!,$state:String,$country:String,$postalCode:String,$description:String){
-    createOneCities(data: {name: $name, state: $state, country: $country, postalCode: $postalCode, description: $description}) {
+    createOneCities(data: {name: $name, state: $state, country: $country, postalCode: $postalCode, description: $description} where: {id: $id}) {
         name
         state
         country
@@ -154,7 +154,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../../shop/cities'
+            path: '../../inventory/cities'
           })
         }).catch(err => console.log(err));
         this.name = ' ';

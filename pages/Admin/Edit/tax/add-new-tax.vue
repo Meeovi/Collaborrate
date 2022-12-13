@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Tax" /></a>
         </div>
@@ -94,7 +94,7 @@
 
   const ADD_TAX_RATE = gql`
     mutation ($country:String! $default_store_view:String! $zip_post_is_range:Boolean! $tax_identifier:String! $state:String! $rate_percent:String! $postcode:String!, $taxDefault:String $taxCategory:String){
-    createOnetax_rate(data: {country: $country, default_store_view: $default_store_view, zip_post_is_range: $zip_post_is_range, tax_identifier: $tax_identifier, state: $state, rate_percent: $rate_percent, postcode: $postcode, taxDefault: $taxDefault, taxCategory: $taxCategory}) {
+    createOnetax_rate(data: {country: $country, default_store_view: $default_store_view, zip_post_is_range: $zip_post_is_range, tax_identifier: $tax_identifier, state: $state, rate_percent: $rate_percent, postcode: $postcode, taxDefault: $taxDefault, taxCategory: $taxCategory} where: {id: $id}) {
     country
         default_store_view
         postcode
@@ -168,7 +168,7 @@
           }
         }).then(() => {
           this.$router.push({
-            path: '../../shop/tax-rate'
+            path: '../../inventory/tax-rate'
           })
         }).catch(err => console.log(err));
         this.country = " ";

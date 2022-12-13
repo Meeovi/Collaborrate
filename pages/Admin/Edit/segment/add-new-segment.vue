@@ -6,7 +6,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
 
             <input type="submit" class="btn btn-warning" value="Save Segment" /></a>
@@ -59,7 +59,7 @@
 
   const ADD_SEGMENTS = gql `
     mutation ($name:String!,$description:String,$website:String,$status:String,$apply_to:String){
-    createOneSegments(data: {name: $name, description: $description, website: $website, status: $status, apply_to: $apply_to}) {
+    createOneSegments(data: {name: $name, description: $description, website: $website, status: $status, apply_to: $apply_to} where: {id: $id}) {
         website
         name
         description

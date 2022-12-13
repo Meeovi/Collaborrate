@@ -4,7 +4,7 @@
         <nav class="navbar navbar-dark bg-dark">
           <div class="container-fluid">
             <a class="navbar-brand">
-              <button type="reset" class="btn btn-warning">Reset</button></a>
+              <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
             <a class="navbar-brand">
               <input type="submit" class="btn btn-warning" value="Save Webhook" /></a>
           </div>
@@ -55,7 +55,7 @@
   
     const ADD_WEBHOOKS = gql`
       mutation ($name:String!,$url:String){
-      createOneWebhooks(data: {name: $name, url: $url}) {
+      createOneWebhooks(data: {name: $name, url: $url} where: {id: $id}) {
           name
           url
     }

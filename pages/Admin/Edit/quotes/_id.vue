@@ -1,10 +1,10 @@
 <template>
   <div>
-    <form  v-for="quote in findManyQuotes" :key="quote.id" @submit.prevent="addQuote">
+    <form  v-for="quote in findManyQuotes" :key="quote.id" @submit.prevent="updateQuote(quote)">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteQuote(quote)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Quote" /></a>
         </div>
@@ -301,9 +301,9 @@
   import findManyUsers from '~/graphql/query/findManyUsers'
   /* eslint-disable camelcase */
 
-  const DELETE_QUOTE = gql`
+  const UPDATE_QUOTE = gql`
     mutation ($account: String!, $contact: String!, $name: String!, $grand_total: String!, $categories: String!, $quote_stage: String!, $valid_until: String!, $approval_issues: String!, $approval_status: String!, $assigned_to: String!, $billing_city: String!, $billing_country: String!, $billing_postal: String!, $billing_state: String!, $billing_street: String!, $contact: String!, $created_at: String!, $currency: String!, $cust_id: String!, $customers: String!, $discount: String!, $invoice_status: String!, $line_item_discount: String!, $line_item_group_total: String!, $line_item_name: String!, $name: String!, $line_item_total: String!, $line_item_tax: String!, $line_item_subtotal: String!, $prod_id: String!, $payment_terms: String!, $order_id: String!, $tax: String!, $subtotal: String!, $shipping_tax: String!, $shipping_street: String!, $shipping_state: String!, $shipping_postal: String!, $shipping_country: String!, $shipping_city: String!, $shipping: String!, $quote_stage: String!, $total: String!, $opportunity: String){
-    createOneQuotes(data: {account: $account, contact: $contact, name: $name, grand_total: $grand_total, categories: $categories, quote_stage: $quote_stage, valid_until: $valid_until, approval_issues: $approval_issues, approval_status: $approval_status, assigned_to: $assigned_to, billing_city: $billing_city, billing_country: $billing_country, billing_postal: $billing_postal, billing_state: $billing_state, billing_street: $billing_street, contact: $contact, created_at: $created_at, currency: $currency, cust_id: $cust_id, customers: $customers, discount: $discount, invoice_status: $invoice_status, line_item_discount: $line_item_discount, line_item_group_total: $line_item_group_total, line_item_name: $line_item_name, line_item_total: $line_item_total, line_item_tax: $line_item_tax, line_item_subtotal: $line_item_subtotal, prod_id: $prod_id, payment_terms: $payment_terms, order_id: $order_id, tax: $tax, subtotal: $subtotal, shipping_tax: $shipping_tax, shipping_street: $shipping_street, shipping_state: $shipping_state, shipping_postal: $shipping_postal, shipping_country: $shipping_country, shipping_city: $shipping_city, shipping: $shipping, total: $total, opportunity: $opportunity}) {
+    updateOneQuotes(data: {account: $account, contact: $contact, name: $name, grand_total: $grand_total, categories: $categories, quote_stage: $quote_stage, valid_until: $valid_until, approval_issues: $approval_issues, approval_status: $approval_status, assigned_to: $assigned_to, billing_city: $billing_city, billing_country: $billing_country, billing_postal: $billing_postal, billing_state: $billing_state, billing_street: $billing_street, contact: $contact, created_at: $created_at, currency: $currency, cust_id: $cust_id, customers: $customers, discount: $discount, invoice_status: $invoice_status, line_item_discount: $line_item_discount, line_item_group_total: $line_item_group_total, line_item_name: $line_item_name, line_item_total: $line_item_total, line_item_tax: $line_item_tax, line_item_subtotal: $line_item_subtotal, prod_id: $prod_id, payment_terms: $payment_terms, order_id: $order_id, tax: $tax, subtotal: $subtotal, shipping_tax: $shipping_tax, shipping_street: $shipping_street, shipping_state: $shipping_state, shipping_postal: $shipping_postal, shipping_country: $shipping_country, shipping_city: $shipping_city, shipping: $shipping, total: $total, opportunity: $opportunity} where: {id: $id}) {
         categories
         account
         name
@@ -348,10 +348,50 @@
   }
 }`;
 
-const UPDATE_QUOTE = gql`
-  mutation updateOnequotes($id: Int!){
-  updateOnequotes(where: {id: $id}){
-    affected_rows
+const DELETE_QUOTE = gql`
+  mutation deleteOneQuotes($id: Int){
+  deleteOneQuotes(where: {id: $id}){
+    categories
+        account
+        name
+        grand_total
+        quote_stage
+        valid_until
+        approval_issues
+        approval_status
+        assigned_to
+        billing_city
+        billing_country
+        billing_postal
+        billing_state
+        billing_street
+        contact
+        opportunity
+        created_at
+        currency
+        cust_id
+        customers
+        discount
+        invoice_status
+        line_item_discount
+        line_item_group_total
+        line_item_name
+        line_item_total
+        line_item_tax
+        line_item_subtotal
+        prod_id
+        payment_terms
+        order_id
+        tax
+        subtotal
+        shipping_tax
+        shipping_street
+        shipping_state
+        shipping_postal
+        shipping_country
+        shipping_city
+        shipping
+        total
   }
 }
 `;
@@ -383,7 +423,7 @@ export default {
           
         ]
       }).then(() => {
-            this.$router.push({path: '../../admin/sales/quotes'})
+            this.$router.push({path: '../../inventory/quotes'})
             }).catch(err => console.log(err));
     },
     async updateQuote(quote){

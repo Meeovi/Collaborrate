@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <button type="reset" class="btn btn-warning">Reset</button></a>
+            <button type="reset" class="btn btn-warning" @click="deleteAgreement(agreement)">Delete</button></a>
           <a class="navbar-brand">
             <input type="submit" class="btn btn-warning" value="Save Permission" /></a>
         </div>
@@ -100,7 +100,7 @@
 
   const ADD_PERMISSIONS = gql`
     mutation ($Delete:String!,$update:String,$users:String,$content:String,$read:String!,$role:String!,$created_at:String!,$create:String!,$name:String){
-    createOnePermissions(data: {Delete: $Delete, update: $update, users: $users, content: $content, read: $read, role: $role, created_at: $created_at, create: $create}) {
+    createOnePermissions(data: {Delete: $Delete, update: $update, users: $users, content: $content, read: $read, role: $role, created_at: $created_at, create: $create} where: {id: $id}) {
             content
             users
             name
