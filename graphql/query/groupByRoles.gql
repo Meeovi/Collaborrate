@@ -1,0 +1,62 @@
+query {
+  groupByRoles 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      content
+      createRole
+      created_at
+      deleteRole
+      id
+      publishRole
+      role
+      role_name
+      type
+      unpublishRole
+      updateRole
+    }
+    _max {
+      content
+      createRole
+      created_at
+      deleteRole
+      id
+      publishRole
+      role
+      role_name
+      type
+      unpublishRole
+      updateRole
+    }
+    _min {
+      content
+      createRole
+      created_at
+      deleteRole
+      id
+      publishRole
+      role
+      role_name
+      type
+      unpublishRole
+      updateRole
+    }
+    _sum {
+      id
+    }
+    content
+    createRole
+    created_at
+    deleteRole
+    id
+    publishRole
+    role
+    role_name
+    type
+    unpublishRole
+    updateRole
+  }
+}

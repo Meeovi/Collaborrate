@@ -1,0 +1,50 @@
+query {
+  groupByTags 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      articles
+      categories
+      customers
+      excerpt
+      id
+      name
+      products
+      users
+    }
+    _max {
+      articles
+      categories
+      customers
+      excerpt
+      id
+      name
+      products
+      users
+    }
+    _min {
+      articles
+      categories
+      customers
+      excerpt
+      id
+      name
+      products
+      users
+    }
+    _sum {
+      id
+    }
+    articles
+    categories
+    customers
+    excerpt
+    id
+    name
+    products
+    users
+  }
+}

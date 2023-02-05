@@ -1,0 +1,31 @@
+# Information here will appear across AlternateCMS
+
+# Database URL
+
+DATABASE_URL='postgresql://{env.DB_USER}:{env.DB_PASSWORD}@{env.DB_HOST}:{env.DB_PORT}/{env.DB_DATABASE}'
+
+# Supabase URL and Credentials (Supabase is not required, but recommended)
+
+YOUR_SUPABASE_URL=""
+YOUR_SUPABASE_KEY=""
+
+# DATABASE DETAILS
+
+DB_Client=""
+DB_HOST=""
+DB_PORT="5432"
+DB_USER=""
+DB_PASSWORD=""
+DB_DATABASE=""
+
+# SQLITE3 Filename
+
+SQLITE_FILENAME="./mydb.sqlite"
+
+# SENTRY Integration
+
+SENTRY_DSN=''
+
+# GRAPHQL Endpoint
+
+GRAPHQL_ENDPOINT=''

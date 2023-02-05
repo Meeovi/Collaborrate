@@ -1,0 +1,36 @@
+query {
+  aggregateDashboardjson 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      definition
+      description
+      format
+      id
+      name
+      url
+    }
+    _max {
+      definition
+      description
+      format
+      id
+      name
+      url
+    }
+    _min {
+      definition
+      description
+      format
+      id
+      name
+      url
+    }
+    _sum {
+      id
+    }
+  }
+}

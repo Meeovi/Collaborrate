@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateCitiesArgs } from "./args/AggregateCitiesArgs";
+import { CreateManyCitiesArgs } from "./args/CreateManyCitiesArgs";
+import { CreateOneCitiesArgs } from "./args/CreateOneCitiesArgs";
+import { DeleteManyCitiesArgs } from "./args/DeleteManyCitiesArgs";
+import { DeleteOneCitiesArgs } from "./args/DeleteOneCitiesArgs";
+import { FindFirstCitiesArgs } from "./args/FindFirstCitiesArgs";
+import { FindFirstCitiesOrThrowArgs } from "./args/FindFirstCitiesOrThrowArgs";
+import { FindManyCitiesArgs } from "./args/FindManyCitiesArgs";
+import { FindUniqueCitiesArgs } from "./args/FindUniqueCitiesArgs";
+import { FindUniqueCitiesOrThrowArgs } from "./args/FindUniqueCitiesOrThrowArgs";
+import { GroupByCitiesArgs } from "./args/GroupByCitiesArgs";
+import { UpdateManyCitiesArgs } from "./args/UpdateManyCitiesArgs";
+import { UpdateOneCitiesArgs } from "./args/UpdateOneCitiesArgs";
+import { UpsertOneCitiesArgs } from "./args/UpsertOneCitiesArgs";
+import { Cities } from "../../../models/Cities";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateCities } from "../../outputs/AggregateCities";
+import { CitiesGroupBy } from "../../outputs/CitiesGroupBy";
+export declare class CitiesCrudResolver {
+    aggregateCities(ctx: any, info: GraphQLResolveInfo, args: AggregateCitiesArgs): Promise<AggregateCities>;
+    createManyCities(ctx: any, info: GraphQLResolveInfo, args: CreateManyCitiesArgs): Promise<AffectedRowsOutput>;
+    createOneCities(ctx: any, info: GraphQLResolveInfo, args: CreateOneCitiesArgs): Promise<Cities>;
+    deleteManyCities(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCitiesArgs): Promise<AffectedRowsOutput>;
+    deleteOneCities(ctx: any, info: GraphQLResolveInfo, args: DeleteOneCitiesArgs): Promise<Cities | null>;
+    findFirstCities(ctx: any, info: GraphQLResolveInfo, args: FindFirstCitiesArgs): Promise<Cities | null>;
+    findFirstCitiesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstCitiesOrThrowArgs): Promise<Cities | null>;
+    findManyCities(ctx: any, info: GraphQLResolveInfo, args: FindManyCitiesArgs): Promise<Cities[]>;
+    findUniqueCities(ctx: any, info: GraphQLResolveInfo, args: FindUniqueCitiesArgs): Promise<Cities | null>;
+    findUniqueCitiesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueCitiesOrThrowArgs): Promise<Cities | null>;
+    groupByCities(ctx: any, info: GraphQLResolveInfo, args: GroupByCitiesArgs): Promise<CitiesGroupBy[]>;
+    updateManyCities(ctx: any, info: GraphQLResolveInfo, args: UpdateManyCitiesArgs): Promise<AffectedRowsOutput>;
+    updateOneCities(ctx: any, info: GraphQLResolveInfo, args: UpdateOneCitiesArgs): Promise<Cities | null>;
+    upsertOneCities(ctx: any, info: GraphQLResolveInfo, args: UpsertOneCitiesArgs): Promise<Cities>;
+}

@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateBrandsArgs } from "./args/AggregateBrandsArgs";
+import { CreateManyBrandsArgs } from "./args/CreateManyBrandsArgs";
+import { CreateOneBrandsArgs } from "./args/CreateOneBrandsArgs";
+import { DeleteManyBrandsArgs } from "./args/DeleteManyBrandsArgs";
+import { DeleteOneBrandsArgs } from "./args/DeleteOneBrandsArgs";
+import { FindFirstBrandsArgs } from "./args/FindFirstBrandsArgs";
+import { FindFirstBrandsOrThrowArgs } from "./args/FindFirstBrandsOrThrowArgs";
+import { FindManyBrandsArgs } from "./args/FindManyBrandsArgs";
+import { FindUniqueBrandsArgs } from "./args/FindUniqueBrandsArgs";
+import { FindUniqueBrandsOrThrowArgs } from "./args/FindUniqueBrandsOrThrowArgs";
+import { GroupByBrandsArgs } from "./args/GroupByBrandsArgs";
+import { UpdateManyBrandsArgs } from "./args/UpdateManyBrandsArgs";
+import { UpdateOneBrandsArgs } from "./args/UpdateOneBrandsArgs";
+import { UpsertOneBrandsArgs } from "./args/UpsertOneBrandsArgs";
+import { Brands } from "../../../models/Brands";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateBrands } from "../../outputs/AggregateBrands";
+import { BrandsGroupBy } from "../../outputs/BrandsGroupBy";
+export declare class BrandsCrudResolver {
+    aggregateBrands(ctx: any, info: GraphQLResolveInfo, args: AggregateBrandsArgs): Promise<AggregateBrands>;
+    createManyBrands(ctx: any, info: GraphQLResolveInfo, args: CreateManyBrandsArgs): Promise<AffectedRowsOutput>;
+    createOneBrands(ctx: any, info: GraphQLResolveInfo, args: CreateOneBrandsArgs): Promise<Brands>;
+    deleteManyBrands(ctx: any, info: GraphQLResolveInfo, args: DeleteManyBrandsArgs): Promise<AffectedRowsOutput>;
+    deleteOneBrands(ctx: any, info: GraphQLResolveInfo, args: DeleteOneBrandsArgs): Promise<Brands | null>;
+    findFirstBrands(ctx: any, info: GraphQLResolveInfo, args: FindFirstBrandsArgs): Promise<Brands | null>;
+    findFirstBrandsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstBrandsOrThrowArgs): Promise<Brands | null>;
+    findManyBrands(ctx: any, info: GraphQLResolveInfo, args: FindManyBrandsArgs): Promise<Brands[]>;
+    findUniqueBrands(ctx: any, info: GraphQLResolveInfo, args: FindUniqueBrandsArgs): Promise<Brands | null>;
+    findUniqueBrandsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueBrandsOrThrowArgs): Promise<Brands | null>;
+    groupByBrands(ctx: any, info: GraphQLResolveInfo, args: GroupByBrandsArgs): Promise<BrandsGroupBy[]>;
+    updateManyBrands(ctx: any, info: GraphQLResolveInfo, args: UpdateManyBrandsArgs): Promise<AffectedRowsOutput>;
+    updateOneBrands(ctx: any, info: GraphQLResolveInfo, args: UpdateOneBrandsArgs): Promise<Brands | null>;
+    upsertOneBrands(ctx: any, info: GraphQLResolveInfo, args: UpsertOneBrandsArgs): Promise<Brands>;
+}

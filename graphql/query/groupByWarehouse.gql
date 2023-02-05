@@ -1,0 +1,70 @@
+query {
+  groupByWarehouse 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      category
+      city
+      country
+      created_at
+      description
+      id
+      image
+      isPublic
+      name
+      postal
+      products
+      state
+      status
+    }
+    _max {
+      category
+      city
+      country
+      created_at
+      description
+      id
+      image
+      isPublic
+      name
+      postal
+      products
+      state
+      status
+    }
+    _min {
+      category
+      city
+      country
+      created_at
+      description
+      id
+      image
+      isPublic
+      name
+      postal
+      products
+      state
+      status
+    }
+    _sum {
+      id
+    }
+    category
+    city
+    country
+    created_at
+    description
+    id
+    image
+    isPublic
+    name
+    postal
+    products
+    state
+    status
+  }
+}

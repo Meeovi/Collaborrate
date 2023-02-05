@@ -1,0 +1,42 @@
+query {
+  groupByReviews 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      content
+      created_at
+      first_name
+      id
+      last_name
+      websites
+    }
+    _max {
+      content
+      created_at
+      first_name
+      id
+      last_name
+      websites
+    }
+    _min {
+      content
+      created_at
+      first_name
+      id
+      last_name
+      websites
+    }
+    _sum {
+      id
+    }
+    content
+    created_at
+    first_name
+    id
+    last_name
+    websites
+  }
+}

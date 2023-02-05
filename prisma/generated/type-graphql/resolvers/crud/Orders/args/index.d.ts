@@ -1,0 +1,14 @@
+export { AggregateOrdersArgs } from "./AggregateOrdersArgs";
+export { CreateManyOrdersArgs } from "./CreateManyOrdersArgs";
+export { CreateOneOrdersArgs } from "./CreateOneOrdersArgs";
+export { DeleteManyOrdersArgs } from "./DeleteManyOrdersArgs";
+export { DeleteOneOrdersArgs } from "./DeleteOneOrdersArgs";
+export { FindFirstOrdersArgs } from "./FindFirstOrdersArgs";
+export { FindFirstOrdersOrThrowArgs } from "./FindFirstOrdersOrThrowArgs";
+export { FindManyOrdersArgs } from "./FindManyOrdersArgs";
+export { FindUniqueOrdersArgs } from "./FindUniqueOrdersArgs";
+export { FindUniqueOrdersOrThrowArgs } from "./FindUniqueOrdersOrThrowArgs";
+export { GroupByOrdersArgs } from "./GroupByOrdersArgs";
+export { UpdateManyOrdersArgs } from "./UpdateManyOrdersArgs";
+export { UpdateOneOrdersArgs } from "./UpdateOneOrdersArgs";
+export { UpsertOneOrdersArgs } from "./UpsertOneOrdersArgs";

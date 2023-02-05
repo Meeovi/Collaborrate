@@ -1,0 +1,25 @@
+query {
+  findFirstReturns 
+ {
+    case_id
+    created_at
+    customers
+    description
+    height
+    howShipped
+    id
+    liquidationReason
+    location
+    media
+    name
+    products
+    return_prefix
+    shipTo
+    shippingDescription
+    shippingNumber
+    status
+    type
+    validity
+    weight
+  }
+}

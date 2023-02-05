@@ -1,0 +1,56 @@
+query {
+  aggregateManufacturer 
+ {
+    _avg {
+      id
+      product
+    }
+    _count {
+      _all
+      city
+      code
+      country
+      created_at
+      description
+      id
+      isPublic
+      media
+      name
+      product
+      products
+      state
+    }
+    _max {
+      city
+      code
+      country
+      created_at
+      description
+      id
+      isPublic
+      media
+      name
+      product
+      products
+      state
+    }
+    _min {
+      city
+      code
+      country
+      created_at
+      description
+      id
+      isPublic
+      media
+      name
+      product
+      products
+      state
+    }
+    _sum {
+      id
+      product
+    }
+  }
+}

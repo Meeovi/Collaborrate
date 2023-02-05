@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateSettingsArgs } from "./args/AggregateSettingsArgs";
+import { CreateManySettingsArgs } from "./args/CreateManySettingsArgs";
+import { CreateOneSettingsArgs } from "./args/CreateOneSettingsArgs";
+import { DeleteManySettingsArgs } from "./args/DeleteManySettingsArgs";
+import { DeleteOneSettingsArgs } from "./args/DeleteOneSettingsArgs";
+import { FindFirstSettingsArgs } from "./args/FindFirstSettingsArgs";
+import { FindFirstSettingsOrThrowArgs } from "./args/FindFirstSettingsOrThrowArgs";
+import { FindManySettingsArgs } from "./args/FindManySettingsArgs";
+import { FindUniqueSettingsArgs } from "./args/FindUniqueSettingsArgs";
+import { FindUniqueSettingsOrThrowArgs } from "./args/FindUniqueSettingsOrThrowArgs";
+import { GroupBySettingsArgs } from "./args/GroupBySettingsArgs";
+import { UpdateManySettingsArgs } from "./args/UpdateManySettingsArgs";
+import { UpdateOneSettingsArgs } from "./args/UpdateOneSettingsArgs";
+import { UpsertOneSettingsArgs } from "./args/UpsertOneSettingsArgs";
+import { Settings } from "../../../models/Settings";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateSettings } from "../../outputs/AggregateSettings";
+import { SettingsGroupBy } from "../../outputs/SettingsGroupBy";
+export declare class SettingsCrudResolver {
+    aggregateSettings(ctx: any, info: GraphQLResolveInfo, args: AggregateSettingsArgs): Promise<AggregateSettings>;
+    createManySettings(ctx: any, info: GraphQLResolveInfo, args: CreateManySettingsArgs): Promise<AffectedRowsOutput>;
+    createOneSettings(ctx: any, info: GraphQLResolveInfo, args: CreateOneSettingsArgs): Promise<Settings>;
+    deleteManySettings(ctx: any, info: GraphQLResolveInfo, args: DeleteManySettingsArgs): Promise<AffectedRowsOutput>;
+    deleteOneSettings(ctx: any, info: GraphQLResolveInfo, args: DeleteOneSettingsArgs): Promise<Settings | null>;
+    findFirstSettings(ctx: any, info: GraphQLResolveInfo, args: FindFirstSettingsArgs): Promise<Settings | null>;
+    findFirstSettingsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstSettingsOrThrowArgs): Promise<Settings | null>;
+    findManySettings(ctx: any, info: GraphQLResolveInfo, args: FindManySettingsArgs): Promise<Settings[]>;
+    findUniqueSettings(ctx: any, info: GraphQLResolveInfo, args: FindUniqueSettingsArgs): Promise<Settings | null>;
+    findUniqueSettingsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueSettingsOrThrowArgs): Promise<Settings | null>;
+    groupBySettings(ctx: any, info: GraphQLResolveInfo, args: GroupBySettingsArgs): Promise<SettingsGroupBy[]>;
+    updateManySettings(ctx: any, info: GraphQLResolveInfo, args: UpdateManySettingsArgs): Promise<AffectedRowsOutput>;
+    updateOneSettings(ctx: any, info: GraphQLResolveInfo, args: UpdateOneSettingsArgs): Promise<Settings | null>;
+    upsertOneSettings(ctx: any, info: GraphQLResolveInfo, args: UpsertOneSettingsArgs): Promise<Settings>;
+}

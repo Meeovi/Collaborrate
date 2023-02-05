@@ -1,0 +1,14 @@
+export { AggregateWishlistsArgs } from "./AggregateWishlistsArgs";
+export { CreateManyWishlistsArgs } from "./CreateManyWishlistsArgs";
+export { CreateOneWishlistsArgs } from "./CreateOneWishlistsArgs";
+export { DeleteManyWishlistsArgs } from "./DeleteManyWishlistsArgs";
+export { DeleteOneWishlistsArgs } from "./DeleteOneWishlistsArgs";
+export { FindFirstWishlistsArgs } from "./FindFirstWishlistsArgs";
+export { FindFirstWishlistsOrThrowArgs } from "./FindFirstWishlistsOrThrowArgs";
+export { FindManyWishlistsArgs } from "./FindManyWishlistsArgs";
+export { FindUniqueWishlistsArgs } from "./FindUniqueWishlistsArgs";
+export { FindUniqueWishlistsOrThrowArgs } from "./FindUniqueWishlistsOrThrowArgs";
+export { GroupByWishlistsArgs } from "./GroupByWishlistsArgs";
+export { UpdateManyWishlistsArgs } from "./UpdateManyWishlistsArgs";
+export { UpdateOneWishlistsArgs } from "./UpdateOneWishlistsArgs";
+export { UpsertOneWishlistsArgs } from "./UpsertOneWishlistsArgs";

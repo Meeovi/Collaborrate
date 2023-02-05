@@ -1,0 +1,50 @@
+query {
+  groupBySegments 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      apply_to
+      created_at
+      customers
+      description
+      id
+      name
+      status
+      website
+    }
+    _max {
+      apply_to
+      created_at
+      customers
+      description
+      id
+      name
+      status
+      website
+    }
+    _min {
+      apply_to
+      created_at
+      customers
+      description
+      id
+      name
+      status
+      website
+    }
+    _sum {
+      id
+    }
+    apply_to
+    created_at
+    customers
+    description
+    id
+    name
+    status
+    website
+  }
+}
