@@ -1,9 +1,9 @@
-import { PluginsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/PluginsOrderByWithRelationAndSearchRelevanceInput";
+import { PluginsOrderByWithRelationInput } from "../../../inputs/PluginsOrderByWithRelationInput";
 import { PluginsWhereInput } from "../../../inputs/PluginsWhereInput";
 import { PluginsWhereUniqueInput } from "../../../inputs/PluginsWhereUniqueInput";
 export declare class FindManyPluginsArgs {
     where?: PluginsWhereInput | undefined;
-    orderBy?: PluginsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: PluginsOrderByWithRelationInput[] | undefined;
     cursor?: PluginsWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

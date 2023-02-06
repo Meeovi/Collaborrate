@@ -1,9 +1,9 @@
-import { WebhooksOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/WebhooksOrderByWithRelationAndSearchRelevanceInput";
+import { WebhooksOrderByWithRelationInput } from "../../../inputs/WebhooksOrderByWithRelationInput";
 import { WebhooksWhereInput } from "../../../inputs/WebhooksWhereInput";
 import { WebhooksWhereUniqueInput } from "../../../inputs/WebhooksWhereUniqueInput";
 export declare class FindFirstWebhooksOrThrowArgs {
     where?: WebhooksWhereInput | undefined;
-    orderBy?: WebhooksOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: WebhooksOrderByWithRelationInput[] | undefined;
     cursor?: WebhooksWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

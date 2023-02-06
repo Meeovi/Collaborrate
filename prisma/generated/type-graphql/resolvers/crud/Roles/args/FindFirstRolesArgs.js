@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindFirstRolesArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const RolesOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/RolesOrderByWithRelationAndSearchRelevanceInput");
+const RolesOrderByWithRelationInput_1 = require("../../../inputs/RolesOrderByWithRelationInput");
 const RolesWhereInput_1 = require("../../../inputs/RolesWhereInput");
 const RolesWhereUniqueInput_1 = require("../../../inputs/RolesWhereUniqueInput");
 const RolesScalarFieldEnum_1 = require("../../../../enums/RolesScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", RolesWhereInput_1.RolesWhereInput)
 ], FindFirstRolesArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [RolesOrderByWithRelationAndSearchRelevanceInput_1.RolesOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [RolesOrderByWithRelationInput_1.RolesOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

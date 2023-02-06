@@ -3,7 +3,7 @@
    "version": "0.0.4",
    "description": "A headless content management system with ecommerce features, graphql, Nuxtjs, and Prisma ORM.",
    "author": "Sebastian Hilton (https://www.sebastianhilton.com)",
-   "homepage": "https://www.alternatecms.com",
+   "homepage": "https://www.collaborrate.com",
    "repository": {
       "type": "git",
       "url": "git+https://github.com/bastianhilton/AlternateCMS.git"
@@ -13,26 +13,21 @@
    },
    "license": "MIT",
    "private": true,
-   "prisma": {
-      "seed": "node prisma/seedDashboard.js"
-   },
    "scripts": {
       "alternate-commit": "git add . && git commit -m \"ready for update\"",
-      "alternate-update": "git pull \"https://github.com/Meeovi/AlternateFramework\"",
+      "alternate-update": "git pull \"https://github.com/Meeovi/Collaborrate\"",
       "build": "nuxt build",
       "dev": "nuxt dev --port 8001 && node server/server.js",
       "yoga": "ts-node server/index.ts",
       "prisma-dev": "npx prisma generate",
-      "docs": "npx prisma-docs-generator serve",
       "generate:prisma": "prisma generate --schema=prisma/schema.prisma",
-      "codegen": "graphql-codegen --config ./packages/gateway/codegen.ts",
       "db-dev": "prisma migrate dev --schema=prisma/schema.prisma",
       "ts-node": "ts-node -r tsconfig-paths/register --compiler-options '{\"module\":\"CommonJS\"}'",
       "gql-generate": "node packages/core/generators/graphql/queryGenerator.js -i server/generated-schema.graphql -o graphql/ --depth 0",
       "generate": "nuxt generate",
       "preview": "nuxt preview",
       "postinstall": "nuxt prepare",
-      "all": "npm-run-all --parallel dev docs yoga gql-generate",
+      "all": "npm-run-all --parallel dev yoga gql-generate",
       "start": "ts-node src/index.ts"
    },
    "devDependencies": {
@@ -62,8 +57,6 @@
       "@envelop/sentry": "^4.0.3",
       "@envelop/validation-cache": "^5.0.3",
       "@fastify/express": "^2.3.0",
-      "@formkit/nuxt": "^1.0.0-beta.12",
-      "@formkit/pro": "^1.0.0-alpha.37",
       "@fortawesome/fontawesome-svg-core": "^6.2.1",
       "@fortawesome/free-solid-svg-icons": "^6.2.1",
       "@fortawesome/vue-fontawesome": "^3.0.2",
@@ -88,8 +81,6 @@
       "apollo-server": "^3.11.1",
       "axios": "^1.2.2",
       "bcrypt": "^5.1.0",
-      "can": "^6.6.2",
-      "can-stache-loader": "^3.0.0",
       "chart.js": "^4.1.2",
       "cookie": "^0.5.0",
       "cors": "^2.8.5",
@@ -113,17 +104,13 @@
       "multer": "^1.4.5-lts.1",
       "nodemailer": "^6.8.0",
       "nuxt-security": "^0.10.1",
-      "prisma-docs-generator": "^0.5.0",
-      "raw-loader": "^4.0.2",
       "reflect-metadata": "^0.1.13",
       "sass": "^1.57.0",
       "ts-node": "^10.9.1",
       "tslib": "^2.4.1",
       "type-graphql": "^1.1.1",
       "typegraphql-prisma": "^0.23.1",
-      "uuid": "^9.0.0",
       "vue-chartjs": "^5.2.0",
-      "vue-formio": "^4.0.8",
       "vuetify": "^3.0.5"
    }
 }

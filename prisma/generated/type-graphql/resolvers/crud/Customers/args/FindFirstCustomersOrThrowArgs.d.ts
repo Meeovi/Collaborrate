@@ -1,9 +1,9 @@
-import { CustomersOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/CustomersOrderByWithRelationAndSearchRelevanceInput";
+import { CustomersOrderByWithRelationInput } from "../../../inputs/CustomersOrderByWithRelationInput";
 import { CustomersWhereInput } from "../../../inputs/CustomersWhereInput";
 import { CustomersWhereUniqueInput } from "../../../inputs/CustomersWhereUniqueInput";
 export declare class FindFirstCustomersOrThrowArgs {
     where?: CustomersWhereInput | undefined;
-    orderBy?: CustomersOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: CustomersOrderByWithRelationInput[] | undefined;
     cursor?: CustomersWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

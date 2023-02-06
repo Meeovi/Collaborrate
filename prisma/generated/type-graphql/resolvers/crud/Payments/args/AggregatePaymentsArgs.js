@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AggregatePaymentsArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const PaymentsOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/PaymentsOrderByWithRelationAndSearchRelevanceInput");
+const PaymentsOrderByWithRelationInput_1 = require("../../../inputs/PaymentsOrderByWithRelationInput");
 const PaymentsWhereInput_1 = require("../../../inputs/PaymentsWhereInput");
 const PaymentsWhereUniqueInput_1 = require("../../../inputs/PaymentsWhereUniqueInput");
 let AggregatePaymentsArgs = class AggregatePaymentsArgs {
@@ -15,7 +15,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", PaymentsWhereInput_1.PaymentsWhereInput)
 ], AggregatePaymentsArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [PaymentsOrderByWithRelationAndSearchRelevanceInput_1.PaymentsOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [PaymentsOrderByWithRelationInput_1.PaymentsOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

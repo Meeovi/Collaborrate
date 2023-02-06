@@ -1,9 +1,9 @@
-import { MediamanagerOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/MediamanagerOrderByWithRelationAndSearchRelevanceInput";
+import { MediamanagerOrderByWithRelationInput } from "../../../inputs/MediamanagerOrderByWithRelationInput";
 import { MediamanagerWhereInput } from "../../../inputs/MediamanagerWhereInput";
 import { MediamanagerWhereUniqueInput } from "../../../inputs/MediamanagerWhereUniqueInput";
 export declare class FindManyMediamanagerArgs {
     where?: MediamanagerWhereInput | undefined;
-    orderBy?: MediamanagerOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: MediamanagerOrderByWithRelationInput[] | undefined;
     cursor?: MediamanagerWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

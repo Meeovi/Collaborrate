@@ -42,13 +42,12 @@
 
             <v-list density="compact" nav>
               <v-list-item prepend-icon="fas fa-home" title="Home" value="home" href="/"></v-list-item>
-                  <v-list-item prepend-icon="fas fa-feather" title="Projects" value="Projects" href="/Admin/Content/Projects"></v-list-item>
-                  <v-list-item prepend-icon="fas fa-th" title="Categories" value="Categories" href="/Admin/Content/Categories"></v-list-item>
-                  <v-list-item prepend-icon="fas fa-tag" title="Tags" value="Tags" href="/Admin/Content/Tags"></v-list-item>
-                  <v-list-item prepend-icon="fas fa-sitemap" title="Inventory" value="Inventory" href="/Admin/Content/Inventory"></v-list-item>
-                  <v-list-item prepend-icon="fas fa-bullhorn" title="Marketing" value="Marketing" href="/Admin/Content/Marketing"></v-list-item>
-                  <v-list-item prepend-icon="fas fa-desktop" title="Pages" value="desktop" href="/Admin/Content/PageManager/"></v-list-item>
-                  <v-list-item prepend-icon="fas fa-icons" title="Media Manager" value="media manager" href="/Admin/Content/Media/"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-sitemap" title="Projects" value="Projects" href="/Admin/Projects"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-th" title="Categories" value="Categories" href="/Admin/Categories"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-tag" title="Tags" value="Tags" href="/Admin/Tags"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-list" title="Lists" value="Lists" href="/Admin/Lists"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-ticket" title="Tickets" value="Tickets" href="/Admin/Tickets/"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-icons" title="Media Manager" value="media manager" href="/Admin/Media/"></v-list-item>
               <v-list-item prepend-icon="fas fa-users" title="Customers" value="Customers" href="/Admin/Customers"></v-list-item>
               <v-list-item prepend-icon="fas fa-cubes" title="Integrations" value="integrations"
                 href="/Admin/Integrations/"></v-list-item>
@@ -73,43 +72,6 @@
       return {
         drawer: null,
         location: 'bottom',
-        items: [{
-            title: 'Home',
-            icon: 'fas fa-home'
-          },
-          {
-            title: 'Content Manager',
-            icon: 'fas fa-feather-pointed'
-          },
-          {
-            title: 'Dashboards',
-            icon: 'fas fa-chart-simple'
-          },
-          {
-            title: 'Monitoring',
-            icon: 'fas fa-chart-column'
-          },
-          {
-            title: 'Database',
-            icon: 'fas fa-database'
-          },
-          {
-            title: 'Pages',
-            icon: 'fas fa-desktop'
-          },
-          {
-            title: 'Media Manager',
-            icon: 'fas fa-icons'
-          },
-          {
-            title: 'Integrations',
-            icon: 'fas fa-cubes'
-          },
-          {
-            title: 'Settings',
-            icon: 'fas fa-gear'
-          },
-        ],
         rail: true,
       }
     }

@@ -1,9 +1,9 @@
-import { PaymentsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/PaymentsOrderByWithRelationAndSearchRelevanceInput";
+import { PaymentsOrderByWithRelationInput } from "../../../inputs/PaymentsOrderByWithRelationInput";
 import { PaymentsWhereInput } from "../../../inputs/PaymentsWhereInput";
 import { PaymentsWhereUniqueInput } from "../../../inputs/PaymentsWhereUniqueInput";
 export declare class FindFirstPaymentsOrThrowArgs {
     where?: PaymentsWhereInput | undefined;
-    orderBy?: PaymentsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: PaymentsOrderByWithRelationInput[] | undefined;
     cursor?: PaymentsWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

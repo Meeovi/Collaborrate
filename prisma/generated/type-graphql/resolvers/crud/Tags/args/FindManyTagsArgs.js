@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindManyTagsArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const TagsOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/TagsOrderByWithRelationAndSearchRelevanceInput");
+const TagsOrderByWithRelationInput_1 = require("../../../inputs/TagsOrderByWithRelationInput");
 const TagsWhereInput_1 = require("../../../inputs/TagsWhereInput");
 const TagsWhereUniqueInput_1 = require("../../../inputs/TagsWhereUniqueInput");
 const TagsScalarFieldEnum_1 = require("../../../../enums/TagsScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", TagsWhereInput_1.TagsWhereInput)
 ], FindManyTagsArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [TagsOrderByWithRelationAndSearchRelevanceInput_1.TagsOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [TagsOrderByWithRelationInput_1.TagsOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

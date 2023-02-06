@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AggregatePermissionsArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const PermissionsOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/PermissionsOrderByWithRelationAndSearchRelevanceInput");
+const PermissionsOrderByWithRelationInput_1 = require("../../../inputs/PermissionsOrderByWithRelationInput");
 const PermissionsWhereInput_1 = require("../../../inputs/PermissionsWhereInput");
 const PermissionsWhereUniqueInput_1 = require("../../../inputs/PermissionsWhereUniqueInput");
 let AggregatePermissionsArgs = class AggregatePermissionsArgs {
@@ -15,7 +15,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", PermissionsWhereInput_1.PermissionsWhereInput)
 ], AggregatePermissionsArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [PermissionsOrderByWithRelationAndSearchRelevanceInput_1.PermissionsOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [PermissionsOrderByWithRelationInput_1.PermissionsOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

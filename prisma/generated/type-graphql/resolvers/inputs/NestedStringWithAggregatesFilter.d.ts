@@ -11,7 +11,6 @@ export declare class NestedStringWithAggregatesFilter {
     contains?: string | undefined;
     startsWith?: string | undefined;
     endsWith?: string | undefined;
-    search?: string | undefined;
     not?: NestedStringWithAggregatesFilter | undefined;
     _count?: NestedIntFilter | undefined;
     _min?: NestedStringFilter | undefined;

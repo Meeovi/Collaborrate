@@ -69,12 +69,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], NestedStringNullableWithAggregatesFilter.prototype, "endsWith", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], NestedStringNullableWithAggregatesFilter.prototype, "search", void 0);
-tslib_1.__decorate([
     TypeGraphQL.Field(_type => NestedStringNullableWithAggregatesFilter_1, {
         nullable: true
     }),

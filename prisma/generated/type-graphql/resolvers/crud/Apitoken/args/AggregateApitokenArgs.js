@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AggregateApitokenArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const ApitokenOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/ApitokenOrderByWithRelationAndSearchRelevanceInput");
+const ApitokenOrderByWithRelationInput_1 = require("../../../inputs/ApitokenOrderByWithRelationInput");
 const ApitokenWhereInput_1 = require("../../../inputs/ApitokenWhereInput");
 const ApitokenWhereUniqueInput_1 = require("../../../inputs/ApitokenWhereUniqueInput");
 let AggregateApitokenArgs = class AggregateApitokenArgs {
@@ -15,7 +15,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", ApitokenWhereInput_1.ApitokenWhereInput)
 ], AggregateApitokenArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [ApitokenOrderByWithRelationAndSearchRelevanceInput_1.ApitokenOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [ApitokenOrderByWithRelationInput_1.ApitokenOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

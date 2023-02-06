@@ -1,9 +1,9 @@
-import { ApitokenOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ApitokenOrderByWithRelationAndSearchRelevanceInput";
+import { ApitokenOrderByWithRelationInput } from "../../../inputs/ApitokenOrderByWithRelationInput";
 import { ApitokenWhereInput } from "../../../inputs/ApitokenWhereInput";
 import { ApitokenWhereUniqueInput } from "../../../inputs/ApitokenWhereUniqueInput";
 export declare class FindFirstApitokenArgs {
     where?: ApitokenWhereInput | undefined;
-    orderBy?: ApitokenOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: ApitokenOrderByWithRelationInput[] | undefined;
     cursor?: ApitokenWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

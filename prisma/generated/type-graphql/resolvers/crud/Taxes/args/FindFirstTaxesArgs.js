@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindFirstTaxesArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const TaxesOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/TaxesOrderByWithRelationAndSearchRelevanceInput");
+const TaxesOrderByWithRelationInput_1 = require("../../../inputs/TaxesOrderByWithRelationInput");
 const TaxesWhereInput_1 = require("../../../inputs/TaxesWhereInput");
 const TaxesWhereUniqueInput_1 = require("../../../inputs/TaxesWhereUniqueInput");
 const TaxesScalarFieldEnum_1 = require("../../../../enums/TaxesScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", TaxesWhereInput_1.TaxesWhereInput)
 ], FindFirstTaxesArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [TaxesOrderByWithRelationAndSearchRelevanceInput_1.TaxesOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [TaxesOrderByWithRelationInput_1.TaxesOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

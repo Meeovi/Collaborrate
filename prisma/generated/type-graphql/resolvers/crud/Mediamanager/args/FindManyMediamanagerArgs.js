@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindManyMediamanagerArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const MediamanagerOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/MediamanagerOrderByWithRelationAndSearchRelevanceInput");
+const MediamanagerOrderByWithRelationInput_1 = require("../../../inputs/MediamanagerOrderByWithRelationInput");
 const MediamanagerWhereInput_1 = require("../../../inputs/MediamanagerWhereInput");
 const MediamanagerWhereUniqueInput_1 = require("../../../inputs/MediamanagerWhereUniqueInput");
 const MediamanagerScalarFieldEnum_1 = require("../../../../enums/MediamanagerScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", MediamanagerWhereInput_1.MediamanagerWhereInput)
 ], FindManyMediamanagerArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [MediamanagerOrderByWithRelationAndSearchRelevanceInput_1.MediamanagerOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [MediamanagerOrderByWithRelationInput_1.MediamanagerOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

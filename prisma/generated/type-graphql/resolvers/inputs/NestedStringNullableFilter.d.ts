@@ -9,6 +9,5 @@ export declare class NestedStringNullableFilter {
     contains?: string | undefined;
     startsWith?: string | undefined;
     endsWith?: string | undefined;
-    search?: string | undefined;
     not?: NestedStringNullableFilter | undefined;
 }

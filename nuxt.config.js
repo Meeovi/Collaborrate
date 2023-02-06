@@ -1,7 +1,4 @@
 //import { defineNuxtConfig } from 'nuxt'
-import { setAbsoluteSqliteDatabaseUrlForPrisma } from '@sidebase/nuxt-prisma'
-
-setAbsoluteSqliteDatabaseUrlForPrisma()
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -23,7 +20,6 @@ export default defineNuxtConfig({
 
     modules: [
       '@nuxtjs/apollo',
-      '@formkit/nuxt',
       //'@sidebase/nuxt-auth',
       '@nuxt/content',
       '@nuxtjs/i18n',

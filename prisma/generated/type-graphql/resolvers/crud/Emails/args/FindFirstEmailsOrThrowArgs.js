@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindFirstEmailsOrThrowArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const EmailsOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/EmailsOrderByWithRelationAndSearchRelevanceInput");
+const EmailsOrderByWithRelationInput_1 = require("../../../inputs/EmailsOrderByWithRelationInput");
 const EmailsWhereInput_1 = require("../../../inputs/EmailsWhereInput");
 const EmailsWhereUniqueInput_1 = require("../../../inputs/EmailsWhereUniqueInput");
 const EmailsScalarFieldEnum_1 = require("../../../../enums/EmailsScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", EmailsWhereInput_1.EmailsWhereInput)
 ], FindFirstEmailsOrThrowArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [EmailsOrderByWithRelationAndSearchRelevanceInput_1.EmailsOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [EmailsOrderByWithRelationInput_1.EmailsOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

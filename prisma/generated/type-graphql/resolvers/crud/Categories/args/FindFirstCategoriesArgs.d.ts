@@ -1,9 +1,9 @@
-import { CategoriesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/CategoriesOrderByWithRelationAndSearchRelevanceInput";
+import { CategoriesOrderByWithRelationInput } from "../../../inputs/CategoriesOrderByWithRelationInput";
 import { CategoriesWhereInput } from "../../../inputs/CategoriesWhereInput";
 import { CategoriesWhereUniqueInput } from "../../../inputs/CategoriesWhereUniqueInput";
 export declare class FindFirstCategoriesArgs {
     where?: CategoriesWhereInput | undefined;
-    orderBy?: CategoriesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: CategoriesOrderByWithRelationInput[] | undefined;
     cursor?: CategoriesWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;
