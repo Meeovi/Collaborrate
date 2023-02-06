@@ -1,0 +1,31 @@
+[{
+    "type": "Int"
+},
+{
+    "type": "BigInt"
+},
+{
+    "type": "Text"
+},
+{
+    "type": "Boolean"
+},
+{
+    "type": "SmallInt"
+},
+{
+    "type": "DateTime"
+},
+{
+    "type": "Float"
+},
+{
+    "type": "Json"
+},
+{
+    "type": "Bytes"
+},
+{
+    "type": "Decimal"
+}
+]

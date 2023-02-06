@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateOrdersArgs } from "./args/AggregateOrdersArgs";
+import { CreateManyOrdersArgs } from "./args/CreateManyOrdersArgs";
+import { CreateOneOrdersArgs } from "./args/CreateOneOrdersArgs";
+import { DeleteManyOrdersArgs } from "./args/DeleteManyOrdersArgs";
+import { DeleteOneOrdersArgs } from "./args/DeleteOneOrdersArgs";
+import { FindFirstOrdersArgs } from "./args/FindFirstOrdersArgs";
+import { FindFirstOrdersOrThrowArgs } from "./args/FindFirstOrdersOrThrowArgs";
+import { FindManyOrdersArgs } from "./args/FindManyOrdersArgs";
+import { FindUniqueOrdersArgs } from "./args/FindUniqueOrdersArgs";
+import { FindUniqueOrdersOrThrowArgs } from "./args/FindUniqueOrdersOrThrowArgs";
+import { GroupByOrdersArgs } from "./args/GroupByOrdersArgs";
+import { UpdateManyOrdersArgs } from "./args/UpdateManyOrdersArgs";
+import { UpdateOneOrdersArgs } from "./args/UpdateOneOrdersArgs";
+import { UpsertOneOrdersArgs } from "./args/UpsertOneOrdersArgs";
+import { Orders } from "../../../models/Orders";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateOrders } from "../../outputs/AggregateOrders";
+import { OrdersGroupBy } from "../../outputs/OrdersGroupBy";
+export declare class OrdersCrudResolver {
+    aggregateOrders(ctx: any, info: GraphQLResolveInfo, args: AggregateOrdersArgs): Promise<AggregateOrders>;
+    createManyOrders(ctx: any, info: GraphQLResolveInfo, args: CreateManyOrdersArgs): Promise<AffectedRowsOutput>;
+    createOneOrders(ctx: any, info: GraphQLResolveInfo, args: CreateOneOrdersArgs): Promise<Orders>;
+    deleteManyOrders(ctx: any, info: GraphQLResolveInfo, args: DeleteManyOrdersArgs): Promise<AffectedRowsOutput>;
+    deleteOneOrders(ctx: any, info: GraphQLResolveInfo, args: DeleteOneOrdersArgs): Promise<Orders | null>;
+    findFirstOrders(ctx: any, info: GraphQLResolveInfo, args: FindFirstOrdersArgs): Promise<Orders | null>;
+    findFirstOrdersOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstOrdersOrThrowArgs): Promise<Orders | null>;
+    findManyOrders(ctx: any, info: GraphQLResolveInfo, args: FindManyOrdersArgs): Promise<Orders[]>;
+    findUniqueOrders(ctx: any, info: GraphQLResolveInfo, args: FindUniqueOrdersArgs): Promise<Orders | null>;
+    findUniqueOrdersOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueOrdersOrThrowArgs): Promise<Orders | null>;
+    groupByOrders(ctx: any, info: GraphQLResolveInfo, args: GroupByOrdersArgs): Promise<OrdersGroupBy[]>;
+    updateManyOrders(ctx: any, info: GraphQLResolveInfo, args: UpdateManyOrdersArgs): Promise<AffectedRowsOutput>;
+    updateOneOrders(ctx: any, info: GraphQLResolveInfo, args: UpdateOneOrdersArgs): Promise<Orders | null>;
+    upsertOneOrders(ctx: any, info: GraphQLResolveInfo, args: UpsertOneOrdersArgs): Promise<Orders>;
+}

@@ -1,0 +1,16 @@
+query {
+  findManyWebhooks 
+ {
+    create
+    created_at
+    delete
+    headers
+    id
+    name
+    publish
+    retrieve
+    unpublish
+    update
+    url
+  }
+}

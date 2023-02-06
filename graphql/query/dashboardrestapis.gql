@@ -1,0 +1,12 @@
+query {
+  dashboardrestapis 
+ {
+    authenticationType
+    description
+    headerKey
+    headerValue
+    id
+    name
+    url
+  }
+}

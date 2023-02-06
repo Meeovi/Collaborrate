@@ -1,0 +1,11 @@
+query {
+  findUniqueCountriesOrThrow 
+ {
+    description
+    id
+    image
+    name
+    region
+    trainings
+  }
+}

@@ -1,0 +1,58 @@
+query {
+  groupByPermissions 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      content
+      create
+      created_at
+      delete
+      id
+      name
+      read
+      role
+      update
+      users
+    }
+    _max {
+      content
+      create
+      created_at
+      delete
+      id
+      name
+      read
+      role
+      update
+      users
+    }
+    _min {
+      content
+      create
+      created_at
+      delete
+      id
+      name
+      read
+      role
+      update
+      users
+    }
+    _sum {
+      id
+    }
+    content
+    create
+    created_at
+    delete
+    id
+    name
+    read
+    role
+    update
+    users
+  }
+}

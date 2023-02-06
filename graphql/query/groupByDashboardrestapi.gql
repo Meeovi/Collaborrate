@@ -1,0 +1,46 @@
+query {
+  groupByDashboardrestapi 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      authenticationType
+      description
+      headerKey
+      headerValue
+      id
+      name
+      url
+    }
+    _max {
+      authenticationType
+      description
+      headerKey
+      headerValue
+      id
+      name
+      url
+    }
+    _min {
+      authenticationType
+      description
+      headerKey
+      headerValue
+      id
+      name
+      url
+    }
+    _sum {
+      id
+    }
+    authenticationType
+    description
+    headerKey
+    headerValue
+    id
+    name
+    url
+  }
+}

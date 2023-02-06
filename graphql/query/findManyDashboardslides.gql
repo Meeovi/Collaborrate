@@ -1,0 +1,10 @@
+query {
+  findManyDashboardslides 
+ {
+    categories
+    description
+    id
+    media
+    name
+  }
+}

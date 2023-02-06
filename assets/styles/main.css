@@ -1,0 +1,176 @@
+/********************** Main CSS *************/
+html {
+    overflow-y: scroll;
+}
+body {
+    margin: 0;
+}
+
+#topnav {
+    width: 100% !important;
+}
+
+.logobrand {
+    text-decoration: none;
+}
+
+.choiceGrid .v-card {
+    margin: 10px;
+}
+
+.leftContent {
+    max-width: 210px !important;
+}
+
+.leftContent h4, .leftContent h6 {
+    width: 100%;
+    text-align: center;
+    top: 0px;
+    position: relative;
+}
+
+.contentLeft {
+    left: 0px !important;
+    position: relative;
+    top: 0px !important;
+    width: 209px !important;
+    height: 100vh !important;
+}
+
+.contentLeft h4, .contentLeft h6 {
+    padding: 12px;
+}
+
+.contentRight {
+    top: 0px !important;
+    width: 85vw !important;
+    height: 100% !important;
+}
+
+.contentRight h4 {
+    padding: 10px;
+}
+
+.insertAddBtn {
+    top: 10px;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.rightAddBtn {
+    top: 25px;
+    margin-bottom: 51px;
+    display: block !important;
+}
+
+.table {
+    padding: 50px;
+    width: 80%;
+}
+
+.features3 {
+    background-color: transparent !important;
+}
+
+.features3 .mbr-text, .item-title {
+    color: black !important;
+}
+
+/******************* Main Section CSS *********/
+
+#mainSection {
+    top: 0px !important;
+    position: relative !important;
+    left: 56px;
+    width: 100% !important;
+}
+
+.homeSection {
+    padding: 45px !important;
+}
+
+.homeSection a {
+    text-decoration: none;
+}
+
+.homeTitle, .homeDescription {
+    padding: 5px;
+}
+
+.homeRows {
+    color: white;
+}
+
+.homeRight {
+    padding: 15px;
+}
+
+.emailTemplates {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dialog-bottom-transition-enter-active,
+.dialog-bottom-transition-leave-active {
+    transition: transform .2s ease-in-out;
+}
+
+.contentDashboard {
+    padding: 10px;
+}
+
+/******************** Sidebar CSS *************/
+
+#sidebarNav {
+    height: 100% !important;
+    left: 0px;
+    float: left;
+    position: absolute;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/********************* Metrics CSS ***********/
+
+.metricsWindowRight {
+    width: 80%;
+    height: 100vh !important;
+}
+
+.databaseSections {
+    width: 100%;
+    position: relative;
+    height: 100vh !important;
+}
+
+/********************** Media Manager CSS ***********/
+
+.mediaManager, .mediaManager img {
+    width: 200px;
+    height: 200px;
+}
+
+.mediaOptions {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    max-width: 100% !important;
+}
+
+.mediaUpload {
+    position: relative;
+    top: 15px;
+    height: 100%;
+}
+
+/************************ Settings CSS ***************/
+
+.settingsLeft h5 {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.settingsRight {
+    padding-top: 10px;
+    width: 80vw !important;
+    height: 100vh !important;
+}

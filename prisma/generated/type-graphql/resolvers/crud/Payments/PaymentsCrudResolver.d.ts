@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregatePaymentsArgs } from "./args/AggregatePaymentsArgs";
+import { CreateManyPaymentsArgs } from "./args/CreateManyPaymentsArgs";
+import { CreateOnePaymentsArgs } from "./args/CreateOnePaymentsArgs";
+import { DeleteManyPaymentsArgs } from "./args/DeleteManyPaymentsArgs";
+import { DeleteOnePaymentsArgs } from "./args/DeleteOnePaymentsArgs";
+import { FindFirstPaymentsArgs } from "./args/FindFirstPaymentsArgs";
+import { FindFirstPaymentsOrThrowArgs } from "./args/FindFirstPaymentsOrThrowArgs";
+import { FindManyPaymentsArgs } from "./args/FindManyPaymentsArgs";
+import { FindUniquePaymentsArgs } from "./args/FindUniquePaymentsArgs";
+import { FindUniquePaymentsOrThrowArgs } from "./args/FindUniquePaymentsOrThrowArgs";
+import { GroupByPaymentsArgs } from "./args/GroupByPaymentsArgs";
+import { UpdateManyPaymentsArgs } from "./args/UpdateManyPaymentsArgs";
+import { UpdateOnePaymentsArgs } from "./args/UpdateOnePaymentsArgs";
+import { UpsertOnePaymentsArgs } from "./args/UpsertOnePaymentsArgs";
+import { Payments } from "../../../models/Payments";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregatePayments } from "../../outputs/AggregatePayments";
+import { PaymentsGroupBy } from "../../outputs/PaymentsGroupBy";
+export declare class PaymentsCrudResolver {
+    aggregatePayments(ctx: any, info: GraphQLResolveInfo, args: AggregatePaymentsArgs): Promise<AggregatePayments>;
+    createManyPayments(ctx: any, info: GraphQLResolveInfo, args: CreateManyPaymentsArgs): Promise<AffectedRowsOutput>;
+    createOnePayments(ctx: any, info: GraphQLResolveInfo, args: CreateOnePaymentsArgs): Promise<Payments>;
+    deleteManyPayments(ctx: any, info: GraphQLResolveInfo, args: DeleteManyPaymentsArgs): Promise<AffectedRowsOutput>;
+    deleteOnePayments(ctx: any, info: GraphQLResolveInfo, args: DeleteOnePaymentsArgs): Promise<Payments | null>;
+    findFirstPayments(ctx: any, info: GraphQLResolveInfo, args: FindFirstPaymentsArgs): Promise<Payments | null>;
+    findFirstPaymentsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstPaymentsOrThrowArgs): Promise<Payments | null>;
+    findManyPayments(ctx: any, info: GraphQLResolveInfo, args: FindManyPaymentsArgs): Promise<Payments[]>;
+    findUniquePayments(ctx: any, info: GraphQLResolveInfo, args: FindUniquePaymentsArgs): Promise<Payments | null>;
+    findUniquePaymentsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniquePaymentsOrThrowArgs): Promise<Payments | null>;
+    groupByPayments(ctx: any, info: GraphQLResolveInfo, args: GroupByPaymentsArgs): Promise<PaymentsGroupBy[]>;
+    updateManyPayments(ctx: any, info: GraphQLResolveInfo, args: UpdateManyPaymentsArgs): Promise<AffectedRowsOutput>;
+    updateOnePayments(ctx: any, info: GraphQLResolveInfo, args: UpdateOnePaymentsArgs): Promise<Payments | null>;
+    upsertOnePayments(ctx: any, info: GraphQLResolveInfo, args: UpsertOnePaymentsArgs): Promise<Payments>;
+}

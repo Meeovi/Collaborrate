@@ -1,0 +1,12 @@
+query {
+  findUniqueIntegrations 
+ {
+    category
+    content
+    created_at
+    id
+    location
+    media
+    name
+  }
+}

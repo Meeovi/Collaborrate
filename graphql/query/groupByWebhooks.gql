@@ -1,0 +1,62 @@
+query {
+  groupByWebhooks 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      create
+      created_at
+      delete
+      headers
+      id
+      name
+      publish
+      retrieve
+      unpublish
+      update
+      url
+    }
+    _max {
+      create
+      created_at
+      delete
+      headers
+      id
+      name
+      publish
+      retrieve
+      unpublish
+      update
+      url
+    }
+    _min {
+      create
+      created_at
+      delete
+      headers
+      id
+      name
+      publish
+      retrieve
+      unpublish
+      update
+      url
+    }
+    _sum {
+      id
+    }
+    create
+    created_at
+    delete
+    headers
+    id
+    name
+    publish
+    retrieve
+    unpublish
+    update
+    url
+  }
+}

@@ -1,0 +1,21 @@
+query {
+  findFirstContent_typeOrThrow 
+ {
+    boolean
+    created_at
+    database_name
+    date
+    email
+    id
+    json
+    link
+    media
+    number
+    password
+    rich_text
+    text
+    time
+    timestamp
+    uid
+  }
+}

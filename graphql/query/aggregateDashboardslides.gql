@@ -1,0 +1,33 @@
+query {
+  aggregateDashboardslides 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      categories
+      description
+      id
+      media
+      name
+    }
+    _max {
+      categories
+      description
+      id
+      media
+      name
+    }
+    _min {
+      categories
+      description
+      id
+      media
+      name
+    }
+    _sum {
+      id
+    }
+  }
+}

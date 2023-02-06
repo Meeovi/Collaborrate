@@ -1,0 +1,70 @@
+query {
+  groupByEmails 
+ {
+    _avg {
+      cust_id
+      id
+      staff_id
+    }
+    _count {
+      _all
+      bcc
+      cc
+      content
+      created_at
+      cust_id
+      customers
+      from
+      id
+      media
+      staff_id
+      subject
+      users
+    }
+    _max {
+      bcc
+      cc
+      content
+      created_at
+      cust_id
+      customers
+      from
+      id
+      media
+      staff_id
+      subject
+      users
+    }
+    _min {
+      bcc
+      cc
+      content
+      created_at
+      cust_id
+      customers
+      from
+      id
+      media
+      staff_id
+      subject
+      users
+    }
+    _sum {
+      cust_id
+      id
+      staff_id
+    }
+    bcc
+    cc
+    content
+    created_at
+    cust_id
+    customers
+    from
+    id
+    media
+    staff_id
+    subject
+    users
+  }
+}

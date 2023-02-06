@@ -1,0 +1,31 @@
+import { Upload_fileAvgOrderByAggregateInput } from "../inputs/Upload_fileAvgOrderByAggregateInput";
+import { Upload_fileCountOrderByAggregateInput } from "../inputs/Upload_fileCountOrderByAggregateInput";
+import { Upload_fileMaxOrderByAggregateInput } from "../inputs/Upload_fileMaxOrderByAggregateInput";
+import { Upload_fileMinOrderByAggregateInput } from "../inputs/Upload_fileMinOrderByAggregateInput";
+import { Upload_fileSumOrderByAggregateInput } from "../inputs/Upload_fileSumOrderByAggregateInput";
+export declare class Upload_fileOrderByWithAggregationInput {
+    id?: "asc" | "desc" | undefined;
+    name?: "asc" | "desc" | undefined;
+    alternativeText?: "asc" | "desc" | undefined;
+    caption?: "asc" | "desc" | undefined;
+    width?: "asc" | "desc" | undefined;
+    height?: "asc" | "desc" | undefined;
+    formats?: "asc" | "desc" | undefined;
+    hash?: "asc" | "desc" | undefined;
+    ext?: "asc" | "desc" | undefined;
+    mime?: "asc" | "desc" | undefined;
+    size?: "asc" | "desc" | undefined;
+    url?: "asc" | "desc" | undefined;
+    previewUrl?: "asc" | "desc" | undefined;
+    provider?: "asc" | "desc" | undefined;
+    provider_metadata?: "asc" | "desc" | undefined;
+    created_by?: "asc" | "desc" | undefined;
+    updated_by?: "asc" | "desc" | undefined;
+    created_at?: "asc" | "desc" | undefined;
+    updated_at?: "asc" | "desc" | undefined;
+    _count?: Upload_fileCountOrderByAggregateInput | undefined;
+    _avg?: Upload_fileAvgOrderByAggregateInput | undefined;
+    _max?: Upload_fileMaxOrderByAggregateInput | undefined;
+    _min?: Upload_fileMinOrderByAggregateInput | undefined;
+    _sum?: Upload_fileSumOrderByAggregateInput | undefined;
+}

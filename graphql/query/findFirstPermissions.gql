@@ -1,0 +1,15 @@
+query {
+  findFirstPermissions 
+ {
+    content
+    create
+    created_at
+    delete
+    id
+    name
+    read
+    role
+    update
+    users
+  }
+}

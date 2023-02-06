@@ -1,0 +1,11 @@
+query {
+  findFirstCountries 
+ {
+    description
+    id
+    image
+    name
+    region
+    trainings
+  }
+}

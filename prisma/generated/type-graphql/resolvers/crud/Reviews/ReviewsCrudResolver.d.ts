@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateReviewsArgs } from "./args/AggregateReviewsArgs";
+import { CreateManyReviewsArgs } from "./args/CreateManyReviewsArgs";
+import { CreateOneReviewsArgs } from "./args/CreateOneReviewsArgs";
+import { DeleteManyReviewsArgs } from "./args/DeleteManyReviewsArgs";
+import { DeleteOneReviewsArgs } from "./args/DeleteOneReviewsArgs";
+import { FindFirstReviewsArgs } from "./args/FindFirstReviewsArgs";
+import { FindFirstReviewsOrThrowArgs } from "./args/FindFirstReviewsOrThrowArgs";
+import { FindManyReviewsArgs } from "./args/FindManyReviewsArgs";
+import { FindUniqueReviewsArgs } from "./args/FindUniqueReviewsArgs";
+import { FindUniqueReviewsOrThrowArgs } from "./args/FindUniqueReviewsOrThrowArgs";
+import { GroupByReviewsArgs } from "./args/GroupByReviewsArgs";
+import { UpdateManyReviewsArgs } from "./args/UpdateManyReviewsArgs";
+import { UpdateOneReviewsArgs } from "./args/UpdateOneReviewsArgs";
+import { UpsertOneReviewsArgs } from "./args/UpsertOneReviewsArgs";
+import { Reviews } from "../../../models/Reviews";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateReviews } from "../../outputs/AggregateReviews";
+import { ReviewsGroupBy } from "../../outputs/ReviewsGroupBy";
+export declare class ReviewsCrudResolver {
+    aggregateReviews(ctx: any, info: GraphQLResolveInfo, args: AggregateReviewsArgs): Promise<AggregateReviews>;
+    createManyReviews(ctx: any, info: GraphQLResolveInfo, args: CreateManyReviewsArgs): Promise<AffectedRowsOutput>;
+    createOneReviews(ctx: any, info: GraphQLResolveInfo, args: CreateOneReviewsArgs): Promise<Reviews>;
+    deleteManyReviews(ctx: any, info: GraphQLResolveInfo, args: DeleteManyReviewsArgs): Promise<AffectedRowsOutput>;
+    deleteOneReviews(ctx: any, info: GraphQLResolveInfo, args: DeleteOneReviewsArgs): Promise<Reviews | null>;
+    findFirstReviews(ctx: any, info: GraphQLResolveInfo, args: FindFirstReviewsArgs): Promise<Reviews | null>;
+    findFirstReviewsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstReviewsOrThrowArgs): Promise<Reviews | null>;
+    findManyReviews(ctx: any, info: GraphQLResolveInfo, args: FindManyReviewsArgs): Promise<Reviews[]>;
+    findUniqueReviews(ctx: any, info: GraphQLResolveInfo, args: FindUniqueReviewsArgs): Promise<Reviews | null>;
+    findUniqueReviewsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueReviewsOrThrowArgs): Promise<Reviews | null>;
+    groupByReviews(ctx: any, info: GraphQLResolveInfo, args: GroupByReviewsArgs): Promise<ReviewsGroupBy[]>;
+    updateManyReviews(ctx: any, info: GraphQLResolveInfo, args: UpdateManyReviewsArgs): Promise<AffectedRowsOutput>;
+    updateOneReviews(ctx: any, info: GraphQLResolveInfo, args: UpdateOneReviewsArgs): Promise<Reviews | null>;
+    upsertOneReviews(ctx: any, info: GraphQLResolveInfo, args: UpsertOneReviewsArgs): Promise<Reviews>;
+}

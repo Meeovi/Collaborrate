@@ -1,0 +1,11 @@
+query {
+  dashboardjson 
+ {
+    definition
+    description
+    format
+    id
+    name
+    url
+  }
+}

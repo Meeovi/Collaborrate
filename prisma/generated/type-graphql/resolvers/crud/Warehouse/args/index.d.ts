@@ -1,0 +1,14 @@
+export { AggregateWarehouseArgs } from "./AggregateWarehouseArgs";
+export { CreateManyWarehouseArgs } from "./CreateManyWarehouseArgs";
+export { CreateOneWarehouseArgs } from "./CreateOneWarehouseArgs";
+export { DeleteManyWarehouseArgs } from "./DeleteManyWarehouseArgs";
+export { DeleteOneWarehouseArgs } from "./DeleteOneWarehouseArgs";
+export { FindFirstWarehouseArgs } from "./FindFirstWarehouseArgs";
+export { FindFirstWarehouseOrThrowArgs } from "./FindFirstWarehouseOrThrowArgs";
+export { FindManyWarehouseArgs } from "./FindManyWarehouseArgs";
+export { FindUniqueWarehouseArgs } from "./FindUniqueWarehouseArgs";
+export { FindUniqueWarehouseOrThrowArgs } from "./FindUniqueWarehouseOrThrowArgs";
+export { GroupByWarehouseArgs } from "./GroupByWarehouseArgs";
+export { UpdateManyWarehouseArgs } from "./UpdateManyWarehouseArgs";
+export { UpdateOneWarehouseArgs } from "./UpdateOneWarehouseArgs";
+export { UpsertOneWarehouseArgs } from "./UpsertOneWarehouseArgs";

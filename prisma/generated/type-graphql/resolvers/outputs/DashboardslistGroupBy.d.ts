@@ -1,0 +1,35 @@
+import { DashboardslistAvgAggregate } from "../outputs/DashboardslistAvgAggregate";
+import { DashboardslistCountAggregate } from "../outputs/DashboardslistCountAggregate";
+import { DashboardslistMaxAggregate } from "../outputs/DashboardslistMaxAggregate";
+import { DashboardslistMinAggregate } from "../outputs/DashboardslistMinAggregate";
+import { DashboardslistSumAggregate } from "../outputs/DashboardslistSumAggregate";
+export declare class DashboardslistGroupBy {
+    id: bigint;
+    created_at: Date | null;
+    name: string | null;
+    client_id: string | null;
+    client_secret: string | null;
+    privacy: string | null;
+    category: string | null;
+    url: string | null;
+    media: string | null;
+    reports: string | null;
+    tasks: string | null;
+    projects: string | null;
+    tickets: string | null;
+    customers: string | null;
+    checklists: string | null;
+    visits: string | null;
+    users: string | null;
+    products: string | null;
+    articles: string | null;
+    sales: string | null;
+    logo: string | null;
+    content: string | null;
+    published: string | null;
+    _count: DashboardslistCountAggregate | null;
+    _avg: DashboardslistAvgAggregate | null;
+    _sum: DashboardslistSumAggregate | null;
+    _min: DashboardslistMinAggregate | null;
+    _max: DashboardslistMaxAggregate | null;
+}

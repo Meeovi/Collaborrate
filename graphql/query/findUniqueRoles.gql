@@ -1,0 +1,16 @@
+query {
+  findUniqueRoles 
+ {
+    content
+    createRole
+    created_at
+    deleteRole
+    id
+    publishRole
+    role
+    role_name
+    type
+    unpublishRole
+    updateRole
+  }
+}

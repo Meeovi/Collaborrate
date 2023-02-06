@@ -1,0 +1,45 @@
+query {
+  aggregatePartners 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      address
+      business_type
+      city
+      country
+      created_at
+      id
+      isPublic
+      name
+      state
+    }
+    _max {
+      address
+      business_type
+      city
+      country
+      created_at
+      id
+      isPublic
+      name
+      state
+    }
+    _min {
+      address
+      business_type
+      city
+      country
+      created_at
+      id
+      isPublic
+      name
+      state
+    }
+    _sum {
+      id
+    }
+  }
+}

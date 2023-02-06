@@ -1,0 +1,46 @@
+query {
+  groupByCurrencies 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      code
+      created_at
+      id
+      name
+      region
+      symbol
+      useStandard
+    }
+    _max {
+      code
+      created_at
+      id
+      name
+      region
+      symbol
+      useStandard
+    }
+    _min {
+      code
+      created_at
+      id
+      name
+      region
+      symbol
+      useStandard
+    }
+    _sum {
+      id
+    }
+    code
+    created_at
+    id
+    name
+    region
+    symbol
+    useStandard
+  }
+}

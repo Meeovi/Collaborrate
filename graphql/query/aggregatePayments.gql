@@ -1,0 +1,51 @@
+query {
+  aggregatePayments 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      active
+      client_id
+      client_secret
+      country
+      created_at
+      host_uri
+      icon
+      id
+      name
+      redirect_url
+      redirect_url_app
+    }
+    _max {
+      active
+      client_id
+      client_secret
+      country
+      created_at
+      host_uri
+      icon
+      id
+      name
+      redirect_url
+      redirect_url_app
+    }
+    _min {
+      active
+      client_id
+      client_secret
+      country
+      created_at
+      host_uri
+      icon
+      id
+      name
+      redirect_url
+      redirect_url_app
+    }
+    _sum {
+      id
+    }
+  }
+}

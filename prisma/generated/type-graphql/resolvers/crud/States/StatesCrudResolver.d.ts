@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateStatesArgs } from "./args/AggregateStatesArgs";
+import { CreateManyStatesArgs } from "./args/CreateManyStatesArgs";
+import { CreateOneStatesArgs } from "./args/CreateOneStatesArgs";
+import { DeleteManyStatesArgs } from "./args/DeleteManyStatesArgs";
+import { DeleteOneStatesArgs } from "./args/DeleteOneStatesArgs";
+import { FindFirstStatesArgs } from "./args/FindFirstStatesArgs";
+import { FindFirstStatesOrThrowArgs } from "./args/FindFirstStatesOrThrowArgs";
+import { FindManyStatesArgs } from "./args/FindManyStatesArgs";
+import { FindUniqueStatesArgs } from "./args/FindUniqueStatesArgs";
+import { FindUniqueStatesOrThrowArgs } from "./args/FindUniqueStatesOrThrowArgs";
+import { GroupByStatesArgs } from "./args/GroupByStatesArgs";
+import { UpdateManyStatesArgs } from "./args/UpdateManyStatesArgs";
+import { UpdateOneStatesArgs } from "./args/UpdateOneStatesArgs";
+import { UpsertOneStatesArgs } from "./args/UpsertOneStatesArgs";
+import { States } from "../../../models/States";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateStates } from "../../outputs/AggregateStates";
+import { StatesGroupBy } from "../../outputs/StatesGroupBy";
+export declare class StatesCrudResolver {
+    aggregateStates(ctx: any, info: GraphQLResolveInfo, args: AggregateStatesArgs): Promise<AggregateStates>;
+    createManyStates(ctx: any, info: GraphQLResolveInfo, args: CreateManyStatesArgs): Promise<AffectedRowsOutput>;
+    createOneStates(ctx: any, info: GraphQLResolveInfo, args: CreateOneStatesArgs): Promise<States>;
+    deleteManyStates(ctx: any, info: GraphQLResolveInfo, args: DeleteManyStatesArgs): Promise<AffectedRowsOutput>;
+    deleteOneStates(ctx: any, info: GraphQLResolveInfo, args: DeleteOneStatesArgs): Promise<States | null>;
+    findFirstStates(ctx: any, info: GraphQLResolveInfo, args: FindFirstStatesArgs): Promise<States | null>;
+    findFirstStatesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstStatesOrThrowArgs): Promise<States | null>;
+    findManyStates(ctx: any, info: GraphQLResolveInfo, args: FindManyStatesArgs): Promise<States[]>;
+    findUniqueStates(ctx: any, info: GraphQLResolveInfo, args: FindUniqueStatesArgs): Promise<States | null>;
+    findUniqueStatesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueStatesOrThrowArgs): Promise<States | null>;
+    groupByStates(ctx: any, info: GraphQLResolveInfo, args: GroupByStatesArgs): Promise<StatesGroupBy[]>;
+    updateManyStates(ctx: any, info: GraphQLResolveInfo, args: UpdateManyStatesArgs): Promise<AffectedRowsOutput>;
+    updateOneStates(ctx: any, info: GraphQLResolveInfo, args: UpdateOneStatesArgs): Promise<States | null>;
+    upsertOneStates(ctx: any, info: GraphQLResolveInfo, args: UpsertOneStatesArgs): Promise<States>;
+}

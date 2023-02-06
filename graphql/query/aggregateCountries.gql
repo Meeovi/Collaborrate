@@ -1,0 +1,36 @@
+query {
+  aggregateCountries 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      description
+      id
+      image
+      name
+      region
+      trainings
+    }
+    _max {
+      description
+      id
+      image
+      name
+      region
+      trainings
+    }
+    _min {
+      description
+      id
+      image
+      name
+      region
+      trainings
+    }
+    _sum {
+      id
+    }
+  }
+}

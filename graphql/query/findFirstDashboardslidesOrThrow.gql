@@ -1,0 +1,10 @@
+query {
+  findFirstDashboardslidesOrThrow 
+ {
+    categories
+    description
+    id
+    media
+    name
+  }
+}

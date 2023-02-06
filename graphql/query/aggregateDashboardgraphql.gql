@@ -1,0 +1,42 @@
+query {
+  aggregateDashboardgraphql 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      description
+      headerKey
+      headerValue
+      id
+      name
+      url
+      urlKey
+      urlValue
+    }
+    _max {
+      description
+      headerKey
+      headerValue
+      id
+      name
+      url
+      urlKey
+      urlValue
+    }
+    _min {
+      description
+      headerKey
+      headerValue
+      id
+      name
+      url
+      urlKey
+      urlValue
+    }
+    _sum {
+      id
+    }
+  }
+}

@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateTaxesArgs } from "./args/AggregateTaxesArgs";
+import { CreateManyTaxesArgs } from "./args/CreateManyTaxesArgs";
+import { CreateOneTaxesArgs } from "./args/CreateOneTaxesArgs";
+import { DeleteManyTaxesArgs } from "./args/DeleteManyTaxesArgs";
+import { DeleteOneTaxesArgs } from "./args/DeleteOneTaxesArgs";
+import { FindFirstTaxesArgs } from "./args/FindFirstTaxesArgs";
+import { FindFirstTaxesOrThrowArgs } from "./args/FindFirstTaxesOrThrowArgs";
+import { FindManyTaxesArgs } from "./args/FindManyTaxesArgs";
+import { FindUniqueTaxesArgs } from "./args/FindUniqueTaxesArgs";
+import { FindUniqueTaxesOrThrowArgs } from "./args/FindUniqueTaxesOrThrowArgs";
+import { GroupByTaxesArgs } from "./args/GroupByTaxesArgs";
+import { UpdateManyTaxesArgs } from "./args/UpdateManyTaxesArgs";
+import { UpdateOneTaxesArgs } from "./args/UpdateOneTaxesArgs";
+import { UpsertOneTaxesArgs } from "./args/UpsertOneTaxesArgs";
+import { Taxes } from "../../../models/Taxes";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateTaxes } from "../../outputs/AggregateTaxes";
+import { TaxesGroupBy } from "../../outputs/TaxesGroupBy";
+export declare class TaxesCrudResolver {
+    aggregateTaxes(ctx: any, info: GraphQLResolveInfo, args: AggregateTaxesArgs): Promise<AggregateTaxes>;
+    createManyTaxes(ctx: any, info: GraphQLResolveInfo, args: CreateManyTaxesArgs): Promise<AffectedRowsOutput>;
+    createOneTaxes(ctx: any, info: GraphQLResolveInfo, args: CreateOneTaxesArgs): Promise<Taxes>;
+    deleteManyTaxes(ctx: any, info: GraphQLResolveInfo, args: DeleteManyTaxesArgs): Promise<AffectedRowsOutput>;
+    deleteOneTaxes(ctx: any, info: GraphQLResolveInfo, args: DeleteOneTaxesArgs): Promise<Taxes | null>;
+    findFirstTaxes(ctx: any, info: GraphQLResolveInfo, args: FindFirstTaxesArgs): Promise<Taxes | null>;
+    findFirstTaxesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstTaxesOrThrowArgs): Promise<Taxes | null>;
+    findManyTaxes(ctx: any, info: GraphQLResolveInfo, args: FindManyTaxesArgs): Promise<Taxes[]>;
+    findUniqueTaxes(ctx: any, info: GraphQLResolveInfo, args: FindUniqueTaxesArgs): Promise<Taxes | null>;
+    findUniqueTaxesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueTaxesOrThrowArgs): Promise<Taxes | null>;
+    groupByTaxes(ctx: any, info: GraphQLResolveInfo, args: GroupByTaxesArgs): Promise<TaxesGroupBy[]>;
+    updateManyTaxes(ctx: any, info: GraphQLResolveInfo, args: UpdateManyTaxesArgs): Promise<AffectedRowsOutput>;
+    updateOneTaxes(ctx: any, info: GraphQLResolveInfo, args: UpdateOneTaxesArgs): Promise<Taxes | null>;
+    upsertOneTaxes(ctx: any, info: GraphQLResolveInfo, args: UpsertOneTaxesArgs): Promise<Taxes>;
+}

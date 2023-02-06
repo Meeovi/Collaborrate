@@ -1,0 +1,16 @@
+query {
+  findUniquePaymentsOrThrow 
+ {
+    active
+    client_id
+    client_secret
+    country
+    created_at
+    host_uri
+    icon
+    id
+    name
+    redirect_url
+    redirect_url_app
+  }
+}

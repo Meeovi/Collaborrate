@@ -1,0 +1,11 @@
+query {
+  findManyCountries 
+ {
+    description
+    id
+    image
+    name
+    region
+    trainings
+  }
+}

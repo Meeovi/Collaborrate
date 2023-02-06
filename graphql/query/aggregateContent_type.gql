@@ -1,0 +1,66 @@
+query {
+  aggregateContent_type 
+ {
+    _avg {
+      id
+      number
+    }
+    _count {
+      _all
+      boolean
+      created_at
+      database_name
+      date
+      email
+      id
+      json
+      link
+      media
+      number
+      password
+      rich_text
+      text
+      time
+      timestamp
+      uid
+    }
+    _max {
+      boolean
+      created_at
+      database_name
+      date
+      email
+      id
+      link
+      media
+      number
+      password
+      rich_text
+      text
+      time
+      timestamp
+      uid
+    }
+    _min {
+      boolean
+      created_at
+      database_name
+      date
+      email
+      id
+      link
+      media
+      number
+      password
+      rich_text
+      text
+      time
+      timestamp
+      uid
+    }
+    _sum {
+      id
+      number
+    }
+  }
+}

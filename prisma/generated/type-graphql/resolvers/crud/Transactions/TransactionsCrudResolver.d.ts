@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateTransactionsArgs } from "./args/AggregateTransactionsArgs";
+import { CreateManyTransactionsArgs } from "./args/CreateManyTransactionsArgs";
+import { CreateOneTransactionsArgs } from "./args/CreateOneTransactionsArgs";
+import { DeleteManyTransactionsArgs } from "./args/DeleteManyTransactionsArgs";
+import { DeleteOneTransactionsArgs } from "./args/DeleteOneTransactionsArgs";
+import { FindFirstTransactionsArgs } from "./args/FindFirstTransactionsArgs";
+import { FindFirstTransactionsOrThrowArgs } from "./args/FindFirstTransactionsOrThrowArgs";
+import { FindManyTransactionsArgs } from "./args/FindManyTransactionsArgs";
+import { FindUniqueTransactionsArgs } from "./args/FindUniqueTransactionsArgs";
+import { FindUniqueTransactionsOrThrowArgs } from "./args/FindUniqueTransactionsOrThrowArgs";
+import { GroupByTransactionsArgs } from "./args/GroupByTransactionsArgs";
+import { UpdateManyTransactionsArgs } from "./args/UpdateManyTransactionsArgs";
+import { UpdateOneTransactionsArgs } from "./args/UpdateOneTransactionsArgs";
+import { UpsertOneTransactionsArgs } from "./args/UpsertOneTransactionsArgs";
+import { Transactions } from "../../../models/Transactions";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateTransactions } from "../../outputs/AggregateTransactions";
+import { TransactionsGroupBy } from "../../outputs/TransactionsGroupBy";
+export declare class TransactionsCrudResolver {
+    aggregateTransactions(ctx: any, info: GraphQLResolveInfo, args: AggregateTransactionsArgs): Promise<AggregateTransactions>;
+    createManyTransactions(ctx: any, info: GraphQLResolveInfo, args: CreateManyTransactionsArgs): Promise<AffectedRowsOutput>;
+    createOneTransactions(ctx: any, info: GraphQLResolveInfo, args: CreateOneTransactionsArgs): Promise<Transactions>;
+    deleteManyTransactions(ctx: any, info: GraphQLResolveInfo, args: DeleteManyTransactionsArgs): Promise<AffectedRowsOutput>;
+    deleteOneTransactions(ctx: any, info: GraphQLResolveInfo, args: DeleteOneTransactionsArgs): Promise<Transactions | null>;
+    findFirstTransactions(ctx: any, info: GraphQLResolveInfo, args: FindFirstTransactionsArgs): Promise<Transactions | null>;
+    findFirstTransactionsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstTransactionsOrThrowArgs): Promise<Transactions | null>;
+    findManyTransactions(ctx: any, info: GraphQLResolveInfo, args: FindManyTransactionsArgs): Promise<Transactions[]>;
+    findUniqueTransactions(ctx: any, info: GraphQLResolveInfo, args: FindUniqueTransactionsArgs): Promise<Transactions | null>;
+    findUniqueTransactionsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueTransactionsOrThrowArgs): Promise<Transactions | null>;
+    groupByTransactions(ctx: any, info: GraphQLResolveInfo, args: GroupByTransactionsArgs): Promise<TransactionsGroupBy[]>;
+    updateManyTransactions(ctx: any, info: GraphQLResolveInfo, args: UpdateManyTransactionsArgs): Promise<AffectedRowsOutput>;
+    updateOneTransactions(ctx: any, info: GraphQLResolveInfo, args: UpdateOneTransactionsArgs): Promise<Transactions | null>;
+    upsertOneTransactions(ctx: any, info: GraphQLResolveInfo, args: UpsertOneTransactionsArgs): Promise<Transactions>;
+}

@@ -1,0 +1,56 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuotesScalarFieldEnum = void 0;
+const tslib_1 = require("tslib");
+const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
+var QuotesScalarFieldEnum;
+(function (QuotesScalarFieldEnum) {
+    QuotesScalarFieldEnum["id"] = "id";
+    QuotesScalarFieldEnum["name"] = "name";
+    QuotesScalarFieldEnum["grand_total"] = "grand_total";
+    QuotesScalarFieldEnum["created_at"] = "created_at";
+    QuotesScalarFieldEnum["categories"] = "categories";
+    QuotesScalarFieldEnum["valid_until"] = "valid_until";
+    QuotesScalarFieldEnum["quote_stage"] = "quote_stage";
+    QuotesScalarFieldEnum["customers"] = "customers";
+    QuotesScalarFieldEnum["cust_id"] = "cust_id";
+    QuotesScalarFieldEnum["prod_id"] = "prod_id";
+    QuotesScalarFieldEnum["order_id"] = "order_id";
+    QuotesScalarFieldEnum["account"] = "account";
+    QuotesScalarFieldEnum["approval_issues"] = "approval_issues";
+    QuotesScalarFieldEnum["approval_status"] = "approval_status";
+    QuotesScalarFieldEnum["assigned_to"] = "assigned_to";
+    QuotesScalarFieldEnum["billing_city"] = "billing_city";
+    QuotesScalarFieldEnum["billing_country"] = "billing_country";
+    QuotesScalarFieldEnum["billing_postal"] = "billing_postal";
+    QuotesScalarFieldEnum["billing_state"] = "billing_state";
+    QuotesScalarFieldEnum["billing_street"] = "billing_street";
+    QuotesScalarFieldEnum["contact"] = "contact";
+    QuotesScalarFieldEnum["currency"] = "currency";
+    QuotesScalarFieldEnum["discount"] = "discount";
+    QuotesScalarFieldEnum["invoice_status"] = "invoice_status";
+    QuotesScalarFieldEnum["line_item_discount"] = "line_item_discount";
+    QuotesScalarFieldEnum["line_item_group_total"] = "line_item_group_total";
+    QuotesScalarFieldEnum["line_item_name"] = "line_item_name";
+    QuotesScalarFieldEnum["line_item_subtotal"] = "line_item_subtotal";
+    QuotesScalarFieldEnum["line_item_tax"] = "line_item_tax";
+    QuotesScalarFieldEnum["line_item_total"] = "line_item_total";
+    QuotesScalarFieldEnum["payment_terms"] = "payment_terms";
+    QuotesScalarFieldEnum["shipping"] = "shipping";
+    QuotesScalarFieldEnum["shipping_city"] = "shipping_city";
+    QuotesScalarFieldEnum["shipping_country"] = "shipping_country";
+    QuotesScalarFieldEnum["shipping_postal"] = "shipping_postal";
+    QuotesScalarFieldEnum["shipping_state"] = "shipping_state";
+    QuotesScalarFieldEnum["shipping_street"] = "shipping_street";
+    QuotesScalarFieldEnum["shipping_tax"] = "shipping_tax";
+    QuotesScalarFieldEnum["subtotal"] = "subtotal";
+    QuotesScalarFieldEnum["tax"] = "tax";
+    QuotesScalarFieldEnum["total"] = "total";
+    QuotesScalarFieldEnum["customers_customersToquotes"] = "customers_customersToquotes";
+    QuotesScalarFieldEnum["orders"] = "orders";
+    QuotesScalarFieldEnum["products_productsToquotes"] = "products_productsToquotes";
+})(QuotesScalarFieldEnum = exports.QuotesScalarFieldEnum || (exports.QuotesScalarFieldEnum = {}));
+TypeGraphQL.registerEnumType(QuotesScalarFieldEnum, {
+    name: "QuotesScalarFieldEnum",
+    description: undefined,
+});

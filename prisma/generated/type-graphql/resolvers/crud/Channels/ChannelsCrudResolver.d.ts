@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateChannelsArgs } from "./args/AggregateChannelsArgs";
+import { CreateManyChannelsArgs } from "./args/CreateManyChannelsArgs";
+import { CreateOneChannelsArgs } from "./args/CreateOneChannelsArgs";
+import { DeleteManyChannelsArgs } from "./args/DeleteManyChannelsArgs";
+import { DeleteOneChannelsArgs } from "./args/DeleteOneChannelsArgs";
+import { FindFirstChannelsArgs } from "./args/FindFirstChannelsArgs";
+import { FindFirstChannelsOrThrowArgs } from "./args/FindFirstChannelsOrThrowArgs";
+import { FindManyChannelsArgs } from "./args/FindManyChannelsArgs";
+import { FindUniqueChannelsArgs } from "./args/FindUniqueChannelsArgs";
+import { FindUniqueChannelsOrThrowArgs } from "./args/FindUniqueChannelsOrThrowArgs";
+import { GroupByChannelsArgs } from "./args/GroupByChannelsArgs";
+import { UpdateManyChannelsArgs } from "./args/UpdateManyChannelsArgs";
+import { UpdateOneChannelsArgs } from "./args/UpdateOneChannelsArgs";
+import { UpsertOneChannelsArgs } from "./args/UpsertOneChannelsArgs";
+import { Channels } from "../../../models/Channels";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateChannels } from "../../outputs/AggregateChannels";
+import { ChannelsGroupBy } from "../../outputs/ChannelsGroupBy";
+export declare class ChannelsCrudResolver {
+    aggregateChannels(ctx: any, info: GraphQLResolveInfo, args: AggregateChannelsArgs): Promise<AggregateChannels>;
+    createManyChannels(ctx: any, info: GraphQLResolveInfo, args: CreateManyChannelsArgs): Promise<AffectedRowsOutput>;
+    createOneChannels(ctx: any, info: GraphQLResolveInfo, args: CreateOneChannelsArgs): Promise<Channels>;
+    deleteManyChannels(ctx: any, info: GraphQLResolveInfo, args: DeleteManyChannelsArgs): Promise<AffectedRowsOutput>;
+    deleteOneChannels(ctx: any, info: GraphQLResolveInfo, args: DeleteOneChannelsArgs): Promise<Channels | null>;
+    findFirstChannels(ctx: any, info: GraphQLResolveInfo, args: FindFirstChannelsArgs): Promise<Channels | null>;
+    findFirstChannelsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstChannelsOrThrowArgs): Promise<Channels | null>;
+    findManyChannels(ctx: any, info: GraphQLResolveInfo, args: FindManyChannelsArgs): Promise<Channels[]>;
+    findUniqueChannels(ctx: any, info: GraphQLResolveInfo, args: FindUniqueChannelsArgs): Promise<Channels | null>;
+    findUniqueChannelsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueChannelsOrThrowArgs): Promise<Channels | null>;
+    groupByChannels(ctx: any, info: GraphQLResolveInfo, args: GroupByChannelsArgs): Promise<ChannelsGroupBy[]>;
+    updateManyChannels(ctx: any, info: GraphQLResolveInfo, args: UpdateManyChannelsArgs): Promise<AffectedRowsOutput>;
+    updateOneChannels(ctx: any, info: GraphQLResolveInfo, args: UpdateOneChannelsArgs): Promise<Channels | null>;
+    upsertOneChannels(ctx: any, info: GraphQLResolveInfo, args: UpsertOneChannelsArgs): Promise<Channels>;
+}

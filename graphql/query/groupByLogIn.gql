@@ -1,0 +1,50 @@
+query {
+  groupByLogIn 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      created_at
+      email
+      expiresIn
+      id
+      password
+      token
+      username
+      users
+    }
+    _max {
+      created_at
+      email
+      expiresIn
+      id
+      password
+      token
+      username
+      users
+    }
+    _min {
+      created_at
+      email
+      expiresIn
+      id
+      password
+      token
+      username
+      users
+    }
+    _sum {
+      id
+    }
+    created_at
+    email
+    expiresIn
+    id
+    password
+    token
+    username
+    users
+  }
+}

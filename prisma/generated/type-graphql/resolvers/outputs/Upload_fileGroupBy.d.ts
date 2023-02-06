@@ -1,0 +1,32 @@
+import { Prisma } from "@prisma/client";
+import { Upload_fileAvgAggregate } from "../outputs/Upload_fileAvgAggregate";
+import { Upload_fileCountAggregate } from "../outputs/Upload_fileCountAggregate";
+import { Upload_fileMaxAggregate } from "../outputs/Upload_fileMaxAggregate";
+import { Upload_fileMinAggregate } from "../outputs/Upload_fileMinAggregate";
+import { Upload_fileSumAggregate } from "../outputs/Upload_fileSumAggregate";
+export declare class Upload_fileGroupBy {
+    id: number;
+    name: string;
+    alternativeText: string | null;
+    caption: string | null;
+    width: number | null;
+    height: number | null;
+    formats: Prisma.JsonValue | null;
+    hash: string;
+    ext: string | null;
+    mime: string;
+    size: Prisma.Decimal;
+    url: string;
+    previewUrl: string | null;
+    provider: string;
+    provider_metadata: Prisma.JsonValue | null;
+    created_by: number | null;
+    updated_by: number | null;
+    created_at: Date | null;
+    updated_at: Date | null;
+    _count: Upload_fileCountAggregate | null;
+    _avg: Upload_fileAvgAggregate | null;
+    _sum: Upload_fileSumAggregate | null;
+    _min: Upload_fileMinAggregate | null;
+    _max: Upload_fileMaxAggregate | null;
+}

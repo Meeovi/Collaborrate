@@ -1,0 +1,17 @@
+query {
+  findFirstManufacturerOrThrow 
+ {
+    city
+    code
+    country
+    created_at
+    description
+    id
+    isPublic
+    media
+    name
+    product
+    products
+    state
+  }
+}

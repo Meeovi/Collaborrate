@@ -1,0 +1,11 @@
+query {
+  findFirstDashboardjsonOrThrow 
+ {
+    definition
+    description
+    format
+    id
+    name
+    url
+  }
+}

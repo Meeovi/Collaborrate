@@ -1,0 +1,42 @@
+query {
+  aggregateWishlists 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      created_at
+      customers
+      id
+      name
+      occassions
+      products
+      quantity
+      visibility
+    }
+    _max {
+      created_at
+      customers
+      id
+      name
+      occassions
+      products
+      quantity
+      visibility
+    }
+    _min {
+      created_at
+      customers
+      id
+      name
+      occassions
+      products
+      quantity
+      visibility
+    }
+    _sum {
+      id
+    }
+  }
+}

@@ -1,0 +1,15 @@
+query {
+  findFirstTaxes 
+ {
+    country
+    id
+    postcode
+    products
+    rate_percent
+    state
+    taxCategory
+    taxDefault
+    taxRuleName
+    tax_identifier
+  }
+}

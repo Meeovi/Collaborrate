@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateApitokenArgs } from "./args/AggregateApitokenArgs";
+import { CreateManyApitokenArgs } from "./args/CreateManyApitokenArgs";
+import { CreateOneApitokenArgs } from "./args/CreateOneApitokenArgs";
+import { DeleteManyApitokenArgs } from "./args/DeleteManyApitokenArgs";
+import { DeleteOneApitokenArgs } from "./args/DeleteOneApitokenArgs";
+import { FindFirstApitokenArgs } from "./args/FindFirstApitokenArgs";
+import { FindFirstApitokenOrThrowArgs } from "./args/FindFirstApitokenOrThrowArgs";
+import { FindManyApitokenArgs } from "./args/FindManyApitokenArgs";
+import { FindUniqueApitokenArgs } from "./args/FindUniqueApitokenArgs";
+import { FindUniqueApitokenOrThrowArgs } from "./args/FindUniqueApitokenOrThrowArgs";
+import { GroupByApitokenArgs } from "./args/GroupByApitokenArgs";
+import { UpdateManyApitokenArgs } from "./args/UpdateManyApitokenArgs";
+import { UpdateOneApitokenArgs } from "./args/UpdateOneApitokenArgs";
+import { UpsertOneApitokenArgs } from "./args/UpsertOneApitokenArgs";
+import { Apitoken } from "../../../models/Apitoken";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateApitoken } from "../../outputs/AggregateApitoken";
+import { ApitokenGroupBy } from "../../outputs/ApitokenGroupBy";
+export declare class ApitokenCrudResolver {
+    aggregateApitoken(ctx: any, info: GraphQLResolveInfo, args: AggregateApitokenArgs): Promise<AggregateApitoken>;
+    createManyApitoken(ctx: any, info: GraphQLResolveInfo, args: CreateManyApitokenArgs): Promise<AffectedRowsOutput>;
+    createOneApitoken(ctx: any, info: GraphQLResolveInfo, args: CreateOneApitokenArgs): Promise<Apitoken>;
+    deleteManyApitoken(ctx: any, info: GraphQLResolveInfo, args: DeleteManyApitokenArgs): Promise<AffectedRowsOutput>;
+    deleteOneApitoken(ctx: any, info: GraphQLResolveInfo, args: DeleteOneApitokenArgs): Promise<Apitoken | null>;
+    findFirstApitoken(ctx: any, info: GraphQLResolveInfo, args: FindFirstApitokenArgs): Promise<Apitoken | null>;
+    findFirstApitokenOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstApitokenOrThrowArgs): Promise<Apitoken | null>;
+    apitokens(ctx: any, info: GraphQLResolveInfo, args: FindManyApitokenArgs): Promise<Apitoken[]>;
+    apitoken(ctx: any, info: GraphQLResolveInfo, args: FindUniqueApitokenArgs): Promise<Apitoken | null>;
+    getApitoken(ctx: any, info: GraphQLResolveInfo, args: FindUniqueApitokenOrThrowArgs): Promise<Apitoken | null>;
+    groupByApitoken(ctx: any, info: GraphQLResolveInfo, args: GroupByApitokenArgs): Promise<ApitokenGroupBy[]>;
+    updateManyApitoken(ctx: any, info: GraphQLResolveInfo, args: UpdateManyApitokenArgs): Promise<AffectedRowsOutput>;
+    updateOneApitoken(ctx: any, info: GraphQLResolveInfo, args: UpdateOneApitokenArgs): Promise<Apitoken | null>;
+    upsertOneApitoken(ctx: any, info: GraphQLResolveInfo, args: UpsertOneApitokenArgs): Promise<Apitoken>;
+}

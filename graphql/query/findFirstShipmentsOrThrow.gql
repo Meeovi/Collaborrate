@@ -1,0 +1,17 @@
+query {
+  findFirstShipmentsOrThrow 
+ {
+    carrier_name
+    client_id
+    client_secret
+    country
+    id
+    image
+    product
+    ship_date
+    speed_grade
+    tracking_url
+    transit_time
+    website
+  }
+}

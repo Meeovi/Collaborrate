@@ -1,0 +1,12 @@
+query {
+  internalizations 
+ {
+    created_at
+    default
+    description
+    id
+    name
+    region
+    website
+  }
+}

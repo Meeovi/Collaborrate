@@ -1,0 +1,26 @@
+query {
+  findFirstDiscountsOrThrow 
+ {
+    articles
+    billToName
+    categories
+    coupons
+    creditMemo
+    customers
+    discount
+    excerpt
+    expiration
+    id
+    image
+    name
+    orderNumber
+    products
+    published
+    refunded
+    rewards
+    special_offers
+    status
+    type
+    users
+  }
+}

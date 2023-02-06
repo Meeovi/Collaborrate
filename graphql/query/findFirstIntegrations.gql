@@ -1,0 +1,12 @@
+query {
+  findFirstIntegrations 
+ {
+    category
+    content
+    created_at
+    id
+    location
+    media
+    name
+  }
+}

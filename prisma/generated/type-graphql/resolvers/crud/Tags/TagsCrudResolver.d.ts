@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateTagsArgs } from "./args/AggregateTagsArgs";
+import { CreateManyTagsArgs } from "./args/CreateManyTagsArgs";
+import { CreateOneTagsArgs } from "./args/CreateOneTagsArgs";
+import { DeleteManyTagsArgs } from "./args/DeleteManyTagsArgs";
+import { DeleteOneTagsArgs } from "./args/DeleteOneTagsArgs";
+import { FindFirstTagsArgs } from "./args/FindFirstTagsArgs";
+import { FindFirstTagsOrThrowArgs } from "./args/FindFirstTagsOrThrowArgs";
+import { FindManyTagsArgs } from "./args/FindManyTagsArgs";
+import { FindUniqueTagsArgs } from "./args/FindUniqueTagsArgs";
+import { FindUniqueTagsOrThrowArgs } from "./args/FindUniqueTagsOrThrowArgs";
+import { GroupByTagsArgs } from "./args/GroupByTagsArgs";
+import { UpdateManyTagsArgs } from "./args/UpdateManyTagsArgs";
+import { UpdateOneTagsArgs } from "./args/UpdateOneTagsArgs";
+import { UpsertOneTagsArgs } from "./args/UpsertOneTagsArgs";
+import { Tags } from "../../../models/Tags";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateTags } from "../../outputs/AggregateTags";
+import { TagsGroupBy } from "../../outputs/TagsGroupBy";
+export declare class TagsCrudResolver {
+    aggregateTags(ctx: any, info: GraphQLResolveInfo, args: AggregateTagsArgs): Promise<AggregateTags>;
+    createManyTags(ctx: any, info: GraphQLResolveInfo, args: CreateManyTagsArgs): Promise<AffectedRowsOutput>;
+    createOneTags(ctx: any, info: GraphQLResolveInfo, args: CreateOneTagsArgs): Promise<Tags>;
+    deleteManyTags(ctx: any, info: GraphQLResolveInfo, args: DeleteManyTagsArgs): Promise<AffectedRowsOutput>;
+    deleteOneTags(ctx: any, info: GraphQLResolveInfo, args: DeleteOneTagsArgs): Promise<Tags | null>;
+    findFirstTags(ctx: any, info: GraphQLResolveInfo, args: FindFirstTagsArgs): Promise<Tags | null>;
+    findFirstTagsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstTagsOrThrowArgs): Promise<Tags | null>;
+    findManyTags(ctx: any, info: GraphQLResolveInfo, args: FindManyTagsArgs): Promise<Tags[]>;
+    findUniqueTags(ctx: any, info: GraphQLResolveInfo, args: FindUniqueTagsArgs): Promise<Tags | null>;
+    findUniqueTagsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueTagsOrThrowArgs): Promise<Tags | null>;
+    groupByTags(ctx: any, info: GraphQLResolveInfo, args: GroupByTagsArgs): Promise<TagsGroupBy[]>;
+    updateManyTags(ctx: any, info: GraphQLResolveInfo, args: UpdateManyTagsArgs): Promise<AffectedRowsOutput>;
+    updateOneTags(ctx: any, info: GraphQLResolveInfo, args: UpdateOneTagsArgs): Promise<Tags | null>;
+    upsertOneTags(ctx: any, info: GraphQLResolveInfo, args: UpsertOneTagsArgs): Promise<Tags>;
+}

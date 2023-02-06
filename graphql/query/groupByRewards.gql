@@ -1,0 +1,66 @@
+query {
+  groupByRewards 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      articles
+      categories
+      coupons
+      created_at
+      customers
+      expiration
+      id
+      level
+      name
+      products
+      slug
+      users
+    }
+    _max {
+      articles
+      categories
+      coupons
+      created_at
+      customers
+      expiration
+      id
+      level
+      name
+      products
+      slug
+      users
+    }
+    _min {
+      articles
+      categories
+      coupons
+      created_at
+      customers
+      expiration
+      id
+      level
+      name
+      products
+      slug
+      users
+    }
+    _sum {
+      id
+    }
+    articles
+    categories
+    coupons
+    created_at
+    customers
+    expiration
+    id
+    level
+    name
+    products
+    slug
+    users
+  }
+}

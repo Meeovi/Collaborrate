@@ -1,0 +1,50 @@
+query {
+  groupByZones 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      code
+      country
+      created_at
+      id
+      name
+      scope
+      type
+      updated_at
+    }
+    _max {
+      code
+      country
+      created_at
+      id
+      name
+      scope
+      type
+      updated_at
+    }
+    _min {
+      code
+      country
+      created_at
+      id
+      name
+      scope
+      type
+      updated_at
+    }
+    _sum {
+      id
+    }
+    code
+    country
+    created_at
+    id
+    name
+    scope
+    type
+    updated_at
+  }
+}

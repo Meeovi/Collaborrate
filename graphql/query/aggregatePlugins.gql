@@ -1,0 +1,54 @@
+query {
+  aggregatePlugins 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      agree_terms
+      created_at
+      description
+      github_link
+      id
+      last_updated
+      logo
+      name
+      publisher_email
+      publisher_name
+      screenshots
+      url
+    }
+    _max {
+      agree_terms
+      created_at
+      description
+      github_link
+      id
+      last_updated
+      logo
+      name
+      publisher_email
+      publisher_name
+      screenshots
+      url
+    }
+    _min {
+      agree_terms
+      created_at
+      description
+      github_link
+      id
+      last_updated
+      logo
+      name
+      publisher_email
+      publisher_name
+      screenshots
+      url
+    }
+    _sum {
+      id
+    }
+  }
+}

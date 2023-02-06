@@ -1,0 +1,13 @@
+query {
+  findFirstDashboardgraphql 
+ {
+    description
+    headerKey
+    headerValue
+    id
+    name
+    url
+    urlKey
+    urlValue
+  }
+}

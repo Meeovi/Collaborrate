@@ -1,0 +1,58 @@
+query {
+  groupByUsers 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      created_at
+      email
+      first_name
+      id
+      last_name
+      mediamanager
+      password
+      permissions
+      phone
+      username
+    }
+    _max {
+      created_at
+      email
+      first_name
+      id
+      last_name
+      mediamanager
+      password
+      permissions
+      phone
+      username
+    }
+    _min {
+      created_at
+      email
+      first_name
+      id
+      last_name
+      mediamanager
+      password
+      permissions
+      phone
+      username
+    }
+    _sum {
+      id
+    }
+    created_at
+    email
+    first_name
+    id
+    last_name
+    mediamanager
+    password
+    permissions
+    phone
+    username
+  }
+}

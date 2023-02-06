@@ -1,0 +1,14 @@
+query {
+  findFirstPartnersOrThrow 
+ {
+    address
+    business_type
+    city
+    country
+    created_at
+    id
+    isPublic
+    name
+    state
+  }
+}

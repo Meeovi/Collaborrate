@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateMediamanagerArgs } from "./args/AggregateMediamanagerArgs";
+import { CreateManyMediamanagerArgs } from "./args/CreateManyMediamanagerArgs";
+import { CreateOneMediamanagerArgs } from "./args/CreateOneMediamanagerArgs";
+import { DeleteManyMediamanagerArgs } from "./args/DeleteManyMediamanagerArgs";
+import { DeleteOneMediamanagerArgs } from "./args/DeleteOneMediamanagerArgs";
+import { FindFirstMediamanagerArgs } from "./args/FindFirstMediamanagerArgs";
+import { FindFirstMediamanagerOrThrowArgs } from "./args/FindFirstMediamanagerOrThrowArgs";
+import { FindManyMediamanagerArgs } from "./args/FindManyMediamanagerArgs";
+import { FindUniqueMediamanagerArgs } from "./args/FindUniqueMediamanagerArgs";
+import { FindUniqueMediamanagerOrThrowArgs } from "./args/FindUniqueMediamanagerOrThrowArgs";
+import { GroupByMediamanagerArgs } from "./args/GroupByMediamanagerArgs";
+import { UpdateManyMediamanagerArgs } from "./args/UpdateManyMediamanagerArgs";
+import { UpdateOneMediamanagerArgs } from "./args/UpdateOneMediamanagerArgs";
+import { UpsertOneMediamanagerArgs } from "./args/UpsertOneMediamanagerArgs";
+import { Mediamanager } from "../../../models/Mediamanager";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateMediamanager } from "../../outputs/AggregateMediamanager";
+import { MediamanagerGroupBy } from "../../outputs/MediamanagerGroupBy";
+export declare class MediamanagerCrudResolver {
+    aggregateMediamanager(ctx: any, info: GraphQLResolveInfo, args: AggregateMediamanagerArgs): Promise<AggregateMediamanager>;
+    createManyMediamanager(ctx: any, info: GraphQLResolveInfo, args: CreateManyMediamanagerArgs): Promise<AffectedRowsOutput>;
+    createOneMediamanager(ctx: any, info: GraphQLResolveInfo, args: CreateOneMediamanagerArgs): Promise<Mediamanager>;
+    deleteManyMediamanager(ctx: any, info: GraphQLResolveInfo, args: DeleteManyMediamanagerArgs): Promise<AffectedRowsOutput>;
+    deleteOneMediamanager(ctx: any, info: GraphQLResolveInfo, args: DeleteOneMediamanagerArgs): Promise<Mediamanager | null>;
+    findFirstMediamanager(ctx: any, info: GraphQLResolveInfo, args: FindFirstMediamanagerArgs): Promise<Mediamanager | null>;
+    findFirstMediamanagerOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstMediamanagerOrThrowArgs): Promise<Mediamanager | null>;
+    mediamanagers(ctx: any, info: GraphQLResolveInfo, args: FindManyMediamanagerArgs): Promise<Mediamanager[]>;
+    mediamanager(ctx: any, info: GraphQLResolveInfo, args: FindUniqueMediamanagerArgs): Promise<Mediamanager | null>;
+    getMediamanager(ctx: any, info: GraphQLResolveInfo, args: FindUniqueMediamanagerOrThrowArgs): Promise<Mediamanager | null>;
+    groupByMediamanager(ctx: any, info: GraphQLResolveInfo, args: GroupByMediamanagerArgs): Promise<MediamanagerGroupBy[]>;
+    updateManyMediamanager(ctx: any, info: GraphQLResolveInfo, args: UpdateManyMediamanagerArgs): Promise<AffectedRowsOutput>;
+    updateOneMediamanager(ctx: any, info: GraphQLResolveInfo, args: UpdateOneMediamanagerArgs): Promise<Mediamanager | null>;
+    upsertOneMediamanager(ctx: any, info: GraphQLResolveInfo, args: UpsertOneMediamanagerArgs): Promise<Mediamanager>;
+}

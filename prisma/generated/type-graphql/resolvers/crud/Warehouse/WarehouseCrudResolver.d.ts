@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateWarehouseArgs } from "./args/AggregateWarehouseArgs";
+import { CreateManyWarehouseArgs } from "./args/CreateManyWarehouseArgs";
+import { CreateOneWarehouseArgs } from "./args/CreateOneWarehouseArgs";
+import { DeleteManyWarehouseArgs } from "./args/DeleteManyWarehouseArgs";
+import { DeleteOneWarehouseArgs } from "./args/DeleteOneWarehouseArgs";
+import { FindFirstWarehouseArgs } from "./args/FindFirstWarehouseArgs";
+import { FindFirstWarehouseOrThrowArgs } from "./args/FindFirstWarehouseOrThrowArgs";
+import { FindManyWarehouseArgs } from "./args/FindManyWarehouseArgs";
+import { FindUniqueWarehouseArgs } from "./args/FindUniqueWarehouseArgs";
+import { FindUniqueWarehouseOrThrowArgs } from "./args/FindUniqueWarehouseOrThrowArgs";
+import { GroupByWarehouseArgs } from "./args/GroupByWarehouseArgs";
+import { UpdateManyWarehouseArgs } from "./args/UpdateManyWarehouseArgs";
+import { UpdateOneWarehouseArgs } from "./args/UpdateOneWarehouseArgs";
+import { UpsertOneWarehouseArgs } from "./args/UpsertOneWarehouseArgs";
+import { Warehouse } from "../../../models/Warehouse";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateWarehouse } from "../../outputs/AggregateWarehouse";
+import { WarehouseGroupBy } from "../../outputs/WarehouseGroupBy";
+export declare class WarehouseCrudResolver {
+    aggregateWarehouse(ctx: any, info: GraphQLResolveInfo, args: AggregateWarehouseArgs): Promise<AggregateWarehouse>;
+    createManyWarehouse(ctx: any, info: GraphQLResolveInfo, args: CreateManyWarehouseArgs): Promise<AffectedRowsOutput>;
+    createOneWarehouse(ctx: any, info: GraphQLResolveInfo, args: CreateOneWarehouseArgs): Promise<Warehouse>;
+    deleteManyWarehouse(ctx: any, info: GraphQLResolveInfo, args: DeleteManyWarehouseArgs): Promise<AffectedRowsOutput>;
+    deleteOneWarehouse(ctx: any, info: GraphQLResolveInfo, args: DeleteOneWarehouseArgs): Promise<Warehouse | null>;
+    findFirstWarehouse(ctx: any, info: GraphQLResolveInfo, args: FindFirstWarehouseArgs): Promise<Warehouse | null>;
+    findFirstWarehouseOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstWarehouseOrThrowArgs): Promise<Warehouse | null>;
+    warehouses(ctx: any, info: GraphQLResolveInfo, args: FindManyWarehouseArgs): Promise<Warehouse[]>;
+    warehouse(ctx: any, info: GraphQLResolveInfo, args: FindUniqueWarehouseArgs): Promise<Warehouse | null>;
+    getWarehouse(ctx: any, info: GraphQLResolveInfo, args: FindUniqueWarehouseOrThrowArgs): Promise<Warehouse | null>;
+    groupByWarehouse(ctx: any, info: GraphQLResolveInfo, args: GroupByWarehouseArgs): Promise<WarehouseGroupBy[]>;
+    updateManyWarehouse(ctx: any, info: GraphQLResolveInfo, args: UpdateManyWarehouseArgs): Promise<AffectedRowsOutput>;
+    updateOneWarehouse(ctx: any, info: GraphQLResolveInfo, args: UpdateOneWarehouseArgs): Promise<Warehouse | null>;
+    upsertOneWarehouse(ctx: any, info: GraphQLResolveInfo, args: UpsertOneWarehouseArgs): Promise<Warehouse>;
+}

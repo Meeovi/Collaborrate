@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateAgreementsArgs } from "./args/AggregateAgreementsArgs";
+import { CreateManyAgreementsArgs } from "./args/CreateManyAgreementsArgs";
+import { CreateOneAgreementsArgs } from "./args/CreateOneAgreementsArgs";
+import { DeleteManyAgreementsArgs } from "./args/DeleteManyAgreementsArgs";
+import { DeleteOneAgreementsArgs } from "./args/DeleteOneAgreementsArgs";
+import { FindFirstAgreementsArgs } from "./args/FindFirstAgreementsArgs";
+import { FindFirstAgreementsOrThrowArgs } from "./args/FindFirstAgreementsOrThrowArgs";
+import { FindManyAgreementsArgs } from "./args/FindManyAgreementsArgs";
+import { FindUniqueAgreementsArgs } from "./args/FindUniqueAgreementsArgs";
+import { FindUniqueAgreementsOrThrowArgs } from "./args/FindUniqueAgreementsOrThrowArgs";
+import { GroupByAgreementsArgs } from "./args/GroupByAgreementsArgs";
+import { UpdateManyAgreementsArgs } from "./args/UpdateManyAgreementsArgs";
+import { UpdateOneAgreementsArgs } from "./args/UpdateOneAgreementsArgs";
+import { UpsertOneAgreementsArgs } from "./args/UpsertOneAgreementsArgs";
+import { Agreements } from "../../../models/Agreements";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateAgreements } from "../../outputs/AggregateAgreements";
+import { AgreementsGroupBy } from "../../outputs/AgreementsGroupBy";
+export declare class AgreementsCrudResolver {
+    aggregateAgreements(ctx: any, info: GraphQLResolveInfo, args: AggregateAgreementsArgs): Promise<AggregateAgreements>;
+    createManyAgreements(ctx: any, info: GraphQLResolveInfo, args: CreateManyAgreementsArgs): Promise<AffectedRowsOutput>;
+    createOneAgreements(ctx: any, info: GraphQLResolveInfo, args: CreateOneAgreementsArgs): Promise<Agreements>;
+    deleteManyAgreements(ctx: any, info: GraphQLResolveInfo, args: DeleteManyAgreementsArgs): Promise<AffectedRowsOutput>;
+    deleteOneAgreements(ctx: any, info: GraphQLResolveInfo, args: DeleteOneAgreementsArgs): Promise<Agreements | null>;
+    findFirstAgreements(ctx: any, info: GraphQLResolveInfo, args: FindFirstAgreementsArgs): Promise<Agreements | null>;
+    findFirstAgreementsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstAgreementsOrThrowArgs): Promise<Agreements | null>;
+    findManyAgreements(ctx: any, info: GraphQLResolveInfo, args: FindManyAgreementsArgs): Promise<Agreements[]>;
+    findUniqueAgreements(ctx: any, info: GraphQLResolveInfo, args: FindUniqueAgreementsArgs): Promise<Agreements | null>;
+    findUniqueAgreementsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueAgreementsOrThrowArgs): Promise<Agreements | null>;
+    groupByAgreements(ctx: any, info: GraphQLResolveInfo, args: GroupByAgreementsArgs): Promise<AgreementsGroupBy[]>;
+    updateManyAgreements(ctx: any, info: GraphQLResolveInfo, args: UpdateManyAgreementsArgs): Promise<AffectedRowsOutput>;
+    updateOneAgreements(ctx: any, info: GraphQLResolveInfo, args: UpdateOneAgreementsArgs): Promise<Agreements | null>;
+    upsertOneAgreements(ctx: any, info: GraphQLResolveInfo, args: UpsertOneAgreementsArgs): Promise<Agreements>;
+}

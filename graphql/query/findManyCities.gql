@@ -1,0 +1,12 @@
+query {
+  findManyCities 
+ {
+    country
+    description
+    id
+    image
+    name
+    postalCode
+    state
+  }
+}

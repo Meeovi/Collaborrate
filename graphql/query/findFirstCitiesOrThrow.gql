@@ -1,0 +1,12 @@
+query {
+  findFirstCitiesOrThrow 
+ {
+    country
+    description
+    id
+    image
+    name
+    postalCode
+    state
+  }
+}
