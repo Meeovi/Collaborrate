@@ -3914,7 +3914,7 @@ const pagination = /*#__PURE__*/Object.freeze({
 
 const pages = defineEventHandler(async (event) => {
   const prisma = usePrisma(event);
-  return prisma.$queryRaw`SELECT * FROM pages`;
+  return prisma.$queryRaw`SELECT * FROM categories`;
 });
 
 const pages$1 = /*#__PURE__*/Object.freeze({

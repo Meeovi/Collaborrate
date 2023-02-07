@@ -87,6 +87,7 @@ body {
 
 .homeSection {
     padding: 45px !important;
+    width: 95%
 }
 
 .homeSection a {
@@ -95,6 +96,7 @@ body {
 
 .homeTitle, .homeDescription {
     padding: 5px;
+    text-align: center;
 }
 
 .homeRows {
@@ -122,25 +124,21 @@ body {
 /******************** Sidebar CSS *************/
 
 #sidebarNav {
-    height: 100% !important;
+    height: 100vh !important;
     left: 0px;
     float: left;
-    position: absolute;
+    position: relative;
     padding-left: 0px;
     padding-right: 0px;
 }
 
-/********************* Metrics CSS ***********/
+/********************* Projects & Tickets CSS ***********/
 
-.metricsWindowRight {
-    width: 80%;
-    height: 100vh !important;
-}
-
-.databaseSections {
-    width: 100%;
+.projectBar {
+    left: 5px;
+    padding-top: 20px;
+    padding-left: 10px;
     position: relative;
-    height: 100vh !important;
 }
 
 /********************** Media Manager CSS ***********/
