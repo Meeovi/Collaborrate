@@ -1,21 +1,31 @@
 <template>
     <v-card class="contentSection">
         <v-card-title>
-            Todo Lists
+            <v-toolbar style="background-color: transparent;color: white;">
+                <v-col cols="10">
+                    <v-toolbar-title>Todo Lists</v-toolbar-title>
+                </v-col>
+                <v-col cols="2">
+                    <addTodo />
+                </v-col>
+            </v-toolbar>
             <v-spacer></v-spacer>
             <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details>
             </v-text-field>
         </v-card-title>
-        <v-data-table v-model="selected" show-select class="elevation-1" item-value="name" :headers="headers" :items="desserts" :search="search"></v-data-table>
+        <v-data-table v-model="selected" show-select class="elevation-1" 
+ item-value="name" :headers="headers" :items="desserts" :search="search"></v-data-table>
     </v-card>
 </template>
 
 <script>
+import addTodo from './addLists/add-todo.vue'
+
     export default {
+        components: { addTodo },
         data() {
             return {
                 search: '',
-                selected: [],
                 headers: [{
                         align: 'start',
                         key: 'name',
@@ -131,6 +141,6 @@
 
 <script setup>
     useHead({
-        title: 'Todo Lists'
+        title: 'Todo'
     })
 </script>

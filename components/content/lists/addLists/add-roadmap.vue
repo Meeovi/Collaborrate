@@ -3,7 +3,7 @@
         <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition" persistent>
             <template v-slot:activator="{ props }">
                 <v-btn v-bind="props" class="rightAddBtn">
-                    <v-icon start icon="fas fa-plus"></v-icon>Add Todo
+                    <v-icon start icon="fas fa-plus"></v-icon>Add Roadmap
                 </v-btn>
             </template>
             <v-card>
@@ -13,14 +13,14 @@
                             <v-icon icon="fas fa-circle-xmark"></v-icon>
                         </v-btn>
                         <v-card-title>
-                            <span class="text-h6">Create new Todo</span>
+                            <span class="text-h6">Create new Roadmap</span>
                         </v-card-title>
                     </v-toolbar>
                     <v-card-text>
                         <v-container>
                             <v-row>
                                 <v-col cols="6">
-                                    <v-text-field v-model="name" id="categoryName" label="Todo Name*" required></v-text-field>
+                                    <v-text-field v-model="name" id="categoryName" label="Roadmap Name*" required></v-text-field>
                                 </v-col>
                                 <v-col cols="6">
                                     <v-textarea v-model="content" label="Description" id="categoryDescription">
@@ -36,7 +36,7 @@
                                     <v-textarea v-model="meta_description" label="Meta Description" id="categoryDescription"></v-textarea>
                                 </v-col>
                                 <v-col cols="12" sm="6">
-                                    <v-file-input accept="image/*" label="Todo Image"></v-file-input>
+                                    <v-file-input accept="image/*" label="Roadmap Image"></v-file-input>
                                 </v-col>
                             </v-row>
                         </v-container>

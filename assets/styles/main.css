@@ -42,8 +42,9 @@ body {
 }
 
 .contentRight {
-    top: 0px !important;
-    width: 85vw !important;
+    top: -0px !important;
+    position: relative;
+    width: 100% !important;
     height: 100% !important;
 }
 
@@ -63,11 +64,6 @@ body {
     display: block !important;
 }
 
-.table {
-    padding: 50px;
-    width: 80%;
-}
-
 .features3 {
     background-color: transparent !important;
 }
@@ -77,8 +73,8 @@ body {
 }
 
 .contentSection {
-    position: relative;
-    width: 95%;
+    width: 98%;
+    height: 100vh !important;
 }
 
 /******************* Main Section CSS *********/
