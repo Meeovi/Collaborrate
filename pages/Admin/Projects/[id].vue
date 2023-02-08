@@ -21,7 +21,7 @@
 
             
         </v-toolbar>
-        <v-tabs bg-color="primary" center-active>
+        <v-tabs v-model="tab" bg-color="primary" center-active>
             <v-tab value="one">Overview</v-tab>
             <v-tab value="two">Task</v-tab>
             <v-tab value="three">Board</v-tab>
