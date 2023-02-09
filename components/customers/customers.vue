@@ -38,8 +38,7 @@
                     <td>{{ customers.email }}</td>
                     <td>{{ customers.customer_group }}</td>
                     <td>{{ customers.created_at }}</td>
-                    <td><a :href="`/admin/customers/${customers.id}`">
-                            <!--<editUser />--></a></td>
+                    <td><a :href="`/admin/customers/${customers.id}`"></a></td>
                 </tr>
             </tbody>
         </v-table>
@@ -53,7 +52,6 @@
     export default {
         components: {
             createCustomer,
-            //editUser
         },
        data() {
             return {
@@ -65,7 +63,7 @@
                 prefetch: true,
                 query: findManyCustomers
             }
-        }, 
+        },
     }
 </script>
 

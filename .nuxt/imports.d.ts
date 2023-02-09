@@ -7,7 +7,6 @@ export { useDialog, useMessage, useNotification, useLoadingBar } from 'naive-ui'
 export { gql } from 'graphql-tag';
 export { useApollo, useAsyncQuery, useLazyAsyncQuery } from '../node_modules/@nuxtjs/apollo/dist/runtime/composables';
 export { useQuery, useLazyQuery, useMutation, useSubscription, useApolloClient, useQueryLoading, useMutationLoading, useSubscriptionLoading, useGlobalQueryLoading, useGlobalMutationLoading, useGlobalSubscriptionLoading } from '@vue/apollo-composable';
-export { useMonaco } from '../node_modules/nuxt-monaco-editor/dist/runtime/composables';
 export { queryContent } from '../node_modules/@nuxt/content/dist/runtime/composables/query';
 export { useContentHelpers } from '../node_modules/@nuxt/content/dist/runtime/composables/helpers';
 export { useContentHead } from '../node_modules/@nuxt/content/dist/runtime/composables/head';

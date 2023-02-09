@@ -94,7 +94,7 @@
                     <v-window v-model="tab" class="metricsWindowRight">
                         <v-window-item value="option-1">
                             <v-card flat>
-                                <dashboard />
+                                <main />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-2">
@@ -169,7 +169,7 @@
 </template>
 
 <script>
-    import dashboard from '~/components/content/inventory/dashboard'
+    import main from '~/components/content/inventory/main'
     import sales from '~/components/content/inventory/sales'
     import products from '~/components/content/inventory/products'
     import attributes from '~/components/content/inventory/attributes'
@@ -186,7 +186,7 @@
 
     export default {
         components: {
-            dashboard,
+            main,
             sales,
             products,
             attributes,

@@ -43,7 +43,7 @@
                     <v-window v-model="tab" class="metricsWindowRight">
                         <v-window-item value="option-1">
                             <v-card flat>
-                                <overview />
+                                <home />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-2">
@@ -74,7 +74,7 @@
 </template>
 
 <script>
-    import overview from '~/components/content/marketing/overview.vue'
+    import home from '~/components/content/marketing/home.vue'
     import emails from '~/components/content/marketing/emails.vue'
     import newsletters from '~/components/content/marketing/newsletters.vue'
     import templates from '~/components/content/marketing/templates.vue'
@@ -82,7 +82,7 @@
 
     export default {
         components: {
-            overview,
+            home,
             emails,
             newsletters,
             templates,

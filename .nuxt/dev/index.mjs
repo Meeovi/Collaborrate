@@ -57,7 +57,7 @@ import { visit } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Ha
 import { BUNDLED_LANGUAGES, BUNDLED_THEMES, getHighlighter } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/shiki-es/dist/shiki.node.mjs';
 import consola from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unenv/runtime/npm/consola.mjs';
 
-const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":"","__MONACO_EDITOR_LOCALE__":"en","__MONACO_EDITOR_LOCATION__":"/_monaco"},"nitro":{"routeRules":{"/__nuxt_error":{"cache":false},"/**":{"headers":{"Cross-Origin-Resource-Policy":"same-origin","Cross-Origin-Opener-Policy":"same-origin","Cross-Origin-Embedder-Policy":"require-corp","Content-Security-Policy":"base-uri 'self'; font-src 'self' https: data:; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; object-src 'none'; script-src-attr 'none'; style-src 'self' https: 'unsafe-inline'; upgrade-insecure-requests","Origin-Agent-Cluster":"?1","Referrer-Policy":"no-referrer","Strict-Transport-Security":"max-age=15552000; includeSubDomains","X-Content-Type-Options":"nosniff","X-DNS-Prefetch-Control":"off","X-Download-Options":"noopen","X-Frame-Options":"SAMEORIGIN","X-Permitted-Cross-Domain-Policies":"none","X-XSS-Protection":"0"}}},"envPrefix":"NUXT_"},"public":{"content":{"locales":[],"experimental":{"stripQueryParameters":false,"clientDB":false},"api":{"baseURL":"/api/_content"},"navigation":{"fields":[]},"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"highlight":false,"wsUrl":"ws://localhost:4002/","documentDriven":false,"anchorLinks":{"depth":4,"exclude":[1]}},"naiveUI":{}},"content":{"cacheVersion":2,"cacheIntegrity":"kc4UzpZUjI","transformers":[],"base":"","api":{"baseURL":"/api/_content"},"watch":{"ws":{"port":{"port":4000,"portRange":[4000,4040]},"hostname":"localhost","showURL":false}},"sources":{},"ignores":["\\.","-"],"locales":[],"highlight":false,"markdown":{"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"anchorLinks":{"depth":4,"exclude":[1]},"remarkPlugins":{},"rehypePlugins":{}},"yaml":{},"csv":{"delimeter":",","json":true},"navigation":{"fields":[]},"documentDriven":false,"experimental":{"clientDB":false,"stripQueryParameters":false}},"security":{"headers":{"crossOriginResourcePolicy":{"value":"same-origin","route":"/**"},"crossOriginOpenerPolicy":{"value":"same-origin","route":"/**"},"crossOriginEmbedderPolicy":{"value":"require-corp","route":"/**"},"contentSecurityPolicy":{"value":{"base-uri":["'self'"],"font-src":["'self'","https:","data:"],"form-action":["'self'"],"frame-ancestors":["'self'"],"img-src":["'self'","data:"],"object-src":["'none'"],"script-src-attr":["'none'"],"style-src":["'self'","https:","'unsafe-inline'"],"upgrade-insecure-requests":true},"route":"/**"},"originAgentCluster":{"value":"?1","route":"/**"},"referrerPolicy":{"value":"no-referrer","route":"/**"},"strictTransportSecurity":{"value":{"maxAge":15552000,"includeSubdomains":true},"route":"/**"},"xContentTypeOptions":{"value":"nosniff","route":"/**"},"xDNSPrefetchControl":{"value":"off","route":"/**"},"xDownloadOptions":{"value":"noopen","route":"/**"},"xFrameOptions":{"value":"SAMEORIGIN","route":"/**"},"xPermittedCrossDomainPolicies":{"value":"none","route":"/**"},"xXSSProtection":{"value":"0","route":"/**"}},"requestSizeLimiter":{"value":{"maxRequestSizeInBytes":2000000,"maxUploadFileRequestInBytes":8000000},"route":"","throwError":true},"rateLimiter":{"value":{"tokensPerInterval":150,"interval":"hour","fireImmediately":true},"route":"","throwError":true},"xssValidator":{"value":{},"route":"","throwError":true},"corsHandler":{"value":{"origin":"*","methods":["GET","HEAD","PUT","PATCH","POST","DELETE"],"preflight":{"statusCode":204}},"route":"","throwError":true},"allowedMethodsRestricter":{"value":"*","route":"","throwError":true},"hidePoweredBy":true,"basicAuth":false,"enabled":true}};
+const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":""},"nitro":{"routeRules":{"/__nuxt_error":{"cache":false},"/**":{"headers":{"Cross-Origin-Resource-Policy":"same-origin","Cross-Origin-Opener-Policy":"same-origin","Cross-Origin-Embedder-Policy":"require-corp","Content-Security-Policy":"base-uri 'self'; font-src 'self' https: data:; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; object-src 'none'; script-src-attr 'none'; style-src 'self' https: 'unsafe-inline'; upgrade-insecure-requests","Origin-Agent-Cluster":"?1","Referrer-Policy":"no-referrer","Strict-Transport-Security":"max-age=15552000; includeSubDomains","X-Content-Type-Options":"nosniff","X-DNS-Prefetch-Control":"off","X-Download-Options":"noopen","X-Frame-Options":"SAMEORIGIN","X-Permitted-Cross-Domain-Policies":"none","X-XSS-Protection":"0"}}},"envPrefix":"NUXT_"},"public":{"content":{"locales":[],"experimental":{"stripQueryParameters":false,"clientDB":false},"api":{"baseURL":"/api/_content"},"navigation":{"fields":[]},"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"highlight":false,"wsUrl":"ws://localhost:4000/","documentDriven":false,"anchorLinks":{"depth":4,"exclude":[1]}},"naiveUI":{}},"content":{"cacheVersion":2,"cacheIntegrity":"kc4UzpZUjI","transformers":[],"base":"","api":{"baseURL":"/api/_content"},"watch":{"ws":{"port":{"port":4000,"portRange":[4000,4040]},"hostname":"localhost","showURL":false}},"sources":{},"ignores":["\\.","-"],"locales":[],"highlight":false,"markdown":{"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"anchorLinks":{"depth":4,"exclude":[1]},"remarkPlugins":{},"rehypePlugins":{}},"yaml":{},"csv":{"delimeter":",","json":true},"navigation":{"fields":[]},"documentDriven":false,"experimental":{"clientDB":false,"stripQueryParameters":false}},"security":{"headers":{"crossOriginResourcePolicy":{"value":"same-origin","route":"/**"},"crossOriginOpenerPolicy":{"value":"same-origin","route":"/**"},"crossOriginEmbedderPolicy":{"value":"require-corp","route":"/**"},"contentSecurityPolicy":{"value":{"base-uri":["'self'"],"font-src":["'self'","https:","data:"],"form-action":["'self'"],"frame-ancestors":["'self'"],"img-src":["'self'","data:"],"object-src":["'none'"],"script-src-attr":["'none'"],"style-src":["'self'","https:","'unsafe-inline'"],"upgrade-insecure-requests":true},"route":"/**"},"originAgentCluster":{"value":"?1","route":"/**"},"referrerPolicy":{"value":"no-referrer","route":"/**"},"strictTransportSecurity":{"value":{"maxAge":15552000,"includeSubdomains":true},"route":"/**"},"xContentTypeOptions":{"value":"nosniff","route":"/**"},"xDNSPrefetchControl":{"value":"off","route":"/**"},"xDownloadOptions":{"value":"noopen","route":"/**"},"xFrameOptions":{"value":"SAMEORIGIN","route":"/**"},"xPermittedCrossDomainPolicies":{"value":"none","route":"/**"},"xXSSProtection":{"value":"0","route":"/**"}},"requestSizeLimiter":{"value":{"maxRequestSizeInBytes":2000000,"maxUploadFileRequestInBytes":8000000},"route":"","throwError":true},"rateLimiter":{"value":{"tokensPerInterval":150,"interval":"hour","fireImmediately":true},"route":"","throwError":true},"xssValidator":{"value":{},"route":"","throwError":true},"corsHandler":{"value":{"origin":"*","methods":["GET","HEAD","PUT","PATCH","POST","DELETE"],"preflight":{"statusCode":204}},"route":"","throwError":true},"allowedMethodsRestricter":{"value":"*","route":"","throwError":true},"hidePoweredBy":true,"basicAuth":false,"enabled":true}};
 const ENV_PREFIX = "NITRO_";
 const ENV_PREFIX_ALT = _runtimeConfig.nitro.envPrefix ?? process.env.NITRO_ENV_PREFIX ?? "_";
 const getEnv = (key) => {
@@ -3731,41 +3731,95 @@ const _smzehB = defineEventHandler(async (event) => {
   return createNav(contents, configs);
 });
 
+const _lazy_DYJJe4 = () => Promise.resolve().then(function () { return wishlists$1; });
+const _lazy_rzcGFm = () => Promise.resolve().then(function () { return warehouses$1; });
+const _lazy_KFLKCt = () => Promise.resolve().then(function () { return vendors$1; });
 const _lazy_uNgigv = () => Promise.resolve().then(function () { return users$1; });
-const _lazy_lQSHP4 = () => Promise.resolve().then(function () { return update$1; });
-const _lazy_7cxtda = () => Promise.resolve().then(function () { return serverSessions$1; });
-const _lazy_ItkiBI = () => Promise.resolve().then(function () { return read$1; });
+const _lazy_Ng237e = () => Promise.resolve().then(function () { return transactions$1; });
+const _lazy_ZPk0VK = () => Promise.resolve().then(function () { return templates$1; });
+const _lazy_7QyYQ3 = () => Promise.resolve().then(function () { return taxes$1; });
+const _lazy_fgpQfS = () => Promise.resolve().then(function () { return tags$1; });
+const _lazy_rubTfC = () => Promise.resolve().then(function () { return states$1; });
+const _lazy_TX3UO0 = () => Promise.resolve().then(function () { return shipments$1; });
+const _lazy_iMACfH = () => Promise.resolve().then(function () { return settings$1; });
+const _lazy_WujxDA = () => Promise.resolve().then(function () { return sales$1; });
+const _lazy_r0TuDt = () => Promise.resolve().then(function () { return roles$1; });
+const _lazy_X2IJGo = () => Promise.resolve().then(function () { return reviews$1; });
+const _lazy_VfxghU = () => Promise.resolve().then(function () { return quotes$1; });
+const _lazy_kPP2D1 = () => Promise.resolve().then(function () { return providers$1; });
+const _lazy_ejEhoB = () => Promise.resolve().then(function () { return productTypes$1; });
+const _lazy_j6pLKN = () => Promise.resolve().then(function () { return products$1; });
 const _lazy_erqJPE = () => Promise.resolve().then(function () { return prisma$2; });
-const _lazy_aIEyxK = () => Promise.resolve().then(function () { return pagination; });
+const _lazy_lcn3yG = () => Promise.resolve().then(function () { return permissions$1; });
+const _lazy_md5QjP = () => Promise.resolve().then(function () { return payments$1; });
+const _lazy_XWAedh = () => Promise.resolve().then(function () { return partners$1; });
 const _lazy_e5cmZJ = () => Promise.resolve().then(function () { return pages$1; });
-const _lazy_dtJMJb = () => Promise.resolve().then(function () { return middleware; });
-const _lazy_v3PybF = () => Promise.resolve().then(function () { return logging; });
-const _lazy_7EdUp6 = () => Promise.resolve().then(function () { return filterSort; });
-const _lazy_7KLBaA = () => Promise.resolve().then(function () { return errors; });
-const _lazy_05OzVT = () => Promise.resolve().then(function () { return _delete$1; });
+const _lazy_zMIvJE = () => Promise.resolve().then(function () { return newsletters$1; });
+const _lazy_vI4nxH = () => Promise.resolve().then(function () { return manufacturers$1; });
+const _lazy_56dcx0 = () => Promise.resolve().then(function () { return invoices$1; });
+const _lazy_upyGMN = () => Promise.resolve().then(function () { return integrations$1; });
+const _lazy_v2wt6Y = () => Promise.resolve().then(function () { return emails$1; });
+const _lazy_ZMd47b = () => Promise.resolve().then(function () { return discounts$1; });
 const _lazy_FBEJsE = () => Promise.resolve().then(function () { return dashboards$1; });
+const _lazy_BbvJHH = () => Promise.resolve().then(function () { return customers$1; });
+const _lazy_cH1Qw8 = () => Promise.resolve().then(function () { return currencies$1; });
 const _lazy_58Cei9 = () => Promise.resolve().then(function () { return create$1; });
+const _lazy_dmKddX = () => Promise.resolve().then(function () { return countries$1; });
+const _lazy_6PWgH7 = () => Promise.resolve().then(function () { return collections$1; });
+const _lazy_uCyxrv = () => Promise.resolve().then(function () { return cities; });
+const _lazy_N77GdA = () => Promise.resolve().then(function () { return channels$1; });
+const _lazy_QNotNz = () => Promise.resolve().then(function () { return categories$1; });
+const _lazy_7rMEzm = () => Promise.resolve().then(function () { return brands$1; });
+const _lazy_rwy2Ga = () => Promise.resolve().then(function () { return blog$1; });
 const _lazy_uyLIo6 = () => Promise.resolve().then(function () { return _____; });
+const _lazy_IUOeaY = () => Promise.resolve().then(function () { return attributes$1; });
 const _lazy_tewSUK = () => Promise.resolve().then(function () { return agreements$1; });
 const _lazy_HkWEan = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
   { route: '', handler: _Jx7ORH, lazy: false, middleware: true, method: undefined },
+  { route: '/api/wishlists', handler: _lazy_DYJJe4, lazy: true, middleware: false, method: undefined },
+  { route: '/api/warehouses', handler: _lazy_rzcGFm, lazy: true, middleware: false, method: undefined },
+  { route: '/api/vendors', handler: _lazy_KFLKCt, lazy: true, middleware: false, method: undefined },
   { route: '/api/users', handler: _lazy_uNgigv, lazy: true, middleware: false, method: undefined },
-  { route: '/api/update', handler: _lazy_lQSHP4, lazy: true, middleware: false, method: undefined },
-  { route: '/api/serverSessions', handler: _lazy_7cxtda, lazy: true, middleware: false, method: undefined },
-  { route: '/api/read', handler: _lazy_ItkiBI, lazy: true, middleware: false, method: undefined },
+  { route: '/api/transactions', handler: _lazy_Ng237e, lazy: true, middleware: false, method: undefined },
+  { route: '/api/templates', handler: _lazy_ZPk0VK, lazy: true, middleware: false, method: undefined },
+  { route: '/api/taxes', handler: _lazy_7QyYQ3, lazy: true, middleware: false, method: undefined },
+  { route: '/api/tags', handler: _lazy_fgpQfS, lazy: true, middleware: false, method: undefined },
+  { route: '/api/states', handler: _lazy_rubTfC, lazy: true, middleware: false, method: undefined },
+  { route: '/api/shipments', handler: _lazy_TX3UO0, lazy: true, middleware: false, method: undefined },
+  { route: '/api/settings', handler: _lazy_iMACfH, lazy: true, middleware: false, method: undefined },
+  { route: '/api/sales', handler: _lazy_WujxDA, lazy: true, middleware: false, method: undefined },
+  { route: '/api/roles', handler: _lazy_r0TuDt, lazy: true, middleware: false, method: undefined },
+  { route: '/api/reviews', handler: _lazy_X2IJGo, lazy: true, middleware: false, method: undefined },
+  { route: '/api/quotes', handler: _lazy_VfxghU, lazy: true, middleware: false, method: undefined },
+  { route: '/api/providers', handler: _lazy_kPP2D1, lazy: true, middleware: false, method: undefined },
+  { route: '/api/productTypes', handler: _lazy_ejEhoB, lazy: true, middleware: false, method: undefined },
+  { route: '/api/products', handler: _lazy_j6pLKN, lazy: true, middleware: false, method: undefined },
   { route: '/api/prisma', handler: _lazy_erqJPE, lazy: true, middleware: false, method: undefined },
-  { route: '/api/pagination', handler: _lazy_aIEyxK, lazy: true, middleware: false, method: undefined },
+  { route: '/api/permissions', handler: _lazy_lcn3yG, lazy: true, middleware: false, method: undefined },
+  { route: '/api/payments', handler: _lazy_md5QjP, lazy: true, middleware: false, method: undefined },
+  { route: '/api/partners', handler: _lazy_XWAedh, lazy: true, middleware: false, method: undefined },
   { route: '/api/pages', handler: _lazy_e5cmZJ, lazy: true, middleware: false, method: undefined },
-  { route: '/api/middleware', handler: _lazy_dtJMJb, lazy: true, middleware: false, method: undefined },
-  { route: '/api/logging', handler: _lazy_v3PybF, lazy: true, middleware: false, method: undefined },
-  { route: '/api/filterSort', handler: _lazy_7EdUp6, lazy: true, middleware: false, method: undefined },
-  { route: '/api/errors', handler: _lazy_7KLBaA, lazy: true, middleware: false, method: undefined },
-  { route: '/api/delete', handler: _lazy_05OzVT, lazy: true, middleware: false, method: undefined },
+  { route: '/api/newsletters', handler: _lazy_zMIvJE, lazy: true, middleware: false, method: undefined },
+  { route: '/api/manufacturers', handler: _lazy_vI4nxH, lazy: true, middleware: false, method: undefined },
+  { route: '/api/invoices', handler: _lazy_56dcx0, lazy: true, middleware: false, method: undefined },
+  { route: '/api/integrations', handler: _lazy_upyGMN, lazy: true, middleware: false, method: undefined },
+  { route: '/api/emails', handler: _lazy_v2wt6Y, lazy: true, middleware: false, method: undefined },
+  { route: '/api/discounts', handler: _lazy_ZMd47b, lazy: true, middleware: false, method: undefined },
   { route: '/api/dashboards', handler: _lazy_FBEJsE, lazy: true, middleware: false, method: undefined },
+  { route: '/api/customers', handler: _lazy_BbvJHH, lazy: true, middleware: false, method: undefined },
+  { route: '/api/currencies', handler: _lazy_cH1Qw8, lazy: true, middleware: false, method: undefined },
   { route: '/api/create', handler: _lazy_58Cei9, lazy: true, middleware: false, method: undefined },
+  { route: '/api/countries', handler: _lazy_dmKddX, lazy: true, middleware: false, method: undefined },
+  { route: '/api/collections', handler: _lazy_6PWgH7, lazy: true, middleware: false, method: undefined },
+  { route: '/api/cities', handler: _lazy_uCyxrv, lazy: true, middleware: false, method: undefined },
+  { route: '/api/channels', handler: _lazy_N77GdA, lazy: true, middleware: false, method: undefined },
+  { route: '/api/categories', handler: _lazy_QNotNz, lazy: true, middleware: false, method: undefined },
+  { route: '/api/brands', handler: _lazy_7rMEzm, lazy: true, middleware: false, method: undefined },
+  { route: '/api/blog', handler: _lazy_rwy2Ga, lazy: true, middleware: false, method: undefined },
   { route: '/api/auth/**', handler: _lazy_uyLIo6, lazy: true, middleware: false, method: undefined },
+  { route: '/api/attributes', handler: _lazy_IUOeaY, lazy: true, middleware: false, method: undefined },
   { route: '/api/agreements', handler: _lazy_tewSUK, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_HkWEan, lazy: true, middleware: false, method: undefined },
   { route: '', handler: _o3L44u, lazy: false, middleware: false, method: undefined },
@@ -3860,6 +3914,36 @@ function usePrisma(event) {
 }
 defineNuxtConfig({});
 
+const wishlists = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM wishlists`;
+});
+
+const wishlists$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': wishlists
+});
+
+const warehouses = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM warehouse`;
+});
+
+const warehouses$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': warehouses
+});
+
+const vendors = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM vendors`;
+});
+
+const vendors$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': vendors
+});
+
 const users = defineEventHandler(async (event) => {
   const prisma = usePrisma(event);
   return prisma.$queryRaw`SELECT * FROM users`;
@@ -3870,32 +3954,144 @@ const users$1 = /*#__PURE__*/Object.freeze({
   'default': users
 });
 
-const update = defineEventHandler((event) => {
-  return {
-    api: "works"
-  };
-});
-
-const update$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  'default': update
-});
-
-const serverSessions = eventHandler((event) => event.context.session);
-
-const serverSessions$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  'default': serverSessions
-});
-
-const read = defineEventHandler(async (event) => {
+const transactions = defineEventHandler(async (event) => {
   const prisma = usePrisma(event);
-  return prisma.$queryRaw`SELECT name FROM categories`;
+  return prisma.$queryRaw`SELECT * FROM transactions`;
 });
 
-const read$1 = /*#__PURE__*/Object.freeze({
+const transactions$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  'default': read
+  'default': transactions
+});
+
+const templates = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM templates`;
+});
+
+const templates$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': templates
+});
+
+const taxes = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM taxes`;
+});
+
+const taxes$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': taxes
+});
+
+const tags = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM tags`;
+});
+
+const tags$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': tags
+});
+
+const states = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM states`;
+});
+
+const states$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': states
+});
+
+const shipments = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM shipments`;
+});
+
+const shipments$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': shipments
+});
+
+const settings = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM settings`;
+});
+
+const settings$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': settings
+});
+
+const sales = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM sales`;
+});
+
+const sales$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': sales
+});
+
+const roles = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM roles`;
+});
+
+const roles$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': roles
+});
+
+const reviews = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM reviews`;
+});
+
+const reviews$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': reviews
+});
+
+const quotes = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM quotes`;
+});
+
+const quotes$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': quotes
+});
+
+const providers = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM providers`;
+});
+
+const providers$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': providers
+});
+
+const productTypes = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM product_types`;
+});
+
+const productTypes$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': productTypes
+});
+
+const products = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM products`;
+});
+
+const products$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': products
 });
 
 const prisma = new PrismaClient();
@@ -3908,8 +4104,34 @@ const prisma$2 = /*#__PURE__*/Object.freeze({
   'default': prisma$1
 });
 
-const pagination = /*#__PURE__*/Object.freeze({
-  __proto__: null
+const permissions = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM permissions`;
+});
+
+const permissions$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': permissions
+});
+
+const payments = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM payments`;
+});
+
+const payments$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': payments
+});
+
+const partners = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM partners`;
+});
+
+const partners$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': partners
 });
 
 const pages = defineEventHandler(async (event) => {
@@ -3922,31 +4144,64 @@ const pages$1 = /*#__PURE__*/Object.freeze({
   'default': pages
 });
 
-const middleware = /*#__PURE__*/Object.freeze({
-  __proto__: null
+const newsletters = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM newsletters`;
 });
 
-const logging = /*#__PURE__*/Object.freeze({
-  __proto__: null
-});
-
-const filterSort = /*#__PURE__*/Object.freeze({
-  __proto__: null
-});
-
-const errors = /*#__PURE__*/Object.freeze({
-  __proto__: null
-});
-
-const _delete = defineEventHandler((event) => {
-  return {
-    api: "works"
-  };
-});
-
-const _delete$1 = /*#__PURE__*/Object.freeze({
+const newsletters$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  'default': _delete
+  'default': newsletters
+});
+
+const manufacturers = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM manufacturers`;
+});
+
+const manufacturers$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': manufacturers
+});
+
+const invoices = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM invoices`;
+});
+
+const invoices$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': invoices
+});
+
+const integrations = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM integrations`;
+});
+
+const integrations$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': integrations
+});
+
+const emails = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM emails`;
+});
+
+const emails$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': emails
+});
+
+const discounts = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM discounts`;
+});
+
+const discounts$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': discounts
 });
 
 const dashboards = defineEventHandler(async (event) => {
@@ -3959,6 +4214,26 @@ const dashboards$1 = /*#__PURE__*/Object.freeze({
   'default': dashboards
 });
 
+const customers = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM customers`;
+});
+
+const customers$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': customers
+});
+
+const currencies = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM currencies`;
+});
+
+const currencies$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': currencies
+});
+
 const create = defineEventHandler(async (event) => {
   const prisma = usePrisma(event);
   return prisma.$executeRaw`CREATE TABLE test;`;
@@ -3969,8 +4244,82 @@ const create$1 = /*#__PURE__*/Object.freeze({
   'default': create
 });
 
+const countries = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM countries`;
+});
+
+const countries$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': countries
+});
+
+const collections = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM collections`;
+});
+
+const collections$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': collections
+});
+
+const cities = /*#__PURE__*/Object.freeze({
+  __proto__: null
+});
+
+const channels = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM channels`;
+});
+
+const channels$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': channels
+});
+
+const categories = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM categories`;
+});
+
+const categories$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': categories
+});
+
+const brands = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM brands`;
+});
+
+const brands$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': brands
+});
+
+const blog = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM articles`;
+});
+
+const blog$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': blog
+});
+
 const _____ = /*#__PURE__*/Object.freeze({
   __proto__: null
+});
+
+const attributes = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT * FROM attributes`;
+});
+
+const attributes$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': attributes
 });
 
 const agreements = defineEventHandler(async (event) => {
@@ -4178,7 +4527,7 @@ const renderer$1 = /*#__PURE__*/Object.freeze({
   'default': renderer
 });
 
-const _virtual__headStatic = {"headTags":"<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<link rel=\"preload\" as=\"script\" href=\"/_monaco/vs/editor/editor.main.js\">\n<script src=\"/_monaco/vs/loader.js\"></script>","bodyTags":"","bodyTagsOpen":"","htmlAttrs":"","bodyAttrs":""};
+const _virtual__headStatic = {"headTags":"<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">","bodyTags":"","bodyTagsOpen":"","htmlAttrs":"","bodyAttrs":""};
 
 const _virtual__headStatic$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,

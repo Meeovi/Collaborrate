@@ -23,9 +23,7 @@ export default defineNuxtConfig({
 
     modules: [
       '@nuxtjs/apollo',
-      '@formkit/nuxt',
       //'@sidebase/nuxt-auth',
-      'nuxt-monaco-editor',
       '@nuxt/content',
       '@nuxtjs/i18n',
       "nuxt-security",
@@ -80,16 +78,6 @@ export default defineNuxtConfig({
         }
       },
     },
-
-      monacoEditor: {
-        // These are default values:
-        dest: '_monaco',
-        locale: 'en',
-        componentName: {
-          codeEditor: 'MonacoEditor',
-          diffEditor: 'MonacoDiffEditor'
-        }
-      },
 
     build: {
       transpile: [

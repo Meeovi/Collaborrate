@@ -2,8 +2,6 @@ import { NuxtModule } from '@nuxt/schema'
 declare module '@nuxt/schema' {
   interface NuxtConfig {
     ["apollo"]?: typeof import("@nuxtjs/apollo").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["formkit"]?: typeof import("@formkit/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["monacoEditor"]?: typeof import("nuxt-monaco-editor").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["content"]?: typeof import("@nuxt/content").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["i18n"]?: typeof import("@nuxtjs/i18n").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["security"]?: typeof import("nuxt-security").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
@@ -17,10 +15,6 @@ declare module '@nuxt/schema' {
       buildAssetsDir: string,
 
       cdnURL: string,
-
-      __MONACO_EDITOR_LOCALE__: string,
-
-      __MONACO_EDITOR_LOCATION__: string,
    },
 
    content: {

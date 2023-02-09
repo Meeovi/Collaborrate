@@ -13,9 +13,6 @@
    },
    "license": "MIT",
    "private": true,
-   "prisma": {
-      "seed": "node prisma/seedDashboard.js"
-   },
    "scripts": {
       "alternate-commit": "git add . && git commit -m \"ready for update\"",
       "alternate-update": "git pull \"https://github.com/Meeovi/AlternateFramework\"",
@@ -48,15 +45,12 @@
       "graphql": "^15.8.0",
       "npm-run-all": "^4.1.5",
       "nuxt": "3.0.0",
-      "nuxt-monaco-editor": "^1.1.1",
       "prisma": "^4.7.1",
       "ts-node": "10.7.0",
       "typescript": "4.5.2"
    },
    "dependencies": {
       "@apollo/client": "^3.7.1",
-      "@apollo/gateway": "^0.43.1",
-      "@envelop/apollo-federation": "^3.0.3",
       "@envelop/core": "^3.0.3",
       "@envelop/graphql-jit": "^5.0.3",
       "@envelop/live-query": "^5.0.3",
@@ -64,13 +58,13 @@
       "@envelop/sentry": "^4.0.3",
       "@envelop/validation-cache": "^5.0.3",
       "@fastify/express": "^2.3.0",
-      "@formkit/nuxt": "^1.0.0-beta.12",
-      "@formkit/pro": "^1.0.0-alpha.37",
       "@fortawesome/fontawesome-svg-core": "^6.2.1",
       "@fortawesome/free-solid-svg-icons": "^6.2.1",
       "@fortawesome/vue-fontawesome": "^3.0.2",
       "@graphql-yoga/node": "^2.13.13",
+      "@graphql-yoga/plugin-csrf-prevention": "^1.1.1",
       "@graphql-yoga/plugin-sofa": "^1.0.0",
+      "@graphql-yoga/render-graphiql": "^3.5.1",
       "@huntersofbook/naive-ui-nuxt": "^0.5.1",
       "@mdi/font": "^7.1.96",
       "@monaco-editor/loader": "^1.3.2",
@@ -90,8 +84,6 @@
       "apollo-server": "^3.11.1",
       "axios": "^1.2.2",
       "bcrypt": "^5.1.0",
-      "can": "^6.6.2",
-      "can-stache-loader": "^3.0.0",
       "chart.js": "^4.1.2",
       "cookie": "^0.5.0",
       "cors": "^2.8.5",
@@ -125,7 +117,6 @@
       "typegraphql-prisma": "^0.23.1",
       "uuid": "^9.0.0",
       "vue-chartjs": "^5.2.0",
-      "vue-formio": "^4.0.8",
       "vuetify": "^3.0.5"
    }
 }

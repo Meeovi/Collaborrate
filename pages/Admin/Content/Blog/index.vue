@@ -34,7 +34,7 @@
                     <v-window v-model="tab" class="databaseSections">
                         <v-window-item value="option-1">
                             <v-card flat>
-                                <overview />
+                                <dashboard />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-2">
@@ -56,14 +56,14 @@
 
 <script>
     import createContent from '~/components/content/blog/InsertAddPost.vue'
-    import overview from '~/components/content/blog/overview'
+    import dashboard from '~/components/content/blog/dashboard'
     import published from '~/components/content/blog/published'
     import drafts from '~/components/content/blog/drafts'
 
     export default {
         components: {
             createContent,
-            overview,
+            dashboard,
             published,
             drafts,
         },

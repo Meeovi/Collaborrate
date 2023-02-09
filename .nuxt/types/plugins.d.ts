@@ -14,11 +14,8 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugins/composition").default> &
   InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugins/i18n").default> &
   InjectionType<typeof import("../../node_modules/@nuxt/content/dist/runtime/plugins/ws").default> &
-  InjectionType<typeof import("../../node_modules/nuxt-monaco-editor/dist/runtime/plugin.client").default> &
-  InjectionType<typeof import("../formkitPlugin").default> &
   InjectionType<typeof import("../../node_modules/@nuxtjs/apollo/dist/runtime/plugin").default> &
   InjectionType<typeof import("../../plugins/fontawesome").default> &
-  InjectionType<typeof import("../../plugins/formkit").default> &
   InjectionType<typeof import("../../plugins/vuetify").default>
 
 declare module '#app' {

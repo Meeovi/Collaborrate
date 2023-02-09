@@ -2,21 +2,48 @@
 declare module 'nitropack' {
   type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
   interface InternalApi {
+    '/api/wishlists': Awaited<ReturnType<typeof import('../../server/api/wishlists').default>>
+    '/api/warehouses': Awaited<ReturnType<typeof import('../../server/api/warehouses').default>>
+    '/api/vendors': Awaited<ReturnType<typeof import('../../server/api/vendors').default>>
     '/api/users': Awaited<ReturnType<typeof import('../../server/api/users').default>>
-    '/api/update': Awaited<ReturnType<typeof import('../../server/api/update').default>>
-    '/api/serverSessions': Awaited<ReturnType<typeof import('../../server/api/serverSessions').default>>
-    '/api/read': Awaited<ReturnType<typeof import('../../server/api/read').default>>
+    '/api/transactions': Awaited<ReturnType<typeof import('../../server/api/transactions').default>>
+    '/api/templates': Awaited<ReturnType<typeof import('../../server/api/templates').default>>
+    '/api/taxes': Awaited<ReturnType<typeof import('../../server/api/taxes').default>>
+    '/api/tags': Awaited<ReturnType<typeof import('../../server/api/tags').default>>
+    '/api/states': Awaited<ReturnType<typeof import('../../server/api/states').default>>
+    '/api/shipments': Awaited<ReturnType<typeof import('../../server/api/shipments').default>>
+    '/api/settings': Awaited<ReturnType<typeof import('../../server/api/settings').default>>
+    '/api/sales': Awaited<ReturnType<typeof import('../../server/api/sales').default>>
+    '/api/roles': Awaited<ReturnType<typeof import('../../server/api/roles').default>>
+    '/api/reviews': Awaited<ReturnType<typeof import('../../server/api/reviews').default>>
+    '/api/quotes': Awaited<ReturnType<typeof import('../../server/api/quotes').default>>
+    '/api/providers': Awaited<ReturnType<typeof import('../../server/api/providers').default>>
+    '/api/productTypes': Awaited<ReturnType<typeof import('../../server/api/productTypes').default>>
+    '/api/products': Awaited<ReturnType<typeof import('../../server/api/products').default>>
     '/api/prisma': Awaited<ReturnType<typeof import('../../server/api/prisma').default>>
-    '/api/pagination': Awaited<ReturnType<typeof import('../../server/api/pagination').default>>
+    '/api/permissions': Awaited<ReturnType<typeof import('../../server/api/permissions').default>>
+    '/api/payments': Awaited<ReturnType<typeof import('../../server/api/payments').default>>
+    '/api/partners': Awaited<ReturnType<typeof import('../../server/api/partners').default>>
     '/api/pages': Awaited<ReturnType<typeof import('../../server/api/pages').default>>
-    '/api/middleware': Awaited<ReturnType<typeof import('../../server/api/middleware').default>>
-    '/api/logging': Awaited<ReturnType<typeof import('../../server/api/logging').default>>
-    '/api/filterSort': Awaited<ReturnType<typeof import('../../server/api/filterSort').default>>
-    '/api/errors': Awaited<ReturnType<typeof import('../../server/api/errors').default>>
-    '/api/delete': Awaited<ReturnType<typeof import('../../server/api/delete').default>>
+    '/api/newsletters': Awaited<ReturnType<typeof import('../../server/api/newsletters').default>>
+    '/api/manufacturers': Awaited<ReturnType<typeof import('../../server/api/manufacturers').default>>
+    '/api/invoices': Awaited<ReturnType<typeof import('../../server/api/invoices').default>>
+    '/api/integrations': Awaited<ReturnType<typeof import('../../server/api/integrations').default>>
+    '/api/emails': Awaited<ReturnType<typeof import('../../server/api/emails').default>>
+    '/api/discounts': Awaited<ReturnType<typeof import('../../server/api/discounts').default>>
     '/api/dashboards': Awaited<ReturnType<typeof import('../../server/api/dashboards').default>>
+    '/api/customers': Awaited<ReturnType<typeof import('../../server/api/customers').default>>
+    '/api/currencies': Awaited<ReturnType<typeof import('../../server/api/currencies').default>>
     '/api/create': Awaited<ReturnType<typeof import('../../server/api/create').default>>
+    '/api/countries': Awaited<ReturnType<typeof import('../../server/api/countries').default>>
+    '/api/collections': Awaited<ReturnType<typeof import('../../server/api/collections').default>>
+    '/api/cities': Awaited<ReturnType<typeof import('../../server/api/cities').default>>
+    '/api/channels': Awaited<ReturnType<typeof import('../../server/api/channels').default>>
+    '/api/categories': Awaited<ReturnType<typeof import('../../server/api/categories').default>>
+    '/api/brands': Awaited<ReturnType<typeof import('../../server/api/brands').default>>
+    '/api/blog': Awaited<ReturnType<typeof import('../../server/api/blog').default>>
     '/api/auth/**': Awaited<ReturnType<typeof import('../../server/api/auth/[...]').default>>
+    '/api/attributes': Awaited<ReturnType<typeof import('../../server/api/attributes').default>>
     '/api/agreements': Awaited<ReturnType<typeof import('../../server/api/agreements').default>>
     '/__nuxt_error': Awaited<ReturnType<typeof import('../../node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>
     '/api/_content/query/:qid/**:params': Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/query').default>>

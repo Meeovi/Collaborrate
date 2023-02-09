@@ -67,11 +67,10 @@
 <script>
     /* eslint-disable camelcase */
     import gql from "graphql-tag";
-    import findManyCustomers from "../../../graphql/query/findManyCustomers"
-    import findManyStates from '../../../graphql/query/findManyStates'
-    import findManyCountries from '../../../graphql/query/findManyCountries'
-    import findManyWorkspaces from '../../../graphql/query/findManyWorkspaces'
-    import segments from '../../../graphql/query/findManySegments'
+    import findManyCustomers from "../../../graphql/query/findManyCustomers.gql"
+    import findManyStates from '../../../graphql/query/findManyStates.gql'
+    import findManyCountries from '../../../graphql/query/findManyCountries.gql'
+    import segments from '../../../graphql/query/findManySegments.gql'
 
     const ADD_CUSTOMER = gql`
     mutation ($Address: String!, $address_two: String!, $comments: String!, $confirmed_email: String!, $country: String!, $credit_memos: String!, $customer_group: String!, $customer_payment: String!, $date_of_birth: String!, $description: String!, $email: String!, $emails: String!, $first_name: String!, $gender: String!, $image: String!, $last_name: String!, $mediamanager: String!, $messages: String!, $middle_name: String!, $name_prefix: String!, $name_suffix: String!, $newsletter_subscribers: String!, $orders: String!, $password: String!, $payment_type: String!, $phone: String!, $product: String!, $projects: String!, $quotes: String!, $returns: String!, $short_description: String!, $state: String!, $tax_vat_number: String!, $thumbnail: String!, $username: String!, $websites: String!, $workspaces: String!, $zipcode: String!){
@@ -323,10 +322,6 @@
             segments: {
                 prefetch: true,
                 query: segments
-            },
-            findManyWorkspaces: {
-                prefetch: true,
-                query: findManyWorkspaces
             },
         },
         dialog: false,

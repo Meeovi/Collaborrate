@@ -110,7 +110,6 @@ declare global {
   const useLocalePath: typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables')['useLocalePath']
   const useLocaleRoute: typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables')['useLocaleRoute']
   const useMessage: typeof import('naive-ui')['useMessage']
-  const useMonaco: typeof import('../../node_modules/nuxt-monaco-editor/dist/runtime/composables')['useMonaco']
   const useMutation: typeof import('@vue/apollo-composable')['useMutation']
   const useMutationLoading: typeof import('@vue/apollo-composable')['useMutationLoading']
   const useNotification: typeof import('naive-ui')['useNotification']
@@ -253,7 +252,6 @@ declare module 'vue' {
     readonly useLocalePath: UnwrapRef<typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables')['useLocalePath']>
     readonly useLocaleRoute: UnwrapRef<typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables')['useLocaleRoute']>
     readonly useMessage: UnwrapRef<typeof import('naive-ui')['useMessage']>
-    readonly useMonaco: UnwrapRef<typeof import('../../node_modules/nuxt-monaco-editor/dist/runtime/composables')['useMonaco']>
     readonly useMutation: UnwrapRef<typeof import('@vue/apollo-composable')['useMutation']>
     readonly useMutationLoading: UnwrapRef<typeof import('@vue/apollo-composable')['useMutationLoading']>
     readonly useNotification: UnwrapRef<typeof import('naive-ui')['useNotification']>
