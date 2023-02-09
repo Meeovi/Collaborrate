@@ -1,0 +1,62 @@
+query {
+  aggregateBrands 
+ {
+    _avg {
+      id
+      product
+    }
+    _count {
+      _all
+      city
+      code
+      country
+      created_at
+      description
+      id
+      isPublic
+      media
+      mediamanager
+      name
+      product
+      products
+      state
+      workspaces
+    }
+    _max {
+      city
+      code
+      country
+      created_at
+      description
+      id
+      isPublic
+      media
+      mediamanager
+      name
+      product
+      products
+      state
+      workspaces
+    }
+    _min {
+      city
+      code
+      country
+      created_at
+      description
+      id
+      isPublic
+      media
+      mediamanager
+      name
+      product
+      products
+      state
+      workspaces
+    }
+    _sum {
+      id
+      product
+    }
+  }
+}

@@ -1,0 +1,73 @@
+query {
+  aggregateInvoices 
+ {
+    _avg {
+      id
+      invoice
+      order_number
+    }
+    _count {
+      _all
+      bill_to_name
+      billing_address
+      customer_group
+      customer_name
+      email
+      grand_total_base
+      grand_total_purchased
+      id
+      invoice
+      invoice_date
+      order_number
+      payment_method
+      shipping_address
+      shipping_and_handling
+      shipping_information
+      status
+      subtotal
+    }
+    _max {
+      bill_to_name
+      billing_address
+      customer_group
+      customer_name
+      email
+      grand_total_base
+      grand_total_purchased
+      id
+      invoice
+      invoice_date
+      order_number
+      payment_method
+      shipping_address
+      shipping_and_handling
+      shipping_information
+      status
+      subtotal
+    }
+    _min {
+      bill_to_name
+      billing_address
+      customer_group
+      customer_name
+      email
+      grand_total_base
+      grand_total_purchased
+      id
+      invoice
+      invoice_date
+      order_number
+      payment_method
+      shipping_address
+      shipping_and_handling
+      shipping_information
+      status
+      subtotal
+    }
+    _sum {
+      id
+      invoice
+      order_number
+    }
+  }
+}

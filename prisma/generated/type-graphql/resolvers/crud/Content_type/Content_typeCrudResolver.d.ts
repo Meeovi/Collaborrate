@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateContent_typeArgs } from "./args/AggregateContent_typeArgs";
+import { CreateManyContent_typeArgs } from "./args/CreateManyContent_typeArgs";
+import { CreateOneContent_typeArgs } from "./args/CreateOneContent_typeArgs";
+import { DeleteManyContent_typeArgs } from "./args/DeleteManyContent_typeArgs";
+import { DeleteOneContent_typeArgs } from "./args/DeleteOneContent_typeArgs";
+import { FindFirstContent_typeArgs } from "./args/FindFirstContent_typeArgs";
+import { FindFirstContent_typeOrThrowArgs } from "./args/FindFirstContent_typeOrThrowArgs";
+import { FindManyContent_typeArgs } from "./args/FindManyContent_typeArgs";
+import { FindUniqueContent_typeArgs } from "./args/FindUniqueContent_typeArgs";
+import { FindUniqueContent_typeOrThrowArgs } from "./args/FindUniqueContent_typeOrThrowArgs";
+import { GroupByContent_typeArgs } from "./args/GroupByContent_typeArgs";
+import { UpdateManyContent_typeArgs } from "./args/UpdateManyContent_typeArgs";
+import { UpdateOneContent_typeArgs } from "./args/UpdateOneContent_typeArgs";
+import { UpsertOneContent_typeArgs } from "./args/UpsertOneContent_typeArgs";
+import { Content_type } from "../../../models/Content_type";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateContent_type } from "../../outputs/AggregateContent_type";
+import { Content_typeGroupBy } from "../../outputs/Content_typeGroupBy";
+export declare class Content_typeCrudResolver {
+    aggregateContent_type(ctx: any, info: GraphQLResolveInfo, args: AggregateContent_typeArgs): Promise<AggregateContent_type>;
+    createManyContent_type(ctx: any, info: GraphQLResolveInfo, args: CreateManyContent_typeArgs): Promise<AffectedRowsOutput>;
+    createOneContent_type(ctx: any, info: GraphQLResolveInfo, args: CreateOneContent_typeArgs): Promise<Content_type>;
+    deleteManyContent_type(ctx: any, info: GraphQLResolveInfo, args: DeleteManyContent_typeArgs): Promise<AffectedRowsOutput>;
+    deleteOneContent_type(ctx: any, info: GraphQLResolveInfo, args: DeleteOneContent_typeArgs): Promise<Content_type | null>;
+    findFirstContent_type(ctx: any, info: GraphQLResolveInfo, args: FindFirstContent_typeArgs): Promise<Content_type | null>;
+    findFirstContent_typeOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstContent_typeOrThrowArgs): Promise<Content_type | null>;
+    content_types(ctx: any, info: GraphQLResolveInfo, args: FindManyContent_typeArgs): Promise<Content_type[]>;
+    content_type(ctx: any, info: GraphQLResolveInfo, args: FindUniqueContent_typeArgs): Promise<Content_type | null>;
+    getContent_type(ctx: any, info: GraphQLResolveInfo, args: FindUniqueContent_typeOrThrowArgs): Promise<Content_type | null>;
+    groupByContent_type(ctx: any, info: GraphQLResolveInfo, args: GroupByContent_typeArgs): Promise<Content_typeGroupBy[]>;
+    updateManyContent_type(ctx: any, info: GraphQLResolveInfo, args: UpdateManyContent_typeArgs): Promise<AffectedRowsOutput>;
+    updateOneContent_type(ctx: any, info: GraphQLResolveInfo, args: UpdateOneContent_typeArgs): Promise<Content_type | null>;
+    upsertOneContent_type(ctx: any, info: GraphQLResolveInfo, args: UpsertOneContent_typeArgs): Promise<Content_type>;
+}

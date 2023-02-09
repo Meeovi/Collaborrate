@@ -1,0 +1,14 @@
+export { AggregateCategoriesArgs } from "./AggregateCategoriesArgs";
+export { CreateManyCategoriesArgs } from "./CreateManyCategoriesArgs";
+export { CreateOneCategoriesArgs } from "./CreateOneCategoriesArgs";
+export { DeleteManyCategoriesArgs } from "./DeleteManyCategoriesArgs";
+export { DeleteOneCategoriesArgs } from "./DeleteOneCategoriesArgs";
+export { FindFirstCategoriesArgs } from "./FindFirstCategoriesArgs";
+export { FindFirstCategoriesOrThrowArgs } from "./FindFirstCategoriesOrThrowArgs";
+export { FindManyCategoriesArgs } from "./FindManyCategoriesArgs";
+export { FindUniqueCategoriesArgs } from "./FindUniqueCategoriesArgs";
+export { FindUniqueCategoriesOrThrowArgs } from "./FindUniqueCategoriesOrThrowArgs";
+export { GroupByCategoriesArgs } from "./GroupByCategoriesArgs";
+export { UpdateManyCategoriesArgs } from "./UpdateManyCategoriesArgs";
+export { UpdateOneCategoriesArgs } from "./UpdateOneCategoriesArgs";
+export { UpsertOneCategoriesArgs } from "./UpsertOneCategoriesArgs";

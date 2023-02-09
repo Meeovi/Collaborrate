@@ -1,0 +1,39 @@
+query {
+  aggregateCities 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      country
+      description
+      id
+      image
+      name
+      postalCode
+      state
+    }
+    _max {
+      country
+      description
+      id
+      image
+      name
+      postalCode
+      state
+    }
+    _min {
+      country
+      description
+      id
+      image
+      name
+      postalCode
+      state
+    }
+    _sum {
+      id
+    }
+  }
+}

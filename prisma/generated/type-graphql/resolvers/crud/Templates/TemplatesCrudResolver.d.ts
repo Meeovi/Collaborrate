@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateTemplatesArgs } from "./args/AggregateTemplatesArgs";
+import { CreateManyTemplatesArgs } from "./args/CreateManyTemplatesArgs";
+import { CreateOneTemplatesArgs } from "./args/CreateOneTemplatesArgs";
+import { DeleteManyTemplatesArgs } from "./args/DeleteManyTemplatesArgs";
+import { DeleteOneTemplatesArgs } from "./args/DeleteOneTemplatesArgs";
+import { FindFirstTemplatesArgs } from "./args/FindFirstTemplatesArgs";
+import { FindFirstTemplatesOrThrowArgs } from "./args/FindFirstTemplatesOrThrowArgs";
+import { FindManyTemplatesArgs } from "./args/FindManyTemplatesArgs";
+import { FindUniqueTemplatesArgs } from "./args/FindUniqueTemplatesArgs";
+import { FindUniqueTemplatesOrThrowArgs } from "./args/FindUniqueTemplatesOrThrowArgs";
+import { GroupByTemplatesArgs } from "./args/GroupByTemplatesArgs";
+import { UpdateManyTemplatesArgs } from "./args/UpdateManyTemplatesArgs";
+import { UpdateOneTemplatesArgs } from "./args/UpdateOneTemplatesArgs";
+import { UpsertOneTemplatesArgs } from "./args/UpsertOneTemplatesArgs";
+import { Templates } from "../../../models/Templates";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateTemplates } from "../../outputs/AggregateTemplates";
+import { TemplatesGroupBy } from "../../outputs/TemplatesGroupBy";
+export declare class TemplatesCrudResolver {
+    aggregateTemplates(ctx: any, info: GraphQLResolveInfo, args: AggregateTemplatesArgs): Promise<AggregateTemplates>;
+    createManyTemplates(ctx: any, info: GraphQLResolveInfo, args: CreateManyTemplatesArgs): Promise<AffectedRowsOutput>;
+    createOneTemplates(ctx: any, info: GraphQLResolveInfo, args: CreateOneTemplatesArgs): Promise<Templates>;
+    deleteManyTemplates(ctx: any, info: GraphQLResolveInfo, args: DeleteManyTemplatesArgs): Promise<AffectedRowsOutput>;
+    deleteOneTemplates(ctx: any, info: GraphQLResolveInfo, args: DeleteOneTemplatesArgs): Promise<Templates | null>;
+    findFirstTemplates(ctx: any, info: GraphQLResolveInfo, args: FindFirstTemplatesArgs): Promise<Templates | null>;
+    findFirstTemplatesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstTemplatesOrThrowArgs): Promise<Templates | null>;
+    findManyTemplates(ctx: any, info: GraphQLResolveInfo, args: FindManyTemplatesArgs): Promise<Templates[]>;
+    findUniqueTemplates(ctx: any, info: GraphQLResolveInfo, args: FindUniqueTemplatesArgs): Promise<Templates | null>;
+    findUniqueTemplatesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueTemplatesOrThrowArgs): Promise<Templates | null>;
+    groupByTemplates(ctx: any, info: GraphQLResolveInfo, args: GroupByTemplatesArgs): Promise<TemplatesGroupBy[]>;
+    updateManyTemplates(ctx: any, info: GraphQLResolveInfo, args: UpdateManyTemplatesArgs): Promise<AffectedRowsOutput>;
+    updateOneTemplates(ctx: any, info: GraphQLResolveInfo, args: UpdateOneTemplatesArgs): Promise<Templates | null>;
+    upsertOneTemplates(ctx: any, info: GraphQLResolveInfo, args: UpsertOneTemplatesArgs): Promise<Templates>;
+}

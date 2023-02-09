@@ -1,0 +1,12 @@
+query {
+  findFirstDashboardrestapiOrThrow 
+ {
+    authenticationType
+    description
+    headerKey
+    headerValue
+    id
+    name
+    url
+  }
+}

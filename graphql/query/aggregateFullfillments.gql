@@ -1,0 +1,63 @@
+query {
+  aggregateFullfillments 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      address
+      address_two
+      city
+      company
+      country
+      country_area
+      created_at
+      id
+      name
+      phone
+      pickup
+      shipping_zones
+      state
+      stock
+      zipcode
+    }
+    _max {
+      address
+      address_two
+      city
+      company
+      country
+      country_area
+      created_at
+      id
+      name
+      phone
+      pickup
+      shipping_zones
+      state
+      stock
+      zipcode
+    }
+    _min {
+      address
+      address_two
+      city
+      company
+      country
+      country_area
+      created_at
+      id
+      name
+      phone
+      pickup
+      shipping_zones
+      state
+      stock
+      zipcode
+    }
+    _sum {
+      id
+    }
+  }
+}

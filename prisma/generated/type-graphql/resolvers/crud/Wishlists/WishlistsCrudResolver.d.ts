@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateWishlistsArgs } from "./args/AggregateWishlistsArgs";
+import { CreateManyWishlistsArgs } from "./args/CreateManyWishlistsArgs";
+import { CreateOneWishlistsArgs } from "./args/CreateOneWishlistsArgs";
+import { DeleteManyWishlistsArgs } from "./args/DeleteManyWishlistsArgs";
+import { DeleteOneWishlistsArgs } from "./args/DeleteOneWishlistsArgs";
+import { FindFirstWishlistsArgs } from "./args/FindFirstWishlistsArgs";
+import { FindFirstWishlistsOrThrowArgs } from "./args/FindFirstWishlistsOrThrowArgs";
+import { FindManyWishlistsArgs } from "./args/FindManyWishlistsArgs";
+import { FindUniqueWishlistsArgs } from "./args/FindUniqueWishlistsArgs";
+import { FindUniqueWishlistsOrThrowArgs } from "./args/FindUniqueWishlistsOrThrowArgs";
+import { GroupByWishlistsArgs } from "./args/GroupByWishlistsArgs";
+import { UpdateManyWishlistsArgs } from "./args/UpdateManyWishlistsArgs";
+import { UpdateOneWishlistsArgs } from "./args/UpdateOneWishlistsArgs";
+import { UpsertOneWishlistsArgs } from "./args/UpsertOneWishlistsArgs";
+import { Wishlists } from "../../../models/Wishlists";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateWishlists } from "../../outputs/AggregateWishlists";
+import { WishlistsGroupBy } from "../../outputs/WishlistsGroupBy";
+export declare class WishlistsCrudResolver {
+    aggregateWishlists(ctx: any, info: GraphQLResolveInfo, args: AggregateWishlistsArgs): Promise<AggregateWishlists>;
+    createManyWishlists(ctx: any, info: GraphQLResolveInfo, args: CreateManyWishlistsArgs): Promise<AffectedRowsOutput>;
+    createOneWishlists(ctx: any, info: GraphQLResolveInfo, args: CreateOneWishlistsArgs): Promise<Wishlists>;
+    deleteManyWishlists(ctx: any, info: GraphQLResolveInfo, args: DeleteManyWishlistsArgs): Promise<AffectedRowsOutput>;
+    deleteOneWishlists(ctx: any, info: GraphQLResolveInfo, args: DeleteOneWishlistsArgs): Promise<Wishlists | null>;
+    findFirstWishlists(ctx: any, info: GraphQLResolveInfo, args: FindFirstWishlistsArgs): Promise<Wishlists | null>;
+    findFirstWishlistsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstWishlistsOrThrowArgs): Promise<Wishlists | null>;
+    findManyWishlists(ctx: any, info: GraphQLResolveInfo, args: FindManyWishlistsArgs): Promise<Wishlists[]>;
+    findUniqueWishlists(ctx: any, info: GraphQLResolveInfo, args: FindUniqueWishlistsArgs): Promise<Wishlists | null>;
+    findUniqueWishlistsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueWishlistsOrThrowArgs): Promise<Wishlists | null>;
+    groupByWishlists(ctx: any, info: GraphQLResolveInfo, args: GroupByWishlistsArgs): Promise<WishlistsGroupBy[]>;
+    updateManyWishlists(ctx: any, info: GraphQLResolveInfo, args: UpdateManyWishlistsArgs): Promise<AffectedRowsOutput>;
+    updateOneWishlists(ctx: any, info: GraphQLResolveInfo, args: UpdateOneWishlistsArgs): Promise<Wishlists | null>;
+    upsertOneWishlists(ctx: any, info: GraphQLResolveInfo, args: UpsertOneWishlistsArgs): Promise<Wishlists>;
+}

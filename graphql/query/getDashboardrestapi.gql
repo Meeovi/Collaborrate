@@ -1,0 +1,12 @@
+query {
+  getDashboardrestapi 
+ {
+    authenticationType
+    description
+    headerKey
+    headerValue
+    id
+    name
+    url
+  }
+}

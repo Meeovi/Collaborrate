@@ -1,0 +1,17 @@
+query {
+  findUniqueRewardsOrThrow 
+ {
+    articles
+    categories
+    coupons
+    created_at
+    customers
+    expiration
+    id
+    level
+    name
+    products
+    slug
+    users
+  }
+}

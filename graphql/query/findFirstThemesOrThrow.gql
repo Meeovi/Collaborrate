@@ -1,0 +1,12 @@
+query {
+  findFirstThemesOrThrow 
+ {
+    action
+    id
+    parent_theme
+    theme_path
+    title
+    website_id
+    websites
+  }
+}

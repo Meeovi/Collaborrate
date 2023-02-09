@@ -1,0 +1,58 @@
+query {
+  groupByTaxes 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      country
+      id
+      postcode
+      products
+      rate_percent
+      state
+      taxCategory
+      taxDefault
+      taxRuleName
+      tax_identifier
+    }
+    _max {
+      country
+      id
+      postcode
+      products
+      rate_percent
+      state
+      taxCategory
+      taxDefault
+      taxRuleName
+      tax_identifier
+    }
+    _min {
+      country
+      id
+      postcode
+      products
+      rate_percent
+      state
+      taxCategory
+      taxDefault
+      taxRuleName
+      tax_identifier
+    }
+    _sum {
+      id
+    }
+    country
+    id
+    postcode
+    products
+    rate_percent
+    state
+    taxCategory
+    taxDefault
+    taxRuleName
+    tax_identifier
+  }
+}

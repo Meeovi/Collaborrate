@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregatePagesArgs } from "./args/AggregatePagesArgs";
+import { CreateManyPagesArgs } from "./args/CreateManyPagesArgs";
+import { CreateOnePagesArgs } from "./args/CreateOnePagesArgs";
+import { DeleteManyPagesArgs } from "./args/DeleteManyPagesArgs";
+import { DeleteOnePagesArgs } from "./args/DeleteOnePagesArgs";
+import { FindFirstPagesArgs } from "./args/FindFirstPagesArgs";
+import { FindFirstPagesOrThrowArgs } from "./args/FindFirstPagesOrThrowArgs";
+import { FindManyPagesArgs } from "./args/FindManyPagesArgs";
+import { FindUniquePagesArgs } from "./args/FindUniquePagesArgs";
+import { FindUniquePagesOrThrowArgs } from "./args/FindUniquePagesOrThrowArgs";
+import { GroupByPagesArgs } from "./args/GroupByPagesArgs";
+import { UpdateManyPagesArgs } from "./args/UpdateManyPagesArgs";
+import { UpdateOnePagesArgs } from "./args/UpdateOnePagesArgs";
+import { UpsertOnePagesArgs } from "./args/UpsertOnePagesArgs";
+import { Pages } from "../../../models/Pages";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregatePages } from "../../outputs/AggregatePages";
+import { PagesGroupBy } from "../../outputs/PagesGroupBy";
+export declare class PagesCrudResolver {
+    aggregatePages(ctx: any, info: GraphQLResolveInfo, args: AggregatePagesArgs): Promise<AggregatePages>;
+    createManyPages(ctx: any, info: GraphQLResolveInfo, args: CreateManyPagesArgs): Promise<AffectedRowsOutput>;
+    createOnePages(ctx: any, info: GraphQLResolveInfo, args: CreateOnePagesArgs): Promise<Pages>;
+    deleteManyPages(ctx: any, info: GraphQLResolveInfo, args: DeleteManyPagesArgs): Promise<AffectedRowsOutput>;
+    deleteOnePages(ctx: any, info: GraphQLResolveInfo, args: DeleteOnePagesArgs): Promise<Pages | null>;
+    findFirstPages(ctx: any, info: GraphQLResolveInfo, args: FindFirstPagesArgs): Promise<Pages | null>;
+    findFirstPagesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstPagesOrThrowArgs): Promise<Pages | null>;
+    findManyPages(ctx: any, info: GraphQLResolveInfo, args: FindManyPagesArgs): Promise<Pages[]>;
+    findUniquePages(ctx: any, info: GraphQLResolveInfo, args: FindUniquePagesArgs): Promise<Pages | null>;
+    findUniquePagesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniquePagesOrThrowArgs): Promise<Pages | null>;
+    groupByPages(ctx: any, info: GraphQLResolveInfo, args: GroupByPagesArgs): Promise<PagesGroupBy[]>;
+    updateManyPages(ctx: any, info: GraphQLResolveInfo, args: UpdateManyPagesArgs): Promise<AffectedRowsOutput>;
+    updateOnePages(ctx: any, info: GraphQLResolveInfo, args: UpdateOnePagesArgs): Promise<Pages | null>;
+    upsertOnePages(ctx: any, info: GraphQLResolveInfo, args: UpsertOnePagesArgs): Promise<Pages>;
+}

@@ -1,0 +1,35 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateShipmentsArgs } from "./args/AggregateShipmentsArgs";
+import { CreateManyShipmentsArgs } from "./args/CreateManyShipmentsArgs";
+import { CreateOneShipmentsArgs } from "./args/CreateOneShipmentsArgs";
+import { DeleteManyShipmentsArgs } from "./args/DeleteManyShipmentsArgs";
+import { DeleteOneShipmentsArgs } from "./args/DeleteOneShipmentsArgs";
+import { FindFirstShipmentsArgs } from "./args/FindFirstShipmentsArgs";
+import { FindFirstShipmentsOrThrowArgs } from "./args/FindFirstShipmentsOrThrowArgs";
+import { FindManyShipmentsArgs } from "./args/FindManyShipmentsArgs";
+import { FindUniqueShipmentsArgs } from "./args/FindUniqueShipmentsArgs";
+import { FindUniqueShipmentsOrThrowArgs } from "./args/FindUniqueShipmentsOrThrowArgs";
+import { GroupByShipmentsArgs } from "./args/GroupByShipmentsArgs";
+import { UpdateManyShipmentsArgs } from "./args/UpdateManyShipmentsArgs";
+import { UpdateOneShipmentsArgs } from "./args/UpdateOneShipmentsArgs";
+import { UpsertOneShipmentsArgs } from "./args/UpsertOneShipmentsArgs";
+import { Shipments } from "../../../models/Shipments";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateShipments } from "../../outputs/AggregateShipments";
+import { ShipmentsGroupBy } from "../../outputs/ShipmentsGroupBy";
+export declare class ShipmentsCrudResolver {
+    aggregateShipments(ctx: any, info: GraphQLResolveInfo, args: AggregateShipmentsArgs): Promise<AggregateShipments>;
+    createManyShipments(ctx: any, info: GraphQLResolveInfo, args: CreateManyShipmentsArgs): Promise<AffectedRowsOutput>;
+    createOneShipments(ctx: any, info: GraphQLResolveInfo, args: CreateOneShipmentsArgs): Promise<Shipments>;
+    deleteManyShipments(ctx: any, info: GraphQLResolveInfo, args: DeleteManyShipmentsArgs): Promise<AffectedRowsOutput>;
+    deleteOneShipments(ctx: any, info: GraphQLResolveInfo, args: DeleteOneShipmentsArgs): Promise<Shipments | null>;
+    findFirstShipments(ctx: any, info: GraphQLResolveInfo, args: FindFirstShipmentsArgs): Promise<Shipments | null>;
+    findFirstShipmentsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstShipmentsOrThrowArgs): Promise<Shipments | null>;
+    findManyShipments(ctx: any, info: GraphQLResolveInfo, args: FindManyShipmentsArgs): Promise<Shipments[]>;
+    findUniqueShipments(ctx: any, info: GraphQLResolveInfo, args: FindUniqueShipmentsArgs): Promise<Shipments | null>;
+    findUniqueShipmentsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueShipmentsOrThrowArgs): Promise<Shipments | null>;
+    groupByShipments(ctx: any, info: GraphQLResolveInfo, args: GroupByShipmentsArgs): Promise<ShipmentsGroupBy[]>;
+    updateManyShipments(ctx: any, info: GraphQLResolveInfo, args: UpdateManyShipmentsArgs): Promise<AffectedRowsOutput>;
+    updateOneShipments(ctx: any, info: GraphQLResolveInfo, args: UpdateOneShipmentsArgs): Promise<Shipments | null>;
+    upsertOneShipments(ctx: any, info: GraphQLResolveInfo, args: UpsertOneShipmentsArgs): Promise<Shipments>;
+}
