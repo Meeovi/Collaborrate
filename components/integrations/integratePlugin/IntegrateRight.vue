@@ -47,7 +47,7 @@
 </template>
 
 <script>
-    import createContent from '../../content/InsertAddContent.vue'
+    import createContent from '../../database/content/InsertAddContent.vue'
     import findManyPages from '../../../graphql/query/findManyPages.gql'
 
     export default {

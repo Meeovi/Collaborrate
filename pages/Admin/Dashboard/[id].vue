@@ -26,10 +26,11 @@ import editDashboard from '../../../components/dashboards/EditDashboard.vue'
         data() {
             return {
                 search: '',
+               selected: [],
                 headers: [{
                         align: 'start',
                         key: 'name',
-                        sortable: false,
+                        sortable: true,
                         title: 'Dessert (100g serving)',
                     },
                     {

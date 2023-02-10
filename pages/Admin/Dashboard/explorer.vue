@@ -1,11 +1,11 @@
 <template>
-    <v-card class="contentSection">
+    <v-card class="contentRight">
         <v-card-title>
-            <v-toolbar style="background-color: aliceblue;color: black;">
-                <v-col cols="10">
+            <v-toolbar style="background-color: rosybrown;color: white;">
+                <v-col cols="9">
                     <v-toolbar-title>Dashboards</v-toolbar-title>
                 </v-col>
-                <v-col cols="2">
+                <v-col cols="3">
                     <addDashboard />
                 </v-col>
             </v-toolbar>
@@ -26,10 +26,12 @@ import addDashboard from '../../../components/dashboards/CreateDashboard.vue'
         data() {
             return {
                 search: '',
+               selected: [],
+                selected: [],
                 headers: [{
                         align: 'start',
                         key: 'name',
-                        sortable: false,
+                        sortable: true,
                         title: 'Dessert (100g serving)',
                     },
                     {
@@ -141,6 +143,6 @@ import addDashboard from '../../../components/dashboards/CreateDashboard.vue'
 
 <script setup>
     useHead({
-        title: 'Roadmap'
+        title: 'Dashboards'
     })
 </script>

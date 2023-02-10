@@ -2,7 +2,7 @@
     <v-row justify="center">
         <v-dialog v-model="dialog" persistent>
             <template v-slot:activator="{ props }">
-                <v-btn color="primary" size="x-small" v-bind="props" class="insertAddBtn">
+                <v-btn style="color: white; " v-bind="props" class="rightAddBtn">
                     <v-icon start icon="fas fa-file-pen"></v-icon>Create A Dashboard
                 </v-btn>
             </template>

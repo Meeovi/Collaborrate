@@ -3735,6 +3735,7 @@ const _lazy_DYJJe4 = () => Promise.resolve().then(function () { return wishlists
 const _lazy_rzcGFm = () => Promise.resolve().then(function () { return warehouses$1; });
 const _lazy_KFLKCt = () => Promise.resolve().then(function () { return vendors$1; });
 const _lazy_uNgigv = () => Promise.resolve().then(function () { return users$1; });
+const _lazy_lQSHP4 = () => Promise.resolve().then(function () { return update$1; });
 const _lazy_Ng237e = () => Promise.resolve().then(function () { return transactions$1; });
 const _lazy_ZPk0VK = () => Promise.resolve().then(function () { return templates$1; });
 const _lazy_7QyYQ3 = () => Promise.resolve().then(function () { return taxes$1; });
@@ -3742,9 +3743,11 @@ const _lazy_fgpQfS = () => Promise.resolve().then(function () { return tags$1; }
 const _lazy_rubTfC = () => Promise.resolve().then(function () { return states$1; });
 const _lazy_TX3UO0 = () => Promise.resolve().then(function () { return shipments$1; });
 const _lazy_iMACfH = () => Promise.resolve().then(function () { return settings$1; });
+const _lazy_7cxtda = () => Promise.resolve().then(function () { return serverSessions$1; });
 const _lazy_WujxDA = () => Promise.resolve().then(function () { return sales$1; });
 const _lazy_r0TuDt = () => Promise.resolve().then(function () { return roles$1; });
 const _lazy_X2IJGo = () => Promise.resolve().then(function () { return reviews$1; });
+const _lazy_ItkiBI = () => Promise.resolve().then(function () { return read$1; });
 const _lazy_VfxghU = () => Promise.resolve().then(function () { return quotes$1; });
 const _lazy_kPP2D1 = () => Promise.resolve().then(function () { return providers$1; });
 const _lazy_ejEhoB = () => Promise.resolve().then(function () { return productTypes$1; });
@@ -3753,13 +3756,19 @@ const _lazy_erqJPE = () => Promise.resolve().then(function () { return prisma$2;
 const _lazy_lcn3yG = () => Promise.resolve().then(function () { return permissions$1; });
 const _lazy_md5QjP = () => Promise.resolve().then(function () { return payments$1; });
 const _lazy_XWAedh = () => Promise.resolve().then(function () { return partners$1; });
+const _lazy_aIEyxK = () => Promise.resolve().then(function () { return pagination; });
 const _lazy_e5cmZJ = () => Promise.resolve().then(function () { return pages$1; });
 const _lazy_zMIvJE = () => Promise.resolve().then(function () { return newsletters$1; });
+const _lazy_dtJMJb = () => Promise.resolve().then(function () { return middleware; });
 const _lazy_vI4nxH = () => Promise.resolve().then(function () { return manufacturers$1; });
+const _lazy_v3PybF = () => Promise.resolve().then(function () { return logging; });
 const _lazy_56dcx0 = () => Promise.resolve().then(function () { return invoices$1; });
 const _lazy_upyGMN = () => Promise.resolve().then(function () { return integrations$1; });
+const _lazy_7EdUp6 = () => Promise.resolve().then(function () { return filterSort; });
+const _lazy_7KLBaA = () => Promise.resolve().then(function () { return errors; });
 const _lazy_v2wt6Y = () => Promise.resolve().then(function () { return emails$1; });
 const _lazy_ZMd47b = () => Promise.resolve().then(function () { return discounts$1; });
+const _lazy_05OzVT = () => Promise.resolve().then(function () { return _delete$1; });
 const _lazy_FBEJsE = () => Promise.resolve().then(function () { return dashboards$1; });
 const _lazy_BbvJHH = () => Promise.resolve().then(function () { return customers$1; });
 const _lazy_cH1Qw8 = () => Promise.resolve().then(function () { return currencies$1; });
@@ -3782,6 +3791,7 @@ const handlers = [
   { route: '/api/warehouses', handler: _lazy_rzcGFm, lazy: true, middleware: false, method: undefined },
   { route: '/api/vendors', handler: _lazy_KFLKCt, lazy: true, middleware: false, method: undefined },
   { route: '/api/users', handler: _lazy_uNgigv, lazy: true, middleware: false, method: undefined },
+  { route: '/api/update', handler: _lazy_lQSHP4, lazy: true, middleware: false, method: undefined },
   { route: '/api/transactions', handler: _lazy_Ng237e, lazy: true, middleware: false, method: undefined },
   { route: '/api/templates', handler: _lazy_ZPk0VK, lazy: true, middleware: false, method: undefined },
   { route: '/api/taxes', handler: _lazy_7QyYQ3, lazy: true, middleware: false, method: undefined },
@@ -3789,9 +3799,11 @@ const handlers = [
   { route: '/api/states', handler: _lazy_rubTfC, lazy: true, middleware: false, method: undefined },
   { route: '/api/shipments', handler: _lazy_TX3UO0, lazy: true, middleware: false, method: undefined },
   { route: '/api/settings', handler: _lazy_iMACfH, lazy: true, middleware: false, method: undefined },
+  { route: '/api/serverSessions', handler: _lazy_7cxtda, lazy: true, middleware: false, method: undefined },
   { route: '/api/sales', handler: _lazy_WujxDA, lazy: true, middleware: false, method: undefined },
   { route: '/api/roles', handler: _lazy_r0TuDt, lazy: true, middleware: false, method: undefined },
   { route: '/api/reviews', handler: _lazy_X2IJGo, lazy: true, middleware: false, method: undefined },
+  { route: '/api/read', handler: _lazy_ItkiBI, lazy: true, middleware: false, method: undefined },
   { route: '/api/quotes', handler: _lazy_VfxghU, lazy: true, middleware: false, method: undefined },
   { route: '/api/providers', handler: _lazy_kPP2D1, lazy: true, middleware: false, method: undefined },
   { route: '/api/productTypes', handler: _lazy_ejEhoB, lazy: true, middleware: false, method: undefined },
@@ -3800,13 +3812,19 @@ const handlers = [
   { route: '/api/permissions', handler: _lazy_lcn3yG, lazy: true, middleware: false, method: undefined },
   { route: '/api/payments', handler: _lazy_md5QjP, lazy: true, middleware: false, method: undefined },
   { route: '/api/partners', handler: _lazy_XWAedh, lazy: true, middleware: false, method: undefined },
+  { route: '/api/pagination', handler: _lazy_aIEyxK, lazy: true, middleware: false, method: undefined },
   { route: '/api/pages', handler: _lazy_e5cmZJ, lazy: true, middleware: false, method: undefined },
   { route: '/api/newsletters', handler: _lazy_zMIvJE, lazy: true, middleware: false, method: undefined },
+  { route: '/api/middleware', handler: _lazy_dtJMJb, lazy: true, middleware: false, method: undefined },
   { route: '/api/manufacturers', handler: _lazy_vI4nxH, lazy: true, middleware: false, method: undefined },
+  { route: '/api/logging', handler: _lazy_v3PybF, lazy: true, middleware: false, method: undefined },
   { route: '/api/invoices', handler: _lazy_56dcx0, lazy: true, middleware: false, method: undefined },
   { route: '/api/integrations', handler: _lazy_upyGMN, lazy: true, middleware: false, method: undefined },
+  { route: '/api/filterSort', handler: _lazy_7EdUp6, lazy: true, middleware: false, method: undefined },
+  { route: '/api/errors', handler: _lazy_7KLBaA, lazy: true, middleware: false, method: undefined },
   { route: '/api/emails', handler: _lazy_v2wt6Y, lazy: true, middleware: false, method: undefined },
   { route: '/api/discounts', handler: _lazy_ZMd47b, lazy: true, middleware: false, method: undefined },
+  { route: '/api/delete', handler: _lazy_05OzVT, lazy: true, middleware: false, method: undefined },
   { route: '/api/dashboards', handler: _lazy_FBEJsE, lazy: true, middleware: false, method: undefined },
   { route: '/api/customers', handler: _lazy_BbvJHH, lazy: true, middleware: false, method: undefined },
   { route: '/api/currencies', handler: _lazy_cH1Qw8, lazy: true, middleware: false, method: undefined },
@@ -3954,6 +3972,17 @@ const users$1 = /*#__PURE__*/Object.freeze({
   'default': users
 });
 
+const update = defineEventHandler((event) => {
+  return {
+    api: "works"
+  };
+});
+
+const update$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': update
+});
+
 const transactions = defineEventHandler(async (event) => {
   const prisma = usePrisma(event);
   return prisma.$queryRaw`SELECT * FROM transactions`;
@@ -4024,6 +4053,13 @@ const settings$1 = /*#__PURE__*/Object.freeze({
   'default': settings
 });
 
+const serverSessions = eventHandler((event) => event.context.session);
+
+const serverSessions$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': serverSessions
+});
+
 const sales = defineEventHandler(async (event) => {
   const prisma = usePrisma(event);
   return prisma.$queryRaw`SELECT * FROM sales`;
@@ -4052,6 +4088,16 @@ const reviews = defineEventHandler(async (event) => {
 const reviews$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
   'default': reviews
+});
+
+const read = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$queryRaw`SELECT name FROM categories`;
+});
+
+const read$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': read
 });
 
 const quotes = defineEventHandler(async (event) => {
@@ -4134,6 +4180,10 @@ const partners$1 = /*#__PURE__*/Object.freeze({
   'default': partners
 });
 
+const pagination = /*#__PURE__*/Object.freeze({
+  __proto__: null
+});
+
 const pages = defineEventHandler(async (event) => {
   const prisma = usePrisma(event);
   return prisma.$queryRaw`SELECT * FROM pages`;
@@ -4154,6 +4204,10 @@ const newsletters$1 = /*#__PURE__*/Object.freeze({
   'default': newsletters
 });
 
+const middleware = /*#__PURE__*/Object.freeze({
+  __proto__: null
+});
+
 const manufacturers = defineEventHandler(async (event) => {
   const prisma = usePrisma(event);
   return prisma.$queryRaw`SELECT * FROM manufacturers`;
@@ -4162,6 +4216,10 @@ const manufacturers = defineEventHandler(async (event) => {
 const manufacturers$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
   'default': manufacturers
+});
+
+const logging = /*#__PURE__*/Object.freeze({
+  __proto__: null
 });
 
 const invoices = defineEventHandler(async (event) => {
@@ -4184,6 +4242,14 @@ const integrations$1 = /*#__PURE__*/Object.freeze({
   'default': integrations
 });
 
+const filterSort = /*#__PURE__*/Object.freeze({
+  __proto__: null
+});
+
+const errors = /*#__PURE__*/Object.freeze({
+  __proto__: null
+});
+
 const emails = defineEventHandler(async (event) => {
   const prisma = usePrisma(event);
   return prisma.$queryRaw`SELECT * FROM emails`;
@@ -4202,6 +4268,17 @@ const discounts = defineEventHandler(async (event) => {
 const discounts$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
   'default': discounts
+});
+
+const _delete = defineEventHandler((event) => {
+  return {
+    api: "works"
+  };
+});
+
+const _delete$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': _delete
 });
 
 const dashboards = defineEventHandler(async (event) => {

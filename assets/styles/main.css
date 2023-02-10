@@ -43,8 +43,12 @@ body {
 
 .contentRight {
     top: 0px !important;
-    width: 85vw !important;
     height: 100% !important;
+    width: 100% !important;
+}
+
+.contentRight .v-card-title {
+    padding: 0 !important;
 }
 
 .contentRight h4 {
@@ -83,6 +87,7 @@ body {
     position: relative !important;
     left: 56px;
     width: 100% !important;
+    height: 100vh !important;
 }
 
 .homeSection {

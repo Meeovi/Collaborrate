@@ -15,8 +15,6 @@ import { useGraphQlJit } from '@envelop/graphql-jit';
 import { resolvers } from "../prisma/generated/type-graphql";
 import { useSentry } from '@envelop/sentry';
 import { useSofaWithSwaggerUI } from '@graphql-yoga/plugin-sofa'
-import { useCSRFPrevention } from '@graphql-yoga/plugin-csrf-prevention'
-import { renderGraphiQL } from '@graphql-yoga/render-graphiql'
 
 import '@sentry/tracing';
 import fastify, { FastifyRequest, FastifyReply } from 'fastify'
@@ -75,8 +73,6 @@ async function main() {
       error: (...args) => args.forEach((arg) => app.log.error(arg))
     },
     schema,
-    renderGraphiQL,
-    healthCheckEndpoint: '/live',
     batching: true,
     cors: {
       origin: '*',
@@ -94,15 +90,12 @@ async function main() {
         includeResolverArgs: false, // set to `true` in order to include the args passed to resolvers
         includeExecuteVariables: false, // set to `true` in order to include the operation variables values
       }),
-      useCSRFPrevention({
-        requestHeaders: ['x-graphql-yoga-csrf'] // default
-      }),
-      useSofaWithSwaggerUI({
+       useSofaWithSwaggerUI({
         basePath: '/rest',
         swaggerUIEndpoint: '/swagger',
         servers: [
           {
-            url: '/',
+            url: '/', // Specify Server's URL.
             description: 'Development server'
           }
         ],

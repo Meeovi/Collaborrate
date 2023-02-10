@@ -6,6 +6,7 @@ declare module 'nitropack' {
     '/api/warehouses': Awaited<ReturnType<typeof import('../../server/api/warehouses').default>>
     '/api/vendors': Awaited<ReturnType<typeof import('../../server/api/vendors').default>>
     '/api/users': Awaited<ReturnType<typeof import('../../server/api/users').default>>
+    '/api/update': Awaited<ReturnType<typeof import('../../server/api/update').default>>
     '/api/transactions': Awaited<ReturnType<typeof import('../../server/api/transactions').default>>
     '/api/templates': Awaited<ReturnType<typeof import('../../server/api/templates').default>>
     '/api/taxes': Awaited<ReturnType<typeof import('../../server/api/taxes').default>>
@@ -13,9 +14,11 @@ declare module 'nitropack' {
     '/api/states': Awaited<ReturnType<typeof import('../../server/api/states').default>>
     '/api/shipments': Awaited<ReturnType<typeof import('../../server/api/shipments').default>>
     '/api/settings': Awaited<ReturnType<typeof import('../../server/api/settings').default>>
+    '/api/serverSessions': Awaited<ReturnType<typeof import('../../server/api/serverSessions').default>>
     '/api/sales': Awaited<ReturnType<typeof import('../../server/api/sales').default>>
     '/api/roles': Awaited<ReturnType<typeof import('../../server/api/roles').default>>
     '/api/reviews': Awaited<ReturnType<typeof import('../../server/api/reviews').default>>
+    '/api/read': Awaited<ReturnType<typeof import('../../server/api/read').default>>
     '/api/quotes': Awaited<ReturnType<typeof import('../../server/api/quotes').default>>
     '/api/providers': Awaited<ReturnType<typeof import('../../server/api/providers').default>>
     '/api/productTypes': Awaited<ReturnType<typeof import('../../server/api/productTypes').default>>
@@ -24,13 +27,19 @@ declare module 'nitropack' {
     '/api/permissions': Awaited<ReturnType<typeof import('../../server/api/permissions').default>>
     '/api/payments': Awaited<ReturnType<typeof import('../../server/api/payments').default>>
     '/api/partners': Awaited<ReturnType<typeof import('../../server/api/partners').default>>
+    '/api/pagination': Awaited<ReturnType<typeof import('../../server/api/pagination').default>>
     '/api/pages': Awaited<ReturnType<typeof import('../../server/api/pages').default>>
     '/api/newsletters': Awaited<ReturnType<typeof import('../../server/api/newsletters').default>>
+    '/api/middleware': Awaited<ReturnType<typeof import('../../server/api/middleware').default>>
     '/api/manufacturers': Awaited<ReturnType<typeof import('../../server/api/manufacturers').default>>
+    '/api/logging': Awaited<ReturnType<typeof import('../../server/api/logging').default>>
     '/api/invoices': Awaited<ReturnType<typeof import('../../server/api/invoices').default>>
     '/api/integrations': Awaited<ReturnType<typeof import('../../server/api/integrations').default>>
+    '/api/filterSort': Awaited<ReturnType<typeof import('../../server/api/filterSort').default>>
+    '/api/errors': Awaited<ReturnType<typeof import('../../server/api/errors').default>>
     '/api/emails': Awaited<ReturnType<typeof import('../../server/api/emails').default>>
     '/api/discounts': Awaited<ReturnType<typeof import('../../server/api/discounts').default>>
+    '/api/delete': Awaited<ReturnType<typeof import('../../server/api/delete').default>>
     '/api/dashboards': Awaited<ReturnType<typeof import('../../server/api/dashboards').default>>
     '/api/customers': Awaited<ReturnType<typeof import('../../server/api/customers').default>>
     '/api/currencies': Awaited<ReturnType<typeof import('../../server/api/currencies').default>>

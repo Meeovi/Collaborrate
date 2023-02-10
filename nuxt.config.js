@@ -84,8 +84,6 @@ export default defineNuxtConfig({
         'vuetify',
         "@fortawesome/vue-fontawesome",
         "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/pro-solid-svg-icons",
-        "@fortawesome/pro-regular-svg-icons",
         "@fortawesome/free-brands-svg-icons",
       ],
     },
