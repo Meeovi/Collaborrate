@@ -1,1 +1,6 @@
-{"parsed":{"_path":"/quick-start/countries","_dir":"quick-start","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"Countries","description":"Create a table with all the countries in the world.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:quick-start:countries.md","_source":"content","_file":"quick-start/countries.md","_extension":"md"},"hash":"6RIi2tLOie"}
+---
+title: 'Countries'
+description: 'Create a table with all the countries in the world.'
+---
+
+<!-- Content of the page -->

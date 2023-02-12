@@ -1,1 +1,6 @@
-{"parsed":{"_path":"/quick-start/states","_dir":"quick-start","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"States","description":"Create a table with all the states in the United States","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:quick-start:states.md","_source":"content","_file":"quick-start/states.md","_extension":"md"},"hash":"ljIlKbfNfL"}
+---
+title: 'States'
+description: 'Create a table with all the states in the United States'
+---
+
+<!-- Content of the page -->

@@ -20,7 +20,7 @@
       "alternate-commit": "git add . && git commit -m \"ready for update\"",
       "alternate-update": "git pull \"https://github.com/Meeovi/AlternateFramework\"",
       "build": "nuxt build",
-      "build:mesh": "yarn build:mesh --dir ./server/",
+      "build:mesh": "yarn build:mesh server/index.ts",
       "prebuild": "yarn build:mesh",
       "prestart": "yarn build:mesh",
       "dev": "nuxt dev --port 8000 && node server/server.js",
@@ -52,7 +52,6 @@
       "nuxt": "^3.2.0",
       "prisma": "^4.7.1",
       "sitemap": "^7.1.1",
-      "ts-node": "10.7.0",
       "typescript": "4.5.2"
    },
    "dependencies": {

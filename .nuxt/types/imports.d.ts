@@ -100,7 +100,7 @@ declare global {
   const useGlobalQueryLoading: typeof import('@vue/apollo-composable')['useGlobalQueryLoading']
   const useGlobalSubscriptionLoading: typeof import('@vue/apollo-composable')['useGlobalSubscriptionLoading']
   const useHead: typeof import('../../node_modules/nuxt/dist/app')['useHead']
-  const useI18n: typeof import('../../node_modules/@nuxtjs/i18n/node_modules/vue-i18n/dist/vue-i18n')['useI18n']
+  const useI18n: typeof import('../../node_modules/@nuxtjs/i18n/node_modules/vue-i18n/dist/vue-i18n.runtime')['useI18n']
   const useLazyAsyncData: typeof import('../../node_modules/nuxt/dist/app')['useLazyAsyncData']
   const useLazyAsyncQuery: typeof import('../../node_modules/@nuxtjs/apollo/dist/runtime/composables')['useLazyAsyncQuery']
   const useLazyFetch: typeof import('../../node_modules/nuxt/dist/app')['useLazyFetch']
@@ -252,7 +252,7 @@ declare module 'vue' {
     readonly useGlobalQueryLoading: UnwrapRef<typeof import('@vue/apollo-composable')['useGlobalQueryLoading']>
     readonly useGlobalSubscriptionLoading: UnwrapRef<typeof import('@vue/apollo-composable')['useGlobalSubscriptionLoading']>
     readonly useHead: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useHead']>
-    readonly useI18n: UnwrapRef<typeof import('../../node_modules/@nuxtjs/i18n/node_modules/vue-i18n/dist/vue-i18n')['useI18n']>
+    readonly useI18n: UnwrapRef<typeof import('../../node_modules/@nuxtjs/i18n/node_modules/vue-i18n/dist/vue-i18n.runtime')['useI18n']>
     readonly useLazyAsyncData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useLazyAsyncData']>
     readonly useLazyAsyncQuery: UnwrapRef<typeof import('../../node_modules/@nuxtjs/apollo/dist/runtime/composables')['useLazyAsyncQuery']>
     readonly useLazyFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useLazyFetch']>

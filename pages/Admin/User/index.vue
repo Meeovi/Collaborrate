@@ -79,10 +79,10 @@
 </template>
 
 <script>
-    import projects from '~/components/user/projects.vue'
-    import organizations from '~/components/user/organizations.vue'
-    import preferences from '~/components/user/preferences.vue'
-    import accountTokens from '~/components/user/account-tokens.vue'
+    import projects from '../../../components/user/projects.vue'
+    import organizations from '../../../components/user/organizations.vue'
+    import preferences from '../../../components/user/preferences.vue'
+    import accountTokens from '../../../components/user/account-tokens.vue'
 
     export default {
         components: {

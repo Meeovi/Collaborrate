@@ -1,1 +1,6 @@
-{"parsed":{"_path":"/scripts/incrementvalue","_dir":"scripts","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"Increment field value","description":"Update a field with incrementing value using stored procedure.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:scripts:incrementValue.md","_source":"content","_file":"scripts/incrementValue.md","_extension":"md"},"hash":"jiT5uAG3nv"}
+---
+title: 'Increment field value'
+description: 'Update a field with incrementing value using stored procedure.'
+---
+
+<!-- Content of the page -->

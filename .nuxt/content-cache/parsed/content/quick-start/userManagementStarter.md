@@ -1,1 +1,6 @@
-{"parsed":{"_path":"/quick-start/usermanagementstarter","_dir":"quick-start","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"User Management Starter","description":"Sets up a public Profiles table which you can access with your API.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:quick-start:userManagementStarter.md","_source":"content","_file":"quick-start/userManagementStarter.md","_extension":"md"},"hash":"ukIJfpg7dI"}
+---
+title: 'User Management Starter'
+description: 'Sets up a public Profiles table which you can access with your API.'
+---
+
+<!-- Content of the page -->
