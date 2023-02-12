@@ -1,5 +1,4 @@
 export { AggregateContent_typeArgs } from "./AggregateContent_typeArgs";
-export { CreateManyContent_typeArgs } from "./CreateManyContent_typeArgs";
 export { CreateOneContent_typeArgs } from "./CreateOneContent_typeArgs";
 export { DeleteManyContent_typeArgs } from "./DeleteManyContent_typeArgs";
 export { DeleteOneContent_typeArgs } from "./DeleteOneContent_typeArgs";

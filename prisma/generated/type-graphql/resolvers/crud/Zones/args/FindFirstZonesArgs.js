@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindFirstZonesArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const ZonesOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/ZonesOrderByWithRelationAndSearchRelevanceInput");
+const ZonesOrderByWithRelationInput_1 = require("../../../inputs/ZonesOrderByWithRelationInput");
 const ZonesWhereInput_1 = require("../../../inputs/ZonesWhereInput");
 const ZonesWhereUniqueInput_1 = require("../../../inputs/ZonesWhereUniqueInput");
 const ZonesScalarFieldEnum_1 = require("../../../../enums/ZonesScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", ZonesWhereInput_1.ZonesWhereInput)
 ], FindFirstZonesArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [ZonesOrderByWithRelationAndSearchRelevanceInput_1.ZonesOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [ZonesOrderByWithRelationInput_1.ZonesOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

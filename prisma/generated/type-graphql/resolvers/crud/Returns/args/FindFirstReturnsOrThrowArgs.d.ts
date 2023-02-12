@@ -1,9 +1,9 @@
-import { ReturnsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ReturnsOrderByWithRelationAndSearchRelevanceInput";
+import { ReturnsOrderByWithRelationInput } from "../../../inputs/ReturnsOrderByWithRelationInput";
 import { ReturnsWhereInput } from "../../../inputs/ReturnsWhereInput";
 import { ReturnsWhereUniqueInput } from "../../../inputs/ReturnsWhereUniqueInput";
 export declare class FindFirstReturnsOrThrowArgs {
     where?: ReturnsWhereInput | undefined;
-    orderBy?: ReturnsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: ReturnsOrderByWithRelationInput[] | undefined;
     cursor?: ReturnsWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

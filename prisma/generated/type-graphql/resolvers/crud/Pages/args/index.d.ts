@@ -1,5 +1,4 @@
 export { AggregatePagesArgs } from "./AggregatePagesArgs";
-export { CreateManyPagesArgs } from "./CreateManyPagesArgs";
 export { CreateOnePagesArgs } from "./CreateOnePagesArgs";
 export { DeleteManyPagesArgs } from "./DeleteManyPagesArgs";
 export { DeleteOnePagesArgs } from "./DeleteOnePagesArgs";

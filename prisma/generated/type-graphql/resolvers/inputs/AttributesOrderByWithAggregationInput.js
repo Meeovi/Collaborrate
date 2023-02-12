@@ -8,6 +8,7 @@ const AttributesCountOrderByAggregateInput_1 = require("../inputs/AttributesCoun
 const AttributesMaxOrderByAggregateInput_1 = require("../inputs/AttributesMaxOrderByAggregateInput");
 const AttributesMinOrderByAggregateInput_1 = require("../inputs/AttributesMinOrderByAggregateInput");
 const AttributesSumOrderByAggregateInput_1 = require("../inputs/AttributesSumOrderByAggregateInput");
+const SortOrderInput_1 = require("../inputs/SortOrderInput");
 const SortOrder_1 = require("../../enums/SortOrder");
 let AttributesOrderByWithAggregationInput = class AttributesOrderByWithAggregationInput {
 };
@@ -18,76 +19,76 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], AttributesOrderByWithAggregationInput.prototype, "id", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "default_label", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "attribute_code", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "filter_options", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "use_search", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "layered_navigation", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "search_results_layered_navigation", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "position", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "promo_rule_conditions", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "allow_html_tags_storefront", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "visible_catalog_pages_storefront", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "used_product_listing", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "used_sorting_product_listing", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
@@ -96,64 +97,64 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], AttributesOrderByWithAggregationInput.prototype, "prod_id", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "attribute_class", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "attribute_value", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "column_options", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "faceted_navigation", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "isPublic", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "meta_description", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "meta_name", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "meta_url", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "product_attribute_set", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], AttributesOrderByWithAggregationInput.prototype, "products", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => AttributesCountOrderByAggregateInput_1.AttributesCountOrderByAggregateInput, {

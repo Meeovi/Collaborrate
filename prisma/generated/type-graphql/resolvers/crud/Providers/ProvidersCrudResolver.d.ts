@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateProvidersArgs } from "./args/AggregateProvidersArgs";
-import { CreateManyProvidersArgs } from "./args/CreateManyProvidersArgs";
 import { CreateOneProvidersArgs } from "./args/CreateOneProvidersArgs";
 import { DeleteManyProvidersArgs } from "./args/DeleteManyProvidersArgs";
 import { DeleteOneProvidersArgs } from "./args/DeleteOneProvidersArgs";
@@ -19,7 +18,6 @@ import { AggregateProviders } from "../../outputs/AggregateProviders";
 import { ProvidersGroupBy } from "../../outputs/ProvidersGroupBy";
 export declare class ProvidersCrudResolver {
     aggregateProviders(ctx: any, info: GraphQLResolveInfo, args: AggregateProvidersArgs): Promise<AggregateProviders>;
-    createManyProviders(ctx: any, info: GraphQLResolveInfo, args: CreateManyProvidersArgs): Promise<AffectedRowsOutput>;
     createOneProviders(ctx: any, info: GraphQLResolveInfo, args: CreateOneProvidersArgs): Promise<Providers>;
     deleteManyProviders(ctx: any, info: GraphQLResolveInfo, args: DeleteManyProvidersArgs): Promise<AffectedRowsOutput>;
     deleteOneProviders(ctx: any, info: GraphQLResolveInfo, args: DeleteOneProvidersArgs): Promise<Providers | null>;

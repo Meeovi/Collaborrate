@@ -1,5 +1,4 @@
 export { AggregateDashboardgraphqlArgs } from "./AggregateDashboardgraphqlArgs";
-export { CreateManyDashboardgraphqlArgs } from "./CreateManyDashboardgraphqlArgs";
 export { CreateOneDashboardgraphqlArgs } from "./CreateOneDashboardgraphqlArgs";
 export { DeleteManyDashboardgraphqlArgs } from "./DeleteManyDashboardgraphqlArgs";
 export { DeleteOneDashboardgraphqlArgs } from "./DeleteOneDashboardgraphqlArgs";

@@ -4,7 +4,6 @@ exports.StringFilter = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const NestedStringFilter_1 = require("../inputs/NestedStringFilter");
-const QueryMode_1 = require("../../enums/QueryMode");
 let StringFilter = class StringFilter {
 };
 tslib_1.__decorate([
@@ -67,18 +66,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], StringFilter.prototype, "endsWith", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], StringFilter.prototype, "search", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => QueryMode_1.QueryMode, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], StringFilter.prototype, "mode", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => NestedStringFilter_1.NestedStringFilter, {
         nullable: true

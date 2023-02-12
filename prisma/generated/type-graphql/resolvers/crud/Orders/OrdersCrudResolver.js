@@ -4,7 +4,6 @@ exports.OrdersCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateOrdersArgs_1 = require("./args/AggregateOrdersArgs");
-const CreateManyOrdersArgs_1 = require("./args/CreateManyOrdersArgs");
 const CreateOneOrdersArgs_1 = require("./args/CreateOneOrdersArgs");
 const DeleteManyOrdersArgs_1 = require("./args/DeleteManyOrdersArgs");
 const DeleteOneOrdersArgs_1 = require("./args/DeleteOneOrdersArgs");
@@ -27,13 +26,6 @@ let OrdersCrudResolver = class OrdersCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).orders.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyOrders(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).orders.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneOrders(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateOrdersArgs_1.AggregateOrdersArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], OrdersCrudResolver.prototype, "aggregateOrders", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyOrdersArgs_1.CreateManyOrdersArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], OrdersCrudResolver.prototype, "createManyOrders", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Orders_1.Orders, {
         nullable: false

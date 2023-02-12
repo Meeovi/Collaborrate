@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneBrandsArgs = exports.UpdateOneBrandsArgs = exports.UpdateManyBrandsArgs = exports.GroupByBrandsArgs = exports.FindUniqueBrandsOrThrowArgs = exports.FindUniqueBrandsArgs = exports.FindManyBrandsArgs = exports.FindFirstBrandsOrThrowArgs = exports.FindFirstBrandsArgs = exports.DeleteOneBrandsArgs = exports.DeleteManyBrandsArgs = exports.CreateOneBrandsArgs = exports.CreateManyBrandsArgs = exports.AggregateBrandsArgs = void 0;
+exports.UpsertOneBrandsArgs = exports.UpdateOneBrandsArgs = exports.UpdateManyBrandsArgs = exports.GroupByBrandsArgs = exports.FindUniqueBrandsOrThrowArgs = exports.FindUniqueBrandsArgs = exports.FindManyBrandsArgs = exports.FindFirstBrandsOrThrowArgs = exports.FindFirstBrandsArgs = exports.DeleteOneBrandsArgs = exports.DeleteManyBrandsArgs = exports.CreateOneBrandsArgs = exports.AggregateBrandsArgs = void 0;
 var AggregateBrandsArgs_1 = require("./AggregateBrandsArgs");
 Object.defineProperty(exports, "AggregateBrandsArgs", { enumerable: true, get: function () { return AggregateBrandsArgs_1.AggregateBrandsArgs; } });
-var CreateManyBrandsArgs_1 = require("./CreateManyBrandsArgs");
-Object.defineProperty(exports, "CreateManyBrandsArgs", { enumerable: true, get: function () { return CreateManyBrandsArgs_1.CreateManyBrandsArgs; } });
 var CreateOneBrandsArgs_1 = require("./CreateOneBrandsArgs");
 Object.defineProperty(exports, "CreateOneBrandsArgs", { enumerable: true, get: function () { return CreateOneBrandsArgs_1.CreateOneBrandsArgs; } });
 var DeleteManyBrandsArgs_1 = require("./DeleteManyBrandsArgs");

@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateRewardsArgs } from "./args/AggregateRewardsArgs";
-import { CreateManyRewardsArgs } from "./args/CreateManyRewardsArgs";
 import { CreateOneRewardsArgs } from "./args/CreateOneRewardsArgs";
 import { DeleteManyRewardsArgs } from "./args/DeleteManyRewardsArgs";
 import { DeleteOneRewardsArgs } from "./args/DeleteOneRewardsArgs";
@@ -19,7 +18,6 @@ import { AggregateRewards } from "../../outputs/AggregateRewards";
 import { RewardsGroupBy } from "../../outputs/RewardsGroupBy";
 export declare class RewardsCrudResolver {
     aggregateRewards(ctx: any, info: GraphQLResolveInfo, args: AggregateRewardsArgs): Promise<AggregateRewards>;
-    createManyRewards(ctx: any, info: GraphQLResolveInfo, args: CreateManyRewardsArgs): Promise<AffectedRowsOutput>;
     createOneRewards(ctx: any, info: GraphQLResolveInfo, args: CreateOneRewardsArgs): Promise<Rewards>;
     deleteManyRewards(ctx: any, info: GraphQLResolveInfo, args: DeleteManyRewardsArgs): Promise<AffectedRowsOutput>;
     deleteOneRewards(ctx: any, info: GraphQLResolveInfo, args: DeleteOneRewardsArgs): Promise<Rewards | null>;

@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneEmailsArgs = exports.UpdateOneEmailsArgs = exports.UpdateManyEmailsArgs = exports.GroupByEmailsArgs = exports.FindUniqueEmailsOrThrowArgs = exports.FindUniqueEmailsArgs = exports.FindManyEmailsArgs = exports.FindFirstEmailsOrThrowArgs = exports.FindFirstEmailsArgs = exports.DeleteOneEmailsArgs = exports.DeleteManyEmailsArgs = exports.CreateOneEmailsArgs = exports.CreateManyEmailsArgs = exports.AggregateEmailsArgs = void 0;
+exports.UpsertOneEmailsArgs = exports.UpdateOneEmailsArgs = exports.UpdateManyEmailsArgs = exports.GroupByEmailsArgs = exports.FindUniqueEmailsOrThrowArgs = exports.FindUniqueEmailsArgs = exports.FindManyEmailsArgs = exports.FindFirstEmailsOrThrowArgs = exports.FindFirstEmailsArgs = exports.DeleteOneEmailsArgs = exports.DeleteManyEmailsArgs = exports.CreateOneEmailsArgs = exports.AggregateEmailsArgs = void 0;
 var AggregateEmailsArgs_1 = require("./AggregateEmailsArgs");
 Object.defineProperty(exports, "AggregateEmailsArgs", { enumerable: true, get: function () { return AggregateEmailsArgs_1.AggregateEmailsArgs; } });
-var CreateManyEmailsArgs_1 = require("./CreateManyEmailsArgs");
-Object.defineProperty(exports, "CreateManyEmailsArgs", { enumerable: true, get: function () { return CreateManyEmailsArgs_1.CreateManyEmailsArgs; } });
 var CreateOneEmailsArgs_1 = require("./CreateOneEmailsArgs");
 Object.defineProperty(exports, "CreateOneEmailsArgs", { enumerable: true, get: function () { return CreateOneEmailsArgs_1.CreateOneEmailsArgs; } });
 var DeleteManyEmailsArgs_1 = require("./DeleteManyEmailsArgs");

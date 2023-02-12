@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneCurrenciesArgs = exports.UpdateOneCurrenciesArgs = exports.UpdateManyCurrenciesArgs = exports.GroupByCurrenciesArgs = exports.FindUniqueCurrenciesOrThrowArgs = exports.FindUniqueCurrenciesArgs = exports.FindManyCurrenciesArgs = exports.FindFirstCurrenciesOrThrowArgs = exports.FindFirstCurrenciesArgs = exports.DeleteOneCurrenciesArgs = exports.DeleteManyCurrenciesArgs = exports.CreateOneCurrenciesArgs = exports.CreateManyCurrenciesArgs = exports.AggregateCurrenciesArgs = void 0;
+exports.UpsertOneCurrenciesArgs = exports.UpdateOneCurrenciesArgs = exports.UpdateManyCurrenciesArgs = exports.GroupByCurrenciesArgs = exports.FindUniqueCurrenciesOrThrowArgs = exports.FindUniqueCurrenciesArgs = exports.FindManyCurrenciesArgs = exports.FindFirstCurrenciesOrThrowArgs = exports.FindFirstCurrenciesArgs = exports.DeleteOneCurrenciesArgs = exports.DeleteManyCurrenciesArgs = exports.CreateOneCurrenciesArgs = exports.AggregateCurrenciesArgs = void 0;
 var AggregateCurrenciesArgs_1 = require("./AggregateCurrenciesArgs");
 Object.defineProperty(exports, "AggregateCurrenciesArgs", { enumerable: true, get: function () { return AggregateCurrenciesArgs_1.AggregateCurrenciesArgs; } });
-var CreateManyCurrenciesArgs_1 = require("./CreateManyCurrenciesArgs");
-Object.defineProperty(exports, "CreateManyCurrenciesArgs", { enumerable: true, get: function () { return CreateManyCurrenciesArgs_1.CreateManyCurrenciesArgs; } });
 var CreateOneCurrenciesArgs_1 = require("./CreateOneCurrenciesArgs");
 Object.defineProperty(exports, "CreateOneCurrenciesArgs", { enumerable: true, get: function () { return CreateOneCurrenciesArgs_1.CreateOneCurrenciesArgs; } });
 var DeleteManyCurrenciesArgs_1 = require("./DeleteManyCurrenciesArgs");

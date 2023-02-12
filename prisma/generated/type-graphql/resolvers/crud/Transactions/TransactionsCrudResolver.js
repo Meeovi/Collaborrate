@@ -4,7 +4,6 @@ exports.TransactionsCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateTransactionsArgs_1 = require("./args/AggregateTransactionsArgs");
-const CreateManyTransactionsArgs_1 = require("./args/CreateManyTransactionsArgs");
 const CreateOneTransactionsArgs_1 = require("./args/CreateOneTransactionsArgs");
 const DeleteManyTransactionsArgs_1 = require("./args/DeleteManyTransactionsArgs");
 const DeleteOneTransactionsArgs_1 = require("./args/DeleteOneTransactionsArgs");
@@ -27,13 +26,6 @@ let TransactionsCrudResolver = class TransactionsCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).transactions.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyTransactions(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).transactions.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneTransactions(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateTransactionsArgs_1.AggregateTransactionsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], TransactionsCrudResolver.prototype, "aggregateTransactions", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyTransactionsArgs_1.CreateManyTransactionsArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], TransactionsCrudResolver.prototype, "createManyTransactions", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Transactions_1.Transactions, {
         nullable: false

@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateCurrenciesArgs } from "./args/AggregateCurrenciesArgs";
-import { CreateManyCurrenciesArgs } from "./args/CreateManyCurrenciesArgs";
 import { CreateOneCurrenciesArgs } from "./args/CreateOneCurrenciesArgs";
 import { DeleteManyCurrenciesArgs } from "./args/DeleteManyCurrenciesArgs";
 import { DeleteOneCurrenciesArgs } from "./args/DeleteOneCurrenciesArgs";
@@ -19,7 +18,6 @@ import { AggregateCurrencies } from "../../outputs/AggregateCurrencies";
 import { CurrenciesGroupBy } from "../../outputs/CurrenciesGroupBy";
 export declare class CurrenciesCrudResolver {
     aggregateCurrencies(ctx: any, info: GraphQLResolveInfo, args: AggregateCurrenciesArgs): Promise<AggregateCurrencies>;
-    createManyCurrencies(ctx: any, info: GraphQLResolveInfo, args: CreateManyCurrenciesArgs): Promise<AffectedRowsOutput>;
     createOneCurrencies(ctx: any, info: GraphQLResolveInfo, args: CreateOneCurrenciesArgs): Promise<Currencies>;
     deleteManyCurrencies(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCurrenciesArgs): Promise<AffectedRowsOutput>;
     deleteOneCurrencies(ctx: any, info: GraphQLResolveInfo, args: DeleteOneCurrenciesArgs): Promise<Currencies | null>;

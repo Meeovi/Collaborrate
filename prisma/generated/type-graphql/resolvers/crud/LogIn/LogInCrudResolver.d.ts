@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateLogInArgs } from "./args/AggregateLogInArgs";
-import { CreateManyLogInArgs } from "./args/CreateManyLogInArgs";
 import { CreateOneLogInArgs } from "./args/CreateOneLogInArgs";
 import { DeleteManyLogInArgs } from "./args/DeleteManyLogInArgs";
 import { DeleteOneLogInArgs } from "./args/DeleteOneLogInArgs";
@@ -19,7 +18,6 @@ import { AggregateLogIn } from "../../outputs/AggregateLogIn";
 import { LogInGroupBy } from "../../outputs/LogInGroupBy";
 export declare class LogInCrudResolver {
     aggregateLogIn(ctx: any, info: GraphQLResolveInfo, args: AggregateLogInArgs): Promise<AggregateLogIn>;
-    createManyLogIn(ctx: any, info: GraphQLResolveInfo, args: CreateManyLogInArgs): Promise<AffectedRowsOutput>;
     createOneLogIn(ctx: any, info: GraphQLResolveInfo, args: CreateOneLogInArgs): Promise<LogIn>;
     deleteManyLogIn(ctx: any, info: GraphQLResolveInfo, args: DeleteManyLogInArgs): Promise<AffectedRowsOutput>;
     deleteOneLogIn(ctx: any, info: GraphQLResolveInfo, args: DeleteOneLogInArgs): Promise<LogIn | null>;

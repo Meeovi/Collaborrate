@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneZonesArgs = exports.UpdateOneZonesArgs = exports.UpdateManyZonesArgs = exports.GroupByZonesArgs = exports.FindUniqueZonesOrThrowArgs = exports.FindUniqueZonesArgs = exports.FindManyZonesArgs = exports.FindFirstZonesOrThrowArgs = exports.FindFirstZonesArgs = exports.DeleteOneZonesArgs = exports.DeleteManyZonesArgs = exports.CreateOneZonesArgs = exports.CreateManyZonesArgs = exports.AggregateZonesArgs = void 0;
+exports.UpsertOneZonesArgs = exports.UpdateOneZonesArgs = exports.UpdateManyZonesArgs = exports.GroupByZonesArgs = exports.FindUniqueZonesOrThrowArgs = exports.FindUniqueZonesArgs = exports.FindManyZonesArgs = exports.FindFirstZonesOrThrowArgs = exports.FindFirstZonesArgs = exports.DeleteOneZonesArgs = exports.DeleteManyZonesArgs = exports.CreateOneZonesArgs = exports.AggregateZonesArgs = void 0;
 var AggregateZonesArgs_1 = require("./AggregateZonesArgs");
 Object.defineProperty(exports, "AggregateZonesArgs", { enumerable: true, get: function () { return AggregateZonesArgs_1.AggregateZonesArgs; } });
-var CreateManyZonesArgs_1 = require("./CreateManyZonesArgs");
-Object.defineProperty(exports, "CreateManyZonesArgs", { enumerable: true, get: function () { return CreateManyZonesArgs_1.CreateManyZonesArgs; } });
 var CreateOneZonesArgs_1 = require("./CreateOneZonesArgs");
 Object.defineProperty(exports, "CreateOneZonesArgs", { enumerable: true, get: function () { return CreateOneZonesArgs_1.CreateOneZonesArgs; } });
 var DeleteManyZonesArgs_1 = require("./DeleteManyZonesArgs");

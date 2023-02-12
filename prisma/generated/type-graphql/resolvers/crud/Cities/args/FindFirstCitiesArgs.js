@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindFirstCitiesArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const CitiesOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/CitiesOrderByWithRelationAndSearchRelevanceInput");
+const CitiesOrderByWithRelationInput_1 = require("../../../inputs/CitiesOrderByWithRelationInput");
 const CitiesWhereInput_1 = require("../../../inputs/CitiesWhereInput");
 const CitiesWhereUniqueInput_1 = require("../../../inputs/CitiesWhereUniqueInput");
 const CitiesScalarFieldEnum_1 = require("../../../../enums/CitiesScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", CitiesWhereInput_1.CitiesWhereInput)
 ], FindFirstCitiesArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [CitiesOrderByWithRelationAndSearchRelevanceInput_1.CitiesOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [CitiesOrderByWithRelationInput_1.CitiesOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

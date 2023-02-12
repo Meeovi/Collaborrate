@@ -1,5 +1,4 @@
 export { AggregateMediamanagerArgs } from "./AggregateMediamanagerArgs";
-export { CreateManyMediamanagerArgs } from "./CreateManyMediamanagerArgs";
 export { CreateOneMediamanagerArgs } from "./CreateOneMediamanagerArgs";
 export { DeleteManyMediamanagerArgs } from "./DeleteManyMediamanagerArgs";
 export { DeleteOneMediamanagerArgs } from "./DeleteOneMediamanagerArgs";

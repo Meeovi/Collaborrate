@@ -8,7 +8,6 @@ const DateTimeNullableFilter_1 = require("../inputs/DateTimeNullableFilter");
 const DecimalFilter_1 = require("../inputs/DecimalFilter");
 const IntFilter_1 = require("../inputs/IntFilter");
 const IntNullableFilter_1 = require("../inputs/IntNullableFilter");
-const JsonNullableFilter_1 = require("../inputs/JsonNullableFilter");
 const StringFilter_1 = require("../inputs/StringFilter");
 const StringNullableFilter_1 = require("../inputs/StringNullableFilter");
 let Upload_fileWhereInput = Upload_fileWhereInput_1 = class Upload_fileWhereInput {
@@ -68,10 +67,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", IntNullableFilter_1.IntNullableFilter)
 ], Upload_fileWhereInput.prototype, "height", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => JsonNullableFilter_1.JsonNullableFilter, {
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", JsonNullableFilter_1.JsonNullableFilter)
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], Upload_fileWhereInput.prototype, "formats", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => StringFilter_1.StringFilter, {
@@ -116,10 +115,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringFilter_1.StringFilter)
 ], Upload_fileWhereInput.prototype, "provider", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => JsonNullableFilter_1.JsonNullableFilter, {
+    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", JsonNullableFilter_1.JsonNullableFilter)
+    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], Upload_fileWhereInput.prototype, "provider_metadata", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => IntNullableFilter_1.IntNullableFilter, {

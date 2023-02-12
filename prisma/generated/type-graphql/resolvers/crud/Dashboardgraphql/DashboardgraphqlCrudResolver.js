@@ -4,7 +4,6 @@ exports.DashboardgraphqlCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateDashboardgraphqlArgs_1 = require("./args/AggregateDashboardgraphqlArgs");
-const CreateManyDashboardgraphqlArgs_1 = require("./args/CreateManyDashboardgraphqlArgs");
 const CreateOneDashboardgraphqlArgs_1 = require("./args/CreateOneDashboardgraphqlArgs");
 const DeleteManyDashboardgraphqlArgs_1 = require("./args/DeleteManyDashboardgraphqlArgs");
 const DeleteOneDashboardgraphqlArgs_1 = require("./args/DeleteOneDashboardgraphqlArgs");
@@ -27,13 +26,6 @@ let DashboardgraphqlCrudResolver = class DashboardgraphqlCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).dashboardgraphql.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyDashboardgraphql(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).dashboardgraphql.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneDashboardgraphql(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateDashboardgraphqlArgs_1.AggregateDashboardgraphqlArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], DashboardgraphqlCrudResolver.prototype, "aggregateDashboardgraphql", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyDashboardgraphqlArgs_1.CreateManyDashboardgraphqlArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], DashboardgraphqlCrudResolver.prototype, "createManyDashboardgraphql", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Dashboardgraphql_1.Dashboardgraphql, {
         nullable: false

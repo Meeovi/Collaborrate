@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneCitiesArgs = exports.UpdateOneCitiesArgs = exports.UpdateManyCitiesArgs = exports.GroupByCitiesArgs = exports.FindUniqueCitiesOrThrowArgs = exports.FindUniqueCitiesArgs = exports.FindManyCitiesArgs = exports.FindFirstCitiesOrThrowArgs = exports.FindFirstCitiesArgs = exports.DeleteOneCitiesArgs = exports.DeleteManyCitiesArgs = exports.CreateOneCitiesArgs = exports.CreateManyCitiesArgs = exports.AggregateCitiesArgs = void 0;
+exports.UpsertOneCitiesArgs = exports.UpdateOneCitiesArgs = exports.UpdateManyCitiesArgs = exports.GroupByCitiesArgs = exports.FindUniqueCitiesOrThrowArgs = exports.FindUniqueCitiesArgs = exports.FindManyCitiesArgs = exports.FindFirstCitiesOrThrowArgs = exports.FindFirstCitiesArgs = exports.DeleteOneCitiesArgs = exports.DeleteManyCitiesArgs = exports.CreateOneCitiesArgs = exports.AggregateCitiesArgs = void 0;
 var AggregateCitiesArgs_1 = require("./AggregateCitiesArgs");
 Object.defineProperty(exports, "AggregateCitiesArgs", { enumerable: true, get: function () { return AggregateCitiesArgs_1.AggregateCitiesArgs; } });
-var CreateManyCitiesArgs_1 = require("./CreateManyCitiesArgs");
-Object.defineProperty(exports, "CreateManyCitiesArgs", { enumerable: true, get: function () { return CreateManyCitiesArgs_1.CreateManyCitiesArgs; } });
 var CreateOneCitiesArgs_1 = require("./CreateOneCitiesArgs");
 Object.defineProperty(exports, "CreateOneCitiesArgs", { enumerable: true, get: function () { return CreateOneCitiesArgs_1.CreateOneCitiesArgs; } });
 var DeleteManyCitiesArgs_1 = require("./DeleteManyCitiesArgs");

@@ -1,9 +1,9 @@
-import { InvoicesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/InvoicesOrderByWithRelationAndSearchRelevanceInput";
+import { InvoicesOrderByWithRelationInput } from "../../../inputs/InvoicesOrderByWithRelationInput";
 import { InvoicesWhereInput } from "../../../inputs/InvoicesWhereInput";
 import { InvoicesWhereUniqueInput } from "../../../inputs/InvoicesWhereUniqueInput";
 export declare class FindFirstInvoicesOrThrowArgs {
     where?: InvoicesWhereInput | undefined;
-    orderBy?: InvoicesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: InvoicesOrderByWithRelationInput[] | undefined;
     cursor?: InvoicesWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

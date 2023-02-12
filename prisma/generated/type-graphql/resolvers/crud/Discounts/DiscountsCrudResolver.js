@@ -4,7 +4,6 @@ exports.DiscountsCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateDiscountsArgs_1 = require("./args/AggregateDiscountsArgs");
-const CreateManyDiscountsArgs_1 = require("./args/CreateManyDiscountsArgs");
 const CreateOneDiscountsArgs_1 = require("./args/CreateOneDiscountsArgs");
 const DeleteManyDiscountsArgs_1 = require("./args/DeleteManyDiscountsArgs");
 const DeleteOneDiscountsArgs_1 = require("./args/DeleteOneDiscountsArgs");
@@ -27,13 +26,6 @@ let DiscountsCrudResolver = class DiscountsCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).discounts.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyDiscounts(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).discounts.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneDiscounts(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateDiscountsArgs_1.AggregateDiscountsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], DiscountsCrudResolver.prototype, "aggregateDiscounts", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyDiscountsArgs_1.CreateManyDiscountsArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], DiscountsCrudResolver.prototype, "createManyDiscounts", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Discounts_1.Discounts, {
         nullable: false

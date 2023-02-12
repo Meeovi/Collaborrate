@@ -1,3 +1,33 @@
+import { AttributesWhereInput } from "../inputs/AttributesWhereInput";
+import { BigIntFilter } from "../inputs/BigIntFilter";
+import { BoolNullableFilter } from "../inputs/BoolNullableFilter";
+import { StringNullableFilter } from "../inputs/StringNullableFilter";
 export declare class AttributesWhereUniqueInput {
     id?: number | undefined;
+    AND?: AttributesWhereInput[] | undefined;
+    OR?: AttributesWhereInput[] | undefined;
+    NOT?: AttributesWhereInput[] | undefined;
+    default_label?: StringNullableFilter | undefined;
+    attribute_code?: StringNullableFilter | undefined;
+    filter_options?: StringNullableFilter | undefined;
+    use_search?: StringNullableFilter | undefined;
+    layered_navigation?: BoolNullableFilter | undefined;
+    search_results_layered_navigation?: BoolNullableFilter | undefined;
+    position?: StringNullableFilter | undefined;
+    promo_rule_conditions?: BoolNullableFilter | undefined;
+    allow_html_tags_storefront?: BoolNullableFilter | undefined;
+    visible_catalog_pages_storefront?: BoolNullableFilter | undefined;
+    used_product_listing?: BoolNullableFilter | undefined;
+    used_sorting_product_listing?: BoolNullableFilter | undefined;
+    prod_id?: BigIntFilter | undefined;
+    attribute_class?: StringNullableFilter | undefined;
+    attribute_value?: StringNullableFilter | undefined;
+    column_options?: StringNullableFilter | undefined;
+    faceted_navigation?: BoolNullableFilter | undefined;
+    isPublic?: StringNullableFilter | undefined;
+    meta_description?: StringNullableFilter | undefined;
+    meta_name?: BoolNullableFilter | undefined;
+    meta_url?: StringNullableFilter | undefined;
+    product_attribute_set?: StringNullableFilter | undefined;
+    products?: StringNullableFilter | undefined;
 }

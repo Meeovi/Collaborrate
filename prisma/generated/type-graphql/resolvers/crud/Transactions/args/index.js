@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneTransactionsArgs = exports.UpdateOneTransactionsArgs = exports.UpdateManyTransactionsArgs = exports.GroupByTransactionsArgs = exports.FindUniqueTransactionsOrThrowArgs = exports.FindUniqueTransactionsArgs = exports.FindManyTransactionsArgs = exports.FindFirstTransactionsOrThrowArgs = exports.FindFirstTransactionsArgs = exports.DeleteOneTransactionsArgs = exports.DeleteManyTransactionsArgs = exports.CreateOneTransactionsArgs = exports.CreateManyTransactionsArgs = exports.AggregateTransactionsArgs = void 0;
+exports.UpsertOneTransactionsArgs = exports.UpdateOneTransactionsArgs = exports.UpdateManyTransactionsArgs = exports.GroupByTransactionsArgs = exports.FindUniqueTransactionsOrThrowArgs = exports.FindUniqueTransactionsArgs = exports.FindManyTransactionsArgs = exports.FindFirstTransactionsOrThrowArgs = exports.FindFirstTransactionsArgs = exports.DeleteOneTransactionsArgs = exports.DeleteManyTransactionsArgs = exports.CreateOneTransactionsArgs = exports.AggregateTransactionsArgs = void 0;
 var AggregateTransactionsArgs_1 = require("./AggregateTransactionsArgs");
 Object.defineProperty(exports, "AggregateTransactionsArgs", { enumerable: true, get: function () { return AggregateTransactionsArgs_1.AggregateTransactionsArgs; } });
-var CreateManyTransactionsArgs_1 = require("./CreateManyTransactionsArgs");
-Object.defineProperty(exports, "CreateManyTransactionsArgs", { enumerable: true, get: function () { return CreateManyTransactionsArgs_1.CreateManyTransactionsArgs; } });
 var CreateOneTransactionsArgs_1 = require("./CreateOneTransactionsArgs");
 Object.defineProperty(exports, "CreateOneTransactionsArgs", { enumerable: true, get: function () { return CreateOneTransactionsArgs_1.CreateOneTransactionsArgs; } });
 var DeleteManyTransactionsArgs_1 = require("./DeleteManyTransactionsArgs");

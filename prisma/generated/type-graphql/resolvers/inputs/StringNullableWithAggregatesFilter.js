@@ -6,7 +6,6 @@ const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const NestedIntNullableFilter_1 = require("../inputs/NestedIntNullableFilter");
 const NestedStringNullableFilter_1 = require("../inputs/NestedStringNullableFilter");
 const NestedStringNullableWithAggregatesFilter_1 = require("../inputs/NestedStringNullableWithAggregatesFilter");
-const QueryMode_1 = require("../../enums/QueryMode");
 let StringNullableWithAggregatesFilter = class StringNullableWithAggregatesFilter {
 };
 tslib_1.__decorate([
@@ -69,18 +68,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], StringNullableWithAggregatesFilter.prototype, "endsWith", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], StringNullableWithAggregatesFilter.prototype, "search", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => QueryMode_1.QueryMode, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", String)
-], StringNullableWithAggregatesFilter.prototype, "mode", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => NestedStringNullableWithAggregatesFilter_1.NestedStringNullableWithAggregatesFilter, {
         nullable: true

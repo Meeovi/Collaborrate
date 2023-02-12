@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateMediamanagerArgs } from "./args/AggregateMediamanagerArgs";
-import { CreateManyMediamanagerArgs } from "./args/CreateManyMediamanagerArgs";
 import { CreateOneMediamanagerArgs } from "./args/CreateOneMediamanagerArgs";
 import { DeleteManyMediamanagerArgs } from "./args/DeleteManyMediamanagerArgs";
 import { DeleteOneMediamanagerArgs } from "./args/DeleteOneMediamanagerArgs";
@@ -19,7 +18,6 @@ import { AggregateMediamanager } from "../../outputs/AggregateMediamanager";
 import { MediamanagerGroupBy } from "../../outputs/MediamanagerGroupBy";
 export declare class MediamanagerCrudResolver {
     aggregateMediamanager(ctx: any, info: GraphQLResolveInfo, args: AggregateMediamanagerArgs): Promise<AggregateMediamanager>;
-    createManyMediamanager(ctx: any, info: GraphQLResolveInfo, args: CreateManyMediamanagerArgs): Promise<AffectedRowsOutput>;
     createOneMediamanager(ctx: any, info: GraphQLResolveInfo, args: CreateOneMediamanagerArgs): Promise<Mediamanager>;
     deleteManyMediamanager(ctx: any, info: GraphQLResolveInfo, args: DeleteManyMediamanagerArgs): Promise<AffectedRowsOutput>;
     deleteOneMediamanager(ctx: any, info: GraphQLResolveInfo, args: DeleteOneMediamanagerArgs): Promise<Mediamanager | null>;

@@ -4,7 +4,6 @@ exports.RolesCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateRolesArgs_1 = require("./args/AggregateRolesArgs");
-const CreateManyRolesArgs_1 = require("./args/CreateManyRolesArgs");
 const CreateOneRolesArgs_1 = require("./args/CreateOneRolesArgs");
 const DeleteManyRolesArgs_1 = require("./args/DeleteManyRolesArgs");
 const DeleteOneRolesArgs_1 = require("./args/DeleteOneRolesArgs");
@@ -27,13 +26,6 @@ let RolesCrudResolver = class RolesCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).roles.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyRoles(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).roles.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneRoles(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateRolesArgs_1.AggregateRolesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], RolesCrudResolver.prototype, "aggregateRoles", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyRolesArgs_1.CreateManyRolesArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], RolesCrudResolver.prototype, "createManyRoles", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Roles_1.Roles, {
         nullable: false

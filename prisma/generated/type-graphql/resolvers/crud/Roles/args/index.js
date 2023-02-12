@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneRolesArgs = exports.UpdateOneRolesArgs = exports.UpdateManyRolesArgs = exports.GroupByRolesArgs = exports.FindUniqueRolesOrThrowArgs = exports.FindUniqueRolesArgs = exports.FindManyRolesArgs = exports.FindFirstRolesOrThrowArgs = exports.FindFirstRolesArgs = exports.DeleteOneRolesArgs = exports.DeleteManyRolesArgs = exports.CreateOneRolesArgs = exports.CreateManyRolesArgs = exports.AggregateRolesArgs = void 0;
+exports.UpsertOneRolesArgs = exports.UpdateOneRolesArgs = exports.UpdateManyRolesArgs = exports.GroupByRolesArgs = exports.FindUniqueRolesOrThrowArgs = exports.FindUniqueRolesArgs = exports.FindManyRolesArgs = exports.FindFirstRolesOrThrowArgs = exports.FindFirstRolesArgs = exports.DeleteOneRolesArgs = exports.DeleteManyRolesArgs = exports.CreateOneRolesArgs = exports.AggregateRolesArgs = void 0;
 var AggregateRolesArgs_1 = require("./AggregateRolesArgs");
 Object.defineProperty(exports, "AggregateRolesArgs", { enumerable: true, get: function () { return AggregateRolesArgs_1.AggregateRolesArgs; } });
-var CreateManyRolesArgs_1 = require("./CreateManyRolesArgs");
-Object.defineProperty(exports, "CreateManyRolesArgs", { enumerable: true, get: function () { return CreateManyRolesArgs_1.CreateManyRolesArgs; } });
 var CreateOneRolesArgs_1 = require("./CreateOneRolesArgs");
 Object.defineProperty(exports, "CreateOneRolesArgs", { enumerable: true, get: function () { return CreateOneRolesArgs_1.CreateOneRolesArgs; } });
 var DeleteManyRolesArgs_1 = require("./DeleteManyRolesArgs");

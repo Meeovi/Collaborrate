@@ -4,7 +4,6 @@ exports.PermissionsCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregatePermissionsArgs_1 = require("./args/AggregatePermissionsArgs");
-const CreateManyPermissionsArgs_1 = require("./args/CreateManyPermissionsArgs");
 const CreateOnePermissionsArgs_1 = require("./args/CreateOnePermissionsArgs");
 const DeleteManyPermissionsArgs_1 = require("./args/DeleteManyPermissionsArgs");
 const DeleteOnePermissionsArgs_1 = require("./args/DeleteOnePermissionsArgs");
@@ -27,13 +26,6 @@ let PermissionsCrudResolver = class PermissionsCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).permissions.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyPermissions(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).permissions.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOnePermissions(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregatePermissionsArgs_1.AggregatePermissionsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], PermissionsCrudResolver.prototype, "aggregatePermissions", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyPermissionsArgs_1.CreateManyPermissionsArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], PermissionsCrudResolver.prototype, "createManyPermissions", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Permissions_1.Permissions, {
         nullable: false

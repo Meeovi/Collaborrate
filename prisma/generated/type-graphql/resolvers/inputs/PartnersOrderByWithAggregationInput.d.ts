@@ -3,16 +3,17 @@ import { PartnersCountOrderByAggregateInput } from "../inputs/PartnersCountOrder
 import { PartnersMaxOrderByAggregateInput } from "../inputs/PartnersMaxOrderByAggregateInput";
 import { PartnersMinOrderByAggregateInput } from "../inputs/PartnersMinOrderByAggregateInput";
 import { PartnersSumOrderByAggregateInput } from "../inputs/PartnersSumOrderByAggregateInput";
+import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class PartnersOrderByWithAggregationInput {
     id?: "asc" | "desc" | undefined;
-    created_at?: "asc" | "desc" | undefined;
-    name?: "asc" | "desc" | undefined;
-    address?: "asc" | "desc" | undefined;
-    city?: "asc" | "desc" | undefined;
-    state?: "asc" | "desc" | undefined;
-    country?: "asc" | "desc" | undefined;
-    isPublic?: "asc" | "desc" | undefined;
-    business_type?: "asc" | "desc" | undefined;
+    created_at?: SortOrderInput | undefined;
+    name?: SortOrderInput | undefined;
+    address?: SortOrderInput | undefined;
+    city?: SortOrderInput | undefined;
+    state?: SortOrderInput | undefined;
+    country?: SortOrderInput | undefined;
+    isPublic?: SortOrderInput | undefined;
+    business_type?: SortOrderInput | undefined;
     _count?: PartnersCountOrderByAggregateInput | undefined;
     _avg?: PartnersAvgOrderByAggregateInput | undefined;
     _max?: PartnersMaxOrderByAggregateInput | undefined;

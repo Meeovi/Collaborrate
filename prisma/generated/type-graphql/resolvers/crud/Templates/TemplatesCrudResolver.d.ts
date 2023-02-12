@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateTemplatesArgs } from "./args/AggregateTemplatesArgs";
-import { CreateManyTemplatesArgs } from "./args/CreateManyTemplatesArgs";
 import { CreateOneTemplatesArgs } from "./args/CreateOneTemplatesArgs";
 import { DeleteManyTemplatesArgs } from "./args/DeleteManyTemplatesArgs";
 import { DeleteOneTemplatesArgs } from "./args/DeleteOneTemplatesArgs";
@@ -19,7 +18,6 @@ import { AggregateTemplates } from "../../outputs/AggregateTemplates";
 import { TemplatesGroupBy } from "../../outputs/TemplatesGroupBy";
 export declare class TemplatesCrudResolver {
     aggregateTemplates(ctx: any, info: GraphQLResolveInfo, args: AggregateTemplatesArgs): Promise<AggregateTemplates>;
-    createManyTemplates(ctx: any, info: GraphQLResolveInfo, args: CreateManyTemplatesArgs): Promise<AffectedRowsOutput>;
     createOneTemplates(ctx: any, info: GraphQLResolveInfo, args: CreateOneTemplatesArgs): Promise<Templates>;
     deleteManyTemplates(ctx: any, info: GraphQLResolveInfo, args: DeleteManyTemplatesArgs): Promise<AffectedRowsOutput>;
     deleteOneTemplates(ctx: any, info: GraphQLResolveInfo, args: DeleteOneTemplatesArgs): Promise<Templates | null>;

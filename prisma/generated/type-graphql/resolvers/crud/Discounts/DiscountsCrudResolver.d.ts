@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateDiscountsArgs } from "./args/AggregateDiscountsArgs";
-import { CreateManyDiscountsArgs } from "./args/CreateManyDiscountsArgs";
 import { CreateOneDiscountsArgs } from "./args/CreateOneDiscountsArgs";
 import { DeleteManyDiscountsArgs } from "./args/DeleteManyDiscountsArgs";
 import { DeleteOneDiscountsArgs } from "./args/DeleteOneDiscountsArgs";
@@ -19,7 +18,6 @@ import { AggregateDiscounts } from "../../outputs/AggregateDiscounts";
 import { DiscountsGroupBy } from "../../outputs/DiscountsGroupBy";
 export declare class DiscountsCrudResolver {
     aggregateDiscounts(ctx: any, info: GraphQLResolveInfo, args: AggregateDiscountsArgs): Promise<AggregateDiscounts>;
-    createManyDiscounts(ctx: any, info: GraphQLResolveInfo, args: CreateManyDiscountsArgs): Promise<AffectedRowsOutput>;
     createOneDiscounts(ctx: any, info: GraphQLResolveInfo, args: CreateOneDiscountsArgs): Promise<Discounts>;
     deleteManyDiscounts(ctx: any, info: GraphQLResolveInfo, args: DeleteManyDiscountsArgs): Promise<AffectedRowsOutput>;
     deleteOneDiscounts(ctx: any, info: GraphQLResolveInfo, args: DeleteOneDiscountsArgs): Promise<Discounts | null>;

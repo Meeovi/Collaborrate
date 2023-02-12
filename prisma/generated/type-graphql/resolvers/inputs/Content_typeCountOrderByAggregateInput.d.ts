@@ -3,7 +3,6 @@ export declare class Content_typeCountOrderByAggregateInput {
     created_at?: "asc" | "desc" | undefined;
     text?: "asc" | "desc" | undefined;
     number?: "asc" | "desc" | undefined;
-    json?: "asc" | "desc" | undefined;
     link?: "asc" | "desc" | undefined;
     email?: "asc" | "desc" | undefined;
     uid?: "asc" | "desc" | undefined;

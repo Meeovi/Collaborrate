@@ -3,15 +3,16 @@ import { LogInCountOrderByAggregateInput } from "../inputs/LogInCountOrderByAggr
 import { LogInMaxOrderByAggregateInput } from "../inputs/LogInMaxOrderByAggregateInput";
 import { LogInMinOrderByAggregateInput } from "../inputs/LogInMinOrderByAggregateInput";
 import { LogInSumOrderByAggregateInput } from "../inputs/LogInSumOrderByAggregateInput";
+import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class LogInOrderByWithAggregationInput {
     id?: "asc" | "desc" | undefined;
-    created_at?: "asc" | "desc" | undefined;
-    email?: "asc" | "desc" | undefined;
-    password?: "asc" | "desc" | undefined;
-    token?: "asc" | "desc" | undefined;
-    expiresIn?: "asc" | "desc" | undefined;
-    users?: "asc" | "desc" | undefined;
-    username?: "asc" | "desc" | undefined;
+    created_at?: SortOrderInput | undefined;
+    email?: SortOrderInput | undefined;
+    password?: SortOrderInput | undefined;
+    token?: SortOrderInput | undefined;
+    expiresIn?: SortOrderInput | undefined;
+    users?: SortOrderInput | undefined;
+    username?: SortOrderInput | undefined;
     _count?: LogInCountOrderByAggregateInput | undefined;
     _avg?: LogInAvgOrderByAggregateInput | undefined;
     _max?: LogInMaxOrderByAggregateInput | undefined;

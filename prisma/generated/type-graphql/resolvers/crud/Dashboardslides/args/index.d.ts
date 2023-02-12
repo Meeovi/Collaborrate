@@ -1,5 +1,4 @@
 export { AggregateDashboardslidesArgs } from "./AggregateDashboardslidesArgs";
-export { CreateManyDashboardslidesArgs } from "./CreateManyDashboardslidesArgs";
 export { CreateOneDashboardslidesArgs } from "./CreateOneDashboardslidesArgs";
 export { DeleteManyDashboardslidesArgs } from "./DeleteManyDashboardslidesArgs";
 export { DeleteOneDashboardslidesArgs } from "./DeleteOneDashboardslidesArgs";

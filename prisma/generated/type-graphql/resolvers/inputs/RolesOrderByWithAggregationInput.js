@@ -8,6 +8,7 @@ const RolesCountOrderByAggregateInput_1 = require("../inputs/RolesCountOrderByAg
 const RolesMaxOrderByAggregateInput_1 = require("../inputs/RolesMaxOrderByAggregateInput");
 const RolesMinOrderByAggregateInput_1 = require("../inputs/RolesMinOrderByAggregateInput");
 const RolesSumOrderByAggregateInput_1 = require("../inputs/RolesSumOrderByAggregateInput");
+const SortOrderInput_1 = require("../inputs/SortOrderInput");
 const SortOrder_1 = require("../../enums/SortOrder");
 let RolesOrderByWithAggregationInput = class RolesOrderByWithAggregationInput {
 };
@@ -24,58 +25,58 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], RolesOrderByWithAggregationInput.prototype, "role_name", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], RolesOrderByWithAggregationInput.prototype, "content", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], RolesOrderByWithAggregationInput.prototype, "created_at", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], RolesOrderByWithAggregationInput.prototype, "type", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], RolesOrderByWithAggregationInput.prototype, "createRole", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], RolesOrderByWithAggregationInput.prototype, "updateRole", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], RolesOrderByWithAggregationInput.prototype, "deleteRole", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], RolesOrderByWithAggregationInput.prototype, "publishRole", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], RolesOrderByWithAggregationInput.prototype, "unpublishRole", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], RolesOrderByWithAggregationInput.prototype, "role", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => RolesCountOrderByAggregateInput_1.RolesCountOrderByAggregateInput, {

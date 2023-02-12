@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindFirstFullfillmentsOrThrowArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const FullfillmentsOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/FullfillmentsOrderByWithRelationAndSearchRelevanceInput");
+const FullfillmentsOrderByWithRelationInput_1 = require("../../../inputs/FullfillmentsOrderByWithRelationInput");
 const FullfillmentsWhereInput_1 = require("../../../inputs/FullfillmentsWhereInput");
 const FullfillmentsWhereUniqueInput_1 = require("../../../inputs/FullfillmentsWhereUniqueInput");
 const FullfillmentsScalarFieldEnum_1 = require("../../../../enums/FullfillmentsScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", FullfillmentsWhereInput_1.FullfillmentsWhereInput)
 ], FindFirstFullfillmentsOrThrowArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [FullfillmentsOrderByWithRelationAndSearchRelevanceInput_1.FullfillmentsOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [FullfillmentsOrderByWithRelationInput_1.FullfillmentsOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

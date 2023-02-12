@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateIntegrationsArgs } from "./args/AggregateIntegrationsArgs";
-import { CreateManyIntegrationsArgs } from "./args/CreateManyIntegrationsArgs";
 import { CreateOneIntegrationsArgs } from "./args/CreateOneIntegrationsArgs";
 import { DeleteManyIntegrationsArgs } from "./args/DeleteManyIntegrationsArgs";
 import { DeleteOneIntegrationsArgs } from "./args/DeleteOneIntegrationsArgs";
@@ -19,7 +18,6 @@ import { AggregateIntegrations } from "../../outputs/AggregateIntegrations";
 import { IntegrationsGroupBy } from "../../outputs/IntegrationsGroupBy";
 export declare class IntegrationsCrudResolver {
     aggregateIntegrations(ctx: any, info: GraphQLResolveInfo, args: AggregateIntegrationsArgs): Promise<AggregateIntegrations>;
-    createManyIntegrations(ctx: any, info: GraphQLResolveInfo, args: CreateManyIntegrationsArgs): Promise<AffectedRowsOutput>;
     createOneIntegrations(ctx: any, info: GraphQLResolveInfo, args: CreateOneIntegrationsArgs): Promise<Integrations>;
     deleteManyIntegrations(ctx: any, info: GraphQLResolveInfo, args: DeleteManyIntegrationsArgs): Promise<AffectedRowsOutput>;
     deleteOneIntegrations(ctx: any, info: GraphQLResolveInfo, args: DeleteOneIntegrationsArgs): Promise<Integrations | null>;

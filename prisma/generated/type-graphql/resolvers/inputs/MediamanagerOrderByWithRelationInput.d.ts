@@ -1,0 +1,37 @@
+import { SortOrderInput } from "../inputs/SortOrderInput";
+export declare class MediamanagerOrderByWithRelationInput {
+    id?: "asc" | "desc" | undefined;
+    created_at?: SortOrderInput | undefined;
+    name?: SortOrderInput | undefined;
+    description?: SortOrderInput | undefined;
+    media?: SortOrderInput | undefined;
+    keywords?: SortOrderInput | undefined;
+    tags?: SortOrderInput | undefined;
+    brands?: SortOrderInput | undefined;
+    status?: SortOrderInput | undefined;
+    expiration_date?: SortOrderInput | undefined;
+    copyright?: SortOrderInput | undefined;
+    dimensions?: SortOrderInput | undefined;
+    author?: SortOrderInput | undefined;
+    content_type?: SortOrderInput | undefined;
+    versions?: SortOrderInput | undefined;
+    watermark_name?: SortOrderInput | undefined;
+    watermark_description?: SortOrderInput | undefined;
+    watermark_media?: SortOrderInput | undefined;
+    agreements?: SortOrderInput | undefined;
+    albums?: SortOrderInput | undefined;
+    comment?: SortOrderInput | undefined;
+    workspace?: SortOrderInput | undefined;
+    task_name?: SortOrderInput | undefined;
+    task_description?: SortOrderInput | undefined;
+    task_type?: SortOrderInput | undefined;
+    members?: SortOrderInput | undefined;
+    products?: SortOrderInput | undefined;
+    agreements_agreementsTomediamanager?: SortOrderInput | undefined;
+    brands_brandsTomediamanager?: SortOrderInput | undefined;
+    comments?: SortOrderInput | undefined;
+    customers?: SortOrderInput | undefined;
+    products_mediamanagerToproducts?: SortOrderInput | undefined;
+    tasks?: SortOrderInput | undefined;
+    users?: SortOrderInput | undefined;
+}

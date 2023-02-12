@@ -1,4 +1,3 @@
-import { Prisma } from "@prisma/client";
 import { Content_typeAvgAggregate } from "../outputs/Content_typeAvgAggregate";
 import { Content_typeCountAggregate } from "../outputs/Content_typeCountAggregate";
 import { Content_typeMaxAggregate } from "../outputs/Content_typeMaxAggregate";
@@ -8,8 +7,7 @@ export declare class Content_typeGroupBy {
     id: bigint;
     created_at: Date | null;
     text: string | null;
-    number: Prisma.Decimal | null;
-    json: Prisma.JsonValue | null;
+    number: number | null;
     link: string | null;
     email: string | null;
     uid: string | null;

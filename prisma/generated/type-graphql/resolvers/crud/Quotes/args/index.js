@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneQuotesArgs = exports.UpdateOneQuotesArgs = exports.UpdateManyQuotesArgs = exports.GroupByQuotesArgs = exports.FindUniqueQuotesOrThrowArgs = exports.FindUniqueQuotesArgs = exports.FindManyQuotesArgs = exports.FindFirstQuotesOrThrowArgs = exports.FindFirstQuotesArgs = exports.DeleteOneQuotesArgs = exports.DeleteManyQuotesArgs = exports.CreateOneQuotesArgs = exports.CreateManyQuotesArgs = exports.AggregateQuotesArgs = void 0;
+exports.UpsertOneQuotesArgs = exports.UpdateOneQuotesArgs = exports.UpdateManyQuotesArgs = exports.GroupByQuotesArgs = exports.FindUniqueQuotesOrThrowArgs = exports.FindUniqueQuotesArgs = exports.FindManyQuotesArgs = exports.FindFirstQuotesOrThrowArgs = exports.FindFirstQuotesArgs = exports.DeleteOneQuotesArgs = exports.DeleteManyQuotesArgs = exports.CreateOneQuotesArgs = exports.AggregateQuotesArgs = void 0;
 var AggregateQuotesArgs_1 = require("./AggregateQuotesArgs");
 Object.defineProperty(exports, "AggregateQuotesArgs", { enumerable: true, get: function () { return AggregateQuotesArgs_1.AggregateQuotesArgs; } });
-var CreateManyQuotesArgs_1 = require("./CreateManyQuotesArgs");
-Object.defineProperty(exports, "CreateManyQuotesArgs", { enumerable: true, get: function () { return CreateManyQuotesArgs_1.CreateManyQuotesArgs; } });
 var CreateOneQuotesArgs_1 = require("./CreateOneQuotesArgs");
 Object.defineProperty(exports, "CreateOneQuotesArgs", { enumerable: true, get: function () { return CreateOneQuotesArgs_1.CreateOneQuotesArgs; } });
 var DeleteManyQuotesArgs_1 = require("./DeleteManyQuotesArgs");

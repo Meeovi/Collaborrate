@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneTemplatesArgs = exports.UpdateOneTemplatesArgs = exports.UpdateManyTemplatesArgs = exports.GroupByTemplatesArgs = exports.FindUniqueTemplatesOrThrowArgs = exports.FindUniqueTemplatesArgs = exports.FindManyTemplatesArgs = exports.FindFirstTemplatesOrThrowArgs = exports.FindFirstTemplatesArgs = exports.DeleteOneTemplatesArgs = exports.DeleteManyTemplatesArgs = exports.CreateOneTemplatesArgs = exports.CreateManyTemplatesArgs = exports.AggregateTemplatesArgs = void 0;
+exports.UpsertOneTemplatesArgs = exports.UpdateOneTemplatesArgs = exports.UpdateManyTemplatesArgs = exports.GroupByTemplatesArgs = exports.FindUniqueTemplatesOrThrowArgs = exports.FindUniqueTemplatesArgs = exports.FindManyTemplatesArgs = exports.FindFirstTemplatesOrThrowArgs = exports.FindFirstTemplatesArgs = exports.DeleteOneTemplatesArgs = exports.DeleteManyTemplatesArgs = exports.CreateOneTemplatesArgs = exports.AggregateTemplatesArgs = void 0;
 var AggregateTemplatesArgs_1 = require("./AggregateTemplatesArgs");
 Object.defineProperty(exports, "AggregateTemplatesArgs", { enumerable: true, get: function () { return AggregateTemplatesArgs_1.AggregateTemplatesArgs; } });
-var CreateManyTemplatesArgs_1 = require("./CreateManyTemplatesArgs");
-Object.defineProperty(exports, "CreateManyTemplatesArgs", { enumerable: true, get: function () { return CreateManyTemplatesArgs_1.CreateManyTemplatesArgs; } });
 var CreateOneTemplatesArgs_1 = require("./CreateOneTemplatesArgs");
 Object.defineProperty(exports, "CreateOneTemplatesArgs", { enumerable: true, get: function () { return CreateOneTemplatesArgs_1.CreateOneTemplatesArgs; } });
 var DeleteManyTemplatesArgs_1 = require("./DeleteManyTemplatesArgs");

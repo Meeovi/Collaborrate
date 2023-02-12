@@ -1,5 +1,4 @@
 export { AggregateIntegrationsArgs } from "./AggregateIntegrationsArgs";
-export { CreateManyIntegrationsArgs } from "./CreateManyIntegrationsArgs";
 export { CreateOneIntegrationsArgs } from "./CreateOneIntegrationsArgs";
 export { DeleteManyIntegrationsArgs } from "./DeleteManyIntegrationsArgs";
 export { DeleteOneIntegrationsArgs } from "./DeleteOneIntegrationsArgs";

@@ -26,9 +26,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="item in quickstart" :key="item.name">
-                        <td>{{ item.name }}</td>
-                        <td><a href="``">Run</a>{{ item.calories }}</td>
+                    <tr v-for="item in quickstart" :key="item.title">
+                        <td>{{ item.title }}</td>
+                        <td>{{ item.description }}</td>
+                        <td><a :href="`/${item.title}`">Run</a></td>
                     </tr>
                 </tbody>
             </v-table>
@@ -43,7 +44,5 @@
 </script>
 
 <script setup>
-    const {
-        data: quickstart
-    } = await useAsyncData('quickstart', () => queryContent('/content/quick-start').find())
+    const { data: quickstart } = await useAsyncData('quick-start', () => queryContent('/quick-start/').find())
 </script>

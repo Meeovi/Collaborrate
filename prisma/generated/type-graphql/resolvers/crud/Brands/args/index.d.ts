@@ -1,5 +1,4 @@
 export { AggregateBrandsArgs } from "./AggregateBrandsArgs";
-export { CreateManyBrandsArgs } from "./CreateManyBrandsArgs";
 export { CreateOneBrandsArgs } from "./CreateOneBrandsArgs";
 export { DeleteManyBrandsArgs } from "./DeleteManyBrandsArgs";
 export { DeleteOneBrandsArgs } from "./DeleteOneBrandsArgs";

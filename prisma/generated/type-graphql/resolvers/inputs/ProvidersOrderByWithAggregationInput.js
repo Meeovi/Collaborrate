@@ -8,6 +8,7 @@ const ProvidersCountOrderByAggregateInput_1 = require("../inputs/ProvidersCountO
 const ProvidersMaxOrderByAggregateInput_1 = require("../inputs/ProvidersMaxOrderByAggregateInput");
 const ProvidersMinOrderByAggregateInput_1 = require("../inputs/ProvidersMinOrderByAggregateInput");
 const ProvidersSumOrderByAggregateInput_1 = require("../inputs/ProvidersSumOrderByAggregateInput");
+const SortOrderInput_1 = require("../inputs/SortOrderInput");
 const SortOrder_1 = require("../../enums/SortOrder");
 let ProvidersOrderByWithAggregationInput = class ProvidersOrderByWithAggregationInput {
 };
@@ -18,46 +19,46 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], ProvidersOrderByWithAggregationInput.prototype, "id", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], ProvidersOrderByWithAggregationInput.prototype, "created_at", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], ProvidersOrderByWithAggregationInput.prototype, "client_id", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], ProvidersOrderByWithAggregationInput.prototype, "client_secret", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], ProvidersOrderByWithAggregationInput.prototype, "host_uri", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], ProvidersOrderByWithAggregationInput.prototype, "redirect_url", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], ProvidersOrderByWithAggregationInput.prototype, "redirect_url_app", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], ProvidersOrderByWithAggregationInput.prototype, "icon", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
@@ -66,10 +67,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], ProvidersOrderByWithAggregationInput.prototype, "name", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], ProvidersOrderByWithAggregationInput.prototype, "active", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => ProvidersCountOrderByAggregateInput_1.ProvidersCountOrderByAggregateInput, {

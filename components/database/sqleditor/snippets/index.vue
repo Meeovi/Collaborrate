@@ -25,9 +25,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="item in snippets" :key="item.name">
-                        <td>{{ item.name }}</td>
-                        <td><a href="``">Run</a>{{ item.calories }}</td>
+                    <tr v-for="item in snippets" :key="item.title">
+                        <td>{{ item.title }}</td>
+                        <td>{{ item.description }}</td>
+                        <td><a :href="`/${item.title}`">Run</a></td>
                     </tr>
                 </tbody>
             </v-table>
@@ -42,7 +43,5 @@
 </script>
 
 <script setup>
-    const {
-        data: snippets
-    } = await useAsyncData('snippets', () => queryContent('/content/scripts').find())
+    const { data: snippets } = await useAsyncData('snippets', () => queryContent('/snippets/').find())
 </script>

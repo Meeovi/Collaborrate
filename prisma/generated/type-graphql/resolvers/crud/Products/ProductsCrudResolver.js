@@ -4,7 +4,6 @@ exports.ProductsCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateProductsArgs_1 = require("./args/AggregateProductsArgs");
-const CreateManyProductsArgs_1 = require("./args/CreateManyProductsArgs");
 const CreateOneProductsArgs_1 = require("./args/CreateOneProductsArgs");
 const DeleteManyProductsArgs_1 = require("./args/DeleteManyProductsArgs");
 const DeleteOneProductsArgs_1 = require("./args/DeleteOneProductsArgs");
@@ -27,13 +26,6 @@ let ProductsCrudResolver = class ProductsCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).products.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyProducts(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).products.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneProducts(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateProductsArgs_1.AggregateProductsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ProductsCrudResolver.prototype, "aggregateProducts", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyProductsArgs_1.CreateManyProductsArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], ProductsCrudResolver.prototype, "createManyProducts", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Products_1.Products, {
         nullable: false

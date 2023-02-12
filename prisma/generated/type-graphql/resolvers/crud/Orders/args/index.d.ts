@@ -1,5 +1,4 @@
 export { AggregateOrdersArgs } from "./AggregateOrdersArgs";
-export { CreateManyOrdersArgs } from "./CreateManyOrdersArgs";
 export { CreateOneOrdersArgs } from "./CreateOneOrdersArgs";
 export { DeleteManyOrdersArgs } from "./DeleteManyOrdersArgs";
 export { DeleteOneOrdersArgs } from "./DeleteOneOrdersArgs";

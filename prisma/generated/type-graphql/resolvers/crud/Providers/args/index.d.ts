@@ -1,5 +1,4 @@
 export { AggregateProvidersArgs } from "./AggregateProvidersArgs";
-export { CreateManyProvidersArgs } from "./CreateManyProvidersArgs";
 export { CreateOneProvidersArgs } from "./CreateOneProvidersArgs";
 export { DeleteManyProvidersArgs } from "./DeleteManyProvidersArgs";
 export { DeleteOneProvidersArgs } from "./DeleteOneProvidersArgs";

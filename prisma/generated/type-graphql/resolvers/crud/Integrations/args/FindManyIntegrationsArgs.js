@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindManyIntegrationsArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const IntegrationsOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/IntegrationsOrderByWithRelationAndSearchRelevanceInput");
+const IntegrationsOrderByWithRelationInput_1 = require("../../../inputs/IntegrationsOrderByWithRelationInput");
 const IntegrationsWhereInput_1 = require("../../../inputs/IntegrationsWhereInput");
 const IntegrationsWhereUniqueInput_1 = require("../../../inputs/IntegrationsWhereUniqueInput");
 const IntegrationsScalarFieldEnum_1 = require("../../../../enums/IntegrationsScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", IntegrationsWhereInput_1.IntegrationsWhereInput)
 ], FindManyIntegrationsArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [IntegrationsOrderByWithRelationAndSearchRelevanceInput_1.IntegrationsOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [IntegrationsOrderByWithRelationInput_1.IntegrationsOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

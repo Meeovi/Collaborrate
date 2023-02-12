@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AggregateReviewsArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const ReviewsOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/ReviewsOrderByWithRelationAndSearchRelevanceInput");
+const ReviewsOrderByWithRelationInput_1 = require("../../../inputs/ReviewsOrderByWithRelationInput");
 const ReviewsWhereInput_1 = require("../../../inputs/ReviewsWhereInput");
 const ReviewsWhereUniqueInput_1 = require("../../../inputs/ReviewsWhereUniqueInput");
 let AggregateReviewsArgs = class AggregateReviewsArgs {
@@ -15,7 +15,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", ReviewsWhereInput_1.ReviewsWhereInput)
 ], AggregateReviewsArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [ReviewsOrderByWithRelationAndSearchRelevanceInput_1.ReviewsOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [ReviewsOrderByWithRelationInput_1.ReviewsOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

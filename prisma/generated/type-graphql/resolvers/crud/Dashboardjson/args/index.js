@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneDashboardjsonArgs = exports.UpdateOneDashboardjsonArgs = exports.UpdateManyDashboardjsonArgs = exports.GroupByDashboardjsonArgs = exports.FindUniqueDashboardjsonOrThrowArgs = exports.FindUniqueDashboardjsonArgs = exports.FindManyDashboardjsonArgs = exports.FindFirstDashboardjsonOrThrowArgs = exports.FindFirstDashboardjsonArgs = exports.DeleteOneDashboardjsonArgs = exports.DeleteManyDashboardjsonArgs = exports.CreateOneDashboardjsonArgs = exports.CreateManyDashboardjsonArgs = exports.AggregateDashboardjsonArgs = void 0;
+exports.UpsertOneDashboardjsonArgs = exports.UpdateOneDashboardjsonArgs = exports.UpdateManyDashboardjsonArgs = exports.GroupByDashboardjsonArgs = exports.FindUniqueDashboardjsonOrThrowArgs = exports.FindUniqueDashboardjsonArgs = exports.FindManyDashboardjsonArgs = exports.FindFirstDashboardjsonOrThrowArgs = exports.FindFirstDashboardjsonArgs = exports.DeleteOneDashboardjsonArgs = exports.DeleteManyDashboardjsonArgs = exports.CreateOneDashboardjsonArgs = exports.AggregateDashboardjsonArgs = void 0;
 var AggregateDashboardjsonArgs_1 = require("./AggregateDashboardjsonArgs");
 Object.defineProperty(exports, "AggregateDashboardjsonArgs", { enumerable: true, get: function () { return AggregateDashboardjsonArgs_1.AggregateDashboardjsonArgs; } });
-var CreateManyDashboardjsonArgs_1 = require("./CreateManyDashboardjsonArgs");
-Object.defineProperty(exports, "CreateManyDashboardjsonArgs", { enumerable: true, get: function () { return CreateManyDashboardjsonArgs_1.CreateManyDashboardjsonArgs; } });
 var CreateOneDashboardjsonArgs_1 = require("./CreateOneDashboardjsonArgs");
 Object.defineProperty(exports, "CreateOneDashboardjsonArgs", { enumerable: true, get: function () { return CreateOneDashboardjsonArgs_1.CreateOneDashboardjsonArgs; } });
 var DeleteManyDashboardjsonArgs_1 = require("./DeleteManyDashboardjsonArgs");

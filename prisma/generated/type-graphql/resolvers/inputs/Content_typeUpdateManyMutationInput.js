@@ -3,12 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Content_typeUpdateManyMutationInput = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const GraphQLScalars = tslib_1.__importStar(require("graphql-scalars"));
-const client_1 = require("@prisma/client");
 const BigIntFieldUpdateOperationsInput_1 = require("../inputs/BigIntFieldUpdateOperationsInput");
 const NullableBoolFieldUpdateOperationsInput_1 = require("../inputs/NullableBoolFieldUpdateOperationsInput");
 const NullableDateTimeFieldUpdateOperationsInput_1 = require("../inputs/NullableDateTimeFieldUpdateOperationsInput");
-const NullableDecimalFieldUpdateOperationsInput_1 = require("../inputs/NullableDecimalFieldUpdateOperationsInput");
+const NullableIntFieldUpdateOperationsInput_1 = require("../inputs/NullableIntFieldUpdateOperationsInput");
 const NullableStringFieldUpdateOperationsInput_1 = require("../inputs/NullableStringFieldUpdateOperationsInput");
 let Content_typeUpdateManyMutationInput = class Content_typeUpdateManyMutationInput {
 };
@@ -31,17 +29,11 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
 ], Content_typeUpdateManyMutationInput.prototype, "text", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => NullableDecimalFieldUpdateOperationsInput_1.NullableDecimalFieldUpdateOperationsInput, {
+    TypeGraphQL.Field(_type => NullableIntFieldUpdateOperationsInput_1.NullableIntFieldUpdateOperationsInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", NullableDecimalFieldUpdateOperationsInput_1.NullableDecimalFieldUpdateOperationsInput)
+    tslib_1.__metadata("design:type", NullableIntFieldUpdateOperationsInput_1.NullableIntFieldUpdateOperationsInput)
 ], Content_typeUpdateManyMutationInput.prototype, "number", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Object)
-], Content_typeUpdateManyMutationInput.prototype, "json", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput, {
         nullable: true

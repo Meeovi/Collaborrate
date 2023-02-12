@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindFirstSegmentsOrThrowArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const SegmentsOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/SegmentsOrderByWithRelationAndSearchRelevanceInput");
+const SegmentsOrderByWithRelationInput_1 = require("../../../inputs/SegmentsOrderByWithRelationInput");
 const SegmentsWhereInput_1 = require("../../../inputs/SegmentsWhereInput");
 const SegmentsWhereUniqueInput_1 = require("../../../inputs/SegmentsWhereUniqueInput");
 const SegmentsScalarFieldEnum_1 = require("../../../../enums/SegmentsScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", SegmentsWhereInput_1.SegmentsWhereInput)
 ], FindFirstSegmentsOrThrowArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [SegmentsOrderByWithRelationAndSearchRelevanceInput_1.SegmentsOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [SegmentsOrderByWithRelationInput_1.SegmentsOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

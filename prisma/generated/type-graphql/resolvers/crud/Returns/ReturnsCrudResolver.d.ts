@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateReturnsArgs } from "./args/AggregateReturnsArgs";
-import { CreateManyReturnsArgs } from "./args/CreateManyReturnsArgs";
 import { CreateOneReturnsArgs } from "./args/CreateOneReturnsArgs";
 import { DeleteManyReturnsArgs } from "./args/DeleteManyReturnsArgs";
 import { DeleteOneReturnsArgs } from "./args/DeleteOneReturnsArgs";
@@ -19,7 +18,6 @@ import { AggregateReturns } from "../../outputs/AggregateReturns";
 import { ReturnsGroupBy } from "../../outputs/ReturnsGroupBy";
 export declare class ReturnsCrudResolver {
     aggregateReturns(ctx: any, info: GraphQLResolveInfo, args: AggregateReturnsArgs): Promise<AggregateReturns>;
-    createManyReturns(ctx: any, info: GraphQLResolveInfo, args: CreateManyReturnsArgs): Promise<AffectedRowsOutput>;
     createOneReturns(ctx: any, info: GraphQLResolveInfo, args: CreateOneReturnsArgs): Promise<Returns>;
     deleteManyReturns(ctx: any, info: GraphQLResolveInfo, args: DeleteManyReturnsArgs): Promise<AffectedRowsOutput>;
     deleteOneReturns(ctx: any, info: GraphQLResolveInfo, args: DeleteOneReturnsArgs): Promise<Returns | null>;

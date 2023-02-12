@@ -5,6 +5,7 @@ export declare class Upload_fileMaxOrderByAggregateInput {
     caption?: "asc" | "desc" | undefined;
     width?: "asc" | "desc" | undefined;
     height?: "asc" | "desc" | undefined;
+    formats?: "asc" | "desc" | undefined;
     hash?: "asc" | "desc" | undefined;
     ext?: "asc" | "desc" | undefined;
     mime?: "asc" | "desc" | undefined;
@@ -12,6 +13,7 @@ export declare class Upload_fileMaxOrderByAggregateInput {
     url?: "asc" | "desc" | undefined;
     previewUrl?: "asc" | "desc" | undefined;
     provider?: "asc" | "desc" | undefined;
+    provider_metadata?: "asc" | "desc" | undefined;
     created_by?: "asc" | "desc" | undefined;
     updated_by?: "asc" | "desc" | undefined;
     created_at?: "asc" | "desc" | undefined;

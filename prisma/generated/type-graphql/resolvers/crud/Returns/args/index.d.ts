@@ -1,5 +1,4 @@
 export { AggregateReturnsArgs } from "./AggregateReturnsArgs";
-export { CreateManyReturnsArgs } from "./CreateManyReturnsArgs";
 export { CreateOneReturnsArgs } from "./CreateOneReturnsArgs";
 export { DeleteManyReturnsArgs } from "./DeleteManyReturnsArgs";
 export { DeleteOneReturnsArgs } from "./DeleteOneReturnsArgs";

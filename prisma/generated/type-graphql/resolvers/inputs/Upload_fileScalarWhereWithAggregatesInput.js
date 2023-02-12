@@ -8,7 +8,6 @@ const DateTimeNullableWithAggregatesFilter_1 = require("../inputs/DateTimeNullab
 const DecimalWithAggregatesFilter_1 = require("../inputs/DecimalWithAggregatesFilter");
 const IntNullableWithAggregatesFilter_1 = require("../inputs/IntNullableWithAggregatesFilter");
 const IntWithAggregatesFilter_1 = require("../inputs/IntWithAggregatesFilter");
-const JsonNullableWithAggregatesFilter_1 = require("../inputs/JsonNullableWithAggregatesFilter");
 const StringNullableWithAggregatesFilter_1 = require("../inputs/StringNullableWithAggregatesFilter");
 const StringWithAggregatesFilter_1 = require("../inputs/StringWithAggregatesFilter");
 let Upload_fileScalarWhereWithAggregatesInput = Upload_fileScalarWhereWithAggregatesInput_1 = class Upload_fileScalarWhereWithAggregatesInput {
@@ -68,10 +67,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", IntNullableWithAggregatesFilter_1.IntNullableWithAggregatesFilter)
 ], Upload_fileScalarWhereWithAggregatesInput.prototype, "height", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => JsonNullableWithAggregatesFilter_1.JsonNullableWithAggregatesFilter, {
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", JsonNullableWithAggregatesFilter_1.JsonNullableWithAggregatesFilter)
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
 ], Upload_fileScalarWhereWithAggregatesInput.prototype, "formats", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => StringWithAggregatesFilter_1.StringWithAggregatesFilter, {
@@ -116,10 +115,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringWithAggregatesFilter_1.StringWithAggregatesFilter)
 ], Upload_fileScalarWhereWithAggregatesInput.prototype, "provider", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => JsonNullableWithAggregatesFilter_1.JsonNullableWithAggregatesFilter, {
+    TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", JsonNullableWithAggregatesFilter_1.JsonNullableWithAggregatesFilter)
+    tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
 ], Upload_fileScalarWhereWithAggregatesInput.prototype, "provider_metadata", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => IntNullableWithAggregatesFilter_1.IntNullableWithAggregatesFilter, {

@@ -3,7 +3,6 @@ export declare class Content_typeCountAggregate {
     created_at: number;
     text: number;
     number: number;
-    json: number;
     link: number;
     email: number;
     uid: number;

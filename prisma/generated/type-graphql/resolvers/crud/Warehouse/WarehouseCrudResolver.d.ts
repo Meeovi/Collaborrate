@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateWarehouseArgs } from "./args/AggregateWarehouseArgs";
-import { CreateManyWarehouseArgs } from "./args/CreateManyWarehouseArgs";
 import { CreateOneWarehouseArgs } from "./args/CreateOneWarehouseArgs";
 import { DeleteManyWarehouseArgs } from "./args/DeleteManyWarehouseArgs";
 import { DeleteOneWarehouseArgs } from "./args/DeleteOneWarehouseArgs";
@@ -19,7 +18,6 @@ import { AggregateWarehouse } from "../../outputs/AggregateWarehouse";
 import { WarehouseGroupBy } from "../../outputs/WarehouseGroupBy";
 export declare class WarehouseCrudResolver {
     aggregateWarehouse(ctx: any, info: GraphQLResolveInfo, args: AggregateWarehouseArgs): Promise<AggregateWarehouse>;
-    createManyWarehouse(ctx: any, info: GraphQLResolveInfo, args: CreateManyWarehouseArgs): Promise<AffectedRowsOutput>;
     createOneWarehouse(ctx: any, info: GraphQLResolveInfo, args: CreateOneWarehouseArgs): Promise<Warehouse>;
     deleteManyWarehouse(ctx: any, info: GraphQLResolveInfo, args: DeleteManyWarehouseArgs): Promise<AffectedRowsOutput>;
     deleteOneWarehouse(ctx: any, info: GraphQLResolveInfo, args: DeleteOneWarehouseArgs): Promise<Warehouse | null>;

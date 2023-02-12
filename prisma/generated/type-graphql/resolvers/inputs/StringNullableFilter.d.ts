@@ -10,7 +10,5 @@ export declare class StringNullableFilter {
     contains?: string | undefined;
     startsWith?: string | undefined;
     endsWith?: string | undefined;
-    search?: string | undefined;
-    mode?: "default" | "insensitive" | undefined;
     not?: NestedStringNullableFilter | undefined;
 }

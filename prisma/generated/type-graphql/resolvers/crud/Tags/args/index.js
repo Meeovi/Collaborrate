@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneTagsArgs = exports.UpdateOneTagsArgs = exports.UpdateManyTagsArgs = exports.GroupByTagsArgs = exports.FindUniqueTagsOrThrowArgs = exports.FindUniqueTagsArgs = exports.FindManyTagsArgs = exports.FindFirstTagsOrThrowArgs = exports.FindFirstTagsArgs = exports.DeleteOneTagsArgs = exports.DeleteManyTagsArgs = exports.CreateOneTagsArgs = exports.CreateManyTagsArgs = exports.AggregateTagsArgs = void 0;
+exports.UpsertOneTagsArgs = exports.UpdateOneTagsArgs = exports.UpdateManyTagsArgs = exports.GroupByTagsArgs = exports.FindUniqueTagsOrThrowArgs = exports.FindUniqueTagsArgs = exports.FindManyTagsArgs = exports.FindFirstTagsOrThrowArgs = exports.FindFirstTagsArgs = exports.DeleteOneTagsArgs = exports.DeleteManyTagsArgs = exports.CreateOneTagsArgs = exports.AggregateTagsArgs = void 0;
 var AggregateTagsArgs_1 = require("./AggregateTagsArgs");
 Object.defineProperty(exports, "AggregateTagsArgs", { enumerable: true, get: function () { return AggregateTagsArgs_1.AggregateTagsArgs; } });
-var CreateManyTagsArgs_1 = require("./CreateManyTagsArgs");
-Object.defineProperty(exports, "CreateManyTagsArgs", { enumerable: true, get: function () { return CreateManyTagsArgs_1.CreateManyTagsArgs; } });
 var CreateOneTagsArgs_1 = require("./CreateOneTagsArgs");
 Object.defineProperty(exports, "CreateOneTagsArgs", { enumerable: true, get: function () { return CreateOneTagsArgs_1.CreateOneTagsArgs; } });
 var DeleteManyTagsArgs_1 = require("./DeleteManyTagsArgs");

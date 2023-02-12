@@ -11,7 +11,7 @@ export declare class Upload_fileGroupBy {
     caption: string | null;
     width: number | null;
     height: number | null;
-    formats: Prisma.JsonValue | null;
+    formats: string | null;
     hash: string;
     ext: string | null;
     mime: string;
@@ -19,7 +19,7 @@ export declare class Upload_fileGroupBy {
     url: string;
     previewUrl: string | null;
     provider: string;
-    provider_metadata: Prisma.JsonValue | null;
+    provider_metadata: string | null;
     created_by: number | null;
     updated_by: number | null;
     created_at: Date | null;

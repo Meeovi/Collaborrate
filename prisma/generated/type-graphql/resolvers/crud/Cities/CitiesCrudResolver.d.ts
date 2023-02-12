@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateCitiesArgs } from "./args/AggregateCitiesArgs";
-import { CreateManyCitiesArgs } from "./args/CreateManyCitiesArgs";
 import { CreateOneCitiesArgs } from "./args/CreateOneCitiesArgs";
 import { DeleteManyCitiesArgs } from "./args/DeleteManyCitiesArgs";
 import { DeleteOneCitiesArgs } from "./args/DeleteOneCitiesArgs";
@@ -19,7 +18,6 @@ import { AggregateCities } from "../../outputs/AggregateCities";
 import { CitiesGroupBy } from "../../outputs/CitiesGroupBy";
 export declare class CitiesCrudResolver {
     aggregateCities(ctx: any, info: GraphQLResolveInfo, args: AggregateCitiesArgs): Promise<AggregateCities>;
-    createManyCities(ctx: any, info: GraphQLResolveInfo, args: CreateManyCitiesArgs): Promise<AffectedRowsOutput>;
     createOneCities(ctx: any, info: GraphQLResolveInfo, args: CreateOneCitiesArgs): Promise<Cities>;
     deleteManyCities(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCitiesArgs): Promise<AffectedRowsOutput>;
     deleteOneCities(ctx: any, info: GraphQLResolveInfo, args: DeleteOneCitiesArgs): Promise<Cities | null>;

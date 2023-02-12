@@ -2,7 +2,6 @@ import { DateTimeNullableFilter } from "../inputs/DateTimeNullableFilter";
 import { DecimalFilter } from "../inputs/DecimalFilter";
 import { IntFilter } from "../inputs/IntFilter";
 import { IntNullableFilter } from "../inputs/IntNullableFilter";
-import { JsonNullableFilter } from "../inputs/JsonNullableFilter";
 import { StringFilter } from "../inputs/StringFilter";
 import { StringNullableFilter } from "../inputs/StringNullableFilter";
 export declare class Upload_fileWhereInput {
@@ -15,7 +14,7 @@ export declare class Upload_fileWhereInput {
     caption?: StringNullableFilter | undefined;
     width?: IntNullableFilter | undefined;
     height?: IntNullableFilter | undefined;
-    formats?: JsonNullableFilter | undefined;
+    formats?: StringNullableFilter | undefined;
     hash?: StringFilter | undefined;
     ext?: StringNullableFilter | undefined;
     mime?: StringFilter | undefined;
@@ -23,7 +22,7 @@ export declare class Upload_fileWhereInput {
     url?: StringFilter | undefined;
     previewUrl?: StringNullableFilter | undefined;
     provider?: StringFilter | undefined;
-    provider_metadata?: JsonNullableFilter | undefined;
+    provider_metadata?: StringNullableFilter | undefined;
     created_by?: IntNullableFilter | undefined;
     updated_by?: IntNullableFilter | undefined;
     created_at?: DateTimeNullableFilter | undefined;

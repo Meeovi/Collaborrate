@@ -1,6 +1,1 @@
----
-title: 'Show extensions'
-description: 'Get a list of extensions in your database and status.'
----
-
-<!-- Content of the page -->
+{"parsed":{"_path":"/scripts/showextensions","_dir":"scripts","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"Show extensions","description":"Get a list of extensions in your database and status.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:scripts:showExtensions.md","_source":"content","_file":"scripts/showExtensions.md","_extension":"md"},"hash":"OGImJPUMnv"}

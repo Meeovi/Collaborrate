@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateReviewsArgs } from "./args/AggregateReviewsArgs";
-import { CreateManyReviewsArgs } from "./args/CreateManyReviewsArgs";
 import { CreateOneReviewsArgs } from "./args/CreateOneReviewsArgs";
 import { DeleteManyReviewsArgs } from "./args/DeleteManyReviewsArgs";
 import { DeleteOneReviewsArgs } from "./args/DeleteOneReviewsArgs";
@@ -19,7 +18,6 @@ import { AggregateReviews } from "../../outputs/AggregateReviews";
 import { ReviewsGroupBy } from "../../outputs/ReviewsGroupBy";
 export declare class ReviewsCrudResolver {
     aggregateReviews(ctx: any, info: GraphQLResolveInfo, args: AggregateReviewsArgs): Promise<AggregateReviews>;
-    createManyReviews(ctx: any, info: GraphQLResolveInfo, args: CreateManyReviewsArgs): Promise<AffectedRowsOutput>;
     createOneReviews(ctx: any, info: GraphQLResolveInfo, args: CreateOneReviewsArgs): Promise<Reviews>;
     deleteManyReviews(ctx: any, info: GraphQLResolveInfo, args: DeleteManyReviewsArgs): Promise<AffectedRowsOutput>;
     deleteOneReviews(ctx: any, info: GraphQLResolveInfo, args: DeleteOneReviewsArgs): Promise<Reviews | null>;

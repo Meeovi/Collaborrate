@@ -1,9 +1,9 @@
-import { FullfillmentsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/FullfillmentsOrderByWithRelationAndSearchRelevanceInput";
+import { FullfillmentsOrderByWithRelationInput } from "../../../inputs/FullfillmentsOrderByWithRelationInput";
 import { FullfillmentsWhereInput } from "../../../inputs/FullfillmentsWhereInput";
 import { FullfillmentsWhereUniqueInput } from "../../../inputs/FullfillmentsWhereUniqueInput";
 export declare class FindFirstFullfillmentsOrThrowArgs {
     where?: FullfillmentsWhereInput | undefined;
-    orderBy?: FullfillmentsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: FullfillmentsOrderByWithRelationInput[] | undefined;
     cursor?: FullfillmentsWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

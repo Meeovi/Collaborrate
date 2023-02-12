@@ -1,5 +1,4 @@
 export { AggregateVendorsArgs } from "./AggregateVendorsArgs";
-export { CreateManyVendorsArgs } from "./CreateManyVendorsArgs";
 export { CreateOneVendorsArgs } from "./CreateOneVendorsArgs";
 export { DeleteManyVendorsArgs } from "./DeleteManyVendorsArgs";
 export { DeleteOneVendorsArgs } from "./DeleteOneVendorsArgs";

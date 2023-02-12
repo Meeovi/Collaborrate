@@ -4,7 +4,6 @@ exports.Product_typesCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateProduct_typesArgs_1 = require("./args/AggregateProduct_typesArgs");
-const CreateManyProduct_typesArgs_1 = require("./args/CreateManyProduct_typesArgs");
 const CreateOneProduct_typesArgs_1 = require("./args/CreateOneProduct_typesArgs");
 const DeleteManyProduct_typesArgs_1 = require("./args/DeleteManyProduct_typesArgs");
 const DeleteOneProduct_typesArgs_1 = require("./args/DeleteOneProduct_typesArgs");
@@ -27,13 +26,6 @@ let Product_typesCrudResolver = class Product_typesCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).product_types.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyProduct_types(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).product_types.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneProduct_types(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateProduct_typesArgs_1.AggregateProduct_typesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], Product_typesCrudResolver.prototype, "aggregateProduct_types", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyProduct_typesArgs_1.CreateManyProduct_typesArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], Product_typesCrudResolver.prototype, "createManyProduct_types", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Product_types_1.Product_types, {
         nullable: false

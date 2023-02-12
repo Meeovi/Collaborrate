@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneWishlistsArgs = exports.UpdateOneWishlistsArgs = exports.UpdateManyWishlistsArgs = exports.GroupByWishlistsArgs = exports.FindUniqueWishlistsOrThrowArgs = exports.FindUniqueWishlistsArgs = exports.FindManyWishlistsArgs = exports.FindFirstWishlistsOrThrowArgs = exports.FindFirstWishlistsArgs = exports.DeleteOneWishlistsArgs = exports.DeleteManyWishlistsArgs = exports.CreateOneWishlistsArgs = exports.CreateManyWishlistsArgs = exports.AggregateWishlistsArgs = void 0;
+exports.UpsertOneWishlistsArgs = exports.UpdateOneWishlistsArgs = exports.UpdateManyWishlistsArgs = exports.GroupByWishlistsArgs = exports.FindUniqueWishlistsOrThrowArgs = exports.FindUniqueWishlistsArgs = exports.FindManyWishlistsArgs = exports.FindFirstWishlistsOrThrowArgs = exports.FindFirstWishlistsArgs = exports.DeleteOneWishlistsArgs = exports.DeleteManyWishlistsArgs = exports.CreateOneWishlistsArgs = exports.AggregateWishlistsArgs = void 0;
 var AggregateWishlistsArgs_1 = require("./AggregateWishlistsArgs");
 Object.defineProperty(exports, "AggregateWishlistsArgs", { enumerable: true, get: function () { return AggregateWishlistsArgs_1.AggregateWishlistsArgs; } });
-var CreateManyWishlistsArgs_1 = require("./CreateManyWishlistsArgs");
-Object.defineProperty(exports, "CreateManyWishlistsArgs", { enumerable: true, get: function () { return CreateManyWishlistsArgs_1.CreateManyWishlistsArgs; } });
 var CreateOneWishlistsArgs_1 = require("./CreateOneWishlistsArgs");
 Object.defineProperty(exports, "CreateOneWishlistsArgs", { enumerable: true, get: function () { return CreateOneWishlistsArgs_1.CreateOneWishlistsArgs; } });
 var DeleteManyWishlistsArgs_1 = require("./DeleteManyWishlistsArgs");

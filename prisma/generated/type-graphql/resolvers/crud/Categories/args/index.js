@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneCategoriesArgs = exports.UpdateOneCategoriesArgs = exports.UpdateManyCategoriesArgs = exports.GroupByCategoriesArgs = exports.FindUniqueCategoriesOrThrowArgs = exports.FindUniqueCategoriesArgs = exports.FindManyCategoriesArgs = exports.FindFirstCategoriesOrThrowArgs = exports.FindFirstCategoriesArgs = exports.DeleteOneCategoriesArgs = exports.DeleteManyCategoriesArgs = exports.CreateOneCategoriesArgs = exports.CreateManyCategoriesArgs = exports.AggregateCategoriesArgs = void 0;
+exports.UpsertOneCategoriesArgs = exports.UpdateOneCategoriesArgs = exports.UpdateManyCategoriesArgs = exports.GroupByCategoriesArgs = exports.FindUniqueCategoriesOrThrowArgs = exports.FindUniqueCategoriesArgs = exports.FindManyCategoriesArgs = exports.FindFirstCategoriesOrThrowArgs = exports.FindFirstCategoriesArgs = exports.DeleteOneCategoriesArgs = exports.DeleteManyCategoriesArgs = exports.CreateOneCategoriesArgs = exports.AggregateCategoriesArgs = void 0;
 var AggregateCategoriesArgs_1 = require("./AggregateCategoriesArgs");
 Object.defineProperty(exports, "AggregateCategoriesArgs", { enumerable: true, get: function () { return AggregateCategoriesArgs_1.AggregateCategoriesArgs; } });
-var CreateManyCategoriesArgs_1 = require("./CreateManyCategoriesArgs");
-Object.defineProperty(exports, "CreateManyCategoriesArgs", { enumerable: true, get: function () { return CreateManyCategoriesArgs_1.CreateManyCategoriesArgs; } });
 var CreateOneCategoriesArgs_1 = require("./CreateOneCategoriesArgs");
 Object.defineProperty(exports, "CreateOneCategoriesArgs", { enumerable: true, get: function () { return CreateOneCategoriesArgs_1.CreateOneCategoriesArgs; } });
 var DeleteManyCategoriesArgs_1 = require("./DeleteManyCategoriesArgs");

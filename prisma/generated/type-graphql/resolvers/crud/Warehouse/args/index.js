@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneWarehouseArgs = exports.UpdateOneWarehouseArgs = exports.UpdateManyWarehouseArgs = exports.GroupByWarehouseArgs = exports.FindUniqueWarehouseOrThrowArgs = exports.FindUniqueWarehouseArgs = exports.FindManyWarehouseArgs = exports.FindFirstWarehouseOrThrowArgs = exports.FindFirstWarehouseArgs = exports.DeleteOneWarehouseArgs = exports.DeleteManyWarehouseArgs = exports.CreateOneWarehouseArgs = exports.CreateManyWarehouseArgs = exports.AggregateWarehouseArgs = void 0;
+exports.UpsertOneWarehouseArgs = exports.UpdateOneWarehouseArgs = exports.UpdateManyWarehouseArgs = exports.GroupByWarehouseArgs = exports.FindUniqueWarehouseOrThrowArgs = exports.FindUniqueWarehouseArgs = exports.FindManyWarehouseArgs = exports.FindFirstWarehouseOrThrowArgs = exports.FindFirstWarehouseArgs = exports.DeleteOneWarehouseArgs = exports.DeleteManyWarehouseArgs = exports.CreateOneWarehouseArgs = exports.AggregateWarehouseArgs = void 0;
 var AggregateWarehouseArgs_1 = require("./AggregateWarehouseArgs");
 Object.defineProperty(exports, "AggregateWarehouseArgs", { enumerable: true, get: function () { return AggregateWarehouseArgs_1.AggregateWarehouseArgs; } });
-var CreateManyWarehouseArgs_1 = require("./CreateManyWarehouseArgs");
-Object.defineProperty(exports, "CreateManyWarehouseArgs", { enumerable: true, get: function () { return CreateManyWarehouseArgs_1.CreateManyWarehouseArgs; } });
 var CreateOneWarehouseArgs_1 = require("./CreateOneWarehouseArgs");
 Object.defineProperty(exports, "CreateOneWarehouseArgs", { enumerable: true, get: function () { return CreateOneWarehouseArgs_1.CreateOneWarehouseArgs; } });
 var DeleteManyWarehouseArgs_1 = require("./DeleteManyWarehouseArgs");

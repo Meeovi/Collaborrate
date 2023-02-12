@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AggregateDashboardslistArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const DashboardslistOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/DashboardslistOrderByWithRelationAndSearchRelevanceInput");
+const DashboardslistOrderByWithRelationInput_1 = require("../../../inputs/DashboardslistOrderByWithRelationInput");
 const DashboardslistWhereInput_1 = require("../../../inputs/DashboardslistWhereInput");
 const DashboardslistWhereUniqueInput_1 = require("../../../inputs/DashboardslistWhereUniqueInput");
 let AggregateDashboardslistArgs = class AggregateDashboardslistArgs {
@@ -15,7 +15,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", DashboardslistWhereInput_1.DashboardslistWhereInput)
 ], AggregateDashboardslistArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [DashboardslistOrderByWithRelationAndSearchRelevanceInput_1.DashboardslistOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [DashboardslistOrderByWithRelationInput_1.DashboardslistOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

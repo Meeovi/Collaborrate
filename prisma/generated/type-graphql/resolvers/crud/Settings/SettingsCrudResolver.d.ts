@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateSettingsArgs } from "./args/AggregateSettingsArgs";
-import { CreateManySettingsArgs } from "./args/CreateManySettingsArgs";
 import { CreateOneSettingsArgs } from "./args/CreateOneSettingsArgs";
 import { DeleteManySettingsArgs } from "./args/DeleteManySettingsArgs";
 import { DeleteOneSettingsArgs } from "./args/DeleteOneSettingsArgs";
@@ -19,7 +18,6 @@ import { AggregateSettings } from "../../outputs/AggregateSettings";
 import { SettingsGroupBy } from "../../outputs/SettingsGroupBy";
 export declare class SettingsCrudResolver {
     aggregateSettings(ctx: any, info: GraphQLResolveInfo, args: AggregateSettingsArgs): Promise<AggregateSettings>;
-    createManySettings(ctx: any, info: GraphQLResolveInfo, args: CreateManySettingsArgs): Promise<AffectedRowsOutput>;
     createOneSettings(ctx: any, info: GraphQLResolveInfo, args: CreateOneSettingsArgs): Promise<Settings>;
     deleteManySettings(ctx: any, info: GraphQLResolveInfo, args: DeleteManySettingsArgs): Promise<AffectedRowsOutput>;
     deleteOneSettings(ctx: any, info: GraphQLResolveInfo, args: DeleteOneSettingsArgs): Promise<Settings | null>;

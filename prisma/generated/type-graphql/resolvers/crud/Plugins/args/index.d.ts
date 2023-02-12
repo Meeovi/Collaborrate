@@ -1,5 +1,4 @@
 export { AggregatePluginsArgs } from "./AggregatePluginsArgs";
-export { CreateManyPluginsArgs } from "./CreateManyPluginsArgs";
 export { CreateOnePluginsArgs } from "./CreateOnePluginsArgs";
 export { DeleteManyPluginsArgs } from "./DeleteManyPluginsArgs";
 export { DeleteOnePluginsArgs } from "./DeleteOnePluginsArgs";

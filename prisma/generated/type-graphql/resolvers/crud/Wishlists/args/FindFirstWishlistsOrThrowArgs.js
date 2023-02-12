@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindFirstWishlistsOrThrowArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const WishlistsOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/WishlistsOrderByWithRelationAndSearchRelevanceInput");
+const WishlistsOrderByWithRelationInput_1 = require("../../../inputs/WishlistsOrderByWithRelationInput");
 const WishlistsWhereInput_1 = require("../../../inputs/WishlistsWhereInput");
 const WishlistsWhereUniqueInput_1 = require("../../../inputs/WishlistsWhereUniqueInput");
 const WishlistsScalarFieldEnum_1 = require("../../../../enums/WishlistsScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", WishlistsWhereInput_1.WishlistsWhereInput)
 ], FindFirstWishlistsOrThrowArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [WishlistsOrderByWithRelationAndSearchRelevanceInput_1.WishlistsOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [WishlistsOrderByWithRelationInput_1.WishlistsOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

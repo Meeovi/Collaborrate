@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateStatesArgs } from "./args/AggregateStatesArgs";
-import { CreateManyStatesArgs } from "./args/CreateManyStatesArgs";
 import { CreateOneStatesArgs } from "./args/CreateOneStatesArgs";
 import { DeleteManyStatesArgs } from "./args/DeleteManyStatesArgs";
 import { DeleteOneStatesArgs } from "./args/DeleteOneStatesArgs";
@@ -19,7 +18,6 @@ import { AggregateStates } from "../../outputs/AggregateStates";
 import { StatesGroupBy } from "../../outputs/StatesGroupBy";
 export declare class StatesCrudResolver {
     aggregateStates(ctx: any, info: GraphQLResolveInfo, args: AggregateStatesArgs): Promise<AggregateStates>;
-    createManyStates(ctx: any, info: GraphQLResolveInfo, args: CreateManyStatesArgs): Promise<AffectedRowsOutput>;
     createOneStates(ctx: any, info: GraphQLResolveInfo, args: CreateOneStatesArgs): Promise<States>;
     deleteManyStates(ctx: any, info: GraphQLResolveInfo, args: DeleteManyStatesArgs): Promise<AffectedRowsOutput>;
     deleteOneStates(ctx: any, info: GraphQLResolveInfo, args: DeleteOneStatesArgs): Promise<States | null>;

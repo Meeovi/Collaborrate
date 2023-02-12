@@ -1,10 +1,8 @@
-import { Prisma } from "@prisma/client";
 export declare class Content_type {
     id: bigint;
     created_at?: Date | null;
     text?: string | null;
-    number?: Prisma.Decimal | null;
-    json?: Prisma.JsonValue | null;
+    number?: number | null;
     link?: string | null;
     email?: string | null;
     uid?: string | null;

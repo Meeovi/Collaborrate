@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateWishlistsArgs } from "./args/AggregateWishlistsArgs";
-import { CreateManyWishlistsArgs } from "./args/CreateManyWishlistsArgs";
 import { CreateOneWishlistsArgs } from "./args/CreateOneWishlistsArgs";
 import { DeleteManyWishlistsArgs } from "./args/DeleteManyWishlistsArgs";
 import { DeleteOneWishlistsArgs } from "./args/DeleteOneWishlistsArgs";
@@ -19,7 +18,6 @@ import { AggregateWishlists } from "../../outputs/AggregateWishlists";
 import { WishlistsGroupBy } from "../../outputs/WishlistsGroupBy";
 export declare class WishlistsCrudResolver {
     aggregateWishlists(ctx: any, info: GraphQLResolveInfo, args: AggregateWishlistsArgs): Promise<AggregateWishlists>;
-    createManyWishlists(ctx: any, info: GraphQLResolveInfo, args: CreateManyWishlistsArgs): Promise<AffectedRowsOutput>;
     createOneWishlists(ctx: any, info: GraphQLResolveInfo, args: CreateOneWishlistsArgs): Promise<Wishlists>;
     deleteManyWishlists(ctx: any, info: GraphQLResolveInfo, args: DeleteManyWishlistsArgs): Promise<AffectedRowsOutput>;
     deleteOneWishlists(ctx: any, info: GraphQLResolveInfo, args: DeleteOneWishlistsArgs): Promise<Wishlists | null>;

@@ -1,9 +1,9 @@
-import { DashboardgraphqlOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/DashboardgraphqlOrderByWithRelationAndSearchRelevanceInput";
+import { DashboardgraphqlOrderByWithRelationInput } from "../../../inputs/DashboardgraphqlOrderByWithRelationInput";
 import { DashboardgraphqlWhereInput } from "../../../inputs/DashboardgraphqlWhereInput";
 import { DashboardgraphqlWhereUniqueInput } from "../../../inputs/DashboardgraphqlWhereUniqueInput";
 export declare class FindManyDashboardgraphqlArgs {
     where?: DashboardgraphqlWhereInput | undefined;
-    orderBy?: DashboardgraphqlOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: DashboardgraphqlOrderByWithRelationInput[] | undefined;
     cursor?: DashboardgraphqlWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

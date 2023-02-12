@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateTaxesArgs } from "./args/AggregateTaxesArgs";
-import { CreateManyTaxesArgs } from "./args/CreateManyTaxesArgs";
 import { CreateOneTaxesArgs } from "./args/CreateOneTaxesArgs";
 import { DeleteManyTaxesArgs } from "./args/DeleteManyTaxesArgs";
 import { DeleteOneTaxesArgs } from "./args/DeleteOneTaxesArgs";
@@ -19,7 +18,6 @@ import { AggregateTaxes } from "../../outputs/AggregateTaxes";
 import { TaxesGroupBy } from "../../outputs/TaxesGroupBy";
 export declare class TaxesCrudResolver {
     aggregateTaxes(ctx: any, info: GraphQLResolveInfo, args: AggregateTaxesArgs): Promise<AggregateTaxes>;
-    createManyTaxes(ctx: any, info: GraphQLResolveInfo, args: CreateManyTaxesArgs): Promise<AffectedRowsOutput>;
     createOneTaxes(ctx: any, info: GraphQLResolveInfo, args: CreateOneTaxesArgs): Promise<Taxes>;
     deleteManyTaxes(ctx: any, info: GraphQLResolveInfo, args: DeleteManyTaxesArgs): Promise<AffectedRowsOutput>;
     deleteOneTaxes(ctx: any, info: GraphQLResolveInfo, args: DeleteOneTaxesArgs): Promise<Taxes | null>;

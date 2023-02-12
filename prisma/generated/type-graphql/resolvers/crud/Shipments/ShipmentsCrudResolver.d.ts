@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateShipmentsArgs } from "./args/AggregateShipmentsArgs";
-import { CreateManyShipmentsArgs } from "./args/CreateManyShipmentsArgs";
 import { CreateOneShipmentsArgs } from "./args/CreateOneShipmentsArgs";
 import { DeleteManyShipmentsArgs } from "./args/DeleteManyShipmentsArgs";
 import { DeleteOneShipmentsArgs } from "./args/DeleteOneShipmentsArgs";
@@ -19,7 +18,6 @@ import { AggregateShipments } from "../../outputs/AggregateShipments";
 import { ShipmentsGroupBy } from "../../outputs/ShipmentsGroupBy";
 export declare class ShipmentsCrudResolver {
     aggregateShipments(ctx: any, info: GraphQLResolveInfo, args: AggregateShipmentsArgs): Promise<AggregateShipments>;
-    createManyShipments(ctx: any, info: GraphQLResolveInfo, args: CreateManyShipmentsArgs): Promise<AffectedRowsOutput>;
     createOneShipments(ctx: any, info: GraphQLResolveInfo, args: CreateOneShipmentsArgs): Promise<Shipments>;
     deleteManyShipments(ctx: any, info: GraphQLResolveInfo, args: DeleteManyShipmentsArgs): Promise<AffectedRowsOutput>;
     deleteOneShipments(ctx: any, info: GraphQLResolveInfo, args: DeleteOneShipmentsArgs): Promise<Shipments | null>;

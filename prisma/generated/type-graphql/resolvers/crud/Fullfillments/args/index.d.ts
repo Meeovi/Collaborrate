@@ -1,5 +1,4 @@
 export { AggregateFullfillmentsArgs } from "./AggregateFullfillmentsArgs";
-export { CreateManyFullfillmentsArgs } from "./CreateManyFullfillmentsArgs";
 export { CreateOneFullfillmentsArgs } from "./CreateOneFullfillmentsArgs";
 export { DeleteManyFullfillmentsArgs } from "./DeleteManyFullfillmentsArgs";
 export { DeleteOneFullfillmentsArgs } from "./DeleteOneFullfillmentsArgs";

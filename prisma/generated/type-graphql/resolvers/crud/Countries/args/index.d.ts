@@ -1,5 +1,4 @@
 export { AggregateCountriesArgs } from "./AggregateCountriesArgs";
-export { CreateManyCountriesArgs } from "./CreateManyCountriesArgs";
 export { CreateOneCountriesArgs } from "./CreateOneCountriesArgs";
 export { DeleteManyCountriesArgs } from "./DeleteManyCountriesArgs";
 export { DeleteOneCountriesArgs } from "./DeleteOneCountriesArgs";

@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindFirstDashboardjsonOrThrowArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const DashboardjsonOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/DashboardjsonOrderByWithRelationAndSearchRelevanceInput");
+const DashboardjsonOrderByWithRelationInput_1 = require("../../../inputs/DashboardjsonOrderByWithRelationInput");
 const DashboardjsonWhereInput_1 = require("../../../inputs/DashboardjsonWhereInput");
 const DashboardjsonWhereUniqueInput_1 = require("../../../inputs/DashboardjsonWhereUniqueInput");
 const DashboardjsonScalarFieldEnum_1 = require("../../../../enums/DashboardjsonScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", DashboardjsonWhereInput_1.DashboardjsonWhereInput)
 ], FindFirstDashboardjsonOrThrowArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [DashboardjsonOrderByWithRelationAndSearchRelevanceInput_1.DashboardjsonOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [DashboardjsonOrderByWithRelationInput_1.DashboardjsonOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

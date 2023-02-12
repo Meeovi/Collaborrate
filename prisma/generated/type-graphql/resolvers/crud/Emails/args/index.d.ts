@@ -1,5 +1,4 @@
 export { AggregateEmailsArgs } from "./AggregateEmailsArgs";
-export { CreateManyEmailsArgs } from "./CreateManyEmailsArgs";
 export { CreateOneEmailsArgs } from "./CreateOneEmailsArgs";
 export { DeleteManyEmailsArgs } from "./DeleteManyEmailsArgs";
 export { DeleteOneEmailsArgs } from "./DeleteOneEmailsArgs";

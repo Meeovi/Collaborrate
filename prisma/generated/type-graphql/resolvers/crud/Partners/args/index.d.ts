@@ -1,5 +1,4 @@
 export { AggregatePartnersArgs } from "./AggregatePartnersArgs";
-export { CreateManyPartnersArgs } from "./CreateManyPartnersArgs";
 export { CreateOnePartnersArgs } from "./CreateOnePartnersArgs";
 export { DeleteManyPartnersArgs } from "./DeleteManyPartnersArgs";
 export { DeleteOnePartnersArgs } from "./DeleteOnePartnersArgs";

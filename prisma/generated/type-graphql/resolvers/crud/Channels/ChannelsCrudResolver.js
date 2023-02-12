@@ -4,7 +4,6 @@ exports.ChannelsCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateChannelsArgs_1 = require("./args/AggregateChannelsArgs");
-const CreateManyChannelsArgs_1 = require("./args/CreateManyChannelsArgs");
 const CreateOneChannelsArgs_1 = require("./args/CreateOneChannelsArgs");
 const DeleteManyChannelsArgs_1 = require("./args/DeleteManyChannelsArgs");
 const DeleteOneChannelsArgs_1 = require("./args/DeleteOneChannelsArgs");
@@ -27,13 +26,6 @@ let ChannelsCrudResolver = class ChannelsCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).channels.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyChannels(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).channels.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneChannels(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateChannelsArgs_1.AggregateChannelsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ChannelsCrudResolver.prototype, "aggregateChannels", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyChannelsArgs_1.CreateManyChannelsArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], ChannelsCrudResolver.prototype, "createManyChannels", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Channels_1.Channels, {
         nullable: false

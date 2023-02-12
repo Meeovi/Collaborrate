@@ -4,7 +4,6 @@ exports.CountriesCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateCountriesArgs_1 = require("./args/AggregateCountriesArgs");
-const CreateManyCountriesArgs_1 = require("./args/CreateManyCountriesArgs");
 const CreateOneCountriesArgs_1 = require("./args/CreateOneCountriesArgs");
 const DeleteManyCountriesArgs_1 = require("./args/DeleteManyCountriesArgs");
 const DeleteOneCountriesArgs_1 = require("./args/DeleteOneCountriesArgs");
@@ -27,13 +26,6 @@ let CountriesCrudResolver = class CountriesCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).countries.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyCountries(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).countries.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneCountries(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateCountriesArgs_1.AggregateCountriesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], CountriesCrudResolver.prototype, "aggregateCountries", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyCountriesArgs_1.CreateManyCountriesArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], CountriesCrudResolver.prototype, "createManyCountries", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Countries_1.Countries, {
         nullable: false

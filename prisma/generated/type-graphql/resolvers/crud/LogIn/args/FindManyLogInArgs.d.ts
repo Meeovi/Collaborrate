@@ -1,9 +1,9 @@
-import { LogInOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/LogInOrderByWithRelationAndSearchRelevanceInput";
+import { LogInOrderByWithRelationInput } from "../../../inputs/LogInOrderByWithRelationInput";
 import { LogInWhereInput } from "../../../inputs/LogInWhereInput";
 import { LogInWhereUniqueInput } from "../../../inputs/LogInWhereUniqueInput";
 export declare class FindManyLogInArgs {
     where?: LogInWhereInput | undefined;
-    orderBy?: LogInOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: LogInOrderByWithRelationInput[] | undefined;
     cursor?: LogInWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

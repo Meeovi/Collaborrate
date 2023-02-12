@@ -1,9 +1,9 @@
-import { ProductsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ProductsOrderByWithRelationAndSearchRelevanceInput";
+import { ProductsOrderByWithRelationInput } from "../../../inputs/ProductsOrderByWithRelationInput";
 import { ProductsWhereInput } from "../../../inputs/ProductsWhereInput";
 import { ProductsWhereUniqueInput } from "../../../inputs/ProductsWhereUniqueInput";
 export declare class FindFirstProductsOrThrowArgs {
     where?: ProductsWhereInput | undefined;
-    orderBy?: ProductsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: ProductsOrderByWithRelationInput[] | undefined;
     cursor?: ProductsWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

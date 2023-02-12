@@ -3,7 +3,6 @@ export declare enum Content_typeScalarFieldEnum {
     created_at = "created_at",
     text = "text",
     number = "number",
-    json = "json",
     link = "link",
     email = "email",
     uid = "uid",

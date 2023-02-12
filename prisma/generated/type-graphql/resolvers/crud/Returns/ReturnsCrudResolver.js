@@ -4,7 +4,6 @@ exports.ReturnsCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateReturnsArgs_1 = require("./args/AggregateReturnsArgs");
-const CreateManyReturnsArgs_1 = require("./args/CreateManyReturnsArgs");
 const CreateOneReturnsArgs_1 = require("./args/CreateOneReturnsArgs");
 const DeleteManyReturnsArgs_1 = require("./args/DeleteManyReturnsArgs");
 const DeleteOneReturnsArgs_1 = require("./args/DeleteOneReturnsArgs");
@@ -27,13 +26,6 @@ let ReturnsCrudResolver = class ReturnsCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).returns.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyReturns(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).returns.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneReturns(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateReturnsArgs_1.AggregateReturnsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ReturnsCrudResolver.prototype, "aggregateReturns", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyReturnsArgs_1.CreateManyReturnsArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], ReturnsCrudResolver.prototype, "createManyReturns", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Returns_1.Returns, {
         nullable: false

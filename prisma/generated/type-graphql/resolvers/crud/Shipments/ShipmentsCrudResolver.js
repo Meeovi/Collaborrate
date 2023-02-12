@@ -4,7 +4,6 @@ exports.ShipmentsCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateShipmentsArgs_1 = require("./args/AggregateShipmentsArgs");
-const CreateManyShipmentsArgs_1 = require("./args/CreateManyShipmentsArgs");
 const CreateOneShipmentsArgs_1 = require("./args/CreateOneShipmentsArgs");
 const DeleteManyShipmentsArgs_1 = require("./args/DeleteManyShipmentsArgs");
 const DeleteOneShipmentsArgs_1 = require("./args/DeleteOneShipmentsArgs");
@@ -27,13 +26,6 @@ let ShipmentsCrudResolver = class ShipmentsCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).shipments.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyShipments(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).shipments.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneShipments(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateShipmentsArgs_1.AggregateShipmentsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ShipmentsCrudResolver.prototype, "aggregateShipments", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyShipmentsArgs_1.CreateManyShipmentsArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], ShipmentsCrudResolver.prototype, "createManyShipments", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Shipments_1.Shipments, {
         nullable: false

@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOnePluginsArgs = exports.UpdateOnePluginsArgs = exports.UpdateManyPluginsArgs = exports.GroupByPluginsArgs = exports.FindUniquePluginsOrThrowArgs = exports.FindUniquePluginsArgs = exports.FindManyPluginsArgs = exports.FindFirstPluginsOrThrowArgs = exports.FindFirstPluginsArgs = exports.DeleteOnePluginsArgs = exports.DeleteManyPluginsArgs = exports.CreateOnePluginsArgs = exports.CreateManyPluginsArgs = exports.AggregatePluginsArgs = void 0;
+exports.UpsertOnePluginsArgs = exports.UpdateOnePluginsArgs = exports.UpdateManyPluginsArgs = exports.GroupByPluginsArgs = exports.FindUniquePluginsOrThrowArgs = exports.FindUniquePluginsArgs = exports.FindManyPluginsArgs = exports.FindFirstPluginsOrThrowArgs = exports.FindFirstPluginsArgs = exports.DeleteOnePluginsArgs = exports.DeleteManyPluginsArgs = exports.CreateOnePluginsArgs = exports.AggregatePluginsArgs = void 0;
 var AggregatePluginsArgs_1 = require("./AggregatePluginsArgs");
 Object.defineProperty(exports, "AggregatePluginsArgs", { enumerable: true, get: function () { return AggregatePluginsArgs_1.AggregatePluginsArgs; } });
-var CreateManyPluginsArgs_1 = require("./CreateManyPluginsArgs");
-Object.defineProperty(exports, "CreateManyPluginsArgs", { enumerable: true, get: function () { return CreateManyPluginsArgs_1.CreateManyPluginsArgs; } });
 var CreateOnePluginsArgs_1 = require("./CreateOnePluginsArgs");
 Object.defineProperty(exports, "CreateOnePluginsArgs", { enumerable: true, get: function () { return CreateOnePluginsArgs_1.CreateOnePluginsArgs; } });
 var DeleteManyPluginsArgs_1 = require("./DeleteManyPluginsArgs");

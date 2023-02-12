@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateSegmentsArgs } from "./args/AggregateSegmentsArgs";
-import { CreateManySegmentsArgs } from "./args/CreateManySegmentsArgs";
 import { CreateOneSegmentsArgs } from "./args/CreateOneSegmentsArgs";
 import { DeleteManySegmentsArgs } from "./args/DeleteManySegmentsArgs";
 import { DeleteOneSegmentsArgs } from "./args/DeleteOneSegmentsArgs";
@@ -19,7 +18,6 @@ import { AggregateSegments } from "../../outputs/AggregateSegments";
 import { SegmentsGroupBy } from "../../outputs/SegmentsGroupBy";
 export declare class SegmentsCrudResolver {
     aggregateSegments(ctx: any, info: GraphQLResolveInfo, args: AggregateSegmentsArgs): Promise<AggregateSegments>;
-    createManySegments(ctx: any, info: GraphQLResolveInfo, args: CreateManySegmentsArgs): Promise<AffectedRowsOutput>;
     createOneSegments(ctx: any, info: GraphQLResolveInfo, args: CreateOneSegmentsArgs): Promise<Segments>;
     deleteManySegments(ctx: any, info: GraphQLResolveInfo, args: DeleteManySegmentsArgs): Promise<AffectedRowsOutput>;
     deleteOneSegments(ctx: any, info: GraphQLResolveInfo, args: DeleteOneSegmentsArgs): Promise<Segments | null>;

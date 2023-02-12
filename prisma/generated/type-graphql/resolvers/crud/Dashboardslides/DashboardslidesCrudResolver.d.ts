@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateDashboardslidesArgs } from "./args/AggregateDashboardslidesArgs";
-import { CreateManyDashboardslidesArgs } from "./args/CreateManyDashboardslidesArgs";
 import { CreateOneDashboardslidesArgs } from "./args/CreateOneDashboardslidesArgs";
 import { DeleteManyDashboardslidesArgs } from "./args/DeleteManyDashboardslidesArgs";
 import { DeleteOneDashboardslidesArgs } from "./args/DeleteOneDashboardslidesArgs";
@@ -19,7 +18,6 @@ import { AggregateDashboardslides } from "../../outputs/AggregateDashboardslides
 import { DashboardslidesGroupBy } from "../../outputs/DashboardslidesGroupBy";
 export declare class DashboardslidesCrudResolver {
     aggregateDashboardslides(ctx: any, info: GraphQLResolveInfo, args: AggregateDashboardslidesArgs): Promise<AggregateDashboardslides>;
-    createManyDashboardslides(ctx: any, info: GraphQLResolveInfo, args: CreateManyDashboardslidesArgs): Promise<AffectedRowsOutput>;
     createOneDashboardslides(ctx: any, info: GraphQLResolveInfo, args: CreateOneDashboardslidesArgs): Promise<Dashboardslides>;
     deleteManyDashboardslides(ctx: any, info: GraphQLResolveInfo, args: DeleteManyDashboardslidesArgs): Promise<AffectedRowsOutput>;
     deleteOneDashboardslides(ctx: any, info: GraphQLResolveInfo, args: DeleteOneDashboardslidesArgs): Promise<Dashboardslides | null>;

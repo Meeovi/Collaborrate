@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateQuotesArgs } from "./args/AggregateQuotesArgs";
-import { CreateManyQuotesArgs } from "./args/CreateManyQuotesArgs";
 import { CreateOneQuotesArgs } from "./args/CreateOneQuotesArgs";
 import { DeleteManyQuotesArgs } from "./args/DeleteManyQuotesArgs";
 import { DeleteOneQuotesArgs } from "./args/DeleteOneQuotesArgs";
@@ -19,7 +18,6 @@ import { AggregateQuotes } from "../../outputs/AggregateQuotes";
 import { QuotesGroupBy } from "../../outputs/QuotesGroupBy";
 export declare class QuotesCrudResolver {
     aggregateQuotes(ctx: any, info: GraphQLResolveInfo, args: AggregateQuotesArgs): Promise<AggregateQuotes>;
-    createManyQuotes(ctx: any, info: GraphQLResolveInfo, args: CreateManyQuotesArgs): Promise<AffectedRowsOutput>;
     createOneQuotes(ctx: any, info: GraphQLResolveInfo, args: CreateOneQuotesArgs): Promise<Quotes>;
     deleteManyQuotes(ctx: any, info: GraphQLResolveInfo, args: DeleteManyQuotesArgs): Promise<AffectedRowsOutput>;
     deleteOneQuotes(ctx: any, info: GraphQLResolveInfo, args: DeleteOneQuotesArgs): Promise<Quotes | null>;

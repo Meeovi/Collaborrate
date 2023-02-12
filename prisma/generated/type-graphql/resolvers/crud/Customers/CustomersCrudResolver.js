@@ -4,7 +4,6 @@ exports.CustomersCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateCustomersArgs_1 = require("./args/AggregateCustomersArgs");
-const CreateManyCustomersArgs_1 = require("./args/CreateManyCustomersArgs");
 const CreateOneCustomersArgs_1 = require("./args/CreateOneCustomersArgs");
 const DeleteManyCustomersArgs_1 = require("./args/DeleteManyCustomersArgs");
 const DeleteOneCustomersArgs_1 = require("./args/DeleteOneCustomersArgs");
@@ -27,13 +26,6 @@ let CustomersCrudResolver = class CustomersCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).customers.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyCustomers(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).customers.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneCustomers(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateCustomersArgs_1.AggregateCustomersArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], CustomersCrudResolver.prototype, "aggregateCustomers", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyCustomersArgs_1.CreateManyCustomersArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], CustomersCrudResolver.prototype, "createManyCustomers", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Customers_1.Customers, {
         nullable: false

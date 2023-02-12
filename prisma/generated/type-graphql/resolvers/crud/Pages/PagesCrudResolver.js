@@ -4,7 +4,6 @@ exports.PagesCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregatePagesArgs_1 = require("./args/AggregatePagesArgs");
-const CreateManyPagesArgs_1 = require("./args/CreateManyPagesArgs");
 const CreateOnePagesArgs_1 = require("./args/CreateOnePagesArgs");
 const DeleteManyPagesArgs_1 = require("./args/DeleteManyPagesArgs");
 const DeleteOnePagesArgs_1 = require("./args/DeleteOnePagesArgs");
@@ -27,13 +26,6 @@ let PagesCrudResolver = class PagesCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).pages.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyPages(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).pages.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOnePages(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregatePagesArgs_1.AggregatePagesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], PagesCrudResolver.prototype, "aggregatePages", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyPagesArgs_1.CreateManyPagesArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], PagesCrudResolver.prototype, "createManyPages", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Pages_1.Pages, {
         nullable: false

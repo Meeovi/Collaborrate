@@ -1,5 +1,4 @@
 export { AggregateCurrenciesArgs } from "./AggregateCurrenciesArgs";
-export { CreateManyCurrenciesArgs } from "./CreateManyCurrenciesArgs";
 export { CreateOneCurrenciesArgs } from "./CreateOneCurrenciesArgs";
 export { DeleteManyCurrenciesArgs } from "./DeleteManyCurrenciesArgs";
 export { DeleteOneCurrenciesArgs } from "./DeleteOneCurrenciesArgs";

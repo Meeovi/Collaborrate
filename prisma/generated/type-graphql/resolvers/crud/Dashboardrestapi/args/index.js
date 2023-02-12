@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneDashboardrestapiArgs = exports.UpdateOneDashboardrestapiArgs = exports.UpdateManyDashboardrestapiArgs = exports.GroupByDashboardrestapiArgs = exports.FindUniqueDashboardrestapiOrThrowArgs = exports.FindUniqueDashboardrestapiArgs = exports.FindManyDashboardrestapiArgs = exports.FindFirstDashboardrestapiOrThrowArgs = exports.FindFirstDashboardrestapiArgs = exports.DeleteOneDashboardrestapiArgs = exports.DeleteManyDashboardrestapiArgs = exports.CreateOneDashboardrestapiArgs = exports.CreateManyDashboardrestapiArgs = exports.AggregateDashboardrestapiArgs = void 0;
+exports.UpsertOneDashboardrestapiArgs = exports.UpdateOneDashboardrestapiArgs = exports.UpdateManyDashboardrestapiArgs = exports.GroupByDashboardrestapiArgs = exports.FindUniqueDashboardrestapiOrThrowArgs = exports.FindUniqueDashboardrestapiArgs = exports.FindManyDashboardrestapiArgs = exports.FindFirstDashboardrestapiOrThrowArgs = exports.FindFirstDashboardrestapiArgs = exports.DeleteOneDashboardrestapiArgs = exports.DeleteManyDashboardrestapiArgs = exports.CreateOneDashboardrestapiArgs = exports.AggregateDashboardrestapiArgs = void 0;
 var AggregateDashboardrestapiArgs_1 = require("./AggregateDashboardrestapiArgs");
 Object.defineProperty(exports, "AggregateDashboardrestapiArgs", { enumerable: true, get: function () { return AggregateDashboardrestapiArgs_1.AggregateDashboardrestapiArgs; } });
-var CreateManyDashboardrestapiArgs_1 = require("./CreateManyDashboardrestapiArgs");
-Object.defineProperty(exports, "CreateManyDashboardrestapiArgs", { enumerable: true, get: function () { return CreateManyDashboardrestapiArgs_1.CreateManyDashboardrestapiArgs; } });
 var CreateOneDashboardrestapiArgs_1 = require("./CreateOneDashboardrestapiArgs");
 Object.defineProperty(exports, "CreateOneDashboardrestapiArgs", { enumerable: true, get: function () { return CreateOneDashboardrestapiArgs_1.CreateOneDashboardrestapiArgs; } });
 var DeleteManyDashboardrestapiArgs_1 = require("./DeleteManyDashboardrestapiArgs");

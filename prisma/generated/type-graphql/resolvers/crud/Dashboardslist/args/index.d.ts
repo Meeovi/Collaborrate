@@ -1,5 +1,4 @@
 export { AggregateDashboardslistArgs } from "./AggregateDashboardslistArgs";
-export { CreateManyDashboardslistArgs } from "./CreateManyDashboardslistArgs";
 export { CreateOneDashboardslistArgs } from "./CreateOneDashboardslistArgs";
 export { DeleteManyDashboardslistArgs } from "./DeleteManyDashboardslistArgs";
 export { DeleteOneDashboardslistArgs } from "./DeleteOneDashboardslistArgs";

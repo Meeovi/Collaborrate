@@ -1,5 +1,4 @@
 export { AggregateProductsArgs } from "./AggregateProductsArgs";
-export { CreateManyProductsArgs } from "./CreateManyProductsArgs";
 export { CreateOneProductsArgs } from "./CreateOneProductsArgs";
 export { DeleteManyProductsArgs } from "./DeleteManyProductsArgs";
 export { DeleteOneProductsArgs } from "./DeleteOneProductsArgs";

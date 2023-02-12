@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateOrdersArgs } from "./args/AggregateOrdersArgs";
-import { CreateManyOrdersArgs } from "./args/CreateManyOrdersArgs";
 import { CreateOneOrdersArgs } from "./args/CreateOneOrdersArgs";
 import { DeleteManyOrdersArgs } from "./args/DeleteManyOrdersArgs";
 import { DeleteOneOrdersArgs } from "./args/DeleteOneOrdersArgs";
@@ -19,7 +18,6 @@ import { AggregateOrders } from "../../outputs/AggregateOrders";
 import { OrdersGroupBy } from "../../outputs/OrdersGroupBy";
 export declare class OrdersCrudResolver {
     aggregateOrders(ctx: any, info: GraphQLResolveInfo, args: AggregateOrdersArgs): Promise<AggregateOrders>;
-    createManyOrders(ctx: any, info: GraphQLResolveInfo, args: CreateManyOrdersArgs): Promise<AffectedRowsOutput>;
     createOneOrders(ctx: any, info: GraphQLResolveInfo, args: CreateOneOrdersArgs): Promise<Orders>;
     deleteManyOrders(ctx: any, info: GraphQLResolveInfo, args: DeleteManyOrdersArgs): Promise<AffectedRowsOutput>;
     deleteOneOrders(ctx: any, info: GraphQLResolveInfo, args: DeleteOneOrdersArgs): Promise<Orders | null>;

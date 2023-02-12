@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregatePluginsArgs } from "./args/AggregatePluginsArgs";
-import { CreateManyPluginsArgs } from "./args/CreateManyPluginsArgs";
 import { CreateOnePluginsArgs } from "./args/CreateOnePluginsArgs";
 import { DeleteManyPluginsArgs } from "./args/DeleteManyPluginsArgs";
 import { DeleteOnePluginsArgs } from "./args/DeleteOnePluginsArgs";
@@ -19,7 +18,6 @@ import { AggregatePlugins } from "../../outputs/AggregatePlugins";
 import { PluginsGroupBy } from "../../outputs/PluginsGroupBy";
 export declare class PluginsCrudResolver {
     aggregatePlugins(ctx: any, info: GraphQLResolveInfo, args: AggregatePluginsArgs): Promise<AggregatePlugins>;
-    createManyPlugins(ctx: any, info: GraphQLResolveInfo, args: CreateManyPluginsArgs): Promise<AffectedRowsOutput>;
     createOnePlugins(ctx: any, info: GraphQLResolveInfo, args: CreateOnePluginsArgs): Promise<Plugins>;
     deleteManyPlugins(ctx: any, info: GraphQLResolveInfo, args: DeleteManyPluginsArgs): Promise<AffectedRowsOutput>;
     deleteOnePlugins(ctx: any, info: GraphQLResolveInfo, args: DeleteOnePluginsArgs): Promise<Plugins | null>;

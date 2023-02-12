@@ -1,5 +1,4 @@
 export { AggregateRolesArgs } from "./AggregateRolesArgs";
-export { CreateManyRolesArgs } from "./CreateManyRolesArgs";
 export { CreateOneRolesArgs } from "./CreateOneRolesArgs";
 export { DeleteManyRolesArgs } from "./DeleteManyRolesArgs";
 export { DeleteOneRolesArgs } from "./DeleteOneRolesArgs";

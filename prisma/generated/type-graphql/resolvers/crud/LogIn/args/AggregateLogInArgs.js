@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AggregateLogInArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const LogInOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/LogInOrderByWithRelationAndSearchRelevanceInput");
+const LogInOrderByWithRelationInput_1 = require("../../../inputs/LogInOrderByWithRelationInput");
 const LogInWhereInput_1 = require("../../../inputs/LogInWhereInput");
 const LogInWhereUniqueInput_1 = require("../../../inputs/LogInWhereUniqueInput");
 let AggregateLogInArgs = class AggregateLogInArgs {
@@ -15,7 +15,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", LogInWhereInput_1.LogInWhereInput)
 ], AggregateLogInArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [LogInOrderByWithRelationAndSearchRelevanceInput_1.LogInOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [LogInOrderByWithRelationInput_1.LogInOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

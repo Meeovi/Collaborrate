@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneThemesArgs = exports.UpdateOneThemesArgs = exports.UpdateManyThemesArgs = exports.GroupByThemesArgs = exports.FindUniqueThemesOrThrowArgs = exports.FindUniqueThemesArgs = exports.FindManyThemesArgs = exports.FindFirstThemesOrThrowArgs = exports.FindFirstThemesArgs = exports.DeleteOneThemesArgs = exports.DeleteManyThemesArgs = exports.CreateOneThemesArgs = exports.CreateManyThemesArgs = exports.AggregateThemesArgs = void 0;
+exports.UpsertOneThemesArgs = exports.UpdateOneThemesArgs = exports.UpdateManyThemesArgs = exports.GroupByThemesArgs = exports.FindUniqueThemesOrThrowArgs = exports.FindUniqueThemesArgs = exports.FindManyThemesArgs = exports.FindFirstThemesOrThrowArgs = exports.FindFirstThemesArgs = exports.DeleteOneThemesArgs = exports.DeleteManyThemesArgs = exports.CreateOneThemesArgs = exports.AggregateThemesArgs = void 0;
 var AggregateThemesArgs_1 = require("./AggregateThemesArgs");
 Object.defineProperty(exports, "AggregateThemesArgs", { enumerable: true, get: function () { return AggregateThemesArgs_1.AggregateThemesArgs; } });
-var CreateManyThemesArgs_1 = require("./CreateManyThemesArgs");
-Object.defineProperty(exports, "CreateManyThemesArgs", { enumerable: true, get: function () { return CreateManyThemesArgs_1.CreateManyThemesArgs; } });
 var CreateOneThemesArgs_1 = require("./CreateOneThemesArgs");
 Object.defineProperty(exports, "CreateOneThemesArgs", { enumerable: true, get: function () { return CreateOneThemesArgs_1.CreateOneThemesArgs; } });
 var DeleteManyThemesArgs_1 = require("./DeleteManyThemesArgs");

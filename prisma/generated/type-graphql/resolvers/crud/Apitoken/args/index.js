@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneApitokenArgs = exports.UpdateOneApitokenArgs = exports.UpdateManyApitokenArgs = exports.GroupByApitokenArgs = exports.FindUniqueApitokenOrThrowArgs = exports.FindUniqueApitokenArgs = exports.FindManyApitokenArgs = exports.FindFirstApitokenOrThrowArgs = exports.FindFirstApitokenArgs = exports.DeleteOneApitokenArgs = exports.DeleteManyApitokenArgs = exports.CreateOneApitokenArgs = exports.CreateManyApitokenArgs = exports.AggregateApitokenArgs = void 0;
+exports.UpsertOneApitokenArgs = exports.UpdateOneApitokenArgs = exports.UpdateManyApitokenArgs = exports.GroupByApitokenArgs = exports.FindUniqueApitokenOrThrowArgs = exports.FindUniqueApitokenArgs = exports.FindManyApitokenArgs = exports.FindFirstApitokenOrThrowArgs = exports.FindFirstApitokenArgs = exports.DeleteOneApitokenArgs = exports.DeleteManyApitokenArgs = exports.CreateOneApitokenArgs = exports.AggregateApitokenArgs = void 0;
 var AggregateApitokenArgs_1 = require("./AggregateApitokenArgs");
 Object.defineProperty(exports, "AggregateApitokenArgs", { enumerable: true, get: function () { return AggregateApitokenArgs_1.AggregateApitokenArgs; } });
-var CreateManyApitokenArgs_1 = require("./CreateManyApitokenArgs");
-Object.defineProperty(exports, "CreateManyApitokenArgs", { enumerable: true, get: function () { return CreateManyApitokenArgs_1.CreateManyApitokenArgs; } });
 var CreateOneApitokenArgs_1 = require("./CreateOneApitokenArgs");
 Object.defineProperty(exports, "CreateOneApitokenArgs", { enumerable: true, get: function () { return CreateOneApitokenArgs_1.CreateOneApitokenArgs; } });
 var DeleteManyApitokenArgs_1 = require("./DeleteManyApitokenArgs");

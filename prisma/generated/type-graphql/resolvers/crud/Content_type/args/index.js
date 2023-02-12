@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneContent_typeArgs = exports.UpdateOneContent_typeArgs = exports.UpdateManyContent_typeArgs = exports.GroupByContent_typeArgs = exports.FindUniqueContent_typeOrThrowArgs = exports.FindUniqueContent_typeArgs = exports.FindManyContent_typeArgs = exports.FindFirstContent_typeOrThrowArgs = exports.FindFirstContent_typeArgs = exports.DeleteOneContent_typeArgs = exports.DeleteManyContent_typeArgs = exports.CreateOneContent_typeArgs = exports.CreateManyContent_typeArgs = exports.AggregateContent_typeArgs = void 0;
+exports.UpsertOneContent_typeArgs = exports.UpdateOneContent_typeArgs = exports.UpdateManyContent_typeArgs = exports.GroupByContent_typeArgs = exports.FindUniqueContent_typeOrThrowArgs = exports.FindUniqueContent_typeArgs = exports.FindManyContent_typeArgs = exports.FindFirstContent_typeOrThrowArgs = exports.FindFirstContent_typeArgs = exports.DeleteOneContent_typeArgs = exports.DeleteManyContent_typeArgs = exports.CreateOneContent_typeArgs = exports.AggregateContent_typeArgs = void 0;
 var AggregateContent_typeArgs_1 = require("./AggregateContent_typeArgs");
 Object.defineProperty(exports, "AggregateContent_typeArgs", { enumerable: true, get: function () { return AggregateContent_typeArgs_1.AggregateContent_typeArgs; } });
-var CreateManyContent_typeArgs_1 = require("./CreateManyContent_typeArgs");
-Object.defineProperty(exports, "CreateManyContent_typeArgs", { enumerable: true, get: function () { return CreateManyContent_typeArgs_1.CreateManyContent_typeArgs; } });
 var CreateOneContent_typeArgs_1 = require("./CreateOneContent_typeArgs");
 Object.defineProperty(exports, "CreateOneContent_typeArgs", { enumerable: true, get: function () { return CreateOneContent_typeArgs_1.CreateOneContent_typeArgs; } });
 var DeleteManyContent_typeArgs_1 = require("./DeleteManyContent_typeArgs");

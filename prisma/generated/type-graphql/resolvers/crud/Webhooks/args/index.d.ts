@@ -1,5 +1,4 @@
 export { AggregateWebhooksArgs } from "./AggregateWebhooksArgs";
-export { CreateManyWebhooksArgs } from "./CreateManyWebhooksArgs";
 export { CreateOneWebhooksArgs } from "./CreateOneWebhooksArgs";
 export { DeleteManyWebhooksArgs } from "./DeleteManyWebhooksArgs";
 export { DeleteOneWebhooksArgs } from "./DeleteOneWebhooksArgs";

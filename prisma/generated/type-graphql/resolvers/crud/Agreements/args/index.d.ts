@@ -1,5 +1,4 @@
 export { AggregateAgreementsArgs } from "./AggregateAgreementsArgs";
-export { CreateManyAgreementsArgs } from "./CreateManyAgreementsArgs";
 export { CreateOneAgreementsArgs } from "./CreateOneAgreementsArgs";
 export { DeleteManyAgreementsArgs } from "./DeleteManyAgreementsArgs";
 export { DeleteOneAgreementsArgs } from "./DeleteOneAgreementsArgs";

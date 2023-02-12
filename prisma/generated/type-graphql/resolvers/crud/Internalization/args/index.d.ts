@@ -1,5 +1,4 @@
 export { AggregateInternalizationArgs } from "./AggregateInternalizationArgs";
-export { CreateManyInternalizationArgs } from "./CreateManyInternalizationArgs";
 export { CreateOneInternalizationArgs } from "./CreateOneInternalizationArgs";
 export { DeleteManyInternalizationArgs } from "./DeleteManyInternalizationArgs";
 export { DeleteOneInternalizationArgs } from "./DeleteOneInternalizationArgs";

@@ -1,5 +1,4 @@
 export { AggregateSegmentsArgs } from "./AggregateSegmentsArgs";
-export { CreateManySegmentsArgs } from "./CreateManySegmentsArgs";
 export { CreateOneSegmentsArgs } from "./CreateOneSegmentsArgs";
 export { DeleteManySegmentsArgs } from "./DeleteManySegmentsArgs";
 export { DeleteOneSegmentsArgs } from "./DeleteOneSegmentsArgs";

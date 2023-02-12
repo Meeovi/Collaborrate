@@ -1,3 +1,30 @@
+import { DateTimeNullableFilter } from "../inputs/DateTimeNullableFilter";
+import { DiscountsWhereInput } from "../inputs/DiscountsWhereInput";
+import { StringFilter } from "../inputs/StringFilter";
+import { StringNullableFilter } from "../inputs/StringNullableFilter";
 export declare class DiscountsWhereUniqueInput {
     id?: bigint | undefined;
+    AND?: DiscountsWhereInput[] | undefined;
+    OR?: DiscountsWhereInput[] | undefined;
+    NOT?: DiscountsWhereInput[] | undefined;
+    name?: StringFilter | undefined;
+    excerpt?: StringNullableFilter | undefined;
+    discount?: StringNullableFilter | undefined;
+    image?: StringNullableFilter | undefined;
+    published?: DateTimeNullableFilter | undefined;
+    special_offers?: StringNullableFilter | undefined;
+    rewards?: StringNullableFilter | undefined;
+    coupons?: StringNullableFilter | undefined;
+    expiration?: StringNullableFilter | undefined;
+    categories?: StringNullableFilter | undefined;
+    articles?: StringNullableFilter | undefined;
+    products?: StringNullableFilter | undefined;
+    customers?: StringNullableFilter | undefined;
+    users?: StringNullableFilter | undefined;
+    type?: StringNullableFilter | undefined;
+    creditMemo?: StringNullableFilter | undefined;
+    billToName?: StringNullableFilter | undefined;
+    orderNumber?: StringNullableFilter | undefined;
+    refunded?: StringNullableFilter | undefined;
+    status?: StringNullableFilter | undefined;
 }

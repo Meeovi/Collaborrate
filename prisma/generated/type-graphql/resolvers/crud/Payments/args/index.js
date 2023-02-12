@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOnePaymentsArgs = exports.UpdateOnePaymentsArgs = exports.UpdateManyPaymentsArgs = exports.GroupByPaymentsArgs = exports.FindUniquePaymentsOrThrowArgs = exports.FindUniquePaymentsArgs = exports.FindManyPaymentsArgs = exports.FindFirstPaymentsOrThrowArgs = exports.FindFirstPaymentsArgs = exports.DeleteOnePaymentsArgs = exports.DeleteManyPaymentsArgs = exports.CreateOnePaymentsArgs = exports.CreateManyPaymentsArgs = exports.AggregatePaymentsArgs = void 0;
+exports.UpsertOnePaymentsArgs = exports.UpdateOnePaymentsArgs = exports.UpdateManyPaymentsArgs = exports.GroupByPaymentsArgs = exports.FindUniquePaymentsOrThrowArgs = exports.FindUniquePaymentsArgs = exports.FindManyPaymentsArgs = exports.FindFirstPaymentsOrThrowArgs = exports.FindFirstPaymentsArgs = exports.DeleteOnePaymentsArgs = exports.DeleteManyPaymentsArgs = exports.CreateOnePaymentsArgs = exports.AggregatePaymentsArgs = void 0;
 var AggregatePaymentsArgs_1 = require("./AggregatePaymentsArgs");
 Object.defineProperty(exports, "AggregatePaymentsArgs", { enumerable: true, get: function () { return AggregatePaymentsArgs_1.AggregatePaymentsArgs; } });
-var CreateManyPaymentsArgs_1 = require("./CreateManyPaymentsArgs");
-Object.defineProperty(exports, "CreateManyPaymentsArgs", { enumerable: true, get: function () { return CreateManyPaymentsArgs_1.CreateManyPaymentsArgs; } });
 var CreateOnePaymentsArgs_1 = require("./CreateOnePaymentsArgs");
 Object.defineProperty(exports, "CreateOnePaymentsArgs", { enumerable: true, get: function () { return CreateOnePaymentsArgs_1.CreateOnePaymentsArgs; } });
 var DeleteManyPaymentsArgs_1 = require("./DeleteManyPaymentsArgs");

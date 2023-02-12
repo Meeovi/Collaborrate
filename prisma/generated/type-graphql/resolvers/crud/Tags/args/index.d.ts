@@ -1,5 +1,4 @@
 export { AggregateTagsArgs } from "./AggregateTagsArgs";
-export { CreateManyTagsArgs } from "./CreateManyTagsArgs";
 export { CreateOneTagsArgs } from "./CreateOneTagsArgs";
 export { DeleteManyTagsArgs } from "./DeleteManyTagsArgs";
 export { DeleteOneTagsArgs } from "./DeleteOneTagsArgs";

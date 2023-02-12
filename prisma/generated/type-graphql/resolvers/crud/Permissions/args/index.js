@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOnePermissionsArgs = exports.UpdateOnePermissionsArgs = exports.UpdateManyPermissionsArgs = exports.GroupByPermissionsArgs = exports.FindUniquePermissionsOrThrowArgs = exports.FindUniquePermissionsArgs = exports.FindManyPermissionsArgs = exports.FindFirstPermissionsOrThrowArgs = exports.FindFirstPermissionsArgs = exports.DeleteOnePermissionsArgs = exports.DeleteManyPermissionsArgs = exports.CreateOnePermissionsArgs = exports.CreateManyPermissionsArgs = exports.AggregatePermissionsArgs = void 0;
+exports.UpsertOnePermissionsArgs = exports.UpdateOnePermissionsArgs = exports.UpdateManyPermissionsArgs = exports.GroupByPermissionsArgs = exports.FindUniquePermissionsOrThrowArgs = exports.FindUniquePermissionsArgs = exports.FindManyPermissionsArgs = exports.FindFirstPermissionsOrThrowArgs = exports.FindFirstPermissionsArgs = exports.DeleteOnePermissionsArgs = exports.DeleteManyPermissionsArgs = exports.CreateOnePermissionsArgs = exports.AggregatePermissionsArgs = void 0;
 var AggregatePermissionsArgs_1 = require("./AggregatePermissionsArgs");
 Object.defineProperty(exports, "AggregatePermissionsArgs", { enumerable: true, get: function () { return AggregatePermissionsArgs_1.AggregatePermissionsArgs; } });
-var CreateManyPermissionsArgs_1 = require("./CreateManyPermissionsArgs");
-Object.defineProperty(exports, "CreateManyPermissionsArgs", { enumerable: true, get: function () { return CreateManyPermissionsArgs_1.CreateManyPermissionsArgs; } });
 var CreateOnePermissionsArgs_1 = require("./CreateOnePermissionsArgs");
 Object.defineProperty(exports, "CreateOnePermissionsArgs", { enumerable: true, get: function () { return CreateOnePermissionsArgs_1.CreateOnePermissionsArgs; } });
 var DeleteManyPermissionsArgs_1 = require("./DeleteManyPermissionsArgs");

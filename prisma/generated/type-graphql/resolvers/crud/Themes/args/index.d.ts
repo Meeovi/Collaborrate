@@ -1,5 +1,4 @@
 export { AggregateThemesArgs } from "./AggregateThemesArgs";
-export { CreateManyThemesArgs } from "./CreateManyThemesArgs";
 export { CreateOneThemesArgs } from "./CreateOneThemesArgs";
 export { DeleteManyThemesArgs } from "./DeleteManyThemesArgs";
 export { DeleteOneThemesArgs } from "./DeleteOneThemesArgs";

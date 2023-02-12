@@ -1,9 +1,9 @@
-import { QuotesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/QuotesOrderByWithRelationAndSearchRelevanceInput";
+import { QuotesOrderByWithRelationInput } from "../../../inputs/QuotesOrderByWithRelationInput";
 import { QuotesWhereInput } from "../../../inputs/QuotesWhereInput";
 import { QuotesWhereUniqueInput } from "../../../inputs/QuotesWhereUniqueInput";
 export declare class FindManyQuotesArgs {
     where?: QuotesWhereInput | undefined;
-    orderBy?: QuotesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: QuotesOrderByWithRelationInput[] | undefined;
     cursor?: QuotesWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

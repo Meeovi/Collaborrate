@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AggregateInvoicesArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const InvoicesOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/InvoicesOrderByWithRelationAndSearchRelevanceInput");
+const InvoicesOrderByWithRelationInput_1 = require("../../../inputs/InvoicesOrderByWithRelationInput");
 const InvoicesWhereInput_1 = require("../../../inputs/InvoicesWhereInput");
 const InvoicesWhereUniqueInput_1 = require("../../../inputs/InvoicesWhereUniqueInput");
 let AggregateInvoicesArgs = class AggregateInvoicesArgs {
@@ -15,7 +15,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", InvoicesWhereInput_1.InvoicesWhereInput)
 ], AggregateInvoicesArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [InvoicesOrderByWithRelationAndSearchRelevanceInput_1.InvoicesOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [InvoicesOrderByWithRelationInput_1.InvoicesOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

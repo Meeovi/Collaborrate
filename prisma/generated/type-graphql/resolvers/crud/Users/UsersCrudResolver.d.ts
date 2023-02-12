@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateUsersArgs } from "./args/AggregateUsersArgs";
-import { CreateManyUsersArgs } from "./args/CreateManyUsersArgs";
 import { CreateOneUsersArgs } from "./args/CreateOneUsersArgs";
 import { DeleteManyUsersArgs } from "./args/DeleteManyUsersArgs";
 import { DeleteOneUsersArgs } from "./args/DeleteOneUsersArgs";
@@ -19,7 +18,6 @@ import { AggregateUsers } from "../../outputs/AggregateUsers";
 import { UsersGroupBy } from "../../outputs/UsersGroupBy";
 export declare class UsersCrudResolver {
     aggregateUsers(ctx: any, info: GraphQLResolveInfo, args: AggregateUsersArgs): Promise<AggregateUsers>;
-    createManyUsers(ctx: any, info: GraphQLResolveInfo, args: CreateManyUsersArgs): Promise<AffectedRowsOutput>;
     createOneUsers(ctx: any, info: GraphQLResolveInfo, args: CreateOneUsersArgs): Promise<Users>;
     deleteManyUsers(ctx: any, info: GraphQLResolveInfo, args: DeleteManyUsersArgs): Promise<AffectedRowsOutput>;
     deleteOneUsers(ctx: any, info: GraphQLResolveInfo, args: DeleteOneUsersArgs): Promise<Users | null>;

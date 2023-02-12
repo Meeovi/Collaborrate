@@ -1,9 +1,9 @@
-import { PartnersOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/PartnersOrderByWithRelationAndSearchRelevanceInput";
+import { PartnersOrderByWithRelationInput } from "../../../inputs/PartnersOrderByWithRelationInput";
 import { PartnersWhereInput } from "../../../inputs/PartnersWhereInput";
 import { PartnersWhereUniqueInput } from "../../../inputs/PartnersWhereUniqueInput";
 export declare class FindFirstPartnersOrThrowArgs {
     where?: PartnersWhereInput | undefined;
-    orderBy?: PartnersOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: PartnersOrderByWithRelationInput[] | undefined;
     cursor?: PartnersWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

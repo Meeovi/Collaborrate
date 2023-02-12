@@ -3,8 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Upload_fileUpdateManyMutationInput = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const GraphQLScalars = tslib_1.__importStar(require("graphql-scalars"));
-const client_1 = require("@prisma/client");
 const DecimalFieldUpdateOperationsInput_1 = require("../inputs/DecimalFieldUpdateOperationsInput");
 const NullableDateTimeFieldUpdateOperationsInput_1 = require("../inputs/NullableDateTimeFieldUpdateOperationsInput");
 const NullableIntFieldUpdateOperationsInput_1 = require("../inputs/NullableIntFieldUpdateOperationsInput");
@@ -43,10 +41,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", NullableIntFieldUpdateOperationsInput_1.NullableIntFieldUpdateOperationsInput)
 ], Upload_fileUpdateManyMutationInput.prototype, "height", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
+    TypeGraphQL.Field(_type => NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", Object)
+    tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
 ], Upload_fileUpdateManyMutationInput.prototype, "formats", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => StringFieldUpdateOperationsInput_1.StringFieldUpdateOperationsInput, {
@@ -91,10 +89,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringFieldUpdateOperationsInput_1.StringFieldUpdateOperationsInput)
 ], Upload_fileUpdateManyMutationInput.prototype, "provider", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
+    TypeGraphQL.Field(_type => NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", Object)
+    tslib_1.__metadata("design:type", NullableStringFieldUpdateOperationsInput_1.NullableStringFieldUpdateOperationsInput)
 ], Upload_fileUpdateManyMutationInput.prototype, "provider_metadata", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => NullableIntFieldUpdateOperationsInput_1.NullableIntFieldUpdateOperationsInput, {

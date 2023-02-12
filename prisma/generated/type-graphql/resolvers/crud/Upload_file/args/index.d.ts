@@ -1,5 +1,4 @@
 export { AggregateUpload_fileArgs } from "./AggregateUpload_fileArgs";
-export { CreateManyUpload_fileArgs } from "./CreateManyUpload_fileArgs";
 export { CreateOneUpload_fileArgs } from "./CreateOneUpload_fileArgs";
 export { DeleteManyUpload_fileArgs } from "./DeleteManyUpload_fileArgs";
 export { DeleteOneUpload_fileArgs } from "./DeleteOneUpload_fileArgs";

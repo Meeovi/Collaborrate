@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateChannelsArgs } from "./args/AggregateChannelsArgs";
-import { CreateManyChannelsArgs } from "./args/CreateManyChannelsArgs";
 import { CreateOneChannelsArgs } from "./args/CreateOneChannelsArgs";
 import { DeleteManyChannelsArgs } from "./args/DeleteManyChannelsArgs";
 import { DeleteOneChannelsArgs } from "./args/DeleteOneChannelsArgs";
@@ -19,7 +18,6 @@ import { AggregateChannels } from "../../outputs/AggregateChannels";
 import { ChannelsGroupBy } from "../../outputs/ChannelsGroupBy";
 export declare class ChannelsCrudResolver {
     aggregateChannels(ctx: any, info: GraphQLResolveInfo, args: AggregateChannelsArgs): Promise<AggregateChannels>;
-    createManyChannels(ctx: any, info: GraphQLResolveInfo, args: CreateManyChannelsArgs): Promise<AffectedRowsOutput>;
     createOneChannels(ctx: any, info: GraphQLResolveInfo, args: CreateOneChannelsArgs): Promise<Channels>;
     deleteManyChannels(ctx: any, info: GraphQLResolveInfo, args: DeleteManyChannelsArgs): Promise<AffectedRowsOutput>;
     deleteOneChannels(ctx: any, info: GraphQLResolveInfo, args: DeleteOneChannelsArgs): Promise<Channels | null>;

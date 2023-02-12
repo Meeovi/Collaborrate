@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateBrandsArgs } from "./args/AggregateBrandsArgs";
-import { CreateManyBrandsArgs } from "./args/CreateManyBrandsArgs";
 import { CreateOneBrandsArgs } from "./args/CreateOneBrandsArgs";
 import { DeleteManyBrandsArgs } from "./args/DeleteManyBrandsArgs";
 import { DeleteOneBrandsArgs } from "./args/DeleteOneBrandsArgs";
@@ -19,7 +18,6 @@ import { AggregateBrands } from "../../outputs/AggregateBrands";
 import { BrandsGroupBy } from "../../outputs/BrandsGroupBy";
 export declare class BrandsCrudResolver {
     aggregateBrands(ctx: any, info: GraphQLResolveInfo, args: AggregateBrandsArgs): Promise<AggregateBrands>;
-    createManyBrands(ctx: any, info: GraphQLResolveInfo, args: CreateManyBrandsArgs): Promise<AffectedRowsOutput>;
     createOneBrands(ctx: any, info: GraphQLResolveInfo, args: CreateOneBrandsArgs): Promise<Brands>;
     deleteManyBrands(ctx: any, info: GraphQLResolveInfo, args: DeleteManyBrandsArgs): Promise<AffectedRowsOutput>;
     deleteOneBrands(ctx: any, info: GraphQLResolveInfo, args: DeleteOneBrandsArgs): Promise<Brands | null>;

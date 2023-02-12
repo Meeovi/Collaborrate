@@ -4,7 +4,6 @@ exports.VendorsCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateVendorsArgs_1 = require("./args/AggregateVendorsArgs");
-const CreateManyVendorsArgs_1 = require("./args/CreateManyVendorsArgs");
 const CreateOneVendorsArgs_1 = require("./args/CreateOneVendorsArgs");
 const DeleteManyVendorsArgs_1 = require("./args/DeleteManyVendorsArgs");
 const DeleteOneVendorsArgs_1 = require("./args/DeleteOneVendorsArgs");
@@ -27,13 +26,6 @@ let VendorsCrudResolver = class VendorsCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).vendors.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyVendors(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).vendors.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneVendors(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateVendorsArgs_1.AggregateVendorsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], VendorsCrudResolver.prototype, "aggregateVendors", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyVendorsArgs_1.CreateManyVendorsArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], VendorsCrudResolver.prototype, "createManyVendors", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Vendors_1.Vendors, {
         nullable: false

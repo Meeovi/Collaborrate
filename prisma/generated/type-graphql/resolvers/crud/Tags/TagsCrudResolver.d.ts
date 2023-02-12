@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateTagsArgs } from "./args/AggregateTagsArgs";
-import { CreateManyTagsArgs } from "./args/CreateManyTagsArgs";
 import { CreateOneTagsArgs } from "./args/CreateOneTagsArgs";
 import { DeleteManyTagsArgs } from "./args/DeleteManyTagsArgs";
 import { DeleteOneTagsArgs } from "./args/DeleteOneTagsArgs";
@@ -19,7 +18,6 @@ import { AggregateTags } from "../../outputs/AggregateTags";
 import { TagsGroupBy } from "../../outputs/TagsGroupBy";
 export declare class TagsCrudResolver {
     aggregateTags(ctx: any, info: GraphQLResolveInfo, args: AggregateTagsArgs): Promise<AggregateTags>;
-    createManyTags(ctx: any, info: GraphQLResolveInfo, args: CreateManyTagsArgs): Promise<AffectedRowsOutput>;
     createOneTags(ctx: any, info: GraphQLResolveInfo, args: CreateOneTagsArgs): Promise<Tags>;
     deleteManyTags(ctx: any, info: GraphQLResolveInfo, args: DeleteManyTagsArgs): Promise<AffectedRowsOutput>;
     deleteOneTags(ctx: any, info: GraphQLResolveInfo, args: DeleteOneTagsArgs): Promise<Tags | null>;

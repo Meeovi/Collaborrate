@@ -7,8 +7,7 @@ const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const BigIntFilter_1 = require("../inputs/BigIntFilter");
 const BoolNullableFilter_1 = require("../inputs/BoolNullableFilter");
 const DateTimeNullableFilter_1 = require("../inputs/DateTimeNullableFilter");
-const DecimalNullableFilter_1 = require("../inputs/DecimalNullableFilter");
-const JsonNullableFilter_1 = require("../inputs/JsonNullableFilter");
+const IntNullableFilter_1 = require("../inputs/IntNullableFilter");
 const StringNullableFilter_1 = require("../inputs/StringNullableFilter");
 let Content_typeWhereInput = Content_typeWhereInput_1 = class Content_typeWhereInput {
 };
@@ -49,17 +48,11 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], Content_typeWhereInput.prototype, "text", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => DecimalNullableFilter_1.DecimalNullableFilter, {
+    TypeGraphQL.Field(_type => IntNullableFilter_1.IntNullableFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", DecimalNullableFilter_1.DecimalNullableFilter)
+    tslib_1.__metadata("design:type", IntNullableFilter_1.IntNullableFilter)
 ], Content_typeWhereInput.prototype, "number", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => JsonNullableFilter_1.JsonNullableFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", JsonNullableFilter_1.JsonNullableFilter)
-], Content_typeWhereInput.prototype, "json", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
         nullable: true

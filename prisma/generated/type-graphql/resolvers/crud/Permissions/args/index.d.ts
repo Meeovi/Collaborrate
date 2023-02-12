@@ -1,5 +1,4 @@
 export { AggregatePermissionsArgs } from "./AggregatePermissionsArgs";
-export { CreateManyPermissionsArgs } from "./CreateManyPermissionsArgs";
 export { CreateOnePermissionsArgs } from "./CreateOnePermissionsArgs";
 export { DeleteManyPermissionsArgs } from "./DeleteManyPermissionsArgs";
 export { DeleteOnePermissionsArgs } from "./DeleteOnePermissionsArgs";

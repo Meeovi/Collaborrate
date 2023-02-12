@@ -48,6 +48,12 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
+], Upload_fileMinAggregate.prototype, "formats", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileMinAggregate.prototype, "hash", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
@@ -85,6 +91,12 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], Upload_fileMinAggregate.prototype, "provider", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], Upload_fileMinAggregate.prototype, "provider_metadata", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => TypeGraphQL.Int, {
         nullable: true

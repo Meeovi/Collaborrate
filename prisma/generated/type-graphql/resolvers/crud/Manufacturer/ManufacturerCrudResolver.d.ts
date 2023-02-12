@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateManufacturerArgs } from "./args/AggregateManufacturerArgs";
-import { CreateManyManufacturerArgs } from "./args/CreateManyManufacturerArgs";
 import { CreateOneManufacturerArgs } from "./args/CreateOneManufacturerArgs";
 import { DeleteManyManufacturerArgs } from "./args/DeleteManyManufacturerArgs";
 import { DeleteOneManufacturerArgs } from "./args/DeleteOneManufacturerArgs";
@@ -19,7 +18,6 @@ import { AggregateManufacturer } from "../../outputs/AggregateManufacturer";
 import { ManufacturerGroupBy } from "../../outputs/ManufacturerGroupBy";
 export declare class ManufacturerCrudResolver {
     aggregateManufacturer(ctx: any, info: GraphQLResolveInfo, args: AggregateManufacturerArgs): Promise<AggregateManufacturer>;
-    createManyManufacturer(ctx: any, info: GraphQLResolveInfo, args: CreateManyManufacturerArgs): Promise<AffectedRowsOutput>;
     createOneManufacturer(ctx: any, info: GraphQLResolveInfo, args: CreateOneManufacturerArgs): Promise<Manufacturer>;
     deleteManyManufacturer(ctx: any, info: GraphQLResolveInfo, args: DeleteManyManufacturerArgs): Promise<AffectedRowsOutput>;
     deleteOneManufacturer(ctx: any, info: GraphQLResolveInfo, args: DeleteOneManufacturerArgs): Promise<Manufacturer | null>;

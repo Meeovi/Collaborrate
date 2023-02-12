@@ -1,5 +1,4 @@
 export { AggregateCategoriesArgs } from "./AggregateCategoriesArgs";
-export { CreateManyCategoriesArgs } from "./CreateManyCategoriesArgs";
 export { CreateOneCategoriesArgs } from "./CreateOneCategoriesArgs";
 export { DeleteManyCategoriesArgs } from "./DeleteManyCategoriesArgs";
 export { DeleteOneCategoriesArgs } from "./DeleteOneCategoriesArgs";

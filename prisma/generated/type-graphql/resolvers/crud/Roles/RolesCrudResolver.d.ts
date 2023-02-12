@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateRolesArgs } from "./args/AggregateRolesArgs";
-import { CreateManyRolesArgs } from "./args/CreateManyRolesArgs";
 import { CreateOneRolesArgs } from "./args/CreateOneRolesArgs";
 import { DeleteManyRolesArgs } from "./args/DeleteManyRolesArgs";
 import { DeleteOneRolesArgs } from "./args/DeleteOneRolesArgs";
@@ -19,7 +18,6 @@ import { AggregateRoles } from "../../outputs/AggregateRoles";
 import { RolesGroupBy } from "../../outputs/RolesGroupBy";
 export declare class RolesCrudResolver {
     aggregateRoles(ctx: any, info: GraphQLResolveInfo, args: AggregateRolesArgs): Promise<AggregateRoles>;
-    createManyRoles(ctx: any, info: GraphQLResolveInfo, args: CreateManyRolesArgs): Promise<AffectedRowsOutput>;
     createOneRoles(ctx: any, info: GraphQLResolveInfo, args: CreateOneRolesArgs): Promise<Roles>;
     deleteManyRoles(ctx: any, info: GraphQLResolveInfo, args: DeleteManyRolesArgs): Promise<AffectedRowsOutput>;
     deleteOneRoles(ctx: any, info: GraphQLResolveInfo, args: DeleteOneRolesArgs): Promise<Roles | null>;

@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneChannelsArgs = exports.UpdateOneChannelsArgs = exports.UpdateManyChannelsArgs = exports.GroupByChannelsArgs = exports.FindUniqueChannelsOrThrowArgs = exports.FindUniqueChannelsArgs = exports.FindManyChannelsArgs = exports.FindFirstChannelsOrThrowArgs = exports.FindFirstChannelsArgs = exports.DeleteOneChannelsArgs = exports.DeleteManyChannelsArgs = exports.CreateOneChannelsArgs = exports.CreateManyChannelsArgs = exports.AggregateChannelsArgs = void 0;
+exports.UpsertOneChannelsArgs = exports.UpdateOneChannelsArgs = exports.UpdateManyChannelsArgs = exports.GroupByChannelsArgs = exports.FindUniqueChannelsOrThrowArgs = exports.FindUniqueChannelsArgs = exports.FindManyChannelsArgs = exports.FindFirstChannelsOrThrowArgs = exports.FindFirstChannelsArgs = exports.DeleteOneChannelsArgs = exports.DeleteManyChannelsArgs = exports.CreateOneChannelsArgs = exports.AggregateChannelsArgs = void 0;
 var AggregateChannelsArgs_1 = require("./AggregateChannelsArgs");
 Object.defineProperty(exports, "AggregateChannelsArgs", { enumerable: true, get: function () { return AggregateChannelsArgs_1.AggregateChannelsArgs; } });
-var CreateManyChannelsArgs_1 = require("./CreateManyChannelsArgs");
-Object.defineProperty(exports, "CreateManyChannelsArgs", { enumerable: true, get: function () { return CreateManyChannelsArgs_1.CreateManyChannelsArgs; } });
 var CreateOneChannelsArgs_1 = require("./CreateOneChannelsArgs");
 Object.defineProperty(exports, "CreateOneChannelsArgs", { enumerable: true, get: function () { return CreateOneChannelsArgs_1.CreateOneChannelsArgs; } });
 var DeleteManyChannelsArgs_1 = require("./DeleteManyChannelsArgs");

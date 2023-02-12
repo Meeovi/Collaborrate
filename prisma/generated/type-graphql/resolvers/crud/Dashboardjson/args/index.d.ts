@@ -1,5 +1,4 @@
 export { AggregateDashboardjsonArgs } from "./AggregateDashboardjsonArgs";
-export { CreateManyDashboardjsonArgs } from "./CreateManyDashboardjsonArgs";
 export { CreateOneDashboardjsonArgs } from "./CreateOneDashboardjsonArgs";
 export { DeleteManyDashboardjsonArgs } from "./DeleteManyDashboardjsonArgs";
 export { DeleteOneDashboardjsonArgs } from "./DeleteOneDashboardjsonArgs";

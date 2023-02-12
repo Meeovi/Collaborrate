@@ -1,5 +1,4 @@
 export { AggregateQuotesArgs } from "./AggregateQuotesArgs";
-export { CreateManyQuotesArgs } from "./CreateManyQuotesArgs";
 export { CreateOneQuotesArgs } from "./CreateOneQuotesArgs";
 export { DeleteManyQuotesArgs } from "./DeleteManyQuotesArgs";
 export { DeleteOneQuotesArgs } from "./DeleteOneQuotesArgs";

@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneProduct_typesArgs = exports.UpdateOneProduct_typesArgs = exports.UpdateManyProduct_typesArgs = exports.GroupByProduct_typesArgs = exports.FindUniqueProduct_typesOrThrowArgs = exports.FindUniqueProduct_typesArgs = exports.FindManyProduct_typesArgs = exports.FindFirstProduct_typesOrThrowArgs = exports.FindFirstProduct_typesArgs = exports.DeleteOneProduct_typesArgs = exports.DeleteManyProduct_typesArgs = exports.CreateOneProduct_typesArgs = exports.CreateManyProduct_typesArgs = exports.AggregateProduct_typesArgs = void 0;
+exports.UpsertOneProduct_typesArgs = exports.UpdateOneProduct_typesArgs = exports.UpdateManyProduct_typesArgs = exports.GroupByProduct_typesArgs = exports.FindUniqueProduct_typesOrThrowArgs = exports.FindUniqueProduct_typesArgs = exports.FindManyProduct_typesArgs = exports.FindFirstProduct_typesOrThrowArgs = exports.FindFirstProduct_typesArgs = exports.DeleteOneProduct_typesArgs = exports.DeleteManyProduct_typesArgs = exports.CreateOneProduct_typesArgs = exports.AggregateProduct_typesArgs = void 0;
 var AggregateProduct_typesArgs_1 = require("./AggregateProduct_typesArgs");
 Object.defineProperty(exports, "AggregateProduct_typesArgs", { enumerable: true, get: function () { return AggregateProduct_typesArgs_1.AggregateProduct_typesArgs; } });
-var CreateManyProduct_typesArgs_1 = require("./CreateManyProduct_typesArgs");
-Object.defineProperty(exports, "CreateManyProduct_typesArgs", { enumerable: true, get: function () { return CreateManyProduct_typesArgs_1.CreateManyProduct_typesArgs; } });
 var CreateOneProduct_typesArgs_1 = require("./CreateOneProduct_typesArgs");
 Object.defineProperty(exports, "CreateOneProduct_typesArgs", { enumerable: true, get: function () { return CreateOneProduct_typesArgs_1.CreateOneProduct_typesArgs; } });
 var DeleteManyProduct_typesArgs_1 = require("./DeleteManyProduct_typesArgs");

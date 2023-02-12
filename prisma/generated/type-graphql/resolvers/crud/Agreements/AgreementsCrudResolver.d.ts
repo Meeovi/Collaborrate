@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateAgreementsArgs } from "./args/AggregateAgreementsArgs";
-import { CreateManyAgreementsArgs } from "./args/CreateManyAgreementsArgs";
 import { CreateOneAgreementsArgs } from "./args/CreateOneAgreementsArgs";
 import { DeleteManyAgreementsArgs } from "./args/DeleteManyAgreementsArgs";
 import { DeleteOneAgreementsArgs } from "./args/DeleteOneAgreementsArgs";
@@ -19,7 +18,6 @@ import { AggregateAgreements } from "../../outputs/AggregateAgreements";
 import { AgreementsGroupBy } from "../../outputs/AgreementsGroupBy";
 export declare class AgreementsCrudResolver {
     aggregateAgreements(ctx: any, info: GraphQLResolveInfo, args: AggregateAgreementsArgs): Promise<AggregateAgreements>;
-    createManyAgreements(ctx: any, info: GraphQLResolveInfo, args: CreateManyAgreementsArgs): Promise<AffectedRowsOutput>;
     createOneAgreements(ctx: any, info: GraphQLResolveInfo, args: CreateOneAgreementsArgs): Promise<Agreements>;
     deleteManyAgreements(ctx: any, info: GraphQLResolveInfo, args: DeleteManyAgreementsArgs): Promise<AffectedRowsOutput>;
     deleteOneAgreements(ctx: any, info: GraphQLResolveInfo, args: DeleteOneAgreementsArgs): Promise<Agreements | null>;

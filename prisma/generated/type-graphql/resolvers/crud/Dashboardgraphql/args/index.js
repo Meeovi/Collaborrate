@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneDashboardgraphqlArgs = exports.UpdateOneDashboardgraphqlArgs = exports.UpdateManyDashboardgraphqlArgs = exports.GroupByDashboardgraphqlArgs = exports.FindUniqueDashboardgraphqlOrThrowArgs = exports.FindUniqueDashboardgraphqlArgs = exports.FindManyDashboardgraphqlArgs = exports.FindFirstDashboardgraphqlOrThrowArgs = exports.FindFirstDashboardgraphqlArgs = exports.DeleteOneDashboardgraphqlArgs = exports.DeleteManyDashboardgraphqlArgs = exports.CreateOneDashboardgraphqlArgs = exports.CreateManyDashboardgraphqlArgs = exports.AggregateDashboardgraphqlArgs = void 0;
+exports.UpsertOneDashboardgraphqlArgs = exports.UpdateOneDashboardgraphqlArgs = exports.UpdateManyDashboardgraphqlArgs = exports.GroupByDashboardgraphqlArgs = exports.FindUniqueDashboardgraphqlOrThrowArgs = exports.FindUniqueDashboardgraphqlArgs = exports.FindManyDashboardgraphqlArgs = exports.FindFirstDashboardgraphqlOrThrowArgs = exports.FindFirstDashboardgraphqlArgs = exports.DeleteOneDashboardgraphqlArgs = exports.DeleteManyDashboardgraphqlArgs = exports.CreateOneDashboardgraphqlArgs = exports.AggregateDashboardgraphqlArgs = void 0;
 var AggregateDashboardgraphqlArgs_1 = require("./AggregateDashboardgraphqlArgs");
 Object.defineProperty(exports, "AggregateDashboardgraphqlArgs", { enumerable: true, get: function () { return AggregateDashboardgraphqlArgs_1.AggregateDashboardgraphqlArgs; } });
-var CreateManyDashboardgraphqlArgs_1 = require("./CreateManyDashboardgraphqlArgs");
-Object.defineProperty(exports, "CreateManyDashboardgraphqlArgs", { enumerable: true, get: function () { return CreateManyDashboardgraphqlArgs_1.CreateManyDashboardgraphqlArgs; } });
 var CreateOneDashboardgraphqlArgs_1 = require("./CreateOneDashboardgraphqlArgs");
 Object.defineProperty(exports, "CreateOneDashboardgraphqlArgs", { enumerable: true, get: function () { return CreateOneDashboardgraphqlArgs_1.CreateOneDashboardgraphqlArgs; } });
 var DeleteManyDashboardgraphqlArgs_1 = require("./DeleteManyDashboardgraphqlArgs");

@@ -5,7 +5,7 @@ export declare class Upload_fileCreateInput {
     caption?: string | undefined;
     width?: number | undefined;
     height?: number | undefined;
-    formats?: Prisma.InputJsonValue | undefined;
+    formats?: string | undefined;
     hash: string;
     ext?: string | undefined;
     mime: string;
@@ -13,7 +13,7 @@ export declare class Upload_fileCreateInput {
     url: string;
     previewUrl?: string | undefined;
     provider: string;
-    provider_metadata?: Prisma.InputJsonValue | undefined;
+    provider_metadata?: string | undefined;
     created_by?: number | undefined;
     updated_by?: number | undefined;
     created_at?: Date | undefined;

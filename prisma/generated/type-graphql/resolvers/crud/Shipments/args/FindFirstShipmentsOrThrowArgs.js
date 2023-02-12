@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindFirstShipmentsOrThrowArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const ShipmentsOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/ShipmentsOrderByWithRelationAndSearchRelevanceInput");
+const ShipmentsOrderByWithRelationInput_1 = require("../../../inputs/ShipmentsOrderByWithRelationInput");
 const ShipmentsWhereInput_1 = require("../../../inputs/ShipmentsWhereInput");
 const ShipmentsWhereUniqueInput_1 = require("../../../inputs/ShipmentsWhereUniqueInput");
 const ShipmentsScalarFieldEnum_1 = require("../../../../enums/ShipmentsScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", ShipmentsWhereInput_1.ShipmentsWhereInput)
 ], FindFirstShipmentsOrThrowArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [ShipmentsOrderByWithRelationAndSearchRelevanceInput_1.ShipmentsOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [ShipmentsOrderByWithRelationInput_1.ShipmentsOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

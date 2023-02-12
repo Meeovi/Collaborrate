@@ -1,9 +1,9 @@
-import { Upload_fileOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/Upload_fileOrderByWithRelationAndSearchRelevanceInput";
+import { Upload_fileOrderByWithRelationInput } from "../../../inputs/Upload_fileOrderByWithRelationInput";
 import { Upload_fileWhereInput } from "../../../inputs/Upload_fileWhereInput";
 import { Upload_fileWhereUniqueInput } from "../../../inputs/Upload_fileWhereUniqueInput";
 export declare class FindFirstUpload_fileOrThrowArgs {
     where?: Upload_fileWhereInput | undefined;
-    orderBy?: Upload_fileOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: Upload_fileOrderByWithRelationInput[] | undefined;
     cursor?: Upload_fileWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

@@ -1,5 +1,4 @@
 export { AggregateInvoicesArgs } from "./AggregateInvoicesArgs";
-export { CreateManyInvoicesArgs } from "./CreateManyInvoicesArgs";
 export { CreateOneInvoicesArgs } from "./CreateOneInvoicesArgs";
 export { DeleteManyInvoicesArgs } from "./DeleteManyInvoicesArgs";
 export { DeleteOneInvoicesArgs } from "./DeleteOneInvoicesArgs";

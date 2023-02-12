@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneMediamanagerArgs = exports.UpdateOneMediamanagerArgs = exports.UpdateManyMediamanagerArgs = exports.GroupByMediamanagerArgs = exports.FindUniqueMediamanagerOrThrowArgs = exports.FindUniqueMediamanagerArgs = exports.FindManyMediamanagerArgs = exports.FindFirstMediamanagerOrThrowArgs = exports.FindFirstMediamanagerArgs = exports.DeleteOneMediamanagerArgs = exports.DeleteManyMediamanagerArgs = exports.CreateOneMediamanagerArgs = exports.CreateManyMediamanagerArgs = exports.AggregateMediamanagerArgs = void 0;
+exports.UpsertOneMediamanagerArgs = exports.UpdateOneMediamanagerArgs = exports.UpdateManyMediamanagerArgs = exports.GroupByMediamanagerArgs = exports.FindUniqueMediamanagerOrThrowArgs = exports.FindUniqueMediamanagerArgs = exports.FindManyMediamanagerArgs = exports.FindFirstMediamanagerOrThrowArgs = exports.FindFirstMediamanagerArgs = exports.DeleteOneMediamanagerArgs = exports.DeleteManyMediamanagerArgs = exports.CreateOneMediamanagerArgs = exports.AggregateMediamanagerArgs = void 0;
 var AggregateMediamanagerArgs_1 = require("./AggregateMediamanagerArgs");
 Object.defineProperty(exports, "AggregateMediamanagerArgs", { enumerable: true, get: function () { return AggregateMediamanagerArgs_1.AggregateMediamanagerArgs; } });
-var CreateManyMediamanagerArgs_1 = require("./CreateManyMediamanagerArgs");
-Object.defineProperty(exports, "CreateManyMediamanagerArgs", { enumerable: true, get: function () { return CreateManyMediamanagerArgs_1.CreateManyMediamanagerArgs; } });
 var CreateOneMediamanagerArgs_1 = require("./CreateOneMediamanagerArgs");
 Object.defineProperty(exports, "CreateOneMediamanagerArgs", { enumerable: true, get: function () { return CreateOneMediamanagerArgs_1.CreateOneMediamanagerArgs; } });
 var DeleteManyMediamanagerArgs_1 = require("./DeleteManyMediamanagerArgs");

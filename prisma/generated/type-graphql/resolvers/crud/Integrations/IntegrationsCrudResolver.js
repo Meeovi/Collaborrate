@@ -4,7 +4,6 @@ exports.IntegrationsCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateIntegrationsArgs_1 = require("./args/AggregateIntegrationsArgs");
-const CreateManyIntegrationsArgs_1 = require("./args/CreateManyIntegrationsArgs");
 const CreateOneIntegrationsArgs_1 = require("./args/CreateOneIntegrationsArgs");
 const DeleteManyIntegrationsArgs_1 = require("./args/DeleteManyIntegrationsArgs");
 const DeleteOneIntegrationsArgs_1 = require("./args/DeleteOneIntegrationsArgs");
@@ -27,13 +26,6 @@ let IntegrationsCrudResolver = class IntegrationsCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).integrations.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyIntegrations(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).integrations.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneIntegrations(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateIntegrationsArgs_1.AggregateIntegrationsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], IntegrationsCrudResolver.prototype, "aggregateIntegrations", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyIntegrationsArgs_1.CreateManyIntegrationsArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], IntegrationsCrudResolver.prototype, "createManyIntegrations", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Integrations_1.Integrations, {
         nullable: false

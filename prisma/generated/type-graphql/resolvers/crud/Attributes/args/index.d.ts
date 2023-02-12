@@ -1,5 +1,4 @@
 export { AggregateAttributesArgs } from "./AggregateAttributesArgs";
-export { CreateManyAttributesArgs } from "./CreateManyAttributesArgs";
 export { CreateOneAttributesArgs } from "./CreateOneAttributesArgs";
 export { DeleteManyAttributesArgs } from "./DeleteManyAttributesArgs";
 export { DeleteOneAttributesArgs } from "./DeleteOneAttributesArgs";

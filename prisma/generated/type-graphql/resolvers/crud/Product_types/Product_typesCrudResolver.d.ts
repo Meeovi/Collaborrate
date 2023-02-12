@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateProduct_typesArgs } from "./args/AggregateProduct_typesArgs";
-import { CreateManyProduct_typesArgs } from "./args/CreateManyProduct_typesArgs";
 import { CreateOneProduct_typesArgs } from "./args/CreateOneProduct_typesArgs";
 import { DeleteManyProduct_typesArgs } from "./args/DeleteManyProduct_typesArgs";
 import { DeleteOneProduct_typesArgs } from "./args/DeleteOneProduct_typesArgs";
@@ -19,7 +18,6 @@ import { AggregateProduct_types } from "../../outputs/AggregateProduct_types";
 import { Product_typesGroupBy } from "../../outputs/Product_typesGroupBy";
 export declare class Product_typesCrudResolver {
     aggregateProduct_types(ctx: any, info: GraphQLResolveInfo, args: AggregateProduct_typesArgs): Promise<AggregateProduct_types>;
-    createManyProduct_types(ctx: any, info: GraphQLResolveInfo, args: CreateManyProduct_typesArgs): Promise<AffectedRowsOutput>;
     createOneProduct_types(ctx: any, info: GraphQLResolveInfo, args: CreateOneProduct_typesArgs): Promise<Product_types>;
     deleteManyProduct_types(ctx: any, info: GraphQLResolveInfo, args: DeleteManyProduct_typesArgs): Promise<AffectedRowsOutput>;
     deleteOneProduct_types(ctx: any, info: GraphQLResolveInfo, args: DeleteOneProduct_typesArgs): Promise<Product_types | null>;

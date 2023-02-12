@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneUpload_fileArgs = exports.UpdateOneUpload_fileArgs = exports.UpdateManyUpload_fileArgs = exports.GroupByUpload_fileArgs = exports.FindUniqueUpload_fileOrThrowArgs = exports.FindUniqueUpload_fileArgs = exports.FindManyUpload_fileArgs = exports.FindFirstUpload_fileOrThrowArgs = exports.FindFirstUpload_fileArgs = exports.DeleteOneUpload_fileArgs = exports.DeleteManyUpload_fileArgs = exports.CreateOneUpload_fileArgs = exports.CreateManyUpload_fileArgs = exports.AggregateUpload_fileArgs = void 0;
+exports.UpsertOneUpload_fileArgs = exports.UpdateOneUpload_fileArgs = exports.UpdateManyUpload_fileArgs = exports.GroupByUpload_fileArgs = exports.FindUniqueUpload_fileOrThrowArgs = exports.FindUniqueUpload_fileArgs = exports.FindManyUpload_fileArgs = exports.FindFirstUpload_fileOrThrowArgs = exports.FindFirstUpload_fileArgs = exports.DeleteOneUpload_fileArgs = exports.DeleteManyUpload_fileArgs = exports.CreateOneUpload_fileArgs = exports.AggregateUpload_fileArgs = void 0;
 var AggregateUpload_fileArgs_1 = require("./AggregateUpload_fileArgs");
 Object.defineProperty(exports, "AggregateUpload_fileArgs", { enumerable: true, get: function () { return AggregateUpload_fileArgs_1.AggregateUpload_fileArgs; } });
-var CreateManyUpload_fileArgs_1 = require("./CreateManyUpload_fileArgs");
-Object.defineProperty(exports, "CreateManyUpload_fileArgs", { enumerable: true, get: function () { return CreateManyUpload_fileArgs_1.CreateManyUpload_fileArgs; } });
 var CreateOneUpload_fileArgs_1 = require("./CreateOneUpload_fileArgs");
 Object.defineProperty(exports, "CreateOneUpload_fileArgs", { enumerable: true, get: function () { return CreateOneUpload_fileArgs_1.CreateOneUpload_fileArgs; } });
 var DeleteManyUpload_fileArgs_1 = require("./DeleteManyUpload_fileArgs");

@@ -1,9 +1,9 @@
-import { DashboardslidesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/DashboardslidesOrderByWithRelationAndSearchRelevanceInput";
+import { DashboardslidesOrderByWithRelationInput } from "../../../inputs/DashboardslidesOrderByWithRelationInput";
 import { DashboardslidesWhereInput } from "../../../inputs/DashboardslidesWhereInput";
 import { DashboardslidesWhereUniqueInput } from "../../../inputs/DashboardslidesWhereUniqueInput";
 export declare class FindManyDashboardslidesArgs {
     where?: DashboardslidesWhereInput | undefined;
-    orderBy?: DashboardslidesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: DashboardslidesOrderByWithRelationInput[] | undefined;
     cursor?: DashboardslidesWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

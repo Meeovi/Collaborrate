@@ -1,5 +1,4 @@
 export { AggregateCitiesArgs } from "./AggregateCitiesArgs";
-export { CreateManyCitiesArgs } from "./CreateManyCitiesArgs";
 export { CreateOneCitiesArgs } from "./CreateOneCitiesArgs";
 export { DeleteManyCitiesArgs } from "./DeleteManyCitiesArgs";
 export { DeleteOneCitiesArgs } from "./DeleteOneCitiesArgs";

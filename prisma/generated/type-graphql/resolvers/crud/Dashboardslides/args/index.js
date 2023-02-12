@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneDashboardslidesArgs = exports.UpdateOneDashboardslidesArgs = exports.UpdateManyDashboardslidesArgs = exports.GroupByDashboardslidesArgs = exports.FindUniqueDashboardslidesOrThrowArgs = exports.FindUniqueDashboardslidesArgs = exports.FindManyDashboardslidesArgs = exports.FindFirstDashboardslidesOrThrowArgs = exports.FindFirstDashboardslidesArgs = exports.DeleteOneDashboardslidesArgs = exports.DeleteManyDashboardslidesArgs = exports.CreateOneDashboardslidesArgs = exports.CreateManyDashboardslidesArgs = exports.AggregateDashboardslidesArgs = void 0;
+exports.UpsertOneDashboardslidesArgs = exports.UpdateOneDashboardslidesArgs = exports.UpdateManyDashboardslidesArgs = exports.GroupByDashboardslidesArgs = exports.FindUniqueDashboardslidesOrThrowArgs = exports.FindUniqueDashboardslidesArgs = exports.FindManyDashboardslidesArgs = exports.FindFirstDashboardslidesOrThrowArgs = exports.FindFirstDashboardslidesArgs = exports.DeleteOneDashboardslidesArgs = exports.DeleteManyDashboardslidesArgs = exports.CreateOneDashboardslidesArgs = exports.AggregateDashboardslidesArgs = void 0;
 var AggregateDashboardslidesArgs_1 = require("./AggregateDashboardslidesArgs");
 Object.defineProperty(exports, "AggregateDashboardslidesArgs", { enumerable: true, get: function () { return AggregateDashboardslidesArgs_1.AggregateDashboardslidesArgs; } });
-var CreateManyDashboardslidesArgs_1 = require("./CreateManyDashboardslidesArgs");
-Object.defineProperty(exports, "CreateManyDashboardslidesArgs", { enumerable: true, get: function () { return CreateManyDashboardslidesArgs_1.CreateManyDashboardslidesArgs; } });
 var CreateOneDashboardslidesArgs_1 = require("./CreateOneDashboardslidesArgs");
 Object.defineProperty(exports, "CreateOneDashboardslidesArgs", { enumerable: true, get: function () { return CreateOneDashboardslidesArgs_1.CreateOneDashboardslidesArgs; } });
 var DeleteManyDashboardslidesArgs_1 = require("./DeleteManyDashboardslidesArgs");

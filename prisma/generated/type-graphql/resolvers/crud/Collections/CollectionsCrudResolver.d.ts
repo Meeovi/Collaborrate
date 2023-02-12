@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateCollectionsArgs } from "./args/AggregateCollectionsArgs";
-import { CreateManyCollectionsArgs } from "./args/CreateManyCollectionsArgs";
 import { CreateOneCollectionsArgs } from "./args/CreateOneCollectionsArgs";
 import { DeleteManyCollectionsArgs } from "./args/DeleteManyCollectionsArgs";
 import { DeleteOneCollectionsArgs } from "./args/DeleteOneCollectionsArgs";
@@ -19,7 +18,6 @@ import { AggregateCollections } from "../../outputs/AggregateCollections";
 import { CollectionsGroupBy } from "../../outputs/CollectionsGroupBy";
 export declare class CollectionsCrudResolver {
     aggregateCollections(ctx: any, info: GraphQLResolveInfo, args: AggregateCollectionsArgs): Promise<AggregateCollections>;
-    createManyCollections(ctx: any, info: GraphQLResolveInfo, args: CreateManyCollectionsArgs): Promise<AffectedRowsOutput>;
     createOneCollections(ctx: any, info: GraphQLResolveInfo, args: CreateOneCollectionsArgs): Promise<Collections>;
     deleteManyCollections(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCollectionsArgs): Promise<AffectedRowsOutput>;
     deleteOneCollections(ctx: any, info: GraphQLResolveInfo, args: DeleteOneCollectionsArgs): Promise<Collections | null>;

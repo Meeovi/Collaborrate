@@ -1,5 +1,4 @@
 export { AggregateDashboardrestapiArgs } from "./AggregateDashboardrestapiArgs";
-export { CreateManyDashboardrestapiArgs } from "./CreateManyDashboardrestapiArgs";
 export { CreateOneDashboardrestapiArgs } from "./CreateOneDashboardrestapiArgs";
 export { DeleteManyDashboardrestapiArgs } from "./DeleteManyDashboardrestapiArgs";
 export { DeleteOneDashboardrestapiArgs } from "./DeleteOneDashboardrestapiArgs";

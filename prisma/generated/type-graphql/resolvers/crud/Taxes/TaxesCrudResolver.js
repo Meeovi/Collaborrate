@@ -4,7 +4,6 @@ exports.TaxesCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateTaxesArgs_1 = require("./args/AggregateTaxesArgs");
-const CreateManyTaxesArgs_1 = require("./args/CreateManyTaxesArgs");
 const CreateOneTaxesArgs_1 = require("./args/CreateOneTaxesArgs");
 const DeleteManyTaxesArgs_1 = require("./args/DeleteManyTaxesArgs");
 const DeleteOneTaxesArgs_1 = require("./args/DeleteOneTaxesArgs");
@@ -27,13 +26,6 @@ let TaxesCrudResolver = class TaxesCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).taxes.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyTaxes(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).taxes.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneTaxes(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateTaxesArgs_1.AggregateTaxesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], TaxesCrudResolver.prototype, "aggregateTaxes", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyTaxesArgs_1.CreateManyTaxesArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], TaxesCrudResolver.prototype, "createManyTaxes", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Taxes_1.Taxes, {
         nullable: false

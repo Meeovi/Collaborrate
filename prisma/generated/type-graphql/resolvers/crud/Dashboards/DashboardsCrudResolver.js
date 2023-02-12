@@ -4,7 +4,6 @@ exports.DashboardsCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateDashboardsArgs_1 = require("./args/AggregateDashboardsArgs");
-const CreateManyDashboardsArgs_1 = require("./args/CreateManyDashboardsArgs");
 const CreateOneDashboardsArgs_1 = require("./args/CreateOneDashboardsArgs");
 const DeleteManyDashboardsArgs_1 = require("./args/DeleteManyDashboardsArgs");
 const DeleteOneDashboardsArgs_1 = require("./args/DeleteOneDashboardsArgs");
@@ -27,13 +26,6 @@ let DashboardsCrudResolver = class DashboardsCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).dashboards.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyDashboards(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).dashboards.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneDashboards(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateDashboardsArgs_1.AggregateDashboardsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], DashboardsCrudResolver.prototype, "aggregateDashboards", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyDashboardsArgs_1.CreateManyDashboardsArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], DashboardsCrudResolver.prototype, "createManyDashboards", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Dashboards_1.Dashboards, {
         nullable: false

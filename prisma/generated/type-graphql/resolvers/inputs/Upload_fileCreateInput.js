@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Upload_fileCreateInput = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const GraphQLScalars = tslib_1.__importStar(require("graphql-scalars"));
 const client_1 = require("@prisma/client");
 const scalars_1 = require("../../scalars");
 let Upload_fileCreateInput = class Upload_fileCreateInput {
@@ -39,10 +38,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", Number)
 ], Upload_fileCreateInput.prototype, "height", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
+    TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", Object)
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileCreateInput.prototype, "formats", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
@@ -87,10 +86,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], Upload_fileCreateInput.prototype, "provider", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
+    TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", Object)
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileCreateInput.prototype, "provider_metadata", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => TypeGraphQL.Int, {

@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateDashboardsArgs } from "./args/AggregateDashboardsArgs";
-import { CreateManyDashboardsArgs } from "./args/CreateManyDashboardsArgs";
 import { CreateOneDashboardsArgs } from "./args/CreateOneDashboardsArgs";
 import { DeleteManyDashboardsArgs } from "./args/DeleteManyDashboardsArgs";
 import { DeleteOneDashboardsArgs } from "./args/DeleteOneDashboardsArgs";
@@ -19,7 +18,6 @@ import { AggregateDashboards } from "../../outputs/AggregateDashboards";
 import { DashboardsGroupBy } from "../../outputs/DashboardsGroupBy";
 export declare class DashboardsCrudResolver {
     aggregateDashboards(ctx: any, info: GraphQLResolveInfo, args: AggregateDashboardsArgs): Promise<AggregateDashboards>;
-    createManyDashboards(ctx: any, info: GraphQLResolveInfo, args: CreateManyDashboardsArgs): Promise<AffectedRowsOutput>;
     createOneDashboards(ctx: any, info: GraphQLResolveInfo, args: CreateOneDashboardsArgs): Promise<Dashboards>;
     deleteManyDashboards(ctx: any, info: GraphQLResolveInfo, args: DeleteManyDashboardsArgs): Promise<AffectedRowsOutput>;
     deleteOneDashboards(ctx: any, info: GraphQLResolveInfo, args: DeleteOneDashboardsArgs): Promise<Dashboards | null>;

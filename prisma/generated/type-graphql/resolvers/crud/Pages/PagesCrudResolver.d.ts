@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregatePagesArgs } from "./args/AggregatePagesArgs";
-import { CreateManyPagesArgs } from "./args/CreateManyPagesArgs";
 import { CreateOnePagesArgs } from "./args/CreateOnePagesArgs";
 import { DeleteManyPagesArgs } from "./args/DeleteManyPagesArgs";
 import { DeleteOnePagesArgs } from "./args/DeleteOnePagesArgs";
@@ -19,7 +18,6 @@ import { AggregatePages } from "../../outputs/AggregatePages";
 import { PagesGroupBy } from "../../outputs/PagesGroupBy";
 export declare class PagesCrudResolver {
     aggregatePages(ctx: any, info: GraphQLResolveInfo, args: AggregatePagesArgs): Promise<AggregatePages>;
-    createManyPages(ctx: any, info: GraphQLResolveInfo, args: CreateManyPagesArgs): Promise<AffectedRowsOutput>;
     createOnePages(ctx: any, info: GraphQLResolveInfo, args: CreateOnePagesArgs): Promise<Pages>;
     deleteManyPages(ctx: any, info: GraphQLResolveInfo, args: DeleteManyPagesArgs): Promise<AffectedRowsOutput>;
     deleteOnePages(ctx: any, info: GraphQLResolveInfo, args: DeleteOnePagesArgs): Promise<Pages | null>;

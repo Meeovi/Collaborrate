@@ -1,5 +1,4 @@
 export { AggregateApitokenArgs } from "./AggregateApitokenArgs";
-export { CreateManyApitokenArgs } from "./CreateManyApitokenArgs";
 export { CreateOneApitokenArgs } from "./CreateOneApitokenArgs";
 export { DeleteManyApitokenArgs } from "./DeleteManyApitokenArgs";
 export { DeleteOneApitokenArgs } from "./DeleteOneApitokenArgs";

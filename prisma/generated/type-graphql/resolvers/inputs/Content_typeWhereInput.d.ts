@@ -1,8 +1,7 @@
 import { BigIntFilter } from "../inputs/BigIntFilter";
 import { BoolNullableFilter } from "../inputs/BoolNullableFilter";
 import { DateTimeNullableFilter } from "../inputs/DateTimeNullableFilter";
-import { DecimalNullableFilter } from "../inputs/DecimalNullableFilter";
-import { JsonNullableFilter } from "../inputs/JsonNullableFilter";
+import { IntNullableFilter } from "../inputs/IntNullableFilter";
 import { StringNullableFilter } from "../inputs/StringNullableFilter";
 export declare class Content_typeWhereInput {
     AND?: Content_typeWhereInput[] | undefined;
@@ -11,8 +10,7 @@ export declare class Content_typeWhereInput {
     id?: BigIntFilter | undefined;
     created_at?: DateTimeNullableFilter | undefined;
     text?: StringNullableFilter | undefined;
-    number?: DecimalNullableFilter | undefined;
-    json?: JsonNullableFilter | undefined;
+    number?: IntNullableFilter | undefined;
     link?: StringNullableFilter | undefined;
     email?: StringNullableFilter | undefined;
     uid?: StringNullableFilter | undefined;

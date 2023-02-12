@@ -4,7 +4,6 @@ exports.DashboardrestapiCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateDashboardrestapiArgs_1 = require("./args/AggregateDashboardrestapiArgs");
-const CreateManyDashboardrestapiArgs_1 = require("./args/CreateManyDashboardrestapiArgs");
 const CreateOneDashboardrestapiArgs_1 = require("./args/CreateOneDashboardrestapiArgs");
 const DeleteManyDashboardrestapiArgs_1 = require("./args/DeleteManyDashboardrestapiArgs");
 const DeleteOneDashboardrestapiArgs_1 = require("./args/DeleteOneDashboardrestapiArgs");
@@ -27,13 +26,6 @@ let DashboardrestapiCrudResolver = class DashboardrestapiCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).dashboardrestapi.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyDashboardrestapi(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).dashboardrestapi.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneDashboardrestapi(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateDashboardrestapiArgs_1.AggregateDashboardrestapiArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], DashboardrestapiCrudResolver.prototype, "aggregateDashboardrestapi", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyDashboardrestapiArgs_1.CreateManyDashboardrestapiArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], DashboardrestapiCrudResolver.prototype, "createManyDashboardrestapi", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Dashboardrestapi_1.Dashboardrestapi, {
         nullable: false

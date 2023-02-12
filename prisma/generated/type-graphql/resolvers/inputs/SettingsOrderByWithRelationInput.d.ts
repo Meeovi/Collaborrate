@@ -1,0 +1,36 @@
+import { SortOrderInput } from "../inputs/SortOrderInput";
+export declare class SettingsOrderByWithRelationInput {
+    id?: "asc" | "desc" | undefined;
+    created_at?: SortOrderInput | undefined;
+    store_name?: SortOrderInput | undefined;
+    store_phone?: SortOrderInput | undefined;
+    store_hours?: SortOrderInput | undefined;
+    country?: SortOrderInput | undefined;
+    region?: SortOrderInput | undefined;
+    zipcode?: SortOrderInput | undefined;
+    city?: SortOrderInput | undefined;
+    address?: SortOrderInput | undefined;
+    address_two?: SortOrderInput | undefined;
+    vat_number?: SortOrderInput | undefined;
+    allow_state?: SortOrderInput | undefined;
+    state_required_for?: SortOrderInput | undefined;
+    allow_countries?: SortOrderInput | undefined;
+    default_country?: SortOrderInput | undefined;
+    optional_zip?: SortOrderInput | undefined;
+    european_union_countries?: SortOrderInput | undefined;
+    top_destinations?: SortOrderInput | undefined;
+    base_currency?: SortOrderInput | undefined;
+    default_currency?: SortOrderInput | undefined;
+    allowed_currency?: SortOrderInput | undefined;
+    siteName?: SortOrderInput | undefined;
+    siteWebsite?: SortOrderInput | undefined;
+    sentryDsn?: SortOrderInput | undefined;
+    awsS3?: SortOrderInput | undefined;
+    databaseUrl?: SortOrderInput | undefined;
+    isPublic?: SortOrderInput | undefined;
+    type?: SortOrderInput | undefined;
+    googleAnalytics?: SortOrderInput | undefined;
+    searchSetting?: SortOrderInput | undefined;
+    mailServer?: SortOrderInput | undefined;
+    siteTagline?: SortOrderInput | undefined;
+}

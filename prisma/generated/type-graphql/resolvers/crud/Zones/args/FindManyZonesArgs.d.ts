@@ -1,9 +1,9 @@
-import { ZonesOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ZonesOrderByWithRelationAndSearchRelevanceInput";
+import { ZonesOrderByWithRelationInput } from "../../../inputs/ZonesOrderByWithRelationInput";
 import { ZonesWhereInput } from "../../../inputs/ZonesWhereInput";
 import { ZonesWhereUniqueInput } from "../../../inputs/ZonesWhereUniqueInput";
 export declare class FindManyZonesArgs {
     where?: ZonesWhereInput | undefined;
-    orderBy?: ZonesOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: ZonesOrderByWithRelationInput[] | undefined;
     cursor?: ZonesWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

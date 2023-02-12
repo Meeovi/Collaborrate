@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateInternalizationArgs } from "./args/AggregateInternalizationArgs";
-import { CreateManyInternalizationArgs } from "./args/CreateManyInternalizationArgs";
 import { CreateOneInternalizationArgs } from "./args/CreateOneInternalizationArgs";
 import { DeleteManyInternalizationArgs } from "./args/DeleteManyInternalizationArgs";
 import { DeleteOneInternalizationArgs } from "./args/DeleteOneInternalizationArgs";
@@ -19,7 +18,6 @@ import { AggregateInternalization } from "../../outputs/AggregateInternalization
 import { InternalizationGroupBy } from "../../outputs/InternalizationGroupBy";
 export declare class InternalizationCrudResolver {
     aggregateInternalization(ctx: any, info: GraphQLResolveInfo, args: AggregateInternalizationArgs): Promise<AggregateInternalization>;
-    createManyInternalization(ctx: any, info: GraphQLResolveInfo, args: CreateManyInternalizationArgs): Promise<AffectedRowsOutput>;
     createOneInternalization(ctx: any, info: GraphQLResolveInfo, args: CreateOneInternalizationArgs): Promise<Internalization>;
     deleteManyInternalization(ctx: any, info: GraphQLResolveInfo, args: DeleteManyInternalizationArgs): Promise<AffectedRowsOutput>;
     deleteOneInternalization(ctx: any, info: GraphQLResolveInfo, args: DeleteOneInternalizationArgs): Promise<Internalization | null>;

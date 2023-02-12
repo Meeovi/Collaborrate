@@ -1,6 +1,6 @@
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["fullTextSearch", "fullTextIndex", "metrics"]
+  previewFeatures = ["fullTextSearch", "fullTextIndex", "metrics", "orderByNulls", "clientExtensions", "deno", "extendedWhereUnique", "fieldReference", "filteredRelationCount", "multiSchema", "postgresqlExtensions", "tracing"]
 }
 
 generator typegraphql {
@@ -15,8 +15,8 @@ generator docs {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = "file:./server/config/database/main.db"
 }
 
 model apitoken {
@@ -213,7 +213,7 @@ model product_types {
 }
 
 model templates {
-  id            BigInt    @id(map: "pdf_templates_pkey") @default(autoincrement())
+  id            BigInt    @id @default(autoincrement())
   created_at    DateTime? @default(now())
   name          String?
   assigned_to   String?
@@ -506,7 +506,7 @@ model zones {
 }
 
 model attributes {
-  id                                Int      @id(map: "product_attribute_pkey") @default(autoincrement())
+  id                                Int      @id @default(autoincrement())
   default_label                     String?
   attribute_code                    String?
   filter_options                    String?
@@ -533,7 +533,7 @@ model attributes {
 }
 
 model vendors {
-  id                Int     @id(map: "shops_pkey") @default(autoincrement())
+  id                Int    @id @default(autoincrement())
   name              String
   description       String?
   image             String?
@@ -564,7 +564,7 @@ model vendors {
 }
 
 model discounts {
-  id             BigInt    @id(map: "gift_certificates_pkey") @default(autoincrement())
+  id             BigInt    @id @default(autoincrement())
   name           String
   excerpt        String?
   discount       String?
@@ -588,7 +588,7 @@ model discounts {
 }
 
 model taxes {
-  id             Int     @id(map: "tax_rate_pkey") @default(autoincrement())
+  id             Int     @id @default(autoincrement())
   tax_identifier String
   postcode       String?
   state          String?
@@ -623,13 +623,12 @@ model content_type {
   id            BigInt    @id @default(autoincrement())
   created_at    DateTime? @default(now())
   text          String?
-  number        Decimal?  @db.Decimal(10, 0)
-  json          Json?
+  number        Int?  
   link          String?
   email         String?
   uid           String?
-  date          DateTime? @db.Date
-  time          DateTime? @db.Time(6)
+  date          DateTime? 
+  time          DateTime? 
   timestamp     DateTime?
   boolean       Boolean?
   rich_text     String?
@@ -774,7 +773,7 @@ model pages {
   meta_title       String?
   meta_keywords    String?
   meta_description String?
-  created_at       DateTime? @db.Timestamptz(6)
+  created_at       DateTime? 
 }
 
 model permissions {
@@ -862,15 +861,15 @@ model upload_file {
   caption           String?
   width             Int?
   height            Int?
-  formats           Json?
+  formats           String?
   hash              String
   ext               String?
   mime              String
-  size              Decimal   @db.Decimal(10, 2)
+  size              Decimal   
   url               String
   previewUrl        String?
   provider          String
-  provider_metadata Json?
+  provider_metadata String?
   created_by        Int?
   updated_by        Int?
   created_at        DateTime? @default(now())
@@ -905,7 +904,7 @@ model webhooks {
 }
 
 model settings {
-  id                       BigInt    @id(map: "shop_settings_pkey") @default(autoincrement())
+  id                       BigInt    @id @default(autoincrement())
   created_at               DateTime? @default(now())
   store_name               String?
   store_phone              String?
@@ -942,7 +941,7 @@ model settings {
 
 model logIn {
   id         BigInt    @id @default(autoincrement())
-  created_at DateTime? @default(now()) @db.Timestamptz(6)
+  created_at DateTime? @default(now())
   email      String?
   password   String?
   token      String?

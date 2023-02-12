@@ -4,7 +4,6 @@ exports.InternalizationCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateInternalizationArgs_1 = require("./args/AggregateInternalizationArgs");
-const CreateManyInternalizationArgs_1 = require("./args/CreateManyInternalizationArgs");
 const CreateOneInternalizationArgs_1 = require("./args/CreateOneInternalizationArgs");
 const DeleteManyInternalizationArgs_1 = require("./args/DeleteManyInternalizationArgs");
 const DeleteOneInternalizationArgs_1 = require("./args/DeleteOneInternalizationArgs");
@@ -27,13 +26,6 @@ let InternalizationCrudResolver = class InternalizationCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).internalization.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyInternalization(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).internalization.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneInternalization(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateInternalizationArgs_1.AggregateInternalizationArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], InternalizationCrudResolver.prototype, "aggregateInternalization", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyInternalizationArgs_1.CreateManyInternalizationArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], InternalizationCrudResolver.prototype, "createManyInternalization", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Internalization_1.Internalization, {
         nullable: false

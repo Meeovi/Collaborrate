@@ -1,5 +1,4 @@
 export { AggregateWishlistsArgs } from "./AggregateWishlistsArgs";
-export { CreateManyWishlistsArgs } from "./CreateManyWishlistsArgs";
 export { CreateOneWishlistsArgs } from "./CreateOneWishlistsArgs";
 export { DeleteManyWishlistsArgs } from "./DeleteManyWishlistsArgs";
 export { DeleteOneWishlistsArgs } from "./DeleteOneWishlistsArgs";

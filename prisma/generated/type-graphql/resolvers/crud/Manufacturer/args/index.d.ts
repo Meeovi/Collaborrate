@@ -1,5 +1,4 @@
 export { AggregateManufacturerArgs } from "./AggregateManufacturerArgs";
-export { CreateManyManufacturerArgs } from "./CreateManyManufacturerArgs";
 export { CreateOneManufacturerArgs } from "./CreateOneManufacturerArgs";
 export { DeleteManyManufacturerArgs } from "./DeleteManyManufacturerArgs";
 export { DeleteOneManufacturerArgs } from "./DeleteOneManufacturerArgs";

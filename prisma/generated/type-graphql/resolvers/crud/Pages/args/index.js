@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOnePagesArgs = exports.UpdateOnePagesArgs = exports.UpdateManyPagesArgs = exports.GroupByPagesArgs = exports.FindUniquePagesOrThrowArgs = exports.FindUniquePagesArgs = exports.FindManyPagesArgs = exports.FindFirstPagesOrThrowArgs = exports.FindFirstPagesArgs = exports.DeleteOnePagesArgs = exports.DeleteManyPagesArgs = exports.CreateOnePagesArgs = exports.CreateManyPagesArgs = exports.AggregatePagesArgs = void 0;
+exports.UpsertOnePagesArgs = exports.UpdateOnePagesArgs = exports.UpdateManyPagesArgs = exports.GroupByPagesArgs = exports.FindUniquePagesOrThrowArgs = exports.FindUniquePagesArgs = exports.FindManyPagesArgs = exports.FindFirstPagesOrThrowArgs = exports.FindFirstPagesArgs = exports.DeleteOnePagesArgs = exports.DeleteManyPagesArgs = exports.CreateOnePagesArgs = exports.AggregatePagesArgs = void 0;
 var AggregatePagesArgs_1 = require("./AggregatePagesArgs");
 Object.defineProperty(exports, "AggregatePagesArgs", { enumerable: true, get: function () { return AggregatePagesArgs_1.AggregatePagesArgs; } });
-var CreateManyPagesArgs_1 = require("./CreateManyPagesArgs");
-Object.defineProperty(exports, "CreateManyPagesArgs", { enumerable: true, get: function () { return CreateManyPagesArgs_1.CreateManyPagesArgs; } });
 var CreateOnePagesArgs_1 = require("./CreateOnePagesArgs");
 Object.defineProperty(exports, "CreateOnePagesArgs", { enumerable: true, get: function () { return CreateOnePagesArgs_1.CreateOnePagesArgs; } });
 var DeleteManyPagesArgs_1 = require("./DeleteManyPagesArgs");

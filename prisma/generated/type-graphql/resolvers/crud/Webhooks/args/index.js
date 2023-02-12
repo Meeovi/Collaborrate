@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneWebhooksArgs = exports.UpdateOneWebhooksArgs = exports.UpdateManyWebhooksArgs = exports.GroupByWebhooksArgs = exports.FindUniqueWebhooksOrThrowArgs = exports.FindUniqueWebhooksArgs = exports.FindManyWebhooksArgs = exports.FindFirstWebhooksOrThrowArgs = exports.FindFirstWebhooksArgs = exports.DeleteOneWebhooksArgs = exports.DeleteManyWebhooksArgs = exports.CreateOneWebhooksArgs = exports.CreateManyWebhooksArgs = exports.AggregateWebhooksArgs = void 0;
+exports.UpsertOneWebhooksArgs = exports.UpdateOneWebhooksArgs = exports.UpdateManyWebhooksArgs = exports.GroupByWebhooksArgs = exports.FindUniqueWebhooksOrThrowArgs = exports.FindUniqueWebhooksArgs = exports.FindManyWebhooksArgs = exports.FindFirstWebhooksOrThrowArgs = exports.FindFirstWebhooksArgs = exports.DeleteOneWebhooksArgs = exports.DeleteManyWebhooksArgs = exports.CreateOneWebhooksArgs = exports.AggregateWebhooksArgs = void 0;
 var AggregateWebhooksArgs_1 = require("./AggregateWebhooksArgs");
 Object.defineProperty(exports, "AggregateWebhooksArgs", { enumerable: true, get: function () { return AggregateWebhooksArgs_1.AggregateWebhooksArgs; } });
-var CreateManyWebhooksArgs_1 = require("./CreateManyWebhooksArgs");
-Object.defineProperty(exports, "CreateManyWebhooksArgs", { enumerable: true, get: function () { return CreateManyWebhooksArgs_1.CreateManyWebhooksArgs; } });
 var CreateOneWebhooksArgs_1 = require("./CreateOneWebhooksArgs");
 Object.defineProperty(exports, "CreateOneWebhooksArgs", { enumerable: true, get: function () { return CreateOneWebhooksArgs_1.CreateOneWebhooksArgs; } });
 var DeleteManyWebhooksArgs_1 = require("./DeleteManyWebhooksArgs");

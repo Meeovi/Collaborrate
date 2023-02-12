@@ -1,3 +1,4 @@
+import { SortOrderInput } from "../inputs/SortOrderInput";
 import { TagsAvgOrderByAggregateInput } from "../inputs/TagsAvgOrderByAggregateInput";
 import { TagsCountOrderByAggregateInput } from "../inputs/TagsCountOrderByAggregateInput";
 import { TagsMaxOrderByAggregateInput } from "../inputs/TagsMaxOrderByAggregateInput";
@@ -6,12 +7,12 @@ import { TagsSumOrderByAggregateInput } from "../inputs/TagsSumOrderByAggregateI
 export declare class TagsOrderByWithAggregationInput {
     id?: "asc" | "desc" | undefined;
     name?: "asc" | "desc" | undefined;
-    excerpt?: "asc" | "desc" | undefined;
-    categories?: "asc" | "desc" | undefined;
-    articles?: "asc" | "desc" | undefined;
-    products?: "asc" | "desc" | undefined;
-    customers?: "asc" | "desc" | undefined;
-    users?: "asc" | "desc" | undefined;
+    excerpt?: SortOrderInput | undefined;
+    categories?: SortOrderInput | undefined;
+    articles?: SortOrderInput | undefined;
+    products?: SortOrderInput | undefined;
+    customers?: SortOrderInput | undefined;
+    users?: SortOrderInput | undefined;
     _count?: TagsCountOrderByAggregateInput | undefined;
     _avg?: TagsAvgOrderByAggregateInput | undefined;
     _max?: TagsMaxOrderByAggregateInput | undefined;

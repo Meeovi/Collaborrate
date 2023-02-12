@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregatePaymentsArgs } from "./args/AggregatePaymentsArgs";
-import { CreateManyPaymentsArgs } from "./args/CreateManyPaymentsArgs";
 import { CreateOnePaymentsArgs } from "./args/CreateOnePaymentsArgs";
 import { DeleteManyPaymentsArgs } from "./args/DeleteManyPaymentsArgs";
 import { DeleteOnePaymentsArgs } from "./args/DeleteOnePaymentsArgs";
@@ -19,7 +18,6 @@ import { AggregatePayments } from "../../outputs/AggregatePayments";
 import { PaymentsGroupBy } from "../../outputs/PaymentsGroupBy";
 export declare class PaymentsCrudResolver {
     aggregatePayments(ctx: any, info: GraphQLResolveInfo, args: AggregatePaymentsArgs): Promise<AggregatePayments>;
-    createManyPayments(ctx: any, info: GraphQLResolveInfo, args: CreateManyPaymentsArgs): Promise<AffectedRowsOutput>;
     createOnePayments(ctx: any, info: GraphQLResolveInfo, args: CreateOnePaymentsArgs): Promise<Payments>;
     deleteManyPayments(ctx: any, info: GraphQLResolveInfo, args: DeleteManyPaymentsArgs): Promise<AffectedRowsOutput>;
     deleteOnePayments(ctx: any, info: GraphQLResolveInfo, args: DeleteOnePaymentsArgs): Promise<Payments | null>;

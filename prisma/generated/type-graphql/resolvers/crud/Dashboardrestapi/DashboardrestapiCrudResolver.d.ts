@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateDashboardrestapiArgs } from "./args/AggregateDashboardrestapiArgs";
-import { CreateManyDashboardrestapiArgs } from "./args/CreateManyDashboardrestapiArgs";
 import { CreateOneDashboardrestapiArgs } from "./args/CreateOneDashboardrestapiArgs";
 import { DeleteManyDashboardrestapiArgs } from "./args/DeleteManyDashboardrestapiArgs";
 import { DeleteOneDashboardrestapiArgs } from "./args/DeleteOneDashboardrestapiArgs";
@@ -19,7 +18,6 @@ import { AggregateDashboardrestapi } from "../../outputs/AggregateDashboardresta
 import { DashboardrestapiGroupBy } from "../../outputs/DashboardrestapiGroupBy";
 export declare class DashboardrestapiCrudResolver {
     aggregateDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: AggregateDashboardrestapiArgs): Promise<AggregateDashboardrestapi>;
-    createManyDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: CreateManyDashboardrestapiArgs): Promise<AffectedRowsOutput>;
     createOneDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: CreateOneDashboardrestapiArgs): Promise<Dashboardrestapi>;
     deleteManyDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: DeleteManyDashboardrestapiArgs): Promise<AffectedRowsOutput>;
     deleteOneDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: DeleteOneDashboardrestapiArgs): Promise<Dashboardrestapi | null>;

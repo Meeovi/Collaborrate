@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateAttributesArgs } from "./args/AggregateAttributesArgs";
-import { CreateManyAttributesArgs } from "./args/CreateManyAttributesArgs";
 import { CreateOneAttributesArgs } from "./args/CreateOneAttributesArgs";
 import { DeleteManyAttributesArgs } from "./args/DeleteManyAttributesArgs";
 import { DeleteOneAttributesArgs } from "./args/DeleteOneAttributesArgs";
@@ -19,7 +18,6 @@ import { AggregateAttributes } from "../../outputs/AggregateAttributes";
 import { AttributesGroupBy } from "../../outputs/AttributesGroupBy";
 export declare class AttributesCrudResolver {
     aggregateAttributes(ctx: any, info: GraphQLResolveInfo, args: AggregateAttributesArgs): Promise<AggregateAttributes>;
-    createManyAttributes(ctx: any, info: GraphQLResolveInfo, args: CreateManyAttributesArgs): Promise<AffectedRowsOutput>;
     createOneAttributes(ctx: any, info: GraphQLResolveInfo, args: CreateOneAttributesArgs): Promise<Attributes>;
     deleteManyAttributes(ctx: any, info: GraphQLResolveInfo, args: DeleteManyAttributesArgs): Promise<AffectedRowsOutput>;
     deleteOneAttributes(ctx: any, info: GraphQLResolveInfo, args: DeleteOneAttributesArgs): Promise<Attributes | null>;

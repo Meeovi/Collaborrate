@@ -1,9 +1,9 @@
-import { ChannelsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/ChannelsOrderByWithRelationAndSearchRelevanceInput";
+import { ChannelsOrderByWithRelationInput } from "../../../inputs/ChannelsOrderByWithRelationInput";
 import { ChannelsWhereInput } from "../../../inputs/ChannelsWhereInput";
 import { ChannelsWhereUniqueInput } from "../../../inputs/ChannelsWhereUniqueInput";
 export declare class FindManyChannelsArgs {
     where?: ChannelsWhereInput | undefined;
-    orderBy?: ChannelsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: ChannelsOrderByWithRelationInput[] | undefined;
     cursor?: ChannelsWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

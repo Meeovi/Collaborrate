@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindFirstAgreementsArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const AgreementsOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/AgreementsOrderByWithRelationAndSearchRelevanceInput");
+const AgreementsOrderByWithRelationInput_1 = require("../../../inputs/AgreementsOrderByWithRelationInput");
 const AgreementsWhereInput_1 = require("../../../inputs/AgreementsWhereInput");
 const AgreementsWhereUniqueInput_1 = require("../../../inputs/AgreementsWhereUniqueInput");
 const AgreementsScalarFieldEnum_1 = require("../../../../enums/AgreementsScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", AgreementsWhereInput_1.AgreementsWhereInput)
 ], FindFirstAgreementsArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [AgreementsOrderByWithRelationAndSearchRelevanceInput_1.AgreementsOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [AgreementsOrderByWithRelationInput_1.AgreementsOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

@@ -7,8 +7,7 @@ const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const BigIntWithAggregatesFilter_1 = require("../inputs/BigIntWithAggregatesFilter");
 const BoolNullableWithAggregatesFilter_1 = require("../inputs/BoolNullableWithAggregatesFilter");
 const DateTimeNullableWithAggregatesFilter_1 = require("../inputs/DateTimeNullableWithAggregatesFilter");
-const DecimalNullableWithAggregatesFilter_1 = require("../inputs/DecimalNullableWithAggregatesFilter");
-const JsonNullableWithAggregatesFilter_1 = require("../inputs/JsonNullableWithAggregatesFilter");
+const IntNullableWithAggregatesFilter_1 = require("../inputs/IntNullableWithAggregatesFilter");
 const StringNullableWithAggregatesFilter_1 = require("../inputs/StringNullableWithAggregatesFilter");
 let Content_typeScalarWhereWithAggregatesInput = Content_typeScalarWhereWithAggregatesInput_1 = class Content_typeScalarWhereWithAggregatesInput {
 };
@@ -49,17 +48,11 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter)
 ], Content_typeScalarWhereWithAggregatesInput.prototype, "text", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => DecimalNullableWithAggregatesFilter_1.DecimalNullableWithAggregatesFilter, {
+    TypeGraphQL.Field(_type => IntNullableWithAggregatesFilter_1.IntNullableWithAggregatesFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", DecimalNullableWithAggregatesFilter_1.DecimalNullableWithAggregatesFilter)
+    tslib_1.__metadata("design:type", IntNullableWithAggregatesFilter_1.IntNullableWithAggregatesFilter)
 ], Content_typeScalarWhereWithAggregatesInput.prototype, "number", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => JsonNullableWithAggregatesFilter_1.JsonNullableWithAggregatesFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", JsonNullableWithAggregatesFilter_1.JsonNullableWithAggregatesFilter)
-], Content_typeScalarWhereWithAggregatesInput.prototype, "json", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => StringNullableWithAggregatesFilter_1.StringNullableWithAggregatesFilter, {
         nullable: true

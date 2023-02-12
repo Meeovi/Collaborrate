@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindManyCountriesArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const CountriesOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/CountriesOrderByWithRelationAndSearchRelevanceInput");
+const CountriesOrderByWithRelationInput_1 = require("../../../inputs/CountriesOrderByWithRelationInput");
 const CountriesWhereInput_1 = require("../../../inputs/CountriesWhereInput");
 const CountriesWhereUniqueInput_1 = require("../../../inputs/CountriesWhereUniqueInput");
 const CountriesScalarFieldEnum_1 = require("../../../../enums/CountriesScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", CountriesWhereInput_1.CountriesWhereInput)
 ], FindManyCountriesArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [CountriesOrderByWithRelationAndSearchRelevanceInput_1.CountriesOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [CountriesOrderByWithRelationInput_1.CountriesOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

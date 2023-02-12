@@ -1,5 +1,4 @@
 export { AggregateShipmentsArgs } from "./AggregateShipmentsArgs";
-export { CreateManyShipmentsArgs } from "./CreateManyShipmentsArgs";
 export { CreateOneShipmentsArgs } from "./CreateOneShipmentsArgs";
 export { DeleteManyShipmentsArgs } from "./DeleteManyShipmentsArgs";
 export { DeleteOneShipmentsArgs } from "./DeleteOneShipmentsArgs";

@@ -4,7 +4,6 @@ exports.WarehouseCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateWarehouseArgs_1 = require("./args/AggregateWarehouseArgs");
-const CreateManyWarehouseArgs_1 = require("./args/CreateManyWarehouseArgs");
 const CreateOneWarehouseArgs_1 = require("./args/CreateOneWarehouseArgs");
 const DeleteManyWarehouseArgs_1 = require("./args/DeleteManyWarehouseArgs");
 const DeleteOneWarehouseArgs_1 = require("./args/DeleteOneWarehouseArgs");
@@ -27,13 +26,6 @@ let WarehouseCrudResolver = class WarehouseCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).warehouse.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyWarehouse(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).warehouse.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneWarehouse(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateWarehouseArgs_1.AggregateWarehouseArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], WarehouseCrudResolver.prototype, "aggregateWarehouse", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyWarehouseArgs_1.CreateManyWarehouseArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], WarehouseCrudResolver.prototype, "createManyWarehouse", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Warehouse_1.Warehouse, {
         nullable: false

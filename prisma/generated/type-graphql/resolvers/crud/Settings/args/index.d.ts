@@ -1,5 +1,4 @@
 export { AggregateSettingsArgs } from "./AggregateSettingsArgs";
-export { CreateManySettingsArgs } from "./CreateManySettingsArgs";
 export { CreateOneSettingsArgs } from "./CreateOneSettingsArgs";
 export { DeleteManySettingsArgs } from "./DeleteManySettingsArgs";
 export { DeleteOneSettingsArgs } from "./DeleteOneSettingsArgs";

@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneInternalizationArgs = exports.UpdateOneInternalizationArgs = exports.UpdateManyInternalizationArgs = exports.GroupByInternalizationArgs = exports.FindUniqueInternalizationOrThrowArgs = exports.FindUniqueInternalizationArgs = exports.FindManyInternalizationArgs = exports.FindFirstInternalizationOrThrowArgs = exports.FindFirstInternalizationArgs = exports.DeleteOneInternalizationArgs = exports.DeleteManyInternalizationArgs = exports.CreateOneInternalizationArgs = exports.CreateManyInternalizationArgs = exports.AggregateInternalizationArgs = void 0;
+exports.UpsertOneInternalizationArgs = exports.UpdateOneInternalizationArgs = exports.UpdateManyInternalizationArgs = exports.GroupByInternalizationArgs = exports.FindUniqueInternalizationOrThrowArgs = exports.FindUniqueInternalizationArgs = exports.FindManyInternalizationArgs = exports.FindFirstInternalizationOrThrowArgs = exports.FindFirstInternalizationArgs = exports.DeleteOneInternalizationArgs = exports.DeleteManyInternalizationArgs = exports.CreateOneInternalizationArgs = exports.AggregateInternalizationArgs = void 0;
 var AggregateInternalizationArgs_1 = require("./AggregateInternalizationArgs");
 Object.defineProperty(exports, "AggregateInternalizationArgs", { enumerable: true, get: function () { return AggregateInternalizationArgs_1.AggregateInternalizationArgs; } });
-var CreateManyInternalizationArgs_1 = require("./CreateManyInternalizationArgs");
-Object.defineProperty(exports, "CreateManyInternalizationArgs", { enumerable: true, get: function () { return CreateManyInternalizationArgs_1.CreateManyInternalizationArgs; } });
 var CreateOneInternalizationArgs_1 = require("./CreateOneInternalizationArgs");
 Object.defineProperty(exports, "CreateOneInternalizationArgs", { enumerable: true, get: function () { return CreateOneInternalizationArgs_1.CreateOneInternalizationArgs; } });
 var DeleteManyInternalizationArgs_1 = require("./DeleteManyInternalizationArgs");

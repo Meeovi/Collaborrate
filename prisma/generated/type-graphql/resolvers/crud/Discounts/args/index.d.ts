@@ -1,5 +1,4 @@
 export { AggregateDiscountsArgs } from "./AggregateDiscountsArgs";
-export { CreateManyDiscountsArgs } from "./CreateManyDiscountsArgs";
 export { CreateOneDiscountsArgs } from "./CreateOneDiscountsArgs";
 export { DeleteManyDiscountsArgs } from "./DeleteManyDiscountsArgs";
 export { DeleteOneDiscountsArgs } from "./DeleteOneDiscountsArgs";

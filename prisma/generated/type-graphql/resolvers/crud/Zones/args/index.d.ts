@@ -1,5 +1,4 @@
 export { AggregateZonesArgs } from "./AggregateZonesArgs";
-export { CreateManyZonesArgs } from "./CreateManyZonesArgs";
 export { CreateOneZonesArgs } from "./CreateOneZonesArgs";
 export { DeleteManyZonesArgs } from "./DeleteManyZonesArgs";
 export { DeleteOneZonesArgs } from "./DeleteOneZonesArgs";

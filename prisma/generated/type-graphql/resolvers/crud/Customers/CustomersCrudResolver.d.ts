@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateCustomersArgs } from "./args/AggregateCustomersArgs";
-import { CreateManyCustomersArgs } from "./args/CreateManyCustomersArgs";
 import { CreateOneCustomersArgs } from "./args/CreateOneCustomersArgs";
 import { DeleteManyCustomersArgs } from "./args/DeleteManyCustomersArgs";
 import { DeleteOneCustomersArgs } from "./args/DeleteOneCustomersArgs";
@@ -19,7 +18,6 @@ import { AggregateCustomers } from "../../outputs/AggregateCustomers";
 import { CustomersGroupBy } from "../../outputs/CustomersGroupBy";
 export declare class CustomersCrudResolver {
     aggregateCustomers(ctx: any, info: GraphQLResolveInfo, args: AggregateCustomersArgs): Promise<AggregateCustomers>;
-    createManyCustomers(ctx: any, info: GraphQLResolveInfo, args: CreateManyCustomersArgs): Promise<AffectedRowsOutput>;
     createOneCustomers(ctx: any, info: GraphQLResolveInfo, args: CreateOneCustomersArgs): Promise<Customers>;
     deleteManyCustomers(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCustomersArgs): Promise<AffectedRowsOutput>;
     deleteOneCustomers(ctx: any, info: GraphQLResolveInfo, args: DeleteOneCustomersArgs): Promise<Customers | null>;

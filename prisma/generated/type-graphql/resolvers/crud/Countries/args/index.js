@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneCountriesArgs = exports.UpdateOneCountriesArgs = exports.UpdateManyCountriesArgs = exports.GroupByCountriesArgs = exports.FindUniqueCountriesOrThrowArgs = exports.FindUniqueCountriesArgs = exports.FindManyCountriesArgs = exports.FindFirstCountriesOrThrowArgs = exports.FindFirstCountriesArgs = exports.DeleteOneCountriesArgs = exports.DeleteManyCountriesArgs = exports.CreateOneCountriesArgs = exports.CreateManyCountriesArgs = exports.AggregateCountriesArgs = void 0;
+exports.UpsertOneCountriesArgs = exports.UpdateOneCountriesArgs = exports.UpdateManyCountriesArgs = exports.GroupByCountriesArgs = exports.FindUniqueCountriesOrThrowArgs = exports.FindUniqueCountriesArgs = exports.FindManyCountriesArgs = exports.FindFirstCountriesOrThrowArgs = exports.FindFirstCountriesArgs = exports.DeleteOneCountriesArgs = exports.DeleteManyCountriesArgs = exports.CreateOneCountriesArgs = exports.AggregateCountriesArgs = void 0;
 var AggregateCountriesArgs_1 = require("./AggregateCountriesArgs");
 Object.defineProperty(exports, "AggregateCountriesArgs", { enumerable: true, get: function () { return AggregateCountriesArgs_1.AggregateCountriesArgs; } });
-var CreateManyCountriesArgs_1 = require("./CreateManyCountriesArgs");
-Object.defineProperty(exports, "CreateManyCountriesArgs", { enumerable: true, get: function () { return CreateManyCountriesArgs_1.CreateManyCountriesArgs; } });
 var CreateOneCountriesArgs_1 = require("./CreateOneCountriesArgs");
 Object.defineProperty(exports, "CreateOneCountriesArgs", { enumerable: true, get: function () { return CreateOneCountriesArgs_1.CreateOneCountriesArgs; } });
 var DeleteManyCountriesArgs_1 = require("./DeleteManyCountriesArgs");

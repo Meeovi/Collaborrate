@@ -1,5 +1,4 @@
 export { AggregateTaxesArgs } from "./AggregateTaxesArgs";
-export { CreateManyTaxesArgs } from "./CreateManyTaxesArgs";
 export { CreateOneTaxesArgs } from "./CreateOneTaxesArgs";
 export { DeleteManyTaxesArgs } from "./DeleteManyTaxesArgs";
 export { DeleteOneTaxesArgs } from "./DeleteOneTaxesArgs";

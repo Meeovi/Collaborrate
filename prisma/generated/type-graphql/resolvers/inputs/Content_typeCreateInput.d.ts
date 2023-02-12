@@ -1,10 +1,8 @@
-import { Prisma } from "@prisma/client";
 export declare class Content_typeCreateInput {
     id?: bigint | undefined;
     created_at?: Date | undefined;
     text?: string | undefined;
-    number?: Prisma.Decimal | undefined;
-    json?: Prisma.InputJsonValue | undefined;
+    number?: number | undefined;
     link?: string | undefined;
     email?: string | undefined;
     uid?: string | undefined;

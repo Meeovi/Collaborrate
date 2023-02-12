@@ -1,9 +1,9 @@
-import { DiscountsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/DiscountsOrderByWithRelationAndSearchRelevanceInput";
+import { DiscountsOrderByWithRelationInput } from "../../../inputs/DiscountsOrderByWithRelationInput";
 import { DiscountsWhereInput } from "../../../inputs/DiscountsWhereInput";
 import { DiscountsWhereUniqueInput } from "../../../inputs/DiscountsWhereUniqueInput";
 export declare class FindFirstDiscountsArgs {
     where?: DiscountsWhereInput | undefined;
-    orderBy?: DiscountsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: DiscountsOrderByWithRelationInput[] | undefined;
     cursor?: DiscountsWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

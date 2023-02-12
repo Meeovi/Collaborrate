@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateTransactionsArgs } from "./args/AggregateTransactionsArgs";
-import { CreateManyTransactionsArgs } from "./args/CreateManyTransactionsArgs";
 import { CreateOneTransactionsArgs } from "./args/CreateOneTransactionsArgs";
 import { DeleteManyTransactionsArgs } from "./args/DeleteManyTransactionsArgs";
 import { DeleteOneTransactionsArgs } from "./args/DeleteOneTransactionsArgs";
@@ -19,7 +18,6 @@ import { AggregateTransactions } from "../../outputs/AggregateTransactions";
 import { TransactionsGroupBy } from "../../outputs/TransactionsGroupBy";
 export declare class TransactionsCrudResolver {
     aggregateTransactions(ctx: any, info: GraphQLResolveInfo, args: AggregateTransactionsArgs): Promise<AggregateTransactions>;
-    createManyTransactions(ctx: any, info: GraphQLResolveInfo, args: CreateManyTransactionsArgs): Promise<AffectedRowsOutput>;
     createOneTransactions(ctx: any, info: GraphQLResolveInfo, args: CreateOneTransactionsArgs): Promise<Transactions>;
     deleteManyTransactions(ctx: any, info: GraphQLResolveInfo, args: DeleteManyTransactionsArgs): Promise<AffectedRowsOutput>;
     deleteOneTransactions(ctx: any, info: GraphQLResolveInfo, args: DeleteOneTransactionsArgs): Promise<Transactions | null>;

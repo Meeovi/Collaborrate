@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneReviewsArgs = exports.UpdateOneReviewsArgs = exports.UpdateManyReviewsArgs = exports.GroupByReviewsArgs = exports.FindUniqueReviewsOrThrowArgs = exports.FindUniqueReviewsArgs = exports.FindManyReviewsArgs = exports.FindFirstReviewsOrThrowArgs = exports.FindFirstReviewsArgs = exports.DeleteOneReviewsArgs = exports.DeleteManyReviewsArgs = exports.CreateOneReviewsArgs = exports.CreateManyReviewsArgs = exports.AggregateReviewsArgs = void 0;
+exports.UpsertOneReviewsArgs = exports.UpdateOneReviewsArgs = exports.UpdateManyReviewsArgs = exports.GroupByReviewsArgs = exports.FindUniqueReviewsOrThrowArgs = exports.FindUniqueReviewsArgs = exports.FindManyReviewsArgs = exports.FindFirstReviewsOrThrowArgs = exports.FindFirstReviewsArgs = exports.DeleteOneReviewsArgs = exports.DeleteManyReviewsArgs = exports.CreateOneReviewsArgs = exports.AggregateReviewsArgs = void 0;
 var AggregateReviewsArgs_1 = require("./AggregateReviewsArgs");
 Object.defineProperty(exports, "AggregateReviewsArgs", { enumerable: true, get: function () { return AggregateReviewsArgs_1.AggregateReviewsArgs; } });
-var CreateManyReviewsArgs_1 = require("./CreateManyReviewsArgs");
-Object.defineProperty(exports, "CreateManyReviewsArgs", { enumerable: true, get: function () { return CreateManyReviewsArgs_1.CreateManyReviewsArgs; } });
 var CreateOneReviewsArgs_1 = require("./CreateOneReviewsArgs");
 Object.defineProperty(exports, "CreateOneReviewsArgs", { enumerable: true, get: function () { return CreateOneReviewsArgs_1.CreateOneReviewsArgs; } });
 var DeleteManyReviewsArgs_1 = require("./DeleteManyReviewsArgs");

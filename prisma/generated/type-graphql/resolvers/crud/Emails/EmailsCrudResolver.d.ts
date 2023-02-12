@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateEmailsArgs } from "./args/AggregateEmailsArgs";
-import { CreateManyEmailsArgs } from "./args/CreateManyEmailsArgs";
 import { CreateOneEmailsArgs } from "./args/CreateOneEmailsArgs";
 import { DeleteManyEmailsArgs } from "./args/DeleteManyEmailsArgs";
 import { DeleteOneEmailsArgs } from "./args/DeleteOneEmailsArgs";
@@ -19,7 +18,6 @@ import { AggregateEmails } from "../../outputs/AggregateEmails";
 import { EmailsGroupBy } from "../../outputs/EmailsGroupBy";
 export declare class EmailsCrudResolver {
     aggregateEmails(ctx: any, info: GraphQLResolveInfo, args: AggregateEmailsArgs): Promise<AggregateEmails>;
-    createManyEmails(ctx: any, info: GraphQLResolveInfo, args: CreateManyEmailsArgs): Promise<AffectedRowsOutput>;
     createOneEmails(ctx: any, info: GraphQLResolveInfo, args: CreateOneEmailsArgs): Promise<Emails>;
     deleteManyEmails(ctx: any, info: GraphQLResolveInfo, args: DeleteManyEmailsArgs): Promise<AffectedRowsOutput>;
     deleteOneEmails(ctx: any, info: GraphQLResolveInfo, args: DeleteOneEmailsArgs): Promise<Emails | null>;

@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneFullfillmentsArgs = exports.UpdateOneFullfillmentsArgs = exports.UpdateManyFullfillmentsArgs = exports.GroupByFullfillmentsArgs = exports.FindUniqueFullfillmentsOrThrowArgs = exports.FindUniqueFullfillmentsArgs = exports.FindManyFullfillmentsArgs = exports.FindFirstFullfillmentsOrThrowArgs = exports.FindFirstFullfillmentsArgs = exports.DeleteOneFullfillmentsArgs = exports.DeleteManyFullfillmentsArgs = exports.CreateOneFullfillmentsArgs = exports.CreateManyFullfillmentsArgs = exports.AggregateFullfillmentsArgs = void 0;
+exports.UpsertOneFullfillmentsArgs = exports.UpdateOneFullfillmentsArgs = exports.UpdateManyFullfillmentsArgs = exports.GroupByFullfillmentsArgs = exports.FindUniqueFullfillmentsOrThrowArgs = exports.FindUniqueFullfillmentsArgs = exports.FindManyFullfillmentsArgs = exports.FindFirstFullfillmentsOrThrowArgs = exports.FindFirstFullfillmentsArgs = exports.DeleteOneFullfillmentsArgs = exports.DeleteManyFullfillmentsArgs = exports.CreateOneFullfillmentsArgs = exports.AggregateFullfillmentsArgs = void 0;
 var AggregateFullfillmentsArgs_1 = require("./AggregateFullfillmentsArgs");
 Object.defineProperty(exports, "AggregateFullfillmentsArgs", { enumerable: true, get: function () { return AggregateFullfillmentsArgs_1.AggregateFullfillmentsArgs; } });
-var CreateManyFullfillmentsArgs_1 = require("./CreateManyFullfillmentsArgs");
-Object.defineProperty(exports, "CreateManyFullfillmentsArgs", { enumerable: true, get: function () { return CreateManyFullfillmentsArgs_1.CreateManyFullfillmentsArgs; } });
 var CreateOneFullfillmentsArgs_1 = require("./CreateOneFullfillmentsArgs");
 Object.defineProperty(exports, "CreateOneFullfillmentsArgs", { enumerable: true, get: function () { return CreateOneFullfillmentsArgs_1.CreateOneFullfillmentsArgs; } });
 var DeleteManyFullfillmentsArgs_1 = require("./DeleteManyFullfillmentsArgs");

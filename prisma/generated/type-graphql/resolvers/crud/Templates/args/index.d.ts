@@ -1,5 +1,4 @@
 export { AggregateTemplatesArgs } from "./AggregateTemplatesArgs";
-export { CreateManyTemplatesArgs } from "./CreateManyTemplatesArgs";
 export { CreateOneTemplatesArgs } from "./CreateOneTemplatesArgs";
 export { DeleteManyTemplatesArgs } from "./DeleteManyTemplatesArgs";
 export { DeleteOneTemplatesArgs } from "./DeleteOneTemplatesArgs";

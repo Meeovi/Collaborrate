@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateContent_typeArgs } from "./args/AggregateContent_typeArgs";
-import { CreateManyContent_typeArgs } from "./args/CreateManyContent_typeArgs";
 import { CreateOneContent_typeArgs } from "./args/CreateOneContent_typeArgs";
 import { DeleteManyContent_typeArgs } from "./args/DeleteManyContent_typeArgs";
 import { DeleteOneContent_typeArgs } from "./args/DeleteOneContent_typeArgs";
@@ -19,7 +18,6 @@ import { AggregateContent_type } from "../../outputs/AggregateContent_type";
 import { Content_typeGroupBy } from "../../outputs/Content_typeGroupBy";
 export declare class Content_typeCrudResolver {
     aggregateContent_type(ctx: any, info: GraphQLResolveInfo, args: AggregateContent_typeArgs): Promise<AggregateContent_type>;
-    createManyContent_type(ctx: any, info: GraphQLResolveInfo, args: CreateManyContent_typeArgs): Promise<AffectedRowsOutput>;
     createOneContent_type(ctx: any, info: GraphQLResolveInfo, args: CreateOneContent_typeArgs): Promise<Content_type>;
     deleteManyContent_type(ctx: any, info: GraphQLResolveInfo, args: DeleteManyContent_typeArgs): Promise<AffectedRowsOutput>;
     deleteOneContent_type(ctx: any, info: GraphQLResolveInfo, args: DeleteOneContent_typeArgs): Promise<Content_type | null>;

@@ -4,7 +4,6 @@ exports.ZonesCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateZonesArgs_1 = require("./args/AggregateZonesArgs");
-const CreateManyZonesArgs_1 = require("./args/CreateManyZonesArgs");
 const CreateOneZonesArgs_1 = require("./args/CreateOneZonesArgs");
 const DeleteManyZonesArgs_1 = require("./args/DeleteManyZonesArgs");
 const DeleteOneZonesArgs_1 = require("./args/DeleteOneZonesArgs");
@@ -27,13 +26,6 @@ let ZonesCrudResolver = class ZonesCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).zones.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyZones(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).zones.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneZones(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateZonesArgs_1.AggregateZonesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ZonesCrudResolver.prototype, "aggregateZones", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyZonesArgs_1.CreateManyZonesArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], ZonesCrudResolver.prototype, "createManyZones", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Zones_1.Zones, {
         nullable: false

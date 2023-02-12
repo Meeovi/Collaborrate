@@ -1,5 +1,4 @@
 export { AggregateProduct_typesArgs } from "./AggregateProduct_typesArgs";
-export { CreateManyProduct_typesArgs } from "./CreateManyProduct_typesArgs";
 export { CreateOneProduct_typesArgs } from "./CreateOneProduct_typesArgs";
 export { DeleteManyProduct_typesArgs } from "./DeleteManyProduct_typesArgs";
 export { DeleteOneProduct_typesArgs } from "./DeleteOneProduct_typesArgs";

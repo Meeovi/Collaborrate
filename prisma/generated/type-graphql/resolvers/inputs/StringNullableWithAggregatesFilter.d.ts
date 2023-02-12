@@ -12,8 +12,6 @@ export declare class StringNullableWithAggregatesFilter {
     contains?: string | undefined;
     startsWith?: string | undefined;
     endsWith?: string | undefined;
-    search?: string | undefined;
-    mode?: "default" | "insensitive" | undefined;
     not?: NestedStringNullableWithAggregatesFilter | undefined;
     _count?: NestedIntNullableFilter | undefined;
     _min?: NestedStringNullableFilter | undefined;

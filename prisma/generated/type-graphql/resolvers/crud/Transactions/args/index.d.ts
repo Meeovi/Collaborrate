@@ -1,5 +1,4 @@
 export { AggregateTransactionsArgs } from "./AggregateTransactionsArgs";
-export { CreateManyTransactionsArgs } from "./CreateManyTransactionsArgs";
 export { CreateOneTransactionsArgs } from "./CreateOneTransactionsArgs";
 export { DeleteManyTransactionsArgs } from "./DeleteManyTransactionsArgs";
 export { DeleteOneTransactionsArgs } from "./DeleteOneTransactionsArgs";

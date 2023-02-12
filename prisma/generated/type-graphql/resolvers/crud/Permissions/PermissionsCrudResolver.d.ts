@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregatePermissionsArgs } from "./args/AggregatePermissionsArgs";
-import { CreateManyPermissionsArgs } from "./args/CreateManyPermissionsArgs";
 import { CreateOnePermissionsArgs } from "./args/CreateOnePermissionsArgs";
 import { DeleteManyPermissionsArgs } from "./args/DeleteManyPermissionsArgs";
 import { DeleteOnePermissionsArgs } from "./args/DeleteOnePermissionsArgs";
@@ -19,7 +18,6 @@ import { AggregatePermissions } from "../../outputs/AggregatePermissions";
 import { PermissionsGroupBy } from "../../outputs/PermissionsGroupBy";
 export declare class PermissionsCrudResolver {
     aggregatePermissions(ctx: any, info: GraphQLResolveInfo, args: AggregatePermissionsArgs): Promise<AggregatePermissions>;
-    createManyPermissions(ctx: any, info: GraphQLResolveInfo, args: CreateManyPermissionsArgs): Promise<AffectedRowsOutput>;
     createOnePermissions(ctx: any, info: GraphQLResolveInfo, args: CreateOnePermissionsArgs): Promise<Permissions>;
     deleteManyPermissions(ctx: any, info: GraphQLResolveInfo, args: DeleteManyPermissionsArgs): Promise<AffectedRowsOutput>;
     deleteOnePermissions(ctx: any, info: GraphQLResolveInfo, args: DeleteOnePermissionsArgs): Promise<Permissions | null>;

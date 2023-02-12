@@ -4,7 +4,6 @@ exports.TemplatesCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateTemplatesArgs_1 = require("./args/AggregateTemplatesArgs");
-const CreateManyTemplatesArgs_1 = require("./args/CreateManyTemplatesArgs");
 const CreateOneTemplatesArgs_1 = require("./args/CreateOneTemplatesArgs");
 const DeleteManyTemplatesArgs_1 = require("./args/DeleteManyTemplatesArgs");
 const DeleteOneTemplatesArgs_1 = require("./args/DeleteOneTemplatesArgs");
@@ -27,13 +26,6 @@ let TemplatesCrudResolver = class TemplatesCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).templates.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyTemplates(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).templates.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneTemplates(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateTemplatesArgs_1.AggregateTemplatesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], TemplatesCrudResolver.prototype, "aggregateTemplates", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyTemplatesArgs_1.CreateManyTemplatesArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], TemplatesCrudResolver.prototype, "createManyTemplates", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Templates_1.Templates, {
         nullable: false

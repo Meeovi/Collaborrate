@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateCategoriesArgs } from "./args/AggregateCategoriesArgs";
-import { CreateManyCategoriesArgs } from "./args/CreateManyCategoriesArgs";
 import { CreateOneCategoriesArgs } from "./args/CreateOneCategoriesArgs";
 import { DeleteManyCategoriesArgs } from "./args/DeleteManyCategoriesArgs";
 import { DeleteOneCategoriesArgs } from "./args/DeleteOneCategoriesArgs";
@@ -19,7 +18,6 @@ import { AggregateCategories } from "../../outputs/AggregateCategories";
 import { CategoriesGroupBy } from "../../outputs/CategoriesGroupBy";
 export declare class CategoriesCrudResolver {
     aggregateCategories(ctx: any, info: GraphQLResolveInfo, args: AggregateCategoriesArgs): Promise<AggregateCategories>;
-    createManyCategories(ctx: any, info: GraphQLResolveInfo, args: CreateManyCategoriesArgs): Promise<AffectedRowsOutput>;
     createOneCategories(ctx: any, info: GraphQLResolveInfo, args: CreateOneCategoriesArgs): Promise<Categories>;
     deleteManyCategories(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCategoriesArgs): Promise<AffectedRowsOutput>;
     deleteOneCategories(ctx: any, info: GraphQLResolveInfo, args: DeleteOneCategoriesArgs): Promise<Categories | null>;

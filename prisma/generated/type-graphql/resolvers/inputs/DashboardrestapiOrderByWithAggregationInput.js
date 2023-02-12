@@ -8,6 +8,7 @@ const DashboardrestapiCountOrderByAggregateInput_1 = require("../inputs/Dashboar
 const DashboardrestapiMaxOrderByAggregateInput_1 = require("../inputs/DashboardrestapiMaxOrderByAggregateInput");
 const DashboardrestapiMinOrderByAggregateInput_1 = require("../inputs/DashboardrestapiMinOrderByAggregateInput");
 const DashboardrestapiSumOrderByAggregateInput_1 = require("../inputs/DashboardrestapiSumOrderByAggregateInput");
+const SortOrderInput_1 = require("../inputs/SortOrderInput");
 const SortOrder_1 = require("../../enums/SortOrder");
 let DashboardrestapiOrderByWithAggregationInput = class DashboardrestapiOrderByWithAggregationInput {
 };
@@ -24,34 +25,34 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], DashboardrestapiOrderByWithAggregationInput.prototype, "name", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], DashboardrestapiOrderByWithAggregationInput.prototype, "url", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], DashboardrestapiOrderByWithAggregationInput.prototype, "headerValue", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], DashboardrestapiOrderByWithAggregationInput.prototype, "headerKey", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], DashboardrestapiOrderByWithAggregationInput.prototype, "authenticationType", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
+    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", String)
+    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
 ], DashboardrestapiOrderByWithAggregationInput.prototype, "description", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => DashboardrestapiCountOrderByAggregateInput_1.DashboardrestapiCountOrderByAggregateInput, {

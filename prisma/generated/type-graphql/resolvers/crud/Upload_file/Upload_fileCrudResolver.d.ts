@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateUpload_fileArgs } from "./args/AggregateUpload_fileArgs";
-import { CreateManyUpload_fileArgs } from "./args/CreateManyUpload_fileArgs";
 import { CreateOneUpload_fileArgs } from "./args/CreateOneUpload_fileArgs";
 import { DeleteManyUpload_fileArgs } from "./args/DeleteManyUpload_fileArgs";
 import { DeleteOneUpload_fileArgs } from "./args/DeleteOneUpload_fileArgs";
@@ -19,7 +18,6 @@ import { AggregateUpload_file } from "../../outputs/AggregateUpload_file";
 import { Upload_fileGroupBy } from "../../outputs/Upload_fileGroupBy";
 export declare class Upload_fileCrudResolver {
     aggregateUpload_file(ctx: any, info: GraphQLResolveInfo, args: AggregateUpload_fileArgs): Promise<AggregateUpload_file>;
-    createManyUpload_file(ctx: any, info: GraphQLResolveInfo, args: CreateManyUpload_fileArgs): Promise<AffectedRowsOutput>;
     createOneUpload_file(ctx: any, info: GraphQLResolveInfo, args: CreateOneUpload_fileArgs): Promise<Upload_file>;
     deleteManyUpload_file(ctx: any, info: GraphQLResolveInfo, args: DeleteManyUpload_fileArgs): Promise<AffectedRowsOutput>;
     deleteOneUpload_file(ctx: any, info: GraphQLResolveInfo, args: DeleteOneUpload_fileArgs): Promise<Upload_file | null>;

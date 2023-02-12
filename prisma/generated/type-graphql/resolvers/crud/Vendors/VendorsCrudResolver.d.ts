@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateVendorsArgs } from "./args/AggregateVendorsArgs";
-import { CreateManyVendorsArgs } from "./args/CreateManyVendorsArgs";
 import { CreateOneVendorsArgs } from "./args/CreateOneVendorsArgs";
 import { DeleteManyVendorsArgs } from "./args/DeleteManyVendorsArgs";
 import { DeleteOneVendorsArgs } from "./args/DeleteOneVendorsArgs";
@@ -19,7 +18,6 @@ import { AggregateVendors } from "../../outputs/AggregateVendors";
 import { VendorsGroupBy } from "../../outputs/VendorsGroupBy";
 export declare class VendorsCrudResolver {
     aggregateVendors(ctx: any, info: GraphQLResolveInfo, args: AggregateVendorsArgs): Promise<AggregateVendors>;
-    createManyVendors(ctx: any, info: GraphQLResolveInfo, args: CreateManyVendorsArgs): Promise<AffectedRowsOutput>;
     createOneVendors(ctx: any, info: GraphQLResolveInfo, args: CreateOneVendorsArgs): Promise<Vendors>;
     deleteManyVendors(ctx: any, info: GraphQLResolveInfo, args: DeleteManyVendorsArgs): Promise<AffectedRowsOutput>;
     deleteOneVendors(ctx: any, info: GraphQLResolveInfo, args: DeleteOneVendorsArgs): Promise<Vendors | null>;

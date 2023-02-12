@@ -1,5 +1,4 @@
 export { AggregateCollectionsArgs } from "./AggregateCollectionsArgs";
-export { CreateManyCollectionsArgs } from "./CreateManyCollectionsArgs";
 export { CreateOneCollectionsArgs } from "./CreateOneCollectionsArgs";
 export { DeleteManyCollectionsArgs } from "./DeleteManyCollectionsArgs";
 export { DeleteOneCollectionsArgs } from "./DeleteOneCollectionsArgs";

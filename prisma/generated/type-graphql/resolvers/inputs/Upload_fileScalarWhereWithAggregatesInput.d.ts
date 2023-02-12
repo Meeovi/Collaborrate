@@ -2,7 +2,6 @@ import { DateTimeNullableWithAggregatesFilter } from "../inputs/DateTimeNullable
 import { DecimalWithAggregatesFilter } from "../inputs/DecimalWithAggregatesFilter";
 import { IntNullableWithAggregatesFilter } from "../inputs/IntNullableWithAggregatesFilter";
 import { IntWithAggregatesFilter } from "../inputs/IntWithAggregatesFilter";
-import { JsonNullableWithAggregatesFilter } from "../inputs/JsonNullableWithAggregatesFilter";
 import { StringNullableWithAggregatesFilter } from "../inputs/StringNullableWithAggregatesFilter";
 import { StringWithAggregatesFilter } from "../inputs/StringWithAggregatesFilter";
 export declare class Upload_fileScalarWhereWithAggregatesInput {
@@ -15,7 +14,7 @@ export declare class Upload_fileScalarWhereWithAggregatesInput {
     caption?: StringNullableWithAggregatesFilter | undefined;
     width?: IntNullableWithAggregatesFilter | undefined;
     height?: IntNullableWithAggregatesFilter | undefined;
-    formats?: JsonNullableWithAggregatesFilter | undefined;
+    formats?: StringNullableWithAggregatesFilter | undefined;
     hash?: StringWithAggregatesFilter | undefined;
     ext?: StringNullableWithAggregatesFilter | undefined;
     mime?: StringWithAggregatesFilter | undefined;
@@ -23,7 +22,7 @@ export declare class Upload_fileScalarWhereWithAggregatesInput {
     url?: StringWithAggregatesFilter | undefined;
     previewUrl?: StringNullableWithAggregatesFilter | undefined;
     provider?: StringWithAggregatesFilter | undefined;
-    provider_metadata?: JsonNullableWithAggregatesFilter | undefined;
+    provider_metadata?: StringNullableWithAggregatesFilter | undefined;
     created_by?: IntNullableWithAggregatesFilter | undefined;
     updated_by?: IntNullableWithAggregatesFilter | undefined;
     created_at?: DateTimeNullableWithAggregatesFilter | undefined;

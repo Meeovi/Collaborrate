@@ -4,7 +4,6 @@ exports.AgreementsCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregateAgreementsArgs_1 = require("./args/AggregateAgreementsArgs");
-const CreateManyAgreementsArgs_1 = require("./args/CreateManyAgreementsArgs");
 const CreateOneAgreementsArgs_1 = require("./args/CreateOneAgreementsArgs");
 const DeleteManyAgreementsArgs_1 = require("./args/DeleteManyAgreementsArgs");
 const DeleteOneAgreementsArgs_1 = require("./args/DeleteOneAgreementsArgs");
@@ -27,13 +26,6 @@ let AgreementsCrudResolver = class AgreementsCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).agreements.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyAgreements(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).agreements.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOneAgreements(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregateAgreementsArgs_1.AggregateAgreementsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], AgreementsCrudResolver.prototype, "aggregateAgreements", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyAgreementsArgs_1.CreateManyAgreementsArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], AgreementsCrudResolver.prototype, "createManyAgreements", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Agreements_1.Agreements, {
         nullable: false

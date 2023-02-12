@@ -1,9 +1,8 @@
-import { Prisma } from "@prisma/client";
 export declare class Content_typeMinAggregate {
     id: bigint | null;
     created_at: Date | null;
     text: string | null;
-    number: Prisma.Decimal | null;
+    number: number | null;
     link: string | null;
     email: string | null;
     uid: string | null;

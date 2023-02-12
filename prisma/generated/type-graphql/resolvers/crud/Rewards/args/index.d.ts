@@ -1,5 +1,4 @@
 export { AggregateRewardsArgs } from "./AggregateRewardsArgs";
-export { CreateManyRewardsArgs } from "./CreateManyRewardsArgs";
 export { CreateOneRewardsArgs } from "./CreateOneRewardsArgs";
 export { DeleteManyRewardsArgs } from "./DeleteManyRewardsArgs";
 export { DeleteOneRewardsArgs } from "./DeleteOneRewardsArgs";

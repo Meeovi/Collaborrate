@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateThemesArgs } from "./args/AggregateThemesArgs";
-import { CreateManyThemesArgs } from "./args/CreateManyThemesArgs";
 import { CreateOneThemesArgs } from "./args/CreateOneThemesArgs";
 import { DeleteManyThemesArgs } from "./args/DeleteManyThemesArgs";
 import { DeleteOneThemesArgs } from "./args/DeleteOneThemesArgs";
@@ -19,7 +18,6 @@ import { AggregateThemes } from "../../outputs/AggregateThemes";
 import { ThemesGroupBy } from "../../outputs/ThemesGroupBy";
 export declare class ThemesCrudResolver {
     aggregateThemes(ctx: any, info: GraphQLResolveInfo, args: AggregateThemesArgs): Promise<AggregateThemes>;
-    createManyThemes(ctx: any, info: GraphQLResolveInfo, args: CreateManyThemesArgs): Promise<AffectedRowsOutput>;
     createOneThemes(ctx: any, info: GraphQLResolveInfo, args: CreateOneThemesArgs): Promise<Themes>;
     deleteManyThemes(ctx: any, info: GraphQLResolveInfo, args: DeleteManyThemesArgs): Promise<AffectedRowsOutput>;
     deleteOneThemes(ctx: any, info: GraphQLResolveInfo, args: DeleteOneThemesArgs): Promise<Themes | null>;

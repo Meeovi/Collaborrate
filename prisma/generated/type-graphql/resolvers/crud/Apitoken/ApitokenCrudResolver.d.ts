@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateApitokenArgs } from "./args/AggregateApitokenArgs";
-import { CreateManyApitokenArgs } from "./args/CreateManyApitokenArgs";
 import { CreateOneApitokenArgs } from "./args/CreateOneApitokenArgs";
 import { DeleteManyApitokenArgs } from "./args/DeleteManyApitokenArgs";
 import { DeleteOneApitokenArgs } from "./args/DeleteOneApitokenArgs";
@@ -19,7 +18,6 @@ import { AggregateApitoken } from "../../outputs/AggregateApitoken";
 import { ApitokenGroupBy } from "../../outputs/ApitokenGroupBy";
 export declare class ApitokenCrudResolver {
     aggregateApitoken(ctx: any, info: GraphQLResolveInfo, args: AggregateApitokenArgs): Promise<AggregateApitoken>;
-    createManyApitoken(ctx: any, info: GraphQLResolveInfo, args: CreateManyApitokenArgs): Promise<AffectedRowsOutput>;
     createOneApitoken(ctx: any, info: GraphQLResolveInfo, args: CreateOneApitokenArgs): Promise<Apitoken>;
     deleteManyApitoken(ctx: any, info: GraphQLResolveInfo, args: DeleteManyApitokenArgs): Promise<AffectedRowsOutput>;
     deleteOneApitoken(ctx: any, info: GraphQLResolveInfo, args: DeleteOneApitokenArgs): Promise<Apitoken | null>;

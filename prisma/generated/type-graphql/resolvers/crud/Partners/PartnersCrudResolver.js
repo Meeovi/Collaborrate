@@ -4,7 +4,6 @@ exports.PartnersCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AggregatePartnersArgs_1 = require("./args/AggregatePartnersArgs");
-const CreateManyPartnersArgs_1 = require("./args/CreateManyPartnersArgs");
 const CreateOnePartnersArgs_1 = require("./args/CreateOnePartnersArgs");
 const DeleteManyPartnersArgs_1 = require("./args/DeleteManyPartnersArgs");
 const DeleteOnePartnersArgs_1 = require("./args/DeleteOnePartnersArgs");
@@ -27,13 +26,6 @@ let PartnersCrudResolver = class PartnersCrudResolver {
         return (0, helpers_1.getPrismaFromContext)(ctx).partners.aggregate({
             ...args,
             ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
-        });
-    }
-    async createManyPartners(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
-        return (0, helpers_1.getPrismaFromContext)(ctx).partners.createMany({
-            ...args,
-            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async createOnePartners(ctx, info, args) {
@@ -132,17 +124,6 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, AggregatePartnersArgs_1.AggregatePartnersArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], PartnersCrudResolver.prototype, "aggregatePartners", null);
-tslib_1.__decorate([
-    TypeGraphQL.Mutation(_returns => AffectedRowsOutput_1.AffectedRowsOutput, {
-        nullable: false
-    }),
-    tslib_1.__param(0, TypeGraphQL.Ctx()),
-    tslib_1.__param(1, TypeGraphQL.Info()),
-    tslib_1.__param(2, TypeGraphQL.Args()),
-    tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [Object, Object, CreateManyPartnersArgs_1.CreateManyPartnersArgs]),
-    tslib_1.__metadata("design:returntype", Promise)
-], PartnersCrudResolver.prototype, "createManyPartners", null);
 tslib_1.__decorate([
     TypeGraphQL.Mutation(_returns => Partners_1.Partners, {
         nullable: false

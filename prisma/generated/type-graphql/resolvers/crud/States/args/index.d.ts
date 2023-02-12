@@ -1,5 +1,4 @@
 export { AggregateStatesArgs } from "./AggregateStatesArgs";
-export { CreateManyStatesArgs } from "./CreateManyStatesArgs";
 export { CreateOneStatesArgs } from "./CreateOneStatesArgs";
 export { DeleteManyStatesArgs } from "./DeleteManyStatesArgs";
 export { DeleteOneStatesArgs } from "./DeleteOneStatesArgs";

@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateCountriesArgs } from "./args/AggregateCountriesArgs";
-import { CreateManyCountriesArgs } from "./args/CreateManyCountriesArgs";
 import { CreateOneCountriesArgs } from "./args/CreateOneCountriesArgs";
 import { DeleteManyCountriesArgs } from "./args/DeleteManyCountriesArgs";
 import { DeleteOneCountriesArgs } from "./args/DeleteOneCountriesArgs";
@@ -19,7 +18,6 @@ import { AggregateCountries } from "../../outputs/AggregateCountries";
 import { CountriesGroupBy } from "../../outputs/CountriesGroupBy";
 export declare class CountriesCrudResolver {
     aggregateCountries(ctx: any, info: GraphQLResolveInfo, args: AggregateCountriesArgs): Promise<AggregateCountries>;
-    createManyCountries(ctx: any, info: GraphQLResolveInfo, args: CreateManyCountriesArgs): Promise<AffectedRowsOutput>;
     createOneCountries(ctx: any, info: GraphQLResolveInfo, args: CreateOneCountriesArgs): Promise<Countries>;
     deleteManyCountries(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCountriesArgs): Promise<AffectedRowsOutput>;
     deleteOneCountries(ctx: any, info: GraphQLResolveInfo, args: DeleteOneCountriesArgs): Promise<Countries | null>;

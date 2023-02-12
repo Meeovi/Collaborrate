@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneIntegrationsArgs = exports.UpdateOneIntegrationsArgs = exports.UpdateManyIntegrationsArgs = exports.GroupByIntegrationsArgs = exports.FindUniqueIntegrationsOrThrowArgs = exports.FindUniqueIntegrationsArgs = exports.FindManyIntegrationsArgs = exports.FindFirstIntegrationsOrThrowArgs = exports.FindFirstIntegrationsArgs = exports.DeleteOneIntegrationsArgs = exports.DeleteManyIntegrationsArgs = exports.CreateOneIntegrationsArgs = exports.CreateManyIntegrationsArgs = exports.AggregateIntegrationsArgs = void 0;
+exports.UpsertOneIntegrationsArgs = exports.UpdateOneIntegrationsArgs = exports.UpdateManyIntegrationsArgs = exports.GroupByIntegrationsArgs = exports.FindUniqueIntegrationsOrThrowArgs = exports.FindUniqueIntegrationsArgs = exports.FindManyIntegrationsArgs = exports.FindFirstIntegrationsOrThrowArgs = exports.FindFirstIntegrationsArgs = exports.DeleteOneIntegrationsArgs = exports.DeleteManyIntegrationsArgs = exports.CreateOneIntegrationsArgs = exports.AggregateIntegrationsArgs = void 0;
 var AggregateIntegrationsArgs_1 = require("./AggregateIntegrationsArgs");
 Object.defineProperty(exports, "AggregateIntegrationsArgs", { enumerable: true, get: function () { return AggregateIntegrationsArgs_1.AggregateIntegrationsArgs; } });
-var CreateManyIntegrationsArgs_1 = require("./CreateManyIntegrationsArgs");
-Object.defineProperty(exports, "CreateManyIntegrationsArgs", { enumerable: true, get: function () { return CreateManyIntegrationsArgs_1.CreateManyIntegrationsArgs; } });
 var CreateOneIntegrationsArgs_1 = require("./CreateOneIntegrationsArgs");
 Object.defineProperty(exports, "CreateOneIntegrationsArgs", { enumerable: true, get: function () { return CreateOneIntegrationsArgs_1.CreateOneIntegrationsArgs; } });
 var DeleteManyIntegrationsArgs_1 = require("./DeleteManyIntegrationsArgs");

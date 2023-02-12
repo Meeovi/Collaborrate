@@ -4,8 +4,6 @@ exports.Content_typeGroupBy = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const GraphQLScalars = tslib_1.__importStar(require("graphql-scalars"));
-const client_1 = require("@prisma/client");
-const scalars_1 = require("../../scalars");
 const Content_typeAvgAggregate_1 = require("../outputs/Content_typeAvgAggregate");
 const Content_typeCountAggregate_1 = require("../outputs/Content_typeCountAggregate");
 const Content_typeMaxAggregate_1 = require("../outputs/Content_typeMaxAggregate");
@@ -32,17 +30,11 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], Content_typeGroupBy.prototype, "text", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => scalars_1.DecimalJSScalar, {
+    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", client_1.Prisma.Decimal)
+    tslib_1.__metadata("design:type", Number)
 ], Content_typeGroupBy.prototype, "number", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Object)
-], Content_typeGroupBy.prototype, "json", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => String, {
         nullable: true

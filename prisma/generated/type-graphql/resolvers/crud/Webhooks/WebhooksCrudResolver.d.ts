@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateWebhooksArgs } from "./args/AggregateWebhooksArgs";
-import { CreateManyWebhooksArgs } from "./args/CreateManyWebhooksArgs";
 import { CreateOneWebhooksArgs } from "./args/CreateOneWebhooksArgs";
 import { DeleteManyWebhooksArgs } from "./args/DeleteManyWebhooksArgs";
 import { DeleteOneWebhooksArgs } from "./args/DeleteOneWebhooksArgs";
@@ -19,7 +18,6 @@ import { AggregateWebhooks } from "../../outputs/AggregateWebhooks";
 import { WebhooksGroupBy } from "../../outputs/WebhooksGroupBy";
 export declare class WebhooksCrudResolver {
     aggregateWebhooks(ctx: any, info: GraphQLResolveInfo, args: AggregateWebhooksArgs): Promise<AggregateWebhooks>;
-    createManyWebhooks(ctx: any, info: GraphQLResolveInfo, args: CreateManyWebhooksArgs): Promise<AffectedRowsOutput>;
     createOneWebhooks(ctx: any, info: GraphQLResolveInfo, args: CreateOneWebhooksArgs): Promise<Webhooks>;
     deleteManyWebhooks(ctx: any, info: GraphQLResolveInfo, args: DeleteManyWebhooksArgs): Promise<AffectedRowsOutput>;
     deleteOneWebhooks(ctx: any, info: GraphQLResolveInfo, args: DeleteOneWebhooksArgs): Promise<Webhooks | null>;

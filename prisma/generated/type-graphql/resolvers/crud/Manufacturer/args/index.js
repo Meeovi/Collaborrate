@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneManufacturerArgs = exports.UpdateOneManufacturerArgs = exports.UpdateManyManufacturerArgs = exports.GroupByManufacturerArgs = exports.FindUniqueManufacturerOrThrowArgs = exports.FindUniqueManufacturerArgs = exports.FindManyManufacturerArgs = exports.FindFirstManufacturerOrThrowArgs = exports.FindFirstManufacturerArgs = exports.DeleteOneManufacturerArgs = exports.DeleteManyManufacturerArgs = exports.CreateOneManufacturerArgs = exports.CreateManyManufacturerArgs = exports.AggregateManufacturerArgs = void 0;
+exports.UpsertOneManufacturerArgs = exports.UpdateOneManufacturerArgs = exports.UpdateManyManufacturerArgs = exports.GroupByManufacturerArgs = exports.FindUniqueManufacturerOrThrowArgs = exports.FindUniqueManufacturerArgs = exports.FindManyManufacturerArgs = exports.FindFirstManufacturerOrThrowArgs = exports.FindFirstManufacturerArgs = exports.DeleteOneManufacturerArgs = exports.DeleteManyManufacturerArgs = exports.CreateOneManufacturerArgs = exports.AggregateManufacturerArgs = void 0;
 var AggregateManufacturerArgs_1 = require("./AggregateManufacturerArgs");
 Object.defineProperty(exports, "AggregateManufacturerArgs", { enumerable: true, get: function () { return AggregateManufacturerArgs_1.AggregateManufacturerArgs; } });
-var CreateManyManufacturerArgs_1 = require("./CreateManyManufacturerArgs");
-Object.defineProperty(exports, "CreateManyManufacturerArgs", { enumerable: true, get: function () { return CreateManyManufacturerArgs_1.CreateManyManufacturerArgs; } });
 var CreateOneManufacturerArgs_1 = require("./CreateOneManufacturerArgs");
 Object.defineProperty(exports, "CreateOneManufacturerArgs", { enumerable: true, get: function () { return CreateOneManufacturerArgs_1.CreateOneManufacturerArgs; } });
 var DeleteManyManufacturerArgs_1 = require("./DeleteManyManufacturerArgs");

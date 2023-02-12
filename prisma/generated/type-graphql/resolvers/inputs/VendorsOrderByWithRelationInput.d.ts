@@ -1,0 +1,31 @@
+import { SortOrderInput } from "../inputs/SortOrderInput";
+export declare class VendorsOrderByWithRelationInput {
+    id?: "asc" | "desc" | undefined;
+    name?: "asc" | "desc" | undefined;
+    description?: SortOrderInput | undefined;
+    image?: SortOrderInput | undefined;
+    website?: SortOrderInput | undefined;
+    products?: SortOrderInput | undefined;
+    articles?: SortOrderInput | undefined;
+    customers?: SortOrderInput | undefined;
+    comments?: SortOrderInput | undefined;
+    coupons?: SortOrderInput | undefined;
+    categories?: SortOrderInput | undefined;
+    polls?: SortOrderInput | undefined;
+    quotes?: SortOrderInput | undefined;
+    reviews?: SortOrderInput | undefined;
+    gift_certificates?: SortOrderInput | undefined;
+    rating?: SortOrderInput | undefined;
+    tags?: SortOrderInput | undefined;
+    users?: SortOrderInput | undefined;
+    invoices?: SortOrderInput | undefined;
+    reports?: SortOrderInput | undefined;
+    reward_points?: SortOrderInput | undefined;
+    special_discounts?: SortOrderInput | undefined;
+    statistics?: SortOrderInput | undefined;
+    stocks?: SortOrderInput | undefined;
+    country?: SortOrderInput | undefined;
+    physical_store?: SortOrderInput | undefined;
+    type?: SortOrderInput | undefined;
+    workspaces?: SortOrderInput | undefined;
+}

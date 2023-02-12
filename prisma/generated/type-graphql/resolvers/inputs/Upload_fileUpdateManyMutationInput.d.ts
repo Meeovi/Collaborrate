@@ -1,4 +1,3 @@
-import { Prisma } from "@prisma/client";
 import { DecimalFieldUpdateOperationsInput } from "../inputs/DecimalFieldUpdateOperationsInput";
 import { NullableDateTimeFieldUpdateOperationsInput } from "../inputs/NullableDateTimeFieldUpdateOperationsInput";
 import { NullableIntFieldUpdateOperationsInput } from "../inputs/NullableIntFieldUpdateOperationsInput";
@@ -10,7 +9,7 @@ export declare class Upload_fileUpdateManyMutationInput {
     caption?: NullableStringFieldUpdateOperationsInput | undefined;
     width?: NullableIntFieldUpdateOperationsInput | undefined;
     height?: NullableIntFieldUpdateOperationsInput | undefined;
-    formats?: Prisma.InputJsonValue | undefined;
+    formats?: NullableStringFieldUpdateOperationsInput | undefined;
     hash?: StringFieldUpdateOperationsInput | undefined;
     ext?: NullableStringFieldUpdateOperationsInput | undefined;
     mime?: StringFieldUpdateOperationsInput | undefined;
@@ -18,7 +17,7 @@ export declare class Upload_fileUpdateManyMutationInput {
     url?: StringFieldUpdateOperationsInput | undefined;
     previewUrl?: NullableStringFieldUpdateOperationsInput | undefined;
     provider?: StringFieldUpdateOperationsInput | undefined;
-    provider_metadata?: Prisma.InputJsonValue | undefined;
+    provider_metadata?: NullableStringFieldUpdateOperationsInput | undefined;
     created_by?: NullableIntFieldUpdateOperationsInput | undefined;
     updated_by?: NullableIntFieldUpdateOperationsInput | undefined;
     created_at?: NullableDateTimeFieldUpdateOperationsInput | undefined;

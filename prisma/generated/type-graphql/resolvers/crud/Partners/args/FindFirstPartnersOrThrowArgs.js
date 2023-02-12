@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindFirstPartnersOrThrowArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const PartnersOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/PartnersOrderByWithRelationAndSearchRelevanceInput");
+const PartnersOrderByWithRelationInput_1 = require("../../../inputs/PartnersOrderByWithRelationInput");
 const PartnersWhereInput_1 = require("../../../inputs/PartnersWhereInput");
 const PartnersWhereUniqueInput_1 = require("../../../inputs/PartnersWhereUniqueInput");
 const PartnersScalarFieldEnum_1 = require("../../../../enums/PartnersScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", PartnersWhereInput_1.PartnersWhereInput)
 ], FindFirstPartnersOrThrowArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [PartnersOrderByWithRelationAndSearchRelevanceInput_1.PartnersOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [PartnersOrderByWithRelationInput_1.PartnersOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

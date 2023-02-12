@@ -1,5 +1,4 @@
 export { AggregateReviewsArgs } from "./AggregateReviewsArgs";
-export { CreateManyReviewsArgs } from "./CreateManyReviewsArgs";
 export { CreateOneReviewsArgs } from "./CreateOneReviewsArgs";
 export { DeleteManyReviewsArgs } from "./DeleteManyReviewsArgs";
 export { DeleteOneReviewsArgs } from "./DeleteOneReviewsArgs";

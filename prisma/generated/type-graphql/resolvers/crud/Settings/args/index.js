@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneSettingsArgs = exports.UpdateOneSettingsArgs = exports.UpdateManySettingsArgs = exports.GroupBySettingsArgs = exports.FindUniqueSettingsOrThrowArgs = exports.FindUniqueSettingsArgs = exports.FindManySettingsArgs = exports.FindFirstSettingsOrThrowArgs = exports.FindFirstSettingsArgs = exports.DeleteOneSettingsArgs = exports.DeleteManySettingsArgs = exports.CreateOneSettingsArgs = exports.CreateManySettingsArgs = exports.AggregateSettingsArgs = void 0;
+exports.UpsertOneSettingsArgs = exports.UpdateOneSettingsArgs = exports.UpdateManySettingsArgs = exports.GroupBySettingsArgs = exports.FindUniqueSettingsOrThrowArgs = exports.FindUniqueSettingsArgs = exports.FindManySettingsArgs = exports.FindFirstSettingsOrThrowArgs = exports.FindFirstSettingsArgs = exports.DeleteOneSettingsArgs = exports.DeleteManySettingsArgs = exports.CreateOneSettingsArgs = exports.AggregateSettingsArgs = void 0;
 var AggregateSettingsArgs_1 = require("./AggregateSettingsArgs");
 Object.defineProperty(exports, "AggregateSettingsArgs", { enumerable: true, get: function () { return AggregateSettingsArgs_1.AggregateSettingsArgs; } });
-var CreateManySettingsArgs_1 = require("./CreateManySettingsArgs");
-Object.defineProperty(exports, "CreateManySettingsArgs", { enumerable: true, get: function () { return CreateManySettingsArgs_1.CreateManySettingsArgs; } });
 var CreateOneSettingsArgs_1 = require("./CreateOneSettingsArgs");
 Object.defineProperty(exports, "CreateOneSettingsArgs", { enumerable: true, get: function () { return CreateOneSettingsArgs_1.CreateOneSettingsArgs; } });
 var DeleteManySettingsArgs_1 = require("./DeleteManySettingsArgs");

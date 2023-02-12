@@ -1,5 +1,4 @@
 export { AggregateChannelsArgs } from "./AggregateChannelsArgs";
-export { CreateManyChannelsArgs } from "./CreateManyChannelsArgs";
 export { CreateOneChannelsArgs } from "./CreateOneChannelsArgs";
 export { DeleteManyChannelsArgs } from "./DeleteManyChannelsArgs";
 export { DeleteOneChannelsArgs } from "./DeleteOneChannelsArgs";

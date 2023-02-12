@@ -1,9 +1,9 @@
-import { VendorsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/VendorsOrderByWithRelationAndSearchRelevanceInput";
+import { VendorsOrderByWithRelationInput } from "../../../inputs/VendorsOrderByWithRelationInput";
 import { VendorsWhereInput } from "../../../inputs/VendorsWhereInput";
 import { VendorsWhereUniqueInput } from "../../../inputs/VendorsWhereUniqueInput";
 export declare class FindFirstVendorsArgs {
     where?: VendorsWhereInput | undefined;
-    orderBy?: VendorsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: VendorsOrderByWithRelationInput[] | undefined;
     cursor?: VendorsWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

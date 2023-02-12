@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindFirstInternalizationArgs = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const InternalizationOrderByWithRelationAndSearchRelevanceInput_1 = require("../../../inputs/InternalizationOrderByWithRelationAndSearchRelevanceInput");
+const InternalizationOrderByWithRelationInput_1 = require("../../../inputs/InternalizationOrderByWithRelationInput");
 const InternalizationWhereInput_1 = require("../../../inputs/InternalizationWhereInput");
 const InternalizationWhereUniqueInput_1 = require("../../../inputs/InternalizationWhereUniqueInput");
 const InternalizationScalarFieldEnum_1 = require("../../../../enums/InternalizationScalarFieldEnum");
@@ -16,7 +16,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", InternalizationWhereInput_1.InternalizationWhereInput)
 ], FindFirstInternalizationArgs.prototype, "where", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [InternalizationOrderByWithRelationAndSearchRelevanceInput_1.InternalizationOrderByWithRelationAndSearchRelevanceInput], {
+    TypeGraphQL.Field(_type => [InternalizationOrderByWithRelationInput_1.InternalizationOrderByWithRelationInput], {
         nullable: true
     }),
     tslib_1.__metadata("design:type", Array)

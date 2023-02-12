@@ -1,6 +1,5 @@
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateZonesArgs } from "./args/AggregateZonesArgs";
-import { CreateManyZonesArgs } from "./args/CreateManyZonesArgs";
 import { CreateOneZonesArgs } from "./args/CreateOneZonesArgs";
 import { DeleteManyZonesArgs } from "./args/DeleteManyZonesArgs";
 import { DeleteOneZonesArgs } from "./args/DeleteOneZonesArgs";
@@ -19,7 +18,6 @@ import { AggregateZones } from "../../outputs/AggregateZones";
 import { ZonesGroupBy } from "../../outputs/ZonesGroupBy";
 export declare class ZonesCrudResolver {
     aggregateZones(ctx: any, info: GraphQLResolveInfo, args: AggregateZonesArgs): Promise<AggregateZones>;
-    createManyZones(ctx: any, info: GraphQLResolveInfo, args: CreateManyZonesArgs): Promise<AffectedRowsOutput>;
     createOneZones(ctx: any, info: GraphQLResolveInfo, args: CreateOneZonesArgs): Promise<Zones>;
     deleteManyZones(ctx: any, info: GraphQLResolveInfo, args: DeleteManyZonesArgs): Promise<AffectedRowsOutput>;
     deleteOneZones(ctx: any, info: GraphQLResolveInfo, args: DeleteOneZonesArgs): Promise<Zones | null>;

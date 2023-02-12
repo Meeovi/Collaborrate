@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneDashboardslistArgs = exports.UpdateOneDashboardslistArgs = exports.UpdateManyDashboardslistArgs = exports.GroupByDashboardslistArgs = exports.FindUniqueDashboardslistOrThrowArgs = exports.FindUniqueDashboardslistArgs = exports.FindManyDashboardslistArgs = exports.FindFirstDashboardslistOrThrowArgs = exports.FindFirstDashboardslistArgs = exports.DeleteOneDashboardslistArgs = exports.DeleteManyDashboardslistArgs = exports.CreateOneDashboardslistArgs = exports.CreateManyDashboardslistArgs = exports.AggregateDashboardslistArgs = void 0;
+exports.UpsertOneDashboardslistArgs = exports.UpdateOneDashboardslistArgs = exports.UpdateManyDashboardslistArgs = exports.GroupByDashboardslistArgs = exports.FindUniqueDashboardslistOrThrowArgs = exports.FindUniqueDashboardslistArgs = exports.FindManyDashboardslistArgs = exports.FindFirstDashboardslistOrThrowArgs = exports.FindFirstDashboardslistArgs = exports.DeleteOneDashboardslistArgs = exports.DeleteManyDashboardslistArgs = exports.CreateOneDashboardslistArgs = exports.AggregateDashboardslistArgs = void 0;
 var AggregateDashboardslistArgs_1 = require("./AggregateDashboardslistArgs");
 Object.defineProperty(exports, "AggregateDashboardslistArgs", { enumerable: true, get: function () { return AggregateDashboardslistArgs_1.AggregateDashboardslistArgs; } });
-var CreateManyDashboardslistArgs_1 = require("./CreateManyDashboardslistArgs");
-Object.defineProperty(exports, "CreateManyDashboardslistArgs", { enumerable: true, get: function () { return CreateManyDashboardslistArgs_1.CreateManyDashboardslistArgs; } });
 var CreateOneDashboardslistArgs_1 = require("./CreateOneDashboardslistArgs");
 Object.defineProperty(exports, "CreateOneDashboardslistArgs", { enumerable: true, get: function () { return CreateOneDashboardslistArgs_1.CreateOneDashboardslistArgs; } });
 var DeleteManyDashboardslistArgs_1 = require("./DeleteManyDashboardslistArgs");

@@ -9,7 +9,6 @@ var Content_typeScalarFieldEnum;
     Content_typeScalarFieldEnum["created_at"] = "created_at";
     Content_typeScalarFieldEnum["text"] = "text";
     Content_typeScalarFieldEnum["number"] = "number";
-    Content_typeScalarFieldEnum["json"] = "json";
     Content_typeScalarFieldEnum["link"] = "link";
     Content_typeScalarFieldEnum["email"] = "email";
     Content_typeScalarFieldEnum["uid"] = "uid";

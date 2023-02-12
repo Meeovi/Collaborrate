@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertOneShipmentsArgs = exports.UpdateOneShipmentsArgs = exports.UpdateManyShipmentsArgs = exports.GroupByShipmentsArgs = exports.FindUniqueShipmentsOrThrowArgs = exports.FindUniqueShipmentsArgs = exports.FindManyShipmentsArgs = exports.FindFirstShipmentsOrThrowArgs = exports.FindFirstShipmentsArgs = exports.DeleteOneShipmentsArgs = exports.DeleteManyShipmentsArgs = exports.CreateOneShipmentsArgs = exports.CreateManyShipmentsArgs = exports.AggregateShipmentsArgs = void 0;
+exports.UpsertOneShipmentsArgs = exports.UpdateOneShipmentsArgs = exports.UpdateManyShipmentsArgs = exports.GroupByShipmentsArgs = exports.FindUniqueShipmentsOrThrowArgs = exports.FindUniqueShipmentsArgs = exports.FindManyShipmentsArgs = exports.FindFirstShipmentsOrThrowArgs = exports.FindFirstShipmentsArgs = exports.DeleteOneShipmentsArgs = exports.DeleteManyShipmentsArgs = exports.CreateOneShipmentsArgs = exports.AggregateShipmentsArgs = void 0;
 var AggregateShipmentsArgs_1 = require("./AggregateShipmentsArgs");
 Object.defineProperty(exports, "AggregateShipmentsArgs", { enumerable: true, get: function () { return AggregateShipmentsArgs_1.AggregateShipmentsArgs; } });
-var CreateManyShipmentsArgs_1 = require("./CreateManyShipmentsArgs");
-Object.defineProperty(exports, "CreateManyShipmentsArgs", { enumerable: true, get: function () { return CreateManyShipmentsArgs_1.CreateManyShipmentsArgs; } });
 var CreateOneShipmentsArgs_1 = require("./CreateOneShipmentsArgs");
 Object.defineProperty(exports, "CreateOneShipmentsArgs", { enumerable: true, get: function () { return CreateOneShipmentsArgs_1.CreateOneShipmentsArgs; } });
 var DeleteManyShipmentsArgs_1 = require("./DeleteManyShipmentsArgs");

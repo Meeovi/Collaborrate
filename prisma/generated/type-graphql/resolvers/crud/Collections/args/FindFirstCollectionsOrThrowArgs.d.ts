@@ -1,9 +1,9 @@
-import { CollectionsOrderByWithRelationAndSearchRelevanceInput } from "../../../inputs/CollectionsOrderByWithRelationAndSearchRelevanceInput";
+import { CollectionsOrderByWithRelationInput } from "../../../inputs/CollectionsOrderByWithRelationInput";
 import { CollectionsWhereInput } from "../../../inputs/CollectionsWhereInput";
 import { CollectionsWhereUniqueInput } from "../../../inputs/CollectionsWhereUniqueInput";
 export declare class FindFirstCollectionsOrThrowArgs {
     where?: CollectionsWhereInput | undefined;
-    orderBy?: CollectionsOrderByWithRelationAndSearchRelevanceInput[] | undefined;
+    orderBy?: CollectionsOrderByWithRelationInput[] | undefined;
     cursor?: CollectionsWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;
