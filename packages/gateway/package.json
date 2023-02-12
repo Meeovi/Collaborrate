@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-      "@google-cloud/spanner": "^5.18.0",
+      "@google-cloud/spanner": "^6.0.0",
       "@graphql-codegen/cli": "2.16.2",
       "@graphql-codegen/client-preset": "1.2.4",
       "@graphql-codegen/introspection": "^2.2.3",
