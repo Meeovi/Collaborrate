@@ -5,6 +5,7 @@ setAbsoluteSqliteDatabaseUrlForPrisma()
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    ssr: false,
     extends: ['@sidebase/core', '@sidebase/nuxt-prisma'],
 
     css: [
@@ -86,6 +87,13 @@ export default defineNuxtConfig({
         "@fortawesome/fontawesome-svg-core",
         "@fortawesome/free-brands-svg-icons",
       ],
+    },
+
+    nitro: {
+      prerender: {
+        routes: ['/sitemap.xml']
+      },
+      preset: 'service-worker'
     },
 
     vite: {

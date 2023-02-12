@@ -7,6 +7,9 @@
                     framework, Alternate Framework provides headless content management system capabilities for sites of
                     all types.</p>
             </v-col>
+            <v-col cols="6">
+                
+            </v-col>
             <v-col cols="12" class="homeRows">
                 <v-row>
                     <v-col cols="6">
@@ -66,10 +69,10 @@
 </template>
 
 <script>
-    //import databaseCharts from '../components/charts/homeCharts/databaseCharts.vue'
+    //import datasource from '../components/dashboards/add-datasource.vue'
 
     export default {
-        //components: { databaseCharts }
+        //components: { datasource }
     }
 </script>
 

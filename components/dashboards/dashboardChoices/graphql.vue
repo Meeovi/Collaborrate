@@ -4,7 +4,7 @@
       <template v-slot:activator="{ props }">
         <v-card class="mx-auto" max-width="200" v-bind="props">
           <v-img class="align-end text-white" height="200" width="200"
-            src="../../assets/images/graphqllogo.png" cover>
+            src="../../../assets/images/graphqllogo.png" cover>
             <v-card-title style="width:100%;text-align:center;">Graphql</v-card-title>
           </v-img>
         </v-card>

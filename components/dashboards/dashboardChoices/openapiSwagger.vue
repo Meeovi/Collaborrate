@@ -7,7 +7,7 @@
         <template v-slot:activator="{ props }">
         <v-card class="mx-auto" max-width="200" v-bind="props">
             <v-img class="align-end text-white" height="200" width="200"
-                src="../../assets/images/openapilogo.png" cover>
+                src="../../../assets/images/openapilogo.png" cover>
                 <v-card-title style="width:100%;text-align:center;">Open API / Swagger</v-card-title>
             </v-img>
         </v-card>

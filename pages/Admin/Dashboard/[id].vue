@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import editDashboard from '../../../components/dashboards/EditDashboard.vue'
+import editDashboard from '../../../components/dashboards/add-dashboard.vue'
 
     export default {
         components: { editDashboard },

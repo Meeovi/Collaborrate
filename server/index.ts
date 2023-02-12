@@ -7,6 +7,7 @@ import { useParserCache } from '@envelop/parser-cache';
 import { useValidationCache } from '@envelop/validation-cache';
 import { applyMiddleware } from 'graphql-middleware'
 import { shield, allow, deny } from 'graphql-shield'
+import { createBuiltMeshHTTPHandler } from '../.mesh'
 
 import { createYoga } from 'graphql-yoga';
 import { createServer } from 'node:http';
@@ -23,6 +24,8 @@ import fastify, { FastifyRequest, FastifyReply } from 'fastify'
 const app = fastify({
   logger: true
 })
+
+const meshHttp = createBuiltMeshHTTPHandler()
 
 // Setting cors and logging capabilities
 
@@ -121,7 +124,7 @@ async function main() {
     })
   });
 
-  const server = createServer(yoga)
+  const server = createServer(createBuiltMeshHTTPHandler(yoga))
 
   app.route({
     url: '/graphql',

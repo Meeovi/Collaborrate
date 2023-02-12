@@ -42,4 +42,4 @@ export const nuxtI18nOptionsDefault = Object({vueI18n: undefined,locales: [],def
 export const nuxtI18nInternalOptions = Object({__normalizedLocales: [Object({"code":"en","name":"English"}),Object({"code":"es","name":"Español"}),Object({"code":"fr","name":"Français"})]})
 export const NUXT_I18N_MODULE_ID = "@nuxtjs/i18n"
 export const isSSG = false
-export const isSSR = true
+export const isSSR = false

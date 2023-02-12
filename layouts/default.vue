@@ -12,6 +12,7 @@
       <v-spacer></v-spacer>
 
       <div class="d-flex justify-space-around align-center flex-column flex-sm-row fill-height">
+        <v-list-item><addDatasource /></v-list-item>
         <v-col>
           <v-btn :prepend-icon="theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'" @click="onClick"></v-btn>
         </v-col>
@@ -35,11 +36,6 @@
           </v-menu>
         </v-col>
         <v-col>
-          <v-btn variant="flat" href="/admin/user/">
-            <v-icon start icon="fas fa-user-circle"></v-icon>
-          </v-btn>
-        </v-col>
-        <v-col>
           <v-btn variant="flat">
             <v-icon start icon="fas fa-bell"></v-icon>
           </v-btn>
@@ -51,12 +47,12 @@
       <v-card>
         <v-layout>
           <v-navigation-drawer expand-on-hover v-model="drawer" :rail="rail" @click="rail = false">
-            <v-list-item prepend-icon="fas fa-user" title="Profile Name">
+            <v-list-item prepend-icon="fas fa-user-circle" title="Profile" href="/admin/user">
               <template v-slot:append>
                 <v-btn variant="text" icon="fas fa-chevron-left" @click.stop="rail = !rail"></v-btn>
               </template>
             </v-list-item>
-
+            
             <v-divider></v-divider>
 
             <v-list density="compact" nav>
@@ -98,7 +94,10 @@
 </template>
 
 <script>
+import addDatasource from '../components/dashboards/add-datasource.vue'
+
   export default {
+    components: { addDatasource },
     data() {
       return {
         drawer: null,

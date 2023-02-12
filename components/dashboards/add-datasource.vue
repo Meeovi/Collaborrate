@@ -1,14 +1,14 @@
 <template>
     <v-row justify="center">
-        <v-dialog v-model="dialog" persistent>
+        <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition" scrollable persistent>
             <template v-slot:activator="{ props }">
-                <v-btn style="color: white; " v-bind="props" class="rightAddBtn">
-                    <v-icon start icon="fas fa-file-pen"></v-icon>Create A Dashboard
+                <v-btn style="color: white;" color="primary" v-bind="props" class="rightAddBtn">
+                    <v-icon start icon="fas fa-server"></v-icon>Add Datasource
                 </v-btn>
             </template>
             <v-card>
                 <v-card-title>
-                    <span class="text-h6">Create A New Dashboard</span>
+                    <span class="text-h6">Connect A Datasource</span>
                 </v-card-title>
                 <v-card-text>
                     <v-container>
@@ -32,7 +32,7 @@
                             <v-col>
                                 <mongodb />
                             </v-col>
-                            
+
                             <v-col>
                                 <mysql />
                             </v-col>
@@ -75,23 +75,41 @@
 </template>
 
 <script>
-import apacheThrift from './dashboardChoices/apacheThrift.vue'
-import graphql from './dashboardChoices/graphql.vue'
-import grpcProtobuf from './dashboardChoices/grpcProtobuf.vue'
-import jsonSchema from './dashboardChoices/jsonSchema.vue'
-import mongodb from './dashboardChoices/mongodb.vue'
-import mysql from './dashboardChoices/mysql.vue'
-import neo4j from './dashboardChoices/neo4j.vue'
-import odata from './dashboardChoices/odata.vue'
-import openapiSwagger from './dashboardChoices/openapiSwagger.vue'
-import postgresql from './dashboardChoices/postgresql.vue'
-import soap from './dashboardChoices/soap.vue'
-import sqlite from './dashboardChoices/sqlite.vue'
+    import apacheThrift from './dashboardChoices/apacheThrift.vue'
+    import graphql from './dashboardChoices/graphql.vue'
+    import grpcProtobuf from './dashboardChoices/grpcProtobuf.vue'
+    import jsonSchema from './dashboardChoices/jsonSchema.vue'
+    import mongodb from './dashboardChoices/mongodb.vue'
+    import mysql from './dashboardChoices/mysql.vue'
+    import neo4j from './dashboardChoices/neo4j.vue'
+    import odata from './dashboardChoices/odata.vue'
+    import openapiSwagger from './dashboardChoices/openapiSwagger.vue'
+    import postgresql from './dashboardChoices/postgresql.vue'
+    import soap from './dashboardChoices/soap.vue'
+    import sqlite from './dashboardChoices/sqlite.vue'
 
     export default {
-        components: { apacheThrift, graphql, grpcProtobuf, jsonSchema, mongodb, mysql, neo4j, odata, openapiSwagger, postgresql, soap, sqlite },
-        data: () => ({
-            dialog: false,
-        }),
+        components: {
+            apacheThrift,
+            graphql,
+            grpcProtobuf,
+            jsonSchema,
+            mongodb,
+            mysql,
+            neo4j,
+            odata,
+            openapiSwagger,
+            postgresql,
+            soap,
+            sqlite
+        },
+        data() {
+            return {
+                dialog: false,
+                notifications: false,
+                sound: true,
+                widgets: false,
+            }
+        },
     }
 </script>

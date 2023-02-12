@@ -43,7 +43,7 @@ body {
 
 .contentRight {
     top: 0px !important;
-    height: 100% !important;
+    height: 100vh !important;
     width: 100% !important;
 }
 
@@ -122,6 +122,10 @@ body {
 
 .contentDashboard {
     padding: 10px;
+}
+
+.sqlSection {
+    width: 100% !important;
 }
 
 /******************** Sidebar CSS *************/

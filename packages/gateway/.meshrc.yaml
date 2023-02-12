@@ -136,6 +136,12 @@ plugins:
 #      prefix: my-graphql-mesh
 #      # If you wish to disable introspection logging
 #     skipIntrospection: true
+  - sofa#useSofaWithSwaggerUI:
+        basePath: /rest
+        swaggerUIEndpoint: /swagger
+        info:
+          title: 'AlternateFramework REST API'
+          version: '1.0.0'
   - PrometheusConfig:
     # all optional, and by default, all set to false, please opt-in to the metrics you wish to get
  

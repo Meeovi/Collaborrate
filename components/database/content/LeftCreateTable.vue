@@ -2,7 +2,7 @@
     <v-row justify="center">
         <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition" persistent>
             <template v-slot:activator="{ props }">
-                <v-btn style="background-color: azure; color: black;" size="small" v-bind="props" class="rightAddBtn">
+                <v-btn v-bind="props" class="rightAddBtn">
                     <v-icon start icon="fas fa-file-pen"></v-icon>Create Table
                 </v-btn>
             </template>

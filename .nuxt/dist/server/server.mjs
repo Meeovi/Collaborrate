@@ -1,1 +1,0 @@
-export { default } from "file:///C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
