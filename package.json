@@ -60,7 +60,7 @@
       "@envelop/graphql-jit": "^5.0.3",
       "@envelop/live-query": "^5.0.3",
       "@envelop/parser-cache": "^5.0.3",
-      "@envelop/sentry": "^4.0.3",
+      "@envelop/sentry": "^5.0.0",
       "@envelop/validation-cache": "^5.0.3",
       "@fastify/express": "^2.3.0",
       "@fortawesome/fontawesome-svg-core": "^6.2.1",
