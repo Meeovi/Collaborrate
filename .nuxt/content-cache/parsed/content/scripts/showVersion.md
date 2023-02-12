@@ -1,6 +1,1 @@
----
-title: 'Show Version'
-description: 'Get your Postgres version'
----
-
-<!-- Content of the page -->
+{"parsed":{"_path":"/scripts/showversion","_dir":"scripts","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"Show Version","description":"Get your Postgres version","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:scripts:showVersion.md","_source":"content","_file":"scripts/showVersion.md","_extension":"md"},"hash":"xxSih89chs"}

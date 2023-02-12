@@ -48,6 +48,7 @@ export default defineNuxtConfig({
     */
 
     i18n: {
+      strategy: 'no_prefix',
       en: { pathMatch: ['not-found-my-post'] },
       fr: { pathMatch: ['not-found-mon-article'] },
       locales: [

@@ -1,6 +1,1 @@
----
-title: 'Todo List'
-description: 'Build a basic todo list with Row Level Security'
----
-
-<!-- Content of the page -->
+{"parsed":{"_path":"/quick-start/todolist","_dir":"quick-start","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"Todo List","description":"Build a basic todo list with Row Level Security","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:quick-start:todoList.md","_source":"content","_file":"quick-start/todoList.md","_extension":"md"},"hash":"60CoJRYg8z"}

@@ -17,7 +17,7 @@ export const resolveNuxtI18nOptions = async (context) => {
   nuxtI18nOptions.routesNameSeparator = "___"
   nuxtI18nOptions.trailingSlash = false
   nuxtI18nOptions.defaultLocaleRouteNameSuffix = "default"
-  nuxtI18nOptions.strategy = "prefix_except_default"
+  nuxtI18nOptions.strategy = "no_prefix"
   nuxtI18nOptions.lazy = false
   nuxtI18nOptions.langDir = null
   nuxtI18nOptions.rootRedirect = null

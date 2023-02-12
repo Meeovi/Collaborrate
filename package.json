@@ -19,7 +19,10 @@
    "scripts": {
       "alternate-commit": "git add . && git commit -m \"ready for update\"",
       "alternate-update": "git pull \"https://github.com/Meeovi/AlternateFramework\"",
-      "build": "nuxt build && mesh build",
+      "build": "nuxt build",
+      "build:mesh": "yarn build:mesh --dir ./server/",
+      "prebuild": "yarn build:mesh",
+      "prestart": "yarn build:mesh",
       "dev": "nuxt dev --port 8000 && node server/server.js",
       "yoga": "ts-node server/index.ts",
       "prisma-dev": "npx prisma generate",
@@ -33,9 +36,7 @@
       "generate": "nuxt generate",
       "preview": "nuxt preview",
       "postinstall": "nuxt prepare",
-      "all": "npm-run-all --parallel dev docs yoga gql-generate",
-      "start": "mesh start",
-      "prebuild": "mesh build"
+      "all": "npm-run-all --parallel dev docs yoga gql-generate"
    },
    "devDependencies": {
       "@nuxt/content": "^2.3.0",
@@ -66,6 +67,10 @@
       "@fortawesome/fontawesome-svg-core": "^6.2.1",
       "@fortawesome/free-solid-svg-icons": "^6.2.1",
       "@fortawesome/vue-fontawesome": "^3.0.2",
+      "@graphql-mesh/cli": "^0.82.14",
+      "@graphql-mesh/config": "^10.1.0",
+      "@graphql-mesh/openapi": "^0.35.9",
+      "@graphql-mesh/runtime": "^0.46.7",
       "@graphql-yoga/node": "^2.13.13",
       "@graphql-yoga/plugin-sofa": "^1.0.0",
       "@huntersofbook/naive-ui-nuxt": "^0.5.1",

@@ -89,6 +89,9 @@ declare module 'nitropack' {
     '/api/middleware': {
       'default': Awaited<ReturnType<typeof import('../../server/api/middleware').default>>
     }
+    '/api/metrics': {
+      'default': Awaited<ReturnType<typeof import('../../server/api/metrics').default>>
+    }
     '/api/manufacturers': {
       'default': Awaited<ReturnType<typeof import('../../server/api/manufacturers').default>>
     }

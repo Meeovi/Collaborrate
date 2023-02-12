@@ -3798,6 +3798,7 @@ const _lazy_aIEyxK = () => Promise.resolve().then(function () { return paginatio
 const _lazy_e5cmZJ = () => Promise.resolve().then(function () { return pages$1; });
 const _lazy_zMIvJE = () => Promise.resolve().then(function () { return newsletters$1; });
 const _lazy_dtJMJb = () => Promise.resolve().then(function () { return middleware; });
+const _lazy_zSqpBD = () => Promise.resolve().then(function () { return metrics$1; });
 const _lazy_vI4nxH = () => Promise.resolve().then(function () { return manufacturers$1; });
 const _lazy_v3PybF = () => Promise.resolve().then(function () { return logging; });
 const _lazy_56dcx0 = () => Promise.resolve().then(function () { return invoices$1; });
@@ -3855,6 +3856,7 @@ const handlers = [
   { route: '/api/pages', handler: _lazy_e5cmZJ, lazy: true, middleware: false, method: undefined },
   { route: '/api/newsletters', handler: _lazy_zMIvJE, lazy: true, middleware: false, method: undefined },
   { route: '/api/middleware', handler: _lazy_dtJMJb, lazy: true, middleware: false, method: undefined },
+  { route: '/api/metrics', handler: _lazy_zSqpBD, lazy: true, middleware: false, method: undefined },
   { route: '/api/manufacturers', handler: _lazy_vI4nxH, lazy: true, middleware: false, method: undefined },
   { route: '/api/logging', handler: _lazy_v3PybF, lazy: true, middleware: false, method: undefined },
   { route: '/api/invoices', handler: _lazy_56dcx0, lazy: true, middleware: false, method: undefined },
@@ -4296,6 +4298,16 @@ const newsletters$1 = /*#__PURE__*/Object.freeze({
 
 const middleware = /*#__PURE__*/Object.freeze({
   __proto__: null
+});
+
+const metrics = defineEventHandler(async (event) => {
+  const prisma = usePrisma(event);
+  return prisma.$metrics.json();
+});
+
+const metrics$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: metrics
 });
 
 const manufacturers = defineEventHandler(async (event) => {
