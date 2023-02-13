@@ -112,7 +112,7 @@
                               <td style="text-align: right;">Contact</td>
                               <td>
                                 <select id="contact" v-model="contact" name="template" class="form-category">
-                                  <option v-for="contact in findManyCustomers" :key="contact" :hint="contact">
+                                  <option v-for="contact in findManyUsers" :key="contact" :hint="contact">
                                     {{ contact.name }}
                                   </option>
                                 </select>
@@ -297,7 +297,7 @@
   import findManyCountries from '../../graphql/query/findManyCountries'
   import findManyCities from '../../graphql/query/findManyCities'
   import findManyCurrencies from '../../graphql/query/findManyCurrencies'
-  import findManyCustomers from '../../graphql/query/findManyCustomers'
+  import findManyUsers from '../../graphql/query/findManyUsers'
   import findManyUsers from '../../graphql/query/findManyUsers'
   /* eslint-disable camelcase */
 
@@ -490,7 +490,7 @@
               insertCities,
               insertStates,
               insertCurrencies,
-              insertCustomers
+              insertUsers
             }
           }) => {
             // Read data from cache for this query
@@ -500,9 +500,9 @@
               const insertedCity = insertCities.returning;
               const insertedState = insertStates.returning;
               const insertedCurrency = insertCurrencies.returning;
-              const insertedCustomer = insertCustomers.returning;
+              const insertedCustomer = insertUsers.returning;
               console.log(insertedCategory, insertedCountry, insertedCity, insertedState, insertedCurrency,
-                insertedCustomers)
+                insertedUsers)
               console.log(insertedCategory)
               cache.writeQuery({
                 query: findManyQuotes
@@ -585,9 +585,9 @@
         prefetch: true,
         query: findManyCurrencies
       },
-      findManyCustomers: {
+      findManyUsers: {
         prefetch: true,
-        query: findManyCustomers
+        query: findManyUsers
       },
       findManyUsers: {
         prefetch: true,

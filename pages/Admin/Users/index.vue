@@ -3,10 +3,10 @@
         <v-card class="contentright">
             <v-toolbar style="background-color: powderblue;color: black;">
                 <v-col cols="9">
-                <v-toolbar-title>Customers</v-toolbar-title>
+                <v-toolbar-title>Users</v-toolbar-title>
             </v-col>
                 <v-col cols="2">
-                    <createCustomer />
+                    
                 </v-col>
             </v-toolbar>
             <div class="d-flex flex-row">
@@ -41,6 +41,12 @@
                         </v-icon>
                         Reviews
                     </v-tab>
+                    <v-tab value="option-6">
+                        <v-icon start>
+                            mdi-access-point
+                        </v-icon>
+                        Users
+                    </v-tab>
                 </v-tabs>
                 <v-card-text>
                     <v-window v-model="tab" class="contentRight">
@@ -69,6 +75,11 @@
                                 <reviews />
                             </v-card>
                         </v-window-item>
+                        <v-window-item value="option-6">
+                            <v-card flat>
+                                <users />
+                            </v-card>
+                        </v-window-item>
                     </v-window>
                 </v-card-text>
             </div>
@@ -83,6 +94,7 @@
     import segments from '~/components/customers/segments.vue'
     import companies from '~/components/customers/companies.vue'
     import reviews from '~/components/customers/reviews.vue'
+    import users from '~/components/customers/users.vue'
 
     export default {
         components: {
@@ -91,7 +103,8 @@
             customers,
             segments,
             companies,
-            reviews
+            reviews,
+            users
         },
         data: () => ({
             tab: 'option-1',
@@ -101,7 +114,7 @@
 
 <script setup>
     useHead({
-        title: 'Customers',
+        title: 'Users',
     })
 </script>
 

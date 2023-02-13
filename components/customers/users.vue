@@ -2,11 +2,11 @@
     <div>
         <v-row>
             <v-col cols="9">
-                <h5>Customers Directory</h5>
+                <h5>Users Directory</h5>
             </v-col>
 
-            <v-col cols="2">
-                <addCustomer />
+            <v-col cols="3">
+                <addUser />
             </v-col>
         </v-row>
         <section class="team1 cid-tvKEWW53Yo" id="team1-14">
@@ -98,15 +98,15 @@
 </template>
 
 <script>
-import addCustomer from './addCustomer/add-customer.vue'
+import addUser from './addCustomer/add-user.vue'
 
     export default {
-        components: { addCustomer },
+        components: { addUser },
     }
 </script>
 
 <script setup>
     useHead({
-        title: 'Customers'
+        title: 'Users'
     })
 </script>

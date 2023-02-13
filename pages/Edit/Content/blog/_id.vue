@@ -82,7 +82,7 @@
                       <td style="text-align: right;">Author(s)</td>
                       <td>
                         <select id="category" :hint="article.customers" name="template" class="form-category">
-                          <option v-for="customers in findManyCustomers" :key="customers.id" :hint="customers.name">
+                          <option v-for="customers in findManyUsers" :key="customers.id" :hint="customers.name">
                             {{ customers.name }}</option>
                         </select>
                       </td>

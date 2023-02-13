@@ -72,7 +72,7 @@
   import findManyCountries from '../../../../graphql/query/findManyCountries.gql'
   import findManyCities from '../../../../graphql/query/findManyCities.gql'
   import findManyCurrencies from '../../../../graphql/query/findManyCurrencies.gql'
-  import findManyCustomers from '../../../../graphql/query/findManyCustomers.gql'
+  import findManyUsers from '../../../../graphql/query/findManyUsers.gql'
   import findManyUsers from '../../../../graphql/query/findManyUsers.gql'
   /* eslint-disable camelcase */
 
@@ -269,7 +269,7 @@
               insertCities,
               insertStates,
               insertCurrencies,
-              insertCustomers
+              insertUsers
             }
           }) => {
             // Read data from cache for this query
@@ -279,9 +279,9 @@
               const insertedCity = insertCities.returning;
               const insertedState = insertStates.returning;
               const insertedCurrency = insertCurrencies.returning;
-              const insertedCustomer = insertCustomers.returning;
+              const insertedCustomer = insertUsers.returning;
               console.log(insertedCategory, insertedCountry, insertedCity, insertedState, insertedCurrency,
-                insertedCustomers)
+                insertedUsers)
               console.log(insertedCategory)
               cache.writeQuery({
                 query: findManyQuotes
@@ -364,9 +364,9 @@
         prefetch: true,
         query: findManyCurrencies
       },
-      findManyCustomers: {
+      findManyUsers: {
         prefetch: true,
-        query: findManyCustomers
+        query: findManyUsers
       },
       findManyUsers: {
         prefetch: true,

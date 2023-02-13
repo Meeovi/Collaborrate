@@ -42,10 +42,10 @@
                       </td>
                     </tr>
                     <tr>
-                      <td style="text-align: right;">Customers</td>
+                      <td style="text-align: right;">Users</td>
                       <td>
                         <select id="customers" v-model="customers" name="template" class="form-customers">
-                          <option v-for="customers in findManyCustomers" :key="customers.id" :hint="customers">
+                          <option v-for="customers in findManyUsers" :key="customers.id" :hint="customers">
                             {{ customers.name }}</option>
                         </select>
                       </td>
@@ -121,7 +121,7 @@
 
   import findManyRewards from "../../graphql/query/findManyRewards";
   import findManyArticles from "../../graphql/query/findManyArticles";
-  import findManyCustomers from '../../graphql/query/findManyCustomers';
+  import findManyUsers from '../../graphql/query/findManyUsers';
   import findManyUsers from '../../graphql/query/findManyUsers';
   import findManyProducts from '../../graphql/query/findManyProducts';
   import findManyCategories from '../../graphql/query/findManyCategories';
@@ -189,7 +189,7 @@
           update: (cache, {
             data: {
               insertRewards,
-              insertCustomers,
+              insertUsers,
               insertCoupons,
               insertArticles,
               insertProducts,
@@ -198,7 +198,7 @@
           }) => {
             try {
               const insertedReward = insertRewards.returning;
-              const insertedCustomer = insertCustomers.returning;
+              const insertedCustomer = insertUsers.returning;
               const insertedCoupon = insertCoupons.returning;
               const insertedArticle = insertArticles.returning;
               const insertedProduct = insertProducts.returning;
@@ -229,9 +229,9 @@
       },
     },
     apollo: {
-      findManyCustomers: {
+      findManyUsers: {
         prefetch: true,
-        query: findManyCustomers
+        query: findManyUsers
       },
       findManyDiscounts: {
         prefetch: true,

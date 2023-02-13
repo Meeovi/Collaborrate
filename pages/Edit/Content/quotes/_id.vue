@@ -112,7 +112,7 @@
                               <td style="text-align: right;">Contact</td>
                               <td>
                                 <select id="contact" :hint="quote.contact" name="template" class="form-category">
-                                  <option v-for="contact in findManyCustomers" :key="contact" :hint="contact">
+                                  <option v-for="contact in findManyUsers" :key="contact" :hint="contact">
                                     {{ contact.name }}
                                   </option>
                                 </select>
@@ -297,7 +297,7 @@
   import findManyCountries from '../../graphql/query/findManyCountries'
   import findManyCities from '../../graphql/query/findManyCities'
   import findManyCurrencies from '../../graphql/query/findManyCurrencies'
-  import findManyCustomers from '../../graphql/query/findManyCustomers'
+  import findManyUsers from '../../graphql/query/findManyUsers'
   import findManyUsers from '../../graphql/query/findManyUsers'
   /* eslint-disable camelcase */
 
@@ -472,9 +472,9 @@ export default {
         prefetch: true,
         query: findManyCurrencies
       },
-      findManyCustomers: {
+      findManyUsers: {
         prefetch: true,
-        query: findManyCustomers
+        query: findManyUsers
       },
       findManyUsers: {
         prefetch: true,

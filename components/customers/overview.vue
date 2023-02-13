@@ -2,7 +2,7 @@
     <div>
         <v-row class="contentDashboard">
             <v-col cols="3">
-                <h4># of Customers</h4>
+                <h4># of Users</h4>
                 <p>0</p>
             </v-col>
             <v-col cols="3">
@@ -21,8 +21,8 @@
             <v-col cols="12">
                 <v-card>
                     <v-tabs v-model="tab">
-                        <v-tab value="one">New Customers</v-tab>
-                        <v-tab value="two">Loyal Customers</v-tab>
+                        <v-tab value="one">New Users</v-tab>
+                        <v-tab value="two">Loyal Users</v-tab>
                         <v-tab value="three">New Partners</v-tab>
                         <v-tab value="four">Recent Reviews</v-tab>
                     </v-tabs>
@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import newcustomers from './dashboard/newcustomers.vue'
+import newcustomers from './dashboard/newusers.vue'
 import oldestcustomers from './dashboard/oldestcustomers.vue'
 import newpartners from './dashboard/newpartners.vue'
 import recentreviews from './dashboard/recentreviews.vue'
@@ -70,7 +70,7 @@ import recentreviews from './dashboard/recentreviews.vue'
 
 <script setup>
     useHead({
-        title: 'Customers',
+        title: 'Users',
     })
 </script>
 

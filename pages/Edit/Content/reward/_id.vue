@@ -41,10 +41,10 @@
                       </td>
                     </tr>
                     <tr>
-                      <td style="text-align: right;">Customers</td>
+                      <td style="text-align: right;">Users</td>
                       <td>
                         <select id="customers" :hint="reward.customers" name="template" class="form-customers">
-                          <option v-for="customers in findManyCustomers" :key="customers.id" :hint="customers">
+                          <option v-for="customers in findManyUsers" :key="customers.id" :hint="customers">
                             {{ customers.name }}</option>
                         </select>
                       </td>
@@ -120,7 +120,7 @@
 
   import findManyRewards from "../../graphql/query/findManyRewards";
   import findManyArticles from "../../graphql/query/findManyArticles";
-  import findManyCustomers from '../../graphql/query/findManyCustomers';
+  import findManyUsers from '../../graphql/query/findManyUsers';
   import findManyUsers from '../../graphql/query/findManyUsers';
   import findManyProducts from '../../graphql/query/findManyProducts';
   import findManyCategories from '../../graphql/query/findManyCategories';
@@ -219,9 +219,9 @@ createOneRewards(data: {name: $name,expiration: $expiration,customers: $customer
           }
         }
       },
-      findManyCustomers: {
+      findManyUsers: {
         prefetch: true,
-        query: findManyCustomers
+        query: findManyUsers
       },
       findManyDiscounts: {
         prefetch: true,

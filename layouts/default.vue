@@ -36,7 +36,7 @@
           </v-menu>
         </v-col>
         <v-col>
-          <v-btn variant="flat">
+          <v-btn variant="flat" href="/Admin/Notifications/">
             <v-icon start icon="fas fa-bell"></v-icon>
           </v-btn>
         </v-col>
@@ -69,7 +69,7 @@
                   <v-list-item prepend-icon="fas fa-desktop" title="Pages" value="desktop" href="/Admin/Content/PageManager/"></v-list-item>
                   <v-list-item prepend-icon="fas fa-icons" title="Media Manager" value="media manager" href="/Admin/Content/Media/"></v-list-item>
                 </v-list-group>
-              <v-list-item prepend-icon="fas fa-users" title="Customers" value="Customers" href="/Admin/Customers"></v-list-item>
+              <v-list-item prepend-icon="fas fa-users" title="Users" value="Users" href="/Admin/Users"></v-list-item>
               <v-list-item prepend-icon="fas fa-chart-simple" title="Dashboards" value="dashboards"
                 href="/Admin/Dashboard/explorer"></v-list-item>
               <v-list-item prepend-icon="fas fa-chart-column" title="Monitoring" value="monitoring"

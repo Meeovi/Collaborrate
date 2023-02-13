@@ -1,141 +1,108 @@
 <template>
-    <v-card class="contentSection">
-        <v-card-title>
-            <v-toolbar style="background-color: lightskyblue;color: white;">
-                <v-col cols="10">
-                    <v-toolbar-title>Companies</v-toolbar-title>
-                </v-col>
-                <v-col cols="2">
-                    <addCompany />
-                </v-col>
-            </v-toolbar>
-            <v-spacer></v-spacer>
-            <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details>
-            </v-text-field>
-        </v-card-title>
-        <v-data-table v-model="selected" show-select class="elevation-1" 
- item-value="name" :headers="headers" :items="desserts" :search="search"></v-data-table>
-    </v-card>
+    <div>
+        <v-row>
+            <v-col cols="9">
+                <h5>Company Directory</h5>
+            </v-col>
+
+            <v-col cols="3">
+                <addCompany />
+            </v-col>
+        </v-row>
+        <section class="team1 cid-tvKEWW53Yo" id="team1-14">
+
+
+
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card-wrap">
+                            <div class="image-wrap">
+                                <img src="../../assets/images/team1.jpg">
+                            </div>
+                            <div class="content-wrap">
+                                <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
+                                    <strong>John Smith</strong>
+                                </h5>
+                                <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
+                                    <strong>Programmer</strong>
+                                </h6>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card-wrap">
+                            <div class="image-wrap">
+                                <img src="../../assets/images/team2.jpg">
+                            </div>
+                            <div class="content-wrap">
+                                <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
+                                    <strong>Sarah Palmer</strong>
+                                </h5>
+                                <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
+                                    <strong>Manager</strong>
+                                </h6>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card-wrap">
+                            <div class="image-wrap">
+                                <img src="../../assets/images/team3.jpg">
+                            </div>
+                            <div class="content-wrap">
+                                <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
+                                    <strong>Jessica Swift</strong>
+                                </h5>
+                                <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
+                                    <strong>Analyst</strong>
+                                </h6>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card-wrap">
+                            <div class="image-wrap">
+                                <img src="../../assets/images/team4.jpg">
+                            </div>
+                            <div class="content-wrap">
+                                <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
+                                    <strong>Helen Smith</strong>
+                                </h5>
+                                <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
+                                    <strong>Designer</strong>
+                                </h6>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </template>
 
 <script>
-import addCompany from './addCustomer/add-company.vue'
+    import addCompany from './addCustomer/add-company.vue'
 
     export default {
-        components: { addCompany },
-        data() {
-            return {
-                search: '',
-               selected: [],
-                headers: [{
-                        align: 'start',
-                        key: 'name',
-                        sortable: true,
-                        title: 'Dessert (100g serving)',
-                    },
-                    {
-                        key: 'calories',
-                        title: 'Calories'
-                    },
-                    {
-                        key: 'fat',
-                        title: 'Fat (g)'
-                    },
-                    {
-                        key: 'carbs',
-                        title: 'Carbs (g)'
-                    },
-                    {
-                        key: 'protein',
-                        title: 'Protein (g)'
-                    },
-                    {
-                        key: 'iron',
-                        title: 'Iron (%)'
-                    },
-                ],
-                desserts: [{
-                        name: 'Frozen Yogurt',
-                        calories: 159,
-                        fat: 6.0,
-                        carbs: 24,
-                        protein: 4.0,
-                        iron: 1,
-                    },
-                    {
-                        name: 'Ice cream sandwich',
-                        calories: 237,
-                        fat: 9.0,
-                        carbs: 37,
-                        protein: 4.3,
-                        iron: 1,
-                    },
-                    {
-                        name: 'Eclair',
-                        calories: 262,
-                        fat: 16.0,
-                        carbs: 23,
-                        protein: 6.0,
-                        iron: 7,
-                    },
-                    {
-                        name: 'Cupcake',
-                        calories: 305,
-                        fat: 3.7,
-                        carbs: 67,
-                        protein: 4.3,
-                        iron: 8,
-                    },
-                    {
-                        name: 'Gingerbread',
-                        calories: 356,
-                        fat: 16.0,
-                        carbs: 49,
-                        protein: 3.9,
-                        iron: 16,
-                    },
-                    {
-                        name: 'Jelly bean',
-                        calories: 375,
-                        fat: 0.0,
-                        carbs: 94,
-                        protein: 0.0,
-                        iron: 0,
-                    },
-                    {
-                        name: 'Lollipop',
-                        calories: 392,
-                        fat: 0.2,
-                        carbs: 98,
-                        protein: 0,
-                        iron: 2,
-                    },
-                    {
-                        name: 'Honeycomb',
-                        calories: 408,
-                        fat: 3.2,
-                        carbs: 87,
-                        protein: 6.5,
-                        iron: 45,
-                    },
-                    {
-                        name: 'Donut',
-                        calories: 452,
-                        fat: 25.0,
-                        carbs: 51,
-                        protein: 4.9,
-                        iron: 22,
-                    },
-                    {
-                        name: 'KitKat',
-                        calories: 518,
-                        fat: 26.0,
-                        carbs: 65,
-                        protein: 7,
-                        iron: 6,
-                    },
-                ],
-            }
+        components: {
+            addCompany
         },
     }
 </script>

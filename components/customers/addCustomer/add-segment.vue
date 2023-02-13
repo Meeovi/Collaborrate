@@ -2,7 +2,7 @@
     <v-row justify="center">
         <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition" persistent>
             <template v-slot:activator="{ props }">
-                <v-btn v-bind="props" class="rightAddBtn">
+                <v-btn v-bind="props">
                     <v-icon start icon="fas fa-plus"></v-icon>Create Segment
                 </v-btn>
             </template>
@@ -37,7 +37,7 @@
                                 </v-col>
                                 <v-col cols="12" sm="6">
                                     <v-autocomplete
-                                        :items="['Visitors and Registered Customers', 'Registered Customers', 'Visitors']"
+                                        :items="['Visitors and Registered Users', 'Registered Users', 'Visitors']"
                                         label="Apply To" v-model="apply_to"></v-autocomplete>
                                 </v-col>
                             </v-row>

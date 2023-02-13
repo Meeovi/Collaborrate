@@ -3,17 +3,17 @@
         <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition" persistent>
             <template v-slot:activator="{ props }">
                 <v-btn v-bind="props">
-                    <v-icon start icon="fas fa-plus"></v-icon>Create Customer
+                    <v-icon start icon="fas fa-plus"></v-icon>Create User
                 </v-btn>
             </template>
             <v-card>
-                <form action="" method="post" @v-on:submit.prevent="addCustomer()">
+                <form action="" method="post" @v-on:submit.prevent="addUser()">
                     <v-toolbar dark color="primary">
                         <v-btn icon dark @click="dialog = false">
                             <v-icon icon="fas fa-circle-xmark"></v-icon>
                         </v-btn>
                         <v-card-title>
-                            <span class="text-h6">Create new Customer</span>
+                            <span class="text-h6">Create new User</span>
                         </v-card-title>
                     </v-toolbar>
                     <v-card-text>
@@ -66,7 +66,7 @@
 
 <script>
     /* eslint-disable camelcase */
-    import gql from "graphql-tag";
+/*    import gql from "graphql-tag";
     import findManyUsers from "../../../graphql/query/findManyUsers.gql"
     import findManyStates from '../../../graphql/query/findManyStates.gql'
     import findManyCountries from '../../../graphql/query/findManyCountries.gql'
@@ -114,10 +114,10 @@
         workspaces
         zipcode
   }
-}`;
+}`; */
 
     export default {
-        data() {
+    /*    data() {
             return {
                 Address: " ",
                 address_two: " ",
@@ -161,7 +161,7 @@
             }
         },
         methods: {
-            async addCustomer() {
+            async addUser() {
                 const Address = this.Address;
                 const address_two = this.address_two;
                 const comments = this.comments;
@@ -251,12 +251,12 @@
                     }) => {
                         // Read data from cache for this query
                         try {
-                            const insertedCustomer = insertUsers.returning;
+                            const insertedUser = insertUsers.returning;
                             const insertedCountry = insertCountries.returning;
                             const insertedCity = insertCities.returning;
                             const insertedState = insertStates.returning;
-                            console.log(insertedCustomer, insertedCountry, insertedCity, insertedState)
-                            console.log(insertedCustomer)
+                            console.log(insertedUser, insertedCountry, insertedCity, insertedState)
+                            console.log(insertedUser)
                             cache.writeQuery({
                                 query: findManyUsers
                             })
@@ -323,7 +323,7 @@
                 prefetch: true,
                 query: segments
             },
-        },
+        }, */
         dialog: false,
         notifications: false,
         sound: true,

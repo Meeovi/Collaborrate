@@ -1,21 +1,36 @@
 <template>
-    <v-card class="contentSection">
-        <v-card-title>
-            <v-toolbar style="background-color: lightblue;color: black;">
-                <v-col cols="10">
-                    <v-toolbar-title>Reviews</v-toolbar-title>
-                </v-col>
-                <v-col cols="2">
-                    <addReview />
-                </v-col>
-            </v-toolbar>
-            <v-spacer></v-spacer>
-            <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details>
-            </v-text-field>
-        </v-card-title>
-        <v-data-table v-model="selected" show-select class="elevation-1" 
- item-value="name" :headers="headers" :items="desserts" :search="search"></v-data-table>
-    </v-card>
+    <div>
+        <v-row>
+            <v-col cols="9">
+                <h5>Reviews</h5>
+            </v-col>
+            <v-col cols="3">
+                <h5><addReview /></h5>
+            </v-col>
+        </v-row>
+       <v-table fixed-header height="100vh" class="contentRight">
+            <thead>
+                <tr>
+                    <th class="text-left">
+                        Message
+                    </th>
+                    <th class="text-left">
+                        Timestamp
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in schema" :key="item.name">
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.title }}</td>
+                    <td><a href="``">View</a>{{ item.calories }}</td>
+                </tr>
+            </tbody>
+        </v-table> 
+    </div>
 </template>
 
 <script>
