@@ -84,7 +84,7 @@ body {
     position: relative !important;
     left: 56px;
     width: 100% !important;
-    height: 100vh !important;
+    height: 100% !important;
 }
 
 @media all and (max-width: 500px) {
@@ -135,6 +135,12 @@ body {
 
 .sqlSection {
     width: 100% !important;
+}
+
+.apiDocs, .apiStudio {
+    height: 100vh;
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
 /******************** Sidebar CSS *************/

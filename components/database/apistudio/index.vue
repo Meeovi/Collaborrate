@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        <iframe class="apiStudio" src="http://localhost:5858" frameborder="0"></iframe>
     </div>
 </template>
 
