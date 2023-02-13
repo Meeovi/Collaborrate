@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindUniqueDashboardsArgs } from "./args/FindUniqueDashboardsArgs";
 import { Dashboards } from "../../../models/Dashboards";
 export declare class FindUniqueDashboardsResolver {

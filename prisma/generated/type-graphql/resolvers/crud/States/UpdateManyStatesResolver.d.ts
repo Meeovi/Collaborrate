@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpdateManyStatesArgs } from "./args/UpdateManyStatesArgs";
 import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
 export declare class UpdateManyStatesResolver {

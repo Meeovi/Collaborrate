@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { CreateOneTemplatesArgs } from "./args/CreateOneTemplatesArgs";
 import { Templates } from "../../../models/Templates";
 export declare class CreateOneTemplatesResolver {

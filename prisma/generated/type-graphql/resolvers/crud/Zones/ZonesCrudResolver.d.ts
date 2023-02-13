@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateZonesArgs } from "./args/AggregateZonesArgs";
 import { CreateOneZonesArgs } from "./args/CreateOneZonesArgs";
 import { DeleteManyZonesArgs } from "./args/DeleteManyZonesArgs";

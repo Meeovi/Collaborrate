@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.StatesOrderByWithAggregationInput = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const SortOrderInput_1 = require("../inputs/SortOrderInput");
 const StatesAvgOrderByAggregateInput_1 = require("../inputs/StatesAvgOrderByAggregateInput");
 const StatesCountOrderByAggregateInput_1 = require("../inputs/StatesCountOrderByAggregateInput");
 const StatesMaxOrderByAggregateInput_1 = require("../inputs/StatesMaxOrderByAggregateInput");
@@ -25,28 +24,28 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], StatesOrderByWithAggregationInput.prototype, "name", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], StatesOrderByWithAggregationInput.prototype, "description", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], StatesOrderByWithAggregationInput.prototype, "country", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], StatesOrderByWithAggregationInput.prototype, "image", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], StatesOrderByWithAggregationInput.prototype, "trainings", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => StatesCountOrderByAggregateInput_1.StatesCountOrderByAggregateInput, {

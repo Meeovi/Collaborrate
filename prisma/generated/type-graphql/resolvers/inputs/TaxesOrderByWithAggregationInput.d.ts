@@ -1,4 +1,3 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 import { TaxesAvgOrderByAggregateInput } from "../inputs/TaxesAvgOrderByAggregateInput";
 import { TaxesCountOrderByAggregateInput } from "../inputs/TaxesCountOrderByAggregateInput";
 import { TaxesMaxOrderByAggregateInput } from "../inputs/TaxesMaxOrderByAggregateInput";
@@ -7,14 +6,14 @@ import { TaxesSumOrderByAggregateInput } from "../inputs/TaxesSumOrderByAggregat
 export declare class TaxesOrderByWithAggregationInput {
     id?: "asc" | "desc" | undefined;
     tax_identifier?: "asc" | "desc" | undefined;
-    postcode?: SortOrderInput | undefined;
-    state?: SortOrderInput | undefined;
-    country?: SortOrderInput | undefined;
-    rate_percent?: SortOrderInput | undefined;
-    taxDefault?: SortOrderInput | undefined;
-    products?: SortOrderInput | undefined;
-    taxRuleName?: SortOrderInput | undefined;
-    taxCategory?: SortOrderInput | undefined;
+    postcode?: "asc" | "desc" | undefined;
+    state?: "asc" | "desc" | undefined;
+    country?: "asc" | "desc" | undefined;
+    rate_percent?: "asc" | "desc" | undefined;
+    taxDefault?: "asc" | "desc" | undefined;
+    products?: "asc" | "desc" | undefined;
+    taxRuleName?: "asc" | "desc" | undefined;
+    taxCategory?: "asc" | "desc" | undefined;
     _count?: TaxesCountOrderByAggregateInput | undefined;
     _avg?: TaxesAvgOrderByAggregateInput | undefined;
     _max?: TaxesMaxOrderByAggregateInput | undefined;

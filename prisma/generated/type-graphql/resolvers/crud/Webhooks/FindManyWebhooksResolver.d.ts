@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindManyWebhooksArgs } from "./args/FindManyWebhooksArgs";
 import { Webhooks } from "../../../models/Webhooks";
 export declare class FindManyWebhooksResolver {

@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Upload_fileOrderByWithAggregationInput = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const SortOrderInput_1 = require("../inputs/SortOrderInput");
 const Upload_fileAvgOrderByAggregateInput_1 = require("../inputs/Upload_fileAvgOrderByAggregateInput");
 const Upload_fileCountOrderByAggregateInput_1 = require("../inputs/Upload_fileCountOrderByAggregateInput");
 const Upload_fileMaxOrderByAggregateInput_1 = require("../inputs/Upload_fileMaxOrderByAggregateInput");
@@ -25,34 +24,34 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "name", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "alternativeText", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "caption", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "width", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "height", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "formats", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
@@ -61,10 +60,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "hash", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "ext", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
@@ -85,10 +84,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "url", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "previewUrl", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
@@ -97,34 +96,34 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "provider", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "provider_metadata", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "created_by", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "updated_by", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "created_at", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Upload_fileOrderByWithAggregationInput.prototype, "updated_at", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => Upload_fileCountOrderByAggregateInput_1.Upload_fileCountOrderByAggregateInput, {

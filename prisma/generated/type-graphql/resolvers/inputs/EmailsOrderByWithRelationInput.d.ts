@@ -1,15 +1,14 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class EmailsOrderByWithRelationInput {
     id?: "asc" | "desc" | undefined;
-    created_at?: SortOrderInput | undefined;
-    subject?: SortOrderInput | undefined;
-    content?: SortOrderInput | undefined;
+    created_at?: "asc" | "desc" | undefined;
+    subject?: "asc" | "desc" | undefined;
+    content?: "asc" | "desc" | undefined;
     cust_id?: "asc" | "desc" | undefined;
-    bcc?: SortOrderInput | undefined;
-    cc?: SortOrderInput | undefined;
-    from?: SortOrderInput | undefined;
-    media?: SortOrderInput | undefined;
-    staff_id?: SortOrderInput | undefined;
-    customers?: SortOrderInput | undefined;
-    users?: SortOrderInput | undefined;
+    bcc?: "asc" | "desc" | undefined;
+    cc?: "asc" | "desc" | undefined;
+    from?: "asc" | "desc" | undefined;
+    media?: "asc" | "desc" | undefined;
+    staff_id?: "asc" | "desc" | undefined;
+    customers?: "asc" | "desc" | undefined;
+    users?: "asc" | "desc" | undefined;
 }

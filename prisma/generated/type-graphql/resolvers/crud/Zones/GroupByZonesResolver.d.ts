@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { GroupByZonesArgs } from "./args/GroupByZonesArgs";
 import { ZonesGroupBy } from "../../outputs/ZonesGroupBy";
 export declare class GroupByZonesResolver {

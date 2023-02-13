@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindUniqueApitokenOrThrowArgs } from "./args/FindUniqueApitokenOrThrowArgs";
 import { Apitoken } from "../../../models/Apitoken";
 export declare class FindUniqueApitokenOrThrowResolver {

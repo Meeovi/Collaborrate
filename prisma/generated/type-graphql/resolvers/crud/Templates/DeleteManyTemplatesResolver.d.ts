@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { DeleteManyTemplatesArgs } from "./args/DeleteManyTemplatesArgs";
 import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
 export declare class DeleteManyTemplatesResolver {

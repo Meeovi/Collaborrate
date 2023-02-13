@@ -3,15 +3,14 @@ import { InternalizationCountOrderByAggregateInput } from "../inputs/Internaliza
 import { InternalizationMaxOrderByAggregateInput } from "../inputs/InternalizationMaxOrderByAggregateInput";
 import { InternalizationMinOrderByAggregateInput } from "../inputs/InternalizationMinOrderByAggregateInput";
 import { InternalizationSumOrderByAggregateInput } from "../inputs/InternalizationSumOrderByAggregateInput";
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class InternalizationOrderByWithAggregationInput {
     id?: "asc" | "desc" | undefined;
-    created_at?: SortOrderInput | undefined;
-    name?: SortOrderInput | undefined;
-    region?: SortOrderInput | undefined;
-    description?: SortOrderInput | undefined;
-    default?: SortOrderInput | undefined;
-    website?: SortOrderInput | undefined;
+    created_at?: "asc" | "desc" | undefined;
+    name?: "asc" | "desc" | undefined;
+    region?: "asc" | "desc" | undefined;
+    description?: "asc" | "desc" | undefined;
+    default?: "asc" | "desc" | undefined;
+    website?: "asc" | "desc" | undefined;
     _count?: InternalizationCountOrderByAggregateInput | undefined;
     _avg?: InternalizationAvgOrderByAggregateInput | undefined;
     _max?: InternalizationMaxOrderByAggregateInput | undefined;

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindFirstTemplatesArgs } from "./args/FindFirstTemplatesArgs";
 import { Templates } from "../../../models/Templates";
 export declare class FindFirstTemplatesResolver {

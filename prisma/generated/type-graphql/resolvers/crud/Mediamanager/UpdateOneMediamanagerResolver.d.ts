@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpdateOneMediamanagerArgs } from "./args/UpdateOneMediamanagerArgs";
 import { Mediamanager } from "../../../models/Mediamanager";
 export declare class UpdateOneMediamanagerResolver {

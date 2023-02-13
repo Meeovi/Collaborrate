@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateCitiesArgs } from "./args/AggregateCitiesArgs";
 import { CreateOneCitiesArgs } from "./args/CreateOneCitiesArgs";
 import { DeleteManyCitiesArgs } from "./args/DeleteManyCitiesArgs";

@@ -8,7 +8,6 @@ const PaymentsCountOrderByAggregateInput_1 = require("../inputs/PaymentsCountOrd
 const PaymentsMaxOrderByAggregateInput_1 = require("../inputs/PaymentsMaxOrderByAggregateInput");
 const PaymentsMinOrderByAggregateInput_1 = require("../inputs/PaymentsMinOrderByAggregateInput");
 const PaymentsSumOrderByAggregateInput_1 = require("../inputs/PaymentsSumOrderByAggregateInput");
-const SortOrderInput_1 = require("../inputs/SortOrderInput");
 const SortOrder_1 = require("../../enums/SortOrder");
 let PaymentsOrderByWithAggregationInput = class PaymentsOrderByWithAggregationInput {
 };
@@ -19,46 +18,46 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], PaymentsOrderByWithAggregationInput.prototype, "id", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], PaymentsOrderByWithAggregationInput.prototype, "created_at", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], PaymentsOrderByWithAggregationInput.prototype, "client_id", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], PaymentsOrderByWithAggregationInput.prototype, "client_secret", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], PaymentsOrderByWithAggregationInput.prototype, "host_uri", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], PaymentsOrderByWithAggregationInput.prototype, "redirect_url", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], PaymentsOrderByWithAggregationInput.prototype, "redirect_url_app", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], PaymentsOrderByWithAggregationInput.prototype, "icon", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
@@ -67,16 +66,16 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], PaymentsOrderByWithAggregationInput.prototype, "name", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], PaymentsOrderByWithAggregationInput.prototype, "active", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], PaymentsOrderByWithAggregationInput.prototype, "country", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => PaymentsCountOrderByAggregateInput_1.PaymentsCountOrderByAggregateInput, {

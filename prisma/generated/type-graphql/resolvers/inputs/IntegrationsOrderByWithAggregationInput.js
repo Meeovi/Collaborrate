@@ -8,7 +8,6 @@ const IntegrationsCountOrderByAggregateInput_1 = require("../inputs/Integrations
 const IntegrationsMaxOrderByAggregateInput_1 = require("../inputs/IntegrationsMaxOrderByAggregateInput");
 const IntegrationsMinOrderByAggregateInput_1 = require("../inputs/IntegrationsMinOrderByAggregateInput");
 const IntegrationsSumOrderByAggregateInput_1 = require("../inputs/IntegrationsSumOrderByAggregateInput");
-const SortOrderInput_1 = require("../inputs/SortOrderInput");
 const SortOrder_1 = require("../../enums/SortOrder");
 let IntegrationsOrderByWithAggregationInput = class IntegrationsOrderByWithAggregationInput {
 };
@@ -19,40 +18,40 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], IntegrationsOrderByWithAggregationInput.prototype, "id", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], IntegrationsOrderByWithAggregationInput.prototype, "created_at", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], IntegrationsOrderByWithAggregationInput.prototype, "name", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], IntegrationsOrderByWithAggregationInput.prototype, "content", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], IntegrationsOrderByWithAggregationInput.prototype, "media", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], IntegrationsOrderByWithAggregationInput.prototype, "location", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], IntegrationsOrderByWithAggregationInput.prototype, "category", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => IntegrationsCountOrderByAggregateInput_1.IntegrationsCountOrderByAggregateInput, {

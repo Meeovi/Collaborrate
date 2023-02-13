@@ -1,11 +1,10 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class TagsOrderByWithRelationInput {
     id?: "asc" | "desc" | undefined;
     name?: "asc" | "desc" | undefined;
-    excerpt?: SortOrderInput | undefined;
-    categories?: SortOrderInput | undefined;
-    articles?: SortOrderInput | undefined;
-    products?: SortOrderInput | undefined;
-    customers?: SortOrderInput | undefined;
-    users?: SortOrderInput | undefined;
+    excerpt?: "asc" | "desc" | undefined;
+    categories?: "asc" | "desc" | undefined;
+    articles?: "asc" | "desc" | undefined;
+    products?: "asc" | "desc" | undefined;
+    customers?: "asc" | "desc" | undefined;
+    users?: "asc" | "desc" | undefined;
 }

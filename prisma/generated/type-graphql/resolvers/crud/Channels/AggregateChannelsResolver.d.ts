@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateChannelsArgs } from "./args/AggregateChannelsArgs";
 import { AggregateChannels } from "../../outputs/AggregateChannels";
 export declare class AggregateChannelsResolver {

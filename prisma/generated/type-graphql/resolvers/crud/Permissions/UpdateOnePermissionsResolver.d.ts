@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpdateOnePermissionsArgs } from "./args/UpdateOnePermissionsArgs";
 import { Permissions } from "../../../models/Permissions";
 export declare class UpdateOnePermissionsResolver {

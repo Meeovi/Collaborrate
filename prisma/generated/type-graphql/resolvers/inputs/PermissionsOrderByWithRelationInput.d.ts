@@ -1,13 +1,12 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class PermissionsOrderByWithRelationInput {
     id?: "asc" | "desc" | undefined;
-    created_at?: SortOrderInput | undefined;
-    name?: SortOrderInput | undefined;
-    content?: SortOrderInput | undefined;
-    create?: SortOrderInput | undefined;
-    delete?: SortOrderInput | undefined;
-    read?: SortOrderInput | undefined;
-    role?: SortOrderInput | undefined;
-    update?: SortOrderInput | undefined;
-    users?: SortOrderInput | undefined;
+    created_at?: "asc" | "desc" | undefined;
+    name?: "asc" | "desc" | undefined;
+    content?: "asc" | "desc" | undefined;
+    create?: "asc" | "desc" | undefined;
+    delete?: "asc" | "desc" | undefined;
+    read?: "asc" | "desc" | undefined;
+    role?: "asc" | "desc" | undefined;
+    update?: "asc" | "desc" | undefined;
+    users?: "asc" | "desc" | undefined;
 }

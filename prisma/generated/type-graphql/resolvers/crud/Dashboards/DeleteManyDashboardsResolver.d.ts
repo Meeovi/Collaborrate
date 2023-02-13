@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { DeleteManyDashboardsArgs } from "./args/DeleteManyDashboardsArgs";
 import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
 export declare class DeleteManyDashboardsResolver {

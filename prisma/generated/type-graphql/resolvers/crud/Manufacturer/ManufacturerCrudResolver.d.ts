@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateManufacturerArgs } from "./args/AggregateManufacturerArgs";
 import { CreateOneManufacturerArgs } from "./args/CreateOneManufacturerArgs";
 import { DeleteManyManufacturerArgs } from "./args/DeleteManyManufacturerArgs";

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateSegmentsArgs } from "./args/AggregateSegmentsArgs";
 import { CreateOneSegmentsArgs } from "./args/CreateOneSegmentsArgs";
 import { DeleteManySegmentsArgs } from "./args/DeleteManySegmentsArgs";

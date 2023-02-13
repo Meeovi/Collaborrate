@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateWebhooksArgs } from "./args/AggregateWebhooksArgs";
 import { AggregateWebhooks } from "../../outputs/AggregateWebhooks";
 export declare class AggregateWebhooksResolver {

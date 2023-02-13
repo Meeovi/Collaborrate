@@ -1,18 +1,17 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class FullfillmentsOrderByWithRelationInput {
     id?: "asc" | "desc" | undefined;
-    created_at?: SortOrderInput | undefined;
-    name?: SortOrderInput | undefined;
-    shipping_zones?: SortOrderInput | undefined;
-    company?: SortOrderInput | undefined;
-    address?: SortOrderInput | undefined;
-    address_two?: SortOrderInput | undefined;
-    city?: SortOrderInput | undefined;
-    state?: SortOrderInput | undefined;
-    zipcode?: SortOrderInput | undefined;
-    country?: SortOrderInput | undefined;
-    country_area?: SortOrderInput | undefined;
-    phone?: SortOrderInput | undefined;
-    pickup?: SortOrderInput | undefined;
-    stock?: SortOrderInput | undefined;
+    created_at?: "asc" | "desc" | undefined;
+    name?: "asc" | "desc" | undefined;
+    shipping_zones?: "asc" | "desc" | undefined;
+    company?: "asc" | "desc" | undefined;
+    address?: "asc" | "desc" | undefined;
+    address_two?: "asc" | "desc" | undefined;
+    city?: "asc" | "desc" | undefined;
+    state?: "asc" | "desc" | undefined;
+    zipcode?: "asc" | "desc" | undefined;
+    country?: "asc" | "desc" | undefined;
+    country_area?: "asc" | "desc" | undefined;
+    phone?: "asc" | "desc" | undefined;
+    pickup?: "asc" | "desc" | undefined;
+    stock?: "asc" | "desc" | undefined;
 }

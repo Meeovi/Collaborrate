@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpsertOneInternalizationArgs } from "./args/UpsertOneInternalizationArgs";
 import { Internalization } from "../../../models/Internalization";
 export declare class UpsertOneInternalizationResolver {

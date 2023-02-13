@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindFirstApitokenOrThrowArgs } from "./args/FindFirstApitokenOrThrowArgs";
 import { Apitoken } from "../../../models/Apitoken";
 export declare class FindFirstApitokenOrThrowResolver {

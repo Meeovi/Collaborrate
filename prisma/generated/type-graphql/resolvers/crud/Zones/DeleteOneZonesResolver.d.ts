@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { DeleteOneZonesArgs } from "./args/DeleteOneZonesArgs";
 import { Zones } from "../../../models/Zones";
 export declare class DeleteOneZonesResolver {

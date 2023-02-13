@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindFirstDashboardslidesArgs } from "./args/FindFirstDashboardslidesArgs";
 import { Dashboardslides } from "../../../models/Dashboardslides";
 export declare class FindFirstDashboardslidesResolver {

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { CreateOneSettingsArgs } from "./args/CreateOneSettingsArgs";
 import { Settings } from "../../../models/Settings";
 export declare class CreateOneSettingsResolver {

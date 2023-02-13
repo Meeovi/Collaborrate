@@ -8,7 +8,6 @@ const ApitokenCountOrderByAggregateInput_1 = require("../inputs/ApitokenCountOrd
 const ApitokenMaxOrderByAggregateInput_1 = require("../inputs/ApitokenMaxOrderByAggregateInput");
 const ApitokenMinOrderByAggregateInput_1 = require("../inputs/ApitokenMinOrderByAggregateInput");
 const ApitokenSumOrderByAggregateInput_1 = require("../inputs/ApitokenSumOrderByAggregateInput");
-const SortOrderInput_1 = require("../inputs/SortOrderInput");
 const SortOrder_1 = require("../../enums/SortOrder");
 let ApitokenOrderByWithAggregationInput = class ApitokenOrderByWithAggregationInput {
 };
@@ -19,10 +18,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], ApitokenOrderByWithAggregationInput.prototype, "id", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], ApitokenOrderByWithAggregationInput.prototype, "created_at", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
@@ -31,16 +30,16 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], ApitokenOrderByWithAggregationInput.prototype, "name", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], ApitokenOrderByWithAggregationInput.prototype, "token_type", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], ApitokenOrderByWithAggregationInput.prototype, "description", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {

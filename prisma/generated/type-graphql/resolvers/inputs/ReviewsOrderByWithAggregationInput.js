@@ -8,7 +8,6 @@ const ReviewsCountOrderByAggregateInput_1 = require("../inputs/ReviewsCountOrder
 const ReviewsMaxOrderByAggregateInput_1 = require("../inputs/ReviewsMaxOrderByAggregateInput");
 const ReviewsMinOrderByAggregateInput_1 = require("../inputs/ReviewsMinOrderByAggregateInput");
 const ReviewsSumOrderByAggregateInput_1 = require("../inputs/ReviewsSumOrderByAggregateInput");
-const SortOrderInput_1 = require("../inputs/SortOrderInput");
 const SortOrder_1 = require("../../enums/SortOrder");
 let ReviewsOrderByWithAggregationInput = class ReviewsOrderByWithAggregationInput {
 };
@@ -19,34 +18,34 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], ReviewsOrderByWithAggregationInput.prototype, "id", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], ReviewsOrderByWithAggregationInput.prototype, "first_name", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], ReviewsOrderByWithAggregationInput.prototype, "last_name", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], ReviewsOrderByWithAggregationInput.prototype, "content", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], ReviewsOrderByWithAggregationInput.prototype, "websites", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], ReviewsOrderByWithAggregationInput.prototype, "created_at", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => ReviewsCountOrderByAggregateInput_1.ReviewsCountOrderByAggregateInput, {

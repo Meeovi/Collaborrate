@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { CreateOneQuotesArgs } from "./args/CreateOneQuotesArgs";
 import { Quotes } from "../../../models/Quotes";
 export declare class CreateOneQuotesResolver {

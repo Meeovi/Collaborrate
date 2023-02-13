@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregatePagesArgs } from "./args/AggregatePagesArgs";
 import { CreateOnePagesArgs } from "./args/CreateOnePagesArgs";
 import { DeleteManyPagesArgs } from "./args/DeleteManyPagesArgs";

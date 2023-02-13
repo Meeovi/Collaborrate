@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateApitokenArgs } from "./args/AggregateApitokenArgs";
 import { AggregateApitoken } from "../../outputs/AggregateApitoken";
 export declare class AggregateApitokenResolver {

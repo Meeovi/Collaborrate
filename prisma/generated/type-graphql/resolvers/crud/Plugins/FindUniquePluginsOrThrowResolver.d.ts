@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindUniquePluginsOrThrowArgs } from "./args/FindUniquePluginsOrThrowArgs";
 import { Plugins } from "../../../models/Plugins";
 export declare class FindUniquePluginsOrThrowResolver {

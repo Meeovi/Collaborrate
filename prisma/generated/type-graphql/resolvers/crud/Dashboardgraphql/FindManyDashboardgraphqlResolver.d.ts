@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindManyDashboardgraphqlArgs } from "./args/FindManyDashboardgraphqlArgs";
 import { Dashboardgraphql } from "../../../models/Dashboardgraphql";
 export declare class FindManyDashboardgraphqlResolver {

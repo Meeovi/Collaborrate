@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { DeleteOneApitokenArgs } from "./args/DeleteOneApitokenArgs";
 import { Apitoken } from "../../../models/Apitoken";
 export declare class DeleteOneApitokenResolver {

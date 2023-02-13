@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { CreateOneCitiesArgs } from "./args/CreateOneCitiesArgs";
 import { Cities } from "../../../models/Cities";
 export declare class CreateOneCitiesResolver {

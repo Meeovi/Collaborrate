@@ -1,11 +1,10 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class WishlistsOrderByWithRelationInput {
     id?: "asc" | "desc" | undefined;
-    created_at?: SortOrderInput | undefined;
-    name?: SortOrderInput | undefined;
-    customers?: SortOrderInput | undefined;
-    visibility?: SortOrderInput | undefined;
-    products?: SortOrderInput | undefined;
-    quantity?: SortOrderInput | undefined;
-    occassions?: SortOrderInput | undefined;
+    created_at?: "asc" | "desc" | undefined;
+    name?: "asc" | "desc" | undefined;
+    customers?: "asc" | "desc" | undefined;
+    visibility?: "asc" | "desc" | undefined;
+    products?: "asc" | "desc" | undefined;
+    quantity?: "asc" | "desc" | undefined;
+    occassions?: "asc" | "desc" | undefined;
 }

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindManyCollectionsArgs } from "./args/FindManyCollectionsArgs";
 import { Collections } from "../../../models/Collections";
 export declare class FindManyCollectionsResolver {

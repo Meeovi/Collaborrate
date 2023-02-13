@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateApitokenArgs } from "./args/AggregateApitokenArgs";
 import { CreateOneApitokenArgs } from "./args/CreateOneApitokenArgs";
 import { DeleteManyApitokenArgs } from "./args/DeleteManyApitokenArgs";

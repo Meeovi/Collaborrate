@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateFullfillmentsArgs } from "./args/AggregateFullfillmentsArgs";
 import { CreateOneFullfillmentsArgs } from "./args/CreateOneFullfillmentsArgs";
 import { DeleteManyFullfillmentsArgs } from "./args/DeleteManyFullfillmentsArgs";

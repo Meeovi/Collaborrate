@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateTagsArgs } from "./args/AggregateTagsArgs";
 import { CreateOneTagsArgs } from "./args/CreateOneTagsArgs";
 import { DeleteManyTagsArgs } from "./args/DeleteManyTagsArgs";

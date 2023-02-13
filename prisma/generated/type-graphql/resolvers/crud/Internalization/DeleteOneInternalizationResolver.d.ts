@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { DeleteOneInternalizationArgs } from "./args/DeleteOneInternalizationArgs";
 import { Internalization } from "../../../models/Internalization";
 export declare class DeleteOneInternalizationResolver {

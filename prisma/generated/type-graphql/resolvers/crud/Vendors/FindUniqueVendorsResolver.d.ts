@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindUniqueVendorsArgs } from "./args/FindUniqueVendorsArgs";
 import { Vendors } from "../../../models/Vendors";
 export declare class FindUniqueVendorsResolver {

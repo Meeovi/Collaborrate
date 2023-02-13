@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateRewardsArgs } from "./args/AggregateRewardsArgs";
 import { CreateOneRewardsArgs } from "./args/CreateOneRewardsArgs";
 import { DeleteManyRewardsArgs } from "./args/DeleteManyRewardsArgs";

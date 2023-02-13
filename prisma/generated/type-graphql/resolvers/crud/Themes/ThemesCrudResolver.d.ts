@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateThemesArgs } from "./args/AggregateThemesArgs";
 import { CreateOneThemesArgs } from "./args/CreateOneThemesArgs";
 import { DeleteManyThemesArgs } from "./args/DeleteManyThemesArgs";

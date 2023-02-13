@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateWarehouseArgs } from "./args/AggregateWarehouseArgs";
 import { AggregateWarehouse } from "../../outputs/AggregateWarehouse";
 export declare class AggregateWarehouseResolver {

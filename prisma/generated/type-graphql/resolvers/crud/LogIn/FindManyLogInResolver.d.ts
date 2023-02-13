@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindManyLogInArgs } from "./args/FindManyLogInArgs";
 import { LogIn } from "../../../models/LogIn";
 export declare class FindManyLogInResolver {

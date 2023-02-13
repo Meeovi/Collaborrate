@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindFirstZonesOrThrowArgs } from "./args/FindFirstZonesOrThrowArgs";
 import { Zones } from "../../../models/Zones";
 export declare class FindFirstZonesOrThrowResolver {

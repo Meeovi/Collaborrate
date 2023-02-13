@@ -1,15 +1,14 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class AgreementsOrderByWithRelationInput {
     id?: "asc" | "desc" | undefined;
-    name?: SortOrderInput | undefined;
-    type?: SortOrderInput | undefined;
-    content?: SortOrderInput | undefined;
-    created?: SortOrderInput | undefined;
-    excerpt?: SortOrderInput | undefined;
-    image?: SortOrderInput | undefined;
-    mediamanager?: SortOrderInput | undefined;
-    reference_id?: SortOrderInput | undefined;
-    shop_id?: SortOrderInput | undefined;
-    updated?: SortOrderInput | undefined;
-    user_id?: SortOrderInput | undefined;
+    name?: "asc" | "desc" | undefined;
+    type?: "asc" | "desc" | undefined;
+    content?: "asc" | "desc" | undefined;
+    created?: "asc" | "desc" | undefined;
+    excerpt?: "asc" | "desc" | undefined;
+    image?: "asc" | "desc" | undefined;
+    mediamanager?: "asc" | "desc" | undefined;
+    reference_id?: "asc" | "desc" | undefined;
+    shop_id?: "asc" | "desc" | undefined;
+    updated?: "asc" | "desc" | undefined;
+    user_id?: "asc" | "desc" | undefined;
 }

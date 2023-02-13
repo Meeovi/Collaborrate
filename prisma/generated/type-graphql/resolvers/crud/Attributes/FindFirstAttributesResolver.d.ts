@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindFirstAttributesArgs } from "./args/FindFirstAttributesArgs";
 import { Attributes } from "../../../models/Attributes";
 export declare class FindFirstAttributesResolver {

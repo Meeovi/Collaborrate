@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpsertOneWebhooksArgs } from "./args/UpsertOneWebhooksArgs";
 import { Webhooks } from "../../../models/Webhooks";
 export declare class UpsertOneWebhooksResolver {

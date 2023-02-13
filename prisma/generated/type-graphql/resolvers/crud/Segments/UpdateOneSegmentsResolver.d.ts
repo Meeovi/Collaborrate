@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpdateOneSegmentsArgs } from "./args/UpdateOneSegmentsArgs";
 import { Segments } from "../../../models/Segments";
 export declare class UpdateOneSegmentsResolver {

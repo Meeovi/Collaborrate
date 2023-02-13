@@ -3,17 +3,16 @@ import { CollectionsCountOrderByAggregateInput } from "../inputs/CollectionsCoun
 import { CollectionsMaxOrderByAggregateInput } from "../inputs/CollectionsMaxOrderByAggregateInput";
 import { CollectionsMinOrderByAggregateInput } from "../inputs/CollectionsMinOrderByAggregateInput";
 import { CollectionsSumOrderByAggregateInput } from "../inputs/CollectionsSumOrderByAggregateInput";
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class CollectionsOrderByWithAggregationInput {
     id?: "asc" | "desc" | undefined;
-    created_at?: SortOrderInput | undefined;
-    name?: SortOrderInput | undefined;
-    description?: SortOrderInput | undefined;
-    image?: SortOrderInput | undefined;
-    product?: SortOrderInput | undefined;
-    meta_title?: SortOrderInput | undefined;
-    meta_keywords?: SortOrderInput | undefined;
-    meta_description?: SortOrderInput | undefined;
+    created_at?: "asc" | "desc" | undefined;
+    name?: "asc" | "desc" | undefined;
+    description?: "asc" | "desc" | undefined;
+    image?: "asc" | "desc" | undefined;
+    product?: "asc" | "desc" | undefined;
+    meta_title?: "asc" | "desc" | undefined;
+    meta_keywords?: "asc" | "desc" | undefined;
+    meta_description?: "asc" | "desc" | undefined;
     _count?: CollectionsCountOrderByAggregateInput | undefined;
     _avg?: CollectionsAvgOrderByAggregateInput | undefined;
     _max?: CollectionsMaxOrderByAggregateInput | undefined;

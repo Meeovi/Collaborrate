@@ -1,22 +1,21 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class Upload_fileOrderByWithRelationInput {
     id?: "asc" | "desc" | undefined;
     name?: "asc" | "desc" | undefined;
-    alternativeText?: SortOrderInput | undefined;
-    caption?: SortOrderInput | undefined;
-    width?: SortOrderInput | undefined;
-    height?: SortOrderInput | undefined;
-    formats?: SortOrderInput | undefined;
+    alternativeText?: "asc" | "desc" | undefined;
+    caption?: "asc" | "desc" | undefined;
+    width?: "asc" | "desc" | undefined;
+    height?: "asc" | "desc" | undefined;
+    formats?: "asc" | "desc" | undefined;
     hash?: "asc" | "desc" | undefined;
-    ext?: SortOrderInput | undefined;
+    ext?: "asc" | "desc" | undefined;
     mime?: "asc" | "desc" | undefined;
     size?: "asc" | "desc" | undefined;
     url?: "asc" | "desc" | undefined;
-    previewUrl?: SortOrderInput | undefined;
+    previewUrl?: "asc" | "desc" | undefined;
     provider?: "asc" | "desc" | undefined;
-    provider_metadata?: SortOrderInput | undefined;
-    created_by?: SortOrderInput | undefined;
-    updated_by?: SortOrderInput | undefined;
-    created_at?: SortOrderInput | undefined;
-    updated_at?: SortOrderInput | undefined;
+    provider_metadata?: "asc" | "desc" | undefined;
+    created_by?: "asc" | "desc" | undefined;
+    updated_by?: "asc" | "desc" | undefined;
+    created_at?: "asc" | "desc" | undefined;
+    updated_at?: "asc" | "desc" | undefined;
 }

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateContent_typeArgs } from "./args/AggregateContent_typeArgs";
 import { CreateOneContent_typeArgs } from "./args/CreateOneContent_typeArgs";
 import { DeleteManyContent_typeArgs } from "./args/DeleteManyContent_typeArgs";

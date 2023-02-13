@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindUniqueFullfillmentsOrThrowArgs } from "./args/FindUniqueFullfillmentsOrThrowArgs";
 import { Fullfillments } from "../../../models/Fullfillments";
 export declare class FindUniqueFullfillmentsOrThrowResolver {

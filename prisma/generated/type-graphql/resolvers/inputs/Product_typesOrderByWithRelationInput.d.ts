@@ -1,13 +1,12 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class Product_typesOrderByWithRelationInput {
     id?: "asc" | "desc" | undefined;
-    type_name?: SortOrderInput | undefined;
-    taxes?: SortOrderInput | undefined;
-    isShippable?: SortOrderInput | undefined;
-    meta_url?: SortOrderInput | undefined;
-    meta_description?: SortOrderInput | undefined;
-    filter_options?: SortOrderInput | undefined;
-    product_type?: SortOrderInput | undefined;
+    type_name?: "asc" | "desc" | undefined;
+    taxes?: "asc" | "desc" | undefined;
+    isShippable?: "asc" | "desc" | undefined;
+    meta_url?: "asc" | "desc" | undefined;
+    meta_description?: "asc" | "desc" | undefined;
+    filter_options?: "asc" | "desc" | undefined;
+    product_type?: "asc" | "desc" | undefined;
     prod_id?: "asc" | "desc" | undefined;
-    products?: SortOrderInput | undefined;
+    products?: "asc" | "desc" | undefined;
 }

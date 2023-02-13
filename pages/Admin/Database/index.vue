@@ -8,10 +8,9 @@
         <v-tab value="two">SQL Editor</v-tab>
         <v-tab value="three">Database</v-tab>
         <v-tab value="four">Edge Functions</v-tab>
-        <v-tab value="five">Reports</v-tab>
-        <v-tab value="six">Logs</v-tab>
-        <v-tab value="seven">API Docs</v-tab>
-        <v-tab value="eight">API Studio</v-tab>
+        <v-tab value="five">Logs</v-tab>
+        <v-tab value="six">API Docs</v-tab>
+        <v-tab value="seven">API Studio</v-tab>
       </v-tabs>
   
       <v-card-text>
@@ -33,18 +32,14 @@
           </v-window-item>
 
           <v-window-item value="five">
-            <reports />
-          </v-window-item>
-
-          <v-window-item value="six">
             <logs />
           </v-window-item>
 
-          <v-window-item value="seven">
+          <v-window-item value="six">
             <apidocs />
           </v-window-item>
 
-          <v-window-item value="eight">
+          <v-window-item value="seven">
             <apistudio />
           </v-window-item>
         </v-window>
@@ -57,14 +52,13 @@ import content from '../../../components/database/content/index.vue'
 import sqleditor from '../../../components/database/sqleditor/index.vue'
 import database from '../../../components/database/database/index.vue'
 import functions from '../../../components/database/edgefunctions/index.vue'
-import reports from '../../../components/database/reports/index.vue'
 import logs from '../../../components/database/logs/index.vue'
 import apidocs from '../../../components/database/apidocs/index.vue'
 import apistudio from '../../../components/database/apistudio/index.vue'
 
 
   export default {
-    components: { content, sqleditor, database, functions, reports, logs, apidocs, apistudio },
+    components: { content, sqleditor, database, functions, logs, apidocs, apistudio },
     data: () => ({
       tab: null,
     }),

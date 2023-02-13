@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { CreateOneContent_typeArgs } from "./args/CreateOneContent_typeArgs";
 import { Content_type } from "../../../models/Content_type";
 export declare class CreateOneContent_typeResolver {

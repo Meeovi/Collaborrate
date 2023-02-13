@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpdateOneWarehouseArgs } from "./args/UpdateOneWarehouseArgs";
 import { Warehouse } from "../../../models/Warehouse";
 export declare class UpdateOneWarehouseResolver {

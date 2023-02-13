@@ -4,7 +4,7 @@
 
 A powerful, consistent, and flexible headless content management framework. Built using the Nuxtjs framework, Alternate Framework provides headless content management system capabilities for sites of all types. 
 
-https://app.netlify.com/start/deploy?repository=https://github.com/meeovi/AlternateFramework
+https://app.netlify.com/start/deploy?repository=https://github.com/meeovi/Alternatecms
 
 ## Features include:
 

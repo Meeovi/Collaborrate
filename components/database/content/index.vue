@@ -14,8 +14,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="item in read" :key="item.name">
-                <td>{{ item.name }}</td>
+            <tr v-for="item in schema" :key="item.name">
+                <td>{{ item[0].title }}</td>
                 <td><a href="``">View</a>{{ item.calories }}</td>
             </tr>
         </tbody>
@@ -35,5 +35,5 @@ import createContent from './LeftCreateTable.vue'
         title: 'Overview - Database'
     })
 
-    const { data: read } = await useFetch('/api/read')
+    const { data: schema } = await useAsyncData('home', () => queryContent('/').find())
 </script>

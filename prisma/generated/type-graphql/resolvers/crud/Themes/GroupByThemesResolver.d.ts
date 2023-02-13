@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { GroupByThemesArgs } from "./args/GroupByThemesArgs";
 import { ThemesGroupBy } from "../../outputs/ThemesGroupBy";
 export declare class GroupByThemesResolver {

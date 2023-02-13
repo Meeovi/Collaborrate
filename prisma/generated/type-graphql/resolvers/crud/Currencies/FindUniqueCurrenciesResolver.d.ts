@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindUniqueCurrenciesArgs } from "./args/FindUniqueCurrenciesArgs";
 import { Currencies } from "../../../models/Currencies";
 export declare class FindUniqueCurrenciesResolver {

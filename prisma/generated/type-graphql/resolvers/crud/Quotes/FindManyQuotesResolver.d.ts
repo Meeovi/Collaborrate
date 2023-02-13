@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindManyQuotesArgs } from "./args/FindManyQuotesArgs";
 import { Quotes } from "../../../models/Quotes";
 export declare class FindManyQuotesResolver {

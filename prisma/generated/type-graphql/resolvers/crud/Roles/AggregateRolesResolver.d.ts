@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateRolesArgs } from "./args/AggregateRolesArgs";
 import { AggregateRoles } from "../../outputs/AggregateRoles";
 export declare class AggregateRolesResolver {

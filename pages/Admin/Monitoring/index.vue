@@ -51,12 +51,6 @@
                     <v-icon start>
                         mdi-access-point
                     </v-icon>
-                    API Limits
-                </v-tab>
-                <v-tab value="option-9">
-                    <v-icon start>
-                        mdi-access-point
-                    </v-icon>
                     Regression Tests
                 </v-tab>
             </v-tabs>
@@ -113,13 +107,6 @@
                 <v-window-item value="option-8">
                     <v-card flat>
                         <v-card-text>
-                            <apilimits />
-                        </v-card-text>
-                    </v-card>
-                </v-window-item>
-                <v-window-item value="option-9">
-                    <v-card flat>
-                        <v-card-text>
                             <regressiontests />
                         </v-card-text>
                     </v-card>
@@ -137,7 +124,6 @@
     import websockets from '../../../components/monitoring/websockets.vue'
     import subscriptionworkers from '../../../components/monitoring/subscriptionworkers.vue'
     import allowlists from '../../../components/monitoring/allowlists.vue'
-    import apilimits from '../../../components/monitoring/apilimits.vue'
     import regressiontests from '../../../components/monitoring/regressiontests.vue'
 
     export default {
@@ -149,7 +135,6 @@
             websockets,
             subscriptionworkers,
             allowlists,
-            apilimits,
             regressiontests
         },
         data: () => ({

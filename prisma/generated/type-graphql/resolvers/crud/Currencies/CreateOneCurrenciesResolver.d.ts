@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { CreateOneCurrenciesArgs } from "./args/CreateOneCurrenciesArgs";
 import { Currencies } from "../../../models/Currencies";
 export declare class CreateOneCurrenciesResolver {

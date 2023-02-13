@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { GroupByFullfillmentsArgs } from "./args/GroupByFullfillmentsArgs";
 import { FullfillmentsGroupBy } from "../../outputs/FullfillmentsGroupBy";
 export declare class GroupByFullfillmentsResolver {

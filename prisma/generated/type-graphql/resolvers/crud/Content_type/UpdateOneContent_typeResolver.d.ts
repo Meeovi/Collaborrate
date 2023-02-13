@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpdateOneContent_typeArgs } from "./args/UpdateOneContent_typeArgs";
 import { Content_type } from "../../../models/Content_type";
 export declare class UpdateOneContent_typeResolver {

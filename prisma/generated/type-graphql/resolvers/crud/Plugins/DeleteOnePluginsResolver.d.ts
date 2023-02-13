@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { DeleteOnePluginsArgs } from "./args/DeleteOnePluginsArgs";
 import { Plugins } from "../../../models/Plugins";
 export declare class DeleteOnePluginsResolver {

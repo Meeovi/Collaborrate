@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateTemplatesArgs } from "./args/AggregateTemplatesArgs";
 import { AggregateTemplates } from "../../outputs/AggregateTemplates";
 export declare class AggregateTemplatesResolver {

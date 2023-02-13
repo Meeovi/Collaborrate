@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { GroupByDashboardjsonArgs } from "./args/GroupByDashboardjsonArgs";
 import { DashboardjsonGroupBy } from "../../outputs/DashboardjsonGroupBy";
 export declare class GroupByDashboardjsonResolver {

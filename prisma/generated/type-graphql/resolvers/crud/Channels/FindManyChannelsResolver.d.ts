@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindManyChannelsArgs } from "./args/FindManyChannelsArgs";
 import { Channels } from "../../../models/Channels";
 export declare class FindManyChannelsResolver {

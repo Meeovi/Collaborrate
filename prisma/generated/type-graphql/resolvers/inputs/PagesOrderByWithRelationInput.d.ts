@@ -1,13 +1,12 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class PagesOrderByWithRelationInput {
     id?: "asc" | "desc" | undefined;
-    enable_page?: SortOrderInput | undefined;
+    enable_page?: "asc" | "desc" | undefined;
     title?: "asc" | "desc" | undefined;
-    content_title?: SortOrderInput | undefined;
-    content?: SortOrderInput | undefined;
-    url_key?: SortOrderInput | undefined;
-    meta_title?: SortOrderInput | undefined;
-    meta_keywords?: SortOrderInput | undefined;
-    meta_description?: SortOrderInput | undefined;
-    created_at?: SortOrderInput | undefined;
+    content_title?: "asc" | "desc" | undefined;
+    content?: "asc" | "desc" | undefined;
+    url_key?: "asc" | "desc" | undefined;
+    meta_title?: "asc" | "desc" | undefined;
+    meta_keywords?: "asc" | "desc" | undefined;
+    meta_description?: "asc" | "desc" | undefined;
+    created_at?: "asc" | "desc" | undefined;
 }

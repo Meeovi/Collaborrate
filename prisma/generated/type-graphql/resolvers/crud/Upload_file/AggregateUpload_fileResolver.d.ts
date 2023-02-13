@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateUpload_fileArgs } from "./args/AggregateUpload_fileArgs";
 import { AggregateUpload_file } from "../../outputs/AggregateUpload_file";
 export declare class AggregateUpload_fileResolver {

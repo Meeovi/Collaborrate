@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateMediamanagerArgs } from "./args/AggregateMediamanagerArgs";
 import { CreateOneMediamanagerArgs } from "./args/CreateOneMediamanagerArgs";
 import { DeleteManyMediamanagerArgs } from "./args/DeleteManyMediamanagerArgs";

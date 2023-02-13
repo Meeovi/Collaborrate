@@ -25,7 +25,6 @@ export { InvoicesScalarFieldEnum } from "./InvoicesScalarFieldEnum";
 export { LogInScalarFieldEnum } from "./LogInScalarFieldEnum";
 export { ManufacturerScalarFieldEnum } from "./ManufacturerScalarFieldEnum";
 export { MediamanagerScalarFieldEnum } from "./MediamanagerScalarFieldEnum";
-export { NullsOrder } from "./NullsOrder";
 export { OrdersScalarFieldEnum } from "./OrdersScalarFieldEnum";
 export { PagesScalarFieldEnum } from "./PagesScalarFieldEnum";
 export { PartnersScalarFieldEnum } from "./PartnersScalarFieldEnum";

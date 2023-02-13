@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindFirstMediamanagerOrThrowArgs } from "./args/FindFirstMediamanagerOrThrowArgs";
 import { Mediamanager } from "../../../models/Mediamanager";
 export declare class FindFirstMediamanagerOrThrowResolver {

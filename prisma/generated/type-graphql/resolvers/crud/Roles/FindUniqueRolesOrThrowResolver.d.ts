@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindUniqueRolesOrThrowArgs } from "./args/FindUniqueRolesOrThrowArgs";
 import { Roles } from "../../../models/Roles";
 export declare class FindUniqueRolesOrThrowResolver {

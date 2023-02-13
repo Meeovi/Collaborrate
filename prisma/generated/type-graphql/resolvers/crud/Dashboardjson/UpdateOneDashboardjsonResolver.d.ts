@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpdateOneDashboardjsonArgs } from "./args/UpdateOneDashboardjsonArgs";
 import { Dashboardjson } from "../../../models/Dashboardjson";
 export declare class UpdateOneDashboardjsonResolver {

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindUniquePagesOrThrowArgs } from "./args/FindUniquePagesOrThrowArgs";
 import { Pages } from "../../../models/Pages";
 export declare class FindUniquePagesOrThrowResolver {

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateLogInArgs } from "./args/AggregateLogInArgs";
 import { AggregateLogIn } from "../../outputs/AggregateLogIn";
 export declare class AggregateLogInResolver {

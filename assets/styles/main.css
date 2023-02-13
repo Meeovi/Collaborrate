@@ -1,6 +1,6 @@
 /********************** Main CSS *************/
 html {
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 body {
     margin: 0;
@@ -42,9 +42,11 @@ body {
 }
 
 .contentRight {
+    padding-right: 5px;
     top: 0px !important;
     height: 100vh !important;
     width: 100% !important;
+    overflow-x: auto !important;
 }
 
 .contentRight .v-card-title {
@@ -67,11 +69,6 @@ body {
     display: block !important;
 }
 
-.table {
-    padding: 50px;
-    width: 80%;
-}
-
 .features3 {
     background-color: transparent !important;
 }
@@ -90,8 +87,20 @@ body {
     height: 100vh !important;
 }
 
+@media all and (max-width: 500px) {
+    #mainSection {
+        left: 1px;
+    }
+}
+
 .homeSection {
     padding: 45px !important;
+}
+
+@media all and (max-width: 500px) {
+    .homeSection {
+        padding: 1px;
+    }
 }
 
 .homeSection a {

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateTemplatesArgs } from "./args/AggregateTemplatesArgs";
 import { CreateOneTemplatesArgs } from "./args/CreateOneTemplatesArgs";
 import { DeleteManyTemplatesArgs } from "./args/DeleteManyTemplatesArgs";

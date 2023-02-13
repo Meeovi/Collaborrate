@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateQuotesArgs } from "./args/AggregateQuotesArgs";
 import { CreateOneQuotesArgs } from "./args/CreateOneQuotesArgs";
 import { DeleteManyQuotesArgs } from "./args/DeleteManyQuotesArgs";

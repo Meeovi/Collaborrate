@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindFirstWishlistsArgs } from "./args/FindFirstWishlistsArgs";
 import { Wishlists } from "../../../models/Wishlists";
 export declare class FindFirstWishlistsResolver {

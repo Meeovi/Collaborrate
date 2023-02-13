@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { GroupByWebhooksArgs } from "./args/GroupByWebhooksArgs";
 import { WebhooksGroupBy } from "../../outputs/WebhooksGroupBy";
 export declare class GroupByWebhooksResolver {

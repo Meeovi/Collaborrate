@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { GroupByDiscountsArgs } from "./args/GroupByDiscountsArgs";
 import { DiscountsGroupBy } from "../../outputs/DiscountsGroupBy";
 export declare class GroupByDiscountsResolver {

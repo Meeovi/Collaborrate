@@ -532,21 +532,6 @@ input AgreementsCreateInput {
   user_id: String
 }
 
-input AgreementsCreateManyInput {
-  content: String
-  created: DateTime
-  excerpt: String
-  id: BigInt
-  image: String
-  mediamanager: String
-  name: String
-  reference_id: String
-  shop_id: String
-  type: String
-  updated: DateTime
-  user_id: String
-}
-
 type AgreementsGroupBy {
   _avg: AgreementsAvgAggregate
   _count: AgreementsCountAggregate
@@ -627,24 +612,6 @@ input AgreementsMinOrderByAggregateInput {
   user_id: SortOrder
 }
 
-enum AgreementsOrderByRelevanceFieldEnum {
-  content
-  excerpt
-  image
-  mediamanager
-  name
-  reference_id
-  shop_id
-  type
-  user_id
-}
-
-input AgreementsOrderByRelevanceInput {
-  fields: [AgreementsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input AgreementsOrderByWithAggregationInput {
   _avg: AgreementsAvgOrderByAggregateInput
   _count: AgreementsCountOrderByAggregateInput
@@ -665,8 +632,7 @@ input AgreementsOrderByWithAggregationInput {
   user_id: SortOrder
 }
 
-input AgreementsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: AgreementsOrderByRelevanceInput
+input AgreementsOrderByWithRelationInput {
   content: SortOrder
   created: SortOrder
   excerpt: SortOrder
@@ -821,15 +787,6 @@ input ApitokenCreateInput {
   token_type: String
 }
 
-input ApitokenCreateManyInput {
-  created_at: DateTime
-  description: String
-  id: BigInt
-  name: String!
-  token: BigInt!
-  token_type: String
-}
-
 type ApitokenGroupBy {
   _avg: ApitokenAvgAggregate
   _count: ApitokenCountAggregate
@@ -880,18 +837,6 @@ input ApitokenMinOrderByAggregateInput {
   token_type: SortOrder
 }
 
-enum ApitokenOrderByRelevanceFieldEnum {
-  description
-  name
-  token_type
-}
-
-input ApitokenOrderByRelevanceInput {
-  fields: [ApitokenOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input ApitokenOrderByWithAggregationInput {
   _avg: ApitokenAvgOrderByAggregateInput
   _count: ApitokenCountOrderByAggregateInput
@@ -906,8 +851,7 @@ input ApitokenOrderByWithAggregationInput {
   token_type: SortOrder
 }
 
-input ApitokenOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: ApitokenOrderByRelevanceInput
+input ApitokenOrderByWithRelationInput {
   created_at: SortOrder
   description: SortOrder
   id: SortOrder
@@ -1101,33 +1045,6 @@ input AttributesCreateInput {
   visible_catalog_pages_storefront: Boolean
 }
 
-input AttributesCreateManyInput {
-  allow_html_tags_storefront: Boolean
-  attribute_class: String
-  attribute_code: String
-  attribute_value: String
-  column_options: String
-  default_label: String
-  faceted_navigation: Boolean
-  filter_options: String
-  id: Int
-  isPublic: String
-  layered_navigation: Boolean
-  meta_description: String
-  meta_name: Boolean
-  meta_url: String
-  position: String
-  prod_id: BigInt!
-  product_attribute_set: String
-  products: String
-  promo_rule_conditions: Boolean
-  search_results_layered_navigation: Boolean
-  use_search: String
-  used_product_listing: Boolean
-  used_sorting_product_listing: Boolean
-  visible_catalog_pages_storefront: Boolean
-}
-
 type AttributesGroupBy {
   _avg: AttributesAvgAggregate
   _count: AttributesCountAggregate
@@ -1268,28 +1185,6 @@ input AttributesMinOrderByAggregateInput {
   visible_catalog_pages_storefront: SortOrder
 }
 
-enum AttributesOrderByRelevanceFieldEnum {
-  attribute_class
-  attribute_code
-  attribute_value
-  column_options
-  default_label
-  filter_options
-  isPublic
-  meta_description
-  meta_url
-  position
-  product_attribute_set
-  products
-  use_search
-}
-
-input AttributesOrderByRelevanceInput {
-  fields: [AttributesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input AttributesOrderByWithAggregationInput {
   _avg: AttributesAvgOrderByAggregateInput
   _count: AttributesCountOrderByAggregateInput
@@ -1322,8 +1217,7 @@ input AttributesOrderByWithAggregationInput {
   visible_catalog_pages_storefront: SortOrder
 }
 
-input AttributesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: AttributesOrderByRelevanceInput
+input AttributesOrderByWithRelationInput {
   allow_html_tags_storefront: SortOrder
   attribute_class: SortOrder
   attribute_code: SortOrder
@@ -1662,23 +1556,6 @@ input BrandsCreateInput {
   workspaces: String
 }
 
-input BrandsCreateManyInput {
-  city: String
-  code: String
-  country: String
-  created_at: DateTime
-  description: String
-  id: BigInt
-  isPublic: String
-  media: String
-  mediamanager: String
-  name: String
-  product: BigInt
-  products: String
-  state: String
-  workspaces: String
-}
-
 type BrandsGroupBy {
   _avg: BrandsAvgAggregate
   _count: BrandsCountAggregate
@@ -1769,26 +1646,6 @@ input BrandsMinOrderByAggregateInput {
   workspaces: SortOrder
 }
 
-enum BrandsOrderByRelevanceFieldEnum {
-  city
-  code
-  country
-  description
-  isPublic
-  media
-  mediamanager
-  name
-  products
-  state
-  workspaces
-}
-
-input BrandsOrderByRelevanceInput {
-  fields: [BrandsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input BrandsOrderByWithAggregationInput {
   _avg: BrandsAvgOrderByAggregateInput
   _count: BrandsCountOrderByAggregateInput
@@ -1811,8 +1668,7 @@ input BrandsOrderByWithAggregationInput {
   workspaces: SortOrder
 }
 
-input BrandsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: BrandsOrderByRelevanceInput
+input BrandsOrderByWithRelationInput {
   city: SortOrder
   code: SortOrder
   country: SortOrder
@@ -2018,25 +1874,6 @@ input CategoriesCreateInput {
   workspaces: String
 }
 
-input CategoriesCreateManyInput {
-  content: String
-  country: String
-  description: String
-  id: Int
-  image: String
-  meta_description: String
-  meta_keywords: String
-  meta_title: String
-  meta_url: String
-  name: String!
-  product: String
-  status: Boolean
-  thumbnail: String
-  visibility: String
-  websites: String
-  workspaces: String
-}
-
 type CategoriesGroupBy {
   _avg: CategoriesAvgAggregate
   _count: CategoriesCountAggregate
@@ -2137,29 +1974,6 @@ input CategoriesMinOrderByAggregateInput {
   workspaces: SortOrder
 }
 
-enum CategoriesOrderByRelevanceFieldEnum {
-  content
-  country
-  description
-  image
-  meta_description
-  meta_keywords
-  meta_title
-  meta_url
-  name
-  product
-  thumbnail
-  visibility
-  websites
-  workspaces
-}
-
-input CategoriesOrderByRelevanceInput {
-  fields: [CategoriesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input CategoriesOrderByWithAggregationInput {
   _avg: CategoriesAvgOrderByAggregateInput
   _count: CategoriesCountOrderByAggregateInput
@@ -2184,8 +1998,7 @@ input CategoriesOrderByWithAggregationInput {
   workspaces: SortOrder
 }
 
-input CategoriesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: CategoriesOrderByRelevanceInput
+input CategoriesOrderByWithRelationInput {
   content: SortOrder
   country: SortOrder
   description: SortOrder
@@ -2380,20 +2193,6 @@ input ChannelsCreateInput {
   name: String
 }
 
-input ChannelsCreateManyInput {
-  client_id: String
-  client_secret: String
-  code: String
-  created_at: DateTime
-  currency: String
-  default_lang: String
-  default_shipping: String
-  default_zone: String
-  id: BigInt
-  include_tax: String
-  name: String
-}
-
 type ChannelsGroupBy {
   _avg: ChannelsAvgAggregate
   _count: ChannelsCountAggregate
@@ -2469,24 +2268,6 @@ input ChannelsMinOrderByAggregateInput {
   name: SortOrder
 }
 
-enum ChannelsOrderByRelevanceFieldEnum {
-  client_id
-  client_secret
-  code
-  currency
-  default_lang
-  default_shipping
-  default_zone
-  include_tax
-  name
-}
-
-input ChannelsOrderByRelevanceInput {
-  fields: [ChannelsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input ChannelsOrderByWithAggregationInput {
   _avg: ChannelsAvgOrderByAggregateInput
   _count: ChannelsCountOrderByAggregateInput
@@ -2506,8 +2287,7 @@ input ChannelsOrderByWithAggregationInput {
   name: SortOrder
 }
 
-input ChannelsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: ChannelsOrderByRelevanceInput
+input ChannelsOrderByWithRelationInput {
   client_id: SortOrder
   client_secret: SortOrder
   code: SortOrder
@@ -2657,16 +2437,6 @@ input CitiesCreateInput {
   state: String
 }
 
-input CitiesCreateManyInput {
-  country: String
-  description: String
-  id: Int
-  image: String
-  name: String!
-  postalCode: String
-  state: String
-}
-
 type CitiesGroupBy {
   _avg: CitiesAvgAggregate
   _count: CitiesCountAggregate
@@ -2722,21 +2492,6 @@ input CitiesMinOrderByAggregateInput {
   state: SortOrder
 }
 
-enum CitiesOrderByRelevanceFieldEnum {
-  country
-  description
-  image
-  name
-  postalCode
-  state
-}
-
-input CitiesOrderByRelevanceInput {
-  fields: [CitiesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input CitiesOrderByWithAggregationInput {
   _avg: CitiesAvgOrderByAggregateInput
   _count: CitiesCountOrderByAggregateInput
@@ -2752,8 +2507,7 @@ input CitiesOrderByWithAggregationInput {
   state: SortOrder
 }
 
-input CitiesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: CitiesOrderByRelevanceInput
+input CitiesOrderByWithRelationInput {
   country: SortOrder
   description: SortOrder
   id: SortOrder
@@ -2886,18 +2640,6 @@ input CollectionsCreateInput {
   product: String
 }
 
-input CollectionsCreateManyInput {
-  created_at: DateTime
-  description: String
-  id: BigInt
-  image: String
-  meta_description: String
-  meta_keywords: String
-  meta_title: String
-  name: String
-  product: String
-}
-
 type CollectionsGroupBy {
   _avg: CollectionsAvgAggregate
   _count: CollectionsCountAggregate
@@ -2963,22 +2705,6 @@ input CollectionsMinOrderByAggregateInput {
   product: SortOrder
 }
 
-enum CollectionsOrderByRelevanceFieldEnum {
-  description
-  image
-  meta_description
-  meta_keywords
-  meta_title
-  name
-  product
-}
-
-input CollectionsOrderByRelevanceInput {
-  fields: [CollectionsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input CollectionsOrderByWithAggregationInput {
   _avg: CollectionsAvgOrderByAggregateInput
   _count: CollectionsCountOrderByAggregateInput
@@ -2996,8 +2722,7 @@ input CollectionsOrderByWithAggregationInput {
   product: SortOrder
 }
 
-input CollectionsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: CollectionsOrderByRelevanceInput
+input CollectionsOrderByWithRelationInput {
   created_at: SortOrder
   description: SortOrder
   id: SortOrder
@@ -3094,10 +2819,9 @@ type Content_type {
   date: DateTime
   email: String
   id: BigInt!
-  json: JSON
   link: String
   media: String
-  number: Decimal
+  number: Int
   password: String
   rich_text: String
   text: String
@@ -3108,7 +2832,7 @@ type Content_type {
 
 type Content_typeAvgAggregate {
   id: Float
-  number: Decimal
+  number: Float
 }
 
 input Content_typeAvgOrderByAggregateInput {
@@ -3124,7 +2848,6 @@ type Content_typeCountAggregate {
   date: Int!
   email: Int!
   id: Int!
-  json: Int!
   link: Int!
   media: Int!
   number: Int!
@@ -3143,7 +2866,6 @@ input Content_typeCountOrderByAggregateInput {
   date: SortOrder
   email: SortOrder
   id: SortOrder
-  json: SortOrder
   link: SortOrder
   media: SortOrder
   number: SortOrder
@@ -3162,29 +2884,9 @@ input Content_typeCreateInput {
   date: DateTime
   email: String
   id: BigInt
-  json: JSON
   link: String
   media: String
-  number: Decimal
-  password: String
-  rich_text: String
-  text: String
-  time: DateTime
-  timestamp: DateTime
-  uid: String
-}
-
-input Content_typeCreateManyInput {
-  boolean: Boolean
-  created_at: DateTime
-  database_name: String
-  date: DateTime
-  email: String
-  id: BigInt
-  json: JSON
-  link: String
-  media: String
-  number: Decimal
+  number: Int
   password: String
   rich_text: String
   text: String
@@ -3205,10 +2907,9 @@ type Content_typeGroupBy {
   date: DateTime
   email: String
   id: BigInt!
-  json: JSON
   link: String
   media: String
-  number: Decimal
+  number: Int
   password: String
   rich_text: String
   text: String
@@ -3226,7 +2927,7 @@ type Content_typeMaxAggregate {
   id: BigInt
   link: String
   media: String
-  number: Decimal
+  number: Int
   password: String
   rich_text: String
   text: String
@@ -3262,7 +2963,7 @@ type Content_typeMinAggregate {
   id: BigInt
   link: String
   media: String
-  number: Decimal
+  number: Int
   password: String
   rich_text: String
   text: String
@@ -3289,23 +2990,6 @@ input Content_typeMinOrderByAggregateInput {
   uid: SortOrder
 }
 
-enum Content_typeOrderByRelevanceFieldEnum {
-  database_name
-  email
-  link
-  media
-  password
-  rich_text
-  text
-  uid
-}
-
-input Content_typeOrderByRelevanceInput {
-  fields: [Content_typeOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input Content_typeOrderByWithAggregationInput {
   _avg: Content_typeAvgOrderByAggregateInput
   _count: Content_typeCountOrderByAggregateInput
@@ -3318,7 +3002,6 @@ input Content_typeOrderByWithAggregationInput {
   date: SortOrder
   email: SortOrder
   id: SortOrder
-  json: SortOrder
   link: SortOrder
   media: SortOrder
   number: SortOrder
@@ -3330,15 +3013,13 @@ input Content_typeOrderByWithAggregationInput {
   uid: SortOrder
 }
 
-input Content_typeOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: Content_typeOrderByRelevanceInput
+input Content_typeOrderByWithRelationInput {
   boolean: SortOrder
   created_at: SortOrder
   database_name: SortOrder
   date: SortOrder
   email: SortOrder
   id: SortOrder
-  json: SortOrder
   link: SortOrder
   media: SortOrder
   number: SortOrder
@@ -3357,7 +3038,6 @@ enum Content_typeScalarFieldEnum {
   date
   email
   id
-  json
   link
   media
   number
@@ -3379,10 +3059,9 @@ input Content_typeScalarWhereWithAggregatesInput {
   date: DateTimeNullableWithAggregatesFilter
   email: StringNullableWithAggregatesFilter
   id: BigIntWithAggregatesFilter
-  json: JsonNullableWithAggregatesFilter
   link: StringNullableWithAggregatesFilter
   media: StringNullableWithAggregatesFilter
-  number: DecimalNullableWithAggregatesFilter
+  number: IntNullableWithAggregatesFilter
   password: StringNullableWithAggregatesFilter
   rich_text: StringNullableWithAggregatesFilter
   text: StringNullableWithAggregatesFilter
@@ -3393,7 +3072,7 @@ input Content_typeScalarWhereWithAggregatesInput {
 
 type Content_typeSumAggregate {
   id: BigInt
-  number: Decimal
+  number: Int
 }
 
 input Content_typeSumOrderByAggregateInput {
@@ -3408,10 +3087,9 @@ input Content_typeUpdateInput {
   date: NullableDateTimeFieldUpdateOperationsInput
   email: NullableStringFieldUpdateOperationsInput
   id: BigIntFieldUpdateOperationsInput
-  json: JSON
   link: NullableStringFieldUpdateOperationsInput
   media: NullableStringFieldUpdateOperationsInput
-  number: NullableDecimalFieldUpdateOperationsInput
+  number: NullableIntFieldUpdateOperationsInput
   password: NullableStringFieldUpdateOperationsInput
   rich_text: NullableStringFieldUpdateOperationsInput
   text: NullableStringFieldUpdateOperationsInput
@@ -3427,10 +3105,9 @@ input Content_typeUpdateManyMutationInput {
   date: NullableDateTimeFieldUpdateOperationsInput
   email: NullableStringFieldUpdateOperationsInput
   id: BigIntFieldUpdateOperationsInput
-  json: JSON
   link: NullableStringFieldUpdateOperationsInput
   media: NullableStringFieldUpdateOperationsInput
-  number: NullableDecimalFieldUpdateOperationsInput
+  number: NullableIntFieldUpdateOperationsInput
   password: NullableStringFieldUpdateOperationsInput
   rich_text: NullableStringFieldUpdateOperationsInput
   text: NullableStringFieldUpdateOperationsInput
@@ -3449,10 +3126,9 @@ input Content_typeWhereInput {
   date: DateTimeNullableFilter
   email: StringNullableFilter
   id: BigIntFilter
-  json: JsonNullableFilter
   link: StringNullableFilter
   media: StringNullableFilter
-  number: DecimalNullableFilter
+  number: IntNullableFilter
   password: StringNullableFilter
   rich_text: StringNullableFilter
   text: StringNullableFilter
@@ -3509,15 +3185,6 @@ input CountriesCreateInput {
   trainings: String
 }
 
-input CountriesCreateManyInput {
-  description: String
-  id: Int
-  image: String
-  name: String!
-  region: String
-  trainings: String
-}
-
 type CountriesGroupBy {
   _avg: CountriesAvgAggregate
   _count: CountriesCountAggregate
@@ -3568,20 +3235,6 @@ input CountriesMinOrderByAggregateInput {
   trainings: SortOrder
 }
 
-enum CountriesOrderByRelevanceFieldEnum {
-  description
-  image
-  name
-  region
-  trainings
-}
-
-input CountriesOrderByRelevanceInput {
-  fields: [CountriesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input CountriesOrderByWithAggregationInput {
   _avg: CountriesAvgOrderByAggregateInput
   _count: CountriesCountOrderByAggregateInput
@@ -3596,8 +3249,7 @@ input CountriesOrderByWithAggregationInput {
   trainings: SortOrder
 }
 
-input CountriesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: CountriesOrderByRelevanceInput
+input CountriesOrderByWithRelationInput {
   description: SortOrder
   id: SortOrder
   image: SortOrder
@@ -3716,16 +3368,6 @@ input CurrenciesCreateInput {
   useStandard: String
 }
 
-input CurrenciesCreateManyInput {
-  code: String
-  created_at: DateTime
-  id: BigInt
-  name: String
-  region: String
-  symbol: String
-  useStandard: String
-}
-
 type CurrenciesGroupBy {
   _avg: CurrenciesAvgAggregate
   _count: CurrenciesCountAggregate
@@ -3781,20 +3423,6 @@ input CurrenciesMinOrderByAggregateInput {
   useStandard: SortOrder
 }
 
-enum CurrenciesOrderByRelevanceFieldEnum {
-  code
-  name
-  region
-  symbol
-  useStandard
-}
-
-input CurrenciesOrderByRelevanceInput {
-  fields: [CurrenciesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input CurrenciesOrderByWithAggregationInput {
   _avg: CurrenciesAvgOrderByAggregateInput
   _count: CurrenciesCountOrderByAggregateInput
@@ -3810,8 +3438,7 @@ input CurrenciesOrderByWithAggregationInput {
   useStandard: SortOrder
 }
 
-input CurrenciesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: CurrenciesOrderByRelevanceInput
+input CurrenciesOrderByWithRelationInput {
   code: SortOrder
   created_at: SortOrder
   id: SortOrder
@@ -4069,49 +3696,6 @@ input CustomersCreateInput {
   zipcode: String
 }
 
-input CustomersCreateManyInput {
-  Address: String
-  address_two: String
-  comments: String
-  confirmed_email: String
-  country: String
-  credit_memos: String
-  customer_group: String
-  customer_payment: String
-  customer_since: DateTime
-  date_of_birth: String
-  description: String
-  email: String!
-  emails: String
-  first_name: String!
-  gender: String
-  id: Int
-  image: String
-  last_name: String!
-  mediamanager: String
-  messages: String
-  middle_name: String
-  name_prefix: String
-  name_suffix: String
-  newsletter_subscribers: String
-  orders: String
-  password: String
-  payment_type: String
-  phone: String
-  product: String
-  projects: String
-  quotes: String
-  returns: String
-  short_description: String
-  state: String
-  tax_vat_number: String
-  thumbnail: String
-  username: String
-  websites: String
-  workspaces: String
-  zipcode: String
-}
-
 type CustomersGroupBy {
   Address: String
   _avg: CustomersAvgAggregate
@@ -4332,53 +3916,6 @@ input CustomersMinOrderByAggregateInput {
   zipcode: SortOrder
 }
 
-enum CustomersOrderByRelevanceFieldEnum {
-  Address
-  address_two
-  comments
-  confirmed_email
-  country
-  credit_memos
-  customer_group
-  customer_payment
-  date_of_birth
-  description
-  email
-  emails
-  first_name
-  gender
-  image
-  last_name
-  mediamanager
-  messages
-  middle_name
-  name_prefix
-  name_suffix
-  newsletter_subscribers
-  orders
-  password
-  payment_type
-  phone
-  product
-  projects
-  quotes
-  returns
-  short_description
-  state
-  tax_vat_number
-  thumbnail
-  username
-  websites
-  workspaces
-  zipcode
-}
-
-input CustomersOrderByRelevanceInput {
-  fields: [CustomersOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input CustomersOrderByWithAggregationInput {
   Address: SortOrder
   _avg: CustomersAvgOrderByAggregateInput
@@ -4427,9 +3964,8 @@ input CustomersOrderByWithAggregationInput {
   zipcode: SortOrder
 }
 
-input CustomersOrderByWithRelationAndSearchRelevanceInput {
+input CustomersOrderByWithRelationInput {
   Address: SortOrder
-  _relevance: CustomersOrderByRelevanceInput
   address_two: SortOrder
   comments: SortOrder
   confirmed_email: SortOrder
@@ -4754,17 +4290,6 @@ input DashboardgraphqlCreateInput {
   urlValue: String
 }
 
-input DashboardgraphqlCreateManyInput {
-  description: String
-  headerKey: String
-  headerValue: String
-  id: Int
-  name: String!
-  url: String
-  urlKey: String
-  urlValue: String
-}
-
 type DashboardgraphqlGroupBy {
   _avg: DashboardgraphqlAvgAggregate
   _count: DashboardgraphqlCountAggregate
@@ -4825,22 +4350,6 @@ input DashboardgraphqlMinOrderByAggregateInput {
   urlValue: SortOrder
 }
 
-enum DashboardgraphqlOrderByRelevanceFieldEnum {
-  description
-  headerKey
-  headerValue
-  name
-  url
-  urlKey
-  urlValue
-}
-
-input DashboardgraphqlOrderByRelevanceInput {
-  fields: [DashboardgraphqlOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input DashboardgraphqlOrderByWithAggregationInput {
   _avg: DashboardgraphqlAvgOrderByAggregateInput
   _count: DashboardgraphqlCountOrderByAggregateInput
@@ -4857,8 +4366,7 @@ input DashboardgraphqlOrderByWithAggregationInput {
   urlValue: SortOrder
 }
 
-input DashboardgraphqlOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: DashboardgraphqlOrderByRelevanceInput
+input DashboardgraphqlOrderByWithRelationInput {
   description: SortOrder
   headerKey: SortOrder
   headerValue: SortOrder
@@ -4984,15 +4492,6 @@ input DashboardjsonCreateInput {
   url: String
 }
 
-input DashboardjsonCreateManyInput {
-  definition: String
-  description: String
-  format: String
-  id: Int
-  name: String!
-  url: String
-}
-
 type DashboardjsonGroupBy {
   _avg: DashboardjsonAvgAggregate
   _count: DashboardjsonCountAggregate
@@ -5043,20 +4542,6 @@ input DashboardjsonMinOrderByAggregateInput {
   url: SortOrder
 }
 
-enum DashboardjsonOrderByRelevanceFieldEnum {
-  definition
-  description
-  format
-  name
-  url
-}
-
-input DashboardjsonOrderByRelevanceInput {
-  fields: [DashboardjsonOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input DashboardjsonOrderByWithAggregationInput {
   _avg: DashboardjsonAvgOrderByAggregateInput
   _count: DashboardjsonCountOrderByAggregateInput
@@ -5071,8 +4556,7 @@ input DashboardjsonOrderByWithAggregationInput {
   url: SortOrder
 }
 
-input DashboardjsonOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: DashboardjsonOrderByRelevanceInput
+input DashboardjsonOrderByWithRelationInput {
   definition: SortOrder
   description: SortOrder
   format: SortOrder
@@ -5190,16 +4674,6 @@ input DashboardrestapiCreateInput {
   url: String
 }
 
-input DashboardrestapiCreateManyInput {
-  authenticationType: String
-  description: String
-  headerKey: String
-  headerValue: String
-  id: Int
-  name: String!
-  url: String
-}
-
 type DashboardrestapiGroupBy {
   _avg: DashboardrestapiAvgAggregate
   _count: DashboardrestapiCountAggregate
@@ -5255,21 +4729,6 @@ input DashboardrestapiMinOrderByAggregateInput {
   url: SortOrder
 }
 
-enum DashboardrestapiOrderByRelevanceFieldEnum {
-  authenticationType
-  description
-  headerKey
-  headerValue
-  name
-  url
-}
-
-input DashboardrestapiOrderByRelevanceInput {
-  fields: [DashboardrestapiOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input DashboardrestapiOrderByWithAggregationInput {
   _avg: DashboardrestapiAvgOrderByAggregateInput
   _count: DashboardrestapiCountOrderByAggregateInput
@@ -5285,8 +4744,7 @@ input DashboardrestapiOrderByWithAggregationInput {
   url: SortOrder
 }
 
-input DashboardrestapiOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: DashboardrestapiOrderByRelevanceInput
+input DashboardrestapiOrderByWithRelationInput {
   authenticationType: SortOrder
   description: SortOrder
   headerKey: SortOrder
@@ -5475,32 +4933,6 @@ input DashboardsCreateInput {
   visits: String
 }
 
-input DashboardsCreateManyInput {
-  articles: String
-  category: String
-  checklists: String
-  client_id: String
-  client_secret: String
-  content: String
-  created_at: DateTime
-  customers: String
-  id: BigInt
-  logo: String
-  media: String
-  name: String
-  privacy: String
-  products: String
-  projects: String
-  published: String
-  reports: String
-  sales: String
-  tasks: String
-  tickets: String
-  url: String
-  users: String
-  visits: String
-}
-
 type DashboardsGroupBy {
   _avg: DashboardsAvgAggregate
   _count: DashboardsCountAggregate
@@ -5636,36 +5068,6 @@ input DashboardsMinOrderByAggregateInput {
   visits: SortOrder
 }
 
-enum DashboardsOrderByRelevanceFieldEnum {
-  articles
-  category
-  checklists
-  client_id
-  client_secret
-  content
-  customers
-  logo
-  media
-  name
-  privacy
-  products
-  projects
-  published
-  reports
-  sales
-  tasks
-  tickets
-  url
-  users
-  visits
-}
-
-input DashboardsOrderByRelevanceInput {
-  fields: [DashboardsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input DashboardsOrderByWithAggregationInput {
   _avg: DashboardsAvgOrderByAggregateInput
   _count: DashboardsCountOrderByAggregateInput
@@ -5697,8 +5099,7 @@ input DashboardsOrderByWithAggregationInput {
   visits: SortOrder
 }
 
-input DashboardsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: DashboardsOrderByRelevanceInput
+input DashboardsOrderByWithRelationInput {
   articles: SortOrder
   category: SortOrder
   checklists: SortOrder
@@ -5913,14 +5314,6 @@ input DashboardslidesCreateInput {
   name: String!
 }
 
-input DashboardslidesCreateManyInput {
-  categories: String
-  description: String
-  id: Int
-  media: String
-  name: String!
-}
-
 type DashboardslidesGroupBy {
   _avg: DashboardslidesAvgAggregate
   _count: DashboardslidesCountAggregate
@@ -5966,19 +5359,6 @@ input DashboardslidesMinOrderByAggregateInput {
   name: SortOrder
 }
 
-enum DashboardslidesOrderByRelevanceFieldEnum {
-  categories
-  description
-  media
-  name
-}
-
-input DashboardslidesOrderByRelevanceInput {
-  fields: [DashboardslidesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input DashboardslidesOrderByWithAggregationInput {
   _avg: DashboardslidesAvgOrderByAggregateInput
   _count: DashboardslidesCountOrderByAggregateInput
@@ -5992,8 +5372,7 @@ input DashboardslidesOrderByWithAggregationInput {
   name: SortOrder
 }
 
-input DashboardslidesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: DashboardslidesOrderByRelevanceInput
+input DashboardslidesOrderByWithRelationInput {
   categories: SortOrder
   description: SortOrder
   id: SortOrder
@@ -6170,32 +5549,6 @@ input DashboardslistCreateInput {
   visits: String
 }
 
-input DashboardslistCreateManyInput {
-  articles: String
-  category: String
-  checklists: String
-  client_id: String
-  client_secret: String
-  content: String
-  created_at: DateTime
-  customers: String
-  id: BigInt
-  logo: String
-  media: String
-  name: String
-  privacy: String
-  products: String
-  projects: String
-  published: String
-  reports: String
-  sales: String
-  tasks: String
-  tickets: String
-  url: String
-  users: String
-  visits: String
-}
-
 type DashboardslistGroupBy {
   _avg: DashboardslistAvgAggregate
   _count: DashboardslistCountAggregate
@@ -6331,36 +5684,6 @@ input DashboardslistMinOrderByAggregateInput {
   visits: SortOrder
 }
 
-enum DashboardslistOrderByRelevanceFieldEnum {
-  articles
-  category
-  checklists
-  client_id
-  client_secret
-  content
-  customers
-  logo
-  media
-  name
-  privacy
-  products
-  projects
-  published
-  reports
-  sales
-  tasks
-  tickets
-  url
-  users
-  visits
-}
-
-input DashboardslistOrderByRelevanceInput {
-  fields: [DashboardslistOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input DashboardslistOrderByWithAggregationInput {
   _avg: DashboardslistAvgOrderByAggregateInput
   _count: DashboardslistCountOrderByAggregateInput
@@ -6392,8 +5715,7 @@ input DashboardslistOrderByWithAggregationInput {
   visits: SortOrder
 }
 
-input DashboardslistOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: DashboardslistOrderByRelevanceInput
+input DashboardslistOrderByWithRelationInput {
   articles: SortOrder
   category: SortOrder
   checklists: SortOrder
@@ -6622,33 +5944,6 @@ input DecimalFilter {
   notIn: [Decimal!]
 }
 
-input DecimalNullableFilter {
-  equals: Decimal
-  gt: Decimal
-  gte: Decimal
-  in: [Decimal!]
-  lt: Decimal
-  lte: Decimal
-  not: NestedDecimalNullableFilter
-  notIn: [Decimal!]
-}
-
-input DecimalNullableWithAggregatesFilter {
-  _avg: NestedDecimalNullableFilter
-  _count: NestedIntNullableFilter
-  _max: NestedDecimalNullableFilter
-  _min: NestedDecimalNullableFilter
-  _sum: NestedDecimalNullableFilter
-  equals: Decimal
-  gt: Decimal
-  gte: Decimal
-  in: [Decimal!]
-  lt: Decimal
-  lte: Decimal
-  not: NestedDecimalNullableWithAggregatesFilter
-  notIn: [Decimal!]
-}
-
 input DecimalWithAggregatesFilter {
   _avg: NestedDecimalFilter
   _count: NestedIntFilter
@@ -6747,30 +6042,6 @@ input DiscountsCountOrderByAggregateInput {
 }
 
 input DiscountsCreateInput {
-  articles: String
-  billToName: String
-  categories: String
-  coupons: String
-  creditMemo: String
-  customers: String
-  discount: String
-  excerpt: String
-  expiration: String
-  id: BigInt
-  image: String
-  name: String!
-  orderNumber: String
-  products: String
-  published: DateTime
-  refunded: String
-  rewards: String
-  special_offers: String
-  status: String
-  type: String
-  users: String
-}
-
-input DiscountsCreateManyInput {
   articles: String
   billToName: String
   categories: String
@@ -6919,34 +6190,6 @@ input DiscountsMinOrderByAggregateInput {
   users: SortOrder
 }
 
-enum DiscountsOrderByRelevanceFieldEnum {
-  articles
-  billToName
-  categories
-  coupons
-  creditMemo
-  customers
-  discount
-  excerpt
-  expiration
-  image
-  name
-  orderNumber
-  products
-  refunded
-  rewards
-  special_offers
-  status
-  type
-  users
-}
-
-input DiscountsOrderByRelevanceInput {
-  fields: [DiscountsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input DiscountsOrderByWithAggregationInput {
   _avg: DiscountsAvgOrderByAggregateInput
   _count: DiscountsCountOrderByAggregateInput
@@ -6976,8 +6219,7 @@ input DiscountsOrderByWithAggregationInput {
   users: SortOrder
 }
 
-input DiscountsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: DiscountsOrderByRelevanceInput
+input DiscountsOrderByWithRelationInput {
   articles: SortOrder
   billToName: SortOrder
   categories: SortOrder
@@ -7211,21 +6453,6 @@ input EmailsCreateInput {
   users: String
 }
 
-input EmailsCreateManyInput {
-  bcc: String
-  cc: String
-  content: String
-  created_at: DateTime
-  cust_id: Int!
-  customers: String
-  from: String
-  id: Int
-  media: String
-  staff_id: Int
-  subject: String
-  users: String
-}
-
 type EmailsGroupBy {
   _avg: EmailsAvgAggregate
   _count: EmailsCountAggregate
@@ -7306,23 +6533,6 @@ input EmailsMinOrderByAggregateInput {
   users: SortOrder
 }
 
-enum EmailsOrderByRelevanceFieldEnum {
-  bcc
-  cc
-  content
-  customers
-  from
-  media
-  subject
-  users
-}
-
-input EmailsOrderByRelevanceInput {
-  fields: [EmailsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input EmailsOrderByWithAggregationInput {
   _avg: EmailsAvgOrderByAggregateInput
   _count: EmailsCountOrderByAggregateInput
@@ -7343,8 +6553,7 @@ input EmailsOrderByWithAggregationInput {
   users: SortOrder
 }
 
-input EmailsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: EmailsOrderByRelevanceInput
+input EmailsOrderByWithRelationInput {
   bcc: SortOrder
   cc: SortOrder
   content: SortOrder
@@ -7535,24 +6744,6 @@ input FullfillmentsCreateInput {
   zipcode: String
 }
 
-input FullfillmentsCreateManyInput {
-  address: String
-  address_two: String
-  city: String
-  company: String
-  country: String
-  country_area: String
-  created_at: DateTime
-  id: BigInt
-  name: String
-  phone: String
-  pickup: String
-  shipping_zones: String
-  state: String
-  stock: String
-  zipcode: String
-}
-
 type FullfillmentsGroupBy {
   _avg: FullfillmentsAvgAggregate
   _count: FullfillmentsCountAggregate
@@ -7648,28 +6839,6 @@ input FullfillmentsMinOrderByAggregateInput {
   zipcode: SortOrder
 }
 
-enum FullfillmentsOrderByRelevanceFieldEnum {
-  address
-  address_two
-  city
-  company
-  country
-  country_area
-  name
-  phone
-  pickup
-  shipping_zones
-  state
-  stock
-  zipcode
-}
-
-input FullfillmentsOrderByRelevanceInput {
-  fields: [FullfillmentsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input FullfillmentsOrderByWithAggregationInput {
   _avg: FullfillmentsAvgOrderByAggregateInput
   _count: FullfillmentsCountOrderByAggregateInput
@@ -7693,8 +6862,7 @@ input FullfillmentsOrderByWithAggregationInput {
   zipcode: SortOrder
 }
 
-input FullfillmentsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: FullfillmentsOrderByRelevanceInput
+input FullfillmentsOrderByWithRelationInput {
   address: SortOrder
   address_two: SortOrder
   city: SortOrder
@@ -7931,16 +7099,6 @@ input IntegrationsCreateInput {
   name: String
 }
 
-input IntegrationsCreateManyInput {
-  category: String
-  content: String
-  created_at: DateTime
-  id: BigInt
-  location: String
-  media: String
-  name: String
-}
-
 type IntegrationsGroupBy {
   _avg: IntegrationsAvgAggregate
   _count: IntegrationsCountAggregate
@@ -7996,20 +7154,6 @@ input IntegrationsMinOrderByAggregateInput {
   name: SortOrder
 }
 
-enum IntegrationsOrderByRelevanceFieldEnum {
-  category
-  content
-  location
-  media
-  name
-}
-
-input IntegrationsOrderByRelevanceInput {
-  fields: [IntegrationsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input IntegrationsOrderByWithAggregationInput {
   _avg: IntegrationsAvgOrderByAggregateInput
   _count: IntegrationsCountOrderByAggregateInput
@@ -8025,8 +7169,7 @@ input IntegrationsOrderByWithAggregationInput {
   name: SortOrder
 }
 
-input IntegrationsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: IntegrationsOrderByRelevanceInput
+input IntegrationsOrderByWithRelationInput {
   category: SortOrder
   content: SortOrder
   created_at: SortOrder
@@ -8153,16 +7296,6 @@ input InternalizationCreateInput {
   website: String
 }
 
-input InternalizationCreateManyInput {
-  created_at: DateTime
-  default: String
-  description: String
-  id: BigInt
-  name: String
-  region: String
-  website: String
-}
-
 type InternalizationGroupBy {
   _avg: InternalizationAvgAggregate
   _count: InternalizationCountAggregate
@@ -8218,20 +7351,6 @@ input InternalizationMinOrderByAggregateInput {
   website: SortOrder
 }
 
-enum InternalizationOrderByRelevanceFieldEnum {
-  default
-  description
-  name
-  region
-  website
-}
-
-input InternalizationOrderByRelevanceInput {
-  fields: [InternalizationOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input InternalizationOrderByWithAggregationInput {
   _avg: InternalizationAvgOrderByAggregateInput
   _count: InternalizationCountOrderByAggregateInput
@@ -8247,8 +7366,7 @@ input InternalizationOrderByWithAggregationInput {
   website: SortOrder
 }
 
-input InternalizationOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: InternalizationOrderByRelevanceInput
+input InternalizationOrderByWithRelationInput {
   created_at: SortOrder
   default: SortOrder
   description: SortOrder
@@ -8419,26 +7537,6 @@ input InvoicesCreateInput {
   subtotal: String
 }
 
-input InvoicesCreateManyInput {
-  bill_to_name: String!
-  billing_address: String
-  customer_group: String
-  customer_name: String
-  email: String
-  grand_total_base: String
-  grand_total_purchased: String
-  id: BigInt
-  invoice: Int!
-  invoice_date: DateTime
-  order_number: BigInt!
-  payment_method: String
-  shipping_address: String
-  shipping_and_handling: String
-  shipping_information: String
-  status: String
-  subtotal: String
-}
-
 type InvoicesGroupBy {
   _avg: InvoicesAvgAggregate
   _count: InvoicesCountAggregate
@@ -8544,28 +7642,6 @@ input InvoicesMinOrderByAggregateInput {
   subtotal: SortOrder
 }
 
-enum InvoicesOrderByRelevanceFieldEnum {
-  bill_to_name
-  billing_address
-  customer_group
-  customer_name
-  email
-  grand_total_base
-  grand_total_purchased
-  payment_method
-  shipping_address
-  shipping_and_handling
-  shipping_information
-  status
-  subtotal
-}
-
-input InvoicesOrderByRelevanceInput {
-  fields: [InvoicesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input InvoicesOrderByWithAggregationInput {
   _avg: InvoicesAvgOrderByAggregateInput
   _count: InvoicesCountOrderByAggregateInput
@@ -8591,8 +7667,7 @@ input InvoicesOrderByWithAggregationInput {
   subtotal: SortOrder
 }
 
-input InvoicesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: InvoicesOrderByRelevanceInput
+input InvoicesOrderByWithRelationInput {
   bill_to_name: SortOrder
   billing_address: SortOrder
   customer_group: SortOrder
@@ -8734,46 +7809,6 @@ input InvoicesWhereUniqueInput {
   id: BigInt
 }
 
-"""
-The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
-"""
-scalar JSON @specifiedBy(url: "http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf")
-
-input JsonNullableFilter {
-  array_contains: JSON
-  array_ends_with: JSON
-  array_starts_with: JSON
-  equals: JSON
-  gt: JSON
-  gte: JSON
-  lt: JSON
-  lte: JSON
-  not: JSON
-  path: [String!]
-  string_contains: String
-  string_ends_with: String
-  string_starts_with: String
-}
-
-input JsonNullableWithAggregatesFilter {
-  _count: NestedIntNullableFilter
-  _max: NestedJsonNullableFilter
-  _min: NestedJsonNullableFilter
-  array_contains: JSON
-  array_ends_with: JSON
-  array_starts_with: JSON
-  equals: JSON
-  gt: JSON
-  gte: JSON
-  lt: JSON
-  lte: JSON
-  not: JSON
-  path: [String!]
-  string_contains: String
-  string_ends_with: String
-  string_starts_with: String
-}
-
 type LogIn {
   created_at: DateTime
   email: String
@@ -8817,17 +7852,6 @@ input LogInCountOrderByAggregateInput {
 }
 
 input LogInCreateInput {
-  created_at: DateTime
-  email: String
-  expiresIn: String
-  id: BigInt
-  password: String
-  token: String
-  username: String
-  users: String
-}
-
-input LogInCreateManyInput {
   created_at: DateTime
   email: String
   expiresIn: String
@@ -8898,21 +7922,6 @@ input LogInMinOrderByAggregateInput {
   users: SortOrder
 }
 
-enum LogInOrderByRelevanceFieldEnum {
-  email
-  expiresIn
-  password
-  token
-  username
-  users
-}
-
-input LogInOrderByRelevanceInput {
-  fields: [LogInOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input LogInOrderByWithAggregationInput {
   _avg: LogInAvgOrderByAggregateInput
   _count: LogInCountOrderByAggregateInput
@@ -8929,8 +7938,7 @@ input LogInOrderByWithAggregationInput {
   users: SortOrder
 }
 
-input LogInOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: LogInOrderByRelevanceInput
+input LogInOrderByWithRelationInput {
   created_at: SortOrder
   email: SortOrder
   expiresIn: SortOrder
@@ -9085,21 +8093,6 @@ input ManufacturerCreateInput {
   state: String
 }
 
-input ManufacturerCreateManyInput {
-  city: String
-  code: String
-  country: String
-  created_at: DateTime
-  description: String
-  id: BigInt
-  isPublic: String
-  media: String
-  name: String
-  product: BigInt
-  products: String
-  state: String
-}
-
 type ManufacturerGroupBy {
   _avg: ManufacturerAvgAggregate
   _count: ManufacturerCountAggregate
@@ -9180,24 +8173,6 @@ input ManufacturerMinOrderByAggregateInput {
   state: SortOrder
 }
 
-enum ManufacturerOrderByRelevanceFieldEnum {
-  city
-  code
-  country
-  description
-  isPublic
-  media
-  name
-  products
-  state
-}
-
-input ManufacturerOrderByRelevanceInput {
-  fields: [ManufacturerOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input ManufacturerOrderByWithAggregationInput {
   _avg: ManufacturerAvgOrderByAggregateInput
   _count: ManufacturerCountOrderByAggregateInput
@@ -9218,8 +8193,7 @@ input ManufacturerOrderByWithAggregationInput {
   state: SortOrder
 }
 
-input ManufacturerOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: ManufacturerOrderByRelevanceInput
+input ManufacturerOrderByWithRelationInput {
   city: SortOrder
   code: SortOrder
   country: SortOrder
@@ -9485,43 +8459,6 @@ input MediamanagerCreateInput {
   workspace: String
 }
 
-input MediamanagerCreateManyInput {
-  agreements: String
-  agreements_agreementsTomediamanager: String
-  albums: String
-  author: String
-  brands: String
-  brands_brandsTomediamanager: String
-  comment: String
-  comments: String
-  content_type: String
-  copyright: String
-  created_at: DateTime
-  customers: String
-  description: String
-  dimensions: String
-  expiration_date: String
-  id: Int
-  keywords: String
-  media: String
-  members: String
-  name: String
-  products: String
-  products_mediamanagerToproducts: String
-  status: String
-  tags: String
-  task_description: String
-  task_name: String
-  task_type: String
-  tasks: String
-  users: String
-  versions: String
-  watermark_description: String
-  watermark_media: String
-  watermark_name: String
-  workspace: String
-}
-
 type MediamanagerGroupBy {
   _avg: MediamanagerAvgAggregate
   _count: MediamanagerCountAggregate
@@ -9712,47 +8649,6 @@ input MediamanagerMinOrderByAggregateInput {
   workspace: SortOrder
 }
 
-enum MediamanagerOrderByRelevanceFieldEnum {
-  agreements
-  agreements_agreementsTomediamanager
-  albums
-  author
-  brands
-  brands_brandsTomediamanager
-  comment
-  comments
-  content_type
-  copyright
-  customers
-  description
-  dimensions
-  expiration_date
-  keywords
-  media
-  members
-  name
-  products
-  products_mediamanagerToproducts
-  status
-  tags
-  task_description
-  task_name
-  task_type
-  tasks
-  users
-  versions
-  watermark_description
-  watermark_media
-  watermark_name
-  workspace
-}
-
-input MediamanagerOrderByRelevanceInput {
-  fields: [MediamanagerOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input MediamanagerOrderByWithAggregationInput {
   _avg: MediamanagerAvgOrderByAggregateInput
   _count: MediamanagerCountOrderByAggregateInput
@@ -9795,8 +8691,7 @@ input MediamanagerOrderByWithAggregationInput {
   workspace: SortOrder
 }
 
-input MediamanagerOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: MediamanagerOrderByRelevanceInput
+input MediamanagerOrderByWithRelationInput {
   agreements: SortOrder
   agreements_agreementsTomediamanager: SortOrder
   albums: SortOrder
@@ -10035,63 +8930,6 @@ input MediamanagerWhereUniqueInput {
 }
 
 type Mutation {
-  createManyAgreements(data: [AgreementsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyApitoken(data: [ApitokenCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyAttributes(data: [AttributesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyBrands(data: [BrandsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyCategories(data: [CategoriesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyChannels(data: [ChannelsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyCities(data: [CitiesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyCollections(data: [CollectionsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyContent_type(data: [Content_typeCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyCountries(data: [CountriesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyCurrencies(data: [CurrenciesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyCustomers(data: [CustomersCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyDashboardgraphql(data: [DashboardgraphqlCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyDashboardjson(data: [DashboardjsonCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyDashboardrestapi(data: [DashboardrestapiCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyDashboards(data: [DashboardsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyDashboardslides(data: [DashboardslidesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyDashboardslist(data: [DashboardslistCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyDiscounts(data: [DiscountsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyEmails(data: [EmailsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyFullfillments(data: [FullfillmentsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyIntegrations(data: [IntegrationsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyInternalization(data: [InternalizationCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyInvoices(data: [InvoicesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyLogIn(data: [LogInCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyManufacturer(data: [ManufacturerCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyMediamanager(data: [MediamanagerCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyOrders(data: [OrdersCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyPages(data: [PagesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyPartners(data: [PartnersCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyPayments(data: [PaymentsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyPermissions(data: [PermissionsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyPlugins(data: [PluginsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyProduct_types(data: [Product_typesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyProducts(data: [ProductsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyProviders(data: [ProvidersCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyQuotes(data: [QuotesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyReturns(data: [ReturnsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyReviews(data: [ReviewsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyRewards(data: [RewardsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyRoles(data: [RolesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManySegments(data: [SegmentsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManySettings(data: [SettingsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyShipments(data: [ShipmentsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyStates(data: [StatesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyTags(data: [TagsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyTaxes(data: [TaxesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyTemplates(data: [TemplatesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyThemes(data: [ThemesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyTransactions(data: [TransactionsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyUpload_file(data: [Upload_fileCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyUsers(data: [UsersCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyVendors(data: [VendorsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyWarehouse(data: [WarehouseCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyWebhooks(data: [WebhooksCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyWishlists(data: [WishlistsCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyZones(data: [ZonesCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
   createOneAgreements(data: AgreementsCreateInput!): Agreements!
   createOneApitoken(data: ApitokenCreateInput!): Apitoken!
   createOneAttributes(data: AttributesCreateInput!): Attributes!
@@ -10539,33 +9377,6 @@ input NestedDecimalFilter {
   notIn: [Decimal!]
 }
 
-input NestedDecimalNullableFilter {
-  equals: Decimal
-  gt: Decimal
-  gte: Decimal
-  in: [Decimal!]
-  lt: Decimal
-  lte: Decimal
-  not: NestedDecimalNullableFilter
-  notIn: [Decimal!]
-}
-
-input NestedDecimalNullableWithAggregatesFilter {
-  _avg: NestedDecimalNullableFilter
-  _count: NestedIntNullableFilter
-  _max: NestedDecimalNullableFilter
-  _min: NestedDecimalNullableFilter
-  _sum: NestedDecimalNullableFilter
-  equals: Decimal
-  gt: Decimal
-  gte: Decimal
-  in: [Decimal!]
-  lt: Decimal
-  lte: Decimal
-  not: NestedDecimalNullableWithAggregatesFilter
-  notIn: [Decimal!]
-}
-
 input NestedDecimalWithAggregatesFilter {
   _avg: NestedDecimalFilter
   _count: NestedIntFilter
@@ -10658,22 +9469,6 @@ input NestedIntWithAggregatesFilter {
   notIn: [Int!]
 }
 
-input NestedJsonNullableFilter {
-  array_contains: JSON
-  array_ends_with: JSON
-  array_starts_with: JSON
-  equals: JSON
-  gt: JSON
-  gte: JSON
-  lt: JSON
-  lte: JSON
-  not: JSON
-  path: [String!]
-  string_contains: String
-  string_ends_with: String
-  string_starts_with: String
-}
-
 input NestedStringFilter {
   contains: String
   endsWith: String
@@ -10685,7 +9480,6 @@ input NestedStringFilter {
   lte: String
   not: NestedStringFilter
   notIn: [String!]
-  search: String
   startsWith: String
 }
 
@@ -10700,7 +9494,6 @@ input NestedStringNullableFilter {
   lte: String
   not: NestedStringNullableFilter
   notIn: [String!]
-  search: String
   startsWith: String
 }
 
@@ -10718,7 +9511,6 @@ input NestedStringNullableWithAggregatesFilter {
   lte: String
   not: NestedStringNullableWithAggregatesFilter
   notIn: [String!]
-  search: String
   startsWith: String
 }
 
@@ -10736,7 +9528,6 @@ input NestedStringWithAggregatesFilter {
   lte: String
   not: NestedStringWithAggregatesFilter
   notIn: [String!]
-  search: String
   startsWith: String
 }
 
@@ -10754,14 +9545,6 @@ input NullableBoolFieldUpdateOperationsInput {
 
 input NullableDateTimeFieldUpdateOperationsInput {
   set: DateTime
-}
-
-input NullableDecimalFieldUpdateOperationsInput {
-  decrement: Decimal
-  divide: Decimal
-  increment: Decimal
-  multiply: Decimal
-  set: Decimal
 }
 
 input NullableIntFieldUpdateOperationsInput {
@@ -10864,26 +9647,6 @@ input OrdersCreateInput {
   customers: String
   grand_total_base: Int
   grand_total_purchased: Int
-  prod_id: BigInt!
-  products: String
-  purchase_date: DateTime
-  purchase_point: Int
-  quotes: String
-  ship_to_name: String
-  status: Boolean
-  transactions: String
-}
-
-input OrdersCreateManyInput {
-  action: Boolean
-  allocated_sources: String
-  bill_to_name: String!
-  braintree_transaction_source: String
-  cust_id: Int!
-  customers: String
-  grand_total_base: Int
-  grand_total_purchased: Int
-  id: Int
   prod_id: BigInt!
   products: String
   purchase_date: DateTime
@@ -10999,23 +9762,6 @@ input OrdersMinOrderByAggregateInput {
   transactions: SortOrder
 }
 
-enum OrdersOrderByRelevanceFieldEnum {
-  allocated_sources
-  bill_to_name
-  braintree_transaction_source
-  customers
-  products
-  quotes
-  ship_to_name
-  transactions
-}
-
-input OrdersOrderByRelevanceInput {
-  fields: [OrdersOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input OrdersOrderByWithAggregationInput {
   _avg: OrdersAvgOrderByAggregateInput
   _count: OrdersCountOrderByAggregateInput
@@ -11041,8 +9787,7 @@ input OrdersOrderByWithAggregationInput {
   transactions: SortOrder
 }
 
-input OrdersOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: OrdersOrderByRelevanceInput
+input OrdersOrderByWithRelationInput {
   action: SortOrder
   allocated_sources: SortOrder
   bill_to_name: SortOrder
@@ -11248,19 +9993,6 @@ input PagesCreateInput {
   url_key: String
 }
 
-input PagesCreateManyInput {
-  content: String
-  content_title: String
-  created_at: DateTime
-  enable_page: Boolean
-  id: Int
-  meta_description: String
-  meta_keywords: String
-  meta_title: String
-  title: String!
-  url_key: String
-}
-
 type PagesGroupBy {
   _avg: PagesAvgAggregate
   _count: PagesCountAggregate
@@ -11331,22 +10063,6 @@ input PagesMinOrderByAggregateInput {
   url_key: SortOrder
 }
 
-enum PagesOrderByRelevanceFieldEnum {
-  content
-  content_title
-  meta_description
-  meta_keywords
-  meta_title
-  title
-  url_key
-}
-
-input PagesOrderByRelevanceInput {
-  fields: [PagesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input PagesOrderByWithAggregationInput {
   _avg: PagesAvgOrderByAggregateInput
   _count: PagesCountOrderByAggregateInput
@@ -11365,8 +10081,7 @@ input PagesOrderByWithAggregationInput {
   url_key: SortOrder
 }
 
-input PagesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: PagesOrderByRelevanceInput
+input PagesOrderByWithRelationInput {
   content: SortOrder
   content_title: SortOrder
   created_at: SortOrder
@@ -11517,18 +10232,6 @@ input PartnersCreateInput {
   state: String
 }
 
-input PartnersCreateManyInput {
-  address: String
-  business_type: String
-  city: String
-  country: String
-  created_at: DateTime
-  id: BigInt
-  isPublic: String
-  name: String
-  state: String
-}
-
 type PartnersGroupBy {
   _avg: PartnersAvgAggregate
   _count: PartnersCountAggregate
@@ -11594,22 +10297,6 @@ input PartnersMinOrderByAggregateInput {
   state: SortOrder
 }
 
-enum PartnersOrderByRelevanceFieldEnum {
-  address
-  business_type
-  city
-  country
-  isPublic
-  name
-  state
-}
-
-input PartnersOrderByRelevanceInput {
-  fields: [PartnersOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input PartnersOrderByWithAggregationInput {
   _avg: PartnersAvgOrderByAggregateInput
   _count: PartnersCountOrderByAggregateInput
@@ -11627,8 +10314,7 @@ input PartnersOrderByWithAggregationInput {
   state: SortOrder
 }
 
-input PartnersOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: PartnersOrderByRelevanceInput
+input PartnersOrderByWithRelationInput {
   address: SortOrder
   business_type: SortOrder
   city: SortOrder
@@ -11783,20 +10469,6 @@ input PaymentsCreateInput {
   redirect_url_app: String
 }
 
-input PaymentsCreateManyInput {
-  active: String
-  client_id: String
-  client_secret: String
-  country: String
-  created_at: DateTime
-  host_uri: String
-  icon: String
-  id: BigInt
-  name: String!
-  redirect_url: String
-  redirect_url_app: String
-}
-
 type PaymentsGroupBy {
   _avg: PaymentsAvgAggregate
   _count: PaymentsCountAggregate
@@ -11872,24 +10544,6 @@ input PaymentsMinOrderByAggregateInput {
   redirect_url_app: SortOrder
 }
 
-enum PaymentsOrderByRelevanceFieldEnum {
-  active
-  client_id
-  client_secret
-  country
-  host_uri
-  icon
-  name
-  redirect_url
-  redirect_url_app
-}
-
-input PaymentsOrderByRelevanceInput {
-  fields: [PaymentsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input PaymentsOrderByWithAggregationInput {
   _avg: PaymentsAvgOrderByAggregateInput
   _count: PaymentsCountOrderByAggregateInput
@@ -11909,8 +10563,7 @@ input PaymentsOrderByWithAggregationInput {
   redirect_url_app: SortOrder
 }
 
-input PaymentsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: PaymentsOrderByRelevanceInput
+input PaymentsOrderByWithRelationInput {
   active: SortOrder
   client_id: SortOrder
   client_secret: SortOrder
@@ -12074,19 +10727,6 @@ input PermissionsCreateInput {
   users: String
 }
 
-input PermissionsCreateManyInput {
-  content: String
-  create: String
-  created_at: DateTime
-  delete: String
-  id: BigInt
-  name: String
-  read: String
-  role: String
-  update: String
-  users: String
-}
-
 type PermissionsGroupBy {
   _avg: PermissionsAvgAggregate
   _count: PermissionsCountAggregate
@@ -12157,23 +10797,6 @@ input PermissionsMinOrderByAggregateInput {
   users: SortOrder
 }
 
-enum PermissionsOrderByRelevanceFieldEnum {
-  content
-  create
-  delete
-  name
-  read
-  role
-  update
-  users
-}
-
-input PermissionsOrderByRelevanceInput {
-  fields: [PermissionsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input PermissionsOrderByWithAggregationInput {
   _avg: PermissionsAvgOrderByAggregateInput
   _count: PermissionsCountOrderByAggregateInput
@@ -12192,8 +10815,7 @@ input PermissionsOrderByWithAggregationInput {
   users: SortOrder
 }
 
-input PermissionsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: PermissionsOrderByRelevanceInput
+input PermissionsOrderByWithRelationInput {
   content: SortOrder
   create: SortOrder
   created_at: SortOrder
@@ -12358,21 +10980,6 @@ input PluginsCreateInput {
   url: String
 }
 
-input PluginsCreateManyInput {
-  agree_terms: Boolean
-  created_at: DateTime
-  description: String
-  github_link: String
-  id: BigInt
-  last_updated: DateTime
-  logo: String
-  name: String
-  publisher_email: String
-  publisher_name: String
-  screenshots: String
-  url: String
-}
-
 type PluginsGroupBy {
   _avg: PluginsAvgAggregate
   _count: PluginsCountAggregate
@@ -12453,23 +11060,6 @@ input PluginsMinOrderByAggregateInput {
   url: SortOrder
 }
 
-enum PluginsOrderByRelevanceFieldEnum {
-  description
-  github_link
-  logo
-  name
-  publisher_email
-  publisher_name
-  screenshots
-  url
-}
-
-input PluginsOrderByRelevanceInput {
-  fields: [PluginsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input PluginsOrderByWithAggregationInput {
   _avg: PluginsAvgOrderByAggregateInput
   _count: PluginsCountOrderByAggregateInput
@@ -12490,8 +11080,7 @@ input PluginsOrderByWithAggregationInput {
   url: SortOrder
 }
 
-input PluginsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: PluginsOrderByRelevanceInput
+input PluginsOrderByWithRelationInput {
   agree_terms: SortOrder
   created_at: SortOrder
   description: SortOrder
@@ -12661,19 +11250,6 @@ input Product_typesCreateInput {
   type_name: String
 }
 
-input Product_typesCreateManyInput {
-  filter_options: String
-  id: Int
-  isShippable: String
-  meta_description: String
-  meta_url: String
-  prod_id: BigInt!
-  product_type: String
-  products: String
-  taxes: String
-  type_name: String
-}
-
 type Product_typesGroupBy {
   _avg: Product_typesAvgAggregate
   _count: Product_typesCountAggregate
@@ -12744,23 +11320,6 @@ input Product_typesMinOrderByAggregateInput {
   type_name: SortOrder
 }
 
-enum Product_typesOrderByRelevanceFieldEnum {
-  filter_options
-  isShippable
-  meta_description
-  meta_url
-  product_type
-  products
-  taxes
-  type_name
-}
-
-input Product_typesOrderByRelevanceInput {
-  fields: [Product_typesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input Product_typesOrderByWithAggregationInput {
   _avg: Product_typesAvgOrderByAggregateInput
   _count: Product_typesCountOrderByAggregateInput
@@ -12779,8 +11338,7 @@ input Product_typesOrderByWithAggregationInput {
   type_name: SortOrder
 }
 
-input Product_typesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: Product_typesOrderByRelevanceInput
+input Product_typesOrderByWithRelationInput {
   filter_options: SortOrder
   id: SortOrder
   isShippable: SortOrder
@@ -13082,70 +11640,6 @@ input ProductsCountOrderByAggregateInput {
 }
 
 input ProductsCreateInput {
-  attributes: String
-  brand: String
-  brands: String
-  categories: String
-  content: String
-  contract: String
-  cost_string: String
-  country: String
-  coupons: String
-  created_at: DateTime
-  credit_memos: String
-  customer_type: String
-  family: String
-  file: String
-  format: String
-  height: String
-  id: BigInt
-  image: String
-  manufacture: String
-  manufacturer: String
-  manufacturer_part_number: String
-  mediamanager: String
-  meta_description: String
-  meta_keywords: String
-  meta_title: String
-  meta_url: String
-  name: String!
-  occassions: String
-  occassions_occassionsToproducts: String
-  orders: String
-  other_products: String
-  part_number: String
-  price: String
-  product: String
-  product_attribute: String
-  product_types: String
-  products: String
-  quantity_per_source: String
-  quotes: String
-  rating: String
-  related_product: BigInt
-  returns: String
-  salable_quantity: String
-  short_description: String
-  size: String
-  sku: BigInt!
-  status: Boolean
-  stock_status: String
-  tags: String
-  tax_class: String
-  tax_rate: String
-  tax_rule: String
-  thumbnail: String
-  trainings: String
-  types: String
-  variants: String
-  visibility: String
-  websites: String
-  weight: String
-  workspaces: String
-  zone: String
-}
-
-input ProductsCreateManyInput {
   attributes: String
   brand: String
   brands: String
@@ -13534,71 +12028,6 @@ input ProductsMinOrderByAggregateInput {
   zone: SortOrder
 }
 
-enum ProductsOrderByRelevanceFieldEnum {
-  attributes
-  brand
-  brands
-  categories
-  content
-  contract
-  cost_string
-  country
-  coupons
-  credit_memos
-  customer_type
-  family
-  file
-  format
-  height
-  image
-  manufacture
-  manufacturer
-  manufacturer_part_number
-  mediamanager
-  meta_description
-  meta_keywords
-  meta_title
-  meta_url
-  name
-  occassions
-  occassions_occassionsToproducts
-  orders
-  other_products
-  part_number
-  price
-  product
-  product_attribute
-  product_types
-  products
-  quantity_per_source
-  quotes
-  rating
-  returns
-  salable_quantity
-  short_description
-  size
-  stock_status
-  tags
-  tax_class
-  tax_rate
-  tax_rule
-  thumbnail
-  trainings
-  types
-  variants
-  visibility
-  websites
-  weight
-  workspaces
-  zone
-}
-
-input ProductsOrderByRelevanceInput {
-  fields: [ProductsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input ProductsOrderByWithAggregationInput {
   _avg: ProductsAvgOrderByAggregateInput
   _count: ProductsCountOrderByAggregateInput
@@ -13668,8 +12097,7 @@ input ProductsOrderByWithAggregationInput {
   zone: SortOrder
 }
 
-input ProductsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: ProductsOrderByRelevanceInput
+input ProductsOrderByWithRelationInput {
   attributes: SortOrder
   brand: SortOrder
   brands: SortOrder
@@ -14137,19 +12565,6 @@ input ProvidersCreateInput {
   redirect_url_app: String
 }
 
-input ProvidersCreateManyInput {
-  active: String
-  client_id: String
-  client_secret: String
-  created_at: DateTime
-  host_uri: String
-  icon: String
-  id: BigInt
-  name: String!
-  redirect_url: String
-  redirect_url_app: String
-}
-
 type ProvidersGroupBy {
   _avg: ProvidersAvgAggregate
   _count: ProvidersCountAggregate
@@ -14220,23 +12635,6 @@ input ProvidersMinOrderByAggregateInput {
   redirect_url_app: SortOrder
 }
 
-enum ProvidersOrderByRelevanceFieldEnum {
-  active
-  client_id
-  client_secret
-  host_uri
-  icon
-  name
-  redirect_url
-  redirect_url_app
-}
-
-input ProvidersOrderByRelevanceInput {
-  fields: [ProvidersOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input ProvidersOrderByWithAggregationInput {
   _avg: ProvidersAvgOrderByAggregateInput
   _count: ProvidersCountOrderByAggregateInput
@@ -14255,8 +12653,7 @@ input ProvidersOrderByWithAggregationInput {
   redirect_url_app: SortOrder
 }
 
-input ProvidersOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: ProvidersOrderByRelevanceInput
+input ProvidersOrderByWithRelationInput {
   active: SortOrder
   client_id: SortOrder
   client_secret: SortOrder
@@ -14354,234 +12751,234 @@ input ProvidersWhereUniqueInput {
 }
 
 type Query {
-  aggregateAgreements(cursor: AgreementsWhereUniqueInput, orderBy: [AgreementsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AgreementsWhereInput): AggregateAgreements!
-  aggregateApitoken(cursor: ApitokenWhereUniqueInput, orderBy: [ApitokenOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ApitokenWhereInput): AggregateApitoken!
-  aggregateAttributes(cursor: AttributesWhereUniqueInput, orderBy: [AttributesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AttributesWhereInput): AggregateAttributes!
-  aggregateBrands(cursor: BrandsWhereUniqueInput, orderBy: [BrandsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: BrandsWhereInput): AggregateBrands!
-  aggregateCategories(cursor: CategoriesWhereUniqueInput, orderBy: [CategoriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CategoriesWhereInput): AggregateCategories!
-  aggregateChannels(cursor: ChannelsWhereUniqueInput, orderBy: [ChannelsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ChannelsWhereInput): AggregateChannels!
-  aggregateCities(cursor: CitiesWhereUniqueInput, orderBy: [CitiesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CitiesWhereInput): AggregateCities!
-  aggregateCollections(cursor: CollectionsWhereUniqueInput, orderBy: [CollectionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CollectionsWhereInput): AggregateCollections!
-  aggregateContent_type(cursor: Content_typeWhereUniqueInput, orderBy: [Content_typeOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Content_typeWhereInput): AggregateContent_type!
-  aggregateCountries(cursor: CountriesWhereUniqueInput, orderBy: [CountriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CountriesWhereInput): AggregateCountries!
-  aggregateCurrencies(cursor: CurrenciesWhereUniqueInput, orderBy: [CurrenciesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CurrenciesWhereInput): AggregateCurrencies!
-  aggregateCustomers(cursor: CustomersWhereUniqueInput, orderBy: [CustomersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CustomersWhereInput): AggregateCustomers!
-  aggregateDashboardgraphql(cursor: DashboardgraphqlWhereUniqueInput, orderBy: [DashboardgraphqlOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardgraphqlWhereInput): AggregateDashboardgraphql!
-  aggregateDashboardjson(cursor: DashboardjsonWhereUniqueInput, orderBy: [DashboardjsonOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardjsonWhereInput): AggregateDashboardjson!
-  aggregateDashboardrestapi(cursor: DashboardrestapiWhereUniqueInput, orderBy: [DashboardrestapiOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardrestapiWhereInput): AggregateDashboardrestapi!
-  aggregateDashboards(cursor: DashboardsWhereUniqueInput, orderBy: [DashboardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardsWhereInput): AggregateDashboards!
-  aggregateDashboardslides(cursor: DashboardslidesWhereUniqueInput, orderBy: [DashboardslidesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardslidesWhereInput): AggregateDashboardslides!
-  aggregateDashboardslist(cursor: DashboardslistWhereUniqueInput, orderBy: [DashboardslistOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardslistWhereInput): AggregateDashboardslist!
-  aggregateDiscounts(cursor: DiscountsWhereUniqueInput, orderBy: [DiscountsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DiscountsWhereInput): AggregateDiscounts!
-  aggregateEmails(cursor: EmailsWhereUniqueInput, orderBy: [EmailsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EmailsWhereInput): AggregateEmails!
-  aggregateFullfillments(cursor: FullfillmentsWhereUniqueInput, orderBy: [FullfillmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): AggregateFullfillments!
-  aggregateIntegrations(cursor: IntegrationsWhereUniqueInput, orderBy: [IntegrationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: IntegrationsWhereInput): AggregateIntegrations!
-  aggregateInternalization(cursor: InternalizationWhereUniqueInput, orderBy: [InternalizationOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InternalizationWhereInput): AggregateInternalization!
-  aggregateInvoices(cursor: InvoicesWhereUniqueInput, orderBy: [InvoicesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvoicesWhereInput): AggregateInvoices!
-  aggregateLogIn(cursor: LogInWhereUniqueInput, orderBy: [LogInOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LogInWhereInput): AggregateLogIn!
-  aggregateManufacturer(cursor: ManufacturerWhereUniqueInput, orderBy: [ManufacturerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ManufacturerWhereInput): AggregateManufacturer!
-  aggregateMediamanager(cursor: MediamanagerWhereUniqueInput, orderBy: [MediamanagerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: MediamanagerWhereInput): AggregateMediamanager!
-  aggregateOrders(cursor: OrdersWhereUniqueInput, orderBy: [OrdersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: OrdersWhereInput): AggregateOrders!
-  aggregatePages(cursor: PagesWhereUniqueInput, orderBy: [PagesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PagesWhereInput): AggregatePages!
-  aggregatePartners(cursor: PartnersWhereUniqueInput, orderBy: [PartnersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PartnersWhereInput): AggregatePartners!
-  aggregatePayments(cursor: PaymentsWhereUniqueInput, orderBy: [PaymentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PaymentsWhereInput): AggregatePayments!
-  aggregatePermissions(cursor: PermissionsWhereUniqueInput, orderBy: [PermissionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PermissionsWhereInput): AggregatePermissions!
-  aggregatePlugins(cursor: PluginsWhereUniqueInput, orderBy: [PluginsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PluginsWhereInput): AggregatePlugins!
-  aggregateProduct_types(cursor: Product_typesWhereUniqueInput, orderBy: [Product_typesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Product_typesWhereInput): AggregateProduct_types!
-  aggregateProducts(cursor: ProductsWhereUniqueInput, orderBy: [ProductsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ProductsWhereInput): AggregateProducts!
-  aggregateProviders(cursor: ProvidersWhereUniqueInput, orderBy: [ProvidersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ProvidersWhereInput): AggregateProviders!
-  aggregateQuotes(cursor: QuotesWhereUniqueInput, orderBy: [QuotesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: QuotesWhereInput): AggregateQuotes!
-  aggregateReturns(cursor: ReturnsWhereUniqueInput, orderBy: [ReturnsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ReturnsWhereInput): AggregateReturns!
-  aggregateReviews(cursor: ReviewsWhereUniqueInput, orderBy: [ReviewsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ReviewsWhereInput): AggregateReviews!
-  aggregateRewards(cursor: RewardsWhereUniqueInput, orderBy: [RewardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: RewardsWhereInput): AggregateRewards!
-  aggregateRoles(cursor: RolesWhereUniqueInput, orderBy: [RolesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: RolesWhereInput): AggregateRoles!
-  aggregateSegments(cursor: SegmentsWhereUniqueInput, orderBy: [SegmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SegmentsWhereInput): AggregateSegments!
-  aggregateSettings(cursor: SettingsWhereUniqueInput, orderBy: [SettingsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SettingsWhereInput): AggregateSettings!
-  aggregateShipments(cursor: ShipmentsWhereUniqueInput, orderBy: [ShipmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ShipmentsWhereInput): AggregateShipments!
-  aggregateStates(cursor: StatesWhereUniqueInput, orderBy: [StatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StatesWhereInput): AggregateStates!
-  aggregateTags(cursor: TagsWhereUniqueInput, orderBy: [TagsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TagsWhereInput): AggregateTags!
-  aggregateTaxes(cursor: TaxesWhereUniqueInput, orderBy: [TaxesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TaxesWhereInput): AggregateTaxes!
-  aggregateTemplates(cursor: TemplatesWhereUniqueInput, orderBy: [TemplatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TemplatesWhereInput): AggregateTemplates!
-  aggregateThemes(cursor: ThemesWhereUniqueInput, orderBy: [ThemesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ThemesWhereInput): AggregateThemes!
-  aggregateTransactions(cursor: TransactionsWhereUniqueInput, orderBy: [TransactionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TransactionsWhereInput): AggregateTransactions!
-  aggregateUpload_file(cursor: Upload_fileWhereUniqueInput, orderBy: [Upload_fileOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Upload_fileWhereInput): AggregateUpload_file!
-  aggregateUsers(cursor: UsersWhereUniqueInput, orderBy: [UsersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: UsersWhereInput): AggregateUsers!
-  aggregateVendors(cursor: VendorsWhereUniqueInput, orderBy: [VendorsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: VendorsWhereInput): AggregateVendors!
-  aggregateWarehouse(cursor: WarehouseWhereUniqueInput, orderBy: [WarehouseOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WarehouseWhereInput): AggregateWarehouse!
-  aggregateWebhooks(cursor: WebhooksWhereUniqueInput, orderBy: [WebhooksOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WebhooksWhereInput): AggregateWebhooks!
-  aggregateWishlists(cursor: WishlistsWhereUniqueInput, orderBy: [WishlistsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WishlistsWhereInput): AggregateWishlists!
-  aggregateZones(cursor: ZonesWhereUniqueInput, orderBy: [ZonesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ZonesWhereInput): AggregateZones!
+  aggregateAgreements(cursor: AgreementsWhereUniqueInput, orderBy: [AgreementsOrderByWithRelationInput!], skip: Int, take: Int, where: AgreementsWhereInput): AggregateAgreements!
+  aggregateApitoken(cursor: ApitokenWhereUniqueInput, orderBy: [ApitokenOrderByWithRelationInput!], skip: Int, take: Int, where: ApitokenWhereInput): AggregateApitoken!
+  aggregateAttributes(cursor: AttributesWhereUniqueInput, orderBy: [AttributesOrderByWithRelationInput!], skip: Int, take: Int, where: AttributesWhereInput): AggregateAttributes!
+  aggregateBrands(cursor: BrandsWhereUniqueInput, orderBy: [BrandsOrderByWithRelationInput!], skip: Int, take: Int, where: BrandsWhereInput): AggregateBrands!
+  aggregateCategories(cursor: CategoriesWhereUniqueInput, orderBy: [CategoriesOrderByWithRelationInput!], skip: Int, take: Int, where: CategoriesWhereInput): AggregateCategories!
+  aggregateChannels(cursor: ChannelsWhereUniqueInput, orderBy: [ChannelsOrderByWithRelationInput!], skip: Int, take: Int, where: ChannelsWhereInput): AggregateChannels!
+  aggregateCities(cursor: CitiesWhereUniqueInput, orderBy: [CitiesOrderByWithRelationInput!], skip: Int, take: Int, where: CitiesWhereInput): AggregateCities!
+  aggregateCollections(cursor: CollectionsWhereUniqueInput, orderBy: [CollectionsOrderByWithRelationInput!], skip: Int, take: Int, where: CollectionsWhereInput): AggregateCollections!
+  aggregateContent_type(cursor: Content_typeWhereUniqueInput, orderBy: [Content_typeOrderByWithRelationInput!], skip: Int, take: Int, where: Content_typeWhereInput): AggregateContent_type!
+  aggregateCountries(cursor: CountriesWhereUniqueInput, orderBy: [CountriesOrderByWithRelationInput!], skip: Int, take: Int, where: CountriesWhereInput): AggregateCountries!
+  aggregateCurrencies(cursor: CurrenciesWhereUniqueInput, orderBy: [CurrenciesOrderByWithRelationInput!], skip: Int, take: Int, where: CurrenciesWhereInput): AggregateCurrencies!
+  aggregateCustomers(cursor: CustomersWhereUniqueInput, orderBy: [CustomersOrderByWithRelationInput!], skip: Int, take: Int, where: CustomersWhereInput): AggregateCustomers!
+  aggregateDashboardgraphql(cursor: DashboardgraphqlWhereUniqueInput, orderBy: [DashboardgraphqlOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardgraphqlWhereInput): AggregateDashboardgraphql!
+  aggregateDashboardjson(cursor: DashboardjsonWhereUniqueInput, orderBy: [DashboardjsonOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardjsonWhereInput): AggregateDashboardjson!
+  aggregateDashboardrestapi(cursor: DashboardrestapiWhereUniqueInput, orderBy: [DashboardrestapiOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardrestapiWhereInput): AggregateDashboardrestapi!
+  aggregateDashboards(cursor: DashboardsWhereUniqueInput, orderBy: [DashboardsOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardsWhereInput): AggregateDashboards!
+  aggregateDashboardslides(cursor: DashboardslidesWhereUniqueInput, orderBy: [DashboardslidesOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardslidesWhereInput): AggregateDashboardslides!
+  aggregateDashboardslist(cursor: DashboardslistWhereUniqueInput, orderBy: [DashboardslistOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardslistWhereInput): AggregateDashboardslist!
+  aggregateDiscounts(cursor: DiscountsWhereUniqueInput, orderBy: [DiscountsOrderByWithRelationInput!], skip: Int, take: Int, where: DiscountsWhereInput): AggregateDiscounts!
+  aggregateEmails(cursor: EmailsWhereUniqueInput, orderBy: [EmailsOrderByWithRelationInput!], skip: Int, take: Int, where: EmailsWhereInput): AggregateEmails!
+  aggregateFullfillments(cursor: FullfillmentsWhereUniqueInput, orderBy: [FullfillmentsOrderByWithRelationInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): AggregateFullfillments!
+  aggregateIntegrations(cursor: IntegrationsWhereUniqueInput, orderBy: [IntegrationsOrderByWithRelationInput!], skip: Int, take: Int, where: IntegrationsWhereInput): AggregateIntegrations!
+  aggregateInternalization(cursor: InternalizationWhereUniqueInput, orderBy: [InternalizationOrderByWithRelationInput!], skip: Int, take: Int, where: InternalizationWhereInput): AggregateInternalization!
+  aggregateInvoices(cursor: InvoicesWhereUniqueInput, orderBy: [InvoicesOrderByWithRelationInput!], skip: Int, take: Int, where: InvoicesWhereInput): AggregateInvoices!
+  aggregateLogIn(cursor: LogInWhereUniqueInput, orderBy: [LogInOrderByWithRelationInput!], skip: Int, take: Int, where: LogInWhereInput): AggregateLogIn!
+  aggregateManufacturer(cursor: ManufacturerWhereUniqueInput, orderBy: [ManufacturerOrderByWithRelationInput!], skip: Int, take: Int, where: ManufacturerWhereInput): AggregateManufacturer!
+  aggregateMediamanager(cursor: MediamanagerWhereUniqueInput, orderBy: [MediamanagerOrderByWithRelationInput!], skip: Int, take: Int, where: MediamanagerWhereInput): AggregateMediamanager!
+  aggregateOrders(cursor: OrdersWhereUniqueInput, orderBy: [OrdersOrderByWithRelationInput!], skip: Int, take: Int, where: OrdersWhereInput): AggregateOrders!
+  aggregatePages(cursor: PagesWhereUniqueInput, orderBy: [PagesOrderByWithRelationInput!], skip: Int, take: Int, where: PagesWhereInput): AggregatePages!
+  aggregatePartners(cursor: PartnersWhereUniqueInput, orderBy: [PartnersOrderByWithRelationInput!], skip: Int, take: Int, where: PartnersWhereInput): AggregatePartners!
+  aggregatePayments(cursor: PaymentsWhereUniqueInput, orderBy: [PaymentsOrderByWithRelationInput!], skip: Int, take: Int, where: PaymentsWhereInput): AggregatePayments!
+  aggregatePermissions(cursor: PermissionsWhereUniqueInput, orderBy: [PermissionsOrderByWithRelationInput!], skip: Int, take: Int, where: PermissionsWhereInput): AggregatePermissions!
+  aggregatePlugins(cursor: PluginsWhereUniqueInput, orderBy: [PluginsOrderByWithRelationInput!], skip: Int, take: Int, where: PluginsWhereInput): AggregatePlugins!
+  aggregateProduct_types(cursor: Product_typesWhereUniqueInput, orderBy: [Product_typesOrderByWithRelationInput!], skip: Int, take: Int, where: Product_typesWhereInput): AggregateProduct_types!
+  aggregateProducts(cursor: ProductsWhereUniqueInput, orderBy: [ProductsOrderByWithRelationInput!], skip: Int, take: Int, where: ProductsWhereInput): AggregateProducts!
+  aggregateProviders(cursor: ProvidersWhereUniqueInput, orderBy: [ProvidersOrderByWithRelationInput!], skip: Int, take: Int, where: ProvidersWhereInput): AggregateProviders!
+  aggregateQuotes(cursor: QuotesWhereUniqueInput, orderBy: [QuotesOrderByWithRelationInput!], skip: Int, take: Int, where: QuotesWhereInput): AggregateQuotes!
+  aggregateReturns(cursor: ReturnsWhereUniqueInput, orderBy: [ReturnsOrderByWithRelationInput!], skip: Int, take: Int, where: ReturnsWhereInput): AggregateReturns!
+  aggregateReviews(cursor: ReviewsWhereUniqueInput, orderBy: [ReviewsOrderByWithRelationInput!], skip: Int, take: Int, where: ReviewsWhereInput): AggregateReviews!
+  aggregateRewards(cursor: RewardsWhereUniqueInput, orderBy: [RewardsOrderByWithRelationInput!], skip: Int, take: Int, where: RewardsWhereInput): AggregateRewards!
+  aggregateRoles(cursor: RolesWhereUniqueInput, orderBy: [RolesOrderByWithRelationInput!], skip: Int, take: Int, where: RolesWhereInput): AggregateRoles!
+  aggregateSegments(cursor: SegmentsWhereUniqueInput, orderBy: [SegmentsOrderByWithRelationInput!], skip: Int, take: Int, where: SegmentsWhereInput): AggregateSegments!
+  aggregateSettings(cursor: SettingsWhereUniqueInput, orderBy: [SettingsOrderByWithRelationInput!], skip: Int, take: Int, where: SettingsWhereInput): AggregateSettings!
+  aggregateShipments(cursor: ShipmentsWhereUniqueInput, orderBy: [ShipmentsOrderByWithRelationInput!], skip: Int, take: Int, where: ShipmentsWhereInput): AggregateShipments!
+  aggregateStates(cursor: StatesWhereUniqueInput, orderBy: [StatesOrderByWithRelationInput!], skip: Int, take: Int, where: StatesWhereInput): AggregateStates!
+  aggregateTags(cursor: TagsWhereUniqueInput, orderBy: [TagsOrderByWithRelationInput!], skip: Int, take: Int, where: TagsWhereInput): AggregateTags!
+  aggregateTaxes(cursor: TaxesWhereUniqueInput, orderBy: [TaxesOrderByWithRelationInput!], skip: Int, take: Int, where: TaxesWhereInput): AggregateTaxes!
+  aggregateTemplates(cursor: TemplatesWhereUniqueInput, orderBy: [TemplatesOrderByWithRelationInput!], skip: Int, take: Int, where: TemplatesWhereInput): AggregateTemplates!
+  aggregateThemes(cursor: ThemesWhereUniqueInput, orderBy: [ThemesOrderByWithRelationInput!], skip: Int, take: Int, where: ThemesWhereInput): AggregateThemes!
+  aggregateTransactions(cursor: TransactionsWhereUniqueInput, orderBy: [TransactionsOrderByWithRelationInput!], skip: Int, take: Int, where: TransactionsWhereInput): AggregateTransactions!
+  aggregateUpload_file(cursor: Upload_fileWhereUniqueInput, orderBy: [Upload_fileOrderByWithRelationInput!], skip: Int, take: Int, where: Upload_fileWhereInput): AggregateUpload_file!
+  aggregateUsers(cursor: UsersWhereUniqueInput, orderBy: [UsersOrderByWithRelationInput!], skip: Int, take: Int, where: UsersWhereInput): AggregateUsers!
+  aggregateVendors(cursor: VendorsWhereUniqueInput, orderBy: [VendorsOrderByWithRelationInput!], skip: Int, take: Int, where: VendorsWhereInput): AggregateVendors!
+  aggregateWarehouse(cursor: WarehouseWhereUniqueInput, orderBy: [WarehouseOrderByWithRelationInput!], skip: Int, take: Int, where: WarehouseWhereInput): AggregateWarehouse!
+  aggregateWebhooks(cursor: WebhooksWhereUniqueInput, orderBy: [WebhooksOrderByWithRelationInput!], skip: Int, take: Int, where: WebhooksWhereInput): AggregateWebhooks!
+  aggregateWishlists(cursor: WishlistsWhereUniqueInput, orderBy: [WishlistsOrderByWithRelationInput!], skip: Int, take: Int, where: WishlistsWhereInput): AggregateWishlists!
+  aggregateZones(cursor: ZonesWhereUniqueInput, orderBy: [ZonesOrderByWithRelationInput!], skip: Int, take: Int, where: ZonesWhereInput): AggregateZones!
   apitoken(where: ApitokenWhereUniqueInput!): Apitoken
-  apitokens(cursor: ApitokenWhereUniqueInput, distinct: [ApitokenScalarFieldEnum!], orderBy: [ApitokenOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ApitokenWhereInput): [Apitoken!]!
+  apitokens(cursor: ApitokenWhereUniqueInput, distinct: [ApitokenScalarFieldEnum!], orderBy: [ApitokenOrderByWithRelationInput!], skip: Int, take: Int, where: ApitokenWhereInput): [Apitoken!]!
   content_type(where: Content_typeWhereUniqueInput!): Content_type
-  content_types(cursor: Content_typeWhereUniqueInput, distinct: [Content_typeScalarFieldEnum!], orderBy: [Content_typeOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Content_typeWhereInput): [Content_type!]!
+  content_types(cursor: Content_typeWhereUniqueInput, distinct: [Content_typeScalarFieldEnum!], orderBy: [Content_typeOrderByWithRelationInput!], skip: Int, take: Int, where: Content_typeWhereInput): [Content_type!]!
   dashboardgraphql(where: DashboardgraphqlWhereUniqueInput!): Dashboardgraphql
-  dashboardgraphqls(cursor: DashboardgraphqlWhereUniqueInput, distinct: [DashboardgraphqlScalarFieldEnum!], orderBy: [DashboardgraphqlOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardgraphqlWhereInput): [Dashboardgraphql!]!
+  dashboardgraphqls(cursor: DashboardgraphqlWhereUniqueInput, distinct: [DashboardgraphqlScalarFieldEnum!], orderBy: [DashboardgraphqlOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardgraphqlWhereInput): [Dashboardgraphql!]!
   dashboardjson(where: DashboardjsonWhereUniqueInput!): Dashboardjson
-  dashboardjsons(cursor: DashboardjsonWhereUniqueInput, distinct: [DashboardjsonScalarFieldEnum!], orderBy: [DashboardjsonOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardjsonWhereInput): [Dashboardjson!]!
+  dashboardjsons(cursor: DashboardjsonWhereUniqueInput, distinct: [DashboardjsonScalarFieldEnum!], orderBy: [DashboardjsonOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardjsonWhereInput): [Dashboardjson!]!
   dashboardrestapi(where: DashboardrestapiWhereUniqueInput!): Dashboardrestapi
-  dashboardrestapis(cursor: DashboardrestapiWhereUniqueInput, distinct: [DashboardrestapiScalarFieldEnum!], orderBy: [DashboardrestapiOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardrestapiWhereInput): [Dashboardrestapi!]!
+  dashboardrestapis(cursor: DashboardrestapiWhereUniqueInput, distinct: [DashboardrestapiScalarFieldEnum!], orderBy: [DashboardrestapiOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardrestapiWhereInput): [Dashboardrestapi!]!
   dashboardslist(where: DashboardslistWhereUniqueInput!): Dashboardslist
-  dashboardslists(cursor: DashboardslistWhereUniqueInput, distinct: [DashboardslistScalarFieldEnum!], orderBy: [DashboardslistOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardslistWhereInput): [Dashboardslist!]!
-  findFirstAgreements(cursor: AgreementsWhereUniqueInput, distinct: [AgreementsScalarFieldEnum!], orderBy: [AgreementsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AgreementsWhereInput): Agreements
-  findFirstAgreementsOrThrow(cursor: AgreementsWhereUniqueInput, distinct: [AgreementsScalarFieldEnum!], orderBy: [AgreementsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AgreementsWhereInput): Agreements
-  findFirstApitoken(cursor: ApitokenWhereUniqueInput, distinct: [ApitokenScalarFieldEnum!], orderBy: [ApitokenOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ApitokenWhereInput): Apitoken
-  findFirstApitokenOrThrow(cursor: ApitokenWhereUniqueInput, distinct: [ApitokenScalarFieldEnum!], orderBy: [ApitokenOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ApitokenWhereInput): Apitoken
-  findFirstAttributes(cursor: AttributesWhereUniqueInput, distinct: [AttributesScalarFieldEnum!], orderBy: [AttributesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AttributesWhereInput): Attributes
-  findFirstAttributesOrThrow(cursor: AttributesWhereUniqueInput, distinct: [AttributesScalarFieldEnum!], orderBy: [AttributesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AttributesWhereInput): Attributes
-  findFirstBrands(cursor: BrandsWhereUniqueInput, distinct: [BrandsScalarFieldEnum!], orderBy: [BrandsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: BrandsWhereInput): Brands
-  findFirstBrandsOrThrow(cursor: BrandsWhereUniqueInput, distinct: [BrandsScalarFieldEnum!], orderBy: [BrandsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: BrandsWhereInput): Brands
-  findFirstCategories(cursor: CategoriesWhereUniqueInput, distinct: [CategoriesScalarFieldEnum!], orderBy: [CategoriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CategoriesWhereInput): Categories
-  findFirstCategoriesOrThrow(cursor: CategoriesWhereUniqueInput, distinct: [CategoriesScalarFieldEnum!], orderBy: [CategoriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CategoriesWhereInput): Categories
-  findFirstChannels(cursor: ChannelsWhereUniqueInput, distinct: [ChannelsScalarFieldEnum!], orderBy: [ChannelsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ChannelsWhereInput): Channels
-  findFirstChannelsOrThrow(cursor: ChannelsWhereUniqueInput, distinct: [ChannelsScalarFieldEnum!], orderBy: [ChannelsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ChannelsWhereInput): Channels
-  findFirstCities(cursor: CitiesWhereUniqueInput, distinct: [CitiesScalarFieldEnum!], orderBy: [CitiesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CitiesWhereInput): Cities
-  findFirstCitiesOrThrow(cursor: CitiesWhereUniqueInput, distinct: [CitiesScalarFieldEnum!], orderBy: [CitiesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CitiesWhereInput): Cities
-  findFirstCollections(cursor: CollectionsWhereUniqueInput, distinct: [CollectionsScalarFieldEnum!], orderBy: [CollectionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CollectionsWhereInput): Collections
-  findFirstCollectionsOrThrow(cursor: CollectionsWhereUniqueInput, distinct: [CollectionsScalarFieldEnum!], orderBy: [CollectionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CollectionsWhereInput): Collections
-  findFirstContent_type(cursor: Content_typeWhereUniqueInput, distinct: [Content_typeScalarFieldEnum!], orderBy: [Content_typeOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Content_typeWhereInput): Content_type
-  findFirstContent_typeOrThrow(cursor: Content_typeWhereUniqueInput, distinct: [Content_typeScalarFieldEnum!], orderBy: [Content_typeOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Content_typeWhereInput): Content_type
-  findFirstCountries(cursor: CountriesWhereUniqueInput, distinct: [CountriesScalarFieldEnum!], orderBy: [CountriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CountriesWhereInput): Countries
-  findFirstCountriesOrThrow(cursor: CountriesWhereUniqueInput, distinct: [CountriesScalarFieldEnum!], orderBy: [CountriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CountriesWhereInput): Countries
-  findFirstCurrencies(cursor: CurrenciesWhereUniqueInput, distinct: [CurrenciesScalarFieldEnum!], orderBy: [CurrenciesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CurrenciesWhereInput): Currencies
-  findFirstCurrenciesOrThrow(cursor: CurrenciesWhereUniqueInput, distinct: [CurrenciesScalarFieldEnum!], orderBy: [CurrenciesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CurrenciesWhereInput): Currencies
-  findFirstCustomers(cursor: CustomersWhereUniqueInput, distinct: [CustomersScalarFieldEnum!], orderBy: [CustomersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CustomersWhereInput): Customers
-  findFirstCustomersOrThrow(cursor: CustomersWhereUniqueInput, distinct: [CustomersScalarFieldEnum!], orderBy: [CustomersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CustomersWhereInput): Customers
-  findFirstDashboardgraphql(cursor: DashboardgraphqlWhereUniqueInput, distinct: [DashboardgraphqlScalarFieldEnum!], orderBy: [DashboardgraphqlOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardgraphqlWhereInput): Dashboardgraphql
-  findFirstDashboardgraphqlOrThrow(cursor: DashboardgraphqlWhereUniqueInput, distinct: [DashboardgraphqlScalarFieldEnum!], orderBy: [DashboardgraphqlOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardgraphqlWhereInput): Dashboardgraphql
-  findFirstDashboardjson(cursor: DashboardjsonWhereUniqueInput, distinct: [DashboardjsonScalarFieldEnum!], orderBy: [DashboardjsonOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardjsonWhereInput): Dashboardjson
-  findFirstDashboardjsonOrThrow(cursor: DashboardjsonWhereUniqueInput, distinct: [DashboardjsonScalarFieldEnum!], orderBy: [DashboardjsonOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardjsonWhereInput): Dashboardjson
-  findFirstDashboardrestapi(cursor: DashboardrestapiWhereUniqueInput, distinct: [DashboardrestapiScalarFieldEnum!], orderBy: [DashboardrestapiOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardrestapiWhereInput): Dashboardrestapi
-  findFirstDashboardrestapiOrThrow(cursor: DashboardrestapiWhereUniqueInput, distinct: [DashboardrestapiScalarFieldEnum!], orderBy: [DashboardrestapiOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardrestapiWhereInput): Dashboardrestapi
-  findFirstDashboards(cursor: DashboardsWhereUniqueInput, distinct: [DashboardsScalarFieldEnum!], orderBy: [DashboardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardsWhereInput): Dashboards
-  findFirstDashboardsOrThrow(cursor: DashboardsWhereUniqueInput, distinct: [DashboardsScalarFieldEnum!], orderBy: [DashboardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardsWhereInput): Dashboards
-  findFirstDashboardslides(cursor: DashboardslidesWhereUniqueInput, distinct: [DashboardslidesScalarFieldEnum!], orderBy: [DashboardslidesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardslidesWhereInput): Dashboardslides
-  findFirstDashboardslidesOrThrow(cursor: DashboardslidesWhereUniqueInput, distinct: [DashboardslidesScalarFieldEnum!], orderBy: [DashboardslidesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardslidesWhereInput): Dashboardslides
-  findFirstDashboardslist(cursor: DashboardslistWhereUniqueInput, distinct: [DashboardslistScalarFieldEnum!], orderBy: [DashboardslistOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardslistWhereInput): Dashboardslist
-  findFirstDashboardslistOrThrow(cursor: DashboardslistWhereUniqueInput, distinct: [DashboardslistScalarFieldEnum!], orderBy: [DashboardslistOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardslistWhereInput): Dashboardslist
-  findFirstDiscounts(cursor: DiscountsWhereUniqueInput, distinct: [DiscountsScalarFieldEnum!], orderBy: [DiscountsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DiscountsWhereInput): Discounts
-  findFirstDiscountsOrThrow(cursor: DiscountsWhereUniqueInput, distinct: [DiscountsScalarFieldEnum!], orderBy: [DiscountsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DiscountsWhereInput): Discounts
-  findFirstEmails(cursor: EmailsWhereUniqueInput, distinct: [EmailsScalarFieldEnum!], orderBy: [EmailsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EmailsWhereInput): Emails
-  findFirstEmailsOrThrow(cursor: EmailsWhereUniqueInput, distinct: [EmailsScalarFieldEnum!], orderBy: [EmailsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EmailsWhereInput): Emails
-  findFirstFullfillments(cursor: FullfillmentsWhereUniqueInput, distinct: [FullfillmentsScalarFieldEnum!], orderBy: [FullfillmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): Fullfillments
-  findFirstFullfillmentsOrThrow(cursor: FullfillmentsWhereUniqueInput, distinct: [FullfillmentsScalarFieldEnum!], orderBy: [FullfillmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): Fullfillments
-  findFirstIntegrations(cursor: IntegrationsWhereUniqueInput, distinct: [IntegrationsScalarFieldEnum!], orderBy: [IntegrationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: IntegrationsWhereInput): Integrations
-  findFirstIntegrationsOrThrow(cursor: IntegrationsWhereUniqueInput, distinct: [IntegrationsScalarFieldEnum!], orderBy: [IntegrationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: IntegrationsWhereInput): Integrations
-  findFirstInternalization(cursor: InternalizationWhereUniqueInput, distinct: [InternalizationScalarFieldEnum!], orderBy: [InternalizationOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InternalizationWhereInput): Internalization
-  findFirstInternalizationOrThrow(cursor: InternalizationWhereUniqueInput, distinct: [InternalizationScalarFieldEnum!], orderBy: [InternalizationOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InternalizationWhereInput): Internalization
-  findFirstInvoices(cursor: InvoicesWhereUniqueInput, distinct: [InvoicesScalarFieldEnum!], orderBy: [InvoicesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvoicesWhereInput): Invoices
-  findFirstInvoicesOrThrow(cursor: InvoicesWhereUniqueInput, distinct: [InvoicesScalarFieldEnum!], orderBy: [InvoicesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvoicesWhereInput): Invoices
-  findFirstLogIn(cursor: LogInWhereUniqueInput, distinct: [LogInScalarFieldEnum!], orderBy: [LogInOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LogInWhereInput): LogIn
-  findFirstLogInOrThrow(cursor: LogInWhereUniqueInput, distinct: [LogInScalarFieldEnum!], orderBy: [LogInOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LogInWhereInput): LogIn
-  findFirstManufacturer(cursor: ManufacturerWhereUniqueInput, distinct: [ManufacturerScalarFieldEnum!], orderBy: [ManufacturerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ManufacturerWhereInput): Manufacturer
-  findFirstManufacturerOrThrow(cursor: ManufacturerWhereUniqueInput, distinct: [ManufacturerScalarFieldEnum!], orderBy: [ManufacturerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ManufacturerWhereInput): Manufacturer
-  findFirstMediamanager(cursor: MediamanagerWhereUniqueInput, distinct: [MediamanagerScalarFieldEnum!], orderBy: [MediamanagerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: MediamanagerWhereInput): Mediamanager
-  findFirstMediamanagerOrThrow(cursor: MediamanagerWhereUniqueInput, distinct: [MediamanagerScalarFieldEnum!], orderBy: [MediamanagerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: MediamanagerWhereInput): Mediamanager
-  findFirstOrders(cursor: OrdersWhereUniqueInput, distinct: [OrdersScalarFieldEnum!], orderBy: [OrdersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: OrdersWhereInput): Orders
-  findFirstOrdersOrThrow(cursor: OrdersWhereUniqueInput, distinct: [OrdersScalarFieldEnum!], orderBy: [OrdersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: OrdersWhereInput): Orders
-  findFirstPages(cursor: PagesWhereUniqueInput, distinct: [PagesScalarFieldEnum!], orderBy: [PagesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PagesWhereInput): Pages
-  findFirstPagesOrThrow(cursor: PagesWhereUniqueInput, distinct: [PagesScalarFieldEnum!], orderBy: [PagesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PagesWhereInput): Pages
-  findFirstPartners(cursor: PartnersWhereUniqueInput, distinct: [PartnersScalarFieldEnum!], orderBy: [PartnersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PartnersWhereInput): Partners
-  findFirstPartnersOrThrow(cursor: PartnersWhereUniqueInput, distinct: [PartnersScalarFieldEnum!], orderBy: [PartnersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PartnersWhereInput): Partners
-  findFirstPayments(cursor: PaymentsWhereUniqueInput, distinct: [PaymentsScalarFieldEnum!], orderBy: [PaymentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PaymentsWhereInput): Payments
-  findFirstPaymentsOrThrow(cursor: PaymentsWhereUniqueInput, distinct: [PaymentsScalarFieldEnum!], orderBy: [PaymentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PaymentsWhereInput): Payments
-  findFirstPermissions(cursor: PermissionsWhereUniqueInput, distinct: [PermissionsScalarFieldEnum!], orderBy: [PermissionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PermissionsWhereInput): Permissions
-  findFirstPermissionsOrThrow(cursor: PermissionsWhereUniqueInput, distinct: [PermissionsScalarFieldEnum!], orderBy: [PermissionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PermissionsWhereInput): Permissions
-  findFirstPlugins(cursor: PluginsWhereUniqueInput, distinct: [PluginsScalarFieldEnum!], orderBy: [PluginsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PluginsWhereInput): Plugins
-  findFirstPluginsOrThrow(cursor: PluginsWhereUniqueInput, distinct: [PluginsScalarFieldEnum!], orderBy: [PluginsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PluginsWhereInput): Plugins
-  findFirstProduct_types(cursor: Product_typesWhereUniqueInput, distinct: [Product_typesScalarFieldEnum!], orderBy: [Product_typesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Product_typesWhereInput): Product_types
-  findFirstProduct_typesOrThrow(cursor: Product_typesWhereUniqueInput, distinct: [Product_typesScalarFieldEnum!], orderBy: [Product_typesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Product_typesWhereInput): Product_types
-  findFirstProducts(cursor: ProductsWhereUniqueInput, distinct: [ProductsScalarFieldEnum!], orderBy: [ProductsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ProductsWhereInput): Products
-  findFirstProductsOrThrow(cursor: ProductsWhereUniqueInput, distinct: [ProductsScalarFieldEnum!], orderBy: [ProductsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ProductsWhereInput): Products
-  findFirstProviders(cursor: ProvidersWhereUniqueInput, distinct: [ProvidersScalarFieldEnum!], orderBy: [ProvidersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ProvidersWhereInput): Providers
-  findFirstProvidersOrThrow(cursor: ProvidersWhereUniqueInput, distinct: [ProvidersScalarFieldEnum!], orderBy: [ProvidersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ProvidersWhereInput): Providers
-  findFirstQuotes(cursor: QuotesWhereUniqueInput, distinct: [QuotesScalarFieldEnum!], orderBy: [QuotesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: QuotesWhereInput): Quotes
-  findFirstQuotesOrThrow(cursor: QuotesWhereUniqueInput, distinct: [QuotesScalarFieldEnum!], orderBy: [QuotesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: QuotesWhereInput): Quotes
-  findFirstReturns(cursor: ReturnsWhereUniqueInput, distinct: [ReturnsScalarFieldEnum!], orderBy: [ReturnsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ReturnsWhereInput): Returns
-  findFirstReturnsOrThrow(cursor: ReturnsWhereUniqueInput, distinct: [ReturnsScalarFieldEnum!], orderBy: [ReturnsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ReturnsWhereInput): Returns
-  findFirstReviews(cursor: ReviewsWhereUniqueInput, distinct: [ReviewsScalarFieldEnum!], orderBy: [ReviewsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ReviewsWhereInput): Reviews
-  findFirstReviewsOrThrow(cursor: ReviewsWhereUniqueInput, distinct: [ReviewsScalarFieldEnum!], orderBy: [ReviewsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ReviewsWhereInput): Reviews
-  findFirstRewards(cursor: RewardsWhereUniqueInput, distinct: [RewardsScalarFieldEnum!], orderBy: [RewardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: RewardsWhereInput): Rewards
-  findFirstRewardsOrThrow(cursor: RewardsWhereUniqueInput, distinct: [RewardsScalarFieldEnum!], orderBy: [RewardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: RewardsWhereInput): Rewards
-  findFirstRoles(cursor: RolesWhereUniqueInput, distinct: [RolesScalarFieldEnum!], orderBy: [RolesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: RolesWhereInput): Roles
-  findFirstRolesOrThrow(cursor: RolesWhereUniqueInput, distinct: [RolesScalarFieldEnum!], orderBy: [RolesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: RolesWhereInput): Roles
-  findFirstSegments(cursor: SegmentsWhereUniqueInput, distinct: [SegmentsScalarFieldEnum!], orderBy: [SegmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SegmentsWhereInput): Segments
-  findFirstSegmentsOrThrow(cursor: SegmentsWhereUniqueInput, distinct: [SegmentsScalarFieldEnum!], orderBy: [SegmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SegmentsWhereInput): Segments
-  findFirstSettings(cursor: SettingsWhereUniqueInput, distinct: [SettingsScalarFieldEnum!], orderBy: [SettingsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SettingsWhereInput): Settings
-  findFirstSettingsOrThrow(cursor: SettingsWhereUniqueInput, distinct: [SettingsScalarFieldEnum!], orderBy: [SettingsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SettingsWhereInput): Settings
-  findFirstShipments(cursor: ShipmentsWhereUniqueInput, distinct: [ShipmentsScalarFieldEnum!], orderBy: [ShipmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ShipmentsWhereInput): Shipments
-  findFirstShipmentsOrThrow(cursor: ShipmentsWhereUniqueInput, distinct: [ShipmentsScalarFieldEnum!], orderBy: [ShipmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ShipmentsWhereInput): Shipments
-  findFirstStates(cursor: StatesWhereUniqueInput, distinct: [StatesScalarFieldEnum!], orderBy: [StatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StatesWhereInput): States
-  findFirstStatesOrThrow(cursor: StatesWhereUniqueInput, distinct: [StatesScalarFieldEnum!], orderBy: [StatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StatesWhereInput): States
-  findFirstTags(cursor: TagsWhereUniqueInput, distinct: [TagsScalarFieldEnum!], orderBy: [TagsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TagsWhereInput): Tags
-  findFirstTagsOrThrow(cursor: TagsWhereUniqueInput, distinct: [TagsScalarFieldEnum!], orderBy: [TagsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TagsWhereInput): Tags
-  findFirstTaxes(cursor: TaxesWhereUniqueInput, distinct: [TaxesScalarFieldEnum!], orderBy: [TaxesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TaxesWhereInput): Taxes
-  findFirstTaxesOrThrow(cursor: TaxesWhereUniqueInput, distinct: [TaxesScalarFieldEnum!], orderBy: [TaxesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TaxesWhereInput): Taxes
-  findFirstTemplates(cursor: TemplatesWhereUniqueInput, distinct: [TemplatesScalarFieldEnum!], orderBy: [TemplatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TemplatesWhereInput): Templates
-  findFirstTemplatesOrThrow(cursor: TemplatesWhereUniqueInput, distinct: [TemplatesScalarFieldEnum!], orderBy: [TemplatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TemplatesWhereInput): Templates
-  findFirstThemes(cursor: ThemesWhereUniqueInput, distinct: [ThemesScalarFieldEnum!], orderBy: [ThemesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ThemesWhereInput): Themes
-  findFirstThemesOrThrow(cursor: ThemesWhereUniqueInput, distinct: [ThemesScalarFieldEnum!], orderBy: [ThemesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ThemesWhereInput): Themes
-  findFirstTransactions(cursor: TransactionsWhereUniqueInput, distinct: [TransactionsScalarFieldEnum!], orderBy: [TransactionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TransactionsWhereInput): Transactions
-  findFirstTransactionsOrThrow(cursor: TransactionsWhereUniqueInput, distinct: [TransactionsScalarFieldEnum!], orderBy: [TransactionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TransactionsWhereInput): Transactions
-  findFirstUpload_file(cursor: Upload_fileWhereUniqueInput, distinct: [Upload_fileScalarFieldEnum!], orderBy: [Upload_fileOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Upload_fileWhereInput): Upload_file
-  findFirstUpload_fileOrThrow(cursor: Upload_fileWhereUniqueInput, distinct: [Upload_fileScalarFieldEnum!], orderBy: [Upload_fileOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Upload_fileWhereInput): Upload_file
-  findFirstUsers(cursor: UsersWhereUniqueInput, distinct: [UsersScalarFieldEnum!], orderBy: [UsersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: UsersWhereInput): Users
-  findFirstUsersOrThrow(cursor: UsersWhereUniqueInput, distinct: [UsersScalarFieldEnum!], orderBy: [UsersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: UsersWhereInput): Users
-  findFirstVendors(cursor: VendorsWhereUniqueInput, distinct: [VendorsScalarFieldEnum!], orderBy: [VendorsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: VendorsWhereInput): Vendors
-  findFirstVendorsOrThrow(cursor: VendorsWhereUniqueInput, distinct: [VendorsScalarFieldEnum!], orderBy: [VendorsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: VendorsWhereInput): Vendors
-  findFirstWarehouse(cursor: WarehouseWhereUniqueInput, distinct: [WarehouseScalarFieldEnum!], orderBy: [WarehouseOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WarehouseWhereInput): Warehouse
-  findFirstWarehouseOrThrow(cursor: WarehouseWhereUniqueInput, distinct: [WarehouseScalarFieldEnum!], orderBy: [WarehouseOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WarehouseWhereInput): Warehouse
-  findFirstWebhooks(cursor: WebhooksWhereUniqueInput, distinct: [WebhooksScalarFieldEnum!], orderBy: [WebhooksOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WebhooksWhereInput): Webhooks
-  findFirstWebhooksOrThrow(cursor: WebhooksWhereUniqueInput, distinct: [WebhooksScalarFieldEnum!], orderBy: [WebhooksOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WebhooksWhereInput): Webhooks
-  findFirstWishlists(cursor: WishlistsWhereUniqueInput, distinct: [WishlistsScalarFieldEnum!], orderBy: [WishlistsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WishlistsWhereInput): Wishlists
-  findFirstWishlistsOrThrow(cursor: WishlistsWhereUniqueInput, distinct: [WishlistsScalarFieldEnum!], orderBy: [WishlistsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WishlistsWhereInput): Wishlists
-  findFirstZones(cursor: ZonesWhereUniqueInput, distinct: [ZonesScalarFieldEnum!], orderBy: [ZonesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ZonesWhereInput): Zones
-  findFirstZonesOrThrow(cursor: ZonesWhereUniqueInput, distinct: [ZonesScalarFieldEnum!], orderBy: [ZonesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ZonesWhereInput): Zones
-  findManyAgreements(cursor: AgreementsWhereUniqueInput, distinct: [AgreementsScalarFieldEnum!], orderBy: [AgreementsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AgreementsWhereInput): [Agreements!]!
-  findManyAttributes(cursor: AttributesWhereUniqueInput, distinct: [AttributesScalarFieldEnum!], orderBy: [AttributesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: AttributesWhereInput): [Attributes!]!
-  findManyBrands(cursor: BrandsWhereUniqueInput, distinct: [BrandsScalarFieldEnum!], orderBy: [BrandsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: BrandsWhereInput): [Brands!]!
-  findManyCategories(cursor: CategoriesWhereUniqueInput, distinct: [CategoriesScalarFieldEnum!], orderBy: [CategoriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CategoriesWhereInput): [Categories!]!
-  findManyChannels(cursor: ChannelsWhereUniqueInput, distinct: [ChannelsScalarFieldEnum!], orderBy: [ChannelsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ChannelsWhereInput): [Channels!]!
-  findManyCities(cursor: CitiesWhereUniqueInput, distinct: [CitiesScalarFieldEnum!], orderBy: [CitiesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CitiesWhereInput): [Cities!]!
-  findManyCollections(cursor: CollectionsWhereUniqueInput, distinct: [CollectionsScalarFieldEnum!], orderBy: [CollectionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CollectionsWhereInput): [Collections!]!
-  findManyCountries(cursor: CountriesWhereUniqueInput, distinct: [CountriesScalarFieldEnum!], orderBy: [CountriesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CountriesWhereInput): [Countries!]!
-  findManyCurrencies(cursor: CurrenciesWhereUniqueInput, distinct: [CurrenciesScalarFieldEnum!], orderBy: [CurrenciesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CurrenciesWhereInput): [Currencies!]!
-  findManyCustomers(cursor: CustomersWhereUniqueInput, distinct: [CustomersScalarFieldEnum!], orderBy: [CustomersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: CustomersWhereInput): [Customers!]!
-  findManyDashboards(cursor: DashboardsWhereUniqueInput, distinct: [DashboardsScalarFieldEnum!], orderBy: [DashboardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardsWhereInput): [Dashboards!]!
-  findManyDashboardslides(cursor: DashboardslidesWhereUniqueInput, distinct: [DashboardslidesScalarFieldEnum!], orderBy: [DashboardslidesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DashboardslidesWhereInput): [Dashboardslides!]!
-  findManyDiscounts(cursor: DiscountsWhereUniqueInput, distinct: [DiscountsScalarFieldEnum!], orderBy: [DiscountsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: DiscountsWhereInput): [Discounts!]!
-  findManyEmails(cursor: EmailsWhereUniqueInput, distinct: [EmailsScalarFieldEnum!], orderBy: [EmailsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: EmailsWhereInput): [Emails!]!
-  findManyFullfillments(cursor: FullfillmentsWhereUniqueInput, distinct: [FullfillmentsScalarFieldEnum!], orderBy: [FullfillmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): [Fullfillments!]!
-  findManyIntegrations(cursor: IntegrationsWhereUniqueInput, distinct: [IntegrationsScalarFieldEnum!], orderBy: [IntegrationsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: IntegrationsWhereInput): [Integrations!]!
-  findManyInvoices(cursor: InvoicesWhereUniqueInput, distinct: [InvoicesScalarFieldEnum!], orderBy: [InvoicesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InvoicesWhereInput): [Invoices!]!
-  findManyOrders(cursor: OrdersWhereUniqueInput, distinct: [OrdersScalarFieldEnum!], orderBy: [OrdersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: OrdersWhereInput): [Orders!]!
-  findManyPages(cursor: PagesWhereUniqueInput, distinct: [PagesScalarFieldEnum!], orderBy: [PagesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PagesWhereInput): [Pages!]!
-  findManyPartners(cursor: PartnersWhereUniqueInput, distinct: [PartnersScalarFieldEnum!], orderBy: [PartnersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PartnersWhereInput): [Partners!]!
-  findManyPayments(cursor: PaymentsWhereUniqueInput, distinct: [PaymentsScalarFieldEnum!], orderBy: [PaymentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PaymentsWhereInput): [Payments!]!
-  findManyPermissions(cursor: PermissionsWhereUniqueInput, distinct: [PermissionsScalarFieldEnum!], orderBy: [PermissionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PermissionsWhereInput): [Permissions!]!
-  findManyPlugins(cursor: PluginsWhereUniqueInput, distinct: [PluginsScalarFieldEnum!], orderBy: [PluginsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: PluginsWhereInput): [Plugins!]!
-  findManyProduct_types(cursor: Product_typesWhereUniqueInput, distinct: [Product_typesScalarFieldEnum!], orderBy: [Product_typesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Product_typesWhereInput): [Product_types!]!
-  findManyProducts(cursor: ProductsWhereUniqueInput, distinct: [ProductsScalarFieldEnum!], orderBy: [ProductsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ProductsWhereInput): [Products!]!
-  findManyProviders(cursor: ProvidersWhereUniqueInput, distinct: [ProvidersScalarFieldEnum!], orderBy: [ProvidersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ProvidersWhereInput): [Providers!]!
-  findManyQuotes(cursor: QuotesWhereUniqueInput, distinct: [QuotesScalarFieldEnum!], orderBy: [QuotesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: QuotesWhereInput): [Quotes!]!
-  findManyReturns(cursor: ReturnsWhereUniqueInput, distinct: [ReturnsScalarFieldEnum!], orderBy: [ReturnsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ReturnsWhereInput): [Returns!]!
-  findManyReviews(cursor: ReviewsWhereUniqueInput, distinct: [ReviewsScalarFieldEnum!], orderBy: [ReviewsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ReviewsWhereInput): [Reviews!]!
-  findManyRewards(cursor: RewardsWhereUniqueInput, distinct: [RewardsScalarFieldEnum!], orderBy: [RewardsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: RewardsWhereInput): [Rewards!]!
-  findManyRoles(cursor: RolesWhereUniqueInput, distinct: [RolesScalarFieldEnum!], orderBy: [RolesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: RolesWhereInput): [Roles!]!
-  findManySegments(cursor: SegmentsWhereUniqueInput, distinct: [SegmentsScalarFieldEnum!], orderBy: [SegmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SegmentsWhereInput): [Segments!]!
-  findManySettings(cursor: SettingsWhereUniqueInput, distinct: [SettingsScalarFieldEnum!], orderBy: [SettingsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: SettingsWhereInput): [Settings!]!
-  findManyShipments(cursor: ShipmentsWhereUniqueInput, distinct: [ShipmentsScalarFieldEnum!], orderBy: [ShipmentsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ShipmentsWhereInput): [Shipments!]!
-  findManyStates(cursor: StatesWhereUniqueInput, distinct: [StatesScalarFieldEnum!], orderBy: [StatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: StatesWhereInput): [States!]!
-  findManyTags(cursor: TagsWhereUniqueInput, distinct: [TagsScalarFieldEnum!], orderBy: [TagsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TagsWhereInput): [Tags!]!
-  findManyTaxes(cursor: TaxesWhereUniqueInput, distinct: [TaxesScalarFieldEnum!], orderBy: [TaxesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TaxesWhereInput): [Taxes!]!
-  findManyTemplates(cursor: TemplatesWhereUniqueInput, distinct: [TemplatesScalarFieldEnum!], orderBy: [TemplatesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TemplatesWhereInput): [Templates!]!
-  findManyThemes(cursor: ThemesWhereUniqueInput, distinct: [ThemesScalarFieldEnum!], orderBy: [ThemesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ThemesWhereInput): [Themes!]!
-  findManyTransactions(cursor: TransactionsWhereUniqueInput, distinct: [TransactionsScalarFieldEnum!], orderBy: [TransactionsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: TransactionsWhereInput): [Transactions!]!
-  findManyUsers(cursor: UsersWhereUniqueInput, distinct: [UsersScalarFieldEnum!], orderBy: [UsersOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: UsersWhereInput): [Users!]!
-  findManyVendors(cursor: VendorsWhereUniqueInput, distinct: [VendorsScalarFieldEnum!], orderBy: [VendorsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: VendorsWhereInput): [Vendors!]!
-  findManyWebhooks(cursor: WebhooksWhereUniqueInput, distinct: [WebhooksScalarFieldEnum!], orderBy: [WebhooksOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WebhooksWhereInput): [Webhooks!]!
-  findManyWishlists(cursor: WishlistsWhereUniqueInput, distinct: [WishlistsScalarFieldEnum!], orderBy: [WishlistsOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WishlistsWhereInput): [Wishlists!]!
-  findManyZones(cursor: ZonesWhereUniqueInput, distinct: [ZonesScalarFieldEnum!], orderBy: [ZonesOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ZonesWhereInput): [Zones!]!
+  dashboardslists(cursor: DashboardslistWhereUniqueInput, distinct: [DashboardslistScalarFieldEnum!], orderBy: [DashboardslistOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardslistWhereInput): [Dashboardslist!]!
+  findFirstAgreements(cursor: AgreementsWhereUniqueInput, distinct: [AgreementsScalarFieldEnum!], orderBy: [AgreementsOrderByWithRelationInput!], skip: Int, take: Int, where: AgreementsWhereInput): Agreements
+  findFirstAgreementsOrThrow(cursor: AgreementsWhereUniqueInput, distinct: [AgreementsScalarFieldEnum!], orderBy: [AgreementsOrderByWithRelationInput!], skip: Int, take: Int, where: AgreementsWhereInput): Agreements
+  findFirstApitoken(cursor: ApitokenWhereUniqueInput, distinct: [ApitokenScalarFieldEnum!], orderBy: [ApitokenOrderByWithRelationInput!], skip: Int, take: Int, where: ApitokenWhereInput): Apitoken
+  findFirstApitokenOrThrow(cursor: ApitokenWhereUniqueInput, distinct: [ApitokenScalarFieldEnum!], orderBy: [ApitokenOrderByWithRelationInput!], skip: Int, take: Int, where: ApitokenWhereInput): Apitoken
+  findFirstAttributes(cursor: AttributesWhereUniqueInput, distinct: [AttributesScalarFieldEnum!], orderBy: [AttributesOrderByWithRelationInput!], skip: Int, take: Int, where: AttributesWhereInput): Attributes
+  findFirstAttributesOrThrow(cursor: AttributesWhereUniqueInput, distinct: [AttributesScalarFieldEnum!], orderBy: [AttributesOrderByWithRelationInput!], skip: Int, take: Int, where: AttributesWhereInput): Attributes
+  findFirstBrands(cursor: BrandsWhereUniqueInput, distinct: [BrandsScalarFieldEnum!], orderBy: [BrandsOrderByWithRelationInput!], skip: Int, take: Int, where: BrandsWhereInput): Brands
+  findFirstBrandsOrThrow(cursor: BrandsWhereUniqueInput, distinct: [BrandsScalarFieldEnum!], orderBy: [BrandsOrderByWithRelationInput!], skip: Int, take: Int, where: BrandsWhereInput): Brands
+  findFirstCategories(cursor: CategoriesWhereUniqueInput, distinct: [CategoriesScalarFieldEnum!], orderBy: [CategoriesOrderByWithRelationInput!], skip: Int, take: Int, where: CategoriesWhereInput): Categories
+  findFirstCategoriesOrThrow(cursor: CategoriesWhereUniqueInput, distinct: [CategoriesScalarFieldEnum!], orderBy: [CategoriesOrderByWithRelationInput!], skip: Int, take: Int, where: CategoriesWhereInput): Categories
+  findFirstChannels(cursor: ChannelsWhereUniqueInput, distinct: [ChannelsScalarFieldEnum!], orderBy: [ChannelsOrderByWithRelationInput!], skip: Int, take: Int, where: ChannelsWhereInput): Channels
+  findFirstChannelsOrThrow(cursor: ChannelsWhereUniqueInput, distinct: [ChannelsScalarFieldEnum!], orderBy: [ChannelsOrderByWithRelationInput!], skip: Int, take: Int, where: ChannelsWhereInput): Channels
+  findFirstCities(cursor: CitiesWhereUniqueInput, distinct: [CitiesScalarFieldEnum!], orderBy: [CitiesOrderByWithRelationInput!], skip: Int, take: Int, where: CitiesWhereInput): Cities
+  findFirstCitiesOrThrow(cursor: CitiesWhereUniqueInput, distinct: [CitiesScalarFieldEnum!], orderBy: [CitiesOrderByWithRelationInput!], skip: Int, take: Int, where: CitiesWhereInput): Cities
+  findFirstCollections(cursor: CollectionsWhereUniqueInput, distinct: [CollectionsScalarFieldEnum!], orderBy: [CollectionsOrderByWithRelationInput!], skip: Int, take: Int, where: CollectionsWhereInput): Collections
+  findFirstCollectionsOrThrow(cursor: CollectionsWhereUniqueInput, distinct: [CollectionsScalarFieldEnum!], orderBy: [CollectionsOrderByWithRelationInput!], skip: Int, take: Int, where: CollectionsWhereInput): Collections
+  findFirstContent_type(cursor: Content_typeWhereUniqueInput, distinct: [Content_typeScalarFieldEnum!], orderBy: [Content_typeOrderByWithRelationInput!], skip: Int, take: Int, where: Content_typeWhereInput): Content_type
+  findFirstContent_typeOrThrow(cursor: Content_typeWhereUniqueInput, distinct: [Content_typeScalarFieldEnum!], orderBy: [Content_typeOrderByWithRelationInput!], skip: Int, take: Int, where: Content_typeWhereInput): Content_type
+  findFirstCountries(cursor: CountriesWhereUniqueInput, distinct: [CountriesScalarFieldEnum!], orderBy: [CountriesOrderByWithRelationInput!], skip: Int, take: Int, where: CountriesWhereInput): Countries
+  findFirstCountriesOrThrow(cursor: CountriesWhereUniqueInput, distinct: [CountriesScalarFieldEnum!], orderBy: [CountriesOrderByWithRelationInput!], skip: Int, take: Int, where: CountriesWhereInput): Countries
+  findFirstCurrencies(cursor: CurrenciesWhereUniqueInput, distinct: [CurrenciesScalarFieldEnum!], orderBy: [CurrenciesOrderByWithRelationInput!], skip: Int, take: Int, where: CurrenciesWhereInput): Currencies
+  findFirstCurrenciesOrThrow(cursor: CurrenciesWhereUniqueInput, distinct: [CurrenciesScalarFieldEnum!], orderBy: [CurrenciesOrderByWithRelationInput!], skip: Int, take: Int, where: CurrenciesWhereInput): Currencies
+  findFirstCustomers(cursor: CustomersWhereUniqueInput, distinct: [CustomersScalarFieldEnum!], orderBy: [CustomersOrderByWithRelationInput!], skip: Int, take: Int, where: CustomersWhereInput): Customers
+  findFirstCustomersOrThrow(cursor: CustomersWhereUniqueInput, distinct: [CustomersScalarFieldEnum!], orderBy: [CustomersOrderByWithRelationInput!], skip: Int, take: Int, where: CustomersWhereInput): Customers
+  findFirstDashboardgraphql(cursor: DashboardgraphqlWhereUniqueInput, distinct: [DashboardgraphqlScalarFieldEnum!], orderBy: [DashboardgraphqlOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardgraphqlWhereInput): Dashboardgraphql
+  findFirstDashboardgraphqlOrThrow(cursor: DashboardgraphqlWhereUniqueInput, distinct: [DashboardgraphqlScalarFieldEnum!], orderBy: [DashboardgraphqlOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardgraphqlWhereInput): Dashboardgraphql
+  findFirstDashboardjson(cursor: DashboardjsonWhereUniqueInput, distinct: [DashboardjsonScalarFieldEnum!], orderBy: [DashboardjsonOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardjsonWhereInput): Dashboardjson
+  findFirstDashboardjsonOrThrow(cursor: DashboardjsonWhereUniqueInput, distinct: [DashboardjsonScalarFieldEnum!], orderBy: [DashboardjsonOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardjsonWhereInput): Dashboardjson
+  findFirstDashboardrestapi(cursor: DashboardrestapiWhereUniqueInput, distinct: [DashboardrestapiScalarFieldEnum!], orderBy: [DashboardrestapiOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardrestapiWhereInput): Dashboardrestapi
+  findFirstDashboardrestapiOrThrow(cursor: DashboardrestapiWhereUniqueInput, distinct: [DashboardrestapiScalarFieldEnum!], orderBy: [DashboardrestapiOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardrestapiWhereInput): Dashboardrestapi
+  findFirstDashboards(cursor: DashboardsWhereUniqueInput, distinct: [DashboardsScalarFieldEnum!], orderBy: [DashboardsOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardsWhereInput): Dashboards
+  findFirstDashboardsOrThrow(cursor: DashboardsWhereUniqueInput, distinct: [DashboardsScalarFieldEnum!], orderBy: [DashboardsOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardsWhereInput): Dashboards
+  findFirstDashboardslides(cursor: DashboardslidesWhereUniqueInput, distinct: [DashboardslidesScalarFieldEnum!], orderBy: [DashboardslidesOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardslidesWhereInput): Dashboardslides
+  findFirstDashboardslidesOrThrow(cursor: DashboardslidesWhereUniqueInput, distinct: [DashboardslidesScalarFieldEnum!], orderBy: [DashboardslidesOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardslidesWhereInput): Dashboardslides
+  findFirstDashboardslist(cursor: DashboardslistWhereUniqueInput, distinct: [DashboardslistScalarFieldEnum!], orderBy: [DashboardslistOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardslistWhereInput): Dashboardslist
+  findFirstDashboardslistOrThrow(cursor: DashboardslistWhereUniqueInput, distinct: [DashboardslistScalarFieldEnum!], orderBy: [DashboardslistOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardslistWhereInput): Dashboardslist
+  findFirstDiscounts(cursor: DiscountsWhereUniqueInput, distinct: [DiscountsScalarFieldEnum!], orderBy: [DiscountsOrderByWithRelationInput!], skip: Int, take: Int, where: DiscountsWhereInput): Discounts
+  findFirstDiscountsOrThrow(cursor: DiscountsWhereUniqueInput, distinct: [DiscountsScalarFieldEnum!], orderBy: [DiscountsOrderByWithRelationInput!], skip: Int, take: Int, where: DiscountsWhereInput): Discounts
+  findFirstEmails(cursor: EmailsWhereUniqueInput, distinct: [EmailsScalarFieldEnum!], orderBy: [EmailsOrderByWithRelationInput!], skip: Int, take: Int, where: EmailsWhereInput): Emails
+  findFirstEmailsOrThrow(cursor: EmailsWhereUniqueInput, distinct: [EmailsScalarFieldEnum!], orderBy: [EmailsOrderByWithRelationInput!], skip: Int, take: Int, where: EmailsWhereInput): Emails
+  findFirstFullfillments(cursor: FullfillmentsWhereUniqueInput, distinct: [FullfillmentsScalarFieldEnum!], orderBy: [FullfillmentsOrderByWithRelationInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): Fullfillments
+  findFirstFullfillmentsOrThrow(cursor: FullfillmentsWhereUniqueInput, distinct: [FullfillmentsScalarFieldEnum!], orderBy: [FullfillmentsOrderByWithRelationInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): Fullfillments
+  findFirstIntegrations(cursor: IntegrationsWhereUniqueInput, distinct: [IntegrationsScalarFieldEnum!], orderBy: [IntegrationsOrderByWithRelationInput!], skip: Int, take: Int, where: IntegrationsWhereInput): Integrations
+  findFirstIntegrationsOrThrow(cursor: IntegrationsWhereUniqueInput, distinct: [IntegrationsScalarFieldEnum!], orderBy: [IntegrationsOrderByWithRelationInput!], skip: Int, take: Int, where: IntegrationsWhereInput): Integrations
+  findFirstInternalization(cursor: InternalizationWhereUniqueInput, distinct: [InternalizationScalarFieldEnum!], orderBy: [InternalizationOrderByWithRelationInput!], skip: Int, take: Int, where: InternalizationWhereInput): Internalization
+  findFirstInternalizationOrThrow(cursor: InternalizationWhereUniqueInput, distinct: [InternalizationScalarFieldEnum!], orderBy: [InternalizationOrderByWithRelationInput!], skip: Int, take: Int, where: InternalizationWhereInput): Internalization
+  findFirstInvoices(cursor: InvoicesWhereUniqueInput, distinct: [InvoicesScalarFieldEnum!], orderBy: [InvoicesOrderByWithRelationInput!], skip: Int, take: Int, where: InvoicesWhereInput): Invoices
+  findFirstInvoicesOrThrow(cursor: InvoicesWhereUniqueInput, distinct: [InvoicesScalarFieldEnum!], orderBy: [InvoicesOrderByWithRelationInput!], skip: Int, take: Int, where: InvoicesWhereInput): Invoices
+  findFirstLogIn(cursor: LogInWhereUniqueInput, distinct: [LogInScalarFieldEnum!], orderBy: [LogInOrderByWithRelationInput!], skip: Int, take: Int, where: LogInWhereInput): LogIn
+  findFirstLogInOrThrow(cursor: LogInWhereUniqueInput, distinct: [LogInScalarFieldEnum!], orderBy: [LogInOrderByWithRelationInput!], skip: Int, take: Int, where: LogInWhereInput): LogIn
+  findFirstManufacturer(cursor: ManufacturerWhereUniqueInput, distinct: [ManufacturerScalarFieldEnum!], orderBy: [ManufacturerOrderByWithRelationInput!], skip: Int, take: Int, where: ManufacturerWhereInput): Manufacturer
+  findFirstManufacturerOrThrow(cursor: ManufacturerWhereUniqueInput, distinct: [ManufacturerScalarFieldEnum!], orderBy: [ManufacturerOrderByWithRelationInput!], skip: Int, take: Int, where: ManufacturerWhereInput): Manufacturer
+  findFirstMediamanager(cursor: MediamanagerWhereUniqueInput, distinct: [MediamanagerScalarFieldEnum!], orderBy: [MediamanagerOrderByWithRelationInput!], skip: Int, take: Int, where: MediamanagerWhereInput): Mediamanager
+  findFirstMediamanagerOrThrow(cursor: MediamanagerWhereUniqueInput, distinct: [MediamanagerScalarFieldEnum!], orderBy: [MediamanagerOrderByWithRelationInput!], skip: Int, take: Int, where: MediamanagerWhereInput): Mediamanager
+  findFirstOrders(cursor: OrdersWhereUniqueInput, distinct: [OrdersScalarFieldEnum!], orderBy: [OrdersOrderByWithRelationInput!], skip: Int, take: Int, where: OrdersWhereInput): Orders
+  findFirstOrdersOrThrow(cursor: OrdersWhereUniqueInput, distinct: [OrdersScalarFieldEnum!], orderBy: [OrdersOrderByWithRelationInput!], skip: Int, take: Int, where: OrdersWhereInput): Orders
+  findFirstPages(cursor: PagesWhereUniqueInput, distinct: [PagesScalarFieldEnum!], orderBy: [PagesOrderByWithRelationInput!], skip: Int, take: Int, where: PagesWhereInput): Pages
+  findFirstPagesOrThrow(cursor: PagesWhereUniqueInput, distinct: [PagesScalarFieldEnum!], orderBy: [PagesOrderByWithRelationInput!], skip: Int, take: Int, where: PagesWhereInput): Pages
+  findFirstPartners(cursor: PartnersWhereUniqueInput, distinct: [PartnersScalarFieldEnum!], orderBy: [PartnersOrderByWithRelationInput!], skip: Int, take: Int, where: PartnersWhereInput): Partners
+  findFirstPartnersOrThrow(cursor: PartnersWhereUniqueInput, distinct: [PartnersScalarFieldEnum!], orderBy: [PartnersOrderByWithRelationInput!], skip: Int, take: Int, where: PartnersWhereInput): Partners
+  findFirstPayments(cursor: PaymentsWhereUniqueInput, distinct: [PaymentsScalarFieldEnum!], orderBy: [PaymentsOrderByWithRelationInput!], skip: Int, take: Int, where: PaymentsWhereInput): Payments
+  findFirstPaymentsOrThrow(cursor: PaymentsWhereUniqueInput, distinct: [PaymentsScalarFieldEnum!], orderBy: [PaymentsOrderByWithRelationInput!], skip: Int, take: Int, where: PaymentsWhereInput): Payments
+  findFirstPermissions(cursor: PermissionsWhereUniqueInput, distinct: [PermissionsScalarFieldEnum!], orderBy: [PermissionsOrderByWithRelationInput!], skip: Int, take: Int, where: PermissionsWhereInput): Permissions
+  findFirstPermissionsOrThrow(cursor: PermissionsWhereUniqueInput, distinct: [PermissionsScalarFieldEnum!], orderBy: [PermissionsOrderByWithRelationInput!], skip: Int, take: Int, where: PermissionsWhereInput): Permissions
+  findFirstPlugins(cursor: PluginsWhereUniqueInput, distinct: [PluginsScalarFieldEnum!], orderBy: [PluginsOrderByWithRelationInput!], skip: Int, take: Int, where: PluginsWhereInput): Plugins
+  findFirstPluginsOrThrow(cursor: PluginsWhereUniqueInput, distinct: [PluginsScalarFieldEnum!], orderBy: [PluginsOrderByWithRelationInput!], skip: Int, take: Int, where: PluginsWhereInput): Plugins
+  findFirstProduct_types(cursor: Product_typesWhereUniqueInput, distinct: [Product_typesScalarFieldEnum!], orderBy: [Product_typesOrderByWithRelationInput!], skip: Int, take: Int, where: Product_typesWhereInput): Product_types
+  findFirstProduct_typesOrThrow(cursor: Product_typesWhereUniqueInput, distinct: [Product_typesScalarFieldEnum!], orderBy: [Product_typesOrderByWithRelationInput!], skip: Int, take: Int, where: Product_typesWhereInput): Product_types
+  findFirstProducts(cursor: ProductsWhereUniqueInput, distinct: [ProductsScalarFieldEnum!], orderBy: [ProductsOrderByWithRelationInput!], skip: Int, take: Int, where: ProductsWhereInput): Products
+  findFirstProductsOrThrow(cursor: ProductsWhereUniqueInput, distinct: [ProductsScalarFieldEnum!], orderBy: [ProductsOrderByWithRelationInput!], skip: Int, take: Int, where: ProductsWhereInput): Products
+  findFirstProviders(cursor: ProvidersWhereUniqueInput, distinct: [ProvidersScalarFieldEnum!], orderBy: [ProvidersOrderByWithRelationInput!], skip: Int, take: Int, where: ProvidersWhereInput): Providers
+  findFirstProvidersOrThrow(cursor: ProvidersWhereUniqueInput, distinct: [ProvidersScalarFieldEnum!], orderBy: [ProvidersOrderByWithRelationInput!], skip: Int, take: Int, where: ProvidersWhereInput): Providers
+  findFirstQuotes(cursor: QuotesWhereUniqueInput, distinct: [QuotesScalarFieldEnum!], orderBy: [QuotesOrderByWithRelationInput!], skip: Int, take: Int, where: QuotesWhereInput): Quotes
+  findFirstQuotesOrThrow(cursor: QuotesWhereUniqueInput, distinct: [QuotesScalarFieldEnum!], orderBy: [QuotesOrderByWithRelationInput!], skip: Int, take: Int, where: QuotesWhereInput): Quotes
+  findFirstReturns(cursor: ReturnsWhereUniqueInput, distinct: [ReturnsScalarFieldEnum!], orderBy: [ReturnsOrderByWithRelationInput!], skip: Int, take: Int, where: ReturnsWhereInput): Returns
+  findFirstReturnsOrThrow(cursor: ReturnsWhereUniqueInput, distinct: [ReturnsScalarFieldEnum!], orderBy: [ReturnsOrderByWithRelationInput!], skip: Int, take: Int, where: ReturnsWhereInput): Returns
+  findFirstReviews(cursor: ReviewsWhereUniqueInput, distinct: [ReviewsScalarFieldEnum!], orderBy: [ReviewsOrderByWithRelationInput!], skip: Int, take: Int, where: ReviewsWhereInput): Reviews
+  findFirstReviewsOrThrow(cursor: ReviewsWhereUniqueInput, distinct: [ReviewsScalarFieldEnum!], orderBy: [ReviewsOrderByWithRelationInput!], skip: Int, take: Int, where: ReviewsWhereInput): Reviews
+  findFirstRewards(cursor: RewardsWhereUniqueInput, distinct: [RewardsScalarFieldEnum!], orderBy: [RewardsOrderByWithRelationInput!], skip: Int, take: Int, where: RewardsWhereInput): Rewards
+  findFirstRewardsOrThrow(cursor: RewardsWhereUniqueInput, distinct: [RewardsScalarFieldEnum!], orderBy: [RewardsOrderByWithRelationInput!], skip: Int, take: Int, where: RewardsWhereInput): Rewards
+  findFirstRoles(cursor: RolesWhereUniqueInput, distinct: [RolesScalarFieldEnum!], orderBy: [RolesOrderByWithRelationInput!], skip: Int, take: Int, where: RolesWhereInput): Roles
+  findFirstRolesOrThrow(cursor: RolesWhereUniqueInput, distinct: [RolesScalarFieldEnum!], orderBy: [RolesOrderByWithRelationInput!], skip: Int, take: Int, where: RolesWhereInput): Roles
+  findFirstSegments(cursor: SegmentsWhereUniqueInput, distinct: [SegmentsScalarFieldEnum!], orderBy: [SegmentsOrderByWithRelationInput!], skip: Int, take: Int, where: SegmentsWhereInput): Segments
+  findFirstSegmentsOrThrow(cursor: SegmentsWhereUniqueInput, distinct: [SegmentsScalarFieldEnum!], orderBy: [SegmentsOrderByWithRelationInput!], skip: Int, take: Int, where: SegmentsWhereInput): Segments
+  findFirstSettings(cursor: SettingsWhereUniqueInput, distinct: [SettingsScalarFieldEnum!], orderBy: [SettingsOrderByWithRelationInput!], skip: Int, take: Int, where: SettingsWhereInput): Settings
+  findFirstSettingsOrThrow(cursor: SettingsWhereUniqueInput, distinct: [SettingsScalarFieldEnum!], orderBy: [SettingsOrderByWithRelationInput!], skip: Int, take: Int, where: SettingsWhereInput): Settings
+  findFirstShipments(cursor: ShipmentsWhereUniqueInput, distinct: [ShipmentsScalarFieldEnum!], orderBy: [ShipmentsOrderByWithRelationInput!], skip: Int, take: Int, where: ShipmentsWhereInput): Shipments
+  findFirstShipmentsOrThrow(cursor: ShipmentsWhereUniqueInput, distinct: [ShipmentsScalarFieldEnum!], orderBy: [ShipmentsOrderByWithRelationInput!], skip: Int, take: Int, where: ShipmentsWhereInput): Shipments
+  findFirstStates(cursor: StatesWhereUniqueInput, distinct: [StatesScalarFieldEnum!], orderBy: [StatesOrderByWithRelationInput!], skip: Int, take: Int, where: StatesWhereInput): States
+  findFirstStatesOrThrow(cursor: StatesWhereUniqueInput, distinct: [StatesScalarFieldEnum!], orderBy: [StatesOrderByWithRelationInput!], skip: Int, take: Int, where: StatesWhereInput): States
+  findFirstTags(cursor: TagsWhereUniqueInput, distinct: [TagsScalarFieldEnum!], orderBy: [TagsOrderByWithRelationInput!], skip: Int, take: Int, where: TagsWhereInput): Tags
+  findFirstTagsOrThrow(cursor: TagsWhereUniqueInput, distinct: [TagsScalarFieldEnum!], orderBy: [TagsOrderByWithRelationInput!], skip: Int, take: Int, where: TagsWhereInput): Tags
+  findFirstTaxes(cursor: TaxesWhereUniqueInput, distinct: [TaxesScalarFieldEnum!], orderBy: [TaxesOrderByWithRelationInput!], skip: Int, take: Int, where: TaxesWhereInput): Taxes
+  findFirstTaxesOrThrow(cursor: TaxesWhereUniqueInput, distinct: [TaxesScalarFieldEnum!], orderBy: [TaxesOrderByWithRelationInput!], skip: Int, take: Int, where: TaxesWhereInput): Taxes
+  findFirstTemplates(cursor: TemplatesWhereUniqueInput, distinct: [TemplatesScalarFieldEnum!], orderBy: [TemplatesOrderByWithRelationInput!], skip: Int, take: Int, where: TemplatesWhereInput): Templates
+  findFirstTemplatesOrThrow(cursor: TemplatesWhereUniqueInput, distinct: [TemplatesScalarFieldEnum!], orderBy: [TemplatesOrderByWithRelationInput!], skip: Int, take: Int, where: TemplatesWhereInput): Templates
+  findFirstThemes(cursor: ThemesWhereUniqueInput, distinct: [ThemesScalarFieldEnum!], orderBy: [ThemesOrderByWithRelationInput!], skip: Int, take: Int, where: ThemesWhereInput): Themes
+  findFirstThemesOrThrow(cursor: ThemesWhereUniqueInput, distinct: [ThemesScalarFieldEnum!], orderBy: [ThemesOrderByWithRelationInput!], skip: Int, take: Int, where: ThemesWhereInput): Themes
+  findFirstTransactions(cursor: TransactionsWhereUniqueInput, distinct: [TransactionsScalarFieldEnum!], orderBy: [TransactionsOrderByWithRelationInput!], skip: Int, take: Int, where: TransactionsWhereInput): Transactions
+  findFirstTransactionsOrThrow(cursor: TransactionsWhereUniqueInput, distinct: [TransactionsScalarFieldEnum!], orderBy: [TransactionsOrderByWithRelationInput!], skip: Int, take: Int, where: TransactionsWhereInput): Transactions
+  findFirstUpload_file(cursor: Upload_fileWhereUniqueInput, distinct: [Upload_fileScalarFieldEnum!], orderBy: [Upload_fileOrderByWithRelationInput!], skip: Int, take: Int, where: Upload_fileWhereInput): Upload_file
+  findFirstUpload_fileOrThrow(cursor: Upload_fileWhereUniqueInput, distinct: [Upload_fileScalarFieldEnum!], orderBy: [Upload_fileOrderByWithRelationInput!], skip: Int, take: Int, where: Upload_fileWhereInput): Upload_file
+  findFirstUsers(cursor: UsersWhereUniqueInput, distinct: [UsersScalarFieldEnum!], orderBy: [UsersOrderByWithRelationInput!], skip: Int, take: Int, where: UsersWhereInput): Users
+  findFirstUsersOrThrow(cursor: UsersWhereUniqueInput, distinct: [UsersScalarFieldEnum!], orderBy: [UsersOrderByWithRelationInput!], skip: Int, take: Int, where: UsersWhereInput): Users
+  findFirstVendors(cursor: VendorsWhereUniqueInput, distinct: [VendorsScalarFieldEnum!], orderBy: [VendorsOrderByWithRelationInput!], skip: Int, take: Int, where: VendorsWhereInput): Vendors
+  findFirstVendorsOrThrow(cursor: VendorsWhereUniqueInput, distinct: [VendorsScalarFieldEnum!], orderBy: [VendorsOrderByWithRelationInput!], skip: Int, take: Int, where: VendorsWhereInput): Vendors
+  findFirstWarehouse(cursor: WarehouseWhereUniqueInput, distinct: [WarehouseScalarFieldEnum!], orderBy: [WarehouseOrderByWithRelationInput!], skip: Int, take: Int, where: WarehouseWhereInput): Warehouse
+  findFirstWarehouseOrThrow(cursor: WarehouseWhereUniqueInput, distinct: [WarehouseScalarFieldEnum!], orderBy: [WarehouseOrderByWithRelationInput!], skip: Int, take: Int, where: WarehouseWhereInput): Warehouse
+  findFirstWebhooks(cursor: WebhooksWhereUniqueInput, distinct: [WebhooksScalarFieldEnum!], orderBy: [WebhooksOrderByWithRelationInput!], skip: Int, take: Int, where: WebhooksWhereInput): Webhooks
+  findFirstWebhooksOrThrow(cursor: WebhooksWhereUniqueInput, distinct: [WebhooksScalarFieldEnum!], orderBy: [WebhooksOrderByWithRelationInput!], skip: Int, take: Int, where: WebhooksWhereInput): Webhooks
+  findFirstWishlists(cursor: WishlistsWhereUniqueInput, distinct: [WishlistsScalarFieldEnum!], orderBy: [WishlistsOrderByWithRelationInput!], skip: Int, take: Int, where: WishlistsWhereInput): Wishlists
+  findFirstWishlistsOrThrow(cursor: WishlistsWhereUniqueInput, distinct: [WishlistsScalarFieldEnum!], orderBy: [WishlistsOrderByWithRelationInput!], skip: Int, take: Int, where: WishlistsWhereInput): Wishlists
+  findFirstZones(cursor: ZonesWhereUniqueInput, distinct: [ZonesScalarFieldEnum!], orderBy: [ZonesOrderByWithRelationInput!], skip: Int, take: Int, where: ZonesWhereInput): Zones
+  findFirstZonesOrThrow(cursor: ZonesWhereUniqueInput, distinct: [ZonesScalarFieldEnum!], orderBy: [ZonesOrderByWithRelationInput!], skip: Int, take: Int, where: ZonesWhereInput): Zones
+  findManyAgreements(cursor: AgreementsWhereUniqueInput, distinct: [AgreementsScalarFieldEnum!], orderBy: [AgreementsOrderByWithRelationInput!], skip: Int, take: Int, where: AgreementsWhereInput): [Agreements!]!
+  findManyAttributes(cursor: AttributesWhereUniqueInput, distinct: [AttributesScalarFieldEnum!], orderBy: [AttributesOrderByWithRelationInput!], skip: Int, take: Int, where: AttributesWhereInput): [Attributes!]!
+  findManyBrands(cursor: BrandsWhereUniqueInput, distinct: [BrandsScalarFieldEnum!], orderBy: [BrandsOrderByWithRelationInput!], skip: Int, take: Int, where: BrandsWhereInput): [Brands!]!
+  findManyCategories(cursor: CategoriesWhereUniqueInput, distinct: [CategoriesScalarFieldEnum!], orderBy: [CategoriesOrderByWithRelationInput!], skip: Int, take: Int, where: CategoriesWhereInput): [Categories!]!
+  findManyChannels(cursor: ChannelsWhereUniqueInput, distinct: [ChannelsScalarFieldEnum!], orderBy: [ChannelsOrderByWithRelationInput!], skip: Int, take: Int, where: ChannelsWhereInput): [Channels!]!
+  findManyCities(cursor: CitiesWhereUniqueInput, distinct: [CitiesScalarFieldEnum!], orderBy: [CitiesOrderByWithRelationInput!], skip: Int, take: Int, where: CitiesWhereInput): [Cities!]!
+  findManyCollections(cursor: CollectionsWhereUniqueInput, distinct: [CollectionsScalarFieldEnum!], orderBy: [CollectionsOrderByWithRelationInput!], skip: Int, take: Int, where: CollectionsWhereInput): [Collections!]!
+  findManyCountries(cursor: CountriesWhereUniqueInput, distinct: [CountriesScalarFieldEnum!], orderBy: [CountriesOrderByWithRelationInput!], skip: Int, take: Int, where: CountriesWhereInput): [Countries!]!
+  findManyCurrencies(cursor: CurrenciesWhereUniqueInput, distinct: [CurrenciesScalarFieldEnum!], orderBy: [CurrenciesOrderByWithRelationInput!], skip: Int, take: Int, where: CurrenciesWhereInput): [Currencies!]!
+  findManyCustomers(cursor: CustomersWhereUniqueInput, distinct: [CustomersScalarFieldEnum!], orderBy: [CustomersOrderByWithRelationInput!], skip: Int, take: Int, where: CustomersWhereInput): [Customers!]!
+  findManyDashboards(cursor: DashboardsWhereUniqueInput, distinct: [DashboardsScalarFieldEnum!], orderBy: [DashboardsOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardsWhereInput): [Dashboards!]!
+  findManyDashboardslides(cursor: DashboardslidesWhereUniqueInput, distinct: [DashboardslidesScalarFieldEnum!], orderBy: [DashboardslidesOrderByWithRelationInput!], skip: Int, take: Int, where: DashboardslidesWhereInput): [Dashboardslides!]!
+  findManyDiscounts(cursor: DiscountsWhereUniqueInput, distinct: [DiscountsScalarFieldEnum!], orderBy: [DiscountsOrderByWithRelationInput!], skip: Int, take: Int, where: DiscountsWhereInput): [Discounts!]!
+  findManyEmails(cursor: EmailsWhereUniqueInput, distinct: [EmailsScalarFieldEnum!], orderBy: [EmailsOrderByWithRelationInput!], skip: Int, take: Int, where: EmailsWhereInput): [Emails!]!
+  findManyFullfillments(cursor: FullfillmentsWhereUniqueInput, distinct: [FullfillmentsScalarFieldEnum!], orderBy: [FullfillmentsOrderByWithRelationInput!], skip: Int, take: Int, where: FullfillmentsWhereInput): [Fullfillments!]!
+  findManyIntegrations(cursor: IntegrationsWhereUniqueInput, distinct: [IntegrationsScalarFieldEnum!], orderBy: [IntegrationsOrderByWithRelationInput!], skip: Int, take: Int, where: IntegrationsWhereInput): [Integrations!]!
+  findManyInvoices(cursor: InvoicesWhereUniqueInput, distinct: [InvoicesScalarFieldEnum!], orderBy: [InvoicesOrderByWithRelationInput!], skip: Int, take: Int, where: InvoicesWhereInput): [Invoices!]!
+  findManyOrders(cursor: OrdersWhereUniqueInput, distinct: [OrdersScalarFieldEnum!], orderBy: [OrdersOrderByWithRelationInput!], skip: Int, take: Int, where: OrdersWhereInput): [Orders!]!
+  findManyPages(cursor: PagesWhereUniqueInput, distinct: [PagesScalarFieldEnum!], orderBy: [PagesOrderByWithRelationInput!], skip: Int, take: Int, where: PagesWhereInput): [Pages!]!
+  findManyPartners(cursor: PartnersWhereUniqueInput, distinct: [PartnersScalarFieldEnum!], orderBy: [PartnersOrderByWithRelationInput!], skip: Int, take: Int, where: PartnersWhereInput): [Partners!]!
+  findManyPayments(cursor: PaymentsWhereUniqueInput, distinct: [PaymentsScalarFieldEnum!], orderBy: [PaymentsOrderByWithRelationInput!], skip: Int, take: Int, where: PaymentsWhereInput): [Payments!]!
+  findManyPermissions(cursor: PermissionsWhereUniqueInput, distinct: [PermissionsScalarFieldEnum!], orderBy: [PermissionsOrderByWithRelationInput!], skip: Int, take: Int, where: PermissionsWhereInput): [Permissions!]!
+  findManyPlugins(cursor: PluginsWhereUniqueInput, distinct: [PluginsScalarFieldEnum!], orderBy: [PluginsOrderByWithRelationInput!], skip: Int, take: Int, where: PluginsWhereInput): [Plugins!]!
+  findManyProduct_types(cursor: Product_typesWhereUniqueInput, distinct: [Product_typesScalarFieldEnum!], orderBy: [Product_typesOrderByWithRelationInput!], skip: Int, take: Int, where: Product_typesWhereInput): [Product_types!]!
+  findManyProducts(cursor: ProductsWhereUniqueInput, distinct: [ProductsScalarFieldEnum!], orderBy: [ProductsOrderByWithRelationInput!], skip: Int, take: Int, where: ProductsWhereInput): [Products!]!
+  findManyProviders(cursor: ProvidersWhereUniqueInput, distinct: [ProvidersScalarFieldEnum!], orderBy: [ProvidersOrderByWithRelationInput!], skip: Int, take: Int, where: ProvidersWhereInput): [Providers!]!
+  findManyQuotes(cursor: QuotesWhereUniqueInput, distinct: [QuotesScalarFieldEnum!], orderBy: [QuotesOrderByWithRelationInput!], skip: Int, take: Int, where: QuotesWhereInput): [Quotes!]!
+  findManyReturns(cursor: ReturnsWhereUniqueInput, distinct: [ReturnsScalarFieldEnum!], orderBy: [ReturnsOrderByWithRelationInput!], skip: Int, take: Int, where: ReturnsWhereInput): [Returns!]!
+  findManyReviews(cursor: ReviewsWhereUniqueInput, distinct: [ReviewsScalarFieldEnum!], orderBy: [ReviewsOrderByWithRelationInput!], skip: Int, take: Int, where: ReviewsWhereInput): [Reviews!]!
+  findManyRewards(cursor: RewardsWhereUniqueInput, distinct: [RewardsScalarFieldEnum!], orderBy: [RewardsOrderByWithRelationInput!], skip: Int, take: Int, where: RewardsWhereInput): [Rewards!]!
+  findManyRoles(cursor: RolesWhereUniqueInput, distinct: [RolesScalarFieldEnum!], orderBy: [RolesOrderByWithRelationInput!], skip: Int, take: Int, where: RolesWhereInput): [Roles!]!
+  findManySegments(cursor: SegmentsWhereUniqueInput, distinct: [SegmentsScalarFieldEnum!], orderBy: [SegmentsOrderByWithRelationInput!], skip: Int, take: Int, where: SegmentsWhereInput): [Segments!]!
+  findManySettings(cursor: SettingsWhereUniqueInput, distinct: [SettingsScalarFieldEnum!], orderBy: [SettingsOrderByWithRelationInput!], skip: Int, take: Int, where: SettingsWhereInput): [Settings!]!
+  findManyShipments(cursor: ShipmentsWhereUniqueInput, distinct: [ShipmentsScalarFieldEnum!], orderBy: [ShipmentsOrderByWithRelationInput!], skip: Int, take: Int, where: ShipmentsWhereInput): [Shipments!]!
+  findManyStates(cursor: StatesWhereUniqueInput, distinct: [StatesScalarFieldEnum!], orderBy: [StatesOrderByWithRelationInput!], skip: Int, take: Int, where: StatesWhereInput): [States!]!
+  findManyTags(cursor: TagsWhereUniqueInput, distinct: [TagsScalarFieldEnum!], orderBy: [TagsOrderByWithRelationInput!], skip: Int, take: Int, where: TagsWhereInput): [Tags!]!
+  findManyTaxes(cursor: TaxesWhereUniqueInput, distinct: [TaxesScalarFieldEnum!], orderBy: [TaxesOrderByWithRelationInput!], skip: Int, take: Int, where: TaxesWhereInput): [Taxes!]!
+  findManyTemplates(cursor: TemplatesWhereUniqueInput, distinct: [TemplatesScalarFieldEnum!], orderBy: [TemplatesOrderByWithRelationInput!], skip: Int, take: Int, where: TemplatesWhereInput): [Templates!]!
+  findManyThemes(cursor: ThemesWhereUniqueInput, distinct: [ThemesScalarFieldEnum!], orderBy: [ThemesOrderByWithRelationInput!], skip: Int, take: Int, where: ThemesWhereInput): [Themes!]!
+  findManyTransactions(cursor: TransactionsWhereUniqueInput, distinct: [TransactionsScalarFieldEnum!], orderBy: [TransactionsOrderByWithRelationInput!], skip: Int, take: Int, where: TransactionsWhereInput): [Transactions!]!
+  findManyUsers(cursor: UsersWhereUniqueInput, distinct: [UsersScalarFieldEnum!], orderBy: [UsersOrderByWithRelationInput!], skip: Int, take: Int, where: UsersWhereInput): [Users!]!
+  findManyVendors(cursor: VendorsWhereUniqueInput, distinct: [VendorsScalarFieldEnum!], orderBy: [VendorsOrderByWithRelationInput!], skip: Int, take: Int, where: VendorsWhereInput): [Vendors!]!
+  findManyWebhooks(cursor: WebhooksWhereUniqueInput, distinct: [WebhooksScalarFieldEnum!], orderBy: [WebhooksOrderByWithRelationInput!], skip: Int, take: Int, where: WebhooksWhereInput): [Webhooks!]!
+  findManyWishlists(cursor: WishlistsWhereUniqueInput, distinct: [WishlistsScalarFieldEnum!], orderBy: [WishlistsOrderByWithRelationInput!], skip: Int, take: Int, where: WishlistsWhereInput): [Wishlists!]!
+  findManyZones(cursor: ZonesWhereUniqueInput, distinct: [ZonesScalarFieldEnum!], orderBy: [ZonesOrderByWithRelationInput!], skip: Int, take: Int, where: ZonesWhereInput): [Zones!]!
   findUniqueAgreements(where: AgreementsWhereUniqueInput!): Agreements
   findUniqueAgreementsOrThrow(where: AgreementsWhereUniqueInput!): Agreements
   findUniqueAttributes(where: AttributesWhereUniqueInput!): Attributes
@@ -14742,22 +13139,17 @@ type Query {
   groupByWishlists(by: [WishlistsScalarFieldEnum!]!, having: WishlistsScalarWhereWithAggregatesInput, orderBy: [WishlistsOrderByWithAggregationInput!], skip: Int, take: Int, where: WishlistsWhereInput): [WishlistsGroupBy!]!
   groupByZones(by: [ZonesScalarFieldEnum!]!, having: ZonesScalarWhereWithAggregatesInput, orderBy: [ZonesOrderByWithAggregationInput!], skip: Int, take: Int, where: ZonesWhereInput): [ZonesGroupBy!]!
   internalization(where: InternalizationWhereUniqueInput!): Internalization
-  internalizations(cursor: InternalizationWhereUniqueInput, distinct: [InternalizationScalarFieldEnum!], orderBy: [InternalizationOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: InternalizationWhereInput): [Internalization!]!
+  internalizations(cursor: InternalizationWhereUniqueInput, distinct: [InternalizationScalarFieldEnum!], orderBy: [InternalizationOrderByWithRelationInput!], skip: Int, take: Int, where: InternalizationWhereInput): [Internalization!]!
   logIn(where: LogInWhereUniqueInput!): LogIn
-  logIns(cursor: LogInWhereUniqueInput, distinct: [LogInScalarFieldEnum!], orderBy: [LogInOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: LogInWhereInput): [LogIn!]!
+  logIns(cursor: LogInWhereUniqueInput, distinct: [LogInScalarFieldEnum!], orderBy: [LogInOrderByWithRelationInput!], skip: Int, take: Int, where: LogInWhereInput): [LogIn!]!
   manufacturer(where: ManufacturerWhereUniqueInput!): Manufacturer
-  manufacturers(cursor: ManufacturerWhereUniqueInput, distinct: [ManufacturerScalarFieldEnum!], orderBy: [ManufacturerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: ManufacturerWhereInput): [Manufacturer!]!
+  manufacturers(cursor: ManufacturerWhereUniqueInput, distinct: [ManufacturerScalarFieldEnum!], orderBy: [ManufacturerOrderByWithRelationInput!], skip: Int, take: Int, where: ManufacturerWhereInput): [Manufacturer!]!
   mediamanager(where: MediamanagerWhereUniqueInput!): Mediamanager
-  mediamanagers(cursor: MediamanagerWhereUniqueInput, distinct: [MediamanagerScalarFieldEnum!], orderBy: [MediamanagerOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: MediamanagerWhereInput): [Mediamanager!]!
+  mediamanagers(cursor: MediamanagerWhereUniqueInput, distinct: [MediamanagerScalarFieldEnum!], orderBy: [MediamanagerOrderByWithRelationInput!], skip: Int, take: Int, where: MediamanagerWhereInput): [Mediamanager!]!
   upload_file(where: Upload_fileWhereUniqueInput!): Upload_file
-  upload_files(cursor: Upload_fileWhereUniqueInput, distinct: [Upload_fileScalarFieldEnum!], orderBy: [Upload_fileOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: Upload_fileWhereInput): [Upload_file!]!
+  upload_files(cursor: Upload_fileWhereUniqueInput, distinct: [Upload_fileScalarFieldEnum!], orderBy: [Upload_fileOrderByWithRelationInput!], skip: Int, take: Int, where: Upload_fileWhereInput): [Upload_file!]!
   warehouse(where: WarehouseWhereUniqueInput!): Warehouse
-  warehouses(cursor: WarehouseWhereUniqueInput, distinct: [WarehouseScalarFieldEnum!], orderBy: [WarehouseOrderByWithRelationAndSearchRelevanceInput!], skip: Int, take: Int, where: WarehouseWhereInput): [Warehouse!]!
-}
-
-enum QueryMode {
-  default
-  insensitive
+  warehouses(cursor: WarehouseWhereUniqueInput, distinct: [WarehouseScalarFieldEnum!], orderBy: [WarehouseOrderByWithRelationInput!], skip: Int, take: Int, where: WarehouseWhereInput): [Warehouse!]!
 }
 
 type Quotes {
@@ -14935,53 +13327,6 @@ input QuotesCreateInput {
   customers_customersToquotes: String
   discount: String
   grand_total: String
-  invoice_status: String
-  line_item_discount: String
-  line_item_group_total: String
-  line_item_name: String
-  line_item_subtotal: String
-  line_item_tax: String
-  line_item_total: String
-  name: String!
-  order_id: Int!
-  orders: String
-  payment_terms: String
-  prod_id: BigInt!
-  products_productsToquotes: String
-  quote_stage: String
-  shipping: String
-  shipping_city: String
-  shipping_country: String
-  shipping_postal: String
-  shipping_state: String
-  shipping_street: String
-  shipping_tax: String
-  subtotal: String
-  tax: String
-  total: String
-  valid_until: String
-}
-
-input QuotesCreateManyInput {
-  account: String
-  approval_issues: String
-  approval_status: String
-  assigned_to: String
-  billing_city: String
-  billing_country: String
-  billing_postal: String
-  billing_state: String
-  billing_street: String
-  categories: String
-  contact: String
-  created_at: DateTime
-  currency: String
-  cust_id: Int!
-  customers: String
-  customers_customersToquotes: String
-  discount: String
-  grand_total: String
-  id: Int
   invoice_status: String
   line_item_discount: String
   line_item_group_total: String
@@ -15249,54 +13594,6 @@ input QuotesMinOrderByAggregateInput {
   valid_until: SortOrder
 }
 
-enum QuotesOrderByRelevanceFieldEnum {
-  account
-  approval_issues
-  approval_status
-  assigned_to
-  billing_city
-  billing_country
-  billing_postal
-  billing_state
-  billing_street
-  categories
-  contact
-  currency
-  customers
-  customers_customersToquotes
-  discount
-  grand_total
-  invoice_status
-  line_item_discount
-  line_item_group_total
-  line_item_name
-  line_item_subtotal
-  line_item_tax
-  line_item_total
-  name
-  orders
-  payment_terms
-  products_productsToquotes
-  quote_stage
-  shipping
-  shipping_city
-  shipping_country
-  shipping_postal
-  shipping_state
-  shipping_street
-  shipping_tax
-  subtotal
-  tax
-  total
-  valid_until
-}
-
-input QuotesOrderByRelevanceInput {
-  fields: [QuotesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input QuotesOrderByWithAggregationInput {
   _avg: QuotesAvgOrderByAggregateInput
   _count: QuotesCountOrderByAggregateInput
@@ -15349,8 +13646,7 @@ input QuotesOrderByWithAggregationInput {
   valid_until: SortOrder
 }
 
-input QuotesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: QuotesOrderByRelevanceInput
+input QuotesOrderByWithRelationInput {
   account: SortOrder
   approval_issues: SortOrder
   approval_status: SortOrder
@@ -15755,29 +14051,6 @@ input ReturnsCreateInput {
   weight: String
 }
 
-input ReturnsCreateManyInput {
-  case_id: String
-  created_at: DateTime
-  customers: String
-  description: String
-  height: String
-  howShipped: String
-  id: BigInt
-  liquidationReason: String
-  location: String
-  media: String
-  name: String
-  products: String
-  return_prefix: String
-  shipTo: String
-  shippingDescription: String
-  shippingNumber: String
-  status: String
-  type: String
-  validity: String
-  weight: String
-}
-
 type ReturnsGroupBy {
   _avg: ReturnsAvgAggregate
   _count: ReturnsCountAggregate
@@ -15898,33 +14171,6 @@ input ReturnsMinOrderByAggregateInput {
   weight: SortOrder
 }
 
-enum ReturnsOrderByRelevanceFieldEnum {
-  case_id
-  customers
-  description
-  height
-  howShipped
-  liquidationReason
-  location
-  media
-  name
-  products
-  return_prefix
-  shipTo
-  shippingDescription
-  shippingNumber
-  status
-  type
-  validity
-  weight
-}
-
-input ReturnsOrderByRelevanceInput {
-  fields: [ReturnsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input ReturnsOrderByWithAggregationInput {
   _avg: ReturnsAvgOrderByAggregateInput
   _count: ReturnsCountOrderByAggregateInput
@@ -15953,8 +14199,7 @@ input ReturnsOrderByWithAggregationInput {
   weight: SortOrder
 }
 
-input ReturnsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: ReturnsOrderByRelevanceInput
+input ReturnsOrderByWithRelationInput {
   case_id: SortOrder
   created_at: SortOrder
   customers: SortOrder
@@ -16154,15 +14399,6 @@ input ReviewsCreateInput {
   websites: String
 }
 
-input ReviewsCreateManyInput {
-  content: String
-  created_at: DateTime
-  first_name: String
-  id: Int
-  last_name: String
-  websites: String
-}
-
 type ReviewsGroupBy {
   _avg: ReviewsAvgAggregate
   _count: ReviewsCountAggregate
@@ -16213,19 +14449,6 @@ input ReviewsMinOrderByAggregateInput {
   websites: SortOrder
 }
 
-enum ReviewsOrderByRelevanceFieldEnum {
-  content
-  first_name
-  last_name
-  websites
-}
-
-input ReviewsOrderByRelevanceInput {
-  fields: [ReviewsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input ReviewsOrderByWithAggregationInput {
   _avg: ReviewsAvgOrderByAggregateInput
   _count: ReviewsCountOrderByAggregateInput
@@ -16240,8 +14463,7 @@ input ReviewsOrderByWithAggregationInput {
   websites: SortOrder
 }
 
-input ReviewsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: ReviewsOrderByRelevanceInput
+input ReviewsOrderByWithRelationInput {
   content: SortOrder
   created_at: SortOrder
   first_name: SortOrder
@@ -16379,21 +14601,6 @@ input RewardsCreateInput {
   users: String
 }
 
-input RewardsCreateManyInput {
-  articles: String
-  categories: String
-  coupons: String
-  created_at: DateTime
-  customers: String
-  expiration: String
-  id: Int
-  level: String
-  name: String!
-  products: String
-  slug: String
-  users: String
-}
-
 type RewardsGroupBy {
   _avg: RewardsAvgAggregate
   _count: RewardsCountAggregate
@@ -16474,25 +14681,6 @@ input RewardsMinOrderByAggregateInput {
   users: SortOrder
 }
 
-enum RewardsOrderByRelevanceFieldEnum {
-  articles
-  categories
-  coupons
-  customers
-  expiration
-  level
-  name
-  products
-  slug
-  users
-}
-
-input RewardsOrderByRelevanceInput {
-  fields: [RewardsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input RewardsOrderByWithAggregationInput {
   _avg: RewardsAvgOrderByAggregateInput
   _count: RewardsCountOrderByAggregateInput
@@ -16513,8 +14701,7 @@ input RewardsOrderByWithAggregationInput {
   users: SortOrder
 }
 
-input RewardsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: RewardsOrderByRelevanceInput
+input RewardsOrderByWithRelationInput {
   articles: SortOrder
   categories: SortOrder
   coupons: SortOrder
@@ -16684,20 +14871,6 @@ input RolesCreateInput {
   updateRole: String
 }
 
-input RolesCreateManyInput {
-  content: String
-  createRole: String
-  created_at: DateTime
-  deleteRole: String
-  id: Int
-  publishRole: String
-  role: String
-  role_name: String!
-  type: String
-  unpublishRole: String
-  updateRole: String
-}
-
 type RolesGroupBy {
   _avg: RolesAvgAggregate
   _count: RolesCountAggregate
@@ -16773,24 +14946,6 @@ input RolesMinOrderByAggregateInput {
   updateRole: SortOrder
 }
 
-enum RolesOrderByRelevanceFieldEnum {
-  content
-  createRole
-  deleteRole
-  publishRole
-  role
-  role_name
-  type
-  unpublishRole
-  updateRole
-}
-
-input RolesOrderByRelevanceInput {
-  fields: [RolesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input RolesOrderByWithAggregationInput {
   _avg: RolesAvgOrderByAggregateInput
   _count: RolesCountOrderByAggregateInput
@@ -16810,8 +14965,7 @@ input RolesOrderByWithAggregationInput {
   updateRole: SortOrder
 }
 
-input RolesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: RolesOrderByRelevanceInput
+input RolesOrderByWithRelationInput {
   content: SortOrder
   createRole: SortOrder
   created_at: SortOrder
@@ -16964,17 +15118,6 @@ input SegmentsCreateInput {
   website: String
 }
 
-input SegmentsCreateManyInput {
-  apply_to: String
-  created_at: DateTime
-  customers: String
-  description: String
-  id: BigInt
-  name: String
-  status: String
-  website: String
-}
-
 type SegmentsGroupBy {
   _avg: SegmentsAvgAggregate
   _count: SegmentsCountAggregate
@@ -17035,21 +15178,6 @@ input SegmentsMinOrderByAggregateInput {
   website: SortOrder
 }
 
-enum SegmentsOrderByRelevanceFieldEnum {
-  apply_to
-  customers
-  description
-  name
-  status
-  website
-}
-
-input SegmentsOrderByRelevanceInput {
-  fields: [SegmentsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input SegmentsOrderByWithAggregationInput {
   _avg: SegmentsAvgOrderByAggregateInput
   _count: SegmentsCountOrderByAggregateInput
@@ -17066,8 +15194,7 @@ input SegmentsOrderByWithAggregationInput {
   website: SortOrder
 }
 
-input SegmentsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: SegmentsOrderByRelevanceInput
+input SegmentsOrderByWithRelationInput {
   apply_to: SortOrder
   created_at: SortOrder
   customers: SortOrder
@@ -17304,42 +15431,6 @@ input SettingsCreateInput {
   zipcode: String
 }
 
-input SettingsCreateManyInput {
-  address: String
-  address_two: String
-  allow_countries: String
-  allow_state: String
-  allowed_currency: String
-  awsS3: String
-  base_currency: String
-  city: String
-  country: String
-  created_at: DateTime
-  databaseUrl: String
-  default_country: String
-  default_currency: String
-  european_union_countries: String
-  googleAnalytics: String
-  id: BigInt
-  isPublic: String
-  mailServer: String
-  optional_zip: String
-  region: String
-  searchSetting: String
-  sentryDsn: String
-  siteName: String
-  siteTagline: String
-  siteWebsite: String
-  state_required_for: String
-  store_hours: String
-  store_name: String
-  store_phone: String
-  top_destinations: String
-  type: String
-  vat_number: String
-  zipcode: String
-}
-
 type SettingsGroupBy {
   _avg: SettingsAvgAggregate
   _count: SettingsCountAggregate
@@ -17525,46 +15616,6 @@ input SettingsMinOrderByAggregateInput {
   zipcode: SortOrder
 }
 
-enum SettingsOrderByRelevanceFieldEnum {
-  address
-  address_two
-  allow_countries
-  allow_state
-  allowed_currency
-  awsS3
-  base_currency
-  city
-  country
-  databaseUrl
-  default_country
-  default_currency
-  european_union_countries
-  googleAnalytics
-  isPublic
-  mailServer
-  optional_zip
-  region
-  searchSetting
-  sentryDsn
-  siteName
-  siteTagline
-  siteWebsite
-  state_required_for
-  store_hours
-  store_name
-  store_phone
-  top_destinations
-  type
-  vat_number
-  zipcode
-}
-
-input SettingsOrderByRelevanceInput {
-  fields: [SettingsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input SettingsOrderByWithAggregationInput {
   _avg: SettingsAvgOrderByAggregateInput
   _count: SettingsCountOrderByAggregateInput
@@ -17606,8 +15657,7 @@ input SettingsOrderByWithAggregationInput {
   zipcode: SortOrder
 }
 
-input SettingsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: SettingsOrderByRelevanceInput
+input SettingsOrderByWithRelationInput {
   address: SortOrder
   address_two: SortOrder
   allow_countries: SortOrder
@@ -17910,21 +15960,6 @@ input ShipmentsCreateInput {
   website: String
 }
 
-input ShipmentsCreateManyInput {
-  carrier_name: String!
-  client_id: String
-  client_secret: String
-  country: String
-  id: BigInt
-  image: String
-  product: String
-  ship_date: DateTime
-  speed_grade: String
-  tracking_url: String
-  transit_time: String
-  website: String
-}
-
 type ShipmentsGroupBy {
   _avg: ShipmentsAvgAggregate
   _count: ShipmentsCountAggregate
@@ -18005,25 +16040,6 @@ input ShipmentsMinOrderByAggregateInput {
   website: SortOrder
 }
 
-enum ShipmentsOrderByRelevanceFieldEnum {
-  carrier_name
-  client_id
-  client_secret
-  country
-  image
-  product
-  speed_grade
-  tracking_url
-  transit_time
-  website
-}
-
-input ShipmentsOrderByRelevanceInput {
-  fields: [ShipmentsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input ShipmentsOrderByWithAggregationInput {
   _avg: ShipmentsAvgOrderByAggregateInput
   _count: ShipmentsCountOrderByAggregateInput
@@ -18044,8 +16060,7 @@ input ShipmentsOrderByWithAggregationInput {
   website: SortOrder
 }
 
-input ShipmentsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: ShipmentsOrderByRelevanceInput
+input ShipmentsOrderByWithRelationInput {
   carrier_name: SortOrder
   client_id: SortOrder
   client_secret: SortOrder
@@ -18202,15 +16217,6 @@ input StatesCreateInput {
   trainings: String
 }
 
-input StatesCreateManyInput {
-  country: String
-  description: String
-  id: Int
-  image: String
-  name: String!
-  trainings: String
-}
-
 type StatesGroupBy {
   _avg: StatesAvgAggregate
   _count: StatesCountAggregate
@@ -18261,20 +16267,6 @@ input StatesMinOrderByAggregateInput {
   trainings: SortOrder
 }
 
-enum StatesOrderByRelevanceFieldEnum {
-  country
-  description
-  image
-  name
-  trainings
-}
-
-input StatesOrderByRelevanceInput {
-  fields: [StatesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input StatesOrderByWithAggregationInput {
   _avg: StatesAvgOrderByAggregateInput
   _count: StatesCountOrderByAggregateInput
@@ -18289,8 +16281,7 @@ input StatesOrderByWithAggregationInput {
   trainings: SortOrder
 }
 
-input StatesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: StatesOrderByRelevanceInput
+input StatesOrderByWithRelationInput {
   country: SortOrder
   description: SortOrder
   id: SortOrder
@@ -18373,10 +16364,8 @@ input StringFilter {
   in: [String!]
   lt: String
   lte: String
-  mode: QueryMode
   not: NestedStringFilter
   notIn: [String!]
-  search: String
   startsWith: String
 }
 
@@ -18389,10 +16378,8 @@ input StringNullableFilter {
   in: [String!]
   lt: String
   lte: String
-  mode: QueryMode
   not: NestedStringNullableFilter
   notIn: [String!]
-  search: String
   startsWith: String
 }
 
@@ -18408,10 +16395,8 @@ input StringNullableWithAggregatesFilter {
   in: [String!]
   lt: String
   lte: String
-  mode: QueryMode
   not: NestedStringNullableWithAggregatesFilter
   notIn: [String!]
-  search: String
   startsWith: String
 }
 
@@ -18427,10 +16412,8 @@ input StringWithAggregatesFilter {
   in: [String!]
   lt: String
   lte: String
-  mode: QueryMode
   not: NestedStringWithAggregatesFilter
   notIn: [String!]
-  search: String
   startsWith: String
 }
 
@@ -18481,17 +16464,6 @@ input TagsCreateInput {
   categories: String
   customers: String
   excerpt: String
-  name: String!
-  products: String
-  users: String
-}
-
-input TagsCreateManyInput {
-  articles: String
-  categories: String
-  customers: String
-  excerpt: String
-  id: Int
   name: String!
   products: String
   users: String
@@ -18557,22 +16529,6 @@ input TagsMinOrderByAggregateInput {
   users: SortOrder
 }
 
-enum TagsOrderByRelevanceFieldEnum {
-  articles
-  categories
-  customers
-  excerpt
-  name
-  products
-  users
-}
-
-input TagsOrderByRelevanceInput {
-  fields: [TagsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input TagsOrderByWithAggregationInput {
   _avg: TagsAvgOrderByAggregateInput
   _count: TagsCountOrderByAggregateInput
@@ -18589,8 +16545,7 @@ input TagsOrderByWithAggregationInput {
   users: SortOrder
 }
 
-input TagsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: TagsOrderByRelevanceInput
+input TagsOrderByWithRelationInput {
   articles: SortOrder
   categories: SortOrder
   customers: SortOrder
@@ -18732,19 +16687,6 @@ input TaxesCreateInput {
   tax_identifier: String!
 }
 
-input TaxesCreateManyInput {
-  country: String
-  id: Int
-  postcode: String
-  products: String
-  rate_percent: String
-  state: String
-  taxCategory: String
-  taxDefault: String
-  taxRuleName: String
-  tax_identifier: String!
-}
-
 type TaxesGroupBy {
   _avg: TaxesAvgAggregate
   _count: TaxesCountAggregate
@@ -18815,24 +16757,6 @@ input TaxesMinOrderByAggregateInput {
   tax_identifier: SortOrder
 }
 
-enum TaxesOrderByRelevanceFieldEnum {
-  country
-  postcode
-  products
-  rate_percent
-  state
-  taxCategory
-  taxDefault
-  taxRuleName
-  tax_identifier
-}
-
-input TaxesOrderByRelevanceInput {
-  fields: [TaxesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input TaxesOrderByWithAggregationInput {
   _avg: TaxesAvgOrderByAggregateInput
   _count: TaxesCountOrderByAggregateInput
@@ -18851,8 +16775,7 @@ input TaxesOrderByWithAggregationInput {
   tax_identifier: SortOrder
 }
 
-input TaxesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: TaxesOrderByRelevanceInput
+input TaxesOrderByWithRelationInput {
   country: SortOrder
   id: SortOrder
   postcode: SortOrder
@@ -19035,26 +16958,6 @@ input TemplatesCreateInput {
   type: String
 }
 
-input TemplatesCreateManyInput {
-  active: String
-  assigned_to: String
-  content: String
-  created_at: DateTime
-  footer: String
-  header: String
-  id: BigInt
-  margin_bottom: String
-  margin_footer: String
-  margin_header: String
-  margin_left: String
-  margin_right: String
-  margin_top: String
-  name: String
-  orientation: String
-  page_size: String
-  type: String
-}
-
 type TemplatesGroupBy {
   _avg: TemplatesAvgAggregate
   _count: TemplatesCountAggregate
@@ -19160,30 +17063,6 @@ input TemplatesMinOrderByAggregateInput {
   type: SortOrder
 }
 
-enum TemplatesOrderByRelevanceFieldEnum {
-  active
-  assigned_to
-  content
-  footer
-  header
-  margin_bottom
-  margin_footer
-  margin_header
-  margin_left
-  margin_right
-  margin_top
-  name
-  orientation
-  page_size
-  type
-}
-
-input TemplatesOrderByRelevanceInput {
-  fields: [TemplatesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input TemplatesOrderByWithAggregationInput {
   _avg: TemplatesAvgOrderByAggregateInput
   _count: TemplatesCountOrderByAggregateInput
@@ -19209,8 +17088,7 @@ input TemplatesOrderByWithAggregationInput {
   type: SortOrder
 }
 
-input TemplatesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: TemplatesOrderByRelevanceInput
+input TemplatesOrderByWithRelationInput {
   active: SortOrder
   assigned_to: SortOrder
   content: SortOrder
@@ -19398,16 +17276,6 @@ input ThemesCreateInput {
   websites: String!
 }
 
-input ThemesCreateManyInput {
-  action: String
-  id: Int
-  parent_theme: String
-  theme_path: String
-  title: String
-  website_id: BigInt!
-  websites: String!
-}
-
 type ThemesGroupBy {
   _avg: ThemesAvgAggregate
   _count: ThemesCountAggregate
@@ -19463,20 +17331,6 @@ input ThemesMinOrderByAggregateInput {
   websites: SortOrder
 }
 
-enum ThemesOrderByRelevanceFieldEnum {
-  action
-  parent_theme
-  theme_path
-  title
-  websites
-}
-
-input ThemesOrderByRelevanceInput {
-  fields: [ThemesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input ThemesOrderByWithAggregationInput {
   _avg: ThemesAvgOrderByAggregateInput
   _count: ThemesCountOrderByAggregateInput
@@ -19492,8 +17346,7 @@ input ThemesOrderByWithAggregationInput {
   websites: SortOrder
 }
 
-input ThemesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: ThemesOrderByRelevanceInput
+input ThemesOrderByWithRelationInput {
   action: SortOrder
   id: SortOrder
   parent_theme: SortOrder
@@ -19635,18 +17488,6 @@ input TransactionsCreateInput {
   transaction_id: Int!
 }
 
-input TransactionsCreateManyInput {
-  closed: String
-  created: DateTime
-  customer_payment: String
-  id: Int
-  order_id: Int!
-  orders: String
-  parent_transaction_id: Int!
-  payment_method: BigInt!
-  transaction_id: Int!
-}
-
 type TransactionsGroupBy {
   _avg: TransactionsAvgAggregate
   _count: TransactionsCountAggregate
@@ -19712,18 +17553,6 @@ input TransactionsMinOrderByAggregateInput {
   transaction_id: SortOrder
 }
 
-enum TransactionsOrderByRelevanceFieldEnum {
-  closed
-  customer_payment
-  orders
-}
-
-input TransactionsOrderByRelevanceInput {
-  fields: [TransactionsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input TransactionsOrderByWithAggregationInput {
   _avg: TransactionsAvgOrderByAggregateInput
   _count: TransactionsCountOrderByAggregateInput
@@ -19741,8 +17570,7 @@ input TransactionsOrderByWithAggregationInput {
   transaction_id: SortOrder
 }
 
-input TransactionsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: TransactionsOrderByRelevanceInput
+input TransactionsOrderByWithRelationInput {
   closed: SortOrder
   created: SortOrder
   customer_payment: SortOrder
@@ -19844,7 +17672,7 @@ type Upload_file {
   created_at: DateTime
   created_by: Int
   ext: String
-  formats: JSON
+  formats: String
   hash: String!
   height: Int
   id: Int!
@@ -19852,7 +17680,7 @@ type Upload_file {
   name: String!
   previewUrl: String
   provider: String!
-  provider_metadata: JSON
+  provider_metadata: String
   size: Decimal!
   updated_at: DateTime
   updated_by: Int
@@ -19929,36 +17757,14 @@ input Upload_fileCreateInput {
   created_at: DateTime
   created_by: Int
   ext: String
-  formats: JSON
+  formats: String
   hash: String!
   height: Int
   mime: String!
   name: String!
   previewUrl: String
   provider: String!
-  provider_metadata: JSON
-  size: Decimal!
-  updated_at: DateTime
-  updated_by: Int
-  url: String!
-  width: Int
-}
-
-input Upload_fileCreateManyInput {
-  alternativeText: String
-  caption: String
-  created_at: DateTime
-  created_by: Int
-  ext: String
-  formats: JSON
-  hash: String!
-  height: Int
-  id: Int
-  mime: String!
-  name: String!
-  previewUrl: String
-  provider: String!
-  provider_metadata: JSON
+  provider_metadata: String
   size: Decimal!
   updated_at: DateTime
   updated_by: Int
@@ -19977,7 +17783,7 @@ type Upload_fileGroupBy {
   created_at: DateTime
   created_by: Int
   ext: String
-  formats: JSON
+  formats: String
   hash: String!
   height: Int
   id: Int!
@@ -19985,7 +17791,7 @@ type Upload_fileGroupBy {
   name: String!
   previewUrl: String
   provider: String!
-  provider_metadata: JSON
+  provider_metadata: String
   size: Decimal!
   updated_at: DateTime
   updated_by: Int
@@ -19999,6 +17805,7 @@ type Upload_fileMaxAggregate {
   created_at: DateTime
   created_by: Int
   ext: String
+  formats: String
   hash: String
   height: Int
   id: Int
@@ -20006,6 +17813,7 @@ type Upload_fileMaxAggregate {
   name: String
   previewUrl: String
   provider: String
+  provider_metadata: String
   size: Decimal
   updated_at: DateTime
   updated_by: Int
@@ -20019,6 +17827,7 @@ input Upload_fileMaxOrderByAggregateInput {
   created_at: SortOrder
   created_by: SortOrder
   ext: SortOrder
+  formats: SortOrder
   hash: SortOrder
   height: SortOrder
   id: SortOrder
@@ -20026,6 +17835,7 @@ input Upload_fileMaxOrderByAggregateInput {
   name: SortOrder
   previewUrl: SortOrder
   provider: SortOrder
+  provider_metadata: SortOrder
   size: SortOrder
   updated_at: SortOrder
   updated_by: SortOrder
@@ -20039,6 +17849,7 @@ type Upload_fileMinAggregate {
   created_at: DateTime
   created_by: Int
   ext: String
+  formats: String
   hash: String
   height: Int
   id: Int
@@ -20046,6 +17857,7 @@ type Upload_fileMinAggregate {
   name: String
   previewUrl: String
   provider: String
+  provider_metadata: String
   size: Decimal
   updated_at: DateTime
   updated_by: Int
@@ -20059,6 +17871,7 @@ input Upload_fileMinOrderByAggregateInput {
   created_at: SortOrder
   created_by: SortOrder
   ext: SortOrder
+  formats: SortOrder
   hash: SortOrder
   height: SortOrder
   id: SortOrder
@@ -20066,29 +17879,12 @@ input Upload_fileMinOrderByAggregateInput {
   name: SortOrder
   previewUrl: SortOrder
   provider: SortOrder
+  provider_metadata: SortOrder
   size: SortOrder
   updated_at: SortOrder
   updated_by: SortOrder
   url: SortOrder
   width: SortOrder
-}
-
-enum Upload_fileOrderByRelevanceFieldEnum {
-  alternativeText
-  caption
-  ext
-  hash
-  mime
-  name
-  previewUrl
-  provider
-  url
-}
-
-input Upload_fileOrderByRelevanceInput {
-  fields: [Upload_fileOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
 }
 
 input Upload_fileOrderByWithAggregationInput {
@@ -20118,8 +17914,7 @@ input Upload_fileOrderByWithAggregationInput {
   width: SortOrder
 }
 
-input Upload_fileOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: Upload_fileOrderByRelevanceInput
+input Upload_fileOrderByWithRelationInput {
   alternativeText: SortOrder
   caption: SortOrder
   created_at: SortOrder
@@ -20172,7 +17967,7 @@ input Upload_fileScalarWhereWithAggregatesInput {
   created_at: DateTimeNullableWithAggregatesFilter
   created_by: IntNullableWithAggregatesFilter
   ext: StringNullableWithAggregatesFilter
-  formats: JsonNullableWithAggregatesFilter
+  formats: StringNullableWithAggregatesFilter
   hash: StringWithAggregatesFilter
   height: IntNullableWithAggregatesFilter
   id: IntWithAggregatesFilter
@@ -20180,7 +17975,7 @@ input Upload_fileScalarWhereWithAggregatesInput {
   name: StringWithAggregatesFilter
   previewUrl: StringNullableWithAggregatesFilter
   provider: StringWithAggregatesFilter
-  provider_metadata: JsonNullableWithAggregatesFilter
+  provider_metadata: StringNullableWithAggregatesFilter
   size: DecimalWithAggregatesFilter
   updated_at: DateTimeNullableWithAggregatesFilter
   updated_by: IntNullableWithAggregatesFilter
@@ -20212,14 +18007,14 @@ input Upload_fileUpdateInput {
   created_at: NullableDateTimeFieldUpdateOperationsInput
   created_by: NullableIntFieldUpdateOperationsInput
   ext: NullableStringFieldUpdateOperationsInput
-  formats: JSON
+  formats: NullableStringFieldUpdateOperationsInput
   hash: StringFieldUpdateOperationsInput
   height: NullableIntFieldUpdateOperationsInput
   mime: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   previewUrl: NullableStringFieldUpdateOperationsInput
   provider: StringFieldUpdateOperationsInput
-  provider_metadata: JSON
+  provider_metadata: NullableStringFieldUpdateOperationsInput
   size: DecimalFieldUpdateOperationsInput
   updated_at: NullableDateTimeFieldUpdateOperationsInput
   updated_by: NullableIntFieldUpdateOperationsInput
@@ -20233,14 +18028,14 @@ input Upload_fileUpdateManyMutationInput {
   created_at: NullableDateTimeFieldUpdateOperationsInput
   created_by: NullableIntFieldUpdateOperationsInput
   ext: NullableStringFieldUpdateOperationsInput
-  formats: JSON
+  formats: NullableStringFieldUpdateOperationsInput
   hash: StringFieldUpdateOperationsInput
   height: NullableIntFieldUpdateOperationsInput
   mime: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   previewUrl: NullableStringFieldUpdateOperationsInput
   provider: StringFieldUpdateOperationsInput
-  provider_metadata: JSON
+  provider_metadata: NullableStringFieldUpdateOperationsInput
   size: DecimalFieldUpdateOperationsInput
   updated_at: NullableDateTimeFieldUpdateOperationsInput
   updated_by: NullableIntFieldUpdateOperationsInput
@@ -20257,7 +18052,7 @@ input Upload_fileWhereInput {
   created_at: DateTimeNullableFilter
   created_by: IntNullableFilter
   ext: StringNullableFilter
-  formats: JsonNullableFilter
+  formats: StringNullableFilter
   hash: StringFilter
   height: IntNullableFilter
   id: IntFilter
@@ -20265,7 +18060,7 @@ input Upload_fileWhereInput {
   name: StringFilter
   previewUrl: StringNullableFilter
   provider: StringFilter
-  provider_metadata: JsonNullableFilter
+  provider_metadata: StringNullableFilter
   size: DecimalFilter
   updated_at: DateTimeNullableFilter
   updated_by: IntNullableFilter
@@ -20326,19 +18121,6 @@ input UsersCountOrderByAggregateInput {
 }
 
 input UsersCreateInput {
-  created_at: DateTime
-  email: String!
-  first_name: String!
-  id: BigInt
-  last_name: String
-  mediamanager: String
-  password: String!
-  permissions: String
-  phone: String
-  username: String!
-}
-
-input UsersCreateManyInput {
   created_at: DateTime
   email: String!
   first_name: String!
@@ -20421,23 +18203,6 @@ input UsersMinOrderByAggregateInput {
   username: SortOrder
 }
 
-enum UsersOrderByRelevanceFieldEnum {
-  email
-  first_name
-  last_name
-  mediamanager
-  password
-  permissions
-  phone
-  username
-}
-
-input UsersOrderByRelevanceInput {
-  fields: [UsersOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input UsersOrderByWithAggregationInput {
   _avg: UsersAvgOrderByAggregateInput
   _count: UsersCountOrderByAggregateInput
@@ -20456,8 +18221,7 @@ input UsersOrderByWithAggregationInput {
   username: SortOrder
 }
 
-input UsersOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: UsersOrderByRelevanceInput
+input UsersOrderByWithRelationInput {
   created_at: SortOrder
   email: SortOrder
   first_name: SortOrder
@@ -20685,37 +18449,6 @@ input VendorsCreateInput {
   workspaces: String
 }
 
-input VendorsCreateManyInput {
-  articles: String
-  categories: String
-  comments: String
-  country: String
-  coupons: String
-  customers: String
-  description: String
-  gift_certificates: String
-  id: Int
-  image: String
-  invoices: String
-  name: String!
-  physical_store: String
-  polls: String
-  products: String
-  quotes: String
-  rating: String
-  reports: String
-  reviews: String
-  reward_points: String
-  special_discounts: String
-  statistics: String
-  stocks: String
-  tags: String
-  type: String
-  users: String
-  website: String
-  workspaces: String
-}
-
 type VendorsGroupBy {
   _avg: VendorsAvgAggregate
   _count: VendorsCountAggregate
@@ -20876,42 +18609,6 @@ input VendorsMinOrderByAggregateInput {
   workspaces: SortOrder
 }
 
-enum VendorsOrderByRelevanceFieldEnum {
-  articles
-  categories
-  comments
-  country
-  coupons
-  customers
-  description
-  gift_certificates
-  image
-  invoices
-  name
-  physical_store
-  polls
-  products
-  quotes
-  rating
-  reports
-  reviews
-  reward_points
-  special_discounts
-  statistics
-  stocks
-  tags
-  type
-  users
-  website
-  workspaces
-}
-
-input VendorsOrderByRelevanceInput {
-  fields: [VendorsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input VendorsOrderByWithAggregationInput {
   _avg: VendorsAvgOrderByAggregateInput
   _count: VendorsCountOrderByAggregateInput
@@ -20948,8 +18645,7 @@ input VendorsOrderByWithAggregationInput {
   workspaces: SortOrder
 }
 
-input VendorsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: VendorsOrderByRelevanceInput
+input VendorsOrderByWithRelationInput {
   articles: SortOrder
   categories: SortOrder
   comments: SortOrder
@@ -21224,22 +18920,6 @@ input WarehouseCreateInput {
   status: String
 }
 
-input WarehouseCreateManyInput {
-  category: String
-  city: String
-  country: String
-  created_at: DateTime
-  description: String
-  id: BigInt
-  image: String
-  isPublic: String
-  name: String
-  postal: String
-  products: String
-  state: String
-  status: String
-}
-
 type WarehouseGroupBy {
   _avg: WarehouseAvgAggregate
   _count: WarehouseCountAggregate
@@ -21325,26 +19005,6 @@ input WarehouseMinOrderByAggregateInput {
   status: SortOrder
 }
 
-enum WarehouseOrderByRelevanceFieldEnum {
-  category
-  city
-  country
-  description
-  image
-  isPublic
-  name
-  postal
-  products
-  state
-  status
-}
-
-input WarehouseOrderByRelevanceInput {
-  fields: [WarehouseOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input WarehouseOrderByWithAggregationInput {
   _avg: WarehouseAvgOrderByAggregateInput
   _count: WarehouseCountOrderByAggregateInput
@@ -21366,8 +19026,7 @@ input WarehouseOrderByWithAggregationInput {
   status: SortOrder
 }
 
-input WarehouseOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: WarehouseOrderByRelevanceInput
+input WarehouseOrderByWithRelationInput {
   category: SortOrder
   city: SortOrder
   country: SortOrder
@@ -21546,20 +19205,6 @@ input WebhooksCreateInput {
   url: String!
 }
 
-input WebhooksCreateManyInput {
-  create: String
-  created_at: DateTime
-  delete: String
-  headers: String
-  id: BigInt
-  name: String!
-  publish: String
-  retrieve: String
-  unpublish: String
-  update: String
-  url: String!
-}
-
 type WebhooksGroupBy {
   _avg: WebhooksAvgAggregate
   _count: WebhooksCountAggregate
@@ -21635,24 +19280,6 @@ input WebhooksMinOrderByAggregateInput {
   url: SortOrder
 }
 
-enum WebhooksOrderByRelevanceFieldEnum {
-  create
-  delete
-  headers
-  name
-  publish
-  retrieve
-  unpublish
-  update
-  url
-}
-
-input WebhooksOrderByRelevanceInput {
-  fields: [WebhooksOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input WebhooksOrderByWithAggregationInput {
   _avg: WebhooksAvgOrderByAggregateInput
   _count: WebhooksCountOrderByAggregateInput
@@ -21672,8 +19299,7 @@ input WebhooksOrderByWithAggregationInput {
   url: SortOrder
 }
 
-input WebhooksOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: WebhooksOrderByRelevanceInput
+input WebhooksOrderByWithRelationInput {
   create: SortOrder
   created_at: SortOrder
   delete: SortOrder
@@ -21828,17 +19454,6 @@ input WishlistsCreateInput {
   visibility: String
 }
 
-input WishlistsCreateManyInput {
-  created_at: DateTime
-  customers: String
-  id: BigInt
-  name: String
-  occassions: String
-  products: String
-  quantity: String
-  visibility: String
-}
-
 type WishlistsGroupBy {
   _avg: WishlistsAvgAggregate
   _count: WishlistsCountAggregate
@@ -21899,21 +19514,6 @@ input WishlistsMinOrderByAggregateInput {
   visibility: SortOrder
 }
 
-enum WishlistsOrderByRelevanceFieldEnum {
-  customers
-  name
-  occassions
-  products
-  quantity
-  visibility
-}
-
-input WishlistsOrderByRelevanceInput {
-  fields: [WishlistsOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input WishlistsOrderByWithAggregationInput {
   _avg: WishlistsAvgOrderByAggregateInput
   _count: WishlistsCountOrderByAggregateInput
@@ -21930,8 +19530,7 @@ input WishlistsOrderByWithAggregationInput {
   visibility: SortOrder
 }
 
-input WishlistsOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: WishlistsOrderByRelevanceInput
+input WishlistsOrderByWithRelationInput {
   created_at: SortOrder
   customers: SortOrder
   id: SortOrder
@@ -22068,17 +19667,6 @@ input ZonesCreateInput {
   updated_at: DateTime
 }
 
-input ZonesCreateManyInput {
-  code: String
-  country: String
-  created_at: DateTime
-  id: BigInt
-  name: String
-  scope: String
-  type: String
-  updated_at: DateTime
-}
-
 type ZonesGroupBy {
   _avg: ZonesAvgAggregate
   _count: ZonesCountAggregate
@@ -22139,20 +19727,6 @@ input ZonesMinOrderByAggregateInput {
   updated_at: SortOrder
 }
 
-enum ZonesOrderByRelevanceFieldEnum {
-  code
-  country
-  name
-  scope
-  type
-}
-
-input ZonesOrderByRelevanceInput {
-  fields: [ZonesOrderByRelevanceFieldEnum!]!
-  search: String!
-  sort: SortOrder!
-}
-
 input ZonesOrderByWithAggregationInput {
   _avg: ZonesAvgOrderByAggregateInput
   _count: ZonesCountOrderByAggregateInput
@@ -22169,8 +19743,7 @@ input ZonesOrderByWithAggregationInput {
   updated_at: SortOrder
 }
 
-input ZonesOrderByWithRelationAndSearchRelevanceInput {
-  _relevance: ZonesOrderByRelevanceInput
+input ZonesOrderByWithRelationInput {
   code: SortOrder
   country: SortOrder
   created_at: SortOrder

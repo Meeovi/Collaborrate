@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { DeleteOneRewardsArgs } from "./args/DeleteOneRewardsArgs";
 import { Rewards } from "../../../models/Rewards";
 export declare class DeleteOneRewardsResolver {

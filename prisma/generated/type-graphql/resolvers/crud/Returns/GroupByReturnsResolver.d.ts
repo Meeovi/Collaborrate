@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { GroupByReturnsArgs } from "./args/GroupByReturnsArgs";
 import { ReturnsGroupBy } from "../../outputs/ReturnsGroupBy";
 export declare class GroupByReturnsResolver {

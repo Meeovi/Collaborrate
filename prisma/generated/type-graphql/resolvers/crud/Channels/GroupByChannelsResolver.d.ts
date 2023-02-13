@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { GroupByChannelsArgs } from "./args/GroupByChannelsArgs";
 import { ChannelsGroupBy } from "../../outputs/ChannelsGroupBy";
 export declare class GroupByChannelsResolver {

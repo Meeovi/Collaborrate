@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateThemesArgs } from "./args/AggregateThemesArgs";
 import { AggregateThemes } from "../../outputs/AggregateThemes";
 export declare class AggregateThemesResolver {

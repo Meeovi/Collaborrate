@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateContent_typeArgs } from "./args/AggregateContent_typeArgs";
 import { AggregateContent_type } from "../../outputs/AggregateContent_type";
 export declare class AggregateContent_typeResolver {

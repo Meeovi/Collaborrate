@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateDashboardslistArgs } from "./args/AggregateDashboardslistArgs";
 import { CreateOneDashboardslistArgs } from "./args/CreateOneDashboardslistArgs";
 import { DeleteManyDashboardslistArgs } from "./args/DeleteManyDashboardslistArgs";

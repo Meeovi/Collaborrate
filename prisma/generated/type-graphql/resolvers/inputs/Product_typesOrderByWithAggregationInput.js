@@ -8,7 +8,6 @@ const Product_typesCountOrderByAggregateInput_1 = require("../inputs/Product_typ
 const Product_typesMaxOrderByAggregateInput_1 = require("../inputs/Product_typesMaxOrderByAggregateInput");
 const Product_typesMinOrderByAggregateInput_1 = require("../inputs/Product_typesMinOrderByAggregateInput");
 const Product_typesSumOrderByAggregateInput_1 = require("../inputs/Product_typesSumOrderByAggregateInput");
-const SortOrderInput_1 = require("../inputs/SortOrderInput");
 const SortOrder_1 = require("../../enums/SortOrder");
 let Product_typesOrderByWithAggregationInput = class Product_typesOrderByWithAggregationInput {
 };
@@ -19,46 +18,46 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], Product_typesOrderByWithAggregationInput.prototype, "id", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Product_typesOrderByWithAggregationInput.prototype, "type_name", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Product_typesOrderByWithAggregationInput.prototype, "taxes", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Product_typesOrderByWithAggregationInput.prototype, "isShippable", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Product_typesOrderByWithAggregationInput.prototype, "meta_url", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Product_typesOrderByWithAggregationInput.prototype, "meta_description", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Product_typesOrderByWithAggregationInput.prototype, "filter_options", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Product_typesOrderByWithAggregationInput.prototype, "product_type", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
@@ -67,10 +66,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], Product_typesOrderByWithAggregationInput.prototype, "prod_id", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], Product_typesOrderByWithAggregationInput.prototype, "products", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => Product_typesCountOrderByAggregateInput_1.Product_typesCountOrderByAggregateInput, {

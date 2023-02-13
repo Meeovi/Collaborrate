@@ -4,9 +4,6 @@ exports.WarehouseWhereUniqueInput = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const GraphQLScalars = tslib_1.__importStar(require("graphql-scalars"));
-const DateTimeNullableFilter_1 = require("../inputs/DateTimeNullableFilter");
-const StringNullableFilter_1 = require("../inputs/StringNullableFilter");
-const WarehouseWhereInput_1 = require("../inputs/WarehouseWhereInput");
 let WarehouseWhereUniqueInput = class WarehouseWhereUniqueInput {
 };
 tslib_1.__decorate([
@@ -15,96 +12,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", typeof BigInt === "function" ? BigInt : Object)
 ], WarehouseWhereUniqueInput.prototype, "id", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [WarehouseWhereInput_1.WarehouseWhereInput], {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Array)
-], WarehouseWhereUniqueInput.prototype, "AND", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [WarehouseWhereInput_1.WarehouseWhereInput], {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Array)
-], WarehouseWhereUniqueInput.prototype, "OR", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => [WarehouseWhereInput_1.WarehouseWhereInput], {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", Array)
-], WarehouseWhereUniqueInput.prototype, "NOT", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => DateTimeNullableFilter_1.DateTimeNullableFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", DateTimeNullableFilter_1.DateTimeNullableFilter)
-], WarehouseWhereUniqueInput.prototype, "created_at", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
-], WarehouseWhereUniqueInput.prototype, "name", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
-], WarehouseWhereUniqueInput.prototype, "description", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
-], WarehouseWhereUniqueInput.prototype, "city", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
-], WarehouseWhereUniqueInput.prototype, "state", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
-], WarehouseWhereUniqueInput.prototype, "country", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
-], WarehouseWhereUniqueInput.prototype, "postal", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
-], WarehouseWhereUniqueInput.prototype, "status", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
-], WarehouseWhereUniqueInput.prototype, "image", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
-], WarehouseWhereUniqueInput.prototype, "products", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
-], WarehouseWhereUniqueInput.prototype, "category", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringNullableFilter_1.StringNullableFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
-], WarehouseWhereUniqueInput.prototype, "isPublic", void 0);
 WarehouseWhereUniqueInput = tslib_1.__decorate([
     TypeGraphQL.InputType("WarehouseWhereUniqueInput", {
         isAbstract: true

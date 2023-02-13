@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindUniqueUpload_fileArgs } from "./args/FindUniqueUpload_fileArgs";
 import { Upload_file } from "../../../models/Upload_file";
 export declare class FindUniqueUpload_fileResolver {

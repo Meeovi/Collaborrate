@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateOrdersArgs } from "./args/AggregateOrdersArgs";
 import { CreateOneOrdersArgs } from "./args/CreateOneOrdersArgs";
 import { DeleteManyOrdersArgs } from "./args/DeleteManyOrdersArgs";

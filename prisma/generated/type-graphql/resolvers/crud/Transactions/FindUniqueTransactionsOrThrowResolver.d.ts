@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindUniqueTransactionsOrThrowArgs } from "./args/FindUniqueTransactionsOrThrowArgs";
 import { Transactions } from "../../../models/Transactions";
 export declare class FindUniqueTransactionsOrThrowResolver {

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateUpload_fileArgs } from "./args/AggregateUpload_fileArgs";
 import { CreateOneUpload_fileArgs } from "./args/CreateOneUpload_fileArgs";
 import { DeleteManyUpload_fileArgs } from "./args/DeleteManyUpload_fileArgs";

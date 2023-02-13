@@ -8,7 +8,6 @@ const DashboardslidesCountOrderByAggregateInput_1 = require("../inputs/Dashboard
 const DashboardslidesMaxOrderByAggregateInput_1 = require("../inputs/DashboardslidesMaxOrderByAggregateInput");
 const DashboardslidesMinOrderByAggregateInput_1 = require("../inputs/DashboardslidesMinOrderByAggregateInput");
 const DashboardslidesSumOrderByAggregateInput_1 = require("../inputs/DashboardslidesSumOrderByAggregateInput");
-const SortOrderInput_1 = require("../inputs/SortOrderInput");
 const SortOrder_1 = require("../../enums/SortOrder");
 let DashboardslidesOrderByWithAggregationInput = class DashboardslidesOrderByWithAggregationInput {
 };
@@ -25,22 +24,22 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], DashboardslidesOrderByWithAggregationInput.prototype, "name", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], DashboardslidesOrderByWithAggregationInput.prototype, "categories", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], DashboardslidesOrderByWithAggregationInput.prototype, "media", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => SortOrderInput_1.SortOrderInput, {
+    TypeGraphQL.Field(_type => SortOrder_1.SortOrder, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", SortOrderInput_1.SortOrderInput)
+    tslib_1.__metadata("design:type", String)
 ], DashboardslidesOrderByWithAggregationInput.prototype, "description", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => DashboardslidesCountOrderByAggregateInput_1.DashboardslidesCountOrderByAggregateInput, {

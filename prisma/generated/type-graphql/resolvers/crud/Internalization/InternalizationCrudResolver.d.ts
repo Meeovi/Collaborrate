@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateInternalizationArgs } from "./args/AggregateInternalizationArgs";
 import { CreateOneInternalizationArgs } from "./args/CreateOneInternalizationArgs";
 import { DeleteManyInternalizationArgs } from "./args/DeleteManyInternalizationArgs";

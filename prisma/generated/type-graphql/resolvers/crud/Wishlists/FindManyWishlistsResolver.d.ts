@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindManyWishlistsArgs } from "./args/FindManyWishlistsArgs";
 import { Wishlists } from "../../../models/Wishlists";
 export declare class FindManyWishlistsResolver {

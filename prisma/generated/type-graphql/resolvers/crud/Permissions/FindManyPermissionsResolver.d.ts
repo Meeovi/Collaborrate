@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindManyPermissionsArgs } from "./args/FindManyPermissionsArgs";
 import { Permissions } from "../../../models/Permissions";
 export declare class FindManyPermissionsResolver {

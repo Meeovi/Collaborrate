@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpdateOneThemesArgs } from "./args/UpdateOneThemesArgs";
 import { Themes } from "../../../models/Themes";
 export declare class UpdateOneThemesResolver {

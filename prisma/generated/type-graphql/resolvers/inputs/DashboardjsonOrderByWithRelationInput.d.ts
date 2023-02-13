@@ -1,9 +1,8 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class DashboardjsonOrderByWithRelationInput {
     id?: "asc" | "desc" | undefined;
     name?: "asc" | "desc" | undefined;
-    url?: SortOrderInput | undefined;
-    description?: SortOrderInput | undefined;
-    definition?: SortOrderInput | undefined;
-    format?: SortOrderInput | undefined;
+    url?: "asc" | "desc" | undefined;
+    description?: "asc" | "desc" | undefined;
+    definition?: "asc" | "desc" | undefined;
+    format?: "asc" | "desc" | undefined;
 }

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindFirstUpload_fileOrThrowArgs } from "./args/FindFirstUpload_fileOrThrowArgs";
 import { Upload_file } from "../../../models/Upload_file";
 export declare class FindFirstUpload_fileOrThrowResolver {

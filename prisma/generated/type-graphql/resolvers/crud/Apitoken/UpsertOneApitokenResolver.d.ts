@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpsertOneApitokenArgs } from "./args/UpsertOneApitokenArgs";
 import { Apitoken } from "../../../models/Apitoken";
 export declare class UpsertOneApitokenResolver {

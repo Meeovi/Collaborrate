@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateDashboardrestapiArgs } from "./args/AggregateDashboardrestapiArgs";
 import { AggregateDashboardrestapi } from "../../outputs/AggregateDashboardrestapi";
 export declare class AggregateDashboardrestapiResolver {

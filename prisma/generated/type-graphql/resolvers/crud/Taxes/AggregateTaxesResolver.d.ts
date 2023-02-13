@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateTaxesArgs } from "./args/AggregateTaxesArgs";
 import { AggregateTaxes } from "../../outputs/AggregateTaxes";
 export declare class AggregateTaxesResolver {

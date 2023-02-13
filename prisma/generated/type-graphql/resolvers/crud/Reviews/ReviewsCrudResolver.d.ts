@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateReviewsArgs } from "./args/AggregateReviewsArgs";
 import { CreateOneReviewsArgs } from "./args/CreateOneReviewsArgs";
 import { DeleteManyReviewsArgs } from "./args/DeleteManyReviewsArgs";

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindFirstContent_typeOrThrowArgs } from "./args/FindFirstContent_typeOrThrowArgs";
 import { Content_type } from "../../../models/Content_type";
 export declare class FindFirstContent_typeOrThrowResolver {

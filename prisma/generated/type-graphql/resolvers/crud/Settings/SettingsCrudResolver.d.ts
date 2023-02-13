@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateSettingsArgs } from "./args/AggregateSettingsArgs";
 import { CreateOneSettingsArgs } from "./args/CreateOneSettingsArgs";
 import { DeleteManySettingsArgs } from "./args/DeleteManySettingsArgs";

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { GroupByUpload_fileArgs } from "./args/GroupByUpload_fileArgs";
 import { Upload_fileGroupBy } from "../../outputs/Upload_fileGroupBy";
 export declare class GroupByUpload_fileResolver {

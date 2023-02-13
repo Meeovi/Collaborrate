@@ -1,4 +1,3 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 import { TransactionsAvgOrderByAggregateInput } from "../inputs/TransactionsAvgOrderByAggregateInput";
 import { TransactionsCountOrderByAggregateInput } from "../inputs/TransactionsCountOrderByAggregateInput";
 import { TransactionsMaxOrderByAggregateInput } from "../inputs/TransactionsMaxOrderByAggregateInput";
@@ -9,11 +8,11 @@ export declare class TransactionsOrderByWithAggregationInput {
     order_id?: "asc" | "desc" | undefined;
     transaction_id?: "asc" | "desc" | undefined;
     parent_transaction_id?: "asc" | "desc" | undefined;
-    created?: SortOrderInput | undefined;
+    created?: "asc" | "desc" | undefined;
     payment_method?: "asc" | "desc" | undefined;
-    closed?: SortOrderInput | undefined;
-    customer_payment?: SortOrderInput | undefined;
-    orders?: SortOrderInput | undefined;
+    closed?: "asc" | "desc" | undefined;
+    customer_payment?: "asc" | "desc" | undefined;
+    orders?: "asc" | "desc" | undefined;
     _count?: TransactionsCountOrderByAggregateInput | undefined;
     _avg?: TransactionsAvgOrderByAggregateInput | undefined;
     _max?: TransactionsMaxOrderByAggregateInput | undefined;

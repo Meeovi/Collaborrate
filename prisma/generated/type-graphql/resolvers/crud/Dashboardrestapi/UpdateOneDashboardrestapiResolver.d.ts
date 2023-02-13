@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpdateOneDashboardrestapiArgs } from "./args/UpdateOneDashboardrestapiArgs";
 import { Dashboardrestapi } from "../../../models/Dashboardrestapi";
 export declare class UpdateOneDashboardrestapiResolver {

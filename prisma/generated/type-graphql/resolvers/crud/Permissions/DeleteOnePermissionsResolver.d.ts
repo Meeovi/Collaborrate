@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { DeleteOnePermissionsArgs } from "./args/DeleteOnePermissionsArgs";
 import { Permissions } from "../../../models/Permissions";
 export declare class DeleteOnePermissionsResolver {

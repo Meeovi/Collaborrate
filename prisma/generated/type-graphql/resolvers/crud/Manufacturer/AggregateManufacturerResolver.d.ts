@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateManufacturerArgs } from "./args/AggregateManufacturerArgs";
 import { AggregateManufacturer } from "../../outputs/AggregateManufacturer";
 export declare class AggregateManufacturerResolver {

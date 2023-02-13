@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpsertOneSegmentsArgs } from "./args/UpsertOneSegmentsArgs";
 import { Segments } from "../../../models/Segments";
 export declare class UpsertOneSegmentsResolver {

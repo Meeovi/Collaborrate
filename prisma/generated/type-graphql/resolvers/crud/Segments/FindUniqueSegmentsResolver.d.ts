@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindUniqueSegmentsArgs } from "./args/FindUniqueSegmentsArgs";
 import { Segments } from "../../../models/Segments";
 export declare class FindUniqueSegmentsResolver {

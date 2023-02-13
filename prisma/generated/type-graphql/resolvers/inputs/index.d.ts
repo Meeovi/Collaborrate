@@ -612,7 +612,6 @@ export { ShipmentsUpdateInput } from "./ShipmentsUpdateInput";
 export { ShipmentsUpdateManyMutationInput } from "./ShipmentsUpdateManyMutationInput";
 export { ShipmentsWhereInput } from "./ShipmentsWhereInput";
 export { ShipmentsWhereUniqueInput } from "./ShipmentsWhereUniqueInput";
-export { SortOrderInput } from "./SortOrderInput";
 export { StatesAvgOrderByAggregateInput } from "./StatesAvgOrderByAggregateInput";
 export { StatesCountOrderByAggregateInput } from "./StatesCountOrderByAggregateInput";
 export { StatesCreateInput } from "./StatesCreateInput";

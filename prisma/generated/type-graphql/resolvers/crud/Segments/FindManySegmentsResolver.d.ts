@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindManySegmentsArgs } from "./args/FindManySegmentsArgs";
 import { Segments } from "../../../models/Segments";
 export declare class FindManySegmentsResolver {

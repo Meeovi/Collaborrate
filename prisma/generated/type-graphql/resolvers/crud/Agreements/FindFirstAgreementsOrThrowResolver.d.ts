@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindFirstAgreementsOrThrowArgs } from "./args/FindFirstAgreementsOrThrowArgs";
 import { Agreements } from "../../../models/Agreements";
 export declare class FindFirstAgreementsOrThrowResolver {

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregatePluginsArgs } from "./args/AggregatePluginsArgs";
 import { CreateOnePluginsArgs } from "./args/CreateOnePluginsArgs";
 import { DeleteManyPluginsArgs } from "./args/DeleteManyPluginsArgs";

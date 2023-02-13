@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateChannelsArgs } from "./args/AggregateChannelsArgs";
 import { CreateOneChannelsArgs } from "./args/CreateOneChannelsArgs";
 import { DeleteManyChannelsArgs } from "./args/DeleteManyChannelsArgs";

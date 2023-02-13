@@ -1,10 +1,9 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class InternalizationOrderByWithRelationInput {
     id?: "asc" | "desc" | undefined;
-    created_at?: SortOrderInput | undefined;
-    name?: SortOrderInput | undefined;
-    region?: SortOrderInput | undefined;
-    description?: SortOrderInput | undefined;
-    default?: SortOrderInput | undefined;
-    website?: SortOrderInput | undefined;
+    created_at?: "asc" | "desc" | undefined;
+    name?: "asc" | "desc" | undefined;
+    region?: "asc" | "desc" | undefined;
+    description?: "asc" | "desc" | undefined;
+    default?: "asc" | "desc" | undefined;
+    website?: "asc" | "desc" | undefined;
 }

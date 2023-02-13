@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindFirstDashboardjsonOrThrowArgs } from "./args/FindFirstDashboardjsonOrThrowArgs";
 import { Dashboardjson } from "../../../models/Dashboardjson";
 export declare class FindFirstDashboardjsonOrThrowResolver {

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpdateOneApitokenArgs } from "./args/UpdateOneApitokenArgs";
 import { Apitoken } from "../../../models/Apitoken";
 export declare class UpdateOneApitokenResolver {

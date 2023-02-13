@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindFirstIntegrationsArgs } from "./args/FindFirstIntegrationsArgs";
 import { Integrations } from "../../../models/Integrations";
 export declare class FindFirstIntegrationsResolver {

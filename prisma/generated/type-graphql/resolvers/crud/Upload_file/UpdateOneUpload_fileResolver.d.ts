@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpdateOneUpload_fileArgs } from "./args/UpdateOneUpload_fileArgs";
 import { Upload_file } from "../../../models/Upload_file";
 export declare class UpdateOneUpload_fileResolver {

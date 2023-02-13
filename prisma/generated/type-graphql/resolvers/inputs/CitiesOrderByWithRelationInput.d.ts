@@ -1,10 +1,9 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class CitiesOrderByWithRelationInput {
     id?: "asc" | "desc" | undefined;
     name?: "asc" | "desc" | undefined;
-    description?: SortOrderInput | undefined;
-    state?: SortOrderInput | undefined;
-    country?: SortOrderInput | undefined;
-    postalCode?: SortOrderInput | undefined;
-    image?: SortOrderInput | undefined;
+    description?: "asc" | "desc" | undefined;
+    state?: "asc" | "desc" | undefined;
+    country?: "asc" | "desc" | undefined;
+    postalCode?: "asc" | "desc" | undefined;
+    image?: "asc" | "desc" | undefined;
 }

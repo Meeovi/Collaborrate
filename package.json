@@ -1,6 +1,6 @@
 {
    "name": "alternatecms",
-   "version": "0.0.4",
+   "version": "0.0.5",
    "description": "A headless content management system with ecommerce features, graphql, Nuxtjs, and Prisma ORM.",
    "author": "Sebastian Hilton (https://www.sebastianhilton.com)",
    "homepage": "https://www.alternatecms.com",
@@ -42,7 +42,7 @@
       "@nuxt/content": "^2.3.0",
       "@nuxtjs/apollo": "^5.0.0-alpha.5",
       "@nuxtjs/i18n": "^8.0.0-beta.8",
-      "@prisma/client": "^4.6.1",
+      "@prisma/client": "^4.10.1",
       "@sidebase/nuxt-auth": "^0.3.3",
       "@sidebase/nuxt-prisma": "^0.1.0",
       "@types/node": "^16.11.10",
@@ -50,7 +50,7 @@
       "graphql": "^15.8.0",
       "npm-run-all": "^4.1.5",
       "nuxt": "^3.2.0",
-      "prisma": "^4.7.1",
+      "prisma": "^4.10.1",
       "sitemap": "^7.1.1",
       "typescript": "4.5.2"
    },
@@ -108,7 +108,7 @@
       "ts-node": "^10.9.1",
       "tslib": "^2.4.1",
       "type-graphql": "^1.1.1",
-      "typegraphql-prisma": "^0.23.1",
+      "typegraphql-prisma": "^0.23.5",
       "vue-chartjs": "^5.2.0",
       "vuetify": "^3.0.5"
    }

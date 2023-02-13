@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateWishlistsArgs } from "./args/AggregateWishlistsArgs";
 import { CreateOneWishlistsArgs } from "./args/CreateOneWishlistsArgs";
 import { DeleteManyWishlistsArgs } from "./args/DeleteManyWishlistsArgs";

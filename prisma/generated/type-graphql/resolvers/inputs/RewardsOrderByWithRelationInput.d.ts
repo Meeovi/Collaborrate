@@ -1,15 +1,14 @@
-import { SortOrderInput } from "../inputs/SortOrderInput";
 export declare class RewardsOrderByWithRelationInput {
     id?: "asc" | "desc" | undefined;
     name?: "asc" | "desc" | undefined;
-    slug?: SortOrderInput | undefined;
-    level?: SortOrderInput | undefined;
-    created_at?: SortOrderInput | undefined;
-    coupons?: SortOrderInput | undefined;
-    expiration?: SortOrderInput | undefined;
-    categories?: SortOrderInput | undefined;
-    articles?: SortOrderInput | undefined;
-    products?: SortOrderInput | undefined;
-    customers?: SortOrderInput | undefined;
-    users?: SortOrderInput | undefined;
+    slug?: "asc" | "desc" | undefined;
+    level?: "asc" | "desc" | undefined;
+    created_at?: "asc" | "desc" | undefined;
+    coupons?: "asc" | "desc" | undefined;
+    expiration?: "asc" | "desc" | undefined;
+    categories?: "asc" | "desc" | undefined;
+    articles?: "asc" | "desc" | undefined;
+    products?: "asc" | "desc" | undefined;
+    customers?: "asc" | "desc" | undefined;
+    users?: "asc" | "desc" | undefined;
 }

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { DeleteOneChannelsArgs } from "./args/DeleteOneChannelsArgs";
 import { Channels } from "../../../models/Channels";
 export declare class DeleteOneChannelsResolver {

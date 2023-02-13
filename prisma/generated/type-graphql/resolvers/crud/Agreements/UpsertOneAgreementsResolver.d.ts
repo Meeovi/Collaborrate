@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { UpsertOneAgreementsArgs } from "./args/UpsertOneAgreementsArgs";
 import { Agreements } from "../../../models/Agreements";
 export declare class UpsertOneAgreementsResolver {

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindFirstSegmentsArgs } from "./args/FindFirstSegmentsArgs";
 import { Segments } from "../../../models/Segments";
 export declare class FindFirstSegmentsResolver {

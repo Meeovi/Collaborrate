@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregatePartnersArgs } from "./args/AggregatePartnersArgs";
 import { CreateOnePartnersArgs } from "./args/CreateOnePartnersArgs";
 import { DeleteManyPartnersArgs } from "./args/DeleteManyPartnersArgs";

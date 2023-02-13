@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateEmailsArgs } from "./args/AggregateEmailsArgs";
 import { CreateOneEmailsArgs } from "./args/CreateOneEmailsArgs";
 import { DeleteManyEmailsArgs } from "./args/DeleteManyEmailsArgs";

@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateInternalizationArgs } from "./args/AggregateInternalizationArgs";
 import { AggregateInternalization } from "../../outputs/AggregateInternalization";
 export declare class AggregateInternalizationResolver {

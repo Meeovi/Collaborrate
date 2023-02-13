@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { FindFirstPermissionsOrThrowArgs } from "./args/FindFirstPermissionsOrThrowArgs";
 import { Permissions } from "../../../models/Permissions";
 export declare class FindFirstPermissionsOrThrowResolver {

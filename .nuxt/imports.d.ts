@@ -11,6 +11,6 @@ export { useContentHelpers } from '../node_modules/@nuxt/content/dist/runtime/co
 export { useContentHead } from '../node_modules/@nuxt/content/dist/runtime/composables/head';
 export { withContentBase, useUnwrap, useContentDisabled as useContentState, useContentDisabled as useContent } from '../node_modules/@nuxt/content/dist/runtime/composables/utils';
 export { fetchContentNavigation } from '../node_modules/@nuxt/content/dist/runtime/composables/navigation';
-export { useI18n } from '../node_modules/@nuxtjs/i18n/node_modules/vue-i18n/dist/vue-i18n.runtime';
+export { useI18n } from '../node_modules/@nuxtjs/i18n/node_modules/vue-i18n/dist/vue-i18n';
 export { useRouteBaseName, useLocalePath, useLocaleRoute, useSwitchLocalePath, useLocaleHead, useBrowserLocale, useCookieLocale, defineI18nRoute } from '../node_modules/@nuxtjs/i18n/dist/runtime/composables';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';

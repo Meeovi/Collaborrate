@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from "graphql";
+import type { GraphQLResolveInfo } from "graphql";
 import { AggregateDashboardslidesArgs } from "./args/AggregateDashboardslidesArgs";
 import { AggregateDashboardslides } from "../../outputs/AggregateDashboardslides";
 export declare class AggregateDashboardslidesResolver {
