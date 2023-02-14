@@ -1,6 +1,12 @@
 <template>
     <div>
-        <v-row class="contentDashboard">
+        <v-row class="contentRight" style="padding-left: 10px; padding-top: 10px;">
+            <v-col cols="6">
+                <blogChart />
+            </v-col>
+            <v-col cols="6">
+                <blogChart />
+            </v-col>
             <v-col cols="3">
                 <h4>Total Members</h4>
                 <p>0</p>
@@ -43,11 +49,12 @@
 </template>
 
 <script>
-import recentposts from '../../components/content/blog/dashboard/recentposts.vue'
-import memberactivity from '../../components/content/blog/dashboard/memberactivity.vue'
+import blogChart from '../../../components/charts/Blog/blogChart.vue'
+import recentposts from '../../../components/content/blog/dashboard/recentposts.vue'
+import memberactivity from '../../../components/content/blog/dashboard/memberactivity.vue'
 
     export default {
-        components: { recentposts, memberactivity },
+        components: { blogChart, recentposts, memberactivity },
         data() {
             return {
                 tab: null,

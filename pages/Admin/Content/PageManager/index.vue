@@ -1,6 +1,5 @@
 <template>
-    <v-card class="contentSection">
-        <v-card-title>
+    <v-card class="contentRight">
             <v-toolbar style="background-color: yellow;color: black;">
                 <v-col cols="10">
                     <v-toolbar-title>Pages</v-toolbar-title>
@@ -9,17 +8,46 @@
                     <addPage />
                 </v-col>
             </v-toolbar>
-            <v-spacer></v-spacer>
-            <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details>
-            </v-text-field>
-        </v-card-title>
-        <v-data-table v-model="selected" show-select class="elevation-1" 
- item-value="name" :headers="headers" :items="desserts" :search="search"></v-data-table>
+            <v-table fixed-header height="300px" width="100%">
+                        <thead>
+                            <tr>
+                                <th class="text-left">
+                                    Page ID
+                                </th>
+                                <th class="text-left">
+                                    Page Name
+                                </th>
+                                <th class="text-left">
+                                    URL
+                                </th>
+                                <th class="text-left">
+                                    Meta Title
+                                </th>
+                                <th class="text-left">
+                                    Created
+                                </th>
+                                <th class="text-left">
+                                    Edit
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody v-for="pages in findManyDashboards" :key="pages.id">
+                            <tr>
+                                <td>{{ pages.id }}</td>
+                                <td>{{ pages.title }}</td>
+                                <td>{{ pages.url_key }}</td>
+                                <td>{{ pages.meta_title }}</td>
+                                <td>{{ pages.created_at }}</td>
+                                <td><a :href="`/admin/database/${pages.id}`">
+                                        <!--<editUser />--></a></td>
+                            </tr>
+                        </tbody>
+                    </v-table>
     </v-card>
 </template>
 
 <script>
-import addPage from '../../components/content/pages/createPage.vue'
+import addPage from '../../../../components/content/pages/createPage.vue'
 
     export default {
         components: { addPage },

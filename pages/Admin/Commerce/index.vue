@@ -1,6 +1,13 @@
 <template>
-    <div class="contentRight">
-        <v-row class="contentRight">
+    <div class="contentRight" style="padding: 15px;">
+        <v-row>
+            <v-col cols="6">
+                <commerceChart />
+            </v-col>
+            <v-col cols="6">
+                <commerceChart />
+            </v-col>
+            <v-divider></v-divider>
             <v-col cols="6">
                 <h4>Lifetime Sales</h4>
                 <p>$0.00</p>
@@ -61,13 +68,14 @@
 </template>
 
 <script>
-import lastorders from '../../../../components/content/inventory/dashboard/lastorders.vue'
-import bestsellers from '../../../../components/content/inventory/dashboard/bestsellers.vue'
-import mostviewed from '../../../../components/content/inventory/dashboard/mostviewed.vue'
-import lastsearch from '../../../../components/content/inventory/dashboard/lastsearch.vue'
+import commerceChart from '../../../components/charts/eCommerce/commerceChart.vue'
+import lastorders from '../../../components/content/inventory/dashboard/lastorders.vue'
+import bestsellers from '../../../components/content/inventory/dashboard/bestsellers.vue'
+import mostviewed from '../../../components/content/inventory/dashboard/mostviewed.vue'
+import lastsearch from '../../../components/content/inventory/dashboard/lastsearch.vue'
 
     export default {
-        components: { lastorders, bestsellers, mostviewed, lastsearch },
+        components: { commerceChart, lastorders, bestsellers, mostviewed, lastsearch },
         data() {
             return {
                 tab: null,
