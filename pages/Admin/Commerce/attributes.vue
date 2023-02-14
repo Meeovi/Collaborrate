@@ -1,27 +1,27 @@
 <template>
-    <div>
-        <v-toolbar>
+    <div class="contentRight">
+        <v-toolbar color="warning">
             <v-col cols="9">
                 <v-toolbar-title>Product Attributes</v-toolbar-title>
             </v-col>
             <v-col cols="2">
-                <createPage />
+                <createAttribute />
             </v-col>
         </v-toolbar>
         <v-table fixed-header height="300px" width="100%">
             <thead>
                 <tr>
                     <th class="text-left">
-                        Page ID
+                        Attribute ID
                     </th>
                     <th class="text-left">
-                        Page Name
+                        Default Label
                     </th>
                     <th class="text-left">
-                        URL
+                        Attribute Code
                     </th>
                     <th class="text-left">
-                        Meta Title
+                        Attribute Class
                     </th>
                     <th class="text-left">
                         Created
@@ -31,15 +31,14 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
+            <tbody v-for="attributes in findManyAttributes" :key="attributes.id">
                 <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
-                            <!--<editUser />--></a></td>
+                    <td>{{ attributes.id }}</td>
+                    <td>{{ attributes.default_label }}</td>
+                    <td>{{ attributes.attribute_code }}</td>
+                    <td>{{ attributes.attribute_class }}</td>
+                    <td>{{ attributes.created_at }}</td>
+                    <td><a :href="`/admin/database/${attributes.id}`"></a></td>
                 </tr>
             </tbody>
         </v-table>
@@ -47,25 +46,24 @@
 </template>
 
 <script>
-    import createPage from './addInventory/add-attribute.vue'
-    //import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import createAttribute from '../../../components/content/inventory/addInventory/add-attribute.vue'
+    import findManyAttributes from '../../../graphql/query/findManyAttributes.gql'
 
     export default {
         components: {
-            createPage,
-            //editUser
+            createAttribute,
         },
-    /*    data() {
+        data() {
             return {
-                findManyPages: [],
+                findManyAttributes: [],
             }
         },
         apollo: {
-            findManyPages: {
+            findManyAttributes: {
                 prefetch: true,
-                query: findManyPages
+                query: findManyAttributes
             }
-        }, */
+        },
     }
 </script>
 
@@ -74,5 +72,5 @@
         title: 'Product Attributes',
     });
 
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
+const { data: attributes } = await useAsyncData(() => $fetch("/api/attributes"));
 </script>

@@ -42,7 +42,6 @@ body {
 }
 
 .contentRight {
-    padding-top: 5px;
     padding-right: 5px;
     top: 0px !important;
     height: 100vh !important;
@@ -69,7 +68,7 @@ body {
     display: block !important;
 }
 
-.features3, .team1, .content-wrap {
+.features3, .team1, .card-wrap {
     background-color: transparent !important;
 }
 

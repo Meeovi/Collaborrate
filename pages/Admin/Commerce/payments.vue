@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <v-toolbar>
+    <div class="contentRight">
+        <v-toolbar color="warning">
             <v-col cols="9">
                 <v-toolbar-title>Payments</v-toolbar-title>
             </v-col>
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-    import createPayment from './addInventory/add-payment.vue'
+    import createPayment from '../../../components/content/inventory/addInventory/add-payment.vue'
     //import findManyPages from '../../../graphql/query/findManyPages.gql'
 
     export default {

@@ -19,31 +19,36 @@
                     <v-card-text>
                         <v-container>
                             <v-row>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal first name*" required></v-text-field>
+                                <v-col cols="6">
+                                    <v-text-field v-model="name" label="Channel Name*" required></v-text-field>
                                 </v-col>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal middle name" hint="example of helper text only on focus">
+                                <v-col cols="6">
+                                    <v-text-field v-model="code" label="Channel Code"></v-text-field>
+                                </v-col>
+                                <v-col cols="12">
+                                    <v-text-field v-model="client_id" label="Client ID"></v-text-field>
+                                </v-col>
+                                <v-col cols="12">
+                                    <v-text-field v-model="client_secret" label="Client Secret"></v-text-field>
+                                </v-col>
+                                <v-col cols="12">
+                                    <v-text-field v-model="client_zone" label="Client Zone"></v-text-field>
+                                </v-col>
+                                <v-col cols="12">
+                                    <v-text-field v-model="currency" label="Currency">
                                     </v-text-field>
                                 </v-col>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal last name*" hint="example of persistent helper text"
-                                        persistent-hint required></v-text-field>
+                                <v-col cols="6">
+                                    <v-autocomplete v-model="include_tax" :items="['Yes', 'No']" label="Include Tax"></v-autocomplete>
                                 </v-col>
-                                <v-col cols="12">
-                                    <v-text-field label="Email*" required></v-text-field>
+                                <v-col cols="6">
+                                    <v-autocomplete v-model="default_lang" :items="['en', 'es']" label="Default Language"></v-autocomplete>
                                 </v-col>
-                                <v-col cols="12">
-                                    <v-text-field label="Password*" type="password" required></v-text-field>
+                                <v-col cols="6">
+                                    <v-autocomplete v-model="default_shipping" :items="['en']" label="Default Shipping"></v-autocomplete>
                                 </v-col>
-                                <v-col cols="12" sm="6">
-                                    <v-select :items="['0-17', '18-29', '30-54', '54+']" label="Age*" required>
-                                    </v-select>
-                                </v-col>
-                                <v-col cols="12" sm="6">
-                                    <v-autocomplete
-                                        :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-                                        label="Interests" multiple></v-autocomplete>
+                                <v-col cols="6">
+                                    <v-autocomplete v-model="default_zone" :items="['en']" label="Default Zone"></v-autocomplete>
                                 </v-col>
                             </v-row>
                         </v-container>

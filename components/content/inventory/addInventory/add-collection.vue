@@ -19,31 +19,30 @@
                     <v-card-text>
                         <v-container>
                             <v-row>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal first name*" required></v-text-field>
+                                <v-col cols="6">
+                                    <v-text-field v-model="name" label="Collection Name*" required></v-text-field>
                                 </v-col>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal middle name" hint="example of helper text only on focus">
+                                <v-col cols="6">
+                                    <v-file-input v-model="image" accept="image/png, image/jpeg, image/bmp" prepend-icon="fas fa-camera" label="Collection Image" multiple></v-file-input>
+                                </v-col>
+                                <v-col cols="12">
+                                    <v-text-field v-model="description" label="Collection Description" hint="What is this collection about?">
                                     </v-text-field>
                                 </v-col>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal last name*" hint="example of persistent helper text"
-                                        persistent-hint required></v-text-field>
+
+                                <v-col cols="12">
+                                    <h5>Search Engine Optimization (SEO)</h5>
+                                    <v-divider></v-divider>
+                                </v-col>
+
+                                <v-col cols="6">
+                                    <v-text-field v-model="meta_title" label="Collection SEO Name"></v-text-field>
+                                </v-col>
+                                <v-col cols="6">
+                                    <v-text-field v-model="meta_keywords" label="Collection SEO Keywords"></v-text-field>
                                 </v-col>
                                 <v-col cols="12">
-                                    <v-text-field label="Email*" required></v-text-field>
-                                </v-col>
-                                <v-col cols="12">
-                                    <v-text-field label="Password*" type="password" required></v-text-field>
-                                </v-col>
-                                <v-col cols="12" sm="6">
-                                    <v-select :items="['0-17', '18-29', '30-54', '54+']" label="Age*" required>
-                                    </v-select>
-                                </v-col>
-                                <v-col cols="12" sm="6">
-                                    <v-autocomplete
-                                        :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-                                        label="Interests" multiple></v-autocomplete>
+                                    <v-textarea v-model="meta_description" label="Collection SEO Description"></v-textarea>
                                 </v-col>
                             </v-row>
                         </v-container>

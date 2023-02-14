@@ -1,11 +1,11 @@
 <template>
-    <div>
-        <v-toolbar>
+    <div class="contentRight">
+        <v-toolbar color="warning">
             <v-col cols="9">
-                <v-toolbar-title>Quotes</v-toolbar-title>
+                <v-toolbar-title>Vendors</v-toolbar-title>
             </v-col>
             <v-col cols="2">
-                <createQuote />
+                <createVendor />
             </v-col>
         </v-toolbar>
         <v-table fixed-header height="300px" width="100%">
@@ -47,12 +47,12 @@
 </template>
 
 <script>
-    import createQuote from './addInventory/add-quote.vue'
+    import createVendor from '../../../components/content/inventory/addInventory/add-vendor.vue'
     //import findManyPages from '../../../graphql/query/findManyPages.gql'
 
     export default {
         components: {
-            createQuote,
+            createVendor,
             //editUser
         },
     /*    data() {
@@ -71,7 +71,7 @@
 
 <script setup>
     useHead({
-        title: 'Quotes',
+        title: 'Vendors',
     });
 
 const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));

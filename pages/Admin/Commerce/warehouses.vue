@@ -1,33 +1,27 @@
 <template>
-    <div>
-        <v-toolbar>
+    <div class="contentRight">
+        <v-toolbar color="warning">
             <v-col cols="9">
-                <v-toolbar-title>Channels</v-toolbar-title>
+                <v-toolbar-title>Warehouses</v-toolbar-title>
             </v-col>
             <v-col cols="2">
-                <createChannel />
+                <createWarehouse />
             </v-col>
         </v-toolbar>
         <v-table fixed-header height="300px" width="100%">
             <thead>
                 <tr>
                     <th class="text-left">
-                        Page ID
+                        Warehouse ID
                     </th>
                     <th class="text-left">
-                        Page Name
+                        Warehouse Name
                     </th>
                     <th class="text-left">
-                        URL
+                        Shipping Zones
                     </th>
                     <th class="text-left">
-                        Meta Title
-                    </th>
-                    <th class="text-left">
-                        Created
-                    </th>
-                    <th class="text-left">
-                        Edit
+                        Actions
                     </th>
                 </tr>
             </thead>
@@ -36,8 +30,6 @@
                     <td>{{ pages.id }}</td>
                     <td>{{ pages.title }}</td>
                     <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
                     <td><a :href="`/admin/database/${pages.id}`">
                             <!--<editUser />--></a></td>
                 </tr>
@@ -47,23 +39,23 @@
 </template>
 
 <script>
-    import createChannel from './addInventory/add-channel.vue'
-    //import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import createWarehouse from '../../../components/content/inventory/addInventory/add-warehouse.vue'
+    //import findManyWarehouses from '../../../graphql/query/findManyWarehouses.gql'
 
     export default {
         components: {
-            createChannel,
+            createWarehouse,
             //editUser
         },
     /*    data() {
             return {
-                findManyPages: [],
+                findManyWarehouses: [],
             }
         },
         apollo: {
-            findManyPages: {
+            findManyWarehouses: {
                 prefetch: true,
-                query: findManyPages
+                query: findManyWarehouses
             }
         }, */
     }
@@ -71,7 +63,7 @@
 
 <script setup>
     useHead({
-        title: 'Channels',
+        title: 'Warehouses',
     });
 
 const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));

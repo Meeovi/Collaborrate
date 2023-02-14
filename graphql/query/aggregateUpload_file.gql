@@ -37,6 +37,7 @@ query {
       created_at
       created_by
       ext
+      formats
       hash
       height
       id
@@ -44,6 +45,7 @@ query {
       name
       previewUrl
       provider
+      provider_metadata
       size
       updated_at
       updated_by
@@ -56,6 +58,7 @@ query {
       created_at
       created_by
       ext
+      formats
       hash
       height
       id
@@ -63,6 +66,7 @@ query {
       name
       previewUrl
       provider
+      provider_metadata
       size
       updated_at
       updated_by

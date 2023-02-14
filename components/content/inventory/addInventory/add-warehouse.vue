@@ -19,31 +19,49 @@
                     <v-card-text>
                         <v-container>
                             <v-row>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal first name*" required></v-text-field>
+                                <v-col cols="12">
+                                    <h5>General Information</h5>
+                                    <v-divider></v-divider>
                                 </v-col>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal middle name" hint="example of helper text only on focus">
-                                    </v-text-field>
+                                <v-col cols="6">
+                                    <v-text-field v-model="name" label="Warehouse Name*" required></v-text-field>
                                 </v-col>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal last name*" hint="example of persistent helper text"
-                                        persistent-hint required></v-text-field>
+                                <v-col cols="6">
+                                    <v-text-field v-model="websites" type="url" label="Warehouse Website"></v-text-field>
                                 </v-col>
                                 <v-col cols="12">
-                                    <v-text-field label="Email*" required></v-text-field>
+                                    <v-textarea v-model="description" label="Warehouse Description"></v-textarea>
                                 </v-col>
-                                <v-col cols="12">
-                                    <v-text-field label="Password*" type="password" required></v-text-field>
-                                </v-col>
-                                <v-col cols="12" sm="6">
-                                    <v-select :items="['0-17', '18-29', '30-54', '54+']" label="Age*" required>
+                                <v-col cols="6">
+                                    <v-select v-model="category" :items="['0-17']" label="Category">
                                     </v-select>
                                 </v-col>
-                                <v-col cols="12" sm="6">
-                                    <v-autocomplete
-                                        :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-                                        label="Interests" multiple></v-autocomplete>
+                                <v-col cols="6">
+                                    <v-select v-model="isPublic" :items="['public', 'private']" label="Is Public?">
+                                    </v-select>
+                                </v-col>
+                                <v-col cols="12">
+                                    <v-select v-model="products" :items="['0-17']" label="Products">
+                                    </v-select>
+                                </v-col>
+
+                                <v-col cols="12">
+                                    <h5>Address Information</h5>
+                                    <v-divider></v-divider>
+                                </v-col>
+                                <v-col cols="6">
+                                    <v-text-field v-model="address" label="Address"></v-text-field>
+                                </v-col>
+                                <v-col cols="6">
+                                    <v-select v-model="city" :items="['0-17']" label="City">
+                                    </v-select>
+                                </v-col>
+                                <v-col cols="6">
+                                    <v-select v-model="state" :items="['0-17']" label="State">
+                                    </v-select>
+                                </v-col>
+                                <v-col cols="6">
+                                    <v-text-field v-model="postal" label="Postal"></v-text-field>
                                 </v-col>
                             </v-row>
                         </v-container>

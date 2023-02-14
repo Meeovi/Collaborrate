@@ -19,31 +19,24 @@
                     <v-card-text>
                         <v-container>
                             <v-row>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal first name*" required></v-text-field>
-                                </v-col>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal middle name" hint="example of helper text only on focus">
-                                    </v-text-field>
-                                </v-col>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal last name*" hint="example of persistent helper text"
-                                        persistent-hint required></v-text-field>
+                                <v-col cols="12">
+                                    <v-text-field v-model="type_name" label="Type Name*" hint="What is the name of the Type. Example: bag, service, etc" required></v-text-field>
                                 </v-col>
                                 <v-col cols="12">
-                                    <v-text-field label="Email*" required></v-text-field>
+                                    <v-text-field v-model="taxes" label="Taxes"></v-text-field>
                                 </v-col>
-                                <v-col cols="12">
-                                    <v-text-field label="Password*" type="password" required></v-text-field>
-                                </v-col>
-                                <v-col cols="12" sm="6">
-                                    <v-select :items="['0-17', '18-29', '30-54', '54+']" label="Age*" required>
+                                <v-col cols="6">
+                                    <v-select v-model="isShippable" :items="['Can be Shipped', 'Not Shippable']" label="Can Product Type be Shipped?">
                                     </v-select>
                                 </v-col>
-                                <v-col cols="12" sm="6">
-                                    <v-autocomplete
-                                        :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-                                        label="Interests" multiple></v-autocomplete>
+                                <v-col cols="6">
+                                    <v-text-field v-model="meta_name" label="Type SEO Name" hint="Used in searches"></v-text-field>
+                                </v-col>
+                                <v-col cols="6">
+                                    <v-text-field v-model="meta_url" type="url" label="Type SEO URL" hint="Used in searches"></v-text-field>
+                                </v-col>
+                                <v-col cols="12">
+                                    <v-textarea v-model="meta_description" label="Type SEO Description" hint="Used in searches"></v-textarea>
                                 </v-col>
                             </v-row>
                         </v-container>

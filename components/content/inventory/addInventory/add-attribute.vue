@@ -19,31 +19,31 @@
                     <v-card-text>
                         <v-container>
                             <v-row>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal first name*" required></v-text-field>
-                                </v-col>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal middle name" hint="example of helper text only on focus">
-                                    </v-text-field>
-                                </v-col>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal last name*" hint="example of persistent helper text"
-                                        persistent-hint required></v-text-field>
+                                <v-col cols="12">
+                                    <v-text-field v-model="default_label" label="Default Label*" hint="What is the name of the Attribute. Example: size, color, etc" required></v-text-field>
                                 </v-col>
                                 <v-col cols="12">
-                                    <v-text-field label="Email*" required></v-text-field>
+                                    <v-text-field v-model="attribute_code" label="Attribute Code" hint="This is used internally. Make sure you don't use spaces or more than 60 symbols."></v-text-field>
                                 </v-col>
                                 <v-col cols="12">
-                                    <v-text-field label="Password*" type="password" required></v-text-field>
+                                    <v-text-field v-model="attribute_class" label="Attribute Class"></v-text-field>
                                 </v-col>
-                                <v-col cols="12" sm="6">
-                                    <v-select :items="['0-17', '18-29', '30-54', '54+']" label="Age*" required>
+                                <v-col cols="6">
+                                    <v-select v-model="attribute_value" :items="['No', 'Yes']" label="Values Required*">
                                     </v-select>
                                 </v-col>
-                                <v-col cols="12" sm="6">
-                                    <v-autocomplete
-                                        :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-                                        label="Interests" multiple></v-autocomplete>
+                                <v-col cols="6">
+                                    <v-select v-model="isPublic" :items="['Private', 'Public']" label="Attribute Status">
+                                    </v-select>
+                                </v-col>
+                                <v-col cols="6">
+                                    <v-text-field v-model="meta_name" label="Attribute SEO Name" hint="Used in searches"></v-text-field>
+                                </v-col>
+                                <v-col cols="6">
+                                    <v-text-field v-model="meta_url" type="url" label="Attribute SEO URL" hint="Used in searches"></v-text-field>
+                                </v-col>
+                                <v-col cols="12">
+                                    <v-textarea v-model="meta_description" label="Attribute SEO Description" hint="Used in searches"></v-textarea>
                                 </v-col>
                             </v-row>
                         </v-container>

@@ -1,11 +1,11 @@
 <template>
-    <div>
-        <v-toolbar>
+    <div class="contentRight">
+        <v-toolbar color="warning">
             <v-col cols="9">
-                <v-toolbar-title>Discounts</v-toolbar-title>
+                <v-toolbar-title>Product Types</v-toolbar-title>
             </v-col>
             <v-col cols="2">
-                <createDiscount />
+                <createProductType />
             </v-col>
         </v-toolbar>
         <v-table fixed-header height="300px" width="100%">
@@ -47,12 +47,12 @@
 </template>
 
 <script>
-    import createDiscount from './addInventory/add-discount.vue'
+    import createProductType from '../../../components/content/inventory/addInventory/add-product-type.vue'
     //import findManyPages from '../../../graphql/query/findManyPages.gql'
 
     export default {
         components: {
-            createDiscount,
+            createProductType,
             //editUser
         },
     /*    data() {
@@ -71,7 +71,7 @@
 
 <script setup>
     useHead({
-        title: 'Discounts',
+        title: 'Product Types',
     });
 
 const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));

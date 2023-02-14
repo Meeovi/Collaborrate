@@ -13,7 +13,6 @@ query {
       date
       email
       id
-      json
       link
       media
       number
@@ -68,7 +67,6 @@ query {
     date
     email
     id
-    json
     link
     media
     number

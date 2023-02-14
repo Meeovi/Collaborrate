@@ -61,14 +61,50 @@
                   <template v-slot:activator="{ props }">
                     <v-list-item v-bind="props" title="Content Manager"></v-list-item>
                   </template>
-                  <v-list-item prepend-icon="fas fa-feather" title="Blog" value="Blog" href="/Admin/Content/Blog"></v-list-item>
                   <v-list-item prepend-icon="fas fa-th" title="Categories" value="Categories" href="/Admin/Content/Categories"></v-list-item>
                   <v-list-item prepend-icon="fas fa-tag" title="Tags" value="Tags" href="/Admin/Content/Tags"></v-list-item>
-                  <v-list-item prepend-icon="fas fa-shopping-cart" title="Inventory" value="Inventory" href="/Admin/Content/Inventory"></v-list-item>
-                  <v-list-item prepend-icon="fas fa-bullhorn" title="Marketing" value="Marketing" href="/Admin/Content/Marketing"></v-list-item>
                   <v-list-item prepend-icon="fas fa-desktop" title="Pages" value="desktop" href="/Admin/Content/PageManager/"></v-list-item>
                   <v-list-item prepend-icon="fas fa-icons" title="Media Manager" value="media manager" href="/Admin/Content/Media/"></v-list-item>
                 </v-list-group>
+
+                <!--Blog-->
+              <v-list-item prepend-icon="fas fa-feather" title="Blog" value="Blog" href="/Admin/Content/Blog"></v-list-item>
+
+                <!--Commerce-->
+              <v-list-group prepend-icon="fas fa-store" value="commerce">
+                  <template v-slot:activator="{ props }">
+                    <v-list-item v-bind="props" title="Commerce"></v-list-item>
+                  </template>
+                  <v-list-item prepend-icon="fas fa-shop" title="Dashboard" value="Dashboard" href="/Admin/Commerce/"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-handshake" title="Agreements" value="Agreements" href="/Admin/Commerce/Agreements"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-bag-shopping" title="Attributes" value="Attributes" href="/Admin/Commerce/Attributes"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-check-double" title="Channels" value="Channels" href="/Admin/Commerce/Channels"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-object-group" title="Collections" value="Collections" href="/Admin/Commerce/Collections"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-tags" title="Discounts" value="Discounts" href="/Admin/Commerce/Discounts"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-receipt" title="Invoices" value="Invoices" href="/Admin/Commerce/Invoices"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-credit-card" title="Payments" value="Payments" href="/Admin/Commerce/Payments"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-camera-retro" title="Product Types" value="Product Types" href="/Admin/Commerce/product-types"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-basket-shopping" title="Products" value="Products" href="/Admin/Commerce/Products"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-file-contract" title="Quotes" value="Quotes" href="/Admin/Commerce/Quotes"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-scale-balanced" title="Sales" value="Sales" href="/Admin/Commerce/Sales"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-scale-unbalanced-flip" title="Transactions" value="Transactions" href="/Admin/Commerce/Transactions"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-people-group" title="Vendors" value="Vendors" href="/Admin/Commerce/Vendors"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-warehouse" title="Warehouses" value="Warehouses" href="/Admin/Commerce/Warehouses"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-hand-sparkles" title="Wishlists" value="Wishlists" href="/Admin/Commerce/Wishlists"></v-list-item>
+              </v-list-group>
+
+              <!--Marketing-->
+              <v-list-group prepend-icon="fas fa-chart-simple" value="marketing">
+                  <template v-slot:activator="{ props }">
+                    <v-list-item v-bind="props" title="Marketing"></v-list-item>
+                  </template>
+                  <v-list-item prepend-icon="fas fa-timeline" title="Marketing Home" value="Marketing Home" href="/Admin/Marketing/"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-envelope" title="Communications" value="Communications" href="/Admin/Marketing/Communications"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-bullhorn" title="Engagement" value="Engagement" href="/Admin/Marketing/Engagement"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-person-rays" title="Events" value="Events" href="/Admin/Marketing/Events"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-magnifying-glass-arrow-right" title="Seo" value="Seo" href="/Admin/Marketing/Seo"></v-list-item>
+              </v-list-group>
+              
               <v-list-item prepend-icon="fas fa-users" title="Users" value="Users" href="/Admin/Users"></v-list-item>
               <v-list-item prepend-icon="fas fa-chart-simple" title="Dashboards" value="dashboards"
                 href="/Admin/Dashboard/explorer"></v-list-item>

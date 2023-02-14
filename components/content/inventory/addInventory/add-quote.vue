@@ -1,66 +1,154 @@
 <template>
-    <v-row justify="center">
-        <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition" persistent>
-            <template v-slot:activator="{ props }">
-                <v-btn v-bind="props" class="rightAddBtn">
-                    <v-icon start icon="fas fa-plus"></v-icon>Create Quote
-                </v-btn>
-            </template>
-            <v-card>
-                <form action="" method="post" @v-on:submit.prevent="addContent()">
-                    <v-toolbar dark color="primary">
-                        <v-btn icon dark @click="dialog = false">
-                            <v-icon icon="fas fa-circle-xmark"></v-icon>
-                        </v-btn>
-                        <v-card-title>
-                            <span class="text-h6">Create new Quote</span>
-                        </v-card-title>
-                    </v-toolbar>
-                <v-card-text>
-                    <v-container>
-                        <v-row>
-                            <v-col cols="12" sm="6" md="4">
-                                <v-text-field label="Legal first name*" required></v-text-field>
-                            </v-col>
-                            <v-col cols="12" sm="6" md="4">
-                                <v-text-field label="Legal middle name" hint="example of helper text only on focus">
-                                </v-text-field>
-                            </v-col>
-                            <v-col cols="12" sm="6" md="4">
-                                <v-text-field label="Legal last name*" hint="example of persistent helper text"
-                                    persistent-hint required></v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                                <v-text-field label="Email*" required></v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                                <v-text-field label="Password*" type="password" required></v-text-field>
-                            </v-col>
-                            <v-col cols="12" sm="6">
-                                <v-select :items="['0-17', '18-29', '30-54', '54+']" label="Age*" required></v-select>
-                            </v-col>
-                            <v-col cols="12" sm="6">
-                                <v-autocomplete
-                                    :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-                                    label="Interests" multiple></v-autocomplete>
-                            </v-col>
-                        </v-row>
-                    </v-container>
-                    <small>*indicates required field</small>
-                </v-card-text>
-                <v-card-actions>
-                    <v-spacer></v-spacer>
-                    <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
-                        Close
-                    </v-btn>
-                    <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
-                        Save
-                    </v-btn>
-                </v-card-actions>
-                </form>
-            </v-card>
-        </v-dialog>
-    </v-row>
+  <v-row justify="center">
+    <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition" persistent>
+      <template v-slot:activator="{ props }">
+        <v-btn v-bind="props" class="rightAddBtn">
+          <v-icon start icon="fas fa-plus"></v-icon>Create Quote
+        </v-btn>
+      </template>
+      <v-card>
+        <form action="" method="post" @v-on:submit.prevent="addContent()">
+          <v-toolbar dark color="primary">
+            <v-btn icon dark @click="dialog = false">
+              <v-icon icon="fas fa-circle-xmark"></v-icon>
+            </v-btn>
+            <v-card-title>
+              <span class="text-h6">Create new Quote</span>
+            </v-card-title>
+          </v-toolbar>
+          <v-card-text>
+            <v-container>
+              <v-row>
+                <v-col cols="12">
+                  <v-autocomplete v-model="line_item_name"
+                    :items="['Skiing']"
+                    label="Add item to quote" multiple></v-autocomplete>
+                </v-col>
+                <v-col cols="12">
+                  <v-autocomplete v-model="categories"
+                    :items="['Skiing']"
+                    label="Categories" multiple></v-autocomplete>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="name" label="Quote Name*" required></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="currency" label="Quote Currency"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="valid_until" type="datetime-local" label="Valid Until" required></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="approval_issues" label="Approval Issues"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-select v-model="approval_status" :items="['Approved', 'Denied', 'Pending Approval', 'Paused']" label="Approval Status"></v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-select v-model="opportunity" :items="['0-17']" label="Opportunity"></v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-select v-model="discount" :items="['0-17']" label="Discount"></v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="billing_street" label="Billing City"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-select v-model="billing_city" :items="['0-17']" label="Billing City"></v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-select v-model="billing_state" :items="['0-17']" label="Billing State"></v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="billing_postal" label="Billing Postal"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-select v-model="billing_country" :items="['0-17']" label="Billing Country"></v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="shipping_street" label="Shipping City"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-select v-model="shipping_city" :items="['0-17']" label="Shipping City"></v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-select v-model="shipping_state" :items="['0-17']" label="Shipping State"></v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="shipping_postal" label="Shipping Postal"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-select v-model="shipping_country" :items="['0-17']" label="Shipping Country"></v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="shipping_tax" label="Shipping Tax"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-select v-model="contact" :items="['0-17']" label="Contact"></v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-select v-model="customers" :items="['0-17']" label="Customers"></v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field type="number" v-model="subtotal" label="Quote Subtotal"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field type="number" v-model="total" label="Quote Total"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="grand_total" type="number" label="Quote Amount" hint="What is the amount of this quote?">
+                  </v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-select v-model="assigned_to" :items="['Draft']" label="Assigned To" required></v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-select v-model="invoice_status" :items="['0-17']" label="Invoice Status"></v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field type="number" v-model="line_item_discount" label="Line Item Discount"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field type="number" v-model="line_item_group_total" label="Line Item Group Total"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="line_item_name" label="Line Item Name"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field type="number" v-model="line_item_total" label="Line Item Total"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="line_item_tax" label="Line Item Tax"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field type="number" v-model="line_item_subtotal" label="Line Item Subtotal"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="payment_terms" label="Payment Terms"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="tax" label="Tax"></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field type="number" v-model="subtotal" label="Subtotal"></v-text-field>
+                </v-col>
+              </v-row>
+            </v-container>
+            <small>*indicates required field</small>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
+              Close
+            </v-btn>
+            <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
+              Save
+            </v-btn>
+          </v-card-actions>
+        </form>
+      </v-card>
+    </v-dialog>
+  </v-row>
 </template>
 
 <script>
@@ -72,7 +160,7 @@
   import findManyCountries from '../../../../graphql/query/findManyCountries.gql'
   import findManyCities from '../../../../graphql/query/findManyCities.gql'
   import findManyCurrencies from '../../../../graphql/query/findManyCurrencies.gql'
-  import findManyUsers from '../../../../graphql/query/findManyUsers.gql'
+  import findManyCustomers from '../../../../graphql/query/findManyCustomers.gql'
   import findManyUsers from '../../../../graphql/query/findManyUsers.gql'
   /* eslint-disable camelcase */
 
@@ -126,11 +214,11 @@
   export default {
     data() {
       return {
-            dialog: false,
-            notifications: false,
-            sound: true,
-            widgets: false,
-            categories: [],
+        dialog: false,
+        notifications: false,
+        sound: true,
+        widgets: false,
+        categories: [],
         account: " ",
         name: " ",
         grand_total: " ",
@@ -364,14 +452,14 @@
         prefetch: true,
         query: findManyCurrencies
       },
-      findManyUsers: {
+      findManyCustomers: {
         prefetch: true,
-        query: findManyUsers
+        query: findManyCustomers
       },
       findManyUsers: {
         prefetch: true,
         query: findManyUsers
       },
     },
-    }
+  }
 </script>

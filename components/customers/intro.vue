@@ -14,7 +14,7 @@
                 <p>0</p>
             </v-col>
             <v-col cols="3">
-                <h4>Average Customer Age</h4>
+                <h4># of Customers</h4>
                 <p>0</p>
             </v-col>
             <v-divider></v-divider>

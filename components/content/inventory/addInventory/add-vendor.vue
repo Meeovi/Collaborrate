@@ -7,7 +7,7 @@
                 </v-btn>
             </template>
             <v-card>
-                <form action="" method="post" @v-on:submit.prevent="addContent()">
+                <form action="" method="post" @v-on:submit.prevent="addVendor()">
                     <v-toolbar dark color="primary">
                         <v-btn icon dark @click="dialog = false">
                             <v-icon icon="fas fa-circle-xmark"></v-icon>
@@ -19,31 +19,42 @@
                     <v-card-text>
                         <v-container>
                             <v-row>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal first name*" required></v-text-field>
+                                <v-col cols="6">
+                                    <v-text-field v-model="name" label="Vendor Name*" required></v-text-field>
                                 </v-col>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal middle name" hint="example of helper text only on focus">
+                                <v-col cols="6">
+                                    <v-text-field v-model="website" type="url" label="Vendor Website">
                                     </v-text-field>
                                 </v-col>
-                                <v-col cols="12" sm="6" md="4">
-                                    <v-text-field label="Legal last name*" hint="example of persistent helper text"
-                                        persistent-hint required></v-text-field>
-                                </v-col>
                                 <v-col cols="12">
-                                    <v-text-field label="Email*" required></v-text-field>
+                                    <v-textarea v-model="description" label="Vendor Description"></v-textarea>
                                 </v-col>
-                                <v-col cols="12">
-                                    <v-text-field label="Password*" type="password" required></v-text-field>
-                                </v-col>
-                                <v-col cols="12" sm="6">
-                                    <v-select :items="['0-17', '18-29', '30-54', '54+']" label="Age*" required>
+                                <v-col cols="6">
+                                    <v-select v-model="categories" :items="['Shop Owner']" label="Categories">
                                     </v-select>
                                 </v-col>
-                                <v-col cols="12" sm="6">
-                                    <v-autocomplete
-                                        :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-                                        label="Interests" multiple></v-autocomplete>
+                                <v-col cols="6">
+                                    <v-select v-model="country" :items="['Shop Owner']" label="Country*">
+                                    </v-select>
+                                </v-col>
+                                <v-col cols="6">
+                                    <v-select v-model="type" :items="['Shop Owner', 'Content Creator']" label="Type*" required>
+                                    </v-select>
+                                </v-col>
+                                <v-col cols="6">
+                                    <v-select v-model="physical_store" :items="['yes', 'false']" label="Physical Store*">
+                                    </v-select>
+                                </v-col>
+                                <v-col cols="6">
+                                    <v-autocomplete v-model="tags" :items="['Skiing']" label="Tags" multiple></v-autocomplete>
+                                </v-col>
+                                <v-col cols="6">
+                                    <v-file-input v-model="image" type="image" label="Vendor Image">
+                                    </v-file-input>
+                                </v-col>
+                                <v-col cols="12">
+                                    <v-select v-model="products" :items="['Shop Owner']" label="Products*" required>
+                                    </v-select>
                                 </v-col>
                             </v-row>
                         </v-container>

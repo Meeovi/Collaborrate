@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <v-toolbar>
+    <div class="contentRight">
+        <v-toolbar color="warning">
             <v-col cols="9">
                 <v-toolbar-title>Invoices</v-toolbar-title>
             </v-col>
@@ -12,16 +12,19 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Page ID
+                        Invoice ID
                     </th>
                     <th class="text-left">
-                        Page Name
+                        Bill to Name
                     </th>
                     <th class="text-left">
-                        URL
+                        Ship to Name
                     </th>
                     <th class="text-left">
-                        Meta Title
+                        Email
+                    </th>
+                    <th class="text-left">
+                        Grand Total Purchased
                     </th>
                     <th class="text-left">
                         Created
@@ -31,15 +34,15 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
+            <tbody v-for="invoices in findManyInvoices" :key="invoices.id">
                 <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
-                            <!--<editUser />--></a></td>
+                    <td>{{ invoices.id }}</td>
+                    <td>{{ invoices.bill_to_name }}</td>
+                    <td>{{ invoices.ship_to_name }}</td>
+                    <td>{{ invoices.email }}</td>
+                    <td>{{ invoices.grand_total_purchased }}</td>
+                    <td>{{ invoices.created_at }}</td>
+                    <td><a :href="`/admin/database/${invoices.id}`"></a></td>
                 </tr>
             </tbody>
         </v-table>
@@ -47,25 +50,24 @@
 </template>
 
 <script>
-    import createInvoice from './addInventory/add-invoice.vue'
-    //import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import createInvoice from '../../../components/content/inventory/addInventory/add-invoice.vue'
+    import findManyInvoices from '../../../graphql/query/findManyInvoices.gql'
 
     export default {
         components: {
             createInvoice,
-            //editUser
         },
-    /*    data() {
+        data() {
             return {
-                findManyPages: [],
+                findManyInvoices: [],
             }
         },
         apollo: {
-            findManyPages: {
+            findManyInvoices: {
                 prefetch: true,
-                query: findManyPages
+                query: findManyInvoices
             }
-        }, */
+        },
     }
 </script>
 
@@ -74,5 +76,5 @@
         title: 'Invoices',
     });
 
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
+const { data: invoices } = await useAsyncData(() => $fetch("/api/invoices"));
 </script>

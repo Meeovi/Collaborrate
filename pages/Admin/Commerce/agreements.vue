@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <v-toolbar>
+    <div class="contentRight">
+        <v-toolbar color="warning">
             <v-col cols="9">
                 <v-toolbar-title>Agreements</v-toolbar-title>
             </v-col>
@@ -12,16 +12,13 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Page ID
+                        Agreement ID
                     </th>
                     <th class="text-left">
-                        Page Name
+                        Agreement Name
                     </th>
                     <th class="text-left">
-                        URL
-                    </th>
-                    <th class="text-left">
-                        Meta Title
+                        Type
                     </th>
                     <th class="text-left">
                         Created
@@ -31,15 +28,13 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
+            <tbody v-for="agreements in findManyAgreements" :key="agreements.id">
                 <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
-                            <!--<editUser />--></a></td>
+                    <td>{{ agreements.id }}</td>
+                    <td>{{ agreements.name }}</td>
+                    <td>{{ agreements.type }}</td>
+                    <td>{{ agreements.created_at }}</td>
+                    <td><a :href="`/admin/database/${agreements.id}`"></a></td>
                 </tr>
             </tbody>
         </v-table>
@@ -47,25 +42,24 @@
 </template>
 
 <script>
-    import createAgreement from './addInventory/add-agreement.vue'
-    //import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import createAgreement from '../../../components/content/inventory/addInventory/add-agreement.vue'
+    import findManyAgreements from '../../../graphql/query/findManyAgreements.gql'
 
     export default {
         components: {
             createAgreement,
-            //editUser
         },
-    /*    data() {
+        data() {
             return {
-                findManyPages: [],
+                findManyAgreements: [],
             }
         },
         apollo: {
-            findManyPages: {
+            findManyAgreements: {
                 prefetch: true,
-                query: findManyPages
+                query: findManyAgreements
             }
-        }, */
+        }, 
     }
 </script>
 
@@ -74,5 +68,5 @@
         title: 'Agreements',
     });
 
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
+const { data: agreements } = await useAsyncData(() => $fetch("/api/agreements"));
 </script>

@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <v-row class="contentDashboard">
+    <div class="contentRight">
+        <v-row class="contentRight">
             <v-col cols="6">
                 <h4>Lifetime Sales</h4>
                 <p>$0.00</p>
@@ -61,10 +61,10 @@
 </template>
 
 <script>
-import lastorders from './dashboard/lastorders.vue'
-import bestsellers from './dashboard/bestsellers.vue'
-import mostviewed from './dashboard/mostviewed.vue'
-import lastsearch from './dashboard/lastsearch.vue'
+import lastorders from '../../../../components/content/inventory/dashboard/lastorders.vue'
+import bestsellers from '../../../../components/content/inventory/dashboard/bestsellers.vue'
+import mostviewed from '../../../../components/content/inventory/dashboard/mostviewed.vue'
+import lastsearch from '../../../../components/content/inventory/dashboard/lastsearch.vue'
 
     export default {
         components: { lastorders, bestsellers, mostviewed, lastsearch },
@@ -78,7 +78,7 @@ import lastsearch from './dashboard/lastsearch.vue'
 
 <script setup>
     useHead({
-        title: 'Inventory',
+        title: 'Alternate Commerce',
     })
 </script>
 

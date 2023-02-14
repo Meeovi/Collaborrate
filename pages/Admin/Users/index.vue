@@ -52,7 +52,7 @@
                     <v-window v-model="tab" class="contentRight">
                         <v-window-item value="option-1">
                             <v-card flat>
-                                <overview />
+                                <intro />
                             </v-card>
                         </v-window-item>
                         <v-window-item value="option-2">
@@ -89,7 +89,7 @@
 
 <script>
     import createCustomer from '~/components/customers/addCustomer/add-customer.vue'
-    import overview from '~/components/customers/overview.vue'
+    import intro from '~/components/customers/intro.vue'
     import customers from '~/components/customers/customers.vue'
     import segments from '~/components/customers/segments.vue'
     import companies from '~/components/customers/companies.vue'
@@ -99,7 +99,7 @@
     export default {
         components: {
             createCustomer,
-            overview,
+            intro,
             customers,
             segments,
             companies,

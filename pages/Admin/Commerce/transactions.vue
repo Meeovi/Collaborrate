@@ -1,11 +1,8 @@
 <template>
-    <div>
-        <v-toolbar>
-            <v-col cols="9">
-                <v-toolbar-title>Wishlists</v-toolbar-title>
-            </v-col>
-            <v-col cols="2">
-                <createWishlist />
+    <div class="contentRight">
+        <v-toolbar color="warning">
+            <v-col cols="12">
+                <v-toolbar-title>Transactions</v-toolbar-title>
             </v-col>
         </v-toolbar>
         <v-table fixed-header height="300px" width="100%">
@@ -47,12 +44,10 @@
 </template>
 
 <script>
-    import createWishlist from './addInventory/add-wishlist.vue'
     //import findManyPages from '../../../graphql/query/findManyPages.gql'
 
     export default {
         components: {
-            createWishlist,
             //editUser
         },
     /*    data() {
@@ -71,7 +66,7 @@
 
 <script setup>
     useHead({
-        title: 'Wishlists',
+        title: 'Transactions',
     });
 
 const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));

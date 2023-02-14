@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <v-toolbar>
+    <div class="contentRight">
+        <v-toolbar color="warning">
             <v-col cols="9">
                 <v-toolbar-title>Products</v-toolbar-title>
             </v-col>
@@ -12,33 +12,37 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Page ID
+                        
                     </th>
                     <th class="text-left">
-                        Page Name
+                        Product ID
                     </th>
                     <th class="text-left">
-                        URL
+                        Product Name
                     </th>
                     <th class="text-left">
-                        Meta Title
+                        Type
                     </th>
                     <th class="text-left">
-                        Created
+                        Price
                     </th>
                     <th class="text-left">
-                        Edit
+                        Last Updated
+                    </th>
+                    <th class="text-left">
+                        Actions
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
+            <tbody v-for="products in products" :key="products.id">
                 <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
+                    <td>{{ products.thumbnail }}</td>
+                    <td>{{ products.id }}</td>
+                    <td>{{ products.name }}</td>
+                    <td>{{ products.type }}</td>
+                    <td>{{ products.price }}</td>
+                    <td>{{ products.updated_at }}</td>
+                    <td><a :href="`/admin/database/${products.id}`">
                             <!--<editUser />--></a></td>
                 </tr>
             </tbody>
@@ -47,25 +51,25 @@
 </template>
 
 <script>
-    import createProduct from './addInventory/add-product.vue'
-    //import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import createProduct from '../../../components/content/inventory/addInventory/add-product.vue'
+    import findManyProducts from '../../../graphql/query/findManyProducts.gql'
 
     export default {
         components: {
             createProduct,
             //editUser
         },
-    /*    data() {
+        data() {
             return {
-                findManyPages: [],
+                findManyProducts: [],
             }
         },
         apollo: {
-            findManyPages: {
+            findManyProducts: {
                 prefetch: true,
-                query: findManyPages
+                query: findManyProducts
             }
-        }, */
+        },
     }
 </script>
 
@@ -74,5 +78,5 @@
         title: 'Products',
     });
 
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
+const { data: products } = await useAsyncData(() => $fetch("/api/products"));
 </script>
