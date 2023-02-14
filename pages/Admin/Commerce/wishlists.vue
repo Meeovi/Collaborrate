@@ -12,16 +12,16 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Page ID
+                        Wishlist ID
                     </th>
                     <th class="text-left">
-                        Page Name
+                        Wishlist Name
                     </th>
                     <th class="text-left">
-                        URL
+                        Visibility
                     </th>
                     <th class="text-left">
-                        Meta Title
+                        Quantity
                     </th>
                     <th class="text-left">
                         Created
@@ -31,15 +31,14 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
+            <tbody v-for="wishlists in findManyWishlists" :key="wishlists.id">
                 <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
-                            <!--<editUser />--></a></td>
+                    <td>{{ wishlists.id }}</td>
+                    <td>{{ wishlists.name }}</td>
+                    <td>{{ wishlists.visibility }}</td>
+                    <td>{{ wishlists.quantity }}</td>
+                    <td>{{ wishlists.created_at }}</td>
+                    <td><a :href="`/admin/database/${wishlists.id}`"></a></td>
                 </tr>
             </tbody>
         </v-table>
@@ -48,24 +47,23 @@
 
 <script>
     import createWishlist from '../../../components/content/inventory/addInventory/add-wishlist.vue'
-    //import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import findManyWishlists from '../../../graphql/query/findManyWishlists.gql'
 
     export default {
         components: {
             createWishlist,
-            //editUser
         },
-    /*    data() {
+        data() {
             return {
-                findManyPages: [],
+                findManyWishlists: [],
             }
         },
         apollo: {
-            findManyPages: {
+            findManyWishlists: {
                 prefetch: true,
-                query: findManyPages
+                query: findManyWishlists
             }
-        }, */
+        },
     }
 </script>
 
@@ -74,5 +72,5 @@
         title: 'Wishlists',
     });
 
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
+const { data: wishlists } = await useAsyncData(() => $fetch("/api/wishlists"));
 </script>

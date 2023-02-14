@@ -12,16 +12,16 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Page ID
+                        Vendor ID
                     </th>
                     <th class="text-left">
-                        Page Name
+                        Vendor Name
                     </th>
                     <th class="text-left">
-                        URL
+                        Website
                     </th>
                     <th class="text-left">
-                        Meta Title
+                        Type
                     </th>
                     <th class="text-left">
                         Created
@@ -31,15 +31,14 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
+            <tbody v-for="vendors in findManyVendors" :key="vendors.id">
                 <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
-                            <!--<editUser />--></a></td>
+                    <td>{{ vendors.id }}</td>
+                    <td>{{ vendors.name }}</td>
+                    <td>{{ vendors.website }}</td>
+                    <td>{{ vendors.type }}</td>
+                    <td>{{ vendors.created_at }}</td>
+                    <td><a :href="`/admin/database/${vendors.id}`"></a></td>
                 </tr>
             </tbody>
         </v-table>
@@ -48,24 +47,23 @@
 
 <script>
     import createVendor from '../../../components/content/inventory/addInventory/add-vendor.vue'
-    //import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import findManyVendors from '../../../graphql/query/findManyVendors.gql'
 
     export default {
         components: {
             createVendor,
-            //editUser
         },
-    /*    data() {
+        data() {
             return {
-                findManyPages: [],
+                findManyVendors: [],
             }
         },
         apollo: {
-            findManyPages: {
+            findManyVendors: {
                 prefetch: true,
-                query: findManyPages
+                query: findManyVendors
             }
-        }, */
+        },
     }
 </script>
 
@@ -74,5 +72,5 @@
         title: 'Vendors',
     });
 
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
+const { data: vendors } = await useAsyncData(() => $fetch("/api/vendors"));
 </script>

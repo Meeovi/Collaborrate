@@ -12,16 +12,19 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Page ID
+                        
                     </th>
                     <th class="text-left">
-                        Page Name
+                        Payment ID
                     </th>
                     <th class="text-left">
-                        URL
+                        Payment Name
                     </th>
                     <th class="text-left">
-                        Meta Title
+                        Active
+                    </th>
+                    <th class="text-left">
+                        Country
                     </th>
                     <th class="text-left">
                         Created
@@ -31,15 +34,15 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
+            <tbody v-for="payments in findManyPayments" :key="payments.id">
                 <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
-                            <!--<editUser />--></a></td>
+                    <td>{{ payments.icon }}</td>
+                    <td>{{ payments.id }}</td>
+                    <td>{{ payments.name }}</td>
+                    <td>{{ payments.active }}</td>
+                    <td>{{ payments.country }}</td>
+                    <td>{{ payments.created_at }}</td>
+                    <td><a :href="`/admin/database/${payments.id}`"></a></td>
                 </tr>
             </tbody>
         </v-table>
@@ -48,24 +51,23 @@
 
 <script>
     import createPayment from '../../../components/content/inventory/addInventory/add-payment.vue'
-    //import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import findManyPayments from '../../../graphql/query/findManyPayments.gql'
 
     export default {
         components: {
             createPayment,
-            //editUser
         },
-    /*    data() {
+        data() {
             return {
-                findManyPages: [],
+                findManyPayments: [],
             }
         },
         apollo: {
-            findManyPages: {
+            findManyPayments: {
                 prefetch: true,
-                query: findManyPages
+                query: findManyPayments
             }
-        }, */
+        },
     }
 </script>
 
@@ -74,5 +76,5 @@
         title: 'Payments',
     });
 
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
+const { data: payments } = await useAsyncData(() => $fetch("/api/payments"));
 </script>

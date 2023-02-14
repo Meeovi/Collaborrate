@@ -12,16 +12,16 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Page ID
+                        Quote ID
                     </th>
                     <th class="text-left">
-                        Page Name
+                        Quote Name
                     </th>
                     <th class="text-left">
-                        URL
+                        Category
                     </th>
                     <th class="text-left">
-                        Meta Title
+                        Grand Total
                     </th>
                     <th class="text-left">
                         Created
@@ -31,15 +31,14 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
+            <tbody v-for="quotes in findManyQuotes" :key="quotes.id">
                 <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
-                            <!--<editUser />--></a></td>
+                    <td>{{ quotes.id }}</td>
+                    <td>{{ quotes.name }}</td>
+                    <td>{{ quotes.categories }}</td>
+                    <td>{{ quotes.grand_total }}</td>
+                    <td>{{ quotes.created_at }}</td>
+                    <td><a :href="`/admin/database/${quotes.id}`"></a></td>
                 </tr>
             </tbody>
         </v-table>
@@ -48,24 +47,23 @@
 
 <script>
     import createQuote from '../../../components/content/inventory/addInventory/add-quote.vue'
-    //import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import findManyQuotes from '../../../graphql/query/findManyQuotes.gql'
 
     export default {
         components: {
             createQuote,
-            //editUser
         },
-    /*    data() {
+        data() {
             return {
-                findManyPages: [],
+                findManyQuotes: [],
             }
         },
         apollo: {
-            findManyPages: {
+            findManyQuotes: {
                 prefetch: true,
-                query: findManyPages
+                query: findManyQuotes
             }
-        }, */
+        },
     }
 </script>
 
@@ -74,5 +72,5 @@
         title: 'Quotes',
     });
 
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
+const { data: quotes } = await useAsyncData(() => $fetch("/api/quotes"));
 </script>

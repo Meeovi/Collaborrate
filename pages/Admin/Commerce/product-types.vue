@@ -12,16 +12,13 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Page ID
+                        Product Type ID
                     </th>
                     <th class="text-left">
-                        Page Name
+                        Product Type Name
                     </th>
                     <th class="text-left">
-                        URL
-                    </th>
-                    <th class="text-left">
-                        Meta Title
+                        Is Shippable
                     </th>
                     <th class="text-left">
                         Created
@@ -31,15 +28,13 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
+            <tbody v-for="types in findManyProduct_types" :key="types.id">
                 <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
-                            <!--<editUser />--></a></td>
+                    <td>{{ types.id }}</td>
+                    <td>{{ types.type_name }}</td>
+                    <td>{{ types.isShippable }}</td>
+                    <td>{{ types.created_at }}</td>
+                    <td><a :href="`/admin/database/${types.id}`"></a></td>
                 </tr>
             </tbody>
         </v-table>
@@ -48,24 +43,23 @@
 
 <script>
     import createProductType from '../../../components/content/inventory/addInventory/add-product-type.vue'
-    //import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import findManyProduct_types from '../../../graphql/query/findManyProduct_types.gql'
 
     export default {
         components: {
             createProductType,
-            //editUser
         },
-    /*    data() {
+        data() {
             return {
-                findManyPages: [],
+                findManyProduct_types: [],
             }
         },
         apollo: {
-            findManyPages: {
+            findManyProduct_types: {
                 prefetch: true,
-                query: findManyPages
+                query: findManyProduct_types
             }
-        }, */
+        },
     }
 </script>
 
@@ -74,5 +68,5 @@
         title: 'Product Types',
     });
 
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
+const { data: types } = await useAsyncData(() => $fetch("/api/types"));
 </script>

@@ -68,8 +68,17 @@
                 </v-list-group>
 
                 <!--Blog-->
-              <v-list-item prepend-icon="fas fa-feather" title="Blog" value="Blog" href="/Admin/Content/Blog"></v-list-item>
-
+              <v-list-group prepend-icon="fas fa-feather" value="blog">
+                  <template v-slot:activator="{ props }">
+                    <v-list-item v-bind="props" title="Blog"></v-list-item>
+                  </template>
+                  <v-list-item prepend-icon="fas fa-pen-nib" title="Blog Dashboard" value="Blog Dashboard" href="/Admin/Blog/Dashboard"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-pen" title="Posts" value="Posts" href="/Admin/Blog/Posts"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-file-pen" title="Drafts" value="Drafts" href="/Admin/Blog/Drafts"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-rss" title="Scheduled" value="Scheduled" href="/Admin/Blog/Scheduled"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-pen-to-square" title="Published" value="Published" href="/Admin/Blog/Published"></v-list-item>
+              </v-list-group>
+              
                 <!--Commerce-->
               <v-list-group prepend-icon="fas fa-store" value="commerce">
                   <template v-slot:activator="{ props }">

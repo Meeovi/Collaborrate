@@ -1,5 +1,13 @@
 <template>
-    <div>
+    <div class="contentRight">
+        <v-toolbar color="info">
+            <v-col cols="9">
+                <v-toolbar-title>Published</v-toolbar-title>
+            </v-col>
+            <v-col cols="2">
+                <createPost />
+            </v-col>
+        </v-toolbar>
         <v-table fixed-header height="300px" width="100%">
             <thead>
                 <tr>
@@ -7,13 +15,13 @@
                         Post ID
                     </th>
                     <th class="text-left">
-                        Title
+                        Post Name
                     </th>
                     <th class="text-left">
-                        Sends
+                        Category
                     </th>
                     <th class="text-left">
-                        Author
+                        Status
                     </th>
                     <th class="text-left">
                         Created
@@ -23,15 +31,13 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in findManyPages" :key="pages.id">
+            <tbody v-for="posts in findManyPosts" :key="posts.id">
                 <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
-                            <!--<editUser />--></a></td>
+                    <td>{{ posts.id }}</td>
+                    <td>{{ posts.name }}</td>
+                    <td>{{ posts.type }}</td>
+                    <td>{{ posts.created_at }}</td>
+                    <td><a :href="`/admin/database/${posts.id}`"></a></td>
                 </tr>
             </tbody>
         </v-table>
@@ -39,34 +45,31 @@
 </template>
 
 <script>
-    import createContent from './InsertAddPost.vue'
-    import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import createPost from './InsertAddPost.vue'
+    import findManyPosts from '../../../graphql/query/findManyPosts.gql'
 
     export default {
         components: {
-            createContent,
-            //editUser
+            createPost,
         },
         data() {
             return {
-                findManyPages: [],
+                findManyPosts: [],
             }
         },
         apollo: {
-            findManyPages: {
+            findManyPosts: {
                 prefetch: true,
-                query: findManyPages
+                query: findManyPosts
             }
-        },
+        }, 
     }
 </script>
 
 <script setup>
     useHead({
-        title: 'Published Posts',
-    })
+        title: 'Published - Blog',
+    });
+
+const { data: posts } = await useAsyncData(() => $fetch("/api/posts"));
 </script>
-
-<style scoped>
-
-</style>

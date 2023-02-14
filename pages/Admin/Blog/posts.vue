@@ -2,7 +2,7 @@
     <div class="contentRight">
         <v-toolbar color="info">
             <v-col cols="9">
-                <v-toolbar-title>Drafts</v-toolbar-title>
+                <v-toolbar-title>Posts</v-toolbar-title>
             </v-col>
             <v-col cols="2">
                 <createPost />
@@ -68,7 +68,7 @@
 
 <script setup>
     useHead({
-        title: 'Drafts - Blog',
+        title: 'Posts - Blog',
     });
 
 const { data: posts } = await useAsyncData(() => $fetch("/api/posts"));

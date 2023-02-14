@@ -25,7 +25,7 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="categories in categories" :key="categories.id">
+            <tbody v-for="categories in findManyCategories" :key="categories.id">
                 <tr>
                     <td>{{ categories.id }}</td>
                     <td>{{ categories.name }}</td>

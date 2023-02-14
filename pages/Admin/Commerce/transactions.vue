@@ -9,34 +9,33 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Page ID
+                        Order ID
                     </th>
                     <th class="text-left">
-                        Page Name
+                        Parent Transaction
                     </th>
                     <th class="text-left">
-                        URL
+                        Payment Method
                     </th>
                     <th class="text-left">
-                        Meta Title
+                        Closed
                     </th>
                     <th class="text-left">
-                        Created
+                        Orders
                     </th>
                     <th class="text-left">
                         Edit
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="pages in pages" :key="pages.id">
+            <tbody v-for="transactions in findManyTransactions" :key="transactions.id">
                 <tr>
-                    <td>{{ pages.id }}</td>
-                    <td>{{ pages.title }}</td>
-                    <td>{{ pages.url_key }}</td>
-                    <td>{{ pages.meta_title }}</td>
-                    <td>{{ pages.created_at }}</td>
-                    <td><a :href="`/admin/database/${pages.id}`">
-                            <!--<editUser />--></a></td>
+                    <td>{{ transactions.order_id }}</td>
+                    <td>{{ transactions.parent_transaction }}</td>
+                    <td>{{ transactions.payment_method }}</td>
+                    <td>{{ transactions.closed }}</td>
+                    <td>{{ transactions.orders }}</td>
+                    <td><a :href="`/admin/database/${transactions.id}`"></a></td>
                 </tr>
             </tbody>
         </v-table>
@@ -44,23 +43,22 @@
 </template>
 
 <script>
-    //import findManyPages from '../../../graphql/query/findManyPages.gql'
+    import findManyTransactions from '../../../graphql/query/findManyTransactions.gql'
 
     export default {
         components: {
-            //editUser
         },
-    /*    data() {
+        data() {
             return {
-                findManyPages: [],
+                findManyTransactions: [],
             }
         },
         apollo: {
-            findManyPages: {
+            findManyTransactions: {
                 prefetch: true,
-                query: findManyPages
+                query: findManyTransactions
             }
-        }, */
+        },
     }
 </script>
 
@@ -69,5 +67,5 @@
         title: 'Transactions',
     });
 
-const { data: pages } = await useAsyncData(() => $fetch("/api/pages"));
+const { data: transactions } = await useAsyncData(() => $fetch("/api/transactions"));
 </script>
