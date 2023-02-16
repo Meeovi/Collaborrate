@@ -16,7 +16,7 @@ const config: CodegenConfig = {
       },
       plugins: []
     },
-    "server/generated-schema.json": {
+    "../graphql/generated-schema.json": {
       plugins: ["introspection"]
     }
   }
