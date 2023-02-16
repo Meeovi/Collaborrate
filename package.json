@@ -24,7 +24,7 @@
       "prebuild": "yarn build:mesh",
       "prestart": "yarn build:mesh",
       "dev": "nuxt dev --port 8000 && node server/server.js",
-      "yoga": "ts-node server/index.ts",
+      "yoga": "ts-node packages/core/graphql/index.ts",
       "prisma-dev": "npx prisma generate",
       "mesh": "mesh start",
       "docs": "npx prisma-docs-generator serve",

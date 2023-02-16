@@ -1,1 +1,6 @@
-{"parsed":{"_path":"/quick-start/cities","_dir":"quick-start","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"Cities","description":"Create a table with all the cities in the world.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:quick-start:cities.md","_source":"content","_file":"quick-start/cities.md","_extension":"md"},"hash":"3wI6CsbVVC"}
+---
+title: 'Cities'
+description: 'Create a table with all the cities in the world.'
+---
+
+<!-- Content of the page -->

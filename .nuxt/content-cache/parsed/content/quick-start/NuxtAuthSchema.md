@@ -1,1 +1,6 @@
-{"parsed":{"_path":"/quick-start/nuxtauthschema","_dir":"quick-start","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"NuxtAuth Schema Setup","description":"Sets up a the Schema and Tables for the NuxtAuth Alternate Framework Adapter","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:quick-start:NuxtAuthSchema.md","_source":"content","_file":"quick-start/NuxtAuthSchema.md","_extension":"md"},"hash":"m6x6272XRN"}
+---
+title: 'NuxtAuth Schema Setup'
+description: 'Sets up a the Schema and Tables for the NuxtAuth Alternate Framework Adapter'
+---
+
+<!-- Content of the page -->

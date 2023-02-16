@@ -7,13 +7,12 @@ import { useParserCache } from '@envelop/parser-cache';
 import { useValidationCache } from '@envelop/validation-cache';
 import { applyMiddleware } from 'graphql-middleware'
 import { shield, allow, deny } from 'graphql-shield'
-//import { getBuiltMesh } from '../.mesh';
 
 import { createYoga } from 'graphql-yoga';
 import { createServer } from 'node:http';
 import { createFetch } from '@whatwg-node/fetch';
 import { useGraphQlJit } from '@envelop/graphql-jit';
-import { resolvers } from "../prisma/generated/type-graphql";
+import { resolvers } from "../../../prisma/generated/type-graphql";
 import { useSentry } from '@envelop/sentry';
 import { useSofaWithSwaggerUI } from '@graphql-yoga/plugin-sofa'
 
@@ -24,8 +23,6 @@ import fastify, { FastifyRequest, FastifyReply } from 'fastify'
 const app = fastify({
   logger: true
 })
-
-//const meshHttp = createBuiltMeshHTTPHandler()
 
 // Setting cors and logging capabilities
 
@@ -130,7 +127,6 @@ async function main() {
     url: '/graphql',
     method: ['GET', 'POST', 'OPTIONS'],
     handler: async (req, reply) => {
-      // Second parameter adds Fastify's `req` and `reply` to the GraphQL Context
       const response = await yoga.handleNodeRequest(req, {
         req,
         reply
