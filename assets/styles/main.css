@@ -83,7 +83,7 @@ body {
     position: relative !important;
     left: 56px;
     width: 100% !important;
-    height: 100% !important;
+    height: 100vh !important;
 }
 
 @media all and (max-width: 500px) {

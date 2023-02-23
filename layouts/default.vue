@@ -47,7 +47,7 @@
       <v-card>
         <v-layout>
           <v-navigation-drawer expand-on-hover v-model="drawer" :rail="rail" @click="rail = false">
-            <v-list-item prepend-icon="fas fa-user-circle" title="Profile" href="/admin/user">
+            <v-list-item prepend-icon="fas fa-user-circle" title="Profile">
               <template v-slot:append>
                 <v-btn variant="text" icon="fas fa-chevron-left" @click.stop="rail = !rail"></v-btn>
               </template>
@@ -113,14 +113,27 @@
                   <v-list-item prepend-icon="fas fa-person-rays" title="Events" value="Events" href="/Admin/Marketing/Events"></v-list-item>
                   <v-list-item prepend-icon="fas fa-magnifying-glass-arrow-right" title="Seo" value="Seo" href="/Admin/Marketing/Seo"></v-list-item>
               </v-list-group>
+
+              <!--Database-->
+              <v-list-group prepend-icon="fas fa-database" value="database">
+                  <template v-slot:activator="{ props }">
+                    <v-list-item v-bind="props" title="Database"></v-list-item>
+                  </template>
+                  <v-list-item prepend-icon="fas fa-timeline" title="Marketing Home" value="Marketing Home" href="/Admin/Database/"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-server" title="SQL Editor" value="SQL Editor" href="/Admin/Database/sqleditor"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-database" title="Database" value="Database" href="/Admin/Database/Database"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-diagram-predecessor" title="Edge Functions" value="Edge Functions" href="/Admin/Database/edgefunctions"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-bug" title="Logs" value="Logs" href="/Admin/Database/Logs"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-link" title="API Docs" value="API Docs" href="/Admin/Database/apidocs"></v-list-item>
+                  <v-list-item prepend-icon="fas fa-eye" title="API Studio" value="API Studio" href="/Admin/Database/apistudio"></v-list-item>
+              </v-list-group>
               
               <v-list-item prepend-icon="fas fa-users" title="Users" value="Users" href="/Admin/Users"></v-list-item>
               <v-list-item prepend-icon="fas fa-chart-simple" title="Dashboards" value="dashboards"
                 href="/Admin/Dashboard/explorer"></v-list-item>
               <v-list-item prepend-icon="fas fa-chart-column" title="Monitoring" value="monitoring"
                 href="/Admin/Monitoring/"></v-list-item>
-              <v-list-item prepend-icon="fas fa-database" title="Database" value="database"
-                href="/Admin/Database/"></v-list-item>
+              
               <v-list-item prepend-icon="fas fa-cubes" title="Integrations" value="integrations"
                 href="/Admin/Integrations/"></v-list-item>
               <v-list-item prepend-icon="fas fa-gear" title="Settings" value="settings"

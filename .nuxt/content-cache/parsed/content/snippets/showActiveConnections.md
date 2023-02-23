@@ -1,6 +1,1 @@
----
-title: 'Show active connections'
-description: 'Get the number of active and max connections'
----
-
-<!-- Content of the page -->
+{"parsed":{"_path":"/snippets/showactiveconnections","_dir":"snippets","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"Show active connections","description":"Get the number of active and max connections","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:snippets:showActiveConnections.md","_source":"content","_file":"snippets/showActiveConnections.md","_extension":"md"},"hash":"3qv0DZ2kQM"}

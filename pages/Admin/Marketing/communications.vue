@@ -63,11 +63,11 @@
 </template>
 
 <script>
-    import createContent from '~/components/content/communications/InsertAddPost.vue'
-    import overview from '~/components/content/communications/overview'
-    import emails from '~/components/content/communications/emails'
-    import newsletters from '~/components/content/communications/newsletters'
-    import templates from '~/components/content/communications/templates'
+    import createContent from '../../../components/content/marketing/InsertAddPost.vue'
+    import overview from '../../../components/content/marketing/overview'
+    import emails from '../../../components/content/marketing/emails'
+    import newsletters from '../../../components/content/marketing/newsletters'
+    import templates from '../../../components/content/marketing/templates'
 
     export default {
         components: {
