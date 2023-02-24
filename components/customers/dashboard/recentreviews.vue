@@ -1,6 +1,7 @@
 <template>
     <div>
-        <v-table fixed-header height="300px" width="100%">
+        <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details></v-text-field>
+<v-table fixed-header height="300px" width="100%">
             <thead>
                 <tr>
                     <th class="text-left">
@@ -45,12 +46,13 @@
         components: {
             //editUser
         },
-    /*    data() {
+        data() {
             return {
-                findManyPages: [],
+                search: '',
+                //findManyPages: [],
             }
         },
-        apollo: {
+    /*    apollo: {
             findManyPages: {
                 prefetch: true,
                 query: findManyPages

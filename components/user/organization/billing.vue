@@ -19,7 +19,8 @@
                                         <v-toolbar-title>Projects at a glance</v-toolbar-title>
                                     </v-col>
                                 </v-toolbar>
-                                <v-table fixed-header height="300px" width="100%">
+                                <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details></v-text-field>
+<v-table fixed-header height="300px" width="100%">
                                     <thead>
                                         <tr>
                                             <th class="text-left">

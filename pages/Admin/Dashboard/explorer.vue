@@ -6,7 +6,7 @@
                     <v-toolbar-title>Dashboards</v-toolbar-title>
                 </v-col>
                 <v-col cols="3">
-                    
+                 <addDashboard />
                 </v-col>
             </v-toolbar>
             <v-spacer></v-spacer>

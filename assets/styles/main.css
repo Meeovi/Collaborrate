@@ -1,7 +1,5 @@
 /********************** Main CSS *************/
-html {
-    overflow-y: scroll;
-}
+
 body {
     margin: 0;
 }
@@ -74,6 +72,11 @@ body {
 
 .features3 .mbr-text, .item-title {
     color: black !important;
+}
+
+.sqleditorbar h5, .databasebar h5 {
+    position: relative;
+    left: 20px;
 }
 
 /******************* Main Section CSS *********/

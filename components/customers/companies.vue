@@ -47,6 +47,11 @@
         components: {
             addCompany
         },
+        data() {
+            return {
+                search: '',
+            }
+        },
     }
 </script>
 

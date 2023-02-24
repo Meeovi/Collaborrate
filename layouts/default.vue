@@ -61,6 +61,7 @@
                   <template v-slot:activator="{ props }">
                     <v-list-item v-bind="props" title="Content Manager"></v-list-item>
                   </template>
+                  <v-list-item prepend-icon="fas fa-arrows-to-circle" title="Content Manager" value="Content Manager" href="/Admin/Content/manager"></v-list-item>
                   <v-list-item prepend-icon="fas fa-th" title="Categories" value="Categories" href="/Admin/Content/Categories"></v-list-item>
                   <v-list-item prepend-icon="fas fa-tag" title="Tags" value="Tags" href="/Admin/Content/Tags"></v-list-item>
                   <v-list-item prepend-icon="fas fa-desktop" title="Pages" value="desktop" href="/Admin/Content/PageManager/"></v-list-item>
@@ -119,7 +120,6 @@
                   <template v-slot:activator="{ props }">
                     <v-list-item v-bind="props" title="Database"></v-list-item>
                   </template>
-                  <v-list-item prepend-icon="fas fa-timeline" title="Marketing Home" value="Marketing Home" href="/Admin/Database/"></v-list-item>
                   <v-list-item prepend-icon="fas fa-server" title="SQL Editor" value="SQL Editor" href="/Admin/Database/sqleditor"></v-list-item>
                   <v-list-item prepend-icon="fas fa-database" title="Database" value="Database" href="/Admin/Database/Database"></v-list-item>
                   <v-list-item prepend-icon="fas fa-diagram-predecessor" title="Edge Functions" value="Edge Functions" href="/Admin/Database/edgefunctions"></v-list-item>

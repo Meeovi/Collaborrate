@@ -47,6 +47,11 @@
         components: {
             addCustomer
         },
+        data() {
+            return {
+                search: '',
+            }
+        },
     }
 </script>
 

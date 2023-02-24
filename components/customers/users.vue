@@ -45,6 +45,11 @@ import addUser from './addCustomer/add-user.vue'
 
     export default {
         components: { addUser },
+        data() {
+            return {
+                search: '',
+            }
+        },
     }
 </script>
 

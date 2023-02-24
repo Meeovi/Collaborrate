@@ -1,5 +1,14 @@
 <template>
     <div>
+        <v-toolbar class="databasebar" style="background-color: orange; color: white;">
+            <v-row>
+                <v-col cols="6">
+                    <h5>Logs</h5>
+                </v-col>
+                <v-col cols="6"></v-col>
+            </v-row>
+        </v-toolbar>
+        <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details></v-text-field>
         <v-table fixed-header height="300px">
             <thead>
                 <tr>
@@ -31,7 +40,11 @@
 
 <script>
     export default {
-
+        data() {
+            return {
+                search: '',
+            }
+        },
     }
 </script>
 

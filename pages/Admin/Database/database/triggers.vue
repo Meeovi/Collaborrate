@@ -10,6 +10,8 @@
             </v-col>
 
             <v-col cols="12">
+                <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details>
+                </v-text-field>
                 <v-table fixed-header height="100vh" class="contentRight">
                     <thead>
                         <tr>
@@ -58,7 +60,12 @@
     export default {
         components: {
             createTrigger
-        }
+        },
+        data() {
+            return {
+                search: '',
+            }
+        },
     }
 </script>
 

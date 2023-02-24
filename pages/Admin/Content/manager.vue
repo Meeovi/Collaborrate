@@ -1,22 +1,20 @@
 <template>
-    <div>
-        <v-toolbar style="background-color: red; color: white;">
-            <v-col cols="9">
-                <v-toolbar-title>Notifications</v-toolbar-title>
+    <div class="contentRight">
+        <v-toolbar style="background-color: lightseagreen;color: white;">
+            <v-col cols="10">
+                <v-toolbar-title>Content Manager</v-toolbar-title>
             </v-col>
             <v-col cols="2">
-                
+                <createContent />
             </v-col>
         </v-toolbar>
-        <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details></v-text-field>
-        <v-table fixed-header height="100vh" class="contentRight">
+        <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details>
+        </v-text-field>
+        <v-table fixed-header height="300px" width="100%">
             <thead>
                 <tr>
                     <th class="text-left">
-                        Message
-                    </th>
-                    <th class="text-left">
-                        Timestamp
+                        Name
                     </th>
                     <th>
                         Action
@@ -25,8 +23,7 @@
             </thead>
             <tbody>
                 <tr v-for="item in schema" :key="item.name">
-                    <td>{{ item.title }}</td>
-                    <td>{{ item.title }}</td>
+                    <td>{{ item[0].title }}</td>
                     <td><a href="``">View</a>{{ item.calories }}</td>
                 </tr>
             </tbody>
@@ -35,18 +32,18 @@
 </template>
 
 <script>
+    import createContent from '../../../components/database/content/LeftCreateTable.vue'
+
     export default {
-        data() {
-            return {
-                search: '',
-            }
-        },
+        components: {
+            createContent
+        }
     }
 </script>
 
 <script setup>
     useHead({
-        title: 'Notifications'
+        title: 'Content Manager'
     })
 
     const {

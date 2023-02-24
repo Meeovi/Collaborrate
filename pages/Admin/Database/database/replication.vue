@@ -6,6 +6,8 @@
             </v-col>
 
             <v-col cols="12">
+                <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details>
+                </v-text-field>
                 <v-table fixed-header height="100vh" class="contentRight">
                     <thead>
                         <tr>
@@ -64,12 +66,15 @@
         components: {
             //createTrigger
         },
-        data: () => ({
-            insertAction: false,
-            updateAction: false,
-            deleteAction: false,
-            truncateAction: false,
-        }),
+        data() {
+            return {
+                search: '',
+                insertAction: false,
+                updateAction: false,
+                deleteAction: false,
+                truncateAction: false,
+            }
+        },
     }
 </script>
 
