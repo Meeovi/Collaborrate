@@ -73,7 +73,7 @@
       "@graphql-mesh/runtime": "^0.46.7",
       "@graphql-yoga/node": "^2.13.13",
       "@graphql-yoga/plugin-sofa": "^1.0.0",
-      "@huntersofbook/naive-ui-nuxt": "^0.5.1",
+      "@huntersofbook/naive-ui-nuxt": "^0.7.0",
       "@mdi/font": "^7.1.96",
       "@nozomuikuta/h3-cors": "^0.2.0",
       "@nuxt/test-utils": "^3.0.0",
