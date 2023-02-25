@@ -2,9 +2,7 @@
     <v-row justify="center">
         <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition" scrollable persistent>
             <template v-slot:activator="{ props }">
-                <v-btn style="color: white;" color="primary" v-bind="props" class="rightAddBtn">
-                    <v-icon start icon="fas fa-server"></v-icon>Add Datasource
-                </v-btn>
+                <v-btn style="color: white;" v-bind="props" class="rightAddBtn">Add Datasource</v-btn>
             </template>
             <v-card>
                 <v-card-title>

@@ -1,0 +1,47 @@
+{
+	"name": "@alternatecms/storage-driver-s3",
+	"version": "9.22.4",
+	"type": "module",
+	"scripts": {
+		"build": "tsc --build",
+		"dev": "tsc --watch",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"test:coverage": "vitest run --coverage"
+	},
+	"description": "S3 file storage abstraction for `@alternatecms/storage`",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/alternatecms/alternatecms.git",
+		"directory": "packages/storage-driver-s3"
+	},
+	"funding": "https://github.com/alternatecms/alternatecms?sponsor=1",
+	"license": "GPL-3.0",
+	"author": "Rijk van Zanten <rijkvanzanten@me.com>",
+	"exports": {
+		".": "./dist/index.js",
+		"./package.json": "./package.json"
+	},
+	"main": "dist/index.js",
+	"files": [
+		"dist",
+		"!**/*.d.ts?(.map)"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"dependencies": {
+		"@aws-sdk/abort-controller": "3.271.0",
+		"@aws-sdk/client-s3": "3.271.0",
+		"@aws-sdk/lib-storage": "3.271.0",
+		"@alternatecms/storage": "workspace:*",
+		"@alternatecms/utils": "workspace:*"
+	},
+	"devDependencies": {
+		"@alternatecms/tsconfig": "0.0.6",
+		"@ngneat/falso": "6.4.0",
+		"@vitest/coverage-c8": "0.28.5",
+		"typescript": "4.9.5",
+		"vitest": "0.28.5"
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"name": "create-alternatecms-extension",
+	"version": "1.0.0",
+	"description": "A small util that will scaffold a Alternatecms extension",
+	"keywords": [
+		"alternatecms",
+		"extensions"
+	],
+	"homepage": "https://alternatecms.com",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/meeovi/alternatecms.git",
+		"directory": "packages/create-alternatecms-extension"
+	},
+	"funding": "https://github.com/meeovi/alternatecms?sponsor=1",
+	"license": "GPL-3.0-only",
+	"author": "Sebastian Hilton",
+	"contributors": [
+		"Sebastian Hilton <bastianh86@outlook.com>"
+	],
+	"exports": {
+		".": "./lib/index.js",
+		"./package.json": "./package.json"
+	},
+	"main": "lib/index.js",
+	"bin": {
+		"cde": "./lib/index.js",
+		"create-alternatecms-extension": "./lib/index.js"
+	},
+	"files": [
+		"lib/index.js"
+	],
+	"dependencies": {
+		"@alternatecms/extensions-sdk": "workspace:*",
+		"@alternatecms/shared": "workspace:*",
+    "inquirer": "^9.1.4"
+  }
+}

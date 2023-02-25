@@ -1,0 +1,55 @@
+{
+	"name": "@alternatecms/specs",
+	"version": "9.22.4",
+	"description": "OpenAPI Specification of the Alternatecms API",
+	"homepage": "https://alternatecms.com",
+	"bugs": {
+		"url": "https://github.com/alternatecms/alternatecms/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/alternatecms/alternatecms.git",
+		"directory": "packages/specs"
+	},
+	"license": "GPL-3.0",
+	"author": "Nils Twelker",
+	"exports": {
+		".": "./index.js",
+		"./package.json": "./package.json"
+	},
+	"main": "index.js",
+	"files": [
+		"dist",
+		"index.d.ts",
+		"index.js"
+	],
+	"scripts": {
+		"build": "swagger-cli bundle src/openapi.yaml -o dist/openapi.json",
+		"build:deref": "swagger-cli bundle src/openapi.yaml -o dist/openapi-deref.json --dereference",
+		"dev": "npm-watch build",
+		"ui:watch": "swagger-ui-watcher src/openapi.yaml",
+		"validate": "swagger-cli validate src/openapi.yaml"
+	},
+	"dependencies": {
+		"openapi3-ts": "3.1.2"
+	},
+	"devDependencies": {
+		"npm-watch": "0.11.0",
+		"openapi-types": "12.1.0",
+		"swagger-cli": "4.0.4",
+		"swagger-ui-watcher": "2.1.13"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"watch": {
+		"build": {
+			"patterns": [
+				"src"
+			],
+			"extensions": "yaml",
+			"quiet": true,
+			"silent": true
+		}
+	}
+}

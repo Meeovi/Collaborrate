@@ -1,0 +1,54 @@
+{
+	"name": "@alternatecms/schema",
+	"version": "1.0.0",
+	"description": "Utility for extracting information about existing DB schema",
+	"keywords": [
+		"sql",
+		"knex",
+		"schema",
+		"mysql",
+		"postgresql",
+		"cockroachdb",
+		"sqlite3",
+		"javascript"
+	],
+	"homepage": "https://alternatecms.com",
+	"bugs": {
+		"url": "https://github.com/meeovi/alternatecms/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/meeovi/alternatecms.git",
+		"directory": "packages/schema"
+	},
+	"funding": "https://github.com/meeovi/alternatecms?sponsor=1",
+	"license": "GPL-3.0",
+	"author": "Sebastian Hilton <bastianh86@outlook.com>",
+	"exports": {
+		".": "./dist/index.js",
+		"./package.json": "./package.json",
+		"./types/overview": {
+			"types": "./dist/types/overview.d.ts",
+			"default": "./dist/types/overview.js"
+		}
+	},
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc --build",
+		"dev": "pnpm build -w --preserveWatchOutput --incremental"
+	},
+	"dependencies": {
+		"knex": "^2.4.2",
+		"knex-schema-inspector": "^3.0.1"
+	},
+	"devDependencies": {
+		"typescript": "4.9.5"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
