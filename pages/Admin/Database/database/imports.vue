@@ -9,9 +9,14 @@
                 <createImport />
             </v-col>
 
-            <v-col cols="12">
-                <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details>
-                </v-text-field>
+            <v-col cols="6">
+                <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details></v-text-field>
+            </v-col>
+
+            <v-col cols="6">
+
+            </v-col>
+     <v-col cols="12">
                 <v-table fixed-header height="100vh" class="contentRight">
                     <thead>
                         <tr>

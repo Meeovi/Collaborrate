@@ -10,8 +10,15 @@
                 </v-col>
             </v-toolbar>
             <v-spacer></v-spacer>
-            <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details>
-            </v-text-field>
+            <v-row>
+            <v-col cols="6">
+                <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details></v-text-field>
+            </v-col>
+
+            <v-col cols="6">
+
+            </v-col>
+        </v-row>
         </v-card-title>
         <v-data-table v-model="selected" show-select class="elevation-1" 
  item-value="name" :headers="headers" :items="desserts" :search="search"></v-data-table>

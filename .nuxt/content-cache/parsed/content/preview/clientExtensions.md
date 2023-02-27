@@ -1,6 +1,1 @@
----
-title: 'Add column'
-description: 'Template to add a column. Make sure to change the name and type.'
----
-
-<!-- Content of the page -->
+{"parsed":{"_path":"/preview/clientextensions","_dir":"preview","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"Add column","description":"Template to add a column. Make sure to change the name and type.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:preview:clientExtensions.md","_source":"content","_file":"preview/clientExtensions.md","_extension":"md"},"hash":"H6ayxAFzwW"}

@@ -1,6 +1,1 @@
----
-title: 'Create Table'
-description: 'Basic table template. Change "table_name" to the name you prefer.'
----
-
-<!-- Content of the page -->
+{"parsed":{"_path":"/snippets/createtable","_dir":"snippets","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"Create Table","description":"Basic table template. Change \"table_name\" to the name you prefer.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:snippets:createTable.md","_source":"content","_file":"snippets/createTable.md","_extension":"md"},"hash":"gOs4QAcURv"}

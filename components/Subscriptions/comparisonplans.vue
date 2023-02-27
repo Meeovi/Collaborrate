@@ -11,7 +11,15 @@
                     <span class="text-h5">User Profile</span>
                 </v-card-title>
                 <v-card-text>
-                    <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details></v-text-field>
+                    <v-row>
+            <v-col cols="6">
+                <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details></v-text-field>
+            </v-col>
+
+            <v-col cols="6">
+
+            </v-col>
+        </v-row>
 <v-table fixed-header height="300px" width="100%">
                         <thead>
                             <tr>

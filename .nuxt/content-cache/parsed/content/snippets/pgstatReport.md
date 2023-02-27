@@ -1,6 +1,1 @@
----
-title: 'pg_stat_statements report'
-description: 'Select from pg_stat_statements and view recent queries'
----
-
-<!-- Content of the page -->
+{"parsed":{"_path":"/snippets/pgstatreport","_dir":"snippets","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"pg_stat_statements report","description":"Select from pg_stat_statements and view recent queries","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:snippets:pgstatReport.md","_source":"content","_file":"snippets/pgstatReport.md","_extension":"md"},"hash":"SO0lAlxUHT"}

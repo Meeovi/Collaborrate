@@ -1,6 +1,1 @@
----
-title: 'Add column'
-description: 'Template to add a column. Make sure to change the name and type.'
----
-
-<!-- Content of the page -->
+{"parsed":{"_path":"/preview/fulltextindex","_dir":"preview","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"Add column","description":"Template to add a column. Make sure to change the name and type.","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:preview:fullTextIndex.md","_source":"content","_file":"preview/fullTextIndex.md","_extension":"md"},"hash":"d7JP9HArK0"}

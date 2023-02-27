@@ -8,7 +8,15 @@
                 <createPromotion />
             </v-col>
         </v-toolbar>
-        <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details></v-text-field>
+        <v-row>
+            <v-col cols="6">
+                <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details></v-text-field>
+            </v-col>
+
+            <v-col cols="6">
+
+            </v-col>
+        </v-row>
 <v-table fixed-header height="300px" width="100%">
             <thead>
                 <tr>
