@@ -1,14 +1,13 @@
 <template>
     <div class="contentRight">
             <v-toolbar style="background-color: green;color: white;">
-                <v-col cols="10">
+                <v-col cols="9">
                     <v-toolbar-title>Categories</v-toolbar-title>
                 </v-col>
                 <v-col cols="2">
                     <addCategory />
                 </v-col>
             </v-toolbar>
-            <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details></v-text-field>
             <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details></v-text-field>
 <v-table fixed-header height="300px" width="100%">
             <thead>

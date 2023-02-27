@@ -31,7 +31,7 @@
             <tr v-for="item in read" :key="item.name">
                 <td>{{ item.name }}</td>
                 <td>{{ item.name }}</td>
-                <td><addDashboard /></td>
+                <td><a :href="`/Admin/Dashboard/${item.id}`"></a></td>
             </tr>
         </tbody>
     </v-table>

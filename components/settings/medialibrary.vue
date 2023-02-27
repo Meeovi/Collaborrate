@@ -1,7 +1,7 @@
 <template>
     <div>
         <form enctype="multipart/form-data" @submit.prevent="addLocale()">
-        <v-row>
+        <v-toolbar color="transparent">
             <v-col cols="12">
                 <h2>Media Manager</h2>
             </v-col>
@@ -26,7 +26,7 @@
                 <v-switch v-model="orientationmodel" hide-details true-value="true" false-value="false" :label="` ${orientationmodel}`">
                 </v-switch>
             </v-col>
-        </v-row>
+        </v-toolbar>
     </form>
     </div>
 </template>

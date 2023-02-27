@@ -1,7 +1,7 @@
 <template>
     <div>
         <form enctype="multipart/form-data" @submit.prevent="addLocale()">
-        <v-row>
+        <v-toolbar color="transparent">
             <v-col cols="12">
                 <h3>Storage Settings</h3>
             </v-col>
@@ -28,7 +28,7 @@
                     </v-btn>
                 </v-card-actions>
             </v-col>
-        </v-row>
+        </v-toolbar>
     </form>
     </div>
 </template>

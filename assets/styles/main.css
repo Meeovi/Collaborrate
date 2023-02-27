@@ -9,6 +9,9 @@ body {
 }
 
 .logobrand {
+    position: relative;
+    text-align: center;
+    width: 100% !important;
     text-decoration: none;
 }
 
@@ -84,7 +87,7 @@ body {
 #mainSection {
     top: 0px !important;
     position: relative !important;
-    left: 56px;
+    left: 100px;
     width: 100% !important;
     height: 100vh !important;
 }
@@ -154,6 +157,38 @@ body {
     position: absolute;
     padding-left: 0px;
     padding-right: 0px;
+}
+
+.mainbar {
+    width: 100px !important;
+}
+
+.sidebarmenu {
+    width: 300px;
+    min-height: 100% !important;
+    max-height: 100% !important;
+    height: 100% !important;
+    left: 100px !important;
+    margin: 0px !important;
+}
+
+.sidebarmenu .v-overlay__content {
+    max-height: calc(100%) !important;
+}
+
+.sidebarmenu .v-btn {
+    width: 100% !important;
+    display: block !important;
+    letter-spacing: .025em;
+    padding: 1.2rem .5rem .5rem;
+    position: relative;
+}
+
+.menutext {
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 10px;
 }
 
 /********************* Metrics CSS ***********/

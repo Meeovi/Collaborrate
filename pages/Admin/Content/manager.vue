@@ -1,7 +1,7 @@
 <template>
     <div class="contentRight">
         <v-toolbar style="background-color: lightseagreen;color: white;">
-            <v-col cols="10">
+            <v-col cols="9">
                 <v-toolbar-title>Content Manager</v-toolbar-title>
             </v-col>
             <v-col cols="2">

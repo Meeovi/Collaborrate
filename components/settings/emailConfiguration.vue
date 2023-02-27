@@ -1,7 +1,7 @@
 <template>
     <div>
         <form enctype="multipart/form-data" @submit.prevent="addLocale()">
-        <v-row>
+        <v-toolbar color="transparent">
             <v-col cols="12">
                 <h5>Email Configuration</h5>
             </v-col>
@@ -23,7 +23,7 @@
             <v-col cols="6">
                 <v-text-field label="From Email" hint="From Email Address"></v-text-field>
             </v-col>
-        </v-row>
+        </v-toolbar>
     </form>
     </div>
 </template>

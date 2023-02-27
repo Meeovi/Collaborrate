@@ -1,1 +1,6 @@
-{"parsed":{"_path":"/snippets/showversion","_dir":"snippets","_draft":false,"_partial":false,"_locale":"","_empty":false,"title":"Show Version","description":"Get your Postgres version","excerpt":{"type":"root","children":[]},"body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:snippets:showVersion.md","_source":"content","_file":"snippets/showVersion.md","_extension":"md"},"hash":"G2Mgv0rFtD"}
+---
+title: 'Show Version'
+description: 'Get your Postgres version'
+---
+
+<!-- Content of the page -->

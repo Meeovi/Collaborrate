@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-row>
+        <v-toolbar color="transparent">
             <v-col cols="12">
                 <h4>Details</h4>
             </v-col>
@@ -22,7 +22,7 @@
             <v-col cols="12">
                 <h5>Customization</h5>
                 <br>
-                <v-row>
+                <v-toolbar color="transparent">
                     <v-col cols="6">
                         <v-text-field label="Site Name*" hint="AlternateCMS" required></v-text-field>
                     </v-col>
@@ -35,9 +35,9 @@
                     <v-col cols="6">
                         <v-file-input multiple label="Upload Site Logo" class="logoUpload"></v-file-input>
                     </v-col>
-                </v-row>
+                </v-toolbar>
             </v-col>
-        </v-row>
+        </v-toolbar>
     </div>
 </template>
 

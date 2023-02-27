@@ -2,7 +2,7 @@
     <v-row justify="center">
         <v-dialog v-model="dialog" persistent>
             <template v-slot:activator="{ props }">
-                <v-btn color="primary" size="small" v-bind="props" class="rightAddBtn">
+                <v-btn size="small" v-bind="props" class="rightAddBtn">
                     <v-icon start icon="fas fa-signal"></v-icon>Add new Locale
                 </v-btn>
             </template>

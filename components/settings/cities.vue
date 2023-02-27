@@ -1,13 +1,13 @@
 <template>
     <div>
-        <v-row>
-            <v-col cols="10">
+        <v-toolbar color="transparent">
+            <v-col cols="9">
                 <v-toolbar-title>Cities</v-toolbar-title>
             </v-col>
             <v-col cols="2">
                 <createCity />
             </v-col>
-        </v-row>
+        </v-toolbar>
         <v-text-field v-model="search" prepend-icon="fas fa-search" label="Search" single-line hide-details></v-text-field>
 <v-table fixed-header height="300px" width="100%">
             <thead>

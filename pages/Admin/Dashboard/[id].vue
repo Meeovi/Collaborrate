@@ -2,7 +2,7 @@
     <v-card class="contentSection">
         <v-card-title>
             <v-toolbar style="background-color: transparent;color: black;">
-                <v-col cols="10">
+                <v-col cols="9">
                     <v-toolbar-title>Dashboard Name</v-toolbar-title>
                 </v-col>
                 <v-col cols="2">
