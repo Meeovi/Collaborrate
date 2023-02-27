@@ -13,53 +13,53 @@
                             <v-icon icon="fas fa-circle-xmark"></v-icon>
                         </v-btn>
                         <v-card-title>
-                            <span class="text-h6">Create new table</span>
+                            <span class="text-h6">Create new content</span>
                         </v-card-title>
                     </v-toolbar>
                     <v-card-text>
                         <v-container>
                             <v-row>
                                 <v-col cols="6">
-                                    <v-text-field v-model="tableName" label="Name*" id="tableName" required>
+                                    <v-text-field v-model="contentName" label="Name*" id="contentName" required>
                                     </v-text-field>
                                 </v-col>
                                 <v-col cols="6">
-                                    <v-text-field v-model="tableDescription" label="Description" id="tableDescription"
+                                    <v-text-field v-model="contentDescription" label="Description" id="contentDescription"
                                         hint="Optional"></v-text-field>
                                 </v-col>
                                 <v-divider></v-divider>
                                 <v-col cols="6">
                                     <div class="text-subtitle-1 text-medium-emphasis">Broadcast changes to eligible
                                         users?</div>
-                                    <v-autocomplete v-model="tableBroadcast" id="tableBroadcast"
-                                        :items="['Broadcast', 'Disable']" label="Notifications"></v-autocomplete>
+                                    <v-select v-model="contentBroadcast" id="contentBroadcast"
+                                        :items="['Broadcast', 'Disable']" label="Notifications"></v-select>
                                 </v-col>
                                 <v-col cols="6">
                                     <div class="text-subtitle-1 text-medium-emphasis">Who can see this content?</div>
-                                    <v-autocomplete v-model="tableVisible" id="tableVisible"
-                                        :items="['Public', 'Private']" label="Visibility"></v-autocomplete>
+                                    <v-select v-model="contentVisible" id="contentVisible"
+                                        :items="['Public', 'Private']" label="Visibility"></v-select>
                                 </v-col>
                                 <v-divider></v-divider>
                                 <br>
                                 <v-col cols="3">
-                                    <v-text-field v-model="tableColumnName" id="columnName" label="Column Name"
+                                    <v-text-field v-model="contentColumnName" id="columnName" label="Content Name"
                                         hint="Column Name"></v-text-field>
                                 </v-col>
                                 <v-col cols="3">
-                                    <v-select v-model="tableColumnType" id="columnType"
-                                        :items="['Integer', 'BigInteger', 'Text', 'Boolean', 'SmallInteger', 'Datetime', 'Float', 'Json', 'Bytes', 'Decimal']"
-                                        label="Type*" required></v-select>
+                                    <select v-model="contentColumnType" id="columnType" name="Column Type" label="Type*" required>
+                                        <option v-for="types in types" :key="types" :value="types">{{ types.type }}</option>
+                                    </select>
                                 </v-col>
                                 <v-col cols="2">
-                                    <v-autocomplete v-model="tableColumnDefault" id="columnDefaultName"
+                                    <v-select v-model="contentColumnDefault" id="columnDefaultName"
                                         :items="['Set as NULL', 'Set as empty string']" label="Default Value">
-                                    </v-autocomplete>
+                                    </v-select>
                                 </v-col>
-                                <v-col cols="1"><v-checkbox label="Primary"></v-checkbox></v-col>
+                                <v-col cols="2"><v-checkbox label="Primary"></v-checkbox></v-col>
                                 <v-col cols="2">
-                                    <v-autocomplete v-model="tableColumnDefault" id="columnDefaultName"
+                                    <v-select v-model="contentColumnDefaultName" id="columnDefaultName"
                                         :items="['Is Nullable', 'Is Unique', 'Define as Array']" label="Extra Options" prepend-icon="fas fa-cog">
-                                    </v-autocomplete>
+                                    </v-select>
                                 </v-col>
                                 <v-col cols="9">
                                     <v-btn variant="text" prepend-icon="fas fa-plus">Add Column</v-btn>
@@ -95,13 +95,13 @@
                 sound: true,
                 widgets: false,
                 form: {
-                    tableName: "",
-                    tableDescription: "",
-                    tableBroadcast: "",
-                    tableVisible: "",
-                    tableColumnName: "",
-                    tableColumnType: "",
-                    tableColumnDefault: "",
+                    contentName: "",
+                    contentDescription: "",
+                    contentBroadcast: "",
+                    contentVisible: "",
+                    contentColumnName: "",
+                    contentColumnType: "",
+                    contentColumnDefault: "",
                 }
 
             }
@@ -133,7 +133,5 @@
 </script>
 
 <script setup>
-    const {
-        data
-    } = await useFetch('/api/dataType.json')
+    const { data: types } = await useFetch('/api/dataType.json')
 </script>
