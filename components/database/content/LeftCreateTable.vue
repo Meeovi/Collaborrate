@@ -31,35 +31,35 @@
                                 <v-col cols="6">
                                     <div class="text-subtitle-1 text-medium-emphasis">Broadcast changes to eligible
                                         users?</div>
-                                    <v-select v-model="contentBroadcast" id="contentBroadcast"
-                                        :items="['Broadcast', 'Disable']" label="Notifications"></v-select>
+                                    <v-autocomplete v-model="contentBroadcast" id="contentBroadcast"
+                                        :items="['Broadcast', 'Disable']" label="Notifications"></v-autocomplete>
                                 </v-col>
                                 <v-col cols="6">
                                     <div class="text-subtitle-1 text-medium-emphasis">Who can see this content?</div>
-                                    <v-select v-model="contentVisible" id="contentVisible"
-                                        :items="['Public', 'Private']" label="Visibility"></v-select>
+                                    <v-autocomplete v-model="contentVisible" id="contentVisible"
+                                        :items="['Public', 'Private']" label="Visibility"></v-autocomplete>
                                 </v-col>
                                 <v-divider></v-divider>
                                 <br>
                                 <v-col cols="3">
                                     <v-text-field v-model="contentColumnName" id="columnName" label="Content Name"
-                                        hint="Column Name"></v-text-field>
+                                        hint="Recommended to use lowercase names and seperate words with an underscore. i.e column_name"></v-text-field>
                                 </v-col>
                                 <v-col cols="3">
-                                    <select v-model="contentColumnType" id="columnType" name="Column Type" label="Type*" required>
-                                        <option v-for="types in types" :key="types" :value="types">{{ types.type }}</option>
-                                    </select>
+                                    <v-select v-model="contentColumnType" id="columnType"
+                                        :items="['Text', 'Email', 'Rich Text', 'Password', 'Number', 'Date', 'Enumeration', 'Media', 'Boolean', 'JSON', 'Relation', 'UID']"
+                                        label="Type*" required></v-select>
                                 </v-col>
                                 <v-col cols="2">
-                                    <v-select v-model="contentColumnDefault" id="columnDefaultName"
+                                    <v-autocomplete v-model="contentColumnDefault" id="columnDefaultName"
                                         :items="['Set as NULL', 'Set as empty string']" label="Default Value">
-                                    </v-select>
+                                    </v-autocomplete>
                                 </v-col>
-                                <v-col cols="2"><v-checkbox label="Primary"></v-checkbox></v-col>
+                                <v-col cols="1"><v-checkbox label="Primary"></v-checkbox></v-col>
                                 <v-col cols="2">
-                                    <v-select v-model="contentColumnDefaultName" id="columnDefaultName"
+                                    <v-autocomplete v-model="contentColumnDefault" id="columnDefaultName"
                                         :items="['Is Nullable', 'Is Unique', 'Define as Array']" label="Extra Options" prepend-icon="fas fa-cog">
-                                    </v-select>
+                                    </v-autocomplete>
                                 </v-col>
                                 <v-col cols="9">
                                     <v-btn variant="text" prepend-icon="fas fa-plus">Add Column</v-btn>
