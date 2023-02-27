@@ -3,8 +3,7 @@
         <v-dialog class="sidebarmenu" v-model="dialog" :scrim="false" transition="dialog-bottom-transition" scrollable
             fullscreen>
             <template v-slot:activator="{ props }">
-                <v-btn prepend-icon="fas fa-feather" variant="text" v-bind="props"></v-btn>
-                <p class="menutext">Blog</p>
+                <v-btn stacked size="x-small" prepend-icon="fas fa-feather" variant="text" v-bind="props">Blog</v-btn>
             </template>
             <v-card>
                 <v-card-title>

@@ -9,9 +9,9 @@ body {
 }
 
 .logobrand {
+    left: 20%;
     position: relative;
-    text-align: center;
-    width: 100% !important;
+    width: 70% !important;
     text-decoration: none;
 }
 
@@ -89,7 +89,7 @@ body {
     position: relative !important;
     left: 100px;
     width: 100% !important;
-    height: 100vh !important;
+    height: 100% !important;
 }
 
 @media all and (max-width: 500px) {
@@ -151,7 +151,7 @@ body {
 /******************** Sidebar CSS *************/
 
 #sidebarNav {
-    height: 100% !important;
+    height: 100vh !important;
     left: 0px;
     float: left;
     position: absolute;
@@ -172,23 +172,13 @@ body {
     margin: 0px !important;
 }
 
+.mainbar li {
+    list-style-type: none;
+    padding-bottom: 25px !important;
+}
+
 .sidebarmenu .v-overlay__content {
     max-height: calc(100%) !important;
-}
-
-.sidebarmenu .v-btn {
-    width: 100% !important;
-    display: block !important;
-    letter-spacing: .025em;
-    padding: 1.2rem .5rem .5rem;
-    position: relative;
-}
-
-.menutext {
-    width: 100%;
-    padding-top: 10px;
-    text-align: center;
-    font-size: 10px;
 }
 
 /********************* Metrics CSS ***********/

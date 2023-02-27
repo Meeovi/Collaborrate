@@ -4,36 +4,46 @@
       <v-card>
         <v-layout>
           <v-navigation-drawer class="mainbar" permanent :rail="rail" @click="rail = false">
+           <ul>
             <v-list-item>
-              <v-btn variant="text" size="50" prepend-icon="fas fa-hurricane" title="Alternate" href="/"></v-btn>
+              <a href="/"><img class="logobrand" src="../assets/images/alternatecms.png"/></a>
             </v-list-item>
 
             <v-divider></v-divider>
 
             <v-list-item>
-              <v-btn variant="text" title="Change Background"
-                :prepend-icon="theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'" @click="onClick"></v-btn>
+              <v-btn stacked variant="text" title="Change Background" :prepend-icon="theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'" @click="onClick"></v-btn>
             </v-list-item>
+            
+              <li>
+                <contentmenu />
+              </li>
 
-            <v-divider></v-divider>
+              <li>
+                <blogmenu />
+              </li>
 
-            <contentmenu />
+              <li>
+                <marketingmenu />
+              </li>
 
-            <blogmenu />
+              <li>
+                <reportsmenu />
+              </li>
 
-            <v-divider></v-divider>
+              <li>
+                <salesmenu />
+              </li>
 
-            <marketingmenu />
+              <li>
+                <inventorymenu />
+              </li>
 
-            <reportsmenu />
-
-            <v-divider></v-divider>
-
-            <salesmenu />
-
-            <inventorymenu />
-            <v-divider></v-divider>
-            <settingsmenu />
+              <v-divider></v-divider>
+              <li>
+                <settingsmenu />
+              </li>
+            </ul>
 
 
           </v-navigation-drawer>

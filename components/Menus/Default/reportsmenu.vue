@@ -2,7 +2,7 @@
     <v-row justify="center">
         <v-dialog class="sidebarmenu" v-model="dialog" :scrim="false" transition="dialog-bottom-transition" scrollable fullscreen>
             <template v-slot:activator="{ props }">
-                <v-btn prepend-icon="fas fa-chart-simple" variant="text" v-bind="props"></v-btn><p class="menutext">Reports</p>
+                <v-btn stacked size="x-small" prepend-icon="fas fa-chart-simple" variant="text" v-bind="props">Reports</v-btn>
             </template>
             <v-card>
                 <v-card-title>
