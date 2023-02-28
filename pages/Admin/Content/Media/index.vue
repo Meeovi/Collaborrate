@@ -42,8 +42,8 @@
 </template>
 
 <script>
-  import files from '../../../../components/content/media/files'
-  import albums from '../../../../components/content/media/albums'
+  import files from '../../../../components/content/media/files.vue'
+  import albums from '../../../../components/content/media/albums.vue'
 
   export default {
     components: {

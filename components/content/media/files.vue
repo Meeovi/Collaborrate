@@ -1,6 +1,6 @@
 <template>
   <div>
-      <v-toolbar>
+      <v-toolbar color="transparent">
           <v-col>
               <v-toolbar-title>Files</v-toolbar-title>
           </v-col>
@@ -69,6 +69,6 @@
 
 <script setup>
   useHead({
-      title: 'Pages',
+      title: 'Files - Media Manager',
   })
 </script>

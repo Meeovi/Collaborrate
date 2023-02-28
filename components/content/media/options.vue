@@ -1,21 +1,40 @@
 <template>
-    <v-row justify="center" class="mediaOptions">
-        <v-card>
-            <v-card-title>
-                <span class="text-h6">Options for "Media"</span>
-            </v-card-title>
-            <v-card-text>
+    <v-row justify="center">
+        <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition">
+            <template v-slot:activator="{ props }">
+                <v-col>
+                    <v-card class="mx-auto" v-bind="props">
+                        <v-img class="align-end text-white" height="200"
+                            src="../../../assets/images/logowhitebackground.png" cover>
+                            <v-card-title>Album Title</v-card-title>
+                        </v-img>
+                    </v-card>
+                </v-col>
+            </template>
+            <v-card>
+                <v-toolbar dark color="orange">
+                    <v-btn icon dark @click="dialog = false">
+                        <v-icon icon="fas fa-xmark"></v-icon>
+                    </v-btn>
+                    <v-toolbar-title>Media Options for "Media Title"</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-toolbar-items>
+                        <v-btn variant="text" @click="dialog = false">
+                            Save
+                        </v-btn>
+                    </v-toolbar-items>
+                </v-toolbar>
                 <v-container>
                     <v-row>
-                        <v-col>
-                            <v-card class="mx-auto" max-width="400" v-bind="props">
-                                <v-img class="align-end text-white" height="400"
-                                    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
-                                    <v-card-title>Top 10 Australian beaches</v-card-title>
+                        <v-col cols="6">
+                            <v-card class="mx-auto" v-bind="props">
+                                <v-img class="align-end text-white" src="../../../assets/images/logowhitebackground.png"
+                                    cover>
+                                    <v-card-title>Album Title</v-card-title>
                                 </v-img>
                             </v-card>
                         </v-col>
-                        <v-col>
+                        <v-col cols="6">
                             <v-row>
                                 <v-col cols="12">
                                     <v-text-field label="Name*" id="mediaName" required></v-text-field>
@@ -24,7 +43,8 @@
                                     <v-text-field label="Description" id="mediaDescription"></v-text-field>
                                 </v-col>
                                 <v-col cols="12">
-                                    <v-combobox v-model="keywords" :items="mkeywords" id="mediaKeywords" chips clearable label="Keywords" multiple>
+                                    <v-combobox v-model="keywords" :items="mkeywords" id="mediaKeywords" chips clearable
+                                        label="Keywords" multiple>
                                         <template v-slot:selection="{ attrs, item, select, selected }">
                                             <v-chip v-bind="attrs" :model-value="selected" closable @click="select"
                                                 @click:close="remove(item)">
@@ -35,7 +55,8 @@
                                     </v-combobox>
                                 </v-col>
                                 <v-col cols="12">
-                                    <v-combobox v-model="tags" :items="mtags" id="mediaTags" chips clearable label="Tags" multiple>
+                                    <v-combobox v-model="tags" :items="mtags" id="mediaTags" chips clearable
+                                        label="Tags" multiple>
                                         <template v-slot:selection="{ attrs, item, select, selected }">
                                             <v-chip v-bind="attrs" :model-value="selected" closable @click="select"
                                                 @click:close="remove(item)">
@@ -73,10 +94,12 @@
                                     </v-text-field>
                                 </v-col>
                                 <v-col cols="12">
-                                    <v-text-field label="Watermark Media" id="watermarkMedia"></v-text-field>
+                                    <v-text-field label="Watermark Media" id="watermarkMedia">
+                                    </v-text-field>
                                 </v-col>
                                 <v-col cols="12">
-                                    <v-combobox v-model="albums" :items="malbums" id="mediaAlbums" chips clearable label="Albums" multiple>
+                                    <v-combobox v-model="albums" :items="malbums" id="mediaAlbums" chips clearable
+                                        label="Albums" multiple>
                                         <template v-slot:selection="{ attrs, item, select, selected }">
                                             <v-chip v-bind="attrs" :model-value="selected" closable @click="select"
                                                 @click:close="remove(item)">
@@ -91,17 +114,8 @@
                     </v-row>
 
                 </v-container>
-                <small>*indicates required field</small>
-            </v-card-text>
-            <v-card-actions>
-                <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
-                    Close
-                </v-btn>
-                <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
-                    Save
-                </v-btn>
-            </v-card-actions>
-        </v-card>
+            </v-card>
+        </v-dialog>
     </v-row>
 </template>
 
@@ -110,6 +124,9 @@
         data() {
             return {
                 dialog: false,
+                notifications: false,
+                sound: true,
+                widgets: false,
                 keywords: ['Programming', 'Playing video games', 'Watching movies', 'Sleeping'],
                 tags: ['Programming', 'Playing video games', 'Watching movies', 'Sleeping'],
                 albums: ['Programming', 'Playing video games', 'Watching movies', 'Sleeping'],
