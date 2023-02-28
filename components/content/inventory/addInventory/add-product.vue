@@ -95,13 +95,13 @@
                                 <v-divider></v-divider>
 
                                 <v-col cols="12">
-                                    <v-file-input v-model="image" label="Product Image*" multiple required></v-file-input>
+                                    <v-file-input label="Product Image*" multiple required></v-file-input>
                                 </v-col>
                                 <v-col cols="12">
-                                    <v-file-input v-model="thumbnail" label="Product Thumbnails" multiple></v-file-input>
+                                    <v-file-input label="Product Thumbnails" multiple></v-file-input>
                                 </v-col>
                                 <v-col cols="12">
-                                    <v-file-input v-model="file" label="Product Files*" multiple></v-file-input>
+                                    <v-file-input label="Product Files" multiple></v-file-input>
                                 </v-col>
 
                                 <v-col cols="12"><h5>Search Engine Optimization (SEO)</h5></v-col>
@@ -131,7 +131,7 @@
                                 <v-col cols="12"><h5>Other Information</h5></v-col>
                                 <v-divider></v-divider>
 
-                                <v-col cols="12">
+                                <v-col cols="6">
                                     <v-text-field v-model="websites" type="url" label="Website"></v-text-field>
                                 </v-col>
                                 <v-col cols="6">
@@ -141,8 +141,8 @@
                                 <v-col cols="6">
                                     <v-text-field v-model="part_number" type="number" label="Part Number"></v-text-field>
                                 </v-col>
-                                <v-col cols="12">
-                                    <v-text-field v-model="manufacturer_part_number" label="Manufacturer Part Number"></v-text-field>
+                                <v-col cols="6">
+                                    <v-text-field v-model="manufacturer_part_number" type="number" label="Manufacturer Part Number"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12"><h5>Downloadable Information</h5></v-col>

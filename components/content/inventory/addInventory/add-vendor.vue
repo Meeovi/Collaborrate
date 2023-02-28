@@ -49,7 +49,7 @@
                                     <v-autocomplete v-model="tags" :items="['Skiing']" label="Tags" multiple></v-autocomplete>
                                 </v-col>
                                 <v-col cols="6">
-                                    <v-file-input v-model="image" type="image" label="Vendor Image">
+                                    <v-file-input type="image" label="Vendor Image">
                                     </v-file-input>
                                 </v-col>
                                 <v-col cols="12">
