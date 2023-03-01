@@ -8,8 +8,8 @@
             </template>
             <v-card>
                 <form action="" method="post" @v-on:submit.prevent="addContent()">
-                    <v-toolbar dark color="primary">
-                        <v-btn icon dark @click="dialog = false">
+                    <v-toolbar color="orange">
+                        <v-btn icon @click="dialog = false">
                             <v-icon icon="fas fa-circle-xmark"></v-icon>
                         </v-btn>
                         <v-card-title>
@@ -19,30 +19,34 @@
                 <v-card-text>
                     <v-container>
                         <v-row>
-                            <v-col cols="12" sm="6" md="4">
-                                <v-text-field label="Legal first name*" required></v-text-field>
+                            <v-col cols="6">
+                                <v-text-field label="Name"></v-text-field>
                             </v-col>
-                            <v-col cols="12" sm="6" md="4">
-                                <v-text-field label="Legal middle name" hint="example of helper text only on focus">
+                            <v-col cols="6">
+                                <v-select :items="['Active', 'Disable']" label="Status"></v-select>
+                            </v-col>
+                            <v-col cols="6">
+                                <v-select :items="['United States', 'United Kingdom']" label="Country"></v-select>
+                            </v-col>
+                            <v-col cols="6">
+                                <v-file-input label="Payment Icon"></v-file-input>
+                            </v-col>
+                            <v-col cols="6">
+                                <v-text-field label="Client ID">
                                 </v-text-field>
                             </v-col>
-                            <v-col cols="12" sm="6" md="4">
-                                <v-text-field label="Legal last name*" hint="example of persistent helper text"
-                                    persistent-hint required></v-text-field>
+                            <v-col cols="6">
+                                <v-text-field label="Client Secret" type="password">
+                                </v-text-field>
+                            </v-col>
+                            <v-col cols="6">
+                                <v-text-field label="Host URL" type="url"></v-text-field>
+                            </v-col>
+                            <v-col cols="6">
+                                <v-text-field label="Redirect URL" type="url"></v-text-field>
                             </v-col>
                             <v-col cols="12">
-                                <v-text-field label="Email*" required></v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                                <v-text-field label="Password*" type="password" required></v-text-field>
-                            </v-col>
-                            <v-col cols="12" sm="6">
-                                <v-select :items="['0-17', '18-29', '30-54', '54+']" label="Age*" required></v-select>
-                            </v-col>
-                            <v-col cols="12" sm="6">
-                                <v-autocomplete
-                                    :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-                                    label="Interests" multiple></v-autocomplete>
+                                <v-text-field label="Redirect URL App"></v-text-field>
                             </v-col>
                         </v-row>
                     </v-container>

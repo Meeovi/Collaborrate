@@ -1,6 +1,6 @@
 <template>
     <div class="contentRight">
-        <v-toolbar color="warning">
+        <v-toolbar style="background-color: yellowgreen; color: black;">
             <v-col cols="9">
                 <v-toolbar-title>Product Collections</v-toolbar-title>
             </v-col>
@@ -55,7 +55,7 @@
 </template>
 
 <script>
-    import createCollection from '../../../components/content/inventory/addInventory/add-collection.vue'
+    import createCollection from '../../components/content/inventory/addInventory/add-collection.vue'
     //import findManyCollections from '../../../graphql/query/findManyCollections.gql'
 
     export default {

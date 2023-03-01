@@ -13,17 +13,19 @@
                 <v-card-text>
                         <v-list>
                             <v-list-item prepend-icon="fas fa-scale-balanced" title="Sales" value="Sales"
-                                href="/Admin/Commerce/Sales"></v-list-item>
+                                href="/Admin/Sales/Sales"></v-list-item>
                             <v-list-item prepend-icon="fas fa-scale-unbalanced-flip" title="Transactions"
-                                value="Transactions" href="/Admin/Commerce/Transactions"></v-list-item>
+                                value="Transactions" href="/Admin/Sales/Transactions"></v-list-item>
                             <v-list-item prepend-icon="fas fa-check-double" title="Channels" value="Channels"
-                                href="/Admin/Commerce/Channels"></v-list-item>
+                                href="/Admin/Sales/Channels"></v-list-item>
                             <v-list-item prepend-icon="fas fa-object-group" title="Collections" value="Collections"
-                                href="/Admin/Commerce/Collections"></v-list-item>
+                                href="/Admin/Sales/Collections"></v-list-item>
                             <v-list-item prepend-icon="fas fa-receipt" title="Invoices" value="Invoices"
-                                href="/Admin/Commerce/Invoices"></v-list-item>
+                                href="/Admin/Sales/Invoices"></v-list-item>
+                            <v-list-item prepend-icon="fas fa-file-contract" title="Quotes" value="Quotes"
+                                href="/Admin/Sales/Quotes"></v-list-item>
                             <v-list-item prepend-icon="fas fa-credit-card" title="Payments" value="Payments"
-                                href="/Admin/Commerce/Payments"></v-list-item>
+                                href="/Admin/Sales/Payments"></v-list-item>
                         </v-list>
                 </v-card-text>
             </v-card>

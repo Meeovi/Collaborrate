@@ -1,11 +1,11 @@
 <template>
     <div class="contentRight">
-        <v-toolbar color="warning">
+        <v-toolbar style="background-color: yellowgreen; color: black;">
             <v-col cols="9">
-                <v-toolbar-title>Quotes</v-toolbar-title>
+                <v-toolbar-title>Channels</v-toolbar-title>
             </v-col>
             <v-col cols="2">
-                <createQuote />
+                <createChannel />
             </v-col>
         </v-toolbar>
         <v-row>
@@ -21,16 +21,19 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Quote ID
+                        Channel ID
                     </th>
                     <th class="text-left">
-                        Quote Name
+                        Channel Name
                     </th>
                     <th class="text-left">
-                        Category
+                        Currency
                     </th>
                     <th class="text-left">
-                        Grand Total
+                        Code
+                    </th>
+                    <th class="text-left">
+                        Default Language
                     </th>
                     <th class="text-left">
                         Created
@@ -40,14 +43,15 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="quotes in findManyQuotes" :key="quotes.id">
+            <tbody v-for="channels in findManyChannels" :key="channels.id">
                 <tr>
-                    <td>{{ quotes.id }}</td>
-                    <td>{{ quotes.name }}</td>
-                    <td>{{ quotes.categories }}</td>
-                    <td>{{ quotes.grand_total }}</td>
-                    <td>{{ quotes.created_at }}</td>
-                    <td><a :href="`/admin/database/${quotes.id}`"></a></td>
+                    <td>{{ channels.id }}</td>
+                    <td>{{ channels.name }}</td>
+                    <td>{{ channels.currency }}</td>
+                    <td>{{ channels.code }}</td>
+                    <td>{{ channels.default_lang }}</td>
+                    <td>{{ channels.created_at }}</td>
+                    <td><a :href="`/admin/database/${channels.id}`"></a></td>
                 </tr>
             </tbody>
         </v-table>
@@ -55,23 +59,23 @@
 </template>
 
 <script>
-    import createQuote from '../../../components/content/inventory/addInventory/add-quote.vue'
-    import findManyQuotes from '../../../graphql/query/findManyQuotes.gql'
+    import createChannel from '../../components/content/inventory/addInventory/add-channel.vue'
+    import findManyChannels from '../../../graphql/query/findManyChannels.gql'
 
     export default {
         components: {
-            createQuote,
+            createChannel,
         },
         data() {
             return {
                 search: '',
-                findManyQuotes: [],
+                findManyChannels: [],
             }
         },
         apollo: {
-            findManyQuotes: {
+            findManyChannels: {
                 prefetch: true,
-                query: findManyQuotes
+                query: findManyChannels
             }
         },
     }
@@ -79,8 +83,8 @@
 
 <script setup>
     useHead({
-        title: 'Quotes',
+        title: 'Channels',
     });
 
-const { data: quotes } = await useAsyncData(() => $fetch("/api/quotes"));
+const { data: channels } = await useAsyncData(() => $fetch("/api/channels"));
 </script>

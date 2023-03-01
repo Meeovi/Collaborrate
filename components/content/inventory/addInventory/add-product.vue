@@ -8,7 +8,7 @@
             </template>
             <v-card>
                 <form action="" method="post" @v-on:submit.prevent="addContent()">
-                    <v-toolbar dark color="primary">
+                    <v-toolbar dark color="orange">
                         <v-btn icon dark @click="dialog = false">
                             <v-icon icon="fas fa-circle-xmark"></v-icon>
                         </v-btn>

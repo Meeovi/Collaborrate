@@ -18,7 +18,7 @@
                         <v-list>
                             <v-list-item title="Settings" href="/Admin/Settings/general-settings"></v-list-item>
 
-                            <v-list-item title="Notifications" href="/Admin/Notifications/"></v-list-item>
+                            <v-list-item title="Notifications" href="/Admin/Settings/Notifications/"></v-list-item>
 
                             <v-list-item title="Integrations Marketplace" value="integrations"
                                 href="/Admin/Integrations/"></v-list-item>

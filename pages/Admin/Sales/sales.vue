@@ -35,11 +35,11 @@
 </template>
 
 <script>
-import open from '../../../components/content/inventory/sales/open.vue'
-import shipped from '../../../components/content/inventory/sales/shipped.vue'
-import completed from '../../../components/content/inventory/sales/completed.vue'
-import active from '../../../components/content/inventory/sales/active.vue'
-import draft from '../../../components/content/inventory/sales/draft.vue'
+import open from '../../components/content/inventory/sales/open.vue'
+import shipped from '../../components/content/inventory/sales/shipped.vue'
+import completed from '../../components/content/inventory/sales/completed.vue'
+import active from '../../components/content/inventory/sales/active.vue'
+import draft from '../../components/content/inventory/sales/draft.vue'
 
     export default {
         components: { open, shipped, completed, active, draft},

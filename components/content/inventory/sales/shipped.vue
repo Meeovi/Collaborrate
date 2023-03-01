@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-toolbar>
+        <v-toolbar color="transparent">
             <v-col cols="9">
                 <v-toolbar-title>Shipped Orders</v-toolbar-title>
             </v-col>

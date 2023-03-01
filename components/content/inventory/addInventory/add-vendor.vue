@@ -8,8 +8,8 @@
             </template>
             <v-card>
                 <form action="" method="post" @v-on:submit.prevent="addVendor()">
-                    <v-toolbar dark color="primary">
-                        <v-btn icon dark @click="dialog = false">
+                    <v-toolbar color="orange">
+                        <v-btn icon @click="dialog = false">
                             <v-icon icon="fas fa-circle-xmark"></v-icon>
                         </v-btn>
                         <v-card-title>
@@ -49,7 +49,7 @@
                                     <v-autocomplete v-model="tags" :items="['Skiing']" label="Tags" multiple></v-autocomplete>
                                 </v-col>
                                 <v-col cols="6">
-                                    <v-file-input type="image" label="Vendor Image">
+                                    <v-file-input label="Vendor Image">
                                     </v-file-input>
                                 </v-col>
                                 <v-col cols="12">

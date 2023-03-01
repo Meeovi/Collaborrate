@@ -12,7 +12,7 @@
                 <v-card-text>
                             <v-list>
                                 <v-list-item prepend-icon="fas fa-handshake" title="Agreements" value="Agreements"
-                                href="/Admin/Commerce/Agreements"></v-list-item>
+                                href="/Admin/Reports/Agreements"></v-list-item>
                             </v-list>
                 </v-card-text>
             </v-card>

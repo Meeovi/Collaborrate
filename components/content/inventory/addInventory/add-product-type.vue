@@ -8,8 +8,8 @@
             </template>
             <v-card>
                 <form action="" method="post" @v-on:submit.prevent="addContent()">
-                    <v-toolbar dark color="primary">
-                        <v-btn icon dark @click="dialog = false">
+                    <v-toolbar color="orange">
+                        <v-btn icon @click="dialog = false">
                             <v-icon icon="fas fa-circle-xmark"></v-icon>
                         </v-btn>
                         <v-card-title>
@@ -19,10 +19,10 @@
                     <v-card-text>
                         <v-container>
                             <v-row>
-                                <v-col cols="12">
+                                <v-col cols="6">
                                     <v-text-field v-model="type_name" label="Type Name*" hint="What is the name of the Type. Example: bag, service, etc" required></v-text-field>
                                 </v-col>
-                                <v-col cols="12">
+                                <v-col cols="6">
                                     <v-text-field v-model="taxes" label="Taxes"></v-text-field>
                                 </v-col>
                                 <v-col cols="6">

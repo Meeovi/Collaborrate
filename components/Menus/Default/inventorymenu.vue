@@ -26,8 +26,6 @@
                                 href="/Admin/Commerce/product-types"></v-list-item>
                             <v-list-item prepend-icon="fas fa-basket-shopping" title="Products" value="Products"
                                 href="/Admin/Commerce/Products"></v-list-item>
-                            <v-list-item prepend-icon="fas fa-file-contract" title="Quotes" value="Quotes"
-                                href="/Admin/Commerce/Quotes"></v-list-item>
                             
                             <v-list-item prepend-icon="fas fa-people-group" title="Vendors" value="Vendors"
                                 href="/Admin/Commerce/Vendors"></v-list-item>

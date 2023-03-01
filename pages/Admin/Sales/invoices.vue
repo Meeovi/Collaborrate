@@ -1,11 +1,11 @@
 <template>
     <div class="contentRight">
-        <v-toolbar color="warning">
+        <v-toolbar style="background-color: yellowgreen; color: black;">
             <v-col cols="9">
-                <v-toolbar-title>Payments</v-toolbar-title>
+                <v-toolbar-title>Invoices</v-toolbar-title>
             </v-col>
             <v-col cols="2">
-                <createPayment />
+                <createInvoice />
             </v-col>
         </v-toolbar>
         <v-row>
@@ -21,19 +21,19 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        
+                        Invoice ID
                     </th>
                     <th class="text-left">
-                        Payment ID
+                        Bill to Name
                     </th>
                     <th class="text-left">
-                        Payment Name
+                        Ship to Name
                     </th>
                     <th class="text-left">
-                        Active
+                        Email
                     </th>
                     <th class="text-left">
-                        Country
+                        Grand Total Purchased
                     </th>
                     <th class="text-left">
                         Created
@@ -43,15 +43,15 @@
                     </th>
                 </tr>
             </thead>
-            <tbody v-for="payments in findManyPayments" :key="payments.id">
+            <tbody v-for="invoices in findManyInvoices" :key="invoices.id">
                 <tr>
-                    <td>{{ payments.icon }}</td>
-                    <td>{{ payments.id }}</td>
-                    <td>{{ payments.name }}</td>
-                    <td>{{ payments.active }}</td>
-                    <td>{{ payments.country }}</td>
-                    <td>{{ payments.created_at }}</td>
-                    <td><a :href="`/admin/database/${payments.id}`"></a></td>
+                    <td>{{ invoices.id }}</td>
+                    <td>{{ invoices.bill_to_name }}</td>
+                    <td>{{ invoices.ship_to_name }}</td>
+                    <td>{{ invoices.email }}</td>
+                    <td>{{ invoices.grand_total_purchased }}</td>
+                    <td>{{ invoices.created_at }}</td>
+                    <td><a :href="`/admin/database/${invoices.id}`"></a></td>
                 </tr>
             </tbody>
         </v-table>
@@ -59,23 +59,23 @@
 </template>
 
 <script>
-    import createPayment from '../../../components/content/inventory/addInventory/add-payment.vue'
-    import findManyPayments from '../../../graphql/query/findManyPayments.gql'
+    import createInvoice from '../../../components/content/inventory/addInventory/add-invoice.vue'
+    import findManyInvoices from '../../../graphql/query/findManyInvoices.gql'
 
     export default {
         components: {
-            createPayment,
+            createInvoice,
         },
         data() {
             return {
                 search: '',
-                findManyPayments: [],
+                findManyInvoices: [],
             }
         },
         apollo: {
-            findManyPayments: {
+            findManyInvoices: {
                 prefetch: true,
-                query: findManyPayments
+                query: findManyInvoices
             }
         },
     }
@@ -83,8 +83,8 @@
 
 <script setup>
     useHead({
-        title: 'Payments',
+        title: 'Invoices',
     });
 
-const { data: payments } = await useAsyncData(() => $fetch("/api/payments"));
+const { data: invoices } = await useAsyncData(() => $fetch("/api/invoices"));
 </script>
