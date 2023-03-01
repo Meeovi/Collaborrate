@@ -12,7 +12,7 @@
                 </v-col>
             </template>
             <v-card>
-                <v-toolbar dark color="orange">
+                <v-toolbar dark style="background-color: lightseagreen;color: white;">
                     <v-btn icon dark @click="dialog = false">
                         <v-icon icon="fas fa-xmark"></v-icon>
                     </v-btn>
