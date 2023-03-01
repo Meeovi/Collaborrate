@@ -1,6 +1,6 @@
 <template>
     <v-card class="contentRight">
-            <v-toolbar style="background-color: yellow;color: black;">
+        <v-toolbar style="background-color: lightseagreen;color: white;">
                 <v-col cols="9">
                     <v-toolbar-title>Pages</v-toolbar-title>
                 </v-col>

@@ -1,6 +1,6 @@
 <template>
     <div class="contentRight">
-            <v-toolbar style="background-color: green;color: white;">
+        <v-toolbar style="background-color: lightseagreen;color: white;">
                 <v-col cols="9">
                     <v-toolbar-title>Categories</v-toolbar-title>
                 </v-col>

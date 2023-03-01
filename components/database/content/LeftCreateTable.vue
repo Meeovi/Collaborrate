@@ -8,7 +8,7 @@
             </template>
             <v-card>
                 <form action="" method="post" @v-on:submit.prevent="addDatabaseTable()">
-                    <v-toolbar dark style="background-color: azure; color: black;">
+                    <v-toolbar dark style="background-color: lightseagreen;color: white;">
                         <v-btn icon dark @click="dialog = false">
                             <v-icon icon="fas fa-circle-xmark"></v-icon>
                         </v-btn>
@@ -55,7 +55,7 @@
                                         :items="['Set as NULL', 'Set as empty string']" label="Default Value">
                                     </v-autocomplete>
                                 </v-col>
-                                <v-col cols="1"><v-checkbox label="Primary"></v-checkbox></v-col>
+                                <v-col cols="2"><v-checkbox label="Primary"></v-checkbox></v-col>
                                 <v-col cols="2">
                                     <v-autocomplete v-model="contentColumnDefault" id="columnDefaultName"
                                         :items="['Is Nullable', 'Is Unique', 'Define as Array']" label="Extra Options" prepend-icon="fas fa-cog">
