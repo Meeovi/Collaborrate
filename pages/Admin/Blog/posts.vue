@@ -55,7 +55,7 @@
 
 <script>
     import createPost from './InsertAddPost.vue'
-    import findManyPosts from '../../../graphql/query/findManyPosts.gql'
+    //import findManyPosts from '../../../graphql/query/findManyPosts.gql'
 
     export default {
         components: {
@@ -64,15 +64,15 @@
         data() {
             return {
                 search: '',
-                findManyPosts: [],
+               // findManyPosts: [],
             }
         },
-        apollo: {
+      /*  apollo: {
             findManyPosts: {
                 prefetch: true,
                 query: findManyPosts
             }
-        }, 
+        }, */
     }
 </script>
 
