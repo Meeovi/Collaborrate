@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-card class="metricsVcard">
-      <v-toolbar color="warning">
+      <v-toolbar style="background-color: lightseagreen;color: black;">
         <v-col cols="9">
           <v-toolbar-title>Media Manager</v-toolbar-title>
         </v-col>
@@ -9,7 +9,7 @@
           <v-file-input multiple label="Upload Media" class="mediaUpload"></v-file-input>
         </v-col>
       </v-toolbar>
-        <v-tabs v-model="tab" color="warning">
+        <v-tabs v-model="tab" style="background-color: lightseagreen;color: black;">
           <v-tab value="option-1">
             <v-icon start>
               mdi-lock
