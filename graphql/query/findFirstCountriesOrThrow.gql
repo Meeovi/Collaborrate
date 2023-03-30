@@ -1,0 +1,11 @@
+query {
+  findFirstCountriesOrThrow 
+ {
+    description
+    id
+    image
+    name
+    region
+    trainings
+  }
+}

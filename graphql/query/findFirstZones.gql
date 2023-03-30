@@ -1,0 +1,13 @@
+query {
+  findFirstZones 
+ {
+    code
+    country
+    created_at
+    id
+    name
+    scope
+    type
+    updated_at
+  }
+}

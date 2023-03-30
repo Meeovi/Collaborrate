@@ -1,0 +1,195 @@
+## Postgresql Database Graphql
+sources:
+  - name: Main
+    handler:
+      postgraphile:
+        connectionString: postgres://{env.POSTGRES_USER}:{env.POSTGRES_PASSWORD}@localhost/postgres
+
+# Graphql Information
+
+
+# MySQL Database Graphql
+
+#  - name: Mysql
+#    handler:
+#      mysql:
+#        # You can use environment variables like
+#        host: "{env.MYSQL_HOST}"
+#        port: "{env.MYSQL_PORT}"
+#        user: "{env.MYSQL_USER}"
+#        password: "{env.MYSQL_PASSWORD}"
+#        database: "{env.MYSQL_DATABASE}"
+
+# Sqlite Database Graphql
+
+#  - name: Sqlite
+#    handler:
+#      tuql:
+#        db: path/to/database.sqlite
+
+# MongoDB Database Graphql
+
+#  - name: Mongoose
+#    handler:
+#        mongoose:
+#          connectionString: DATABASE_URL
+#          models:
+#            - name: User
+#              path: ./src/models#User
+
+# OpenApi Handler
+#
+#  - name: MyOpenapiApi
+#    handler:
+#        openapi:
+#          source: ./my-schema.json
+
+# gRPC / Protobuf Handler
+#
+#  - name: MyGrpcApi
+#    handler:
+#      grpc:
+#        endpoint: localhost:50051
+#        source: grpc/proto/Example.proto
+
+# Json Schema Handler
+
+#  - name: MyApi
+#    handler:
+#      jsonSchema:
+#        endpoint: https://some-service-url/endpoint-path/
+#        operations:
+#          - type: Query
+#            field: users
+#            path: /users
+#            method: GET
+#            responseSchema: ./json-schemas/users.json
+
+# SOAP Handler
+
+#  - name: CountryInfo
+#    handler:
+#      soap:
+#        source: http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL
+
+# OData / Microsoft Graph Handler
+
+#  - name: TripPin
+#    handler:
+#      odata:
+#        endpoint: https://services.odata.org/TripPinRESTierService/
+
+# Apache Thrift Handler
+
+#  - name: Calculator
+#    handler:
+#      thrift:
+#        idl: ./src/thrift/calculator.thrift
+#        hostName: localhost
+#        port: 8080
+#        path: /thrift
+#        serviceName: calculator-service
+
+# Neo4j Handler
+
+#  - name: Neo4j
+#    handler:
+#      neo4j:
+#        url: neo4j://localhost
+#        username: neo4j
+#        password: MY_PASSWORD
+
+additionalTypeDefs: |
+  extend type File {
+    thumbnailImage(width: Int, height: Int): String
+  }
+  directive @live on QUERY
+
+additionalResolvers:
+  - targetTypeName: File
+    targetFieldName: thumbnailImage
+    requiredSelectionSet: '{ base64 }'
+    sourceName: ResizeImages
+    sourceTypeName: Query
+    sourceFieldName: resizeImage
+    sourceArgs:
+      image: '{root.base64}'
+      width: '{args.width}'
+      height: '{args.height}'
+
+plugins:
+#  - mock:
+#      mocks:
+#        - apply: User.firstName
+#          faker: '{{name.firstName}}'
+#  - liveQuery:
+#      invalidations:
+#        - field: Mutation.addTodo
+#          invalidate:
+#            - Query.todos
+  - responseCache: {}
+#  - statsd:
+#      # Configure `hot-shots`
+#      client:
+#        port: 8020
+#      # results in `gql.operations.count` instead of `graphql.operations.count`
+#      prefix: my-graphql-mesh
+#      # If you wish to disable introspection logging
+#     skipIntrospection: true
+  - sofa#useSofaWithSwaggerUI:
+        basePath: /rest
+        swaggerUIEndpoint: /swagger
+        info:
+          title: 'AlternateFramework REST API'
+          version: '1.0.0'
+  - PrometheusConfig:
+    # all optional, and by default, all set to false, please opt-in to the metrics you wish to get
+ 
+    # requires `execute` to be true
+    requestCount: true
+    # requires `execute` to be true
+    requestSummary: true
+    parse: true
+    validate: true
+    contextBuilding: true
+    execute: true
+    errors: true
+    resolvers: true
+    # reports metrics also for these resolvers, by default all fields are reported
+    resolversWhiteList:
+      - Mutation.*
+      - Query.user
+    deprecatedFields: true
+    # the path of the endpoint to expose the metrics, default is /metrics
+    endpoint: /metrics
+#  - newrelic:
+#      # default `false`. When set to `true`, includes the GraphQL document defining the operations and fragments
+#      includeDocument: true
+#      # default `false`. When set to `true`, includes all the operation variables with their values
+#      includeExecuteVariables: false
+#      # default: `false`. When set to `true`, includes the execution result
+#      includeRawResult: false
+#      # default `false`. When set to `true`, track resolvers as segments to monitor their performance
+#      trackResolvers: true
+#      # default `false`. When set to `true`, includes all the arguments passed to resolvers with their values
+#      includeResolverArgs: false
+#      # default `false`. When set to `true` append the names of operation root fields to the transaction name
+#      rootFieldsNaming: true
+#      # Allows to set a custom operation name to be used as transaction name and attribute
+#      extractOperationName: "{context.headers['x-operation-name']}"
+  
+
+cache:
+  localforage:
+    driver: [WEBSQL, INDEXEDDB, LOCALSTORAGE]
+#  redis:
+#    host: localhost
+#    port: 9876
+#    password: MY_SECRET_PASSWORD
+
+serve:
+  cors:
+    origin: '*'
+  playground: true
+  endpoint: /graphql
+  playgroundTitle: 'Alternate Graphql Playground'

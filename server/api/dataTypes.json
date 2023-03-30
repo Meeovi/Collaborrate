@@ -1,0 +1,49 @@
+[{
+    "type": "Text",
+    "description": "Small or long text like title or description"
+},
+{
+    "type": "Rich Text",
+    "description": "A rich text editor with formatting options"
+},
+{
+    "type": "Email",
+    "description": "Email field with validations format"
+},
+{
+    "type": "Password",
+    "description": "Password field with encryption"
+},
+{
+    "type": "Number",
+    "description": "Numbers (integer, float, decimal)"
+},
+{
+    "type": "Enumeration",
+    "description": "List of values, then pick one. i.e Select and Option in HTML"
+},
+{
+    "type": "Date",
+    "description": "A date picker with hours, minutes, and seconds. i.e datetime-local in HTML"
+},
+{
+    "type": "Media",
+    "description": "Files like images, videos, etc"
+},
+{
+    "type": "Boolean",
+    "description": "Yes or no, 1 or 0, true or false"
+},
+{
+    "type": "JSON",
+    "description": "Data in JSON format"
+},
+{
+    "type": "Relation",
+    "description": "Refers to a Collection Type"
+},
+{
+    "type": "UID",
+    "description": "Unique identifier"
+}
+]

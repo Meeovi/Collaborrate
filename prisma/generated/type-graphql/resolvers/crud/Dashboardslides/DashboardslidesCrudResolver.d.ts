@@ -1,0 +1,33 @@
+import type { GraphQLResolveInfo } from "graphql";
+import { AggregateDashboardslidesArgs } from "./args/AggregateDashboardslidesArgs";
+import { CreateOneDashboardslidesArgs } from "./args/CreateOneDashboardslidesArgs";
+import { DeleteManyDashboardslidesArgs } from "./args/DeleteManyDashboardslidesArgs";
+import { DeleteOneDashboardslidesArgs } from "./args/DeleteOneDashboardslidesArgs";
+import { FindFirstDashboardslidesArgs } from "./args/FindFirstDashboardslidesArgs";
+import { FindFirstDashboardslidesOrThrowArgs } from "./args/FindFirstDashboardslidesOrThrowArgs";
+import { FindManyDashboardslidesArgs } from "./args/FindManyDashboardslidesArgs";
+import { FindUniqueDashboardslidesArgs } from "./args/FindUniqueDashboardslidesArgs";
+import { FindUniqueDashboardslidesOrThrowArgs } from "./args/FindUniqueDashboardslidesOrThrowArgs";
+import { GroupByDashboardslidesArgs } from "./args/GroupByDashboardslidesArgs";
+import { UpdateManyDashboardslidesArgs } from "./args/UpdateManyDashboardslidesArgs";
+import { UpdateOneDashboardslidesArgs } from "./args/UpdateOneDashboardslidesArgs";
+import { UpsertOneDashboardslidesArgs } from "./args/UpsertOneDashboardslidesArgs";
+import { Dashboardslides } from "../../../models/Dashboardslides";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateDashboardslides } from "../../outputs/AggregateDashboardslides";
+import { DashboardslidesGroupBy } from "../../outputs/DashboardslidesGroupBy";
+export declare class DashboardslidesCrudResolver {
+    aggregateDashboardslides(ctx: any, info: GraphQLResolveInfo, args: AggregateDashboardslidesArgs): Promise<AggregateDashboardslides>;
+    createOneDashboardslides(ctx: any, info: GraphQLResolveInfo, args: CreateOneDashboardslidesArgs): Promise<Dashboardslides>;
+    deleteManyDashboardslides(ctx: any, info: GraphQLResolveInfo, args: DeleteManyDashboardslidesArgs): Promise<AffectedRowsOutput>;
+    deleteOneDashboardslides(ctx: any, info: GraphQLResolveInfo, args: DeleteOneDashboardslidesArgs): Promise<Dashboardslides | null>;
+    findFirstDashboardslides(ctx: any, info: GraphQLResolveInfo, args: FindFirstDashboardslidesArgs): Promise<Dashboardslides | null>;
+    findFirstDashboardslidesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstDashboardslidesOrThrowArgs): Promise<Dashboardslides | null>;
+    findManyDashboardslides(ctx: any, info: GraphQLResolveInfo, args: FindManyDashboardslidesArgs): Promise<Dashboardslides[]>;
+    findUniqueDashboardslides(ctx: any, info: GraphQLResolveInfo, args: FindUniqueDashboardslidesArgs): Promise<Dashboardslides | null>;
+    findUniqueDashboardslidesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueDashboardslidesOrThrowArgs): Promise<Dashboardslides | null>;
+    groupByDashboardslides(ctx: any, info: GraphQLResolveInfo, args: GroupByDashboardslidesArgs): Promise<DashboardslidesGroupBy[]>;
+    updateManyDashboardslides(ctx: any, info: GraphQLResolveInfo, args: UpdateManyDashboardslidesArgs): Promise<AffectedRowsOutput>;
+    updateOneDashboardslides(ctx: any, info: GraphQLResolveInfo, args: UpdateOneDashboardslidesArgs): Promise<Dashboardslides | null>;
+    upsertOneDashboardslides(ctx: any, info: GraphQLResolveInfo, args: UpsertOneDashboardslidesArgs): Promise<Dashboardslides>;
+}

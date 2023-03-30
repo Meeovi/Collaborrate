@@ -1,0 +1,13 @@
+export { AggregateShipmentsArgs } from "./AggregateShipmentsArgs";
+export { CreateOneShipmentsArgs } from "./CreateOneShipmentsArgs";
+export { DeleteManyShipmentsArgs } from "./DeleteManyShipmentsArgs";
+export { DeleteOneShipmentsArgs } from "./DeleteOneShipmentsArgs";
+export { FindFirstShipmentsArgs } from "./FindFirstShipmentsArgs";
+export { FindFirstShipmentsOrThrowArgs } from "./FindFirstShipmentsOrThrowArgs";
+export { FindManyShipmentsArgs } from "./FindManyShipmentsArgs";
+export { FindUniqueShipmentsArgs } from "./FindUniqueShipmentsArgs";
+export { FindUniqueShipmentsOrThrowArgs } from "./FindUniqueShipmentsOrThrowArgs";
+export { GroupByShipmentsArgs } from "./GroupByShipmentsArgs";
+export { UpdateManyShipmentsArgs } from "./UpdateManyShipmentsArgs";
+export { UpdateOneShipmentsArgs } from "./UpdateOneShipmentsArgs";
+export { UpsertOneShipmentsArgs } from "./UpsertOneShipmentsArgs";

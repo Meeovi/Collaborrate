@@ -1,0 +1,33 @@
+import type { GraphQLResolveInfo } from "graphql";
+import { AggregateDashboardgraphqlArgs } from "./args/AggregateDashboardgraphqlArgs";
+import { CreateOneDashboardgraphqlArgs } from "./args/CreateOneDashboardgraphqlArgs";
+import { DeleteManyDashboardgraphqlArgs } from "./args/DeleteManyDashboardgraphqlArgs";
+import { DeleteOneDashboardgraphqlArgs } from "./args/DeleteOneDashboardgraphqlArgs";
+import { FindFirstDashboardgraphqlArgs } from "./args/FindFirstDashboardgraphqlArgs";
+import { FindFirstDashboardgraphqlOrThrowArgs } from "./args/FindFirstDashboardgraphqlOrThrowArgs";
+import { FindManyDashboardgraphqlArgs } from "./args/FindManyDashboardgraphqlArgs";
+import { FindUniqueDashboardgraphqlArgs } from "./args/FindUniqueDashboardgraphqlArgs";
+import { FindUniqueDashboardgraphqlOrThrowArgs } from "./args/FindUniqueDashboardgraphqlOrThrowArgs";
+import { GroupByDashboardgraphqlArgs } from "./args/GroupByDashboardgraphqlArgs";
+import { UpdateManyDashboardgraphqlArgs } from "./args/UpdateManyDashboardgraphqlArgs";
+import { UpdateOneDashboardgraphqlArgs } from "./args/UpdateOneDashboardgraphqlArgs";
+import { UpsertOneDashboardgraphqlArgs } from "./args/UpsertOneDashboardgraphqlArgs";
+import { Dashboardgraphql } from "../../../models/Dashboardgraphql";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateDashboardgraphql } from "../../outputs/AggregateDashboardgraphql";
+import { DashboardgraphqlGroupBy } from "../../outputs/DashboardgraphqlGroupBy";
+export declare class DashboardgraphqlCrudResolver {
+    aggregateDashboardgraphql(ctx: any, info: GraphQLResolveInfo, args: AggregateDashboardgraphqlArgs): Promise<AggregateDashboardgraphql>;
+    createOneDashboardgraphql(ctx: any, info: GraphQLResolveInfo, args: CreateOneDashboardgraphqlArgs): Promise<Dashboardgraphql>;
+    deleteManyDashboardgraphql(ctx: any, info: GraphQLResolveInfo, args: DeleteManyDashboardgraphqlArgs): Promise<AffectedRowsOutput>;
+    deleteOneDashboardgraphql(ctx: any, info: GraphQLResolveInfo, args: DeleteOneDashboardgraphqlArgs): Promise<Dashboardgraphql | null>;
+    findFirstDashboardgraphql(ctx: any, info: GraphQLResolveInfo, args: FindFirstDashboardgraphqlArgs): Promise<Dashboardgraphql | null>;
+    findFirstDashboardgraphqlOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstDashboardgraphqlOrThrowArgs): Promise<Dashboardgraphql | null>;
+    dashboardgraphqls(ctx: any, info: GraphQLResolveInfo, args: FindManyDashboardgraphqlArgs): Promise<Dashboardgraphql[]>;
+    dashboardgraphql(ctx: any, info: GraphQLResolveInfo, args: FindUniqueDashboardgraphqlArgs): Promise<Dashboardgraphql | null>;
+    getDashboardgraphql(ctx: any, info: GraphQLResolveInfo, args: FindUniqueDashboardgraphqlOrThrowArgs): Promise<Dashboardgraphql | null>;
+    groupByDashboardgraphql(ctx: any, info: GraphQLResolveInfo, args: GroupByDashboardgraphqlArgs): Promise<DashboardgraphqlGroupBy[]>;
+    updateManyDashboardgraphql(ctx: any, info: GraphQLResolveInfo, args: UpdateManyDashboardgraphqlArgs): Promise<AffectedRowsOutput>;
+    updateOneDashboardgraphql(ctx: any, info: GraphQLResolveInfo, args: UpdateOneDashboardgraphqlArgs): Promise<Dashboardgraphql | null>;
+    upsertOneDashboardgraphql(ctx: any, info: GraphQLResolveInfo, args: UpsertOneDashboardgraphqlArgs): Promise<Dashboardgraphql>;
+}

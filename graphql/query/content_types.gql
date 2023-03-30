@@ -1,0 +1,20 @@
+query {
+  content_types 
+ {
+    boolean
+    created_at
+    database_name
+    date
+    email
+    id
+    link
+    media
+    number
+    password
+    rich_text
+    text
+    time
+    timestamp
+    uid
+  }
+}

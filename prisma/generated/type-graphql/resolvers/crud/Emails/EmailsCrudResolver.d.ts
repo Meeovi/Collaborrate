@@ -1,0 +1,33 @@
+import type { GraphQLResolveInfo } from "graphql";
+import { AggregateEmailsArgs } from "./args/AggregateEmailsArgs";
+import { CreateOneEmailsArgs } from "./args/CreateOneEmailsArgs";
+import { DeleteManyEmailsArgs } from "./args/DeleteManyEmailsArgs";
+import { DeleteOneEmailsArgs } from "./args/DeleteOneEmailsArgs";
+import { FindFirstEmailsArgs } from "./args/FindFirstEmailsArgs";
+import { FindFirstEmailsOrThrowArgs } from "./args/FindFirstEmailsOrThrowArgs";
+import { FindManyEmailsArgs } from "./args/FindManyEmailsArgs";
+import { FindUniqueEmailsArgs } from "./args/FindUniqueEmailsArgs";
+import { FindUniqueEmailsOrThrowArgs } from "./args/FindUniqueEmailsOrThrowArgs";
+import { GroupByEmailsArgs } from "./args/GroupByEmailsArgs";
+import { UpdateManyEmailsArgs } from "./args/UpdateManyEmailsArgs";
+import { UpdateOneEmailsArgs } from "./args/UpdateOneEmailsArgs";
+import { UpsertOneEmailsArgs } from "./args/UpsertOneEmailsArgs";
+import { Emails } from "../../../models/Emails";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateEmails } from "../../outputs/AggregateEmails";
+import { EmailsGroupBy } from "../../outputs/EmailsGroupBy";
+export declare class EmailsCrudResolver {
+    aggregateEmails(ctx: any, info: GraphQLResolveInfo, args: AggregateEmailsArgs): Promise<AggregateEmails>;
+    createOneEmails(ctx: any, info: GraphQLResolveInfo, args: CreateOneEmailsArgs): Promise<Emails>;
+    deleteManyEmails(ctx: any, info: GraphQLResolveInfo, args: DeleteManyEmailsArgs): Promise<AffectedRowsOutput>;
+    deleteOneEmails(ctx: any, info: GraphQLResolveInfo, args: DeleteOneEmailsArgs): Promise<Emails | null>;
+    findFirstEmails(ctx: any, info: GraphQLResolveInfo, args: FindFirstEmailsArgs): Promise<Emails | null>;
+    findFirstEmailsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstEmailsOrThrowArgs): Promise<Emails | null>;
+    findManyEmails(ctx: any, info: GraphQLResolveInfo, args: FindManyEmailsArgs): Promise<Emails[]>;
+    findUniqueEmails(ctx: any, info: GraphQLResolveInfo, args: FindUniqueEmailsArgs): Promise<Emails | null>;
+    findUniqueEmailsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueEmailsOrThrowArgs): Promise<Emails | null>;
+    groupByEmails(ctx: any, info: GraphQLResolveInfo, args: GroupByEmailsArgs): Promise<EmailsGroupBy[]>;
+    updateManyEmails(ctx: any, info: GraphQLResolveInfo, args: UpdateManyEmailsArgs): Promise<AffectedRowsOutput>;
+    updateOneEmails(ctx: any, info: GraphQLResolveInfo, args: UpdateOneEmailsArgs): Promise<Emails | null>;
+    upsertOneEmails(ctx: any, info: GraphQLResolveInfo, args: UpsertOneEmailsArgs): Promise<Emails>;
+}

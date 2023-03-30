@@ -1,0 +1,13 @@
+query {
+  dashboardgraphql 
+ {
+    description
+    headerKey
+    headerValue
+    id
+    name
+    url
+    urlKey
+    urlValue
+  }
+}

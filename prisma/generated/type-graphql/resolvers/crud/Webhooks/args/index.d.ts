@@ -1,0 +1,13 @@
+export { AggregateWebhooksArgs } from "./AggregateWebhooksArgs";
+export { CreateOneWebhooksArgs } from "./CreateOneWebhooksArgs";
+export { DeleteManyWebhooksArgs } from "./DeleteManyWebhooksArgs";
+export { DeleteOneWebhooksArgs } from "./DeleteOneWebhooksArgs";
+export { FindFirstWebhooksArgs } from "./FindFirstWebhooksArgs";
+export { FindFirstWebhooksOrThrowArgs } from "./FindFirstWebhooksOrThrowArgs";
+export { FindManyWebhooksArgs } from "./FindManyWebhooksArgs";
+export { FindUniqueWebhooksArgs } from "./FindUniqueWebhooksArgs";
+export { FindUniqueWebhooksOrThrowArgs } from "./FindUniqueWebhooksOrThrowArgs";
+export { GroupByWebhooksArgs } from "./GroupByWebhooksArgs";
+export { UpdateManyWebhooksArgs } from "./UpdateManyWebhooksArgs";
+export { UpdateOneWebhooksArgs } from "./UpdateOneWebhooksArgs";
+export { UpsertOneWebhooksArgs } from "./UpsertOneWebhooksArgs";

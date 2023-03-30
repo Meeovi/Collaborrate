@@ -1,0 +1,13 @@
+export { AggregateDashboardrestapiArgs } from "./AggregateDashboardrestapiArgs";
+export { CreateOneDashboardrestapiArgs } from "./CreateOneDashboardrestapiArgs";
+export { DeleteManyDashboardrestapiArgs } from "./DeleteManyDashboardrestapiArgs";
+export { DeleteOneDashboardrestapiArgs } from "./DeleteOneDashboardrestapiArgs";
+export { FindFirstDashboardrestapiArgs } from "./FindFirstDashboardrestapiArgs";
+export { FindFirstDashboardrestapiOrThrowArgs } from "./FindFirstDashboardrestapiOrThrowArgs";
+export { FindManyDashboardrestapiArgs } from "./FindManyDashboardrestapiArgs";
+export { FindUniqueDashboardrestapiArgs } from "./FindUniqueDashboardrestapiArgs";
+export { FindUniqueDashboardrestapiOrThrowArgs } from "./FindUniqueDashboardrestapiOrThrowArgs";
+export { GroupByDashboardrestapiArgs } from "./GroupByDashboardrestapiArgs";
+export { UpdateManyDashboardrestapiArgs } from "./UpdateManyDashboardrestapiArgs";
+export { UpdateOneDashboardrestapiArgs } from "./UpdateOneDashboardrestapiArgs";
+export { UpsertOneDashboardrestapiArgs } from "./UpsertOneDashboardrestapiArgs";

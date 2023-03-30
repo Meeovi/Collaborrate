@@ -1,0 +1,33 @@
+import type { GraphQLResolveInfo } from "graphql";
+import { AggregateDashboardrestapiArgs } from "./args/AggregateDashboardrestapiArgs";
+import { CreateOneDashboardrestapiArgs } from "./args/CreateOneDashboardrestapiArgs";
+import { DeleteManyDashboardrestapiArgs } from "./args/DeleteManyDashboardrestapiArgs";
+import { DeleteOneDashboardrestapiArgs } from "./args/DeleteOneDashboardrestapiArgs";
+import { FindFirstDashboardrestapiArgs } from "./args/FindFirstDashboardrestapiArgs";
+import { FindFirstDashboardrestapiOrThrowArgs } from "./args/FindFirstDashboardrestapiOrThrowArgs";
+import { FindManyDashboardrestapiArgs } from "./args/FindManyDashboardrestapiArgs";
+import { FindUniqueDashboardrestapiArgs } from "./args/FindUniqueDashboardrestapiArgs";
+import { FindUniqueDashboardrestapiOrThrowArgs } from "./args/FindUniqueDashboardrestapiOrThrowArgs";
+import { GroupByDashboardrestapiArgs } from "./args/GroupByDashboardrestapiArgs";
+import { UpdateManyDashboardrestapiArgs } from "./args/UpdateManyDashboardrestapiArgs";
+import { UpdateOneDashboardrestapiArgs } from "./args/UpdateOneDashboardrestapiArgs";
+import { UpsertOneDashboardrestapiArgs } from "./args/UpsertOneDashboardrestapiArgs";
+import { Dashboardrestapi } from "../../../models/Dashboardrestapi";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateDashboardrestapi } from "../../outputs/AggregateDashboardrestapi";
+import { DashboardrestapiGroupBy } from "../../outputs/DashboardrestapiGroupBy";
+export declare class DashboardrestapiCrudResolver {
+    aggregateDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: AggregateDashboardrestapiArgs): Promise<AggregateDashboardrestapi>;
+    createOneDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: CreateOneDashboardrestapiArgs): Promise<Dashboardrestapi>;
+    deleteManyDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: DeleteManyDashboardrestapiArgs): Promise<AffectedRowsOutput>;
+    deleteOneDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: DeleteOneDashboardrestapiArgs): Promise<Dashboardrestapi | null>;
+    findFirstDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: FindFirstDashboardrestapiArgs): Promise<Dashboardrestapi | null>;
+    findFirstDashboardrestapiOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstDashboardrestapiOrThrowArgs): Promise<Dashboardrestapi | null>;
+    dashboardrestapis(ctx: any, info: GraphQLResolveInfo, args: FindManyDashboardrestapiArgs): Promise<Dashboardrestapi[]>;
+    dashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: FindUniqueDashboardrestapiArgs): Promise<Dashboardrestapi | null>;
+    getDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: FindUniqueDashboardrestapiOrThrowArgs): Promise<Dashboardrestapi | null>;
+    groupByDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: GroupByDashboardrestapiArgs): Promise<DashboardrestapiGroupBy[]>;
+    updateManyDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: UpdateManyDashboardrestapiArgs): Promise<AffectedRowsOutput>;
+    updateOneDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: UpdateOneDashboardrestapiArgs): Promise<Dashboardrestapi | null>;
+    upsertOneDashboardrestapi(ctx: any, info: GraphQLResolveInfo, args: UpsertOneDashboardrestapiArgs): Promise<Dashboardrestapi>;
+}

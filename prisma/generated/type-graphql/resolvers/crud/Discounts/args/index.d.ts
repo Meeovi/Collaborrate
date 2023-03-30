@@ -1,0 +1,13 @@
+export { AggregateDiscountsArgs } from "./AggregateDiscountsArgs";
+export { CreateOneDiscountsArgs } from "./CreateOneDiscountsArgs";
+export { DeleteManyDiscountsArgs } from "./DeleteManyDiscountsArgs";
+export { DeleteOneDiscountsArgs } from "./DeleteOneDiscountsArgs";
+export { FindFirstDiscountsArgs } from "./FindFirstDiscountsArgs";
+export { FindFirstDiscountsOrThrowArgs } from "./FindFirstDiscountsOrThrowArgs";
+export { FindManyDiscountsArgs } from "./FindManyDiscountsArgs";
+export { FindUniqueDiscountsArgs } from "./FindUniqueDiscountsArgs";
+export { FindUniqueDiscountsOrThrowArgs } from "./FindUniqueDiscountsOrThrowArgs";
+export { GroupByDiscountsArgs } from "./GroupByDiscountsArgs";
+export { UpdateManyDiscountsArgs } from "./UpdateManyDiscountsArgs";
+export { UpdateOneDiscountsArgs } from "./UpdateOneDiscountsArgs";
+export { UpsertOneDiscountsArgs } from "./UpsertOneDiscountsArgs";

@@ -1,0 +1,66 @@
+query {
+  groupByShipments 
+ {
+    _avg {
+      id
+    }
+    _count {
+      _all
+      carrier_name
+      client_id
+      client_secret
+      country
+      id
+      image
+      product
+      ship_date
+      speed_grade
+      tracking_url
+      transit_time
+      website
+    }
+    _max {
+      carrier_name
+      client_id
+      client_secret
+      country
+      id
+      image
+      product
+      ship_date
+      speed_grade
+      tracking_url
+      transit_time
+      website
+    }
+    _min {
+      carrier_name
+      client_id
+      client_secret
+      country
+      id
+      image
+      product
+      ship_date
+      speed_grade
+      tracking_url
+      transit_time
+      website
+    }
+    _sum {
+      id
+    }
+    carrier_name
+    client_id
+    client_secret
+    country
+    id
+    image
+    product
+    ship_date
+    speed_grade
+    tracking_url
+    transit_time
+    website
+  }
+}

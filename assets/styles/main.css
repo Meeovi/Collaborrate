@@ -1,0 +1,227 @@
+/********************** Main CSS *************/
+
+body {
+    margin: 0;
+}
+
+#topnav {
+    width: 100% !important;
+}
+
+.logobrand {
+    left: 20%;
+    position: relative;
+    width: 70% !important;
+    text-decoration: none;
+}
+
+.choiceGrid .v-card {
+    margin: 10px;
+}
+
+.leftContent {
+    max-width: 210px !important;
+}
+
+.leftContent h4, .leftContent h6 {
+    width: 100%;
+    text-align: center;
+    top: 0px;
+    position: relative;
+}
+
+.contentLeft {
+    left: 0px !important;
+    position: relative;
+    top: 0px !important;
+    width: 209px !important;
+    height: 100vh !important;
+}
+
+.contentLeft h4, .contentLeft h6 {
+    padding: 12px;
+}
+
+.contentRight {
+    padding-right: 5px;
+    top: 0px !important;
+    height: 100vh !important;
+    width: 100% !important;
+}
+
+.contentRight .v-card-title {
+    padding: 0 !important;
+}
+
+.contentRight h4 {
+    padding: 10px;
+}
+
+.insertAddBtn {
+    top: 10px;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.rightAddBtn {
+    top: 25px;
+    margin-bottom: 51px;
+    display: block !important;
+}
+
+.features3, .team1, .card-wrap {
+    background-color: transparent !important;
+}
+
+.features3 .mbr-text, .item-title {
+    color: black !important;
+}
+
+.sqleditorbar h5, .databasebar h5 {
+    position: relative;
+    left: 20px;
+}
+
+/******************* Main Section CSS *********/
+
+#mainSection {
+    top: 0px !important;
+    position: relative !important;
+    left: 100px;
+    width: 100% !important;
+    height: 100vh !important;
+}
+
+@media all and (max-width: 500px) {
+    #mainSection {
+        left: 1px;
+    }
+}
+
+.homeSection {
+    padding: 45px !important;
+}
+
+@media all and (max-width: 500px) {
+    .homeSection {
+        padding: 1px;
+    }
+}
+
+.homeSection a {
+    text-decoration: none;
+}
+
+.homeTitle, .homeDescription {
+    padding: 5px;
+}
+
+.homeRows {
+    color: white;
+}
+
+.homeRight {
+    padding: 15px;
+}
+
+.emailTemplates {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dialog-bottom-transition-enter-active,
+.dialog-bottom-transition-leave-active {
+    transition: transform .2s ease-in-out;
+}
+
+.contentDashboard {
+    padding: 10px;
+}
+
+.sqlSection {
+    width: 100% !important;
+}
+
+.apiDocs, .apiStudio {
+    height: 100vh;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+/******************** Sidebar CSS *************/
+
+#sidebarNav {
+    height: 100vh !important;
+    left: 0px;
+    float: left;
+    position: absolute;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.mainbar {
+    width: 100px !important;
+}
+
+.sidebarmenu {
+    width: 300px;
+    min-height: 100% !important;
+    max-height: 100% !important;
+    height: 100% !important;
+    left: 100px !important;
+    margin: 0px !important;
+}
+
+.mainbar li {
+    list-style-type: none;
+    padding-bottom: 25px !important;
+}
+
+.sidebarmenu .v-overlay__content {
+    max-height: calc(100%) !important;
+}
+
+/********************* Metrics CSS ***********/
+
+.metricsWindowRight {
+    width: 80%;
+    height: 100vh !important;
+}
+
+.databaseSections {
+    width: 100%;
+    position: relative;
+    height: 100vh !important;
+}
+
+/********************** Media Manager CSS ***********/
+
+.mediaManager, .mediaManager img {
+    width: 200px;
+    height: 200px;
+}
+
+.mediaOptions {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    max-width: 100% !important;
+}
+
+.mediaUpload {
+    position: relative;
+    top: 15px;
+    height: 100%;
+}
+
+/************************ Settings CSS ***************/
+
+.settingsLeft h5 {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.settingsRight {
+    padding-top: 10px;
+    width: 80vw !important;
+    height: 100vh !important;
+}

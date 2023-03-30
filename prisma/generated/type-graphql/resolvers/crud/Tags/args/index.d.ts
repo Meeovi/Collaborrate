@@ -1,0 +1,13 @@
+export { AggregateTagsArgs } from "./AggregateTagsArgs";
+export { CreateOneTagsArgs } from "./CreateOneTagsArgs";
+export { DeleteManyTagsArgs } from "./DeleteManyTagsArgs";
+export { DeleteOneTagsArgs } from "./DeleteOneTagsArgs";
+export { FindFirstTagsArgs } from "./FindFirstTagsArgs";
+export { FindFirstTagsOrThrowArgs } from "./FindFirstTagsOrThrowArgs";
+export { FindManyTagsArgs } from "./FindManyTagsArgs";
+export { FindUniqueTagsArgs } from "./FindUniqueTagsArgs";
+export { FindUniqueTagsOrThrowArgs } from "./FindUniqueTagsOrThrowArgs";
+export { GroupByTagsArgs } from "./GroupByTagsArgs";
+export { UpdateManyTagsArgs } from "./UpdateManyTagsArgs";
+export { UpdateOneTagsArgs } from "./UpdateOneTagsArgs";
+export { UpsertOneTagsArgs } from "./UpsertOneTagsArgs";

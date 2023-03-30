@@ -1,0 +1,13 @@
+export { AggregateReviewsArgs } from "./AggregateReviewsArgs";
+export { CreateOneReviewsArgs } from "./CreateOneReviewsArgs";
+export { DeleteManyReviewsArgs } from "./DeleteManyReviewsArgs";
+export { DeleteOneReviewsArgs } from "./DeleteOneReviewsArgs";
+export { FindFirstReviewsArgs } from "./FindFirstReviewsArgs";
+export { FindFirstReviewsOrThrowArgs } from "./FindFirstReviewsOrThrowArgs";
+export { FindManyReviewsArgs } from "./FindManyReviewsArgs";
+export { FindUniqueReviewsArgs } from "./FindUniqueReviewsArgs";
+export { FindUniqueReviewsOrThrowArgs } from "./FindUniqueReviewsOrThrowArgs";
+export { GroupByReviewsArgs } from "./GroupByReviewsArgs";
+export { UpdateManyReviewsArgs } from "./UpdateManyReviewsArgs";
+export { UpdateOneReviewsArgs } from "./UpdateOneReviewsArgs";
+export { UpsertOneReviewsArgs } from "./UpsertOneReviewsArgs";

@@ -1,0 +1,11 @@
+query {
+  getDashboardjson 
+ {
+    definition
+    description
+    format
+    id
+    name
+    url
+  }
+}

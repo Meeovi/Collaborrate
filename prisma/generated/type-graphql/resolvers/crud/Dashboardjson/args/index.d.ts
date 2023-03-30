@@ -1,0 +1,13 @@
+export { AggregateDashboardjsonArgs } from "./AggregateDashboardjsonArgs";
+export { CreateOneDashboardjsonArgs } from "./CreateOneDashboardjsonArgs";
+export { DeleteManyDashboardjsonArgs } from "./DeleteManyDashboardjsonArgs";
+export { DeleteOneDashboardjsonArgs } from "./DeleteOneDashboardjsonArgs";
+export { FindFirstDashboardjsonArgs } from "./FindFirstDashboardjsonArgs";
+export { FindFirstDashboardjsonOrThrowArgs } from "./FindFirstDashboardjsonOrThrowArgs";
+export { FindManyDashboardjsonArgs } from "./FindManyDashboardjsonArgs";
+export { FindUniqueDashboardjsonArgs } from "./FindUniqueDashboardjsonArgs";
+export { FindUniqueDashboardjsonOrThrowArgs } from "./FindUniqueDashboardjsonOrThrowArgs";
+export { GroupByDashboardjsonArgs } from "./GroupByDashboardjsonArgs";
+export { UpdateManyDashboardjsonArgs } from "./UpdateManyDashboardjsonArgs";
+export { UpdateOneDashboardjsonArgs } from "./UpdateOneDashboardjsonArgs";
+export { UpsertOneDashboardjsonArgs } from "./UpsertOneDashboardjsonArgs";

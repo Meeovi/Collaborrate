@@ -1,0 +1,21 @@
+query {
+  findFirstCategories 
+ {
+    content
+    country
+    description
+    id
+    image
+    meta_description
+    meta_keywords
+    meta_title
+    meta_url
+    name
+    product
+    status
+    thumbnail
+    visibility
+    websites
+    workspaces
+  }
+}

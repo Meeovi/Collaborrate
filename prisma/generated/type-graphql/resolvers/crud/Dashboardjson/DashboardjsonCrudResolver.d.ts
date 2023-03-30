@@ -1,0 +1,33 @@
+import type { GraphQLResolveInfo } from "graphql";
+import { AggregateDashboardjsonArgs } from "./args/AggregateDashboardjsonArgs";
+import { CreateOneDashboardjsonArgs } from "./args/CreateOneDashboardjsonArgs";
+import { DeleteManyDashboardjsonArgs } from "./args/DeleteManyDashboardjsonArgs";
+import { DeleteOneDashboardjsonArgs } from "./args/DeleteOneDashboardjsonArgs";
+import { FindFirstDashboardjsonArgs } from "./args/FindFirstDashboardjsonArgs";
+import { FindFirstDashboardjsonOrThrowArgs } from "./args/FindFirstDashboardjsonOrThrowArgs";
+import { FindManyDashboardjsonArgs } from "./args/FindManyDashboardjsonArgs";
+import { FindUniqueDashboardjsonArgs } from "./args/FindUniqueDashboardjsonArgs";
+import { FindUniqueDashboardjsonOrThrowArgs } from "./args/FindUniqueDashboardjsonOrThrowArgs";
+import { GroupByDashboardjsonArgs } from "./args/GroupByDashboardjsonArgs";
+import { UpdateManyDashboardjsonArgs } from "./args/UpdateManyDashboardjsonArgs";
+import { UpdateOneDashboardjsonArgs } from "./args/UpdateOneDashboardjsonArgs";
+import { UpsertOneDashboardjsonArgs } from "./args/UpsertOneDashboardjsonArgs";
+import { Dashboardjson } from "../../../models/Dashboardjson";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateDashboardjson } from "../../outputs/AggregateDashboardjson";
+import { DashboardjsonGroupBy } from "../../outputs/DashboardjsonGroupBy";
+export declare class DashboardjsonCrudResolver {
+    aggregateDashboardjson(ctx: any, info: GraphQLResolveInfo, args: AggregateDashboardjsonArgs): Promise<AggregateDashboardjson>;
+    createOneDashboardjson(ctx: any, info: GraphQLResolveInfo, args: CreateOneDashboardjsonArgs): Promise<Dashboardjson>;
+    deleteManyDashboardjson(ctx: any, info: GraphQLResolveInfo, args: DeleteManyDashboardjsonArgs): Promise<AffectedRowsOutput>;
+    deleteOneDashboardjson(ctx: any, info: GraphQLResolveInfo, args: DeleteOneDashboardjsonArgs): Promise<Dashboardjson | null>;
+    findFirstDashboardjson(ctx: any, info: GraphQLResolveInfo, args: FindFirstDashboardjsonArgs): Promise<Dashboardjson | null>;
+    findFirstDashboardjsonOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstDashboardjsonOrThrowArgs): Promise<Dashboardjson | null>;
+    dashboardjsons(ctx: any, info: GraphQLResolveInfo, args: FindManyDashboardjsonArgs): Promise<Dashboardjson[]>;
+    dashboardjson(ctx: any, info: GraphQLResolveInfo, args: FindUniqueDashboardjsonArgs): Promise<Dashboardjson | null>;
+    getDashboardjson(ctx: any, info: GraphQLResolveInfo, args: FindUniqueDashboardjsonOrThrowArgs): Promise<Dashboardjson | null>;
+    groupByDashboardjson(ctx: any, info: GraphQLResolveInfo, args: GroupByDashboardjsonArgs): Promise<DashboardjsonGroupBy[]>;
+    updateManyDashboardjson(ctx: any, info: GraphQLResolveInfo, args: UpdateManyDashboardjsonArgs): Promise<AffectedRowsOutput>;
+    updateOneDashboardjson(ctx: any, info: GraphQLResolveInfo, args: UpdateOneDashboardjsonArgs): Promise<Dashboardjson | null>;
+    upsertOneDashboardjson(ctx: any, info: GraphQLResolveInfo, args: UpsertOneDashboardjsonArgs): Promise<Dashboardjson>;
+}

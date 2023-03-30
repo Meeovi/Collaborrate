@@ -1,0 +1,13 @@
+query {
+  findFirstLogInOrThrow 
+ {
+    created_at
+    email
+    expiresIn
+    id
+    password
+    token
+    username
+    users
+  }
+}
