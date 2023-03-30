@@ -43,7 +43,7 @@
       "@nuxtjs/apollo": "^5.0.0-alpha.5",
       "@nuxtjs/i18n": "^8.0.0-beta.8",
       "@prisma/client": "^4.10.1",
-      "@sidebase/nuxt-auth": "^0.3.3",
+      "@sidebase/nuxt-auth": "^0.4.0",
       "@sidebase/nuxt-prisma": "^0.1.0",
       "@types/node": "^16.11.10",
       "express": "^4.18.1",
