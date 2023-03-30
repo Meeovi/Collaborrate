@@ -9,3 +9,9 @@ export default {
     
 }
 </script>
+
+<script setup>
+    useHead({
+        title: 'Teams'
+    })
+</script>

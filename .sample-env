@@ -29,3 +29,18 @@ SENTRY_DSN=''
 # GRAPHQL Endpoint
 
 GRAPHQL_ENDPOINT=''
+
+# Directus Credentials
+
+DIRECTUS_URL=''
+DIRECTUS_TOKEN='-'
+DIRECTUS_EMAIL=
+DIRECTUS_PASSWORD=
+
+# Meilisearch Credentials
+
+HOSTURL=''
+SEARCH_APIKEY='<your_public_key>'
+ADMIN_APIKEY='<your_secret_key>'
+
+# Sentry Credentials

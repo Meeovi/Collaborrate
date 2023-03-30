@@ -11,8 +11,28 @@
                 </v-card-title>
                 <v-card-text>
                             <v-list>
-                                <v-list-item prepend-icon="fas fa-handshake" title="Agreements" value="Agreements"
+                                <v-list-item prepend-icon="fas fa-handshake-simple" title="Agreements" value="Agreements"
                                 href="/Admin/Reports/Agreements"></v-list-item>
+                            </v-list>
+                            <v-list>
+                                <v-list-item prepend-icon="fas fa-clipboard-list" title="Lists" value="Lists"
+                                href="/Admin/Reports/Lists"></v-list-item>
+                            </v-list>
+                            <v-list>
+                                <v-list-item prepend-icon="fas fa-address-book" title="Visits" value="Visits"
+                                href="/Admin/Reports/Visits"></v-list-item>
+                            </v-list>
+                            <v-list>
+                                <v-list-item prepend-icon="fas fa-handshake" title="Meetings" value="Meetings"
+                                href="/Admin/Reports/Meetings"></v-list-item>
+                            </v-list>
+                            <v-list>
+                                <v-list-item prepend-icon="fas fa-calendar-days" title="Team Scheduler" value="Team Scheduler"
+                                href="/Admin/Reports/Scheduler"></v-list-item>
+                            </v-list>
+                            <v-list>
+                                <v-list-item prepend-icon="fas fa-ticket" title="Tickets" value="Tickets"
+                                href="/Admin/Reports/Tickets"></v-list-item>
                             </v-list>
                 </v-card-text>
             </v-card>

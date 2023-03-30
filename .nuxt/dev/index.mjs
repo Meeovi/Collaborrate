@@ -1,63 +1,64 @@
-globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/node-fetch-native/dist/polyfill.mjs';
+globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/node-fetch-native/dist/polyfill.mjs';
 import { Server } from 'node:http';
 import { tmpdir } from 'node:os';
 import { join as join$1 } from 'node:path';
 import { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
-import { provider, isWindows } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/std-env/dist/index.mjs';
-import { defineEventHandler, handleCacheHeaders, createEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, getRequestHeaders, setResponseHeader, createError, getQuery, readBody, getCookie, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/h3/dist/index.mjs';
-import { PrismaClient } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/@prisma/client/index.js';
-import { defineNuxtConfig } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/nuxt/config.mjs';
-import { SitemapStream, streamToPromise } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/sitemap/dist/index.js';
-import { createRenderer } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import devalue from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/@nuxt/devalue/dist/devalue.mjs';
-import { parseURL, withoutBase, joinURL, withQuery, withLeadingSlash, withoutTrailingSlash, isRelative } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/ufo/dist/index.mjs';
-import destr from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/destr/dist/index.mjs';
-import { snakeCase, kebabCase, pascalCase, camelCase } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/scule/dist/index.mjs';
-import { createFetch as createFetch$1, Headers } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/ofetch/dist/node.mjs';
-import { createCall, createFetch } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unenv/runtime/fetch/index.mjs';
-import { createHooks } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/hookable/dist/index.mjs';
-import { hash } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/ohash/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unstorage/drivers/fs.mjs';
-import defu from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/defu/dist/defu.mjs';
-import { toRouteMatcher, createRouter } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/radix3/dist/index.mjs';
-import cache from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/memory-cache/index.js';
+import { provider, isWindows } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/std-env/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, createEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, getRequestHeaders, setResponseHeader, createError, getQuery, readBody, getCookie, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/h3/dist/index.mjs';
+import { PrismaClient } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/@prisma/client/index.js';
+import { defineNuxtConfig } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/nuxt/config.mjs';
+import { SitemapStream, streamToPromise } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/sitemap/dist/index.js';
+import { createRenderer } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import devalue from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/@nuxt/devalue/dist/devalue.mjs';
+import { parseURL, withoutBase, joinURL, withQuery, withLeadingSlash, withoutTrailingSlash, isRelative } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/ufo/dist/index.mjs';
+import destr from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/destr/dist/index.mjs';
+import { snakeCase, kebabCase, pascalCase, camelCase } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/scule/dist/index.mjs';
+import { createFetch as createFetch$1, Headers } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/ofetch/dist/node.mjs';
+import { createCall, createFetch } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/hookable/dist/index.mjs';
+import { hash } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/ohash/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/unstorage/drivers/fs.mjs';
+import defu from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/defu/dist/defu.mjs';
+import { toRouteMatcher, createRouter } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/radix3/dist/index.mjs';
+import cache from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/memory-cache/index.js';
 import { performance } from 'perf_hooks';
-import { FilterXSS } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/xss/lib/index.js';
-import { defineCorsEventHandler } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/@nozomuikuta/h3-cors/dist/index.mjs';
-import { extname, join } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/pathe/dist/index.mjs';
-import { unified } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unified/index.js';
-import { toString } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/mdast-util-to-string/index.js';
-import { preprocess } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/micromark/dev/lib/preprocess.js';
-import { postprocess } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/micromark/dev/lib/postprocess.js';
-import { stringifyPosition } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unist-util-stringify-position/index.js';
-import { markdownLineEnding, markdownSpace } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/micromark-util-character/dev/index.js';
-import { push, splice } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/micromark-util-chunked/dev/index.js';
-import { resolveAll } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/micromark-util-resolve-all/index.js';
-import remarkEmoji from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/remark-emoji/index.js';
-import rehypeSlug from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/rehype-slug/index.js';
-import remarkSqueezeParagraphs from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/remark-squeeze-paragraphs/index.js';
-import rehypeExternalLinks from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/rehype-external-links/index.js';
-import remarkGfm from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/remark-gfm/index.js';
-import rehypeSortAttributeValues from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/rehype-sort-attribute-values/index.js';
-import rehypeSortAttributes from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/rehype-sort-attributes/index.js';
-import rehypeRaw from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/rehype-raw/index.js';
-import remarkMDC, { parseFrontMatter } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/remark-mdc/dist/index.mjs';
-import remarkParse from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/remark-parse/index.js';
-import remark2rehype from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/remark-rehype/index.js';
-import { all } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/mdast-util-to-hast/index.js';
-import { detab } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/detab/index.js';
-import { u } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unist-builder/index.js';
-import { encode } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/mdurl/index.js';
-import slugify from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/slugify/slugify.js';
-import { position } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unist-util-position/index.js';
-import htmlTags from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/html-tags/index.js';
-import { visit } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unist-util-visit/index.js';
-import { BUNDLED_LANGUAGES, BUNDLED_THEMES, getHighlighter } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/shiki-es/dist/shiki.node.mjs';
-import consola from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/unenv/runtime/npm/consola.mjs';
+import { FilterXSS } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/xss/lib/index.js';
+import { defineCorsEventHandler } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/@nozomuikuta/h3-cors/dist/index.mjs';
+import { MeiliSearch } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/meilisearch/dist/bundles/meilisearch.cjs.js';
+import { extname, join } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/pathe/dist/index.mjs';
+import { unified } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/unified/index.js';
+import { toString } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/mdast-util-to-string/index.js';
+import { preprocess } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/micromark/dev/lib/preprocess.js';
+import { postprocess } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/micromark/dev/lib/postprocess.js';
+import { stringifyPosition } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/unist-util-stringify-position/index.js';
+import { markdownLineEnding, markdownSpace } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/micromark-util-character/dev/index.js';
+import { push, splice } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/micromark-util-chunked/dev/index.js';
+import { resolveAll } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/micromark-util-resolve-all/index.js';
+import remarkEmoji from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/remark-emoji/index.js';
+import rehypeSlug from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/rehype-slug/index.js';
+import remarkSqueezeParagraphs from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/remark-squeeze-paragraphs/index.js';
+import rehypeExternalLinks from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/rehype-external-links/index.js';
+import remarkGfm from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/remark-gfm/index.js';
+import rehypeSortAttributeValues from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/rehype-sort-attribute-values/index.js';
+import rehypeSortAttributes from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/rehype-sort-attributes/index.js';
+import rehypeRaw from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/rehype-raw/index.js';
+import remarkMDC, { parseFrontMatter } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/remark-mdc/dist/index.mjs';
+import remarkParse from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/remark-parse/index.js';
+import remark2rehype from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/remark-rehype/index.js';
+import { all } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/mdast-util-to-hast/index.js';
+import { detab } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/detab/index.js';
+import { u } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/unist-builder/index.js';
+import { encode } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/mdurl/index.js';
+import slugify from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/slugify/slugify.js';
+import { position } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/unist-util-position/index.js';
+import htmlTags from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/html-tags/index.js';
+import { visit } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/unist-util-visit/index.js';
+import { BUNDLED_LANGUAGES, BUNDLED_THEMES, getHighlighter } from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/shiki-es/dist/shiki.node.mjs';
+import consola from 'file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/unenv/runtime/npm/consola.mjs';
 
-const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":""},"nitro":{"envPrefix":"NUXT_","routeRules":{"/__nuxt_error":{"cache":false},"/**":{"headers":{"Cross-Origin-Resource-Policy":"same-origin","Cross-Origin-Opener-Policy":"same-origin","Cross-Origin-Embedder-Policy":"require-corp","Content-Security-Policy":"base-uri 'self'; font-src 'self' https: data:; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; object-src 'none'; script-src-attr 'none'; style-src 'self' https: 'unsafe-inline'; upgrade-insecure-requests","Origin-Agent-Cluster":"?1","Referrer-Policy":"no-referrer","Strict-Transport-Security":"max-age=15552000; includeSubDomains","X-Content-Type-Options":"nosniff","X-DNS-Prefetch-Control":"off","X-Download-Options":"noopen","X-Frame-Options":"SAMEORIGIN","X-Permitted-Cross-Domain-Policies":"none","X-XSS-Protection":"0"}}}},"public":{"content":{"locales":[],"defaultLocale":"","integrity":"","experimental":{"stripQueryParameters":false,"clientDB":false},"api":{"baseURL":"/api/_content"},"navigation":{"fields":[]},"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"highlight":false,"wsUrl":"ws://localhost:4000/","documentDriven":false,"anchorLinks":{"depth":4,"exclude":[1]}},"naiveUI":{"themeOverrides":""}},"content":{"cacheVersion":2,"cacheIntegrity":"kc4UzpZUjI","transformers":[],"base":"","api":{"baseURL":"/api/_content"},"watch":{"ws":{"port":{"port":4000,"portRange":[4000,4040]},"hostname":"localhost","showURL":false}},"sources":{},"ignores":["\\.","-"],"locales":[],"defaultLocale":"","highlight":false,"markdown":{"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"anchorLinks":{"depth":4,"exclude":[1]},"remarkPlugins":{},"rehypePlugins":{}},"yaml":{},"csv":{"delimeter":",","json":true},"navigation":{"fields":[]},"documentDriven":false,"experimental":{"clientDB":false,"stripQueryParameters":false}},"security":{"headers":{"crossOriginResourcePolicy":{"value":"same-origin","route":"/**"},"crossOriginOpenerPolicy":{"value":"same-origin","route":"/**"},"crossOriginEmbedderPolicy":{"value":"require-corp","route":"/**"},"contentSecurityPolicy":{"value":{"base-uri":["'self'"],"font-src":["'self'","https:","data:"],"form-action":["'self'"],"frame-ancestors":["'self'"],"img-src":["'self'","data:"],"object-src":["'none'"],"script-src-attr":["'none'"],"style-src":["'self'","https:","'unsafe-inline'"],"upgrade-insecure-requests":true},"route":"/**"},"originAgentCluster":{"value":"?1","route":"/**"},"referrerPolicy":{"value":"no-referrer","route":"/**"},"strictTransportSecurity":{"value":{"maxAge":15552000,"includeSubdomains":true},"route":"/**"},"xContentTypeOptions":{"value":"nosniff","route":"/**"},"xDNSPrefetchControl":{"value":"off","route":"/**"},"xDownloadOptions":{"value":"noopen","route":"/**"},"xFrameOptions":{"value":"SAMEORIGIN","route":"/**"},"xPermittedCrossDomainPolicies":{"value":"none","route":"/**"},"xXSSProtection":{"value":"0","route":"/**"}},"requestSizeLimiter":{"value":{"maxRequestSizeInBytes":2000000,"maxUploadFileRequestInBytes":8000000},"route":"","throwError":true},"rateLimiter":{"value":{"tokensPerInterval":150,"interval":"hour","fireImmediately":true},"route":"","throwError":true},"xssValidator":{"value":{},"route":"","throwError":true},"corsHandler":{"value":{"origin":"*","methods":["GET","HEAD","PUT","PATCH","POST","DELETE"],"preflight":{"statusCode":204}},"route":"","throwError":true},"allowedMethodsRestricter":{"value":"*","route":"","throwError":true},"hidePoweredBy":true,"basicAuth":false,"enabled":true}};
+const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":""},"nitro":{"envPrefix":"NUXT_","routeRules":{"/__nuxt_error":{"cache":false},"/**":{"headers":{"Cross-Origin-Resource-Policy":"same-origin","Cross-Origin-Opener-Policy":"same-origin","Cross-Origin-Embedder-Policy":"require-corp","Content-Security-Policy":"base-uri 'self'; font-src 'self' https: data:; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; object-src 'none'; script-src-attr 'none'; style-src 'self' https: 'unsafe-inline'; upgrade-insecure-requests","Origin-Agent-Cluster":"?1","Referrer-Policy":"no-referrer","Strict-Transport-Security":"max-age=15552000; includeSubDomains","X-Content-Type-Options":"nosniff","X-DNS-Prefetch-Control":"off","X-Download-Options":"noopen","X-Frame-Options":"SAMEORIGIN","X-Permitted-Cross-Domain-Policies":"none","X-XSS-Protection":"0"}}}},"public":{"content":{"locales":[],"defaultLocale":"","integrity":"","experimental":{"stripQueryParameters":false,"clientDB":false},"api":{"baseURL":"/api/_content"},"navigation":{"fields":[]},"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"highlight":false,"wsUrl":"ws://localhost:4000/","documentDriven":false,"anchorLinks":{"depth":4,"exclude":[1]}},"meilisearchClient":{"hostUrl":"http://meeovicms.com:7700","searchApiKey":"<your_public_key>","serverSideUsage":true,"instantSearch":{"theme":"algolia"},"clientOptions":{"placeholderSearch":true,"paginationTotalHits":50,"finitePagination":true,"primaryKey":"","keepZeroFacets":false}},"directus":{"url":"http://meeovicms.com:8005","autoFetch":true,"fetchUserParams":"","token":""},"naiveUI":{"themeOverrides":""}},"content":{"cacheVersion":2,"cacheIntegrity":"kc4UzpZUjI","transformers":[],"base":"","api":{"baseURL":"/api/_content"},"watch":{"ws":{"port":{"port":4000,"portRange":[4000,4040]},"hostname":"localhost","showURL":false}},"sources":{},"ignores":["\\.","-"],"locales":[],"defaultLocale":"","highlight":false,"markdown":{"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"anchorLinks":{"depth":4,"exclude":[1]},"remarkPlugins":{},"rehypePlugins":{}},"yaml":{},"csv":{"delimeter":",","json":true},"navigation":{"fields":[]},"documentDriven":false,"experimental":{"clientDB":false,"stripQueryParameters":false}},"security":{"headers":{"crossOriginResourcePolicy":{"value":"same-origin","route":"/**"},"crossOriginOpenerPolicy":{"value":"same-origin","route":"/**"},"crossOriginEmbedderPolicy":{"value":"require-corp","route":"/**"},"contentSecurityPolicy":{"value":{"base-uri":["'self'"],"font-src":["'self'","https:","data:"],"form-action":["'self'"],"frame-ancestors":["'self'"],"img-src":["'self'","data:"],"object-src":["'none'"],"script-src-attr":["'none'"],"style-src":["'self'","https:","'unsafe-inline'"],"upgrade-insecure-requests":true},"route":"/**"},"originAgentCluster":{"value":"?1","route":"/**"},"referrerPolicy":{"value":"no-referrer","route":"/**"},"strictTransportSecurity":{"value":{"maxAge":15552000,"includeSubdomains":true},"route":"/**"},"xContentTypeOptions":{"value":"nosniff","route":"/**"},"xDNSPrefetchControl":{"value":"off","route":"/**"},"xDownloadOptions":{"value":"noopen","route":"/**"},"xFrameOptions":{"value":"SAMEORIGIN","route":"/**"},"xPermittedCrossDomainPolicies":{"value":"none","route":"/**"},"xXSSProtection":{"value":"0","route":"/**"}},"requestSizeLimiter":{"value":{"maxRequestSizeInBytes":2000000,"maxUploadFileRequestInBytes":8000000},"route":"","throwError":true},"rateLimiter":{"value":{"tokensPerInterval":150,"interval":"hour","fireImmediately":true},"route":"","throwError":true},"xssValidator":{"value":{},"route":"","throwError":true},"corsHandler":{"value":{"origin":"*","methods":["GET","HEAD","PUT","PATCH","POST","DELETE"],"preflight":{"statusCode":204}},"route":"","throwError":true},"allowedMethodsRestricter":{"value":"*","route":"","throwError":true},"hidePoweredBy":true,"basicAuth":false,"enabled":true},"serverMeilisearchClient":{"hostUrl":"http://meeovicms.com:7700","searchApiKey":"<your_public_key>","adminApiKey":"<your_secret_key>","serverSideUsage":true,"instantSearch":{"theme":"algolia"},"clientOptions":{"placeholderSearch":true,"paginationTotalHits":50,"finitePagination":true,"primaryKey":"","keepZeroFacets":false}}};
 const ENV_PREFIX = "NITRO_";
 const ENV_PREFIX_ALT = _runtimeConfig.nitro.envPrefix ?? process.env.NITRO_ENV_PREFIX ?? "_";
 const getEnv = (key) => {
@@ -97,7 +98,7 @@ function deepFreeze(object) {
   return Object.freeze(object);
 }
 
-const serverAssets = [{"baseName":"server","dir":"C:/Users/Basti/OneDrive/Documents/My Websites/Handmade Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"C:/Users/sehilton/Documents/github/alternatecms/server/assets"}];
 
 const assets = createStorage();
 
@@ -111,12 +112,12 @@ const useStorage = () => storage;
 
 storage.mount('/assets', assets);
 
-storage.mount('content:source:content', unstorage_47drivers_47fs({"name":"content:source:content","driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\AlternateCMS-Nuxt3\\content","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache:content', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\AlternateCMS-Nuxt3\\.nuxt\\content-cache","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\AlternateCMS-Nuxt3","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\AlternateCMS-Nuxt3\\server","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\AlternateCMS-Nuxt3\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\AlternateCMS-Nuxt3\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('content:source:content', unstorage_47drivers_47fs({"name":"content:source:content","driver":"fs","base":"C:\\Users\\sehilton\\Documents\\github\\alternatecms\\content","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache:content', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\sehilton\\Documents\\github\\alternatecms\\.nuxt\\content-cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\sehilton\\Documents\\github\\alternatecms","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\sehilton\\Documents\\github\\alternatecms\\server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\sehilton\\Documents\\github\\alternatecms\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\sehilton\\Documents\\github\\alternatecms\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
 
 const defaultCacheOptions = {
   name: "_",
@@ -400,14 +401,14 @@ function getRouteRulesForPath(path) {
   return defu({}, ..._routeRulesMatcher.matchAll(path).reverse());
 }
 
-const _pBgXW34HBt = (function(nitro) {
+const _t8JQwc4PXx = (function(nitro) {
   nitro.hooks.hook("render:response", (response) => {
     delete response.headers["X-Powered-By"];
   });
 });
 
 const plugins = [
-  _pBgXW34HBt
+  _t8JQwc4PXx
 ];
 
 function defineRenderHandler(handler) {
@@ -529,7 +530,7 @@ const errorHandler = (async function errorhandler(error, event) {
 });
 
 let prisma$3;
-const _Jx7ORH = eventHandler((event) => {
+const _FUwChl = eventHandler((event) => {
   if (!prisma$3) {
     prisma$3 = new PrismaClient();
   }
@@ -546,7 +547,7 @@ function publicAssetsURL(...path) {
 
 const securityConfig$3 = useRuntimeConfig().security;
 const FILE_UPLOAD_HEADER = "multipart/form-data";
-const _o3L44u = defineEventHandler(async (event) => {
+const _1Rl2Pp = defineEventHandler(async (event) => {
   if (["POST", "PUT", "DELETE"].includes(event.node.req.method)) {
     const contentLengthValue = getRequestHeader(event, "content-length");
     const contentTypeValue = getRequestHeader(event, "content-type");
@@ -831,7 +832,7 @@ class RateLimiter {
 }
 
 const securityConfig$2 = useRuntimeConfig().security;
-const _ci9poI = defineEventHandler(async (event) => {
+const _xxY5bR = defineEventHandler(async (event) => {
   const ip = getRequestHeader(event, "x-forwarded-for");
   if (!cache.get(ip)) {
     const cachedLimiter = new RateLimiter(securityConfig$2.rateLimiter.value);
@@ -853,7 +854,7 @@ const _ci9poI = defineEventHandler(async (event) => {
 
 const securityConfig$1 = useRuntimeConfig().security;
 const xssValidator = new FilterXSS(securityConfig$1.xssValidator.value);
-const _zZ04U7 = defineEventHandler(async (event) => {
+const _APoYbU = defineEventHandler(async (event) => {
   if (["POST", "GET"].includes(event.node.req.method)) {
     const valueToFilter = event.node.req.method === "GET" ? getQuery(event) : readBody(event);
     const stringifiedValue = JSON.stringify(valueToFilter);
@@ -869,7 +870,20 @@ const _zZ04U7 = defineEventHandler(async (event) => {
 });
 
 const securityConfig = useRuntimeConfig().security;
-const _7G1Tvy = defineEventHandler(defineCorsEventHandler(securityConfig.corsHandler.value));
+const _Hht2dn = defineEventHandler(defineCorsEventHandler(securityConfig.corsHandler.value));
+
+const useConfig = () => useRuntimeConfig().serverMeilisearchClient;
+
+const _jsgplI = defineEventHandler(async (event) => {
+  const { hostUrl, adminApiKey } = useConfig();
+  if (!event.context.serverMeilisearchClient) {
+    event.context.serverMeilisearchClient = new MeiliSearch({
+      host: hostUrl,
+      apiKey: adminApiKey
+    });
+  }
+  event.context.serverMeilisearchClient;
+});
 
 const get = (obj, path) => path.split(".").reduce((acc, part) => acc && acc[part], obj);
 const _pick = (obj, condition) => Object.keys(obj).filter(condition).reduce((newObj, key) => Object.assign(newObj, { [key]: obj[key] }), {});
@@ -3290,7 +3304,7 @@ const json = defineTransformer({
     let parsed;
     if (typeof content === "string") {
       if (_id.endsWith("json5")) {
-        parsed = (await import('file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/node_modules/json5/lib/index.js').then((m) => m.default || m)).parse(content);
+        parsed = (await import('file://C:/Users/sehilton/Documents/github/alternatecms/node_modules/json5/lib/index.js').then((m) => m.default || m)).parse(content);
       } else if (_id.endsWith("json")) {
         parsed = destr(content);
       }
@@ -3607,7 +3621,7 @@ const getContentQuery = (event) => {
   return query;
 };
 
-const _4WcWNT = defineEventHandler(async (event) => {
+const _CGTduL = defineEventHandler(async (event) => {
   const query = getContentQuery(event);
   if (query.first) {
     const content = await serverQueryContent(event, query).findOne();
@@ -3638,7 +3652,7 @@ const _4WcWNT = defineEventHandler(async (event) => {
   return contents;
 });
 
-const _PvySpV = defineEventHandler(async (event) => {
+const _uX4AuF = defineEventHandler(async (event) => {
   const { content } = useRuntimeConfig();
   const now = Date.now();
   const contents = await serverQueryContent(event).find();
@@ -3740,7 +3754,7 @@ function isObject(obj) {
   return Object.prototype.toString.call(obj) === "[object Object]";
 }
 
-const _smzehB = defineEventHandler(async (event) => {
+const _wyc2Y4 = defineEventHandler(async (event) => {
   const query = getContentQuery(event);
   if (!isPreview(event) && Object.keys(query).length === 0) {
     const cache = await cacheStorage.getItem("content-navigation.json");
@@ -3769,131 +3783,132 @@ const _smzehB = defineEventHandler(async (event) => {
   return createNav(contents, configs);
 });
 
-const _lazy_DYJJe4 = () => Promise.resolve().then(function () { return wishlists$1; });
-const _lazy_rzcGFm = () => Promise.resolve().then(function () { return warehouses$1; });
-const _lazy_KFLKCt = () => Promise.resolve().then(function () { return vendors$1; });
-const _lazy_uNgigv = () => Promise.resolve().then(function () { return users$1; });
-const _lazy_lQSHP4 = () => Promise.resolve().then(function () { return update$1; });
-const _lazy_Ng237e = () => Promise.resolve().then(function () { return transactions$1; });
-const _lazy_ZPk0VK = () => Promise.resolve().then(function () { return templates$1; });
-const _lazy_7QyYQ3 = () => Promise.resolve().then(function () { return taxes$1; });
-const _lazy_fgpQfS = () => Promise.resolve().then(function () { return tags$1; });
-const _lazy_rubTfC = () => Promise.resolve().then(function () { return states$1; });
-const _lazy_TX3UO0 = () => Promise.resolve().then(function () { return shipments$1; });
-const _lazy_iMACfH = () => Promise.resolve().then(function () { return settings$1; });
-const _lazy_7cxtda = () => Promise.resolve().then(function () { return serverSessions$1; });
-const _lazy_WujxDA = () => Promise.resolve().then(function () { return sales$1; });
-const _lazy_r0TuDt = () => Promise.resolve().then(function () { return roles$1; });
-const _lazy_X2IJGo = () => Promise.resolve().then(function () { return reviews$1; });
-const _lazy_ItkiBI = () => Promise.resolve().then(function () { return read$1; });
-const _lazy_VfxghU = () => Promise.resolve().then(function () { return quotes$1; });
-const _lazy_kPP2D1 = () => Promise.resolve().then(function () { return providers$1; });
-const _lazy_ejEhoB = () => Promise.resolve().then(function () { return productTypes$1; });
-const _lazy_j6pLKN = () => Promise.resolve().then(function () { return products$1; });
-const _lazy_erqJPE = () => Promise.resolve().then(function () { return prisma$2; });
-const _lazy_lcn3yG = () => Promise.resolve().then(function () { return permissions$1; });
-const _lazy_md5QjP = () => Promise.resolve().then(function () { return payments$1; });
-const _lazy_XWAedh = () => Promise.resolve().then(function () { return partners$1; });
-const _lazy_aIEyxK = () => Promise.resolve().then(function () { return pagination; });
-const _lazy_e5cmZJ = () => Promise.resolve().then(function () { return pages$1; });
-const _lazy_zMIvJE = () => Promise.resolve().then(function () { return newsletters$1; });
-const _lazy_dtJMJb = () => Promise.resolve().then(function () { return middleware; });
-const _lazy_zSqpBD = () => Promise.resolve().then(function () { return metrics$1; });
-const _lazy_vI4nxH = () => Promise.resolve().then(function () { return manufacturers$1; });
-const _lazy_v3PybF = () => Promise.resolve().then(function () { return logging; });
-const _lazy_56dcx0 = () => Promise.resolve().then(function () { return invoices$1; });
-const _lazy_upyGMN = () => Promise.resolve().then(function () { return integrations$1; });
-const _lazy_7EdUp6 = () => Promise.resolve().then(function () { return filterSort; });
-const _lazy_7KLBaA = () => Promise.resolve().then(function () { return errors; });
-const _lazy_v2wt6Y = () => Promise.resolve().then(function () { return emails$1; });
-const _lazy_ZMd47b = () => Promise.resolve().then(function () { return discounts$1; });
-const _lazy_05OzVT = () => Promise.resolve().then(function () { return _delete$1; });
-const _lazy_FBEJsE = () => Promise.resolve().then(function () { return dashboards$1; });
-const _lazy_BbvJHH = () => Promise.resolve().then(function () { return customers$1; });
-const _lazy_cH1Qw8 = () => Promise.resolve().then(function () { return currencies$1; });
-const _lazy_58Cei9 = () => Promise.resolve().then(function () { return create$1; });
-const _lazy_dmKddX = () => Promise.resolve().then(function () { return countries$1; });
-const _lazy_6PWgH7 = () => Promise.resolve().then(function () { return collections$1; });
-const _lazy_uCyxrv = () => Promise.resolve().then(function () { return cities; });
-const _lazy_N77GdA = () => Promise.resolve().then(function () { return channels$1; });
-const _lazy_QNotNz = () => Promise.resolve().then(function () { return categories$1; });
-const _lazy_7rMEzm = () => Promise.resolve().then(function () { return brands$1; });
-const _lazy_rwy2Ga = () => Promise.resolve().then(function () { return blog$1; });
-const _lazy_uyLIo6 = () => Promise.resolve().then(function () { return _____; });
-const _lazy_IUOeaY = () => Promise.resolve().then(function () { return attributes$1; });
-const _lazy_tewSUK = () => Promise.resolve().then(function () { return agreements$1; });
-const _lazy_jO9JRo = () => Promise.resolve().then(function () { return sitemap_xml$1; });
-const _lazy_HkWEan = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_wZJwh9 = () => Promise.resolve().then(function () { return wishlists$1; });
+const _lazy_46Uus1 = () => Promise.resolve().then(function () { return warehouses$1; });
+const _lazy_Ir7SsQ = () => Promise.resolve().then(function () { return vendors$1; });
+const _lazy_ASwHv8 = () => Promise.resolve().then(function () { return users$1; });
+const _lazy_qlZjuR = () => Promise.resolve().then(function () { return update$1; });
+const _lazy_iUIIpg = () => Promise.resolve().then(function () { return transactions$1; });
+const _lazy_R7Ok9w = () => Promise.resolve().then(function () { return templates$1; });
+const _lazy_tlfb6r = () => Promise.resolve().then(function () { return taxes$1; });
+const _lazy_CiMdes = () => Promise.resolve().then(function () { return tags$1; });
+const _lazy_zP9wY3 = () => Promise.resolve().then(function () { return states$1; });
+const _lazy_7r6IXk = () => Promise.resolve().then(function () { return shipments$1; });
+const _lazy_Kb5m8l = () => Promise.resolve().then(function () { return settings$1; });
+const _lazy_39Nz5f = () => Promise.resolve().then(function () { return serverSessions$1; });
+const _lazy_cgRIQc = () => Promise.resolve().then(function () { return sales$1; });
+const _lazy_YiUdxG = () => Promise.resolve().then(function () { return roles$1; });
+const _lazy_WUInHL = () => Promise.resolve().then(function () { return reviews$1; });
+const _lazy_yDokXT = () => Promise.resolve().then(function () { return read$1; });
+const _lazy_Feo37p = () => Promise.resolve().then(function () { return quotes$1; });
+const _lazy_zgTXr5 = () => Promise.resolve().then(function () { return providers$1; });
+const _lazy_0BLFKv = () => Promise.resolve().then(function () { return productTypes$1; });
+const _lazy_saE3Fr = () => Promise.resolve().then(function () { return products$1; });
+const _lazy_gBzYAz = () => Promise.resolve().then(function () { return prisma$2; });
+const _lazy_wHb2k3 = () => Promise.resolve().then(function () { return permissions$1; });
+const _lazy_fDTkvH = () => Promise.resolve().then(function () { return payments$1; });
+const _lazy_JU0X9S = () => Promise.resolve().then(function () { return partners$1; });
+const _lazy_YSc5gV = () => Promise.resolve().then(function () { return pagination; });
+const _lazy_rx3qHe = () => Promise.resolve().then(function () { return pages$1; });
+const _lazy_XrqbAa = () => Promise.resolve().then(function () { return newsletters$1; });
+const _lazy_3JCQRB = () => Promise.resolve().then(function () { return middleware; });
+const _lazy_l7iH2v = () => Promise.resolve().then(function () { return metrics$1; });
+const _lazy_dcwvmu = () => Promise.resolve().then(function () { return manufacturers$1; });
+const _lazy_WdPZAD = () => Promise.resolve().then(function () { return logging; });
+const _lazy_HSlaee = () => Promise.resolve().then(function () { return invoices$1; });
+const _lazy_F9nU7a = () => Promise.resolve().then(function () { return integrations$1; });
+const _lazy_atWVGx = () => Promise.resolve().then(function () { return filterSort; });
+const _lazy_NXo5jI = () => Promise.resolve().then(function () { return errors; });
+const _lazy_KYy4YL = () => Promise.resolve().then(function () { return emails$1; });
+const _lazy_5FeojW = () => Promise.resolve().then(function () { return discounts$1; });
+const _lazy_8bGuGN = () => Promise.resolve().then(function () { return _delete$1; });
+const _lazy_XdE3kj = () => Promise.resolve().then(function () { return dashboards$1; });
+const _lazy_LAjF91 = () => Promise.resolve().then(function () { return customers$1; });
+const _lazy_yBafse = () => Promise.resolve().then(function () { return currencies$1; });
+const _lazy_dLWP8U = () => Promise.resolve().then(function () { return create$1; });
+const _lazy_FHsapN = () => Promise.resolve().then(function () { return countries$1; });
+const _lazy_paKI0w = () => Promise.resolve().then(function () { return collections$1; });
+const _lazy_Dk9zmm = () => Promise.resolve().then(function () { return cities; });
+const _lazy_cqIzDu = () => Promise.resolve().then(function () { return channels$1; });
+const _lazy_NMugdh = () => Promise.resolve().then(function () { return categories$1; });
+const _lazy_EkboSK = () => Promise.resolve().then(function () { return brands$1; });
+const _lazy_QUyvsC = () => Promise.resolve().then(function () { return blog$1; });
+const _lazy_cR4Pey = () => Promise.resolve().then(function () { return _____; });
+const _lazy_dWB6XR = () => Promise.resolve().then(function () { return attributes$1; });
+const _lazy_IXrbID = () => Promise.resolve().then(function () { return agreements$1; });
+const _lazy_ynjiwA = () => Promise.resolve().then(function () { return sitemap_xml$1; });
+const _lazy_X9cM3Z = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '', handler: _Jx7ORH, lazy: false, middleware: true, method: undefined },
-  { route: '/api/wishlists', handler: _lazy_DYJJe4, lazy: true, middleware: false, method: undefined },
-  { route: '/api/warehouses', handler: _lazy_rzcGFm, lazy: true, middleware: false, method: undefined },
-  { route: '/api/vendors', handler: _lazy_KFLKCt, lazy: true, middleware: false, method: undefined },
-  { route: '/api/users', handler: _lazy_uNgigv, lazy: true, middleware: false, method: undefined },
-  { route: '/api/update', handler: _lazy_lQSHP4, lazy: true, middleware: false, method: undefined },
-  { route: '/api/transactions', handler: _lazy_Ng237e, lazy: true, middleware: false, method: undefined },
-  { route: '/api/templates', handler: _lazy_ZPk0VK, lazy: true, middleware: false, method: undefined },
-  { route: '/api/taxes', handler: _lazy_7QyYQ3, lazy: true, middleware: false, method: undefined },
-  { route: '/api/tags', handler: _lazy_fgpQfS, lazy: true, middleware: false, method: undefined },
-  { route: '/api/states', handler: _lazy_rubTfC, lazy: true, middleware: false, method: undefined },
-  { route: '/api/shipments', handler: _lazy_TX3UO0, lazy: true, middleware: false, method: undefined },
-  { route: '/api/settings', handler: _lazy_iMACfH, lazy: true, middleware: false, method: undefined },
-  { route: '/api/serverSessions', handler: _lazy_7cxtda, lazy: true, middleware: false, method: undefined },
-  { route: '/api/sales', handler: _lazy_WujxDA, lazy: true, middleware: false, method: undefined },
-  { route: '/api/roles', handler: _lazy_r0TuDt, lazy: true, middleware: false, method: undefined },
-  { route: '/api/reviews', handler: _lazy_X2IJGo, lazy: true, middleware: false, method: undefined },
-  { route: '/api/read', handler: _lazy_ItkiBI, lazy: true, middleware: false, method: undefined },
-  { route: '/api/quotes', handler: _lazy_VfxghU, lazy: true, middleware: false, method: undefined },
-  { route: '/api/providers', handler: _lazy_kPP2D1, lazy: true, middleware: false, method: undefined },
-  { route: '/api/productTypes', handler: _lazy_ejEhoB, lazy: true, middleware: false, method: undefined },
-  { route: '/api/products', handler: _lazy_j6pLKN, lazy: true, middleware: false, method: undefined },
-  { route: '/api/prisma', handler: _lazy_erqJPE, lazy: true, middleware: false, method: undefined },
-  { route: '/api/permissions', handler: _lazy_lcn3yG, lazy: true, middleware: false, method: undefined },
-  { route: '/api/payments', handler: _lazy_md5QjP, lazy: true, middleware: false, method: undefined },
-  { route: '/api/partners', handler: _lazy_XWAedh, lazy: true, middleware: false, method: undefined },
-  { route: '/api/pagination', handler: _lazy_aIEyxK, lazy: true, middleware: false, method: undefined },
-  { route: '/api/pages', handler: _lazy_e5cmZJ, lazy: true, middleware: false, method: undefined },
-  { route: '/api/newsletters', handler: _lazy_zMIvJE, lazy: true, middleware: false, method: undefined },
-  { route: '/api/middleware', handler: _lazy_dtJMJb, lazy: true, middleware: false, method: undefined },
-  { route: '/api/metrics', handler: _lazy_zSqpBD, lazy: true, middleware: false, method: undefined },
-  { route: '/api/manufacturers', handler: _lazy_vI4nxH, lazy: true, middleware: false, method: undefined },
-  { route: '/api/logging', handler: _lazy_v3PybF, lazy: true, middleware: false, method: undefined },
-  { route: '/api/invoices', handler: _lazy_56dcx0, lazy: true, middleware: false, method: undefined },
-  { route: '/api/integrations', handler: _lazy_upyGMN, lazy: true, middleware: false, method: undefined },
-  { route: '/api/filterSort', handler: _lazy_7EdUp6, lazy: true, middleware: false, method: undefined },
-  { route: '/api/errors', handler: _lazy_7KLBaA, lazy: true, middleware: false, method: undefined },
-  { route: '/api/emails', handler: _lazy_v2wt6Y, lazy: true, middleware: false, method: undefined },
-  { route: '/api/discounts', handler: _lazy_ZMd47b, lazy: true, middleware: false, method: undefined },
-  { route: '/api/delete', handler: _lazy_05OzVT, lazy: true, middleware: false, method: undefined },
-  { route: '/api/dashboards', handler: _lazy_FBEJsE, lazy: true, middleware: false, method: undefined },
-  { route: '/api/customers', handler: _lazy_BbvJHH, lazy: true, middleware: false, method: undefined },
-  { route: '/api/currencies', handler: _lazy_cH1Qw8, lazy: true, middleware: false, method: undefined },
-  { route: '/api/create', handler: _lazy_58Cei9, lazy: true, middleware: false, method: undefined },
-  { route: '/api/countries', handler: _lazy_dmKddX, lazy: true, middleware: false, method: undefined },
-  { route: '/api/collections', handler: _lazy_6PWgH7, lazy: true, middleware: false, method: undefined },
-  { route: '/api/cities', handler: _lazy_uCyxrv, lazy: true, middleware: false, method: undefined },
-  { route: '/api/channels', handler: _lazy_N77GdA, lazy: true, middleware: false, method: undefined },
-  { route: '/api/categories', handler: _lazy_QNotNz, lazy: true, middleware: false, method: undefined },
-  { route: '/api/brands', handler: _lazy_7rMEzm, lazy: true, middleware: false, method: undefined },
-  { route: '/api/blog', handler: _lazy_rwy2Ga, lazy: true, middleware: false, method: undefined },
-  { route: '/api/auth/**', handler: _lazy_uyLIo6, lazy: true, middleware: false, method: undefined },
-  { route: '/api/attributes', handler: _lazy_IUOeaY, lazy: true, middleware: false, method: undefined },
-  { route: '/api/agreements', handler: _lazy_tewSUK, lazy: true, middleware: false, method: undefined },
-  { route: '/sitemap.xml', handler: _lazy_jO9JRo, lazy: true, middleware: false, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_HkWEan, lazy: true, middleware: false, method: undefined },
-  { route: '', handler: _o3L44u, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _ci9poI, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _zZ04U7, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _7G1Tvy, lazy: false, middleware: false, method: undefined },
-  { route: '/api/_content/query/:qid/**:params', handler: _4WcWNT, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/query/:qid', handler: _4WcWNT, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/query', handler: _4WcWNT, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/cache.json', handler: _PvySpV, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation/:qid/**:params', handler: _smzehB, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation/:qid', handler: _smzehB, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation', handler: _smzehB, lazy: false, middleware: false, method: "get" },
-  { route: '/**', handler: _lazy_HkWEan, lazy: true, middleware: false, method: undefined }
+  { route: '', handler: _FUwChl, lazy: false, middleware: true, method: undefined },
+  { route: '/api/wishlists', handler: _lazy_wZJwh9, lazy: true, middleware: false, method: undefined },
+  { route: '/api/warehouses', handler: _lazy_46Uus1, lazy: true, middleware: false, method: undefined },
+  { route: '/api/vendors', handler: _lazy_Ir7SsQ, lazy: true, middleware: false, method: undefined },
+  { route: '/api/users', handler: _lazy_ASwHv8, lazy: true, middleware: false, method: undefined },
+  { route: '/api/update', handler: _lazy_qlZjuR, lazy: true, middleware: false, method: undefined },
+  { route: '/api/transactions', handler: _lazy_iUIIpg, lazy: true, middleware: false, method: undefined },
+  { route: '/api/templates', handler: _lazy_R7Ok9w, lazy: true, middleware: false, method: undefined },
+  { route: '/api/taxes', handler: _lazy_tlfb6r, lazy: true, middleware: false, method: undefined },
+  { route: '/api/tags', handler: _lazy_CiMdes, lazy: true, middleware: false, method: undefined },
+  { route: '/api/states', handler: _lazy_zP9wY3, lazy: true, middleware: false, method: undefined },
+  { route: '/api/shipments', handler: _lazy_7r6IXk, lazy: true, middleware: false, method: undefined },
+  { route: '/api/settings', handler: _lazy_Kb5m8l, lazy: true, middleware: false, method: undefined },
+  { route: '/api/serverSessions', handler: _lazy_39Nz5f, lazy: true, middleware: false, method: undefined },
+  { route: '/api/sales', handler: _lazy_cgRIQc, lazy: true, middleware: false, method: undefined },
+  { route: '/api/roles', handler: _lazy_YiUdxG, lazy: true, middleware: false, method: undefined },
+  { route: '/api/reviews', handler: _lazy_WUInHL, lazy: true, middleware: false, method: undefined },
+  { route: '/api/read', handler: _lazy_yDokXT, lazy: true, middleware: false, method: undefined },
+  { route: '/api/quotes', handler: _lazy_Feo37p, lazy: true, middleware: false, method: undefined },
+  { route: '/api/providers', handler: _lazy_zgTXr5, lazy: true, middleware: false, method: undefined },
+  { route: '/api/productTypes', handler: _lazy_0BLFKv, lazy: true, middleware: false, method: undefined },
+  { route: '/api/products', handler: _lazy_saE3Fr, lazy: true, middleware: false, method: undefined },
+  { route: '/api/prisma', handler: _lazy_gBzYAz, lazy: true, middleware: false, method: undefined },
+  { route: '/api/permissions', handler: _lazy_wHb2k3, lazy: true, middleware: false, method: undefined },
+  { route: '/api/payments', handler: _lazy_fDTkvH, lazy: true, middleware: false, method: undefined },
+  { route: '/api/partners', handler: _lazy_JU0X9S, lazy: true, middleware: false, method: undefined },
+  { route: '/api/pagination', handler: _lazy_YSc5gV, lazy: true, middleware: false, method: undefined },
+  { route: '/api/pages', handler: _lazy_rx3qHe, lazy: true, middleware: false, method: undefined },
+  { route: '/api/newsletters', handler: _lazy_XrqbAa, lazy: true, middleware: false, method: undefined },
+  { route: '/api/middleware', handler: _lazy_3JCQRB, lazy: true, middleware: false, method: undefined },
+  { route: '/api/metrics', handler: _lazy_l7iH2v, lazy: true, middleware: false, method: undefined },
+  { route: '/api/manufacturers', handler: _lazy_dcwvmu, lazy: true, middleware: false, method: undefined },
+  { route: '/api/logging', handler: _lazy_WdPZAD, lazy: true, middleware: false, method: undefined },
+  { route: '/api/invoices', handler: _lazy_HSlaee, lazy: true, middleware: false, method: undefined },
+  { route: '/api/integrations', handler: _lazy_F9nU7a, lazy: true, middleware: false, method: undefined },
+  { route: '/api/filterSort', handler: _lazy_atWVGx, lazy: true, middleware: false, method: undefined },
+  { route: '/api/errors', handler: _lazy_NXo5jI, lazy: true, middleware: false, method: undefined },
+  { route: '/api/emails', handler: _lazy_KYy4YL, lazy: true, middleware: false, method: undefined },
+  { route: '/api/discounts', handler: _lazy_5FeojW, lazy: true, middleware: false, method: undefined },
+  { route: '/api/delete', handler: _lazy_8bGuGN, lazy: true, middleware: false, method: undefined },
+  { route: '/api/dashboards', handler: _lazy_XdE3kj, lazy: true, middleware: false, method: undefined },
+  { route: '/api/customers', handler: _lazy_LAjF91, lazy: true, middleware: false, method: undefined },
+  { route: '/api/currencies', handler: _lazy_yBafse, lazy: true, middleware: false, method: undefined },
+  { route: '/api/create', handler: _lazy_dLWP8U, lazy: true, middleware: false, method: undefined },
+  { route: '/api/countries', handler: _lazy_FHsapN, lazy: true, middleware: false, method: undefined },
+  { route: '/api/collections', handler: _lazy_paKI0w, lazy: true, middleware: false, method: undefined },
+  { route: '/api/cities', handler: _lazy_Dk9zmm, lazy: true, middleware: false, method: undefined },
+  { route: '/api/channels', handler: _lazy_cqIzDu, lazy: true, middleware: false, method: undefined },
+  { route: '/api/categories', handler: _lazy_NMugdh, lazy: true, middleware: false, method: undefined },
+  { route: '/api/brands', handler: _lazy_EkboSK, lazy: true, middleware: false, method: undefined },
+  { route: '/api/blog', handler: _lazy_QUyvsC, lazy: true, middleware: false, method: undefined },
+  { route: '/api/auth/**', handler: _lazy_cR4Pey, lazy: true, middleware: false, method: undefined },
+  { route: '/api/attributes', handler: _lazy_dWB6XR, lazy: true, middleware: false, method: undefined },
+  { route: '/api/agreements', handler: _lazy_IXrbID, lazy: true, middleware: false, method: undefined },
+  { route: '/sitemap.xml', handler: _lazy_ynjiwA, lazy: true, middleware: false, method: undefined },
+  { route: '/__nuxt_error', handler: _lazy_X9cM3Z, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _1Rl2Pp, lazy: false, middleware: false, method: undefined },
+  { route: '', handler: _xxY5bR, lazy: false, middleware: false, method: undefined },
+  { route: '', handler: _APoYbU, lazy: false, middleware: false, method: undefined },
+  { route: '', handler: _Hht2dn, lazy: false, middleware: false, method: undefined },
+  { route: '', handler: _jsgplI, lazy: false, middleware: false, method: undefined },
+  { route: '/api/_content/query/:qid/**:params', handler: _CGTduL, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/query/:qid', handler: _CGTduL, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/query', handler: _CGTduL, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/cache.json', handler: _uX4AuF, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation/:qid/**:params', handler: _wyc2Y4, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation/:qid', handler: _wyc2Y4, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation', handler: _wyc2Y4, lazy: false, middleware: false, method: "get" },
+  { route: '/**', handler: _lazy_X9cM3Z, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -4537,7 +4552,7 @@ const appRootTag = "div";
 
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
-const getClientManifest = () => import('file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/AlternateCMS-Nuxt3/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getClientManifest = () => import('file://C:/Users/sehilton/Documents/github/alternatecms/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getStaticRenderedHead = () => Promise.resolve().then(function () { return _virtual__headStatic$1; }).then((r) => r.default || r);
 const getSPARenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();

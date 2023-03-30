@@ -94,6 +94,17 @@ declare global {
   const useCssModule: typeof import('vue')['useCssModule']
   const useCssVars: typeof import('vue')['useCssVars']
   const useDialog: typeof import('naive-ui')['useDialog']
+  const useDirectus: typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectus')['useDirectus']
+  const useDirectusAuth: typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusAuth')['useDirectusAuth']
+  const useDirectusCollections: typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusCollections')['useDirectusCollections']
+  const useDirectusFiles: typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusFiles')['useDirectusFiles']
+  const useDirectusItems: typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusItems')['useDirectusItems']
+  const useDirectusNotifications: typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusNotifications')['useDirectusNotifications']
+  const useDirectusRevisions: typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusRevisions')['useDirectusRevisions']
+  const useDirectusToken: typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusToken')['useDirectusToken']
+  const useDirectusUrl: typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusUrl')['useDirectusUrl']
+  const useDirectusUser: typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusUser')['useDirectusUser']
+  const useDirectusUsers: typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusUsers')['useDirectusUsers']
   const useError: typeof import('../../node_modules/nuxt/dist/app')['useError']
   const useFetch: typeof import('../../node_modules/nuxt/dist/app')['useFetch']
   const useGlobalMutationLoading: typeof import('@vue/apollo-composable')['useGlobalMutationLoading']
@@ -110,6 +121,7 @@ declare global {
   const useLocaleHead: typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables')['useLocaleHead']
   const useLocalePath: typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables')['useLocalePath']
   const useLocaleRoute: typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables')['useLocaleRoute']
+  const useMeilisearchClient: typeof import('../../node_modules/nuxt-meilisearch/dist/runtime/composables/useMeilisearchClient')['useMeilisearchClient']
   const useMessage: typeof import('naive-ui')['useMessage']
   const useMutation: typeof import('@vue/apollo-composable')['useMutation']
   const useMutationLoading: typeof import('@vue/apollo-composable')['useMutationLoading']
@@ -246,6 +258,17 @@ declare module 'vue' {
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
     readonly useDialog: UnwrapRef<typeof import('naive-ui')['useDialog']>
+    readonly useDirectus: UnwrapRef<typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectus')['useDirectus']>
+    readonly useDirectusAuth: UnwrapRef<typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusAuth')['useDirectusAuth']>
+    readonly useDirectusCollections: UnwrapRef<typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusCollections')['useDirectusCollections']>
+    readonly useDirectusFiles: UnwrapRef<typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusFiles')['useDirectusFiles']>
+    readonly useDirectusItems: UnwrapRef<typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusItems')['useDirectusItems']>
+    readonly useDirectusNotifications: UnwrapRef<typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusNotifications')['useDirectusNotifications']>
+    readonly useDirectusRevisions: UnwrapRef<typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusRevisions')['useDirectusRevisions']>
+    readonly useDirectusToken: UnwrapRef<typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusToken')['useDirectusToken']>
+    readonly useDirectusUrl: UnwrapRef<typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusUrl')['useDirectusUrl']>
+    readonly useDirectusUser: UnwrapRef<typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusUser')['useDirectusUser']>
+    readonly useDirectusUsers: UnwrapRef<typeof import('../../node_modules/nuxt-directus/dist/runtime/composables/useDirectusUsers')['useDirectusUsers']>
     readonly useError: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useError']>
     readonly useFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useFetch']>
     readonly useGlobalMutationLoading: UnwrapRef<typeof import('@vue/apollo-composable')['useGlobalMutationLoading']>
@@ -262,6 +285,7 @@ declare module 'vue' {
     readonly useLocaleHead: UnwrapRef<typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables')['useLocaleHead']>
     readonly useLocalePath: UnwrapRef<typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables')['useLocalePath']>
     readonly useLocaleRoute: UnwrapRef<typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables')['useLocaleRoute']>
+    readonly useMeilisearchClient: UnwrapRef<typeof import('../../node_modules/nuxt-meilisearch/dist/runtime/composables/useMeilisearchClient')['useMeilisearchClient']>
     readonly useMessage: UnwrapRef<typeof import('naive-ui')['useMessage']>
     readonly useMutation: UnwrapRef<typeof import('@vue/apollo-composable')['useMutation']>
     readonly useMutationLoading: UnwrapRef<typeof import('@vue/apollo-composable')['useMutationLoading']>

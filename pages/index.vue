@@ -2,9 +2,9 @@
     <div>
         <v-row class="homeSection">
             <v-col cols="6" class="homeTitle">
-                <h3>Alternate Framework</h3>
+                <h3>Collaborrate</h3>
                 <p class="homeDescription">A powerful, consistent, and flexible headless content management framework. Built using the Nuxtjs
-                    framework, Alternate Framework provides headless content management system capabilities for sites of
+                    framework, Collaborrate provides headless content management system capabilities for sites of
                     all types.</p>
             </v-col>
             <v-col cols="6">
@@ -21,10 +21,10 @@
                                 <a href="https://www.alternatecms.com/showcase"><v-card color="blue-darken-2" prepend-icon="fas fa-code" theme="dark" title="Code Examples" text="Learn by testing real projects developed by the community."></v-card></a>
                             </v-col>
                             <v-col cols="12">
-                                <a href="https://www.alternatecms.com/tutorials"><v-card color="purple-darken-2" prepend-icon="fas fa-play" theme="dark" title="Tutorials" text="Follow step-by-step instructions to use and customizing the Alternate Framework."></v-card></a>
+                                <a href="https://www.alternatecms.com/tutorials"><v-card color="purple-darken-2" prepend-icon="fas fa-play" theme="dark" title="Tutorials" text="Follow step-by-step instructions to use and customizing the Collaborrate."></v-card></a>
                             </v-col>
                             <v-col cols="12">
-                                <a href="https://www.alternatecms.com/blog"><v-card color="orange-darken-2" prepend-icon="fas fa-pencil" theme="dark" title="Blog" text="Read the latest news about Alternate Framework and the ecosystem."></v-card></a>
+                                <a href="https://www.alternatecms.com/blog"><v-card color="orange-darken-2" prepend-icon="fas fa-pencil" theme="dark" title="Blog" text="Read the latest news about Collaborrate and the ecosystem."></v-card></a>
                             </v-col>
                         </v-row>
                     </v-col>
@@ -78,6 +78,6 @@
 
 <script setup>
     useHead({
-        title: 'Alternate Framework',
+        title: 'Collaborrate',
     })
 </script>

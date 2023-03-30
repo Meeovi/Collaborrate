@@ -4,23 +4,28 @@
       <v-card>
         <v-layout>
           <v-navigation-drawer class="mainbar" permanent :rail="rail" @click="rail = false">
-           <ul>
-            <v-list-item>
-              <a href="/"><img class="logobrand" src="../assets/images/alternatecms.png"/></a>
-            </v-list-item>
+            <ul>
+              <v-list-item>
+                <a href="/"><img class="logobrand" src="../assets/images/alternatecms.png" /></a>
+              </v-list-item>
 
-            <v-divider></v-divider>
+              <v-divider></v-divider>
 
-            <v-list-item>
-              <v-btn stacked variant="text" title="Change Background" :prepend-icon="theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'" @click="onClick"></v-btn>
-            </v-list-item>
-            
+              <v-list-item>
+                <v-btn stacked variant="text" title="Change Background"
+                  :prepend-icon="theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'" @click="onClick"></v-btn>
+              </v-list-item>
+
+              <li>
+                <customermenu />
+              </li>
+
               <li>
                 <contentmenu />
               </li>
 
               <li>
-                <blogmenu />
+                <projectmenu />
               </li>
 
               <li>
@@ -39,6 +44,15 @@
                 <inventorymenu />
               </li>
 
+              <li>
+                <v-row justify="center">
+                  <v-dialog class="sidebarmenu" v-model="dialog" :scrim="false" transition="dialog-bottom-transition" scrollable fullscreen>
+                    <template>
+                      <v-btn stacked size="x-small" prepend-icon="fas fa-users-line" variant="text" href="/Admin/Teams/">Teams</v-btn>
+                    </template>
+                  </v-dialog>
+                </v-row>
+              </li>
               <v-divider></v-divider>
               <li>
                 <settingsmenu />
@@ -60,9 +74,9 @@
 
 <script>
   import addDatasource from '../components/dashboards/add-datasource.vue'
-  import blogmenu from '../components/Menus/Default/blogmenu.vue'
+  import projectmenu from '../components/Menus/Default/projectmenu.vue'
   import contentmenu from '../components/Menus/Default/contentmenu.vue'
-  import databasemenu from '../components/Menus/Default/databasemenu.vue'
+  import customermenu from '../components/Menus/Default/customermenu.vue'
   import inventorymenu from '../components/Menus/Default/inventorymenu.vue'
   import marketingmenu from '../components/Menus/Default/marketingmenu.vue'
   import reportsmenu from '../components/Menus/Default/reportsmenu.vue'
@@ -71,9 +85,9 @@
 
   export default {
     components: {
-      blogmenu,
+      projectmenu,
       contentmenu,
-      databasemenu,
+      customermenu,
       inventorymenu,
       marketingmenu,
       reportsmenu,
