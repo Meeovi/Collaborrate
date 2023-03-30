@@ -1,14 +1,14 @@
 ## This Application is in Alpha Release ##
 
-# Alternate Framework
+# Collaborrate
 
-A powerful, consistent, and flexible headless content management framework. Built using the Nuxtjs framework, Alternate Framework provides headless content management system capabilities for sites of all types. 
+A powerful, consistent, and flexible headless content management framework. Built using the Nuxtjs framework, Collaborrate provides headless content management system capabilities for sites of all types. 
 
 https://app.netlify.com/start/deploy?repository=https://github.com/meeovi/Alternatecms
 
 ## Features include:
 
-- Alternate Framework supports MySQL, SQlite, Postgres, Supabase, SQL Server, CockroachDB
+- Collaborrate supports MySQL, SQlite, Postgres, Supabase, SQL Server, CockroachDB
 - Extendible system that supports Nuxtjs, Vuejs modules, and Fastify extensions
 - Per page & entire system SEO
 - Graphql support & Rest Apis with Rest Documentation
@@ -24,7 +24,7 @@ https://app.netlify.com/start/deploy?repository=https://github.com/meeovi/Altern
 - PWA Support with push notifications, desktop notifications, and offline caching
 - Mobile, Desktop, and Docker support (coming soon)
 
-and much more. Take a look at www.Alternate Framework.com 
+and much more. Take a look at www.Collaborrate.com 
 
 ## Prerequisites:
 
@@ -44,29 +44,29 @@ Add your database credentials to DATABASE_URL, example is DATABASE_URL=postgresq
 
 ## Steps to Install - 10 Minute Install
 
-1. git clone https://github.com/meeovi/AlternateFramework
-2. cd Alternate Framework
+1. git clone https://github.com/meeovi/Collaborrate
+2. cd Collaborrate
 3. npm install
 4. npm run all
 
-Alternate Framework will be at: http://localhost:8000
+Collaborrate will be at: http://localhost:8000
 
 ## If you have an existing database
 
-1. git clone https://github.com/meeovi/AlternateFramework
-2. cd Alternate Framework
+1. git clone https://github.com/meeovi/Collaborrate
+2. cd Collaborrate
 3. npm install
 4. prisma db pull
 5. npm run all
 
-## To update Alternate Framework
+## To update Collaborrate
 
 1. npm run alternate-update
 
-Alternate Framework will be at: http://localhost:8000
+Collaborrate will be at: http://localhost:8000
 
-Alternate Framework Graphiql Playground will be at: http://localhost:4000/graphql
+Collaborrate Graphiql Playground will be at: http://localhost:4000/graphql
 
-Alternate Framework API Documentation is located at: http://localhost:4000/swagger
+Collaborrate API Documentation is located at: http://localhost:4000/swagger
 
 More installation and deployment details are located at https://docs.Alternatecms.com

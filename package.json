@@ -1,15 +1,15 @@
 {
-   "name": "alternatecms",
+   "name": "collaborrate",
    "version": "0.0.5",
    "description": "A headless content management system with ecommerce features, graphql, Nuxtjs, and Prisma ORM.",
    "author": "Sebastian Hilton (https://www.sebastianhilton.com)",
-   "homepage": "https://www.alternatecms.com",
+   "homepage": "https://www.collaborrate.com",
    "repository": {
       "type": "git",
-      "url": "git+https://github.com/bastianhilton/AlternateCMS.git"
+      "url": "git+https://github.com/bastianhilton/collaborrate.git"
    },
    "bugs": {
-      "url": "https://github.com/bastianhilton/AlternateCMS/issues"
+      "url": "https://github.com/bastianhilton/collaborrate/issues"
    },
    "license": "MIT",
    "private": true,
@@ -18,7 +18,7 @@
    },
    "scripts": {
       "alternate-commit": "git add . && git commit -m \"ready for update\"",
-      "alternate-update": "git pull \"https://github.com/Meeovi/AlternateFramework\"",
+      "alternate-update": "git pull \"https://github.com/Meeovi/Collaborrate\"",
       "build": "nuxt build",
       "build:mesh": "yarn build:mesh server/index.ts",
       "prebuild": "yarn build:mesh",
@@ -88,7 +88,7 @@
       "@types/graphql": "^14.5.0",
       "@types/graphql-fields": "^1.3.4",
       "@whatwg-node/fetch": "^0.5.3",
-      "alternatecms-docs-generator": "^0.6.0",
+      "collaborrate-docs-generator": "^0.6.0",
       "cors": "^2.8.5",
       "fastify": "^4.10.2",
       "grapesjs": "^0.20.4",
