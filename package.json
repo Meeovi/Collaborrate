@@ -106,7 +106,7 @@
       "lerna": "^5.3.0",
       "lodash": "^4.17.21",
       "nodemailer": "^6.8.0",
-      "nuxt-security": "^0.10.1",
+      "nuxt-security": "^0.13.0",
       "prisma-docs-generator": "^0.5.0",
       "reflect-metadata": "^0.1.13",
       "sass": "^1.57.0",
