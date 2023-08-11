@@ -29,7 +29,7 @@
 
 <script>
     import crmmenu from '../../Menus/crmmenu.vue'
-    import addinvoices from '../../Content/customers/add-invoice.vue'
+    import addinvoices from '../../Content/customers/Add/add-invoices.vue'
 
     export default {
         components: {
