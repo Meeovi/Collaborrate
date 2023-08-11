@@ -1,0 +1,92 @@
+///// ELEMENTS ONLY FOR HOME PAGE
+.nav-home-aside{
+	    width: 250px;
+	    .menu-category{ margin:0; padding:0;
+			li{ position: relative; display: block; border-bottom: 1px solid $border-color;}
+
+			a{ color:$dark;  }
+			> li > a {	display: block; padding:10px 0px; 	} 
+
+			.submenu{ display:none; margin:0; padding:0; box-shadow:5px 5px 15px rgba(#000, .2);
+				z-index:20;  position:absolute; 
+				li { list-style:none; }
+				left: 100%; top:0; width:250px;  background: #fff; 
+				li a{ padding:10px 16px; display: block;}
+			}
+
+			a:hover{
+				color:$primary; transition: all 0.3s;
+			}
+			li:hover .submenu{
+				display:block; margin-left:0px; 
+			}
+
+			.has-submenu{
+				> a:after{ content:"\203A"; font-size: 24px; color:#999; line-height: 18px; font-weight: bold; float:right; }
+			}
+
+		} //.menu-side
+
+}
+
+
+.slider-home-banner{
+	.carousel-item img {
+		width: 100%; height:375px;
+		object-fit: cover; 
+ 	}
+}
+
+
+
+.special-home-right{
+	.card-banner{
+		min-height:112px;
+	}
+}
+
+
+.card-deal{
+	flex-direction: row;
+	.col-heading{ min-width:300px; flex-basis: 350px; flex-shrink:0; }
+	.row{ width:100%; }
+	.items-wrap{
+		> [class*=col]{
+			border-left:1px solid $border-color;
+		}
+	}
+
+	.card-product-grid{ margin-bottom:0; text-align: center }
+}
+
+
+
+.home-category-banner{
+	position:relative; padding:30px; height:100%; overflow: hidden;
+	.img-bg{
+		position:absolute; right:-50px; bottom:-50px;
+		mix-blend-mode: multiply;
+		height:260px;
+	}
+}
+
+
+.card-home-category{
+	.item{
+		.card-body{
+			@include clearfix;
+		}
+		.title{
+			min-height: 40px; font-weight:500;
+		}
+
+		&:hover img{ transform: scale(1.3); transition:.5s; }
+	}
+}
+
+.banner-quote{ min-height:350px; }
+
+.section-subscribe{
+	background-color:lighten($secondary, 5%);
+}
+

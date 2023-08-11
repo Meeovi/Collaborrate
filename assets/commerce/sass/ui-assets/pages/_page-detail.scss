@@ -1,0 +1,30 @@
+/* ================== PAGE DETAILS ==================  */
+.gallery-wrap{
+	.img-big-wrap{ margin-bottom:10px; border-radius:$border-radius;  overflow:hidden;  background-color:#fff;
+		// height:450px; 
+		a{text-align: center; display:block;}
+		img{height:480px; width:auto; display:inline-block; cursor:zoom-in; }
+	}
+	.thumbs-wrap{ text-align:center; margin-bottom:20px;
+		.item-thumb{
+			width:60px; height:60px; border:1px solid #ddd; border-radius:6px;  margin:3px; display:inline-block; overflow:hidden;
+			&:hover{ border-color:$primary; }
+		}
+			img{
+				max-width:100%; max-height:100%; object-fit:cover; 
+			    cursor:zoom-in;
+			}
+		
+	}
+
+}
+
+
+
+.item-option-select{
+	margin-bottom:1rem; display: inline-block; margin-right:15px;
+	.btn{ min-width: 80px; }
+}
+
+
+.title-description:not(:first-child){ margin-top:30px; }

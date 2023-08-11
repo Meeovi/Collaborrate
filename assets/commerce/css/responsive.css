@@ -1,0 +1,107 @@
+.mobile-block {
+  display: none; }
+
+@media (min-width: 1040px) {
+  .container {
+    padding-left: 30px !important;
+    padding-right: 30px !important; } }
+@media (max-width: 1140px) {
+  .card-deal .col-heading {
+    min-width: 280px;
+    flex-basis: 280px; }
+
+  .nav-home-aside {
+    width: 200px; } }
+@media (max-width: 992px) {
+  /* small tablet devices */
+  .table-shopping-cart tr td:first-child {
+    width: 250px; }
+  .table-shopping-cart .itemside .info {
+    padding: 0; }
+  .table-shopping-cart .itemside .aside {
+    display: none; }
+
+  .card-deal {
+    display: block; }
+    .card-deal .col-heading {
+      min-width: 280px; }
+
+  .slider-home-banner {
+    margin-bottom: 20px; }
+    .slider-home-banner .carousel-item img {
+      max-height: 350px; } }
+@media all and (max-width: 768px) {
+  .nav-home-aside {
+    width: 100%; }
+
+  .list-inline-item {
+    margin-bottom: 10px; }
+
+  .slider-home-banner {
+    margin-bottom: 20px; }
+    .slider-home-banner .carousel-item img {
+      max-height: 250px; }
+
+  /* mobile devices */
+  .section-header .search-header {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .section-header .logo {
+    max-height: 32px;
+    width: auto; }
+
+  .banner-quote {
+    min-height: auto; }
+
+  .icontext {
+    margin-bottom: 20px; }
+
+  .card-post {
+    margin-bottom: 20px; }
+
+  .card-product-grid .img-wrap {
+    height: 200px; }
+
+  .section-footer .title {
+    margin-bottom: 0;
+    margin-top: 20px; }
+
+  .item-feature {
+    margin-bottom: 20px; }
+
+  .mobile-order-first {
+    order: -1; }
+
+  .mobile-order-1 {
+    order: 1; }
+
+  .mobile-order-2 {
+    order: 2; }
+
+  .mobile-order-3 {
+    order: 3; }
+
+  .mobile-block {
+    display: block; }
+
+  .padding-y {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+
+  .padding-top {
+    padding-top: 20px; }
+
+  .padding-bottom {
+    padding-bottom: 20px; }
+
+  .padding-y-lg {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+
+  .padding-top-lg {
+    padding-top: 30px; }
+
+  .padding-bottom-lg {
+    padding-bottom: 30px; } }
+
+/*# sourceMappingURL=responsive.css.map */

@@ -1,0 +1,82 @@
+<template>
+    <div>
+        <v-card>
+            <v-list min-width="300">
+                <v-list lines="one">
+                    <v-list-item title="Org name" subtitle="Org Link"
+                        prepend-avatar="../../../assets/images/alternatecms.png"></v-list-item>
+                </v-list>
+                <v-list-item title="Create Account" value="Create Account" href="/app/create"></v-list-item>
+                <v-list-item title="Create Contacts" value="Create Contacts" href="/app/create"></v-list-item>
+                <v-list-item title="Create Opportunities" value="Create Opportunities" href="/app/create"></v-list-item>
+                <v-list-item title="Create Leads" value="Create Leads" href="/app/create"></v-list-item>
+                <v-list-item title="Create Quotes" value="Create Quotes" href="/app/create"></v-list-item>
+                <v-list-item title="Create Contracts" value="Create Contracts" href="/app/create"></v-list-item>
+                <v-divider></v-divider>
+                <v-list-item title="Preferences" value="Preferences" href="/app/settings"></v-list-item>
+                <v-divider></v-divider>
+                <v-list-item>
+                    <div>
+                        <v-menu :location="location">
+                            <template v-slot:activator="{ props }">
+                                <v-btn variant="text" v-bind="props">
+                                    Administration
+                                </v-btn>
+                            </template>
+
+                            <v-list>
+                                <v-list-item title="Manage Apps" href=""></v-list-item>
+                            </v-list>
+                        </v-menu>
+                    </div>
+                </v-list-item>
+
+                <v-divider></v-divider>
+                <v-list-item>
+                    <div>
+                        <v-menu :location="location">
+                            <template v-slot:activator="{ props }">
+                                <v-btn variant="text" v-bind="props">
+                                    Tools
+                                </v-btn>
+                            </template>
+
+                            <v-list>
+                                <v-list-item title="Workflow Builder" href=""></v-list-item>
+                            </v-list>
+                        </v-menu>
+                    </div>
+                </v-list-item>
+
+                <v-divider></v-divider>
+                <v-list-item>
+                    <div>
+                        <v-menu :location="location">
+                            <template v-slot:activator="{ props }">
+                                <v-btn variant="text" v-bind="props">
+                                    Sign Out
+                                </v-btn>
+                            </template>
+
+                            <v-list>
+                                <v-list-item title="Sign Out of " href=""></v-list-item>
+                            </v-list>
+                        </v-menu>
+                    </div>
+                </v-list-item>
+            </v-list>
+        </v-card>
+    </div>
+</template>
+
+<script>
+    export default {
+        data: () => ({
+            location: 'end',
+        }),
+    }
+</script>
+
+<script setup>
+
+</script>

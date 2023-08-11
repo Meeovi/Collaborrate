@@ -1,0 +1,276 @@
+/********************** Main CSS *************/
+
+body {
+    margin: 0;
+}
+
+#topnav {
+    width: 100% !important;
+}
+
+.logobrand {
+    left: 20%;
+    position: relative;
+    width: 70% !important;
+    text-decoration: none;
+}
+
+.lowerbar h4 {
+    padding: 5px;
+}
+
+.lowerbar a {
+    color: white !important;
+}
+
+.choiceGrid .v-card {
+    margin: 10px;
+}
+
+.leftContent {
+    max-width: 210px !important;
+}
+
+.leftContent h4, .leftContent h6 {
+    width: 100%;
+    text-align: center;
+    top: 0px;
+    position: relative;
+}
+
+.contentLeft {
+    left: 0px !important;
+    position: relative;
+    top: 0px !important;
+    width: 209px !important;
+    height: 100vh !important;
+}
+
+.contentLeft h4, .contentLeft h6 {
+    padding: 12px;
+}
+
+.contentRight {
+    padding-right: 5px;
+    top: 0px !important;
+    height: 100vh !important;
+    width: 100% !important;
+}
+
+.contentRight .v-card-title {
+    padding: 0 !important;
+}
+
+.contentRight h4 {
+    padding: 10px;
+}
+
+.insertAddBtn {
+    top: 10px;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.createteambtn {
+    top: 25px;
+}
+
+.rightAddBtn {
+    top: 25px;
+    margin-bottom: 51px;
+    display: block !important;
+}
+
+.features3, .team1, .card-wrap {
+    background-color: transparent !important;
+}
+
+.features3 .mbr-text, .item-title {
+    color: black !important;
+}
+
+.homePage .mx-auto {
+    left: 10px;
+    position: relative;
+}
+
+/******************* Main Section CSS *********/
+
+#mainSection {
+    top: 0px !important;
+    position: relative !important;
+    left: 65px;
+    width: 100% !important;
+    height: 100vh !important;
+}
+
+#mainWebsite {
+    top: 0px !important;
+    position: relative !important;
+    left: 0px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/****************** Messenger CSS ***************/
+
+.messengerPage .v-toolbar {
+    position: fixed;
+    z-index: 99999;
+}
+
+.toolbarListTitle {
+    position: fixed !important;
+    top: 64px;
+    z-index: 99999;
+}
+
+.messengerPage .v-navigation-drawer {
+    min-width: 200px !important;
+}
+
+.messengerPage .toolbarTitle {
+    padding: 20px;
+    z-index: 99999;
+}
+
+.contentPanel {
+    top: 0px;
+    position: relative;
+    left: -55px;
+    width: 100% !important;
+    height: 100vh !important;
+}
+
+.channelList {
+    position: relative;
+    top: 115px;
+}
+
+.channelwindow {
+    height: 100vh !important;
+    width: 100% !important;
+}
+
+.channelwindow .v-toolbar {
+    top: 112px;
+    z-index: 99999;
+}
+
+.channelOptions {
+    width: 30% !important;
+    height: 70%;
+}
+
+.chatList {
+    height: 77vh;
+    overflow-y: auto;
+    top: 115px;
+    position: relative;
+}
+
+.channelFooter {
+    bottom: 0px !important;
+    position: fixed !important;
+    width: 90% !important;
+}
+
+/************************ CRM CSS *************/
+
+.tableList {
+    height: 77vh;
+    overflow-y: auto;
+    top: 115px;
+    position: relative;
+}
+
+.appHomepage {
+    padding: 20px;
+}
+
+.memberDeleteBtn, .memberAppBtn {
+    position: relative;
+    top: 25px;
+}
+
+.membersPage {
+    padding: 10px;
+}
+
+.homeSection {
+    padding: 45px !important;
+}
+
+.homeSection a {
+    text-decoration: none;
+}
+
+.homeTitle, .homeDescription {
+    padding: 5px;
+}
+
+.editor {
+    height: 150px !important;
+    width: 95% !important;
+}
+
+.homeRight {
+    padding: 15px;
+}
+
+.emailTemplates {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dialog-bottom-transition-enter-active,
+.dialog-bottom-transition-leave-active {
+    transition: transform .2s ease-in-out;
+}
+
+.contentDashboard {
+    padding: 10px;
+}
+
+.createteamform {
+    padding: 20px;
+}
+
+/******************** Sidebar CSS *************/
+
+#sidebarNav {
+    height: 100vh !important;
+    left: 0px;
+    max-width: 100px !important;
+    float: left;
+    position: fixed;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.v-navigation-drawer {
+    width: 70px !important;
+}
+
+.mainbar {
+    width: 100px !important;
+}
+
+.sidebarmenu {
+    width: 300px;
+    min-height: 100% !important;
+    max-height: 100% !important;
+    height: 100% !important;
+    left: 100px !important;
+    margin: 0px !important;
+}
+
+.mainbar li {
+    list-style-type: none;
+    padding-bottom: 25px !important;
+}
+
+.sidebarmenu .v-overlay__content {
+    max-height: calc(100%) !important;
+}
+

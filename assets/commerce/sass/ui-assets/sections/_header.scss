@@ -1,0 +1,64 @@
+.section-header{
+	background-color:#fff;
+}
+
+/* ================== header main ==================  */
+.header-top-light{
+	.nav-link{ color:$gray-500; 
+		&:hover{ color:$dark; }
+	}
+}
+
+.header-main{position:relative; padding-top:1rem; padding-bottom:1rem;}
+
+.brand-wrap, .navbar-brand { 
+    .logo{margin-right:7px;  max-height:34px; display:inline-block; }
+}
+
+.navbar-main{
+	background-color:#fff;
+	.nav-link{ 
+		&:hover{ color:$primary;   }
+	}
+}
+
+
+.search-header{
+	border: 2px solid $primary; border-radius:$border-radius-lg;
+    .form-control, .custom-select{ border-color:transparent; }
+    select{
+    	flex-basis: 150px!important;
+    	flex-grow: 0!important;
+    }
+}
+
+.widget-header{ display:inline-block; vertical-align: middle; position:relative; 
+
+	.widget-view{ padding:5px 7px; display:inline-block; position:relative; text-align:center; }
+	.icon-area{ font-size:24px; display:inline-block; width: 36px; height:30px; color:$gray-500;  
+		.notify{ position:absolute; top:0px; right:8%}
+	}
+	.icon{ color:$gray-500; 
+		.notify{ position:absolute; top:0; right:0}
+	}
+	.text{
+		max-width:80px; overflow: hidden; text-overflow:ellipsis; white-space: nowrap; display:block; line-height:1.2;
+	}
+	
+
+	a{ color:$dark;	}
+	
+	form{min-width:280px;}
+	
+	&:hover{
+		i{color:$dark; }
+	}
+}
+
+
+/* desktop only */
+@media all and (min-width: 768px) {
+
+	
+}
+/* desktop only .end */
