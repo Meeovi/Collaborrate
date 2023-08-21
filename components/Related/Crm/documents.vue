@@ -29,7 +29,7 @@
 
 <script>
     import crmmenu from '../../Menus/crmmenu.vue'
-    import adddocuments from '../../Content/customers/Add/add-documents.vue'
+    import adddocuments from '../../Content/customers/Add/add-document.vue'
 
     export default {
         components: {

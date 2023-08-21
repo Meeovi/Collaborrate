@@ -29,7 +29,7 @@
 
 <script>
     import crmmenu from '../../Menus/crmmenu.vue'
-    import addopportunities from '../../Content/customers/Add/add-opportunities.vue'
+    import addopportunities from '../../Content/customers/Add/add-opportunity.vue'
 
     export default {
         components: {

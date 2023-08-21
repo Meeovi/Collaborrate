@@ -136,7 +136,7 @@
             </v-row>
         </v-toolbar>
 
-        <v-table fixed-header class="tableList">
+        <v-table fixed-header class="customerTable">
             <thead>
                 <tr>
                     <th class="text-left">

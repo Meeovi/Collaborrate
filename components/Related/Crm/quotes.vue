@@ -29,7 +29,7 @@
 
 <script>
     import crmmenu from '../../Menus/crmmenu.vue'
-    import addquotes from '../../Content/customers/Add/add-quotes.vue'
+    import addquotes from '../../Content/customers/Add/add-quote.vue'
 
     export default {
         components: {

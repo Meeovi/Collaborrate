@@ -1,6 +1,6 @@
 <template>
     <v-card class="messengerPage">
-        <v-toolbar color="purple" class="topToolbar">
+        <v-toolbar color="purple" class="topToolbar" density="compact">
             <v-row>
                 <v-col cols="9">
                     <v-toolbar-title class="toolbarTitle">Projects</v-toolbar-title>

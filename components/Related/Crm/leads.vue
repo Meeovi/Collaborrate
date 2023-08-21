@@ -29,7 +29,7 @@
 
 <script>
     import crmmenu from '../../Menus/crmmenu.vue'
-    import addleads from '../../Content/customers/Add/add-leads.vue'
+    import addleads from '../../Content/customers/Add/add-lead.vue'
 
     export default {
         components: {

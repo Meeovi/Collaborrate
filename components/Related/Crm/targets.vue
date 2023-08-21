@@ -29,7 +29,7 @@
 
 <script>
     import crmmenu from '../../Menus/crmmenu.vue'
-    import addtargets from '../../Content/customers/Add/add-targets.vue'
+    import addtargets from '../../Content/customers/Add/add-target.vue'
 
     export default {
         components: {

@@ -29,7 +29,7 @@
 
 <script>
     import crmmenu from '../../Menus/crmmenu.vue'
-    import addcampaigns from '../../Content/customers/Add/add-campaigns.vue'
+    import addcampaigns from '../../Content/customers/Add/add-campaign.vue'
 
     export default {
         components: {

@@ -29,7 +29,7 @@
 
 <script>
     import crmmenu from '../../Menus/crmmenu.vue'
-    import addsurveys from '../../Content/customers/Add/add-surveys.vue'
+    import addsurveys from '../../Content/customers/Add/add-survey.vue'
 
     export default {
         components: {
