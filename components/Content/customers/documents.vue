@@ -6,15 +6,7 @@
                     <v-toolbar-title class="toolbarTitle">Documents</v-toolbar-title>
                 </v-col>
                 <v-col cols="1">
-                    <v-menu :location="location" transition="slide-y-transition">
-                        <template v-slot:activator="{ props }">
-                            <v-btn variant="text" v-bind="props" size="large" prepend-icon="fas fa-plus"
-                                append-icon="fas fa-caret-down" title="New">New</v-btn>
-                        </template>
-                        <adddocument />
-                    </v-menu>
-
-                    
+                    <adddocument />
                 </v-col>
             </v-row>
         </v-toolbar>
@@ -22,17 +14,43 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Name
+                        Document Name
                     </th>
                     <th class="text-left">
-                        Calories
+                        File Name
                     </th>
+                    <th class="text-left">
+                        Category
+                    </th>
+                    <th class="text-left">
+                        Sub Category
+                    </th>
+                    <th class="text-left">
+                        Revision Date
+                    </th>
+                    <th class="text-left">
+                        Expiration Date
+                    </th>
+                    <th class="text-left">
+                        User
+                    </th>
+                    <th class="text-left">
+                        Date Created
+                    </th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in desserts" :key="item.name">
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.calories }}</td>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </tbody>
         </v-table>

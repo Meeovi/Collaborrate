@@ -131,7 +131,7 @@
                                 <v-list-item-title></v-list-item-title>
                             </v-list-item>
                         </v-list>
-                    </v-menu>
+                    
                 </v-col>
             </v-row>
         </v-toolbar>

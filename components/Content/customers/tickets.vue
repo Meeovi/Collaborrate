@@ -6,15 +6,7 @@
                     <v-toolbar-title class="toolbarTitle">Tickets</v-toolbar-title>
                 </v-col>
                 <v-col cols="1">
-                    <v-menu :location="location" transition="slide-y-transition">
-                        <template v-slot:activator="{ props }">
-                            <v-btn variant="text" v-bind="props" size="large" prepend-icon="fas fa-plus"
-                                append-icon="fas fa-caret-down" title="New">New</v-btn>
-                        </template>
-                        <addticket />
-                    </v-menu>
-
-                    
+                    <addticket />
                 </v-col>
             </v-row>
         </v-toolbar>
@@ -22,10 +14,34 @@
             <thead>
                 <tr>
                     <th class="text-left">
+                        ID
+                    </th>
+                    <th class="text-left">
                         Name
                     </th>
                     <th class="text-left">
-                        Calories
+                        Short Description
+                    </th>
+                    <th class="text-left">
+                        Priority
+                    </th>
+                    <th class="text-left">
+                        State
+                    </th>
+                    <th class="text-left">
+                        Assignment Group
+                    </th>
+                    <th class="text-left">
+                        Assigned To
+                    </th>
+                    <th class="text-left">
+                        Task Type
+                    </th>
+                    <th class="text-left">
+                        Created
+                    </th>
+                    <th class="text-left">
+                        Updated
                     </th>
                 </tr>
             </thead>
@@ -33,6 +49,14 @@
                 <tr v-for="item in desserts" :key="item.name">
                     <td>{{ item.name }}</td>
                     <td>{{ item.calories }}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </tbody>
         </v-table>

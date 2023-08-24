@@ -90,7 +90,7 @@
                         Surveys
                     </v-tab>
                 </v-tabs>
-                <v-window v-model="tab">
+                <v-window v-model="tab" class="crmPanel">
                     <v-window-item :value="1">
                         <v-card flat>
                             <reporting />

@@ -3,18 +3,10 @@
         <v-toolbar color="transparent" class="topToolbar">
             <v-row>
                 <v-col cols="9">
-                    <v-toolbar-title class="toolbarTitle">Campaigns</v-toolbar-title>
+                    <v-toolbar-title class="toolbarTitle">Invoices</v-toolbar-title>
                 </v-col>
                 <v-col cols="1">
-                    <v-menu :location="location" transition="slide-y-transition">
-                        <template v-slot:activator="{ props }">
-                            <v-btn variant="text" v-bind="props" size="large" prepend-icon="fas fa-plus"
-                                append-icon="fas fa-caret-down" title="New">New</v-btn>
-                        </template>
-                        <addaccount />
-                    </v-menu>
-
-                    
+                    <addinvoice />
                 </v-col>
             </v-row>
         </v-toolbar>
@@ -22,17 +14,43 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Name
+                        Num
                     </th>
                     <th class="text-left">
-                        Calories
+                        Title
                     </th>
+                    <th class="text-left">
+                        Status
+                    </th>
+                    <th class="text-left">
+                        Contact
+                    </th>
+                    <th class="text-left">
+                        Account
+                    </th>
+                    <th class="text-left">
+                        Grand Total
+                    </th>
+                    <th class="text-left">
+                        Due Date
+                    </th>
+                    <th class="text-left">
+                        User
+                    </th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in desserts" :key="item.name">
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.calories }}</td>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </tbody>
         </v-table>
@@ -40,15 +58,15 @@
 </template>
 
 <script>
-import addaccount from './Add/add-account.vue'
+import addinvoice from './Add/add-invoice.vue'
 
 export default {
-    components: { addaccount }
+    components: { addinvoice }
 }
 </script>
 
 <script setup>
     useHead({
-        title: 'Campaigns'
+        title: 'Invoices'
     })
 </script>

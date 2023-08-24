@@ -3,27 +3,27 @@
         <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition" persistent>
             <template v-slot:activator="{ props }">
                 <v-btn v-bind="props" class="rightAddBtn">
-                    <v-icon start icon="fas fa-plus"></v-icon>Add Tag
+                    <v-icon start icon="fas fa-plus"></v-icon>Create Lead
                 </v-btn>
             </template>
             <v-card>
-                <form action="" method="post" @v-on:submit.prevent="addTag()">
+                <form action="" method="post" @v-on:submit.prevent="addLead()">
                     <v-toolbar dark color="primary">
                         <v-btn icon dark @click="dialog = false">
                             <v-icon icon="fas fa-circle-xmark"></v-icon>
                         </v-btn>
                         <v-card-title>
-                            <span class="text-h6">Create new Tag</span>
+                            <span class="text-h6">Create new Lead</span>
                         </v-card-title>
                     </v-toolbar>
                     <v-card-text>
                         <v-container>
                             <v-row>
                                 <v-col cols="12">
-                                    <v-text-field label="Tag Name*" required></v-text-field>
+                                    <v-text-field label="Lead Name*" required></v-text-field>
                                 </v-col>
                                 <v-col cols="12">
-                                    <v-textarea label="Tag Description">
+                                    <v-textarea label="Lead Description">
                                     </v-textarea>
                                 </v-col>
                             </v-row>
@@ -47,11 +47,11 @@
 
 <script>
 /*    import gql from "graphql-tag";
-    import findManyTags from "../../graphql/query/findManyTags.gql";
+    import findManyLeads from "../../graphql/query/findManyLeads.gql";
 
     const ADD_TAGS = gql `
     mutation ($name:String!,$excerpt:String){
-    createOneTags(data: {name: $name, excerpt: $excerpt}) {
+    createOneLeads(data: {name: $name, excerpt: $excerpt}) {
         name
         excerpt
   }
@@ -71,7 +71,7 @@
         },
 
     /*    methods: {
-            async addTag() {
+            async addLead() {
                 const name = this.name;
                 const excerpt = this.excerpt;
                 await this.$apollo.mutate({
@@ -82,15 +82,15 @@
                     },
                     update: (cache, {
                         data: {
-                            insertTags
+                            insertLeads
                         }
                     }) => {
                         // Read data from cache for this query
                         try {
-                            const insertedTag = insertTags.returning;
-                            console.log(insertedTag)
+                            const insertedLead = insertLeads.returning;
+                            console.log(insertedLead)
                             cache.writeQuery({
-                                query: findManyTags
+                                query: findManyLeads
                             })
                         } catch (err) {
                             console.error(err)

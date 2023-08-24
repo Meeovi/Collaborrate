@@ -2,19 +2,17 @@
     <div>
         <v-toolbar color="transparent" class="topToolbar">
             <v-row>
-                <v-col cols="9">
+                <v-col cols="6">
                     <v-toolbar-title class="toolbarTitle">Campaigns</v-toolbar-title>
                 </v-col>
-                <v-col cols="1">
-                    <v-menu :location="location" transition="slide-y-transition">
-                        <template v-slot:activator="{ props }">
-                            <v-btn variant="text" v-bind="props" size="large" prepend-icon="fas fa-plus"
-                                append-icon="fas fa-caret-down" title="New">New</v-btn>
-                        </template>
-                        <addcampaign />
-                    </v-menu>
+                <v-col cols="3">
+                    <addemailtemplate />
+                </v-col>
 
-                    
+                <v-col cols="1">
+                    <v-btn class="rightAddBtn" href="/app/crm/emailtemplates">
+                        <v-icon start icon="fas fa-eye"></v-icon>View Email Templates
+                    </v-btn>
                 </v-col>
             </v-row>
         </v-toolbar>
@@ -22,17 +20,36 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Name
+                        Campaign
                     </th>
                     <th class="text-left">
-                        Calories
+                        Status
+                    </th>
+                    <th class="text-left">
+                        Type
+                    </th>
+                    <th class="text-left">
+                        End Date
+                    </th>
+                    <th class="text-left">
+                        Date Created
+                    </th>
+                    <th class="text-left">
+                        User
+                    </th>
+                    <th>
+                        <addcampaign />
                     </th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in desserts" :key="item.name">
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.calories }}</td>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </tbody>
         </v-table>
@@ -40,11 +57,15 @@
 </template>
 
 <script>
-import addcampaign from './Add/add-campaign.vue'
+    import addcampaign from './Add/add-campaign.vue'
+    import addemailtemplate from './Add/add-emailtemplate.vue'
 
-export default {
-    components: { addcampaign }
-}
+    export default {
+        components: {
+            addcampaign,
+            addemailtemplate
+        }
+    }
 </script>
 
 <script setup>

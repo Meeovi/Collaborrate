@@ -3,24 +3,24 @@
         <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition" persistent>
             <template v-slot:activator="{ props }">
                 <v-btn v-bind="props" class="rightAddBtn">
-                    <v-icon start icon="fas fa-plus"></v-icon>Add Address
+                    <v-icon start icon="fas fa-plus"></v-icon>Create Email Template
                 </v-btn>
             </template>
             <v-card>
-                <form method="post" @v-on:submit.prevent="addAddress()">
+                <form method="post" @v-on:submit.prevent="addemailTemplate()">
                     <v-toolbar dark color="primary">
                         <v-btn icon dark @click="dialog = false">
                             <v-icon icon="fas fa-circle-xmark"></v-icon>
                         </v-btn>
                         <v-card-title>
-                            <span class="text-h6">Create new Address</span>
+                            <span class="text-h6">Create new Email Template</span>
                         </v-card-title>
                     </v-toolbar>
                     <v-card-text>
                         <v-container>
                             <v-row>
                                 <v-col cols="6">
-                                    <v-text-field v-model="name" id="categoryName" label="Address Name*" required></v-text-field>
+                                    <v-text-field v-model="name" id="categoryName" label="Email Template Name*" required></v-text-field>
                                 </v-col>
                                 <v-col cols="6">
                                     <v-textarea v-model="content" label="Description" id="categoryDescription">
@@ -36,7 +36,7 @@
                                     <v-textarea v-model="meta_description" label="Meta Description" id="categoryDescription"></v-textarea>
                                 </v-col>
                                 <v-col cols="12" sm="6">
-                                    <v-file-input accept="image/*" label="Address Image"></v-file-input>
+                                    <v-file-input accept="image/*" label="Email Template Image"></v-file-input>
                                 </v-col>
                             </v-row>
                         </v-container>
@@ -90,7 +90,7 @@
             }
         },
     /*    methods: {
-            addAddress() {
+            addemailTemplate() {
                 const name = this.name;
                 const content = this.content;
                 const image = this.image;
@@ -112,7 +112,7 @@
                     },
                     update: (store, {
                         data: {
-                            addAddress
+                            addemailTemplate
                         }
                     }) => {
                         // Read data from store for this query
@@ -124,7 +124,7 @@
                                 orderBy: 'createdAt_DESC'
                             }
                         })
-                        data.allCategories.push(addAddress)
+                        data.allCategories.push(addemailTemplate)
                         store.writeQuery({
                             query: findManyCategories,
                             variables: {

@@ -6,15 +6,7 @@
                     <v-toolbar-title class="toolbarTitle">Surveys</v-toolbar-title>
                 </v-col>
                 <v-col cols="1">
-                    <v-menu :location="location" transition="slide-y-transition">
-                        <template v-slot:activator="{ props }">
-                            <v-btn variant="text" v-bind="props" size="large" prepend-icon="fas fa-plus"
-                                append-icon="fas fa-caret-down" title="New">New</v-btn>
-                        </template>
-                        <addsurvey />
-                    </v-menu>
-
-                    
+                    <addsurvey />
                 </v-col>
             </v-row>
         </v-toolbar>
@@ -25,14 +17,14 @@
                         Name
                     </th>
                     <th class="text-left">
-                        Calories
+                        Assigned To
                     </th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in desserts" :key="item.name">
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.calories }}</td>
+                <tr>
+                    <td></td>
+                    <td></td>
                 </tr>
             </tbody>
         </v-table>

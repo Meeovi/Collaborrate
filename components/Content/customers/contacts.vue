@@ -6,15 +6,7 @@
                     <v-toolbar-title class="toolbarTitle">Contacts</v-toolbar-title>
                 </v-col>
                 <v-col cols="1">
-                    <v-menu :location="location" transition="slide-y-transition">
-                        <template v-slot:activator="{ props }">
-                            <v-btn variant="text" v-bind="props" size="large" prepend-icon="fas fa-plus"
-                                append-icon="fas fa-caret-down" title="New">New</v-btn>
-                        </template>
-                        <addcontact />
-                    </v-menu>
-
-                    
+                    <addcontact />
                 </v-col>
             </v-row>
         </v-toolbar>
@@ -25,14 +17,66 @@
                         Name
                     </th>
                     <th class="text-left">
-                        Calories
+                        Email
                     </th>
+                    <th class="text-left">
+                        Phone Number
+                    </th>
+                    <th class="text-left">
+                        Job Title & Company
+                    </th>
+                    <th class="text-left">
+                        Labels
+                    </th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in desserts" :key="item.name">
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.calories }}</td>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <v-menu>
+                            <template v-slot:activator="{ props }">
+                                <v-btn color="primary" v-bind="props" icon="fas fa-ellipsis-vertical" title="More Menu" size="x-small"></v-btn>
+                            </template>
+                            <v-list>
+                    <td>
+                        <v-list-item>
+                            <v-btn icon="fas fa-star" title="Favorite Contact" size="x-small" variant="text"></v-btn>
+                        </v-list-item>
+                    </td>
+                    <td>
+                        <v-list-item>
+                            <v-btn icon="fas fa-pen-to-square" title="Edit Contact" size="x-small" variant="text"></v-btn>
+                        </v-list-item>
+                    </td>
+                    <td>
+                        <v-list-item>
+                            <v-btn icon="fas fa-print" title="Print" size="x-small" variant="text"></v-btn>
+                        </v-list-item>
+                    </td>
+                    <td>
+                        <v-list-item>
+                            <v-btn icon="fas fa-file-export" title="Export" size="x-small" variant="text"></v-btn>
+                        </v-list-item>
+                    </td>
+                    <td>
+                        <v-list-item>
+                            <v-btn icon="fas fa-eye-slash" title="Hide from Contacts" size="x-small" variant="text"></v-btn>
+                        </v-list-item>
+                    </td>
+                    <td>
+                        <v-list-item>
+                            <v-btn icon="fas fa-trash-can" title="Delete" size="x-small" variant="text"></v-btn>
+                        </v-list-item>
+                    </td>
+                    </v-list>
+                    </v-menu>
+                    </td>
                 </tr>
             </tbody>
         </v-table>

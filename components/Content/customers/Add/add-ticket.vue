@@ -3,7 +3,7 @@
         <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition" persistent>
             <template v-slot:activator="{ props }">
                 <v-btn v-bind="props" class="rightAddBtn">
-                    <v-icon start icon="fas fa-plus"></v-icon>Add Ticket
+                    <v-icon start icon="fas fa-plus"></v-icon>Create Ticket
                 </v-btn>
             </template>
             <v-card>

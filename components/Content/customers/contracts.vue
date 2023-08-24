@@ -6,15 +6,7 @@
                     <v-toolbar-title class="toolbarTitle">Contracts</v-toolbar-title>
                 </v-col>
                 <v-col cols="1">
-                    <v-menu :location="location" transition="slide-y-transition">
-                        <template v-slot:activator="{ props }">
-                            <v-btn variant="text" v-bind="props" size="large" prepend-icon="fas fa-plus"
-                                append-icon="fas fa-caret-down" title="New">New</v-btn>
-                        </template>
-                        <addcontract />
-                    </v-menu>
-
-                    
+                    <addcontract />
                 </v-col>
             </v-row>
         </v-toolbar>
@@ -22,17 +14,37 @@
             <thead>
                 <tr>
                     <th class="text-left">
-                        Name
+                        Contract Title
                     </th>
                     <th class="text-left">
-                        Calories
+                        Status
+                    </th>
+                    <th class="text-left">
+                        Contract Manager
+                    </th>
+                    <th class="text-left">
+                        Account
+                    </th>
+                    <th class="text-left">
+                        Contract Value
+                    </th>
+                    <th class="text-left">
+                        Start Date
+                    </th>
+                    <th class="text-left">
+                        End Date
                     </th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in desserts" :key="item.name">
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.calories }}</td>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </tbody>
         </v-table>

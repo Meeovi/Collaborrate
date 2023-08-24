@@ -1,20 +1,12 @@
 <template>
     <div>
-        <v-toolbar color="transparent" class="topToolbar">
+        <v-toolbar color="transparent">
             <v-row>
                 <v-col cols="9">
                     <v-toolbar-title class="toolbarTitle">Reporting</v-toolbar-title>
                 </v-col>
                 <v-col cols="1">
-                    <v-menu :location="location" transition="slide-y-transition">
-                        <template v-slot:activator="{ props }">
-                            <v-btn variant="text" v-bind="props" size="large" prepend-icon="fas fa-plus"
-                                append-icon="fas fa-caret-down" title="New">New</v-btn>
-                        </template>
-                        <addreporting />
-                    </v-menu>
-
-                    
+                    <addreporting />
                 </v-col>
             </v-row>
         </v-toolbar>
@@ -25,14 +17,26 @@
                         Name
                     </th>
                     <th class="text-left">
-                        Calories
+                        Report Module
+                    </th>
+                    <th class="text-left">
+                        Assigned To
+                    </th>
+                    <th class="text-left">
+                        Date Created
+                    </th>
+                    <th class="text-left">
+                        Date Modified
                     </th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in desserts" :key="item.name">
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.calories }}</td>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </tbody>
         </v-table>

@@ -3,10 +3,10 @@
         <v-toolbar color="transparent" class="topToolbar">
             <v-row>
                 <v-col cols="9">
-                    <v-toolbar-title class="toolbarTitle">Targets</v-toolbar-title>
+                    <v-toolbar-title class="toolbarTitle">Email - Templates</v-toolbar-title>
                 </v-col>
                 <v-col cols="1">
-                    <addtarget />
+                    <addemailtemplates />
                 </v-col>
             </v-row>
         </v-toolbar>
@@ -17,13 +17,16 @@
                         Name
                     </th>
                     <th class="text-left">
-                        Job Title
+                        Type
                     </th>
                     <th class="text-left">
-                        Email
+                        Description
                     </th>
                     <th class="text-left">
-                        Phone
+                        User
+                    </th>
+                    <th class="text-left">
+                        Date Modified
                     </th>
                     <th class="text-left">
                         Date Created
@@ -37,6 +40,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td></td>
                 </tr>
             </tbody>
         </v-table>
@@ -44,15 +48,17 @@
 </template>
 
 <script>
-import addtarget from './Add/add-target.vue'
+    import addemailtemplates from '../../../components/Content/customers/Add/add-emailtemplate.vue'
 
-export default {
-    components: { addtarget }
-}
+    export default {
+        components: {
+            addemailtemplates
+        }
+    }
 </script>
 
 <script setup>
     useHead({
-        title: 'Targets'
+        title: 'Email - Templates'
     })
 </script>

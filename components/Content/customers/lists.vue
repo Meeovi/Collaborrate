@@ -6,15 +6,7 @@
                     <v-toolbar-title class="toolbarTitle">Lists</v-toolbar-title>
                 </v-col>
                 <v-col cols="1">
-                    <v-menu :location="location" transition="slide-y-transition">
-                        <template v-slot:activator="{ props }">
-                            <v-btn variant="text" v-bind="props" size="large" prepend-icon="fas fa-plus"
-                                append-icon="fas fa-caret-down" title="New">New</v-btn>
-                        </template>
-                        <addlist />
-                    </v-menu>
-
-                    
+                    <addlist />
                 </v-col>
             </v-row>
         </v-toolbar>

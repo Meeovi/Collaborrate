@@ -6,15 +6,7 @@
                     <v-toolbar-title class="toolbarTitle">Leads</v-toolbar-title>
                 </v-col>
                 <v-col cols="1">
-                    <v-menu :location="location" transition="slide-y-transition">
-                        <template v-slot:activator="{ props }">
-                            <v-btn variant="text" v-bind="props" size="large" prepend-icon="fas fa-plus"
-                                append-icon="fas fa-caret-down" title="New">New</v-btn>
-                        </template>
-                        <addlead />
-                    </v-menu>
-
-                    
+                    <addlead />
                 </v-col>
             </v-row>
         </v-toolbar>
@@ -25,14 +17,65 @@
                         Name
                     </th>
                     <th class="text-left">
-                        Calories
+                        Status
                     </th>
+                    <th class="text-left">
+                        Account Name
+                    </th>
+                    <th class="text-left">
+                        Office Phone
+                    </th>
+                    <th class="text-left">
+                        Email
+                    </th>
+                    <th class="text-left">
+                        User
+                    </th>
+                    <th class="text-left">
+                        Date Created
+                    </th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in desserts" :key="item.name">
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.calories }}</td>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <v-menu>
+                            <template v-slot:activator="{ props }">
+                                <v-btn color="primary" v-bind="props" icon="fas fa-ellipsis-vertical" title="More Menu" size="x-small"></v-btn>
+                            </template>
+                            <v-list>
+                    <td>
+                        <v-list-item>
+                            <v-btn icon="fas fa-phone" title="Call Account" size="x-small" variant="text"></v-btn>
+                        </v-list-item>
+                    </td>
+                    <td>
+                        <v-list-item>
+                            <v-btn icon="fas fa-calendar" title="Add Date to Calendar" size="x-small" variant="text"></v-btn>
+                        </v-list-item>
+                    </td>
+                    <td>
+                        <v-list-item>
+                            <v-btn icon="fas fa-list" title="Add A Note" size="x-small" variant="text"></v-btn>
+                        </v-list-item>
+                    </td>
+                    <td>
+                        <v-list-item>
+                            <v-btn icon="fas fa-envelope" title="Send Account an Email" size="x-small" variant="text"></v-btn>
+                        </v-list-item>
+                    </td>
+                    </v-list>
+                    </v-menu>
+                    </td>
                 </tr>
             </tbody>
         </v-table>
